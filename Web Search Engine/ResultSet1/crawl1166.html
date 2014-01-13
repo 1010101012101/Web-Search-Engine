@@ -1,0 +1,522 @@
+<html>
+<head>
+ <title>AFP-Direct</title>
+ <META http-equiv="X-UA-Compatible" CONTENT="IE=edge,chrome=1">
+ <META NAME="format-detection" CONTENT="telephone=no" />
+ <META NAME="viewport" CONTENT="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+ <META NAME="keywords" CONTENT="Agence, France-Presse, AFP, news, agency, press, information, dépêche">
+ <META NAME="description" CONTENT="AFP-Direct permet de suivre en temps réel le service d'Informations mondiales de l'Agence France-Presse et d'effectuer des recherches sur les archives depuis janvier 1995.">
+ <style type="text/css">
+ <!--
+  body {
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+  overflow: auto;
+  font-family: Arial,Helvetica,Verdana,sans-serif;
+  font-size: smaller;
+  background-color: white;
+  color: #333333;
+  text-align: center;
+ }
+ img {
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+ }
+ div {
+  padding: 0px;
+  border: 0px;
+  margin: 0px;    
+ }
+ table {
+  padding: 0px;
+  border: 0px;
+  margin: 0px; 
+ }
+ td {
+  padding: 0px;
+  border: 0px;
+  margin: 0px; 
+  text-align: left;
+  vertical-align: top;
+ }
+ h1 {
+	margin: 17px 0;
+ }
+ h1#acces  {
+	margin-top: 0;
+ }
+ h2 {
+	margin: 0;
+	font-size: 18px;
+	font-weight: normal;	
+	color: #0083ca;
+ }
+ input, select, textarea {
+	display: block;
+    border-bottom: 1px solid #949597;
+    border-right: 1px solid #949597;
+    border-top: 1px solid #e5dfe3;
+    border-left: 1px solid #e5dfe3;
+    padding-left: 11px;
+	border-radius: 7px;
+    color: #3e3e3e;
+	margin: 15px auto;
+	height: 35px;
+	line-height: 35px;
+	width: 230px;
+	border-radius: 7px;
+ }
+ #wrapper {
+	display: inline-block;
+	position: relative;
+	width: 940px;
+	margin-top: 15px;
+	text-align: left;
+ }
+ #baseline {
+	margin-top: 20px;
+ }
+ #bluefill {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	width: 659px;
+	height: 5px;
+	background-image: url(images/public/acc_bkg_blue.gif); /* IE8- */
+	background-repeat: repeat-x;
+ }
+ #actu_inter {
+	display: inline-block;
+	width: 650px;
+	text-align: center;
+ }
+ .actu_inter_en {
+    text-align: left;
+ }
+ #choixlang {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ada5a3; 
+ }
+ #choixlang a {
+  color: #ada5a3;
+  text-decoration: none;
+ }
+ #left {
+	width: 635px;
+	float: left;
+ }
+ #right {
+	float: right;
+	width: 283px;
+	margin-left: 22px;
+	text-align: center;
+ }
+ #props {
+	position: relative;
+	display: inline-block;
+ }
+ #props_header {
+	display: block;
+	text-align: center;
+	margin-top: 25px;
+	color: #747474;
+ }
+  #props_header a {
+	vertical-align: middle;
+  }
+  #textepres {
+	display: inline-block;
+    padding: 10px;
+    text-align: justify;
+	max-width: 595px;
+ }
+  #identification {
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
+	width: 273px;
+	height: 160px;
+	font-family: Arial,Helvetica,Verdana,sans-serif;
+ }
+ #input {
+	display: inline-block;
+	width: 230px;
+ }
+ #input a {
+	float: right;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	margin-top: 5px;
+ }
+ #autres {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+	width: 273px;
+	display: inline-block;
+}
+ #autres ul {
+    padding: 0;
+    margin : 0;
+ }
+ #autres ul li {
+    display:block;
+    padding:15px 0 15px 30px;
+    border-bottom:1px dotted #b2b2b2;
+    list-style-type:none;
+	font-size: 14px;
+ }
+ #autres ul li.last {
+	border-bottom: 0;
+ }
+ #autres ul li a {
+    color:#333;
+    text-decoration:none;
+ }
+ #autres ul li a:hover {
+    text-decoration:underline;
+ }
+ 
+ #presentation {
+    display: block;
+    height: 432px;
+ }
+ 
+ #catalogue {
+    display: none;
+    height: 432px;
+ }
+ 
+ #inscription {
+    display: none;
+    height: 432px;
+ }
+ 
+ .smart {
+	display: none;
+ }
+ .outer {
+	border: 1px solid #ccc;
+	display: inline-block;
+	height: auto;
+ }
+ .inner {
+	border: 5px solid #eeeded;
+ }
+ .boutok {
+    border: 0;
+	margin: 0;
+	padding: 5px 15px;
+	background-color: black;
+	color: white;
+	height: auto;
+	width: auto;
+	line-height: 18px;
+	float: left;
+	border-radius: 0;
+	cursor: pointer;
+ }
+ @media screen and (max-width: 952px) {
+     body {
+        zoom: 75%;
+     }
+ }
+ @media screen and (max-width: 712px) {
+    body {
+        zoom: 100%;
+    }
+	#wrapper {
+		width: 100%;
+		text-align: center;
+	}
+	#logo {
+		display: inline-block;
+		width: 100%;
+	}
+	#logo img {
+		width: 90%;
+		height: auto;
+		max-height: 78px;
+		max-width: 330px;
+	}
+	#choixlang {
+		right: auto;
+		left: 0;
+		top: 80px;
+		width: 100%;
+	}
+	#actu_inter {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 100px;
+        text-align: center;
+	}
+	#actu_inter img {
+		width: 90%;
+		height: auto;
+        max-width: 445px;
+        min-width: 299px;
+        max-height: 27px;
+	}
+    .actu_inter_en {
+        text-align: center;
+    }
+	#right {
+		position: absolute;
+		left: 0;
+		top: 127px;
+	}
+	#left {
+		width: 100%;
+	}
+	#right {
+		float: none;
+		width: 100%;
+		margin-left: 0;
+	}
+	/*#partenaires {
+		position: absolute;
+		width: 100%;
+		left: -182;
+		top: 640px;
+		text-align: center;
+	}
+	#partenaires img {
+		width: 90%;
+	}*/
+	#textepres_smart {
+		display: block;
+		font-size: .9em;
+		text-align: justify;
+		margin: 15px auto;
+		width: 285px;
+	}
+	.nosmart, #bluefill, #textepres {
+		display: none;
+	}
+ }
+ //-->
+ </style>
+<script language="JavaScript">
+<!--
+var NS4, NS5, IE4;
+if (document.layers)    NS4 = 1;
+else if (document.all)  IE4 = 1;
+else if (document.getElementById) NS5 = 1;
+
+var imgOnglets = {};
+if (document.images) {
+    imgOnglets['presentation_off'] = new Image();
+    imgOnglets['presentation_off'].src = '/images/public/fr/acc_bout_pres_off.gif';
+    imgOnglets['presentation_on'] = new Image();
+    imgOnglets['presentation_on'].src = '/images/public/fr/acc_bout_pres_on.gif';
+
+    imgOnglets['catalogue_off'] = new Image();
+    imgOnglets['catalogue_off'].src = '/images/public/fr/acc_bout_cat_off.gif';
+    imgOnglets['catalogue_on'] = new Image();
+    imgOnglets['catalogue_on'].src = '/images/public/fr/acc_bout_cat_on.gif';
+
+    imgOnglets['inscription_off'] = new Image();
+    imgOnglets['inscription_off'].src = '/images/public/fr/acc_bout_ins_off.gif';
+    imgOnglets['inscription_on'] = new Image();
+    imgOnglets['inscription_on'].src = '/images/public/fr/acc_bout_ins_on.gif';
+    
+}
+function changeimg(name, status) {
+    if (document.images) {
+        document ['img_'+name].src = imgOnglets[name+'_'+status].src;
+    }
+}
+
+function EffaceLayer (layername) {
+    if (NS4) {
+        if (document.layers[layername])
+            document.layers[layername].display = "none";
+    }
+    else if (NS5) {
+        if (document.getElementById(layername))
+            document.getElementById(layername).style.display = "none";
+    }
+    else if (IE4) {
+        if (document.all[layername])
+            document.all[layername].style.display = "none";
+    }
+}
+
+function AfficheLayer (layername) {
+    if (NS4 && document.layers[layername]) {
+        document.layers[layername].display = "block";
+    }
+    else if (NS5 && document.getElementById(layername)) {
+        document.getElementById(layername).style.display = "block";
+    }
+    else if (IE4 && document.all[layername]) {
+        document.all[layername].style.display = "block";
+    }
+}
+
+var login_orig = 'Code utilisateur';
+var passwd_orig = '********';
+
+function checksubmit () {
+    var login = document.getElementById('credential_0').value;
+    var passwd = document.getElementById('credential_1').value;
+    if (login == login_orig || passwd == passwd_orig || login == '' || passwd == '') {
+        return false;
+    }
+    return true;
+}
+
+function clearForm() {
+    var login = document.getElementById('credential_0').value;
+    var passwd = document.getElementById('credential_1').value;
+    if (login == login_orig) {
+        document.getElementById('credential_0').value='';
+    }
+    if (passwd == passwd_orig) {
+        document.getElementById('credential_1').value='';
+    }
+
+}
+
+function switchLayers (which) {
+
+    // verifie que le formulaire existe
+    var iframe = document.getElementById('iframecontact');
+    var iframe_doc = iframe.contentDocument;
+    if (iframe_doc == undefined || iframe_doc == null)
+        iframe_doc = iframe.contentWindow.document;
+
+    if (!iframe_doc.getElementById('formcontact')) {
+        iframe_doc.location = iframe_doc.location;
+    }
+
+    var layers = [ 'catalogue', 'inscription', 'presentation', 'newyear' ];
+    for (var i=0;i<layers.length;i++) {
+        var e = layers[i];
+        if (e != which) {
+            EffaceLayer(e);
+            if (e != 'newyear')
+                changeimg(e, 'off');
+        }
+    }
+    AfficheLayer(which);
+    if (which != 'newyear')
+        changeimg(which, 'on');
+}
+
+
+
+//-->
+</script>
+</head>
+<noscript>
+    <body  LEFTMARGIN=10 TOPMARGIN=10 MARGINHEIGHT=10 MARGINWIDTH=10 bgcolor="white" width="100%">
+        <table width="100%" border="0" align="CENTER" valign="MIDDLE">
+            <tr>
+                <td ALIGN="CENTER">
+                    <img src="/images/public/acc_afp-direct.png" width="364" height="86" alt="AFP -&nbsp;Comprendre le monde" border="0" />
+                    <br /><br /><font face="Verdana, Arial, Helvetica, Sans-serif" size="+1" color="black">&nbsp;&nbsp;
+                    Ce site utilise JavaScript.<br />&nbsp;&nbsp;&nbsp;Veuillez activer cette fonctionnalité dans votre navigateur.<br /><br /></font>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
+</noscript>
+<body>
+	<div id="wrapper">
+		<div id="header"><span id="logo"><img src="/images/public/acc_afp-direct.png" width="364" height="86" /></span><span id="choixlang"><a href="/?lang=en">english</a>&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;<a href="/?lang=es">español</a>&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;<a href="/?lang=pt">português</a>&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;<a href="/?lang=de">deutsch</a></span></div>
+		<div id="baseline">
+			<span id="comprendre" class="nosmart"><img src="/images/public/fr/acc_depeches_afp.gif" width="281" height="45" alt="Toutes les dépêches AFP en continu" /></span>
+			<span id="bluefill" class="nosmart"></span>
+			<span id="actu_inter"><img src="/images/public/fr/acc_actualite_internationale3.gif" alt="L'actualité internationale en Temps Réel" /></span>
+		</div>
+		<h1 class="nosmart"><img  src="/images/public/fr/acc_offre_afp-direct.gif" alt="L'offre AFP-DIRECT" alt="L’offre AFP-Direct" /></h1>
+		<div id="main">
+			<span id="left">
+				<span id="props_cont" class="outer nosmart">
+					<span id="props" class="inner">
+						<span id="props_header"><a href="javascript:void(0);" onclick="switchLayers('presentation');"><img src="/images/public/fr/acc_bout_pres_on.gif" alt="Présentation" border="0" name="img_presentation"  /></a>
+						<img src="/images/public/acc_sep_dot.gif" width="35" height="7" alt="" />
+						<a href="javascript:void(0);" onclick="switchLayers('catalogue');"><img src="/images/public/fr/acc_bout_cat_off.gif" alt="les Offres" border="0" name="img_catalogue"  /></a>
+						<img src="/images/public/acc_sep_dot.gif" width="35" height="7" alt="" />
+						<a href="javascript:void(0);" onclick="switchLayers('inscription');"><img src="/images/public/fr/acc_bout_ins_off.gif" alt="Test gratuit" border="0" name="img_inscription"  /></a>
+						</span>
+						<span id="presentation" class="nosmart">
+						 <a href="javascript:void(0);" onclick="switchLayers('inscription')"><img src="/images/public/fr/acc_presentation.gif" alt="Accéder à une information fiable et pertinente.
+	Etre immédiatement informé de ce qui est communiqué aux médias.
+	Bénéficier d'une solution nomade pour accéder à l'information là où vous êtes.
+	
+	AFP-Direct est spécialement conçu pour répondre aux besoins d'information des professionnels d'information : marketing, recherche, veille, communication, relations presse, documentation, gestion de crise, journalisme. AFP-Direct vous plonge au cœur de l'actualité internationale en temps réel.
+	
+	Vous pouvez choisir parmi 30 services d'information générale, économique ou sportive, disponibles en 6 langues et actualisés 24h/24.
+	
+	AFP-Direct propose de nombreuses fonctionnalités de recherche, de tris, de classements, d'alertes en temps réel…" width="623" height="432" border="0" /></a>
+						</span>
+						<span id="catalogue">
+						 <iframe width="623" height="432" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="/?q=ij;lang=fr"></iframe>
+						</span>
+						<span id="inscription">
+						 <iframe id="iframecontact" width="623" height="432" frameborder="0" scrolling="auto" marginheight="0" marginwidth="0" src="/?q=io;lang=fr"></iframe>
+						</span>
+						<span id="partenaires">
+						  <img src="/images/public/fr/acc_partenaires.gif" alt="Nos Partenaires" width="623" height="49" border="0" />               
+						</span>
+					</span>
+				</span>
+				<span id="textepres" class="nosmart">
+					L’AFP est une agence de presse mondiale fournissant une information rapide, vérifiée et complète sur les événements qui font l’actualité internationale, des guerres et conflits à la politique, au sport,
+					au spectacle jusqu’aux grands développements en matière de santé, de sciences ou de technologie. Ses 2.900 collaborateurs répartis dans 165 pays rendent compte en six langues de la marche de la planète, 24 heures sur 24, en vidéo, texte, photo, multimédia et infographie.
+				</span>
+			</span>
+			<span id="right">
+				<h1 id="acces"><img src="/images/public/fr/acc_accedez.gif" alt="Accédez à votre compte" border="0" /></h1>
+				<span class="outer">
+					<span id="identification" class="inner">
+						<form method="POST" action="/LOGIN" onsubmit="return checksubmit();">
+							<input type="hidden" name="destination" value="/abonnes" />
+							<input type="text" id="credential_0" NAME="credential_0" size="17" maxlength="20" value="Code utilisateur"  onfocus="clearForm();" />
+							<input type="password" id="credential_1" name="credential_1" size="17" maxlength="17" value="********" onfocus="clearForm();" />
+							<span id="input">
+								<input type="submit" alt="ok" class="boutok" value="OK" />
+								<a href="http://www.afp.com/afpcom/fr/contact"><font color="#0088cb">?&nbsp;</font>Contactez l'AFP</a>
+							</span>					
+						</form>
+					</span>
+				</span>
+				<h1><img src="/images/public/fr/acc_autres.gif" alt="Autres services" border="0" /></h1>
+				<span class="outer">
+					<span id="autres" class="inner">
+						
+						<ul>        
+							<li><a href="http://www.videoforum2.afp.com" target="_blank"><h2>VideoForum</h2>
+							Vidéo et Vidéographie</a></li>
+							<li><a href="http://www.imageforum2.afp.com" target="_blank"><h2>ImageForum</h2>
+							Photo et Infographie Fixe</a></li>
+							<li><a href="http://www.afp.com/afpcom/fr/taglibrary/activity/mobile" target="_blank"><h2>AFP Mobile</h2>
+							Pour tous les Usages Mobiles</a></li>
+							<li><a href="http://www.afpagenda.com/french/default.aspx" target="_blank"><h2>AFP Global News Agenda</h2>
+							Le calendrier des événements mondiaux</a></li>
+							<li class="last"><a href="http://www.afprelaxnews.com/?fr" target="_blank"><h2>AFP-Relaxnews</h2>
+							La première source mondiale d’info loisirs</a></li>
+						</ul>
+						
+					</span>
+				</span>
+				<span id="textepres_smart" class="smart">
+					L’AFP est une agence de presse mondiale fournissant une information rapide, vérifiée et complète sur les événements qui font l’actualité internationale, des guerres et conflits à la politique, au sport,
+					au spectacle jusqu’aux grands développements en matière de santé, de sciences ou de technologie. Ses 2.900 collaborateurs répartis dans 165 pays rendent compte en six langues de la marche de la planète, 24 heures sur 24, en vidéo, texte, photo, multimédia et infographie.
+				</span>
+			</span>
+		</div>
+	</div>
+</body>
+</html>
+

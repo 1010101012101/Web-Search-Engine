@@ -1,0 +1,921 @@
+?<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8">
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	
+	
+			<title>United Nations News Centre</title>
+			
+			<meta property="og:title" content="United Nations News Centre" />
+			<meta property="og:image" content="/apps/news/en/images/logo_ncs_df.png" />
+			<meta property="og:site_name" content="UN News Centre" />
+
+			<meta name="dc.title" content="United Nations News Centre" />
+			<meta name="dc.creator" content="United Nations News Service Section" />
+			<meta name="dc.description" content="UN News Centre – Official site for daily UN news, press releases, statements, briefings and calendar of events. Includes UN radio, video, webcasts, magazines, documents, publications, conference information, photos and additional information resources." />
+			<meta name="dc.publisher" content="United Nations-DPI/NMD - UN News Service Section" />
+
+			<meta name="title" content="United Nations News Centre" />
+			<meta name="creator" content="United Nations News Service Section" />
+			<meta name="description" content="UN News Centre – Official site for daily UN news, press releases, statements, briefings and calendar of events. Includes UN radio, video, webcasts, magazines, documents, publications, conference information, photos and additional information resources." />
+			<meta name="publisher" content="United Nations-DPI/NMD - UN News Service Section" />
+			<meta Name="keywords" Content="United Nations, UN, U.N., Security Council, General Assembly, Secretary-General, Ban Ki-moon, Ki-moon, Annan, Economic and Social Council, international, world, news, breaking news, world news, international news, press releases, press, media, news conferences, webcast, spokesman, photos, peace, security, terror, terrorism, human rights, development, poverty, aids, women, refugees, crime, health, poverty, food, crisis, war, conflict, emergency, aid, humanitarian, arms, weapons, diplomat, mission, peacekeeping, delegates, conference, summit, resolution, reform." />
+	
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="/apps/news/en/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/apps/news/en/css/app.css">
+	
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="/apps/news/en/css/ie.css">
+	<![endif]-->
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<link href="/apps/news/include/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" media="screen">
+	
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4803886-1']);
+  _gaq.push(['_setDomainName', 'un.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+	<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-LQCS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-LQCS');</script>
+<!-- End Google Tag Manager -->
+	<div id="language-bar" class="visible-desktop">
+		<div class="container">
+			<div class="row">
+				<div class="span12" id="un_icon">
+					<div class="span4">
+						<a href="http://www.un.org/en/" title="United Nations Headquarters website">Welcome to the United Nations. It's your world.</a>
+					</div>
+					<div class="span7 pull-right visible-desktop">
+						<ul>
+						  <li lang="ar" xml:lang="ar" id="arabic"><a href="http://www.un.org/arabic/news/">????</a></li>
+						  <li lang="zh-cn" xml:lang="zh-cn" id="chinese"><a href="http://www.un.org/chinese/News/">??</a></li>
+						  <li lang="en" xml:lang="en" id="english">English</li>
+						  <li lang="fr" xml:lang="fr"><a href="/french/newscentre/">Français</a></li>
+						  <li lang="ru" xml:lang="ru"><a href="http://www.un.org/russian/news/">???????</a></li>
+						  <li lang="es" xml:lang="es"><a href="http://www.un.org/spanish/News/">Español</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="header">
+		<div class="container">
+			<!-- Navigation -->
+						<div class="row">
+				<a href="/News/" title="UN News Centre home">
+				<div class="span8" id="branding-bar">
+					<h1>United Nations News Centre</h1>
+					<h4 class="subheader">with breaking news from the UN News Service</h4>
+				</div>
+				</a>
+				<div class="span4 visible-desktop" method="post" id="search-bar">
+					<form method="post" accept-charset="ISO-8859-1" class="form-inline pull-right" action="/apps/news/search.asp">
+						<div class="btn-group">
+							<input class="input-medium" id="fldSearch" name="fldSearch" placeholder="Search" size="16" type="text">&nbsp;
+							<input name="fldPastdate" type="hidden" value="45">
+							<button class="btn btn-primary-news" type="submit"><i class="icon-search icon-white"></i></button>
+							<button class="btn btn-primary-news dropdown-toggle" data-toggle="dropdown">
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<a href="/apps/news/advancedsearch.asp" title="Advanced Search">Advanced Search</a>
+							</ul>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="row visible-desktop" id="navigation">
+			
+				<div class="span12">
+					<div class="simplenav fix">
+						<ul class="fix nav">
+							<li class="here"><a href="/News/">News</a>
+								<ul class="on">
+									<li><a href="/apps/news/region.asp?Region=Africa">Africa</a></li>
+									<li><a href="/apps/news/region.asp?Region=Americas">Americas</a></li>
+									<li><a href="/apps/news/region.asp?Region=Asia+Pacific">Asia Pacific</a></li>
+									<li><a href="/apps/news/region.asp?Region=Europe">Europe</a></li>
+									<li><a href="/apps/news/region.asp?Region=Middle+East">Middle East</a></li>
+									<li class="skip"><a href="http://www.un.org/apps/news/archive.asp">UN Daily News</a></li>
+								</ul>
+							</li>
+						
+							<li><a href="http://www.unmultimedia.org/radio/english/">Radio</a>
+								<ul  class="off">
+									<li><a href="http://www.unmultimedia.org/radio/english/category/features/todays-news/">Today's News</a></li>
+									<li><a href="http://www.unmultimedia.org/radio/english/category/features/todays-features/">Today's Features</a></li>
+									<li><a href="http://www.unmultimedia.org/radio/english/">Programmes</a></li>
+									<li><a href="http://www.unmultimedia.org/radio/english/">Regions</a></li>
+									<li><a href="http://www.unmultimedia.org/radio/english/about-us/">About Us</a></li>
+									<li><a href="http://www.unmultimedia.org/radio/library/">Audio Library</a></li>
+									<li><a href="http://www.unmultimedia.org/accounts/index.html">Your Account</a></li>
+								</ul>
+							</li>
+
+							<li><a href="http://www.unmultimedia.org/">Television</a>
+								<ul  class="off">
+									<li><a href="http://www.unmultimedia.org/tv/unifeed/">UNifeed</a></li>
+									<li><a href="http://www.unmultimedia.org/tv/unia/">UN in Action</a></li>
+									<li><a href="http://www.unmultimedia.org/tv/21stcentury/">21st Century</a></li>
+									<li><a href="http://www.un.org/webcast/">Webcast</a></li>
+								</ul>
+							</li>
+
+							<li><a href="http://www.unmultimedia.org/photo">Photo</a>
+								<ul  class="off">
+									<li><a href="http://downloads.unmultimedia.org/photo/thumbnails/523/523401.jpg">Latest photos</a></li>
+									<li><a href="http://www.unmultimedia.org/photo/gallery.jsp?query=category%3ASecretary-General">Secretary-General</a></li>
+									<li><a href="http://www.unmultimedia.org/photo/gallery.jsp?query=category%3A%22Security%20Council%22">Security Council</a></li>
+									<li><a href="http://www.unmultimedia.org/photo/gallery.jsp?query=category%3A%22General%20Assembly%22">General Assembly</a></li>
+									<li><a href="http://www.unmultimedia.org/photo/gallery.jsp?query=category%3A%22Field%20coverage%22">UN Around the World</a></li>
+									<li><a href="http://www.unmultimedia.org/photo/gallery.jsp?query=legacy%3Ay&startat=0&sf=arrival_date">Photo Archives</a></li>
+								</ul>
+							</li>
+
+							<li><a href="http://webtv.un.org/">Webcast</a>
+								<ul  class="off">
+									<li><a href="http://webtv.un.org/">Live Now</a></li>
+									<li><a href="http://webtv.un.org/meetings-events/">Meetings &amp; Events</a></li>
+									<li><a href="http://webtv.un.org/media/">Media</a></li>
+									<li><a href="http://webtv.un.org/news-features/">News &amp; Features</a></li>
+									<li><a href="http://webtv.un.org/topics-issues/">Topics &amp; Issues</a></li>
+								</ul>
+							</li>
+						
+							<li><a href="http://www.un.org/en/unpress/">Meetings Coverage</a>
+								<ul  class="off">
+									<li><a href="http://www.un.org/en/unpress/moreBydocType.asp?docType=0">Press Releases</a></li>
+									<li><a href="http://www.un.org/en/unpress/moreBydocType.asp?docType=1">Press Conferences</a></li>
+									<li><a href="http://www.un.org/en/unpress/index_unbodies.asp?unpress=1&unBodies=4">Secretary-General</a></li>
+									<li><a href="http://www.un.org/en/unpress/index_unbodies.asp?unpress=21&unBodies=1">General Assembly</a></li>
+									<li><a href="http://www.un.org/en/unpress/index_unbodies.asp?unpress=31&unBodies=2">Security Council</a></li>
+									<li><a href="http://www.un.org/en/unpress/index_unbodies.asp?unpress=41&unBodies=3">Economic and Social Council</a></li>
+								</ul>
+							</li>
+
+							<li><a href="http://www.un.org/en/media/accreditation/index.shtml">Media Accreditation</a>
+								<ul  class="off">
+									<li><a href="http://www.un.org/en/media/accreditation/request.shtml">Accreditation Requirements</a></li>
+									<li><a href="http://www.un.org/en/media/accreditation/alert.shtml">Media Alert</a></li>
+									<li><a href="http://www.un.org/en/media/accreditation/resources.shtml">Media Resources</a></li>
+									<li><a href="http://www.un.org/en/media/accreditation/events.shtml">Special Media Events</a></li>
+									<li><a href="http://www.un.org/en/media/accreditation/faqs.shtml">FAQs</a></li>
+								</ul>
+							</li>
+
+							<li><a href="http://www.un.org/sg/">Secretary-General</a>
+								<ul  class="off">
+									<li><a href="http://www.un.org/sg/spokesperson/">Spokesperson</a></li>
+									<li><a href="http://www.un.org/apps/news/infocus/sgspeeches/">All Statements</a></li>
+									<li><a href="http://www.un.org/sg/selected-speeches/index.shtml">Selected Speeches</a></li>
+									<li><a href="http://www.un.org/sg/offthecuff/index.asp?cuff=1">Off-the-cuff Remarks</a></li>
+									<li><a href="http://www.un.org/sg/travels.asp">Official Travels</a></li>
+								</ul>
+							</li>
+						
+							<li><a href="#resources">Other Resources</a>
+								<ul  class="off">
+									<li><a href="http://www.un.org/apps/news/topstory.asp">Top Stories Archive</a></li>
+									<li><a href="http://www.un.org/apps/news/html/resources.shtml#PO">Peacekeeping</a></li>
+									<li><a href="http://www.un.org/apps/news/html/resources.shtml#PM">Political Missions</a></li>
+									<li><a href="https://unp.un.org/">UN Publications</a></li>
+									<li><a href="http://www.un.org/Depts/Cartographic/english/htmain.htm">Maps</a></li>
+									<li><a href="http://www.un.org/databases/index.html">Databases</a></li>
+									<li><a href="http://www.un.org/apps/news/html/resources.shtml#NM">New Magazines</a></li>
+									<li><a href="http://www.un.org/apps/news/html/syslinks.asp">UN System Links</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div><!-- END Nav -->
+		</div>
+	</div>
+	
+	<div class="container"><!-- Main Content -->
+		<div class="row" id="ticker-bar">		
+			
+			<div class="span12">
+				<div class="pull-left">
+					<strong id="site-date">Wed, 11 Dec 2013</strong> | <strong><a href="http://www.un.org/apps/news/html/whatwhen.html" title="Programme and schedules of what is happening at the UN">What, When at UN:</a>&nbsp;</strong>
+				</div>
+				<div class="pull-left">
+					<ul id="ticker">
+						
+						<li style="display:list-item;">World Health Organization launches global cancer online database&#8230;</li>
+						
+						<li style="display:list-item;">Security Council to be briefed on Africa&#8217;s Sahel region&#8230;</li>
+						
+						<li style="display:list-item;">General Assembly takes up resolutions on coordination of humanitarian aid&#8230;</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<hr class="invi" />
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="span8" id="newscontent">
+				
+				
+
+				<div class="row">
+					<div class="span4">
+						
+						
+						
+						 <a href="/apps/news/story.asp?NewsID=46713&Cr=UNICEF&Cr1="><img src="http://www.un.org/News/dh/photos/large/2013/December/12-11-2013-BCertificate.jpg" id="topstory-image" Title="10-year old Kangbe holds her birth certificate at her primary school in C&#244;te d'Ivoire. Photo: UNICEF/NYHQ2011-2488/Asselin" /></a>
+						
+						
+					</div>
+					<div class="span4">
+						<h4 id="mainheadline">
+							 <a href="/apps/news/story.asp?NewsID=46713&Cr=UNICEF&Cr1=">One in three children do not officially exist, UNICEF reports</a>
+						</h4>
+						<p>
+							Nearly 230 million children under the age of five have not had their births officially recorded, excluding them from education, health care and social security, the United Nations Children&#8217;s Fund (UNICEF) today reported.
+						</p>
+						<p class="more redux-height">
+							<a href="/apps/news/morenews.asp?Cr=UNICEF&Cr1=" 
+
+								title='More UN News stories about: UNICEF'><!-- <strong>Related stories &raquo;</strong> -->
+							</a>
+						</p>
+					</div>
+				</div>
+				<hr class="tophd" />
+
+
+				<div class="row">
+					
+
+				
+					<div class="span2">
+						<div id="topsub-story">
+							
+							<a href="/apps/news/story.asp?NewsID=46712&Cr=democratic&Cr1=congo"><img src="http://www.un.org/News/dh/photos/2011/December/06-12-2011drcelections.jpg" Title="Thousands of DRC residents fleeing potential election conflict , arrive in neighbouring Republic of Congo. Photo: Laudes Martial Mbon/IRIN-2011" /></a>
+							
+						</div>
+						<p>
+							<strong>
+								<a href="/apps/news/story.asp?NewsID=46712&Cr=democratic&Cr1=congo">UN urges DR Congo authorities to ensure accountability for election-related abuses
+								</a>
+							</strong>
+						</p>
+					</div>
+
+
+
+				
+					<div class="span2">
+						<div id="topsub-story">
+							
+							<a href="/apps/news/story.asp?NewsID=46720&Cr=bangladesh&Cr1="><img src="http://www.un.org/News/dh/photos/2012/April/505094-sgbankimoon.jpg" Title="Secretary-General Ban Ki-moon.  UN Photo/Mark Garten" /></a>
+							
+						</div>
+						<p>
+							<strong>
+								<a href="/apps/news/story.asp?NewsID=46720&Cr=bangladesh&Cr1=">Ban urges Bangladesh&#8217;s leaders to solve differences over elections through dialogue
+								</a>
+							</strong>
+						</p>
+					</div>
+
+
+
+				
+					<div class="span2">
+						<div id="topsub-story">
+							
+							<a href="/apps/news/story.asp?NewsID=46717&Cr=malaria&Cr1="><img src="http://www.un.org/News/dh/photos/2013/June/06-05-2013malariabednet.jpg" Title="Infant surrounded by protective malaria bed net in Ghana. Photo: World Bank/Arne Hoel" /></a>
+							
+						</div>
+						<p>
+							<strong>
+								<a href="/apps/news/story.asp?NewsID=46717&Cr=malaria&Cr1=">Progress in malaria fight despite less funding, UN reports
+								</a>
+							</strong>
+						</p>
+					</div>
+
+
+
+				
+					<div class="span2">
+						<div id="topsub-story">
+							
+							<a href="/apps/news/story.asp?NewsID=46721&Cr=democratic&Cr1=congo"><img src="http://www.un.org/News/dh/photos/2013/December/574263-Kobler_Mary.jpg" Title="Special Representative Martin Kobler (right) and Special Envoy Mary Robinson brief the press. UN Photo/Mark Garten" /></a>
+							
+						</div>
+						<p>
+							<strong>
+								<a href="/apps/news/story.asp?NewsID=46721&Cr=democratic&Cr1=congo">DR Congo: UN peacekeeping on offensive after defeat of M23, says senior UN official
+								</a>
+							</strong>
+						</p>
+					</div>
+
+
+				</div>
+
+
+
+				
+				<div class="row">
+					<div class="span8">
+						<hr class="invired" />
+						 <h4 class="main-section-head">Other Top Stories</h4>
+					</div>
+				</div>
+
+				
+				<div class="row">
+					
+					<div class="span4">
+						
+						<p><a href="/apps/news/story.asp?NewsID=46722&Cr=darfur&Cr1="><strong>Security Council hears criticism over &#8216;inaction and paralysis&#8217; in Darfur crisis</strong></a></p>
+					</div>							
+					
+					<div class="span4">
+						
+						<p><a href="/apps/news/story.asp?NewsID=46719&Cr=unodc&Cr1="><strong>Uruguay&#8217;s move to legalize cannabis endangers global anti-drug effort, UN agency says</strong></a></p>
+					</div>							
+					
+				</div>
+				
+				<div class="row">
+					
+					<div class="span4">
+						
+						<hr class="invi" />
+						
+						<p><a href="/apps/news/story.asp?NewsID=46718&Cr=myanmar&Cr1="><strong>Myanmar: UN human rights expert welcomes latest release of political prisoners</strong></a></p>
+					</div>							
+					
+					<div class="span4">
+						
+						<hr class="invi" />
+						
+						<p><a href="/apps/news/story.asp?NewsID=46716&Cr=mountain&Cr1="><strong>Increased resources vital for world&#8217;s mountain farmers, UN report says</strong></a></p>
+					</div>							
+					
+				</div>
+				
+				
+
+				<div class="row">
+					<div class="span8">
+						<h6 class="more"><strong><a href="/apps/news/latest-headlines.asp">More stories &raquo;</a></strong></h6>
+						<hr class="invired" />
+					</div>
+				</div>
+<!--include virtual="/News/dh/dev/scripts/headlinejump/headbydate.asp" -->   
+              
+        
+
+				<div class="row">
+					<div class="span8">
+						 <h4 class="main-section-head">News by Topic</h4>				
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="span4">
+						
+						
+						<h5><strong><a href="/apps/news/subject.asp?SubjectID=1">Peace and Security</a></strong></h5>
+												
+						
+				
+						<p><a href="/apps/news/story.asp?NewsID=46710&Cr=somalia&Cr1=">Somalia: crisis-response shows State institutions strengthening, UN official tells Security Council</a></p>
+				
+						
+
+						<a href=/apps/news/subject.asp?SubjectID=1> </a>
+
+						
+
+					</div>
+					<div class="span4">
+						
+						
+						<h5><strong><a href="/apps/news/subject.asp?SubjectID=6">UN Affairs, Secretary-General</a></strong></h5>
+												
+						
+				
+						<p><a href="/apps/news/story.asp?NewsID=46709&Cr=asia+and+the+pacific&Cr1=">Shamshad Akhtar of Pakistan to head UN Asia-Pacific regional development arm</a></p>
+				
+						
+
+						<a href=/apps/news/subject.asp?SubjectID=6> </a>
+
+						
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="span4">
+						<hr class="invi" />
+						
+						
+						<h5><strong><a href="/apps/news/subject.asp?SubjectID=2">Economic Development</a></strong></h5>
+												
+						
+				
+						<p><a href="/apps/news/story.asp?NewsID=46693&Cr=intellectual+property&Cr1=">Global patent filings hit fastest growth in 18 years, UN reports</a></p>
+				
+						
+
+						<a href=/apps/news/subject.asp?SubjectID=2> </a>
+
+						
+					</div>
+				
+					<div class="span4">
+						<hr class="invi" />
+						
+						
+						<h5><strong><a href="/apps/news/subject.asp?SubjectID=7">Women, Children, Population</a></strong></h5>
+												
+						
+				
+						<p><a href="/apps/news/story.asp?NewsID=46658&Cr=women&Cr1=">&#8216;Mixed picture&#8217; of women&#8217;s progress shows need to better harness synergies &#8211; UN official</a></p>
+				
+						
+
+						<a href=/apps/news/subject.asp?SubjectID=7> </a>
+
+						
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="span4">
+						<hr class="invi" />
+						
+						
+						<h5><strong><a href="/apps/news/subject.asp?SubjectID=3">Humanitarian Aid</a></strong></h5>
+												
+						
+				
+						<p><a href="/apps/news/story.asp?NewsID=46715&Cr=internally+displaced&Cr1=">UN refugee chief seeks support to assist record number of internally displaced people</a></p>
+				
+						
+
+						<a href=/apps/news/subject.asp?SubjectID=3> </a>
+
+						
+					</div>
+					<div class="span4">
+						<hr class="invi" />
+						
+						
+						<h5><strong><a href="/apps/news/subject.asp?SubjectID=8">Law, Crime Prevention</a></strong></h5>
+												
+						
+				
+						<p><a href="/apps/news/story.asp?NewsID=46722&Cr=darfur&Cr1=">Security Council hears criticism over &#8216;inaction and paralysis&#8217; in Darfur crisis</a></p>
+				
+						
+
+						<a href=/apps/news/subject.asp?SubjectID=8> </a>
+
+						
+					</div>
+				</div>
+				<div class="row">
+					<div class="span4">
+						<hr class="invi" />
+						
+						
+						<h5><strong><a href="/apps/news/subject.asp?SubjectID=4">Environment</a></strong></h5>
+												
+						
+				
+						<p><a href="/apps/news/story.asp?NewsID=46716&Cr=mountain&Cr1=">Increased resources vital for world&#8217;s mountain farmers, UN report says</a></p>
+				
+						
+
+						<a href=/apps/news/subject.asp?SubjectID=4> </a>
+
+						
+					</div>					
+					<div class="span4">
+						<hr class="invi" />
+						
+						
+						<h5><strong><a href="/apps/news/subject.asp?SubjectID=9">Health, Poverty</a></strong></h5>
+												
+						
+				
+						<p><a href="/apps/news/story.asp?NewsID=46654&Cr=hiv&Cr1=aids">Global partners commit $12 billion to UN-backed fund to fight AIDS, Tuberculosis, Malaria</a></p>
+				
+						
+
+						<a href=/apps/news/subject.asp?SubjectID=9> </a>
+
+						
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="span4">
+						<hr class="invi" />
+						
+						
+						<h5><strong><a href="/apps/news/subject.asp?SubjectID=5">Human Rights</a></strong></h5>
+												
+						
+				
+						<p><a href="/apps/news/story.asp?NewsID=46718&Cr=myanmar&Cr1=">Myanmar: UN human rights expert welcomes latest release of political prisoners</a></p>
+				
+						
+
+						<a href=/apps/news/subject.asp?SubjectID=5> </a>
+
+						
+					</div>
+					<div class="span4">
+						<hr class="invi" />	
+						
+						
+						<h5><strong><a href="/apps/news/subject.asp?SubjectID=10">Culture, Education</a></strong></h5>
+												
+						
+				
+						<p><a href="/apps/news/story.asp?NewsID=46708&Cr=journalist&Cr1=">Recent murders of two Iraqi media workers condemned by UNESCO chief</a></p>
+				
+						
+
+						<a href=/apps/news/subject.asp?SubjectID=10> </a>
+
+						
+					</div>
+				
+					
+					
+				</div>
+<!-- News Features -->
+				
+				<hr class="invired" />
+				<div class="row">
+					<div class="span4">
+						
+
+						
+						<h5><strong><a href="/apps/news/voxpopuli.asp">Vox Populi</a></strong></h5>
+						
+						<div class="features-image">
+							<a href="http://www.un.org/apps/news/html/SpecialRapporteurs.asp"><img src="http://www.un.org/News/dh/photos/thumb/2013/November/rapporteurs-voxpop.jpg" /></a>
+						</div>
+						
+						<p><a href="http://www.un.org/apps/news/html/SpecialRapporteurs.asp">Independent United Nations human rights experts discuss some of their biggest concerns</a></p>
+						
+					</div>
+					<div class="span4">
+						
+
+						<h5><strong><a href="/apps/news/photostories.asp">Photo Story</a></strong></h5>
+						
+						<div class="features-image">
+							<a href="/apps/news/photostories_detail.asp?PsID=92"><img src="http://www.un.org/News/dh/photos/thumb/2013/October/un-day-2013-focus.jpg" /></a>
+						</div>
+						
+						<p><a href="/apps/news/photostories_detail.asp?PsID=92">Marking the ratification of the UN Charter on 24 October 1945</a></p>
+						
+					</div>
+				</div>
+
+			</div><!-- Sidebar -->
+			
+			<div class="span4" id="sidebar">	
+
+				
+  <div class="row">
+    <div class="span4">
+      <h4><strong><a href="/apps/news/infocus/">In Focus</a></strong></h4>
+      <div class="row">
+        
+        <div id="146" class="focus-image span4"  style="visibility:visible;"><img src="http://www.un.org/News/dh/infocus/Syria/images/syria_animated.gif"></div>
+        
+        <div id="91" class="focus-image span4"><img src="http://www.un.org/News/dh/photos/large/2012/December/12-11-2012waterpurify.jpg"></div>
+        
+        <div id="70" class="focus-image span4"><img src="http://www.un.org/News/dh/photos/large/2013/June/06-14-2013settlement.jpg"></div>
+        
+        <div id="88" class="focus-image span4"><img src="http://www.un.org/News/dh/photos/large/2013/July/07-23-khartoum-family.jpg"></div>
+        
+        <div id="120" class="focus-image span4"><img src="http://www.un.org/News/dh/photos/large/2013/November/11-05-2013ugandadrc.jpg"></div>
+        
+      </div>
+       
+      <ul class="square"  style="margin-top:120px;">
+        
+        <li><a onMouseOver="show('146','visible')" onMouseOut="show('146','visible')" data-placement="left" rel="tooltip" data-original-title="UN responds to crisis in Syria - Read more &raquo;" href="http://www.un.org/apps/news/infocusRel.asp?infocusID=146&Body=Syria&Body1=">Syria</a></li>
+        
+        <li><a onMouseOver="show('91','visible')" onMouseOut="show('91','hidden')" data-placement="left" rel="tooltip" data-original-title="UN assists in rebuilding process - Read more &raquo;" href="http://www.un.org/apps/news/infocusRel.asp?infocusID=91&Body=Haiti&Body1=">Haiti</a></li>
+        
+        <li><a onMouseOver="show('70','visible')" onMouseOut="show('70','hidden')" data-placement="left" rel="tooltip" data-original-title="UN and partners work for peace in the region - Read more &raquo;" href="http://www.un.org/apps/news/infocusRel.asp?infocusID=70&Body=Palestin&Body1=">Middle East</a></li>
+        
+        <li><a onMouseOver="show('88','visible')" onMouseOut="show('88','hidden')" data-placement="left" rel="tooltip" data-original-title="UN responds to the latest developments in the countries - Read more &raquo;" href="http://www.un.org/apps/news/infocusRel.asp?infocusID=88&Body=Sudan&Body1=">Sudan & South Sudan</a></li>
+        
+        <li><a onMouseOver="show('120','visible')" onMouseOut="show('120','hidden')" data-placement="left" rel="tooltip" data-original-title="UN helps to promote political and economic stability - Read more &raquo;" href="http://www.un.org/apps/news/infocusRel.asp?infocusID=120&Body=Democratic&Body1=Congo">Democratic Republic of Congo</a></li>
+        
+      </ul>
+      <p class="more redux-height"><a href="/apps/news/infocus/">More &raquo;</a></p>
+    </div>
+  </div>
+
+<!--include file="_inc/world_food_day_2013.html" -->
+
+				<hr class="invi" />
+				
+				
+				<div class="row">
+					<div class="span4">
+						<h4><strong>Featured Video</strong></h4>
+						<div>
+							<script language="JavaScript" type="text/javascript" src="https://sadmin.brightcove.com/js/BrightcoveExperiences.js"></script>
+<object id="myExperience" class="BrightcoveExperience">
+  <param name="bgcolor" value="#FFFFFF" />
+  <param name="width" value="300" />
+  <param name="height" value="225" />
+  <param name="playerID" value="2551396381001" />
+  <param name="playerKey" value="AQ~~,AAABPSuWdxE~,UHaNXUUB06UZWFCoFFs5QZruHHpWrX5A" />
+  <param name="isVid" value="true" />
+  <param name="isUI" value="true" />
+  <param name="dynamicStreaming" value="true" />
+  <param name="secureConnections" value="true" />
+  <param name="@videoPlayer" value="2895794924001" />
+</object>
+<script type="text/javascript">brightcove.createExperiences();</script>Human Rights Day 2013 - 20 Years Working For Your Rights
+						</div>
+						
+						<hr class="invi" />
+					</div>
+				</div>
+				<!--include file="_inc/peace_day_carousel.html" -->
+		
+				
+
+				<div class="row">
+					<div class="span4">						
+						<h4><strong><a href="/apps/news/newsmakersH.asp">Newsmakers</a></strong></h4>
+						<ul class="thumbnails">
+						
+							
+						
+							<li class="span2">
+								<img src="/News/dh/photos/2013/December/Pedro-Medrano.jpg" alt="Pedro Medrano Rojas" />
+							</li>
+							<li class="span2 quote-nm">
+								<p class="redux-height"><a href="/apps/news/newsmakers.asp?NewsID=99"><strong>Pedro Medrano Rojas</strong></a></p>
+								If we can mobilize the support we need, I am convinced we can eradicate cholera in Haiti.
+								<p class="more redux-height"><a href="/apps/news/newsmakers.asp?NewsID=99">More &raquo;</a></p>
+							</li>
+							
+							
+						</ul>
+					</div>
+				</div>  
+
+
+					
+				<div class="row">
+					<div class="span4">
+						<a href="http://www.un.org/apps/news/newsquiz.asp" title="Interactive News Quiz"><img src="/apps/news/en/images/content/nq.png" title="Interactive News Quiz" /></a>
+					</div>
+				</div>
+				
+				<hr class="invi" />
+				
+				<div class="row">
+					<div class="span4">
+						<div class="tabbable">
+							<ul class="nav nav-tabs" id="myTab">
+							  <li class="active"><a href="#viewed" data-toggle="tab">Most Viewed</a></li>
+							  <!-- <li><a href="#emailed" data-toggle="tab">Most Emailed</a></li>-->
+							</ul>
+							
+							<div class="tab-content">
+								<div class="tab-pane active" id="viewed">
+									
+				<p><a href="/apps/news/story.asp?NewsID=46704&Cr=death+penalty&Cr1=">UN rights chief makes last-minute appeal to halt execution of Bangladeshi politician</a></p>
+
+				<p><a href="/apps/news/story.asp?NewsID=46703&Cr=central+african+republic&Cr1=">UN scales up aid as number of displaced in Central African Republic tops half a million</a></p>
+
+				<p><a href="/apps/news/story.asp?NewsID=46705&Cr=syria&Cr1=">Syria: as harsh winter sets in, UN refugee agency begins aid airlifts from Iraq</a></p>
+
+				<p><a href="/apps/news/story.asp?NewsID=46712&Cr=democratic&Cr1=congo">UN urges DR Congo authorities to ensure accountability for election-related abuses</a></p>
+
+								</div>
+								<!--<div class="tab-pane" id="emailed">
+									<!--include file="_inc/mostemail.asp" </div>-->
+								
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<hr class="invired" />
+			</div>
+		</div>
+	</div>
+	
+	
+
+	<div class="container visible-desktop">
+		<div class="row">
+			<div class="span3">
+				<h5><a href="http://www.unmultimedia.org/photo">UN Photo</a></h5>
+				<a href="http://www.unmultimedia.org/photo" class="media-image"><img src="/apps/news/en/images/content/un_photo.jpg"></a>
+			</div>
+			<div class="span3">
+				<h5><a href="http://www.unmultimedia.org/radio/english">UN Radio</a></h5>
+				<a href="http://www.unmultimedia.org/radio/english" class="media-image"><img src="/apps/news/en/images/content/un_radio.jpg"></a>
+			</div>
+			<div class="span3 video">
+				<h5><a href="http://webtv.un.org/news-features/">UN Television</a></h5>
+				<span class="media-type"></span>
+				<a href="http://www.unmultimedia.org/tv/unia/" class="media-image"><img typeof="foaf:Image" src="/apps/news/en/images/content/un_video.jpg"></a>
+			</div>
+			<div class="span3 video">
+				<h5><a href="http://webtv.un.org/">UN Webcast</a></h5>
+				<span class="media-type"></span>
+				<a href="http://webtv.un.org/" class="media-image"><img typeof="foaf:Image" src="/apps/news/en/images/content/un_webcast.jpg"></a>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="footer">
+		<div class="container">
+
+			<a name="resources"></a>
+			<div class="row">		
+				<div class="span3">
+					<h4>Secretary-General</h4>
+					<hr />
+					<ul class="unstyled">
+						<li><a href="http://www.un.org/apps/news/infocus/sgspeeches/">All Statements</a></li>
+						<li><a href="http://www.un.org/sg/selected-speeches/index.shtml">Selected Speeches</a></li>
+						<li><a href="http://www.un.org/sg/offthecuff/index.asp?cuff=1">Off-the-cuff Remarks</a></li>
+						<li><a href="http://www.un.org/sg/travels.asp">Official Travels</a></li>
+					</ul>
+				</div>
+				
+				<div class="span3">
+					<h4>Spokesperson's Office</h4>
+					<hr />
+					<ul class="unstyled">
+						<li><a href="http://www.un.org/sg/statements/sgstatsarchive.asp">Latest Statements</a></li>
+						<li><a href="http://www.un.org/sg/spokesperson/highlights/index.asp">Briefing Highlights</a></li>
+						<li>
+							<script language="JavaScript" type="text/javascript">  
+								<!--  
+								var dmonths = new Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");  
+								var thirty = 61 * 60 * 60 * 24 * 1000;  
+								now = new Date();  
+								var pastDate = now.getTime() - thirty;  
+								past = new Date(pastDate);  
+								var dmyMonth = dmonths[past.getMonth()];  
+								document.write("<a href=/apps/news/spbrief.asp?DateD=" + dmyMonth + "/1/" + past.getFullYear()+ ">Briefing Transcripts</a>");  
+								//-->  
+							</script>
+						</li>
+						<li><a href="http://www.un.org/sg/spokesperson/confschedule.asp">Press Conferences</a></li>
+						<li><a href="http://www.un.org/sg/offthecuff/index.asp?cuff=3">Notes to Correspondents</a></li>
+					</ul>
+				</div>
+				<div class="span4">
+					<h4>Tools and Services</h4>
+					<hr />
+					<div class="row">
+						<div class="span2">
+							<ul class="unstyled">
+								<li><a href="http://www.un.org/apps/news/topstory.asp">Top Stories Archive</a></li>
+								<li><a href="http://www.un.org/apps/news/archive.asp">UN Daily News</a></li>
+								<li><a href="http://www.un.org/apps/news/html/syslinks.asp">UN System Links</a></li>
+								<li><a href="http://www.un.org/apps/news/html/resources.asp#PO">Peacekeeping</a></li>
+								<li><a href="http://www.un.org/apps/news/html/resources.asp#PM">Political Missions</a></li>
+								<li><a href="http://www.un.org/events/tenstories/">Stories the World Should Hear More About</a></li>
+							</ul>
+						</div>
+						<div class="span2">
+							<ul class="unstyled">
+								<li><a href="https://unp.un.org/">UN Publications</a></li>
+								<li><a href="http://www.un.org/Depts/Cartographic/english/htmain.htm">Maps</a></li>
+								<li><a href="http://www.un.org/databases/index.html">Databases</a></li>
+								<li><a href="http://www.un.org/apps/news/html/resources.asp#NM">News Magazines</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="span2">
+					<h4>Social Media</h4>
+					<hr />
+					<ul class="unstyled">
+						<li><a href="http://www.un.org/apps/news/rss/index.asp">RSS</a></li>
+						<li><a href="https://twitter.com/UN_News_Centre">Twitter</a></li>
+						<li><a href="https://www.facebook.com/UN.News.Centre">Facebook</a></li>
+						<li><a href="http://www.flickr.com/photos/un_photo/">Flickr</a></li>
+						<li><a href="http://www.un.org/apps/news/email/">Subscribe</a></li>
+						<li><a href="http://www.un.org/apps/news/html/contactus.asp">Contact</a></li>
+					</ul>
+				</div>
+				
+			</div>
+		
+			
+			<div class="row" id="copy">
+				<div class="span12">
+					<hr />
+					<div class="row">
+						<div class="span5">
+							<a href="/News/" title="UN News Centre homepage"><h4 class="zerospace">UN News Centre</h4></a>
+						</div>
+						<div class="span7 visible-desktop" id="un-copy">
+							<ul class="pull-right">
+								<li><a href="http://www.un.org/en/aboutun/copyright/">Copyright </a> |</li> 
+								<li><a href="http://www.un.org/en/aboutun/terms/">Terms of Use </a> |</li> 
+								<li><a href="http://www.un.org/en/aboutun/privacy/">Privacy Notice </a> | </li> 
+								<li><a href="http://www.un.org/en/siteindex/">Site Index </a> |</li> 
+								<li><a href="http://www.un.org/en/aboutun/fraudalert/">Fraud Alert </a> |</li> 
+								<li><a href="http://www.un.org/en/aboutun/help/">Help </a> </li> 
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="/apps/news/en/js/jquery.min.js"></script>
+	<script src="/apps/news/en/js/bootstrap.min.js"></script>
+	<script src="/apps/news/en/js/fancybox/jquery.fancybox-1.3.4.pack.js" type="text/javascript"></script>
+	<script src="/apps/news/en/js/app.js"></script>
+    <script src="/apps/news/en/js/prettify.js"></script>
+	<script src="/apps/news/en/js/bootstrap-datepicker.js"></script>
+    <script src="/apps/news/en/js/datepicke_calendar.js"></script>
+    
+<script type="text/javascript">
+$(document).ready(function () {
+$("[rel=tooltip]").tooltip();
+});
+function show(object,val) {
+document.getElementById(object).style.visibility = val;
+}
+</script>
+	</body>
+</html>
+

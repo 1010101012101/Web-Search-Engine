@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Media Jumpstation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="/css1.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+        .prompt         { text-align: right; font-weight: bold; background-color: #EEEEEE; }
+        .required		{ font-weight: bold; color: #af0000; text-align: right; }
+        .picker         { font-size: 11px; color: #0000CC; border: 1px #AAAAAA solid; width: 240px; overflow: auto; }
+        .main           { width: 710px; }
+	.window		{ height: 520px; overflow: auto; }
+        .thead          { font-weight: bold; background-color: #EEEEEE; border-bottom: 1px black solid;}
+        .section        { font-weight: bold; font-size: 110%; color: #000066; border-bottom: 1px #999999 solid; background-color: #EEEEEE;  }
+        .section A:link         { color: #000066; text-decoration: none; }
+        .section A:visited      { color: #000066; text-decoration: none; }
+        .section A:hover        { color: #990000; text-decoration: underline; }
+        .sub                    { color: #003366; font-weight: bold; }
+        .stats                  { color: #999999; padding-left: 12px; }
+        .smhead                 { color: #666666; font-size: 11px; font-weight: bold; text-align: center; }
+        .subform                { font-size: 10px; }
+	.nform			{ font-size: 11px; }
+        .caption                { font-size: 90%; text-align: center; color: #666666; }
+        .rtable                 { color: #999999; border: 1px #AAAAAA solid; background-color: #EEEEEE; }
+        .rtableH                { text-align: right; font-weight: bold; }
+        .rtableC                { color: #666666; }
+	 .zoom:hover 		{ cursor: crosshair; }
+	.right			{ text-align: right; display: inline; }
+	div#main		{ width: 510px; background-color: #ffffff; z-index: 5; clear: both; }
+	div#insert		{ float: right; width: 100px; padding-top: 18px; z-index: 25;  }
+	div#article		{ padding-right: 4px; padding-bottom: 8px; }
+	div#related		{ padding-left: 8px; }
+	div#related li		{ line-height: 150%; }
+	div#brief		{ padding-left: 4px; font-size: 95%; }
+        .rbar                   { float: right; background-color: #EEEEEE; font-weight: bold; }
+        .obj                    { clear: both; }
+        a.tip                   { position: relative; z-index:29; background-color:#CCCCCC; color:#000000; text-decoration:none; }
+        a.tip:hover             { z-index:30; background-color:#CC0000; text-decoration: none; clear: right; }
+        a.tip span              { display: none; clear: right; }
+        a.tip:hover span        { display:block; position: absolute;
+				top:-28px;
+				left:10px; width:100px;
+				text-decoration: none;
+                                border:1px solid #999999;
+				background-color:#CCCCCC;
+				color:#FFFFFF;
+				margin-top: 11px;
+				margin-left: -5px;
+				clear: right;
+				z-index: 100;
+				text-align: center }
+	a.ttip                   { position: relative; z-index:29; font-size: 100%; }
+        a.ttip:hover             { z-index:30; background-color:#DDDDDD; text-decoration: none;  }
+        a.ttip span              { display: none; }
+        a.ttip:hover span        { display:block; position:absolute;
+                                        top:-24px; left:20px; width:140px; font-size: 85%;
+                                        border-top:1px #9999999 solid;
+                                        border-bottom: 2px solid #999999;
+                                        border-left: 1px solid #999999;
+                                        border-right: 2px solid #999999;
+                                        background-color:#CCCCCC; color:#FFFFFF;
+					padding: 2px; text-align: center;
+					text-tecoration: none;
+					line-height: 120%;
+					font-weight: normal;
+				}
+        .brief          	{ padding-right: 3px; font-size: 12px; }
+        .headline       	{ font-size: 110%;}
+        .bheadline      	{ font-size: 110%px; font-weight: bold; }
+	.extra			{ padding-left: 8px; font-size: 95%; color: #999999; }
+        .date           	{ font-size: 10px; }
+        .more           	{ font-size: 10px; text-align: right; }
+	.lprompt		{ font-size: 11px; font-weight: bold; }
+	.rprompt		{ font-size: 11px; font-weight: bold; text-align: right; padding-right: 3px; }
+	div#submenu		{ background-color: #CCCCCC; font-weight: bold; color: white; font-size: 12px; border: 1px #999999 solid; padding=left: 8px; }
+	.f85			{ font-size: 85%; vertical-align: top; }
+	.gbox			{ border: 1px gray solid; padding: 4px; }
+	.catbody		{ padding-left: 8px; padding-bottom: 8px; }
+	div.celltitle 		{font-weight: bold; color: #54224D; background-color:#DEF2E2;}
+	.error			{ font-weight: bold; color: #ac0000; }
+	.service		{ line-height: 18px; vertical-align: top;}
+	.price			{ text-align: right; vartical-align: top; }
+	.line2			{ padding-left: 10px; padding-right; 10px; font-size: 90%; }
+</style>
+<META Name="Description" Content="Paul Krupin and Imediafax provides
+personal marketing advice & publicity consulting services, expert
+copywriting and custom targeted publicity services."><SCRIPT language=JavaScript><!--
+function PopIt(filename, orgname, h, w)
+{
+    popup = window.open(filename,"popDialog","height="+h+",width="+w+",scrollbars=yes")
+    popup.opener.name = orgname;
+    if ( popup.document.close() ) {
+        popup.document.close()
+    }
+}
+function ClosePopUp()
+{
+	self.document.close()
+}
+//-->
+</SCRIPT>
+</head>
+<body bgcolor="#ffffff" topmargin="0" marginheight="0">
+<table width="731" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="3"><a href="/"><img src="/name1.gif" alt="Imediafax, Internet media fax" width="217" height="144" border="0"></a><img src="/header2.jpg" height="144" width="514" alt="growth"></td>
+    </tr>
+    <tr>
+        <td colspan="3"><img src="/spacer.gif" alt=" " width="5" height="15"></td>
+    </tr>
+    <tr>
+        <td width="193" valign="top" id="sider"><p class="menu"><a href="/about/">About Direct Contact PR</a></p>
+<p class="menu"><a href="/services/">Services &amp; Pricing</a></p>
+<p class="menu"><a href="/why/">Why Use Direct Contact PR</a></p>
+<p class="menu"><a href="/pr-success/">PR Success Stories</a></p>
+<p class="menu"><a href="/testimonials/">Testimonials</a></p>
+<p class="menu"><a href="/clients/">Clients</a></p>
+<p class="menu"><a href="/publicity-packages/">Publicity Services</a></p>
+<p class="menu"><a href="/publicity-training/">Publicity Training</a></p>
+<p class="menu"><a href="/faqs/">FAQ's</a></p>
+<p class="menu"><a href="/books/">Books</a></p>
+<p class="menu"><a href="/free-downloads/">Free Downloads</a></p>
+<p class="menu"><a href="/free-ebook/">Free Ebook</a></p>
+<p class="menu"><a href="/free-articles/">Free Articles</a></p>
+<p class="menu"><a href="/pr-resources/">PR Resources</a></p>
+<p class="menu"><a href="/jumpstation/">Media Jumpstation</a></p>
+<p class="menu"><a href="/contact/">Contact Us</a></p>
+<p class="menu"><a href="/">Home</a></p>
+<p>
+Call Paul directly at 509-582-5174 or 800-457-8746 (Toll Free US) or send him an email using <b><u>"Paul
+at  DirectContactPR.com" </u></b> or contact him using our <a href="/contact/">online contact forms</a> for quick personal assistance
+and help with your news release or publicity outreach.
+</p>
+</td>
+        <td width="24"><img src="/spacer.gif" alt=" " width="24" height="15"></td>
+        <td width="514" valign="top" id="content"><span class="hometitle">Media Jumpstation</span>
+	<div>
+<P>
+<div style="border-bottom: thin black solid;">
+<blockquote>
+<font face="Arial,Helvetica,sans-serif" size="-1">
+</font></blockquote>
+</div>
+<table width="100%" bgcolor="#FFFFFF" cellpadding=0 cellspacing=0 style="border: thin gray solid;">
+<tr>
+<form method="Post" action="/jumpstation/index.src">
+	<td class=rprompt>Media<br>Type:</td>
+	<td colspan=3 class=gbox><select name=Type class=nform>
+<option value="">--- Select A Media Type ---
+        <option value="AM Radio Station Show" >AM Radio Station Show        <option value="Cable Show" >Cable Show        <option value="Daily Newspaper" >Daily Newspaper        <option value="FM Radio Station Show" >FM Radio Station Show        <option value="Magazine" >Magazine        <option value="Radio Network Show" >Radio Network Show        <option value="Radio Syndicated Show" >Radio Syndicated Show        <option value="Regional Radio Network Show" >Regional Radio Network Show        <option value="Regional Television Network Show" >Regional Television Network Show        <option value="Television Network Show" >Television Network Show        <option value="Television Station Show" >Television Station Show        <option value="Television Syndicated Show" >Television Syndicated Show        <option value="Weekly Newspaper" >Weekly Newspaper        <option value="Weekly Newspaper Publisher" >Weekly Newspaper Publisher</select>
+</td>
+</tr>
+<tr>
+	<td class=rprompt>Magazine<br>Subject:</td>
+	<td colspan=3 class=gbox><select name=Subject class=nform>
+<option value="">--- Select An Optional Magazine Subject ---
+        <option value="Accounting" >Accounting        <option value="Advertising" >Advertising        <option value="Airline  - Inflight" >Airline  - Inflight        <option value="Amateur Radio" >Amateur Radio        <option value="Amusements Casinos & Gaming" >Amusements Casinos & Gaming        <option value="Appliances & Appliance Retailing" >Appliances & Appliance Retailing        <option value="Architecture" >Architecture        <option value="Art" >Art        <option value="Arts & Entertainment Trade" >Arts & Entertainment Trade        <option value="Arts - Performing Arts" >Arts - Performing Arts        <option value="Audio - Video - Consumer" >Audio - Video - Consumer        <option value="Audio Video Trade" >Audio Video Trade        <option value="Automobile - Aftermarket, Parts & Repair" >Automobile - Aftermarket, Parts & Repair        <option value="Automobile - Auto Club Publications" >Automobile - Auto Club Publications        <option value="Automobile - Buses Taxicabs & Public Transportation" >Automobile - Buses Taxicabs & Public Transportation        <option value="Automobile - Consumer Auto" >Automobile - Consumer Auto        <option value="Automobile - Consumer Special Interests" >Automobile - Consumer Special Interests        <option value="Automobile - Sports & Racing" >Automobile - Sports & Racing        <option value="Automobile - Tires & Rubber" >Automobile - Tires & Rubber        <option value="Automobile - Trade & Service Stations" >Automobile - Trade & Service Stations        <option value="Automobile - Trucks" >Automobile - Trucks        <option value="Aviation - Sport & Hobby" >Aviation - Sport & Hobby        <option value="Aviation - Trade & Aerospace" >Aviation - Trade & Aerospace        <option value="Baking" >Baking        <option value="Banking" >Banking        <option value="Banking - State & Regional" >Banking - State & Regional        <option value="Beauty & Fashion" >Beauty & Fashion        <option value="Beauty Barber & Cosmetics Trade" >Beauty Barber & Cosmetics Trade        <option value="Beverage Industry" >Beverage Industry        <option value="Beverages - State & Regional" >Beverages - State & Regional        <option value="Biotechnology" >Biotechnology        <option value="Boats - Marine" >Boats - Marine        <option value="Boats - Pleasure Craft" >Boats - Pleasure Craft        <option value="Book & Literary Review" >Book & Literary Review        <option value="Book Trade & Libraries" >Book Trade & Libraries        <option value="Business & Corporate Travel" >Business & Corporate Travel        <option value="Business - Business & Corporate Travel" >Business - Business & Corporate Travel        <option value="Business - City, State & Regional Business" >Business - City, State & Regional Business        <option value="Business - General" >Business - General        <option value="Business - Management Methods & Human Resources" >Business - Management Methods & Human Resources        <option value="Business - Marketing" >Business - Marketing        <option value="Business - Meetings & Conventions" >Business - Meetings & Conventions        <option value="Business - Selling & Sales" >Business - Selling & Sales        <option value="Candy - Confectionery" >Candy - Confectionery        <option value="Careers & Employment" >Careers & Employment        <option value="Catering & Food Service" >Catering & Food Service        <option value="Cemetery" >Cemetery        <option value="Ceramics" >Ceramics        <option value="Chemical" >Chemical        <option value="Children" >Children        <option value="Cleaning Dyeing & Laundry" >Cleaning Dyeing & Laundry        <option value="Clothes - Wearing Apparel" >Clothes - Wearing Apparel        <option value="Clubs" >Clubs        <option value="Commercial Fishing" >Commercial Fishing        <option value="Computer - Industry" >Computer - Industry        <option value="Computer - Internet" >Computer - Internet        <option value="Computer - Marketing" >Computer - Marketing        <option value="Computer - Software & Operating Systems" >Computer - Software & Operating Systems        <option value="Computer - Video Games" >Computer - Video Games        <option value="Computer Technology - Data Management" >Computer Technology - Data Management        <option value="Computers - General" >Computers - General        <option value="Computers - Related Technologies" >Computers - Related Technologies        <option value="Construction - Allied Building Trades" >Construction - Allied Building Trades        <option value="Construction - Building & Construction" >Construction - Building & Construction        <option value="Construction - City State & Regional Building" >Construction - City State & Regional Building        <option value="Construction - Civil Engineering & Heavy Construction" >Construction - Civil Engineering & Heavy Construction        <option value="Crafts Games & Hobbies" >Crafts Games & Hobbies        <option value="Dairy Products" >Dairy Products        <option value="Dental" >Dental        <option value="Department Chain & Specialty Retail" >Department Chain & Specialty Retail        <option value="Drugs" >Drugs        <option value="Education" >Education        <option value="Education - City State & Regional" >Education - City State & Regional        <option value="Education - Primary Education" >Education - Primary Education        <option value="Education - Secondary" >Education - Secondary        <option value="Electrical" >Electrical        <option value="Electronics" >Electronics        <option value="Electronics - Home Audio &  Video" >Electronics - Home Audio &  Video        <option value="Energy & Utilities" >Energy & Utilities        <option value="Engineering - Design & Product Engineering" >Engineering - Design & Product Engineering        <option value="Engineering - General" >Engineering - General        <option value="Entertainment" >Entertainment        <option value="Entertainment & Celebrities" >Entertainment & Celebrities        <option value="Entertainment - Local Guides" >Entertainment - Local Guides        <option value="Environmental - Conservation Environmental & Nature" >Environmental - Conservation Environmental & Nature        <option value="Environmental - Hazardous Materials - Waste Management" >Environmental - Hazardous Materials - Waste Management        <option value="Environmental - Pollution Control - Recycling" >Environmental - Pollution Control - Recycling        <option value="Environmental - Water & Sanitation" >Environmental - Water & Sanitation        <option value="Export - Import & International Trade" >Export - Import & International Trade        <option value="Farming  - Chemicals & Fertilizers" >Farming  - Chemicals & Fertilizers        <option value="Farming - City State & Regional" >Farming - City State & Regional        <option value="Farming - Equipment" >Farming - Equipment        <option value="Farming - Field Crops" >Farming - Field Crops        <option value="Farming - Fruit Nut & Vegetable" >Farming - Fruit Nut & Vegetable        <option value="Farming - General Farming" >Farming - General Farming        <option value="Farming - Livestock" >Farming - Livestock        <option value="Farming - Milling Feed & Grain" >Farming - Milling Feed & Grain        <option value="Farming - Poultry" >Farming - Poultry        <option value="Farming - Specialized" >Farming - Specialized        <option value="Finance" >Finance        <option value="Fire Protection" >Fire Protection        <option value="Fitness & Personal Health" >Fitness & Personal Health        <option value="Florist Landscape & Nursery Trade" >Florist Landscape & Nursery Trade        <option value="Food - Epicurean" >Food - Epicurean        <option value="Food - Food Industry & Processing" >Food - Food Industry & Processing        <option value="Food - Grocery & Food Marketing" >Food - Grocery & Food Marketing        <option value="Food - Nutrition" >Food - Nutrition        <option value="Forestry" >Forestry        <option value="Forestry - Lumber" >Forestry - Lumber        <option value="Fraternal & Club" >Fraternal & Club        <option value="Furniture & Interiors" >Furniture & Interiors        <option value="Gardening" >Gardening        <option value="Gas" >Gas        <option value="Gay" >Gay        <option value="Gifts Antiques & Collectibles" >Gifts Antiques & Collectibles        <option value="Glass & Glassware" >Glass & Glassware        <option value="Golf" >Golf        <option value="Government  - Health & Social Services" >Government  - Health & Social Services        <option value="Government  - Municipal County & National" >Government  - Municipal County & National        <option value="Government - Police & Law Enforcement" >Government - Police & Law Enforcement        <option value="Grocery - State & Regional" >Grocery - State & Regional        <option value="Hardware Building Supplies & Rental Centers" >Hardware Building Supplies & Rental Centers        <option value="Health - Disabled - Physically Challenged" >Health - Disabled - Physically Challenged        <option value="Health Clubs - Fitness Professionals" >Health Clubs - Fitness Professionals        <option value="History" >History        <option value="Home" >Home        <option value="Home - Building Buying & Remodeling" >Home - Building Buying & Remodeling        <option value="Horses & Horse Breeding" >Horses & Horse Breeding        <option value="Hospital & Healthcare Administration" >Hospital & Healthcare Administration        <option value="Hotels Motels & Resorts" >Hotels Motels & Resorts        <option value="Industrial" >Industrial        <option value="Instrumentation & Control Systems" >Instrumentation & Control Systems        <option value="Insurance" >Insurance        <option value="Interior Design" >Interior Design        <option value="International Business - U. S. Based" >International Business - U. S. Based        <option value="Internet - E-Commerce" >Internet - E-Commerce        <option value="Jewelry" >Jewelry        <option value="Journalism & Writing" >Journalism & Writing        <option value="Legal" >Legal        <option value="Legal - City State & Regional" >Legal - City State & Regional        <option value="Lifestyle - Alternative Health & Spirituality" >Lifestyle - Alternative Health & Spirituality        <option value="Lifestyle - Country - Western Living" >Lifestyle - Country - Western Living        <option value="Lifestyle - Ethnic Lifestyle" >Lifestyle - Ethnic Lifestyle        <option value="Lifestyle - Mature Lifestyle" >Lifestyle - Mature Lifestyle        <option value="Lifestyle - Young Adult" >Lifestyle - Young Adult        <option value="Lifestyle - Youth - Teenage" >Lifestyle - Youth - Teenage        <option value="Meat  - Packing & Merchandising" >Meat  - Packing & Merchandising        <option value="Medical & Diagnostic Equipment" >Medical & Diagnostic Equipment        <option value="Medical - Laboratory & Research" >Medical - Laboratory & Research        <option value="Medicine - Anesthesiology" >Medicine - Anesthesiology        <option value="Medicine - Cardiology" >Medicine - Cardiology        <option value="Medicine - Chiropractic" >Medicine - Chiropractic        <option value="Medicine - City State & Regional" >Medicine - City State & Regional        <option value="Medicine - Cosmetic & Reconstructive Surgery" >Medicine - Cosmetic & Reconstructive Surgery        <option value="Medicine - Diabetes" >Medicine - Diabetes        <option value="Medicine - Emergency Medical Services" >Medicine - Emergency Medical Services        <option value="Medicine - General" >Medicine - General        <option value="Medicine - Healthcare Trade" >Medicine - Healthcare Trade        <option value="Medicine - Nursing" >Medicine - Nursing        <option value="Medicine - Obstetrics & Gynecology" >Medicine - Obstetrics & Gynecology        <option value="Medicine - Oncology - Cancer" >Medicine - Oncology - Cancer        <option value="Medicine - Orthopedics - Physical Therapy" >Medicine - Orthopedics - Physical Therapy        <option value="Medicine - Pediatrics" >Medicine - Pediatrics        <option value="Medicine - Psychiatry - Psychology" >Medicine - Psychiatry - Psychology        <option value="Medicine - Radiology" >Medicine - Radiology        <option value="Medicine - Specialized" >Medicine - Specialized        <option value="Medicine - Surgery" >Medicine - Surgery        <option value="Men's General Interest" >Men's General Interest        <option value="Metalworking & Machinery" >Metalworking & Machinery        <option value="Military" >Military        <option value="Mining & Coal" >Mining & Coal        <option value="Mortuary" >Mortuary        <option value="Motorcycles" >Motorcycles        <option value="Music" >Music        <option value="Music Fan" >Music Fan        <option value="Music Trade" >Music Trade        <option value="News  - Magazines" >News  - Magazines        <option value="News - General Editorial" >News - General Editorial        <option value="News - General Editorial-Metro Areas" >News - General Editorial-Metro Areas        <option value="Office" >Office        <option value="Oil & Gas - Petroleum" >Oil & Gas - Petroleum        <option value="Optical" >Optical        <option value="Packaging" >Packaging        <option value="Paper & Paper Products" >Paper & Paper Products        <option value="Parenting & Family" >Parenting & Family        <option value="Parenting & Family - Regional" >Parenting & Family - Regional        <option value="Personal Finance" >Personal Finance        <option value="Pets & Pet Supplies" >Pets & Pet Supplies        <option value="Philanthropy" >Philanthropy        <option value="Photography - Consumer" >Photography - Consumer        <option value="Photography - Professional" >Photography - Professional        <option value="Plastics & Rubber" >Plastics & Rubber        <option value="Plumbing HVAC & Refrigeration" >Plumbing HVAC & Refrigeration        <option value="Politics & Social Opinion" >Politics & Social Opinion        <option value="Power" >Power        <option value="Printing Graphics & Commercial Arts" >Printing Graphics & Commercial Arts        <option value="Public Relations" >Public Relations        <option value="Publishing" >Publishing        <option value="Purchasing" >Purchasing        <option value="Radio TV" >Radio TV        <option value="Railroad" >Railroad        <option value="Real Estate" >Real Estate        <option value="Real Estate - Building Management & Maintenance" >Real Estate - Building Management & Maintenance        <option value="Real Estate - City State & Regional" >Real Estate - City State & Regional        <option value="Religion" >Religion        <option value="Religious Administration" >Religious Administration        <option value="Restaurants" >Restaurants        <option value="Rock & Cement Products" >Rock & Cement Products        <option value="Safety - Occupational Health & Industrial Safety" >Safety - Occupational Health & Industrial Safety        <option value="Science" >Science        <option value="Security" >Security        <option value="Shoes & Leather Goods" >Shoes & Leather Goods        <option value="Shopping Center Operations & Design" >Shopping Center Operations & Design        <option value="Sports" >Sports        <option value="Sports - Basketball" >Sports - Basketball        <option value="Sports - Bicycling" >Sports - Bicycling        <option value="Sports - Contact Sports" >Sports - Contact Sports        <option value="Sports - Field Sports" >Sports - Field Sports        <option value="Sports - Guns & Shooting" >Sports - Guns & Shooting        <option value="Sports - Hunting & Fishing" >Sports - Hunting & Fishing        <option value="Sports - Outdoor Recreation" >Sports - Outdoor Recreation        <option value="Sports - Running" >Sports - Running        <option value="Sports - Skating & Skateboarding" >Sports - Skating & Skateboarding        <option value="Sports - Skiing & Winter Sports" >Sports - Skiing & Winter Sports        <option value="Sports - Specialty Sports" >Sports - Specialty Sports        <option value="Sports - Tennis" >Sports - Tennis        <option value="Sports - Water Sports" >Sports - Water Sports        <option value="Sports- Industry" >Sports- Industry        <option value="Student Publications" >Student Publications        <option value="Surveying & Mapping" >Surveying & Mapping        <option value="Telecommunications" >Telecommunications        <option value="Telecommunications - Mobile - Cellular" >Telecommunications - Mobile - Cellular        <option value="Telecommunications - Networking" >Telecommunications - Networking        <option value="Television - TV Guides" >Television - TV Guides        <option value="Textile" >Textile        <option value="Tobacco" >Tobacco        <option value="Toys Crafts" >Toys Crafts        <option value="Trading Cards & Sports Memorabilia" >Trading Cards & Sports Memorabilia        <option value="Trailers Motor Homes & RVs" >Trailers Motor Homes & RVs        <option value="Transportation - State & Regional Trucking" >Transportation - State & Regional Trucking        <option value="Transportation - Traffic Shipping & Warehousing" >Transportation - Traffic Shipping & Warehousing        <option value="Travel - General" >Travel - General        <option value="Travel - Regional Visitor's Guides" >Travel - Regional Visitor's Guides        <option value="Travel - Trade" >Travel - Trade        <option value="Vending & Automatic Merchandising" >Vending & Automatic Merchandising        <option value="Veterinary" >Veterinary        <option value="Welding" >Welding        <option value="Wine" >Wine        <option value="Women - General Interest" >Women - General Interest        <option value="Women - Romance" >Women - Romance        <option value="Women - Weddings" >Women - Weddings        <option value="Woodworking" >Woodworking</select>
+<br>
+	<center><span class=nform>(Magazines Only)</center></td>
+</tr>
+<tr>
+	<td align="right" class=rprompt>Radio/TV<br>Category:</td>
+	<td colspan=3 class=gbox><select name="RTVCat" class=nform>
+<option value="">--- Select A Radio/TV Category ---  
+        <option value="Auto" >Auto        <option value="Books" >Books        <option value="Business" >Business        <option value="Career/Jobs" >Career/Jobs        <option value="Computers/Internet" >Computers/Internet        <option value="Education" >Education        <option value="Entertainment" >Entertainment        <option value="Environmental" >Environmental        <option value="Family/Parenting" >Family/Parenting        <option value="Food" >Food        <option value="General" >General        <option value="Government" >Government        <option value="Mature/Seniors" >Mature/Seniors        <option value="Medical Health" >Medical Health        <option value="Personal Finance" >Personal Finance        <option value="Pets/Animals" >Pets/Animals        <option value="Public Affairs" >Public Affairs        <option value="Religion" >Religion        <option value="Sports" >Sports        <option value="Travel" >Travel</select>
+	<br><center><span class=nform>(Radio/TV Only)</center>
+	</td>
+</tr>
+<tr>
+	<td class=rprompt>Keyword:</td>
+	<td class=gbox><center>
+        <input name="Key" value="" size="12" maxlength="20" class=nform>   
+        <br><span class=nform>(City, Name etc.)</span></center>
+	</td>
+	<td class=gbox><center>
+        <span class=lprompt>State/Province:</span>
+	<select name="State" class=nform>
+<OPTION VALUE="">State
+<option value="AL" >AL<option value="AK" >AK<option value="AB" >AB<option value="AZ" >AZ<option value="BC" >BC<option value="CA" >CA<option value="CO" >CO<option value="CT" >CT<option value="DE" >DE<option value="DC" >DC<option value="FL" >FL<option value="GA" >GA<option value="HI" >HI<option value="ID" >ID<option value="IL" >IL<option value="IN" >IN<option value="IA" >IA<option value="KS" >KS<option value="KY" >KY<option value="LA" >LA<option value="ME" >ME<option value="MB" >MB<option value="MD" >MD<option value="MA" >MA<option value="MI" >MI<option value="MN" >MN<option value="MS" >MS<option value="MO" >MO<option value="MT" >MT<option value="NE" >NE<option value="NV" >NV<option value="NB" >NB<option value="NH" >NH<option value="NJ" >NJ<option value="NM" >NM<option value="NY" >NY<option value="NF" >NF<option value="NC" >NC<option value="ND" >ND<option value="NT" >NT<option value="NS" >NS<option value="OH" >OH<option value="OK" >OK<option value="ON" >ON<option value="OR" >OR<option value="PA" >PA<option value="PE" >PE<option value="PQ" >PQ<option value="RI" >RI<option value="SK" >SK<option value="SC" >SC<option value="SD" >SD<option value="TN" >TN<option value="TX" >TX<option value="UT" >UT<option value="VT" >VT<option value="VA" >VA<option value="WA" >WA<option value="WV" >WV<option value="WI" >WI<option value="WY" >WY<option value="YT" >YT	</select><br>
+	<span class=nform>(Newspapers Only)</span></center>
+        </td>
+        <td class=gbox><center><input name="Action" value="Search" type="Submit" class=nform></center></td>
+</tr>
+</form>
+</table>
+<P>
+<p align="left"></p>
+	</div>
+	</td>
+    </tr>
+    <tr>
+        <td colspan="3"><img src="/spacer.gif" alt=" " width="5" height="15"></td>
+    </tr>
+    <tr>
+        <td colspan="3" id="footer" class="footer"><p class="menu"><a href="/about/">About Direct Contact PR</a> / <a href="/services/">Services</a> 
+     / <a href="/why/">Why Use Direct Contact 
+    PR </a> / <a href="/pr-success/">PR Success Stories</a> / <a href="/testimonials/">Testimonials<br>
+    </a><a href="/clients/">Clients</a> / <a href="/publicity-packages/">Publicity 
+    Packages</a> / <a href="/publicity-training/">Publicity Training</a> / <a href="/faqs/">FAQ's</a> 
+    / <a href="/books/">Books</a> / <a href="/free-downloads/">Free Downloads</a> 
+    / <a href="/free-ebook/">Free Ebook</a> / <a href="/free-articles/">Free Articles</a><br>
+    <a href="/pr-resources/">PR Resources</a> / <a href="/jumpstation/">Media 
+    Jumpstation</a> / <a href="http://blog.directcontactpr.com">Blog</a> / <a href="/contact/">Contact Us</a> / <a href="/">Home</a></p>
+<p>&copy; Direct Contact PR. All rights reserved. / <a href="/sitemap.html">Site 
+    Map</a></p>
+<p>&nbsp;</p>
+<script type='text/javascript' charset='utf-8'>
+ var vcHost = document.location.protocol == "https:" ? "https:" : "http:";
+ document.write(unescape("%3Cscript src='" + vcHost + "//my.vcita.com/pauljkrupin/loader.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<noscript>
+ <div
+style="position:fixed;right:10px;bottom:10px;font-size:12px;color:#62656a;fo
+nt-family:Arial, sans-serif">
+   <p>
+     Contact Paul Krupin</p>
+   <p>
+     <a href="http://my.vcita.com/pauljkrupin/set_meeting"
+target="_blank">Set a Meeting</a> or
+<a href="http://my.vcita.com/pauljkrupin/send_message" target="_blank">Send
+a Message</a>
+
+   </p>
+   <A  
+href="http://www.vcita.com/software/contact_form?invite=VR_STATIC-204131"
+style="color:#62656a;text-decoration: none;" target="_blank">Contact
+Form</A> and <A
+href="http://www.vcita.com/software/meeting_scheduler?invite=VR_STATIC-20413
+1" style="color:#62656a;text-decoration: none;" target="_blank">Meeting
+Scheduler</A> by <A
+href="http://www.vcita.com/?invite=VR_STATIC-204131&no_redirect=true"
+target="_blank" style="color:#62656a;text-decoration: none;">vCita</A>
+ </div>
+</noscript>
+</td>
+    </tr>
+</table>
+<script type='text/javascript' charset='utf-8'>
+ var vcHost = document.location.protocol == "https:" ? "https:" : "http:";
+ document.write(unescape("%3Cscript src='" + vcHost + "//my.vcita.com/pauljkrupin/loader.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<noscript>
+ <div
+style="position:fixed;right:10px;bottom:10px;font-size:12px;color:#62656a;fo
+nt-family:Arial, sans-serif">
+   <p>
+     Contact Paul Krupin</p>
+   <p>
+     <a href="http://my.vcita.com/pauljkrupin/set_meeting"
+target="_blank">Set a Meeting</a> or
+<a href="http://my.vcita.com/pauljkrupin/send_message" target="_blank">Send
+a Message</a>
+   </p>
+   <A
+href="http://www.vcita.com/software/contact_form?invite=VR_STATIC-204131"
+style="color:#62656a;text-decoration: none;" target="_blank">Contact
+Form</A> and <A
+href="http://www.vcita.com/software/meeting_scheduler?invite=VR_STATIC-20413
+1" style="color:#62656a;text-decoration: none;" target="_blank">Meeting
+Scheduler</A> by <A
+href="http://www.vcita.com/?invite=VR_STATIC-204131&no_redirect=true"
+target="_blank" style="color:#62656a;text-decoration: none;">vCita</A>
+ </div>
+</noscript>
+</body>
+</html>
+

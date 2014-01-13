@@ -1,0 +1,384 @@
+
+<html>
+<head>
+<title>Fast Weather Forecast! Get your Local Weather Reports!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+%%IF ('' == '') THEN
+<META HTTP-EQUIV="Refresh" CONTENT="1800">
+IF%%
+
+
+
+<meta NAME="keywords" CONTENT="fast weather forecast, accurate state weather, national weather service, local weather reports, local forecast, 7 day forecast">
+<meta NAME="description" CONTENT="Get your weather forecast fast!! Get your personalized FAST and accurate weather forecast today! All data from the National Weather Service. World & Local Weather Reports!">
+<meta NAME="rating" CONTENT="General">
+<meta NAME="ROBOTS" CONTENT="ALL">
+<link rel="stylesheet" href="/fastweatherforecast.css" type="text/css">
+<link rel="stylesheet" href="/style/hw.css" type="text/css">
+<link rel="stylesheet" type="text/css" media="all" href="http://js.aerisapi.com/css/widget.css" />
+<script LANGUAGE="JavaScript">
+<!--
+function launch(newURL, newName, newFeatures, orgName) {
+  var remote = open(newURL, newName, newFeatures);
+  if (remote.opener == null)
+    remote.opener = window;
+  remote.opener.name = orgName;
+  return remote;
+}
+
+function OpenWindow(sURL, nw,nh, sOptions) {
+   if (nw<1) {nw=500;}
+   if (nh<1) {nh=300;}
+   if (sOptions == '') { sOptions='screenX=125,left=125,screenY=125,top=125,channelmode=0,dependent=0,directories=no,location=no,menubar=no,scrollbars=yes,status=no,toolbar=no,resizable=no,left=0,top=0,screenX=0,screenY=0';}
+
+   myRemote2 = launch(sURL, "myRemote2", "height=" + nh + ",width=" + nw + "," + sOptions, "HAMweather_Popup");
+
+   return false;
+}
+// -->
+</script>
+</head><body LINK="#000080" VLINK="#000080" >
+<br>
+<table WIDTH="770" BORDER="0" align="center" CELLPADDING="0" CELLSPACING="0" bgcolor="#efefef" >
+  <tr bgcolor="D1DFFc">
+    <td WIDTH="321" height="104" valign="bottom" bgcolor="D1DFFc"><div align="center"><a href="http://www.fastweatherforecast.com/"><img src="/images/weather_forecast.gif" alt="Weather Forecast" WIDTH="300" HEIGHT="101" border="0"></a> </div></td>
+    <td WIDTH="449" height="104" valign="middle" bgcolor="D1DFFc"><form name="getforecast" action="hw3.php" method="get">
+        <h3>Get Your <i>Fast Weather Forecast</i>:</h3>
+        <input type="hidden" name="config" value="">
+        <input type="hidden" name="forecast" value="zandh">
+        <input type="text" size="30" name="pands" value="Enter City or US ZIP" onFocus="this.value='';" >
+        &nbsp;
+        <input type="submit" value="GO!" name="Submit">
+        <br>
+        <h6>
+        Enter a city: <b>Las Vegas, 
+        NV</b> or <strong>Orlando, Florida</strong> or use ZIP code.<br>
+        Use <a href="hw3.php?config=&forecast=pass&pass=tafINT">International Weather</a> for a local weather forecast around the world!
+        </h3>
+      </form></td>
+  </tr>
+  <tr bgcolor="#003366">
+    <td height="1" colspan="2" valign="bottom"><img src="/images/spacer.gif" width=1 height=1></td>
+  </tr>
+</table>
+<table BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="770" align="center">
+<tr>
+  <td VALIGN="top" WIDTH="140" bgcolor="#FFFFFF"><table BORDER="0" WIDTH="140" CELLSPACING="0" CELLPADDING="0">
+      <tr>
+        <td valign="top" ><div align="left"> <a href="/" class="nav1">Weather Forecast</a><a href="weather.php?config=&config=&forecast=pass&pass=tafUS" class="nav1" title="All major cities sorted by state.">Local Forecasts by US State</a><a href="hw3.php?config=&forecast=pass&pass=tafCA" class="nav1" title="Canada, oh Canada!">Canada Weather Forecast</a><a href="canada.php?config=&config=&forecast=pass&pass=tafINT" class="nav1" title="Chances are, we cover a city close to you!">International Weather</a>
+            </p>
+          </div></td>
+      </tr>
+      <tr>
+        <td valign="bottom" ><p class="small2">Popular Cities:<br>
+            <br>
+            <a href="http://www.fastweatherforecast.com/new_york_city.php?forecast=zandh&place=new+york&state=ny&country=us">New York City Forecast</a>
+          
+          <p class="small2">Your Free Weather is<br>
+            brought to you by:<br>
+            <br>
+            <a href="http://www.funbrainteasers.com">Fun Brain Teasers</a><br>
+            <br>
+            <a href="http://www.coolopticalillusions.com">Very Scary Illusions</a><br>
+            <br>
+            <a href="http://www.newdayhypno.com">Kansas City Hypnosis</a><br>
+            <br>
+            <a href="http://www.happybirthdaymagic.com">Kansas Magician</a><br>
+            <br>
+            <a href="http://www.redmagic.com">Kansas City Web Design Company</a><br>
+            <br>
+            <a href="http://www.kansascityparentsplace.com">Parents - Here's what to do in Kansas City.</a><br>
+            <br>
+            <a href="http://www.paris-paris.com">Paris Hotels</a><br>
+            <br>
+            <a href="http://www.parishotelschampselysees.com">Champs Elysees Hotels Paris</a></p></td>
+      </tr>
+    </table></td>
+  <td VALIGN="top" WIDTH="645" bgcolor="FFFFFF"><h1>The <em>Fastest</em> Local Weather Forecasts &amp; Weekly Weather Reports</h1>
+
+
+
+
+
+
+
+<!--       BEGIN STATE NAV        //-->
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" width="100%" cellspacing="2" cellpadding="1">
+   <tr>
+      <td align="center" class="headerTD"><a href="hw3.php?config=&amp;forecast=now&amp;place=overland+park&amp;state=ks&amp;zipcode=66204&amp;country=us&amp;county=20091&amp;zone=KSZ105&amp;icao=KOJC" class="navBar">NowCast</a></td>
+      <td align="center" class="headerTD"><a href="hw3.php?config=&amp;forecast=zandh&amp;place=overland+park&amp;state=ks&amp;zipcode=66204&amp;country=us&amp;county=20091&amp;zone=KSZ105&amp;icao=KOJC" class="navBarAct">ZoneCast</a></td>
+      <td align="center" class="headerTD"><a href="hw3.php?config=&amp;forecast=warnings&amp;place=overland+park&amp;state=ks&amp;zipcode=66204&amp;country=us&amp;county=20091&amp;zone=KSZ105&amp;icao=KOJC" class="navBar">Warnings/Advisories</a></td>
+      <td align="center"  class="headerTD"><a href="hw3.php?config=&amp;forecast=avnmos&amp;place=overland+park&amp;state=ks&amp;zipcode=66204&amp;country=us&amp;county=20091&amp;zone=KSZ105&amp;icao=KOJC&amp;oc=mosview_option|forecast" class="navBar">Hourly Track</a></td>
+      <td align="center" class="headerTD"><a href="hw3.php?config=&amp;forecast=special&amp;place=overland+park&amp;state=ks&amp;zipcode=66204&amp;country=us&amp;county=20091&amp;zone=KSZ105&amp;icao=KOJC" class="navBar">Special</a></td>
+
+      <td align="center" class="headerTD"><a href="hw3.php?config=&amp;forecast=pass&amp;pass=local_radar&amp;dpp=1&amp;radar_icao=KEAX&amp;place=overland+park&amp;state=ks&amp;zipcode=66204&amp;country=us&amp;county=20091&amp;zone=KSZ105&amp;icao=KOJC&amp;oc=radarview_option|pass" class="navBar">Radar</a></td>
+   </tr>
+</table>
+
+<!--       END STATE NAV        //-->
+
+
+
+<!--   BEGIN LOCAL HEADER   //-->
+
+
+
+  
+
+
+
+
+
+<table  border="0" width="100%" cellspacing="0" cellpadding="2" id="localHeader">
+   <tr>
+      <td class="Place">Overland Park, Kansas, United States  (66204)</td>
+      <td align="right">&nbsp;<span class="Label">Lat:</span><span class="Value"> 38.98N, </span><span class="Label">Lon:</span><span class="Value"> 94.67W</span><br /> 
+      <span class="Label">Wx Zone:</span><span class="Value"> KSZ105</span>
+      <span class="Label">ICAO Used:</span> <a class="Icao" href="hw3.php?config=&amp;forecast=pass&amp;pass=icao_desc&amp;icao=KOJC&amp;dpp=1" onClick="return OpenWindow('hw3.php?config=&amp;forecast=pass&amp;dpp=1&amp;pass=icao_desc&amp;icao=KOJC',425,225,'');">KOJC</a></td>
+   </tr>
+</table>
+
+<!--   END  LOCAL HEADER   //-->
+
+
+<table border="0" width="100%" >
+   <tr>
+      <td class="headerTD" valign="top" width="315"><span class="headerText">Current Conditions <br />
+         </span><!--<span class="headerDate">Updated: UNKNOWN</span>-->
+      </td>
+               <td  class="headerTD" valign="top" width="320"><span class="headerText">Sun & Moon Information:</span></td>      
+   </tr>
+   <tr>
+      <td valign="top">
+   <style type="text/css">
+   #widget-sample {width:300px;height:200px;}
+   </style>
+
+
+
+   <script type="text/javascript">
+   
+   
+   var QueryString = function () {
+  // This function is anonymous, is executed immediately and 
+  // the return value is assigned to QueryString!
+  var query_string = {};
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    	// If first entry with this name
+    if (typeof query_string[pair[0]] === "undefined") {
+      query_string[pair[0]] = pair[1];
+    	// If second entry with this name
+    } else if (typeof query_string[pair[0]] === "string") {
+      var arr = [ query_string[pair[0]], pair[1] ];
+      query_string[pair[0]] = arr;
+    	// If third or later entry with this name
+    } else {
+      query_string[pair[0]].push(pair[1]);
+    }
+  } 
+    return query_string;
+} ();
+   
+   
+   window.Aeris = window.Aeris || {
+      onLoad: function() {
+         // Initialize the SDK with your options
+         Aeris.init({
+            client_id: 'eICS19ikXiSqZGKmIm3xL',
+            client_secret: 'xgoTof0xeBGlqIphsfgEjkXVRaHXKznvsk3vCr2K',
+            widgets: true
+         });
+      },
+      onReady: function() {
+
+         // show the Currents widget in the "widget-sample" div
+         var currentsTop = new Aeris.widgets.Currents($('#widget-sample'), {
+		 params: { 
+		 	p: QueryString.pands
+		 }
+		 });
+		 
+      }
+   };
+
+   // Load the SDK asynchronously
+   (function(w, d) {
+      var loader = function() {
+        Aeris.secure = (d.location.protocol === 'https:');
+        var b = '//' + ((Aeris.secure === true) ? 'js-secure' : 'js') + '.aerisapi.com/';
+        var v = Aeris.version;
+        var script = d.createElement('script'), tag = d.getElementsByTagName('script')[0];
+        script.type = 'text/javascript';
+        script.async = true;
+        script.src = b + ((v && v !== '') ? v + '/' : '') + 'aeris.js';
+        tag.parentNode.insertBefore(script, tag);
+      }
+      w.addEventListener ? w.addEventListener('load', loader, false) : w.attachEvent('onload', loader);
+   })(window, document);
+   </script>
+
+   <div id="widget-sample"></div>         
+      </td>
+      <td valign="top">
+               
+<!-- BEGIN ASTRO INFO //-->
+
+<div id="astro">
+<table border="0" width="100%" >
+   <tr>
+      <td valign="top"><a href="" onClick="return OpenWindow('http://www.weatherdictionary.com/cgi-bin/hw_dictionary.pl?searchterm=civil+twilight',530,350,'');" class="Label">Civil Twilight:</a></td>
+      <td align="left"><span class="Value">6:57 AM  CST</span></td>
+      <td align="center" rowspan="4" valign="top"><a href="" onClick="return OpenWindow('http://www.weatherdictionary.com/cgi-bin/hw_dictionary.pl?searchterm=moon+phase',530,350,'');" class="Label">Moon Phase:</a><br />
+         <a href="" onClick="return OpenWindow('http://www.weatherdictionary.com/cgi-bin/hw_dictionary.pl?searchterm=Waxing+Gibbous+Moon',530,350,'');" class="Label"><span class="Moonname">Waxing Gibbous Moon</span></a><br>
+         <img src="./images/moonphases/m10.gif" width="55" height="58" alt="Waxing Gibbous Moon" />
+      </td>
+   </tr><tr>
+      <td valign="top"><a href="" onClick="return OpenWindow('http://www.weatherdictionary.com/cgi-bin/hw_dictionary.pl?searchterm=sunrise',530,350,'');" class="Label">Sunrise:</a></td>
+      <td align="left"><span class="Value">7:27 AM CST</span></td>
+   </tr><tr>
+      <td valign="top"><a href="" onClick="return OpenWindow('http://www.weatherdictionary.com/cgi-bin/hw_dictionary.pl?searchterm=sunset',530,350,'');" class="Label">Sunset:</a></td>
+      <td align="left"><span class="Value">4:56 PM CST</span></td>
+   </tr><tr>
+      <td valign="top"><a href="" onClick="return OpenWindow('http://www.weatherdictionary.com/cgi-bin/hw_dictionary.pl?searchterm=civil+twilight',530,350,'');" class="Label">Civil Twilight:</a></td>
+      <td align="left"><span class="Value">5:26 PM  CST</span></td>
+   </tr>
+
+</table>
+</div>
+<!-- END ASTRO INFO //-->
+
+
+        
+
+       </td>
+   </tr>
+</table>
+
+
+
+<!-- BEGIN ZONE DATA//-->
+
+
+<!--  BEGIN ZONE ROWS //-->
+
+<table border="0" width="100%">
+   <tr>
+   <td class="headerTD" valign="top">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td align=left>
+         <span class="headerText">Forecast for
+            Overland Park, Kansas:</span><br /><span class="headerDate">Dated: 336 PM CST WED DEC 11 2013</span>
+            &nbsp;&nbsp;&nbsp;<span class="headerDate">Expires: 415 AM CST THU DEC 12 2013</span>
+            
+            </td>
+            <td align="right" valign="middle">
+              <a href="hw3.php?config=&amp;forecast=zandh&amp;place=overland+park&amp;state=ks&amp;zipcode=66204&amp;country=us&amp;maxdays=7&amp;daysonly=2" class="zoneDay">7 Day View</a>              
+
+            &nbsp;&nbsp;</td>
+       </tr></table>
+   </td>
+   </tr>
+</table>
+
+
+
+<div id="forecastRow"><table border="0" width="100%">
+   <tr> <td align="center" valign="top" class="Title">TONIGHT</td> <td align="center" valign="top" class="Title">THURSDAY</td> <td align="center" valign="top" class="Title">THURSDAY<BR/>NIGHT</td> <td align="center" valign="top" class="Title">FRIDAY</td> <td align="center" valign="top" class="Title">FRIDAY<BR/>NIGHT</td> <td align="center" valign="top" class="Title">SATURDAY</td> </tr>
+   <tr> <td align="center"><img src="./images/fcicons/sunnyn.gif" width="55" height="58" alt="Clear" /></td> <td align="center"><img src="./images/fcicons/sunny.gif" width="55" height="58" alt="Sunny" /></td> <td align="center"><img src="./images/fcicons/pcloudyn.gif" width="55" height="58" alt="Partly Cloudy" /></td> <td align="center"><img src="./images/fcicons/rainandsnow.gif" width="55" height="58" alt="Wintry Mix" /></td> <td align="center"><img src="./images/fcicons/rainandsnow.gif" width="55" height="58" alt="Ice/Snow Mixture" /></td> <td align="center"><img src="./images/fcicons/mcloudy.gif" width="55" height="58" alt="Partly Sunny" /></td></tr>
+   <tr> <td align="center" valign="top" class="wx">Clear</td> <td align="center" valign="top" class="wx">Sunny</td> <td align="center" valign="top" class="wx">Partly<Br/>Cloudy</td> <td align="center" valign="top" class="wx">Wintry<Br/>Mix</td> <td align="center" valign="top" class="wx">Ice/Snow<Br/>Mixture</td> <td align="center" valign="top" class="wx">Partly<Br/>Sunny</td></tr>
+   <tr> <td valign="top" align="center">                                      <font class="low">Lo: 11&deg;F</font></td>            <td valign="top" align="center">                   <span class="high">Hi: 39&deg;F</span><br />                    </font></td>            <td valign="top" align="center">                                      <font class="low">Lo: 25&deg;F</font></td>            <td valign="top" align="center">                   <span class="high">Hi: 39&deg;F</span><br />                    </font></td>            <td valign="top" align="center">                                      <font class="low">Lo: 25&deg;F</font></td>            <td valign="top" align="center">                   <span class="high">Hi: 29&deg;F</span><br />                    </font></td>           </tr>
+   <tr> <td valign="top" align="center"><span class="pop">                  </span></td>          <td valign="top" align="center"><span class="pop">                  </span></td>          <td valign="top" align="center"><span class="pop">                  </span></td>          <td valign="top" align="center"><span class="pop">                  Pop: 50%</span></td>          <td valign="top" align="center"><span class="pop">                  Pop: 50%</span></td>          <td valign="top" align="center"><span class="pop">                  </span></td>         </tr>
+</table></div>
+
+<!--  END ZONE ROWS //-->
+
+
+<table border="0" width="100%">
+   <tr>
+      <td class="headerTD" valign="top"><span class="headerText">ZoneCast:</span><br />
+      <span class="headerDate">Dated: 336 PM CST WED DEC 11 2013</span>
+      &nbsp;&nbsp;&nbsp;<span class="headerDate">Expires: 415 AM CST THU DEC 12 2013</span>
+      
+      </td>
+   </tr>
+   <tr>
+      <td><div id="forecastDetail">
+         
+         
+         
+         
+         
+   
+          <span class="include">Includes the Cities:</span><span class="cities">   Overland Park,
+                 Olathe </span><br /> <br />
+           <span class="dayTitle">Tonight</span>...<span class="wx">Clear. Lows around 11. Light and variable winds becoming south around 10 mph after midnight.</span> <br /> 
+ 
+  <span class="dayTitle">Thursday</span>...<span class="wx">Sunny. Highs in the upper 30s. Southwest winds 10 to 15 mph.</span> <br /> 
+ 
+  <span class="dayTitle">Thursday Night</span>...<span class="wx">Partly cloudy. Lows in the mid 20s. South winds 10 to 15 mph.</span> <br /> 
+ 
+  <span class="dayTitle">Friday</span>...<span class="wx">Cloudy. Chance of freezing rain possibly mixed with sleet in the morning...Then a chance of rain possibly mixed with sleet in the afternoon. Highs in the upper 30s. South winds 10 to 15 mph. Chance of precipitation 50 percent.</span> <br /> 
+ 
+  <span class="dayTitle">Friday Night</span>...<span class="wx">Cloudy. Chance of rain...Freezing rain and snow in the evening...Then a chance of snow after midnight. Lows in the mid 20s. Light and variable winds becoming north around 10 mph after midnight. Chance of precipitation 50 percent.</span> <br /> 
+ 
+  <span class="dayTitle">Saturday</span>...<span class="wx">Considerable cloudiness in the morning then becoming partly sunny. Highs in the upper 20s.</span> <br /> 
+ 
+  <span class="dayTitle">Saturday Night</span>...<span class="wx">Partly cloudy. Lows around 15.</span> <br /> 
+ 
+  <span class="dayTitle">Sunday</span>...<span class="wx">Partly cloudy. Highs in the lower 30s. Lows in the lower 20s.</span> <br /> 
+ 
+  <span class="dayTitle">Sunday Night</span>...<span class="wx">Partly cloudy. Highs in the lower 30s. Lows in the lower 20s.</span> <br /> 
+ 
+  <span class="dayTitle">Monday</span>...<span class="wx">Partly cloudy. Highs around 40. Lows in the mid 20s.</span> <br /> 
+ 
+  <span class="dayTitle">Tuesday</span>...<span class="wx">Partly cloudy. Highs around 40. Lows in the mid 20s.</span> <br /> 
+ 
+  <span class="dayTitle">Tuesday Night</span>...<span class="wx">Mostly clear. Lows in the mid 20s.</span> <br /> 
+ 
+  <span class="dayTitle">Wednesday</span>...<span class="wx">Partly cloudy. Highs in the mid 40s.</span> <br /> 
+ 
+ </div></td>
+   </tr>
+</table>
+
+<!-- END ZONE DATA //-->
+
+
+<!-- Include Encoded TAF if needed //-->
+
+
+
+
+
+
+
+
+<!-- ---------------BEGIN FOOTER--------------- //-->
+    <br></form>
+    </td>
+  </tr>
+  <tr>
+    <td VALIGN="top" WIDTH="127" bgcolor="#EFEFEF"></td>
+    <td VALIGN="top" WIDTH="535" align="left" bgcolor="#EFEFEF">
+    <span class="footer">Copyright © 2013 Fast <a href="http://www.FastWeatherForecast.com">Weather Forecast</a>. Thanks for using our weather report! If you need a fast local weather forecast for tonight's game, or a 7 day Florida weather forecast to help plan your family vaction, Fast weather Forecast is your best choice!
+    <p></span>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

@@ -1,0 +1,1126 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if IE 9]><html class="no-js ie9" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"  xmlns:fb="http://www.facebook.com/2008/fbml"> <!--<![endif]-->
+<!-- END: include dans le virtual include: --> <!--INCLUDE VIRTUAL="/CNEWS/includes/Common/doctype.html" -->
+<head>  
+  <!-- metaSpecificHome.php also includes the title tag -->
+  		<!-- an error occurred while processing this directive -->
+  <!-- an error occurred while processing this directive -->
+  
+  
+  
+		    <!-- DFP PREMIUM BEGINS -->
+		    
+		    <script type="text/javascript"><!-- // <![CDATA[
+		var archiveurl=document.location.href;
+        var archiveurla=archiveurl.indexOf('archive.html');
+		function OmnitureVariables(){
+			this.mainsection = 'news';
+			this.sectionLevel2 = 'homepage';
+			this.sectionLevel3 = '';
+			this.sectionLevel4 = '';
+			this.sectionLevel5 = '';
+			this.sectionLevel6 = '';
+			this.language = 'en';
+			this.division = 'canoe';	
+			this.networkid = 'can';
+            this.SwitchCgi = true;
+			this.trackExternalLinks= 'true';
+			this.pageType = '';
+			this.s_account = 'cnocanoecaprod,cnocanoeglobalprod';
+			this.linkInternalFilters = 'javascript:,canoe.ca';
+			this.linkExternalFilters = '';			
+			this.linkTrackVars = 'server';
+			this.linkTrackEvents = 'None';			
+ 			this.linkLeaveQueryString = 'false';					
+			this.prop22 = 'news';	          
+		    this.server = this.networkid + '.' + this.language + '.' + this.division + '.' + this.mainsection;
+			
+			this.type = '';
+            //check to see if the page is a home page or an article page 
+              var theurl=document.location.href;
+              var mainurla=theurl.indexOf('home.html');
+              var mainurlb=theurl.charAt(theurl.length -1);
+              var mainurlc=theurl.indexOf('home.php');
+              var mainurld=theurl.indexOf('?cid');
+			  var mainurle=theurl.indexOf('ETF');
+			      if (((mainurla!=-1) || (mainurlb=='/') || (mainurlc!=-1) || (mainurld!=-1)) && (mainurle==-1)){
+                      var pagen='home';
+                     }
+                     else {
+                      var pagen='article';
+                     }
+            //check to see if the page is an archive page 	
+		      //var articleidmain= theurl.slice(7);		
+			
+			      if (archiveurla!=-1) {
+			         this.articlename = 'homepage' + ' archive';
+  			         }
+			      else {
+			         this.articlename = '';
+			         }
+             //setting the page name
+			 
+               if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 !='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+this.sectionLevel4+':'+this.sectionLevel5+':'+this.sectionLevel6+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 =='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+this.sectionLevel4+':'+this.sectionLevel5+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+this.sectionLevel4+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 =='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 =='') && (this.sectionLevel4 =='') &&  (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                       if (this.sectionLevel2 =='homepage') {
+							this.pageName= this.mainsection+':'+pagen;
+						  }
+							else {	  
+                                  this.pageName= this.mainsection+':'+this.sectionLevel2+':'+pagen;
+								 }
+                 }
+                 else {
+				      if (this.pageType!='errorPage') {
+                          this.pageName= this.mainsection+':'+pagen;
+                          }
+						  else {
+						  this.pageName='';
+				          }
+				 }
+				if (this.sectionLevel2=='homepage') {
+			this.prop3 = '';
+					}
+				else {
+			this.prop3 = this.sectionLevel2;
+				}
+			this.prop4 = this.sectionLevel3;
+			this.prop5 = this.sectionLevel4;
+			this.prop6 = this.sectionLevel5;
+        	this.prop7 ='canoe';
+			this.prop11 = theurl.slice(7);
+			
+		//check to see if a page is an article if so, pass its headline to prop12
+		
+			if ((pagen=='article') && (this.pageType!='errorPage') && (this.sectionLevel2!='gallery') && (this.sectionLevel3!='gallery')) {
+			this.prop12 = this.mainsection+':'+this.articlename;
+			this.prop19 = 'article';
+			this.prop40 = '|'+this.prop11;	
+				}
+				else {
+			this.prop12 = '';
+			this.prop19 = '';	
+				}
+				
+			if (this.type=='print') {
+			 this.prop18  = theurl.slice(7);
+			   }
+			   else {
+			 this.prop18  ='';  
+			   }	
+				
+			this.prop20 = '';
+			this.prop36 = this.sectionLevel6;
+		}
+		var MyOmnitureVariables  = new OmnitureVariables();
+		// ]]> --></script>
+		
+		
+		<script type="text/javascript"><!-- // <![CDATA[
+		function DfpVariables(){
+			this.mainsection = 'news';
+			this.sectionLevel2 = 'homepage';
+			this.sectionLevel3 = '';
+			this.sectionLevel4 = '';
+			this.sectionLevel5 = '';
+			this.language = 'en';
+			this.division = 'canoe';	
+			this.networkid = 'can';
+ 			this.affiliate = '';          	
+			this.tile = 1;
+			this.rand_num = Math.floor(Math.random()*8999999999)+1000000000;
+			this.prov = '';
+			this.dfpSpeKey = {
+				cat: 'news', rb: 'sbs'
+				
+				};
+			this.SwitchLang = this.language;
+			this.theurl=document.location.pathname;
+			this.mainurl1=this.theurl.indexOf('home.html');
+			this.mainurl2=this.theurl.charAt(this.theurl.length -1);
+			this.mainurl3=this.theurl.indexOf('home.php');
+			this.mainurl4=this.theurl.indexOf('main.html');
+			this.authorname = '';						       
+             
+			// code to check if a page is a home page of level 3 and below. hp=1 means homepage is true
+			if ((this.sectionLevel4=='') && ((this.mainurl1!=-1) || (this.mainurl2=='/') || (this.mainurl3!=-1) || (this.mainurl4!=-1))){
+				this.hp='1';
+			} else {
+				this.hp='0';
+			}
+			
+		}
+																			  
+		var MyGenericTagVar  = new DfpVariables();
+		// ]]> --></script>
+		
+                <script type="text/javascript" src="http://www.canoe.ca/generix/js/generix.js"></script>		
+		<script type="text/javascript" src="http://www.canoe.ca/generix/js/GenFonction.js"></script>	
+		<script type="text/javascript" src="http://www.canoe.ca/generix/dfp/canoe/news/TagDfpSection.js"></script>
+		<script type="text/javascript" src="http://www.canoe.ca/generix/dfp/TagDfpEngine.js"></script>		
+		
+		<!-- DFP PREMIUM ENDS -->
+		  
+  <!-- an error occurred while processing this directive -->
+  
+  <!-- END: include dans le virtual include: --><!--INCLUDE VIRTUAL="/CNEWS/includes/Common/head.html" -->
+  
+</head>
+<body class="hubCNEWS homepage">
+  <!-- This include is commented : stop searching for it -->
+  <!--INCLUDE VIRTUAL="/CNEWS/includes/Common/body_top.html" -->
+  <!-- an error occurred while processing this directive -->
+  
+  <div class="container">
+    
+    <!-- an error occurred while processing this directive -->
+    
+    <nav role="navigation" class="navMain">
+      
+<ul class="navPortal">
+    <li class="home">
+        <a href="http://en.canoe.ca/home.html" class="home ir" title="Canoe">Canoe</a>
+    </li>
+    <li class="news">
+        <a href="http://cnews.canoe.ca/" title="News">News</a>
+			   <aside class="News sectionSpotlight">
+            <ul class="sectionSpotlightMenu">
+				<li><h2 class="spotlightTitleBig"><a href="http://cnews.canoe.ca">News</a></h2></li>
+<li class="sectionTitleRegular"><a href="http://video.news.canoe.ca/">Videos</a></li>
+<li class="sectionTitleRegular"><a href="http://cnews.canoe.ca/CNEWS/Microgalleries/home.html">Photos</a></li>
+<li class="sectionTitleRegular"><a href="http://cnews.canoe.ca/CNEWS/Canada/">National</a></li>
+<li class="sectionTitleRegular"><a href="http://cnews.canoe.ca/CNEWS/World/">World</a></li>
+<li class="sectionTitleRegular"><a href="http://cnews.canoe.ca/CNEWS/Good_News/">Good News</a></li>
+<li class="sectionTitleRegular"><a href="http://cnews.canoe.ca/CNEWS/Science/">Science</a>
+<li class="sectionTitleRegular"><a href="http://cnews.canoe.ca/CNEWS/Crime/">Crime</a></li>
+<li class="sectionTitleRegular"><a href="http://cnews.canoe.ca/CNEWS/WeirdNews/">Weird News</a></li>			</ul>
+            <ul class="sectionSpotlightPart1">
+                <li><h3 class="spotlightTitleRegular">Videos</h3></li>
+									<li class="clearfix">
+						<a href="http://video.news.canoe.ca/video/hub/news/2525479625001/canadas-arctic-claim/2924885652001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Canada's fight for the Arctic shouldn't be taken..." title="Canada's fight for the Arctic shouldn't be taken..." src="http://brightcove.sunnewsnetwork.com.edgesuite.net/866268729001/201312/1616/866268729001_2925053603001_th-52a8d4f0e4b01872929723be-1592194045001.jpg?pubId=866268729001">
+							</figure>
+						</a>
+						<a href="http://video.news.canoe.ca/video/hub/news/2525479625001/canadas-arctic-claim/2924885652001" class="text">
+							Canada's Arctic claim						</a>						
+					</li>
+									<li class="clearfix">
+						<a href="http://video.news.canoe.ca/video/hub/news/2525479625001/prostitution-debate/2924885635001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Marissa Semkiw reports on the prostitution..." title="Marissa Semkiw reports on the prostitution..." src="http://brightcove.sunnewsnetwork.com.edgesuite.net/866268729001/201312/3872/866268729001_2925594541001_th-52a8ffcbe4b061cf2c7394bb-1592194021001.jpg?pubId=866268729001">
+							</figure>
+						</a>
+						<a href="http://video.news.canoe.ca/video/hub/news/2525479625001/prostitution-debate/2924885635001" class="text">
+							Prostitution debate						</a>						
+					</li>
+									<li class="clearfix">
+						<a href="http://video.news.canoe.ca/video/hub/news/2525479625001/arctic-face-off/2924885632001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Canada and Russia are feuding for control and..." title="Canada and Russia are feuding for control and..." src="http://brightcove.sunnewsnetwork.com.edgesuite.net/866268729001/201312/1304/866268729001_2925572436001_th-52a8fff0e4b061cf2c7394dc-672293878001.jpg?pubId=866268729001">
+							</figure>
+						</a>
+						<a href="http://video.news.canoe.ca/video/hub/news/2525479625001/arctic-face-off/2924885632001" class="text">
+							Arctic face off						</a>						
+					</li>
+				            </ul>
+            <ul class="sectionSpotlightPart2">
+				                <li><h3 class="spotlightTitleRegular">News</h3></li>
+												<li class="clearfix">
+										<a href="http://cnews.canoe.ca/CNEWS/World/2013/12/11/21331016.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://cnews.canoe.ca/CNEWS/2013/12/11/1297502996252.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://cnews.canoe.ca/CNEWS/World/2013/12/11/21331016.html" class="text">
+                        Court rules college students can keep guns in cars                    </a>
+                </li>
+												<li class="clearfix">
+										<a href="http://cnews.canoe.ca/CNEWS/WeirdNews/2013/12/11/21330756.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://cnews.canoe.ca/CNEWS/2013/12/11/1297502946349.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://cnews.canoe.ca/CNEWS/WeirdNews/2013/12/11/21330756.html" class="text">
+                        Boy, 6, suspended for kissing girl on the hand                    </a>
+                </li>
+												<li class="clearfix">
+										<a href="http://cnews.canoe.ca/CNEWS/Canada/2013/12/11/21330681.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://cnews.canoe.ca/CNEWS/2013/12/11/650_dude.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://cnews.canoe.ca/CNEWS/Canada/2013/12/11/21330681.html" class="text">
+                        Rogers charges $1,200 for cable at home destroyed...                    </a>
+                </li>
+								            </ul>
+            <ul class="sectionSpotlightSpecial">
+				                <li><h3 class="spotlightTitleRegular">Hot Topics</h3></li>
+                				<li>
+                    <article class="clearfix sectionSpotlightBox">
+                        						<figure class="pictureSize8 adaptVertical">
+                            <a href="http://cnews.canoe.ca/CNEWS/Canada/2013/11/27/21298726.html">
+                                <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Includes/PortalNav/Spotlight/News/2013/11/27/snowstorm_650.jpg&amp;size=104x59&amp;quality=85">
+                            </a>
+                        </figure>
+						                        <div class="text">
+                            <h4 class="sectionTitleRegular"><a href="http://cnews.canoe.ca/CNEWS/Canada/2013/11/27/21298726.html">Snowstorm hits  Ont., Que.</a></h4>
+                            <p>It's a winter wonderland for people in eastern...</p>
+                        </div>
+						                        						                    </article>
+                </li>
+								<li>
+                    <article class="clearfix sectionSpotlightBox">
+                        						<figure class="pictureSize8 adaptVertical">
+                            <a href="http://cnews.canoe.ca/CNEWS/World/2013/11/27/21298101.html">
+                                <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Includes/PortalNav/Spotlight/News/2013/11/27/1297497303586.jpg&amp;size=104x59&amp;quality=85">
+                            </a>
+                        </figure>
+						                        <div class="text">
+                            <h4 class="sectionTitleRegular"><a href="http://cnews.canoe.ca/CNEWS/World/2013/11/27/21298101.html">5 insane Black Friday stories</a></h4>
+                            <p>For Americans, Black Friday shopping is a...</p>
+                        </div>
+						                        						                    </article>
+                </li>
+								            </ul>
+        </aside>
+
+    </li>
+    <li class="showbiz">
+        <a class="active" href="http://jam.canoe.ca/" title="Showbiz">Showbiz</a>
+			   <aside class="Showbiz sectionSpotlight">
+            <ul class="sectionSpotlightMenu">
+				<li><h2 class="spotlightTitleBig"><a href="http://jam.canoe.ca/">Showbiz</a></h2></li>
+<li class="sectionTitleRegular"><a href="http://jam.canoe.ca/Celebrities/">Celebrities</a></li>
+<li class="sectionTitleRegular"><a href="http://jam.canoe.ca/Television/">Television</a></li>
+<li class="sectionTitleRegular"><a href="http://jam.canoe.ca/Movies/">Movies</a></li>
+<li class="sectionTitleRegular"><a href="http://jam.canoe.ca/Music/">Music</a></li>
+<li class="sectionTitleRegular"><a href="http://jam.canoe.ca/Books/">Books</a></li>
+<li class="sectionTitleRegular"><a href="http://jam.canoe.ca/Theatre/">Theatre</a></li>
+<li class="sectionTitleRegular"><a href="http://video.showbiz.canoe.ca/">Videos</a></li>
+<li class="sectionTitleRegular"><a href="http://jam.canoe.ca/Microgalleries/">Photos</a></li>			</ul>
+            <ul class="sectionSpotlightPart1">
+                <li><h3 class="spotlightTitleRegular">Videos</h3></li>
+									<li class="clearfix">
+						<a href="http://video.showbiz.canoe.ca/video/hub/entertainment/2434063121001/ashton-kutcher-shares-romantic-photo-with-mila-kunis/2925568872001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Ashton Kutcher Shares Romantic Photo With Mila..." title="Ashton Kutcher Shares Romantic Photo With Mila..." src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/424/1745097732_2925569502001_639917-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.showbiz.canoe.ca/video/hub/entertainment/2434063121001/ashton-kutcher-shares-romantic-photo-with-mila-kunis/2925568872001" class="text">
+							Ashton Kutcher Shares Romantic Photo With Mila...						</a>						
+					</li>
+									<li class="clearfix">
+						<a href="http://video.showbiz.canoe.ca/video/hub/entertainment/2434063121001/paul-walker-nbspjames-gandolfininbspreceive-posthumous-sag-nominationsnbsp/2925320767001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Paul Walker - James Gandolfini receive..." title="Paul Walker - James Gandolfini receive..." src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/976/1745097732_2925611347001_639920-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.showbiz.canoe.ca/video/hub/entertainment/2434063121001/paul-walker-nbspjames-gandolfininbspreceive-posthumous-sag-nominationsnbsp/2925320767001" class="text">
+							Paul Walker - James Gandolfini receive...						</a>						
+					</li>
+									<li class="clearfix">
+						<a href="http://video.showbiz.canoe.ca/video/hub/entertainment/2434063121001/demi-moore-sells-ashton-kutchers-ring-to-jeweler/2925568871001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Demi Moore Sells Ashton Kutcher's Ring to Jeweler" title="Demi Moore Sells Ashton Kutcher's Ring to Jeweler" src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/424/1745097732_2925569498001_639921-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.showbiz.canoe.ca/video/hub/entertainment/2434063121001/demi-moore-sells-ashton-kutchers-ring-to-jeweler/2925568871001" class="text">
+							Demi Moore Sells Ashton Kutcher's Ring to Jeweler						</a>						
+					</li>
+				            </ul>
+            <ul class="sectionSpotlightPart2">
+				                <li><h3 class="spotlightTitleRegular">News</h3></li>
+												<li class="clearfix">
+										<a href="http://jam.canoe.ca/Microgalleries/2013/12/11/21330226.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://jam.canoe.ca/2013/12/11/brianjam.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://jam.canoe.ca/Microgalleries/2013/12/11/21330226.html" class="text">
+                        Most shocking TV deaths of 2013                    </a>
+                </li>
+												<li class="clearfix">
+										<a href="http://jam.canoe.ca/Celebrities/2013/12/11/21330881.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://jam.canoe.ca/2013/12/11/kutcherandkunis650.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://jam.canoe.ca/Celebrities/2013/12/11/21330881.html" class="text">
+                        Ashton Kutcher posts Mila Kunis make out pic                    </a>
+                </li>
+												<li class="clearfix">
+										<a href="http://blogs.canoe.ca/projectionist/movies/fast-furious-7-scribe-working-on-exit-for-paul-walkers-character/">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://jam.canoe.ca/2013/12/11/paul_walker650.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://blogs.canoe.ca/projectionist/movies/fast-furious-7-scribe-working-on-exit-for-paul-walkers-character/" class="text">
+                        'Fast 7' working on send-off for Paul Walker                     </a>
+                </li>
+								            </ul>
+            <ul class="sectionSpotlightSpecial">
+				                <li><h3 class="spotlightTitleRegular">Hot Topics</h3></li>
+                				<li>
+                    <article class="clearfix sectionSpotlightBox">
+                        						<figure class="pictureSize8 adaptVertical">
+                            <a href="http://jam.canoe.ca/Celebrities/2013/12/10/21328096.html">
+                                <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Includes/PortalNav/Spotlight/Showbiz/2013/12/10/demilovato650.jpg&amp;size=104x59&amp;quality=85">
+                            </a>
+                        </figure>
+						                        <div class="text">
+                            <h4 class="sectionTitleRegular"><a href="http://jam.canoe.ca/Celebrities/2013/12/10/21328096.html">Demi Lovato says she couldn't...</a></h4>
+                            <p>Singer Demi Lovato has opened up about the extent...</p>
+                        </div>
+						                        						                    </article>
+                </li>
+								<li>
+                    <article class="clearfix sectionSpotlightBox">
+                        						<figure class="pictureSize8 adaptVertical">
+                            <a href="http://jam.canoe.ca/Television/2013/12/06/21320626-wenn-story.html">
+                                <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Includes/PortalNav/Spotlight/Showbiz/2013/12/06/soundmusicjam.jpg&amp;size=104x59&amp;quality=85">
+                            </a>
+                        </figure>
+						                        <div class="text">
+                            <h4 class="sectionTitleRegular"><a href="http://jam.canoe.ca/Television/2013/12/06/21320626-wenn-story.html">'Gretl' from 'Sound of Music'...</a></h4>
+                            <p>'Gretl' from 'Sound of Music' movie bashes Carrie...</p>
+                        </div>
+						                        						                    </article>
+                </li>
+								            </ul>
+        </aside>
+
+    </li>
+    <li class="sports">
+        <a href="http://slam.canoe.ca/" title="Sports">Sports</a>
+			   <aside class="Sports sectionSpotlight">
+            <ul class="sectionSpotlightMenu">
+				<li><h2 class="spotlightTitleBig"><a href="http://slam.canoe.ca">Sports</a></h2></li>
+<li class="sectionTitleRegular"><a href="http://video.sports.canoe.ca/">Videos</a></li>
+<li class="sectionTitleRegular"><a href="http://slam.canoe.ca/Slam/Microgalleries/home.html">Photos</a></li>
+<li class="sectionTitleRegular"><a href="http://slam.canoe.ca/Slam/Scoreboard/home.html">Scoreboard</a></li>
+<li class="sectionTitleRegular"><a href="http://slam.canoe.ca/Slam/Hockey/home.html">Hockey</a></li>
+<li class="sectionTitleRegular"><a href="http://slam.canoe.ca/Slam/Wrestling/home.html">Wrestling</a></li>
+<li class="sectionTitleRegular"><a href="http://slam.canoe.ca/Slam/Football/">Football</a></li>
+<li class="sectionTitleRegular"><a href="http://slam.canoe.ca/Slam/Baseball/home.html">Baseball</a></li>
+<li class="sectionTitleRegular"><a href="http://slam.canoe.ca/Slam/Basketball/home.html">Basketball</a></li>			</ul>
+            <ul class="sectionSpotlightPart1">
+                <li><h3 class="spotlightTitleRegular">Videos</h3></li>
+									<li class="clearfix">
+						<a href="http://video.sports.canoe.ca/video/hub/sports/2525479623001/washington-redskins-bench-rg3-create-even-more-controversy/2925308325001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Washington Redskins Bench RG3, Create Even More..." title="Washington Redskins Bench RG3, Create Even More..." src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/1672/1745097732_2925343344001_639869-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.sports.canoe.ca/video/hub/sports/2525479623001/washington-redskins-bench-rg3-create-even-more-controversy/2925308325001" class="text">
+							Washington Redskins Bench RG3, Create Even More...						</a>						
+					</li>
+									<li class="clearfix">
+						<a href="http://video.sports.canoe.ca/video/hub/sports/2525479623001/bethesda-native-katie-ledecky-smashes-american-record-in-womens-1650-free/2925221839001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Bethesda Native Katie Ledecky Smashes American..." title="Bethesda Native Katie Ledecky Smashes American..." src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/16/1745097732_2925322279001_639867-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.sports.canoe.ca/video/hub/sports/2525479623001/bethesda-native-katie-ledecky-smashes-american-record-in-womens-1650-free/2925221839001" class="text">
+							Bethesda Native Katie Ledecky Smashes American...						</a>						
+					</li>
+									<li class="clearfix">
+						<a href="http://video.sports.canoe.ca/video/hub/sports/2525479623001/gisele-bundchen-breastfeeding-daughter-vivian/2925322602001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Gisele Bundchen Breastfeeding Daughter Vivian" title="Gisele Bundchen Breastfeeding Daughter Vivian" src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/1320/1745097732_2925341046001_639865-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.sports.canoe.ca/video/hub/sports/2525479623001/gisele-bundchen-breastfeeding-daughter-vivian/2925322602001" class="text">
+							Gisele Bundchen Breastfeeding Daughter Vivian						</a>						
+					</li>
+				            </ul>
+            <ul class="sectionSpotlightPart2">
+				                <li><h3 class="spotlightTitleRegular">News</h3></li>
+												<li class="clearfix">
+										<a href="http://slam.canoe.ca/Slam/Basketball/NBA/Toronto/2013/12/11/21330906.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://slam.canoe.ca/Slam/2013/12/11/gay.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://slam.canoe.ca/Slam/Basketball/NBA/Toronto/2013/12/11/21330906.html" class="text">
+                        Really, Rudy? Gay asks for petty refund after...                    </a>
+                </li>
+												<li class="clearfix">
+										<a href="http://blogs.canoe.ca/slam/basketball/high-schooler-sinks-improbable-shot-immediately-runs-through-gym-doors/">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://slam.canoe.ca/Slam/2013/12/11/CrazyShot.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://blogs.canoe.ca/slam/basketball/high-schooler-sinks-improbable-shot-immediately-runs-through-gym-doors/" class="text">
+                        B-baller nails crazy shot, immediately runs...                    </a>
+                </li>
+												<li class="clearfix">
+										<a href="http://slam.canoe.ca/Slam/Motorsports/2013/12/11/21330351.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://slam.canoe.ca/Slam/2013/12/11/danicafront.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://slam.canoe.ca/Slam/Motorsports/2013/12/11/21330351.html" class="text">
+                        Danica dressed as a Las Vegas showgirl last night                    </a>
+                </li>
+								            </ul>
+            <ul class="sectionSpotlightSpecial">
+				                <li><h3 class="spotlightTitleRegular">Hot Topics</h3></li>
+                				<li>
+                    <article class="clearfix sectionSpotlightBox">
+                        						<figure class="pictureSize8 adaptVertical">
+                            <a href="http://slam.canoe.ca/Slam/Basketball/NBA/Toronto/2013/12/08/21323481.html">
+                                <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Includes/PortalNav/Spotlight/Sports/2013/12/08/rudy_gay_raptors_nba.jpg&amp;size=104x59&amp;quality=85">
+                            </a>
+                        </figure>
+						                        <div class="text">
+                            <h4 class="sectionTitleRegular"><a href="http://slam.canoe.ca/Slam/Basketball/NBA/Toronto/2013/12/08/21323481.html">Raptors trade Rudy Gay to...</a></h4>
+                            <p>Move over Kobe. The Raptors have bigger fish to...</p>
+                        </div>
+						                        						                    </article>
+                </li>
+								<li>
+                    <article class="clearfix sectionSpotlightBox">
+                        						<figure class="pictureSize8 adaptVertical">
+                            <a href="http://slam.canoe.ca/Slam/Hockey/NHL/2013/12/08/21323446.html">
+                                <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Includes/PortalNav/Spotlight/Sports/2013/12/08/orpik_penguins_nhl.jpg&amp;size=104x59&amp;quality=85">
+                            </a>
+                        </figure>
+						                        <div class="text">
+                            <h4 class="sectionTitleRegular"><a href="http://slam.canoe.ca/Slam/Hockey/NHL/2013/12/08/21323446.html">Fighting in NHL not cause of...</a></h4>
+                            <p>One thing I don&rsquo;t understand. Who exactly was...</p>
+                        </div>
+						                        						                    </article>
+                </li>
+								            </ul>
+        </aside>
+
+    </li>
+    <li class="money">
+        <a href="http://www.canoe.ca/Canoe/Money/" title="Money">Money</a>
+		   <aside class="Money sectionSpotlight">
+            <ul class="sectionSpotlightMenu">
+				<li><h2 class="spotlightTitleBig"><a href="http://en.canoe.ca/Canoe/Money/">Money</a></h2></li>
+<li class="sectionTitleRegular"><a href="http://money.canoe.ca/portfolio/">Portfolio</a></li>
+<li class="sectionTitleRegular"><a href="http://video.money.canoe.ca/">Videos</a></li>
+<li class="sectionTitleRegular"><a href="http://en.canoe.ca/Canoe/Money/photos/">Photos</a></li>			</ul>
+            <ul class="sectionSpotlightPart1">
+                <li><h3 class="spotlightTitleRegular">Videos</h3></li>
+									<li class="clearfix">
+						<a href="http://video.money.canoe.ca/video/hub/money/2533351499001/conservative-groups-oppose-new-budget-deal/2925489837001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Conservative Groups Oppose New Budget Deal" title="Conservative Groups Oppose New Budget Deal" src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/3024/1745097732_2925628467001_639918-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.money.canoe.ca/video/hub/money/2533351499001/conservative-groups-oppose-new-budget-deal/2925489837001" class="text">
+							Conservative Groups Oppose New Budget Deal						</a>						
+					</li>
+									<li class="clearfix">
+						<a href="http://video.money.canoe.ca/video/hub/money/2533351499001/opg-feeds-at-the-trough/2924885606001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Ontario Premier Kathleen Wynne and Energy..." title="Ontario Premier Kathleen Wynne and Energy..." src="http://brightcove.sunnewsnetwork.com.edgesuite.net/866268729001/201312/2256/866268729001_2925414683001_th-52a8f1a6e4b00f8cb61f254b-1592194021001.jpg?pubId=866268729001">
+							</figure>
+						</a>
+						<a href="http://video.money.canoe.ca/video/hub/money/2533351499001/opg-feeds-at-the-trough/2924885606001" class="text">
+							OPG feeds at the trough						</a>						
+					</li>
+									<li class="clearfix">
+						<a href="http://video.money.canoe.ca/video/hub/money/2533351499001/sound-smart-about-the-budget-deal-in-2-minutes/2924980644001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Sound Smart About the Budget Deal. In 2 Minutes." title="Sound Smart About the Budget Deal. In 2 Minutes." src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/2216/1745097732_2925109340001_639833-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.money.canoe.ca/video/hub/money/2533351499001/sound-smart-about-the-budget-deal-in-2-minutes/2924980644001" class="text">
+							Sound Smart About the Budget Deal. In 2 Minutes.						</a>						
+					</li>
+				            </ul>
+            <ul class="sectionSpotlightPart2">
+				                <li><h3 class="spotlightTitleRegular">News</h3></li>
+												<li class="clearfix">
+										<a href="http://www.canoe.ca/Canoe/Money/News/2013/12/11/21329531.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Money/News/2013/12/11/canadapost650.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://www.canoe.ca/Canoe/Money/News/2013/12/11/21329531.html" class="text">
+                        Canada Post to cut door-to-door delivery in cities                    </a>
+                </li>
+												<li class="clearfix">
+										<a href="http://www.canoe.ca/Canoe/Money/News/2013/12/11/21330676.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Money/News/2013/12/11/stocks650.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://www.canoe.ca/Canoe/Money/News/2013/12/11/21330676.html" class="text">
+                        Analysis: Taking stock at year's end                    </a>
+                </li>
+												<li class="clearfix">
+										<a href="http://www.canoe.ca/Canoe/Money/News/2013/12/10/21327176.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Money/News/2013/12/10/lulu650.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://www.canoe.ca/Canoe/Money/News/2013/12/10/21327176.html" class="text">
+                        Former TOMS boss named Lululemon CEO                    </a>
+                </li>
+								            </ul>
+            <ul class="sectionSpotlightSpecial">
+				                <li><h3 class="spotlightTitleRegular">Hot Topics</h3></li>
+                				<li>
+                    <article class="clearfix sectionSpotlightBox">
+                        						<figure class="pictureSize8 adaptVertical">
+                            <a href="http://www.canoe.ca/Canoe/Money/News/2013/10/09/21184276.html">
+                                <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Includes/PortalNav/Spotlight/Money/2013/10/09/money_taxes300.jpg&amp;size=104x59&amp;quality=85">
+                            </a>
+                        </figure>
+						                        <div class="text">
+                            <h4 class="sectionTitleRegular"><a href="http://www.canoe.ca/Canoe/Money/News/2013/10/09/21184276.html">Are you afraid of the taxman?</a></h4>
+                            <p>As we head into the month of Halloween, investors...</p>
+                        </div>
+						                        						                    </article>
+                </li>
+								<li>
+                    <article class="clearfix sectionSpotlightBox">
+                        						<figure class="pictureSize8 adaptVertical">
+                            <a href="http://www.canoe.ca/Canoe/Money/News/2013/10/08/21181546.html">
+                                <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Includes/PortalNav/Spotlight/Money/2013/10/08/money_rrsp300.jpg&amp;size=104x59&amp;quality=85">
+                            </a>
+                        </figure>
+						                        <div class="text">
+                            <h4 class="sectionTitleRegular"><a href="http://www.canoe.ca/Canoe/Money/News/2013/10/08/21181546.html">Planning for the golden years</a></h4>
+                            <p>If you are saving for retirement in an RRSP, at...</p>
+                        </div>
+						                        						                    </article>
+                </li>
+								            </ul>
+        </aside>
+
+    </li>
+    <li class="life">
+        <a href="http://lifewise.canoe.ca/" title="Lifestyle">Lifestyle</a>
+			   <aside class="Life sectionSpotlight">
+            <ul class="sectionSpotlightMenu">
+				<li><h2 class="spotlightTitleBig"><a href="http://lifewise.canoe.ca/">Lifestyle</a></h2></li>
+<li class="sectionTitleRegular"><a href="http://lifewise.canoe.ca/StyleBeauty/">Style & Beauty</a></li>
+<li class="sectionTitleRegular"><a href="http://lifewise.canoe.ca/FoodDrink/">Food & Drink</a></li>
+<li class="sectionTitleRegular"><a href="http://lifewise.canoe.ca/SexRomance/">Love & Sex</a></li>
+<li class="sectionTitleRegular"><a href="http://lifewise.canoe.ca/Living/">Living</a></li>
+<li class="sectionTitleRegular"><a href="http://lifewise.canoe.ca/Horoscopes/">Horoscopes</a></li>
+<li class="sectionTitleRegular"><a href="http://lifewise.canoe.ca/Comics/">Comics</a></li>
+<li class="sectionTitleRegular"><a href="http://lifewise.canoe.ca/Puzzles/">Puzzles</a></li>
+<li class="sectionTitleRegular"><a href="http://lifewise.canoe.ca/Royals/">Royals</a></li>
+
+			</ul>
+            <ul class="sectionSpotlightPart1">
+                <li><h3 class="spotlightTitleRegular">Videos</h3></li>
+									<li class="clearfix">
+						<a href="http://video.lifestyle.canoe.ca/video/hub/lifewise/2525479618001/watch-chefs-create-300-pound-gingerbread-white-house/2925458047001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Watch Chefs Create 300 Pound Gingerbread White..." title="Watch Chefs Create 300 Pound Gingerbread White..." src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/768/1745097732_2925453865001_639882-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.lifestyle.canoe.ca/video/hub/lifewise/2525479618001/watch-chefs-create-300-pound-gingerbread-white-house/2925458047001" class="text">
+							Watch Chefs Create 300 Pound Gingerbread White...						</a>						
+					</li>
+									<li class="clearfix">
+						<a href="http://video.lifestyle.canoe.ca/video/hub/lifewise/2525479618001/app-lets-patients-visit-doctor-via-smartphone/2924736478001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="App Lets Patients 'Visit' Doctor via Smartphone" title="App Lets Patients 'Visit' Doctor via Smartphone" src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/3168/1745097732_2925200597001_639839-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.lifestyle.canoe.ca/video/hub/lifewise/2525479618001/app-lets-patients-visit-doctor-via-smartphone/2924736478001" class="text">
+							App Lets Patients 'Visit' Doctor via Smartphone						</a>						
+					</li>
+									<li class="clearfix">
+						<a href="http://video.lifestyle.canoe.ca/video/hub/lifewise/2525479618001/kristen-stewart-lands-chanel-gig/2924822593001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Kristen Stewart Lands Chanel Gig" title="Kristen Stewart Lands Chanel Gig" src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/352/1745097732_2924910981001_639805-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.lifestyle.canoe.ca/video/hub/lifewise/2525479618001/kristen-stewart-lands-chanel-gig/2924822593001" class="text">
+							Kristen Stewart Lands Chanel Gig						</a>						
+					</li>
+				            </ul>
+            <ul class="sectionSpotlightPart2">
+				                <li><h3 class="spotlightTitleRegular">News</h3></li>
+												<li class="clearfix">
+										<a href="http://lifewise.canoe.ca/Living/Advice/2013/12/07/21322516.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://lifewise.canoe.ca/2013/12/07/mistress650.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://lifewise.canoe.ca/Living/Advice/2013/12/07/21322516.html" class="text">
+                        Husband's mistress moving closer not a coincidence                    </a>
+                </li>
+												<li class="clearfix">
+										<a href="http://lifewise.canoe.ca/StyleBeauty/Beauty/2013/12/11/21329456.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://lifewise.canoe.ca/2013/12/11/650chanel.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://lifewise.canoe.ca/StyleBeauty/Beauty/2013/12/11/21329456.html" class="text">
+                        Kristen Stewart is the new face of Chanel                    </a>
+                </li>
+												<li class="clearfix">
+										<a href="http://lifewise.canoe.ca/StyleBeauty/Beauty/2013/12/10/21328251.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://lifewise.canoe.ca/2013/12/10/gisele650.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://lifewise.canoe.ca/StyleBeauty/Beauty/2013/12/10/21328251.html" class="text">
+                        Gisele Bundchen shares breastfeeding photo                     </a>
+                </li>
+								            </ul>
+            <ul class="sectionSpotlightSpecial">
+				                <li><h3 class="spotlightTitleRegular">Hot Topics</h3></li>
+                				<li>
+                    <article class="clearfix sectionSpotlightBox">
+                        						<figure class="pictureSize8 adaptVertical">
+                            <a href="http://lifewise.canoe.ca/StyleBeauty/Beauty/2013/12/11/21329456.html">
+                                <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Includes/PortalNav/Spotlight/Life/2013/12/11/650chanel.jpg&amp;size=104x59&amp;quality=85">
+                            </a>
+                        </figure>
+						                        <div class="text">
+                            <h4 class="sectionTitleRegular"><a href="http://lifewise.canoe.ca/StyleBeauty/Beauty/2013/12/11/21329456.html">Kristen Stewart is the new...</a></h4>
+                            <p>Twilight star Kristen Stewart has been named as...</p>
+                        </div>
+						                        						                    </article>
+                </li>
+								<li>
+                    <article class="clearfix sectionSpotlightBox">
+                        						<figure class="pictureSize8 adaptVertical">
+                            <a href="http://lifewise.canoe.ca/StyleBeauty/Beauty/2013/12/10/21328251.html">
+                                <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Includes/PortalNav/Spotlight/Life/2013/12/10/gisele650.jpg&amp;size=104x59&amp;quality=85">
+                            </a>
+                        </figure>
+						                        <div class="text">
+                            <h4 class="sectionTitleRegular"><a href="http://lifewise.canoe.ca/StyleBeauty/Beauty/2013/12/10/21328251.html">Gisele shares breastfeeding...</a></h4>
+                            <p>Supermodel mom Gisele Bundchen posted a photo of...</p>
+                        </div>
+						                        						                    </article>
+                </li>
+								            </ul>
+        </aside>
+
+    </li>
+    <li class="health">
+        <a href="http://chealth.canoe.ca/" title="Health">Health</a>
+    </li>
+    <li class="travel">
+        <a href="http://travel.canoe.ca/" title="Travel">Travel</a>
+		   <aside class="Travel sectionSpotlight">
+            <ul class="sectionSpotlightMenu">
+				<li class="sectionTitleRegular"><h2 class="spotlightTitleBig"><a href="http://travel.canoe.ca/">Travel</a></h2></li>
+<li class="sectionTitleRegular"><a href="http://travel.canoe.ca/Travel/News/">News</a></li>
+<li class="sectionTitleRegular"><a href="http://travel.canoe.ca/Travel/Destinations/">Destinations</a></li>
+<li class="sectionTitleRegular"><a href="http://travel.canoe.ca/Travel/Tools/">Tools</a></li>
+<li class="sectionTitleRegular"><a href="http://travel.canoe.ca/Travel/Activities/">Getaways</a></li>
+<li class="sectionTitleRegular"><a href="http://voyage.canoe.ca/">Book a trip</a></li>
+<li class="sectionTitleRegular"><a href="http://video.travel.canoe.ca/">Videos</a></li>
+<li class="sectionTitleRegular"><a href="http://travel.canoe.ca/Travel/Galleries/">Photos</a></li>			</ul>
+            <ul class="sectionSpotlightPart1">
+                <li><h3 class="spotlightTitleRegular">Videos</h3></li>
+									<li class="clearfix">
+						<a href="http://video.travel.canoe.ca/video/hub/travel/2647931873001/why-angelina-jolie-is-not-allowed-to-fly-anymore/2924144971001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Why Angelina Jolie Is Not Allowed to Fly Anymore" title="Why Angelina Jolie Is Not Allowed to Fly Anymore" src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/1553/1745097732_2924250695001_639701-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.travel.canoe.ca/video/hub/travel/2647931873001/why-angelina-jolie-is-not-allowed-to-fly-anymore/2924144971001" class="text">
+							Why Angelina Jolie Is Not Allowed to Fly Anymore						</a>						
+					</li>
+									<li class="clearfix">
+						<a href="http://video.travel.canoe.ca/video/hub/travel/2647931873001/egyptian-tourism-industry-still-flatlining-after-political-turmoil/2923814937001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Egyptian Tourism Industry Still Flatlining After..." title="Egyptian Tourism Industry Still Flatlining After..." src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/3489/1745097732_2923955729001_639671-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.travel.canoe.ca/video/hub/travel/2647931873001/egyptian-tourism-industry-still-flatlining-after-political-turmoil/2923814937001" class="text">
+							Egyptian Tourism Industry Still Flatlining After...						</a>						
+					</li>
+									<li class="clearfix">
+						<a href="http://video.travel.canoe.ca/video/hub/travel/2647931873001/tips-for-new-years-eve-in-new-york-city/2922532963001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Tips for New Years Eve in New York City" title="Tips for New Years Eve in New York City" src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/2945/1745097732_2923344881001_639648-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.travel.canoe.ca/video/hub/travel/2647931873001/tips-for-new-years-eve-in-new-york-city/2922532963001" class="text">
+							Tips for New Years Eve in New York City						</a>						
+					</li>
+				            </ul>
+            <ul class="sectionSpotlightPart2">
+				                <li><h3 class="spotlightTitleRegular">News</h3></li>
+												<li class="clearfix">
+										<a href="http://www.canoe.ca/Travel/Galleries/2013/12/11/21329676.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Travel/2013/12/11/RihannaGreeceInstagram.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://www.canoe.ca/Travel/Galleries/2013/12/11/21329676.html" class="text">
+                        Celebrities' top travel photos of 2013                    </a>
+                </li>
+												<li class="clearfix">
+										<a href="http://www.canoe.ca/Travel/Europe/2013/12/10/21327226.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Travel/2013/12/10/1wtxejn4.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://www.canoe.ca/Travel/Europe/2013/12/10/21327226.html" class="text">
+                        Iceland: Warm up to this trendy destination                    </a>
+                </li>
+												<li class="clearfix">
+										<a href="http://video.travel.canoe.ca/video/hub/travel/2647931873001/do-canadians-overpay-for-domestic-flights/2897537007001">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Travel/2013/12/09/QMI_Fotolia_Hong_Kong_International_Airport.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://video.travel.canoe.ca/video/hub/travel/2647931873001/do-canadians-overpay-for-domestic-flights/2897537007001" class="text">
+                        Are we overpaying for domestic flights?                    </a>
+                </li>
+								            </ul>
+            <ul class="sectionSpotlightSpecial">
+				                <li><h3 class="spotlightTitleRegular">Hot Topics</h3></li>
+                				<li>
+                    <article class="clearfix sectionSpotlightBox">
+                        						<figure class="pictureSize8 adaptVertical">
+                            <a href="http://www.canoe.ca/Travel/Galleries/2013/11/25/21293321.html">
+                                <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Includes/PortalNav/Spotlight/Travel/2013/11/25/cey0msze.jpg&amp;size=104x59&amp;quality=85">
+                            </a>
+                        </figure>
+						                        <div class="text">
+                            <h4 class="sectionTitleRegular"><a href="http://www.canoe.ca/Travel/Galleries/2013/11/25/21293321.html">Travel deals</a></h4>
+                            <p>Snowy deals for the holidays</p>
+                        </div>
+						                        						                    </article>
+                </li>
+								<li>
+                    <article class="clearfix sectionSpotlightBox">
+                        						<figure class="pictureSize8 adaptVertical">
+                            <a href="http://www.canoe.ca/Travel/Galleries/2013/11/27/21298066.html">
+                                <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Includes/PortalNav/Spotlight/Travel/2013/11/27/celebflyers.jpg&amp;size=104x59&amp;quality=85">
+                            </a>
+                        </figure>
+						                        <div class="text">
+                            <h4 class="sectionTitleRegular"><a href="http://www.canoe.ca/Travel/Galleries/2013/11/27/21298066.html">Celebrity Travel</a></h4>
+                            <p>10 celebs who are afraid to fly</p>
+                        </div>
+						                        						                    </article>
+                </li>
+								            </ul>
+        </aside>
+
+    </li>
+    <li class="autos">
+        <a href="http://en.canoe.autonet.ca/" title="Autos">Autos</a>
+    </li>
+    <li class="tech last">
+        <a href="http://technology.canoe.ca/" title="Tech">Tech</a>
+			   <aside class="Tech sectionSpotlight">
+            <ul class="sectionSpotlightMenu">
+				<li class="sectionTitleRegular"><h2 class="spotlightTitleBig"><a href="http://technology.canoe.ca/">Tech</a></h2></li>
+<li class="sectionTitleRegular"><a href="http://technology.canoe.ca/News/">Tech News</a></li>
+<li class="sectionTitleRegular"><a href="http://technology.canoe.ca/Gaming/">Video Games</a></li>
+<li class="sectionTitleRegular"><a href="http://technology.canoe.ca/Mobile/">Mobile</a></li>
+<li class="sectionTitleRegular"><a href="http://technology.canoe.ca/Reviews/">Reviews</a></li>
+<!--<li class="sectionTitleRegular"><a href="http://technology.canoe.ca/HowTo/">How To</a></li>-->
+<li class="sectionTitleRegular"><a href="http://video.technology.canoe.ca/">Videos</a></li>
+<li class="sectionTitleRegular"><a href="http://technology.canoe.ca/Microgalleries/">Photos</a></li>			</ul>
+            <ul class="sectionSpotlightPart1">
+                <li><h3 class="spotlightTitleRegular">Videos</h3></li>
+									<li class="clearfix">
+						<a href="http://video.technology.canoe.ca/video/hub/technology/2522810455001/nasas-morpheus-successfully-lands-after-fiery-crash-last-year/2925228442001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="NASA's Morpheus Successfully Lands After Fiery..." title="NASA's Morpheus Successfully Lands After Fiery..." src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/1536/1745097732_2925223693001_639851-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.technology.canoe.ca/video/hub/technology/2522810455001/nasas-morpheus-successfully-lands-after-fiery-crash-last-year/2925228442001" class="text">
+							NASA's Morpheus Successfully Lands After Fiery...						</a>						
+					</li>
+									<li class="clearfix">
+						<a href="http://video.technology.canoe.ca/video/hub/technology/2522810455001/reporter-for-nsa-google-cookies-allow-laser-guided-targeting/2924736479001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="Reporter: For NSA, Google Cookies Allow 'Laser..." title="Reporter: For NSA, Google Cookies Allow 'Laser..." src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/3168/1745097732_2925200601001_639838-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.technology.canoe.ca/video/hub/technology/2522810455001/reporter-for-nsa-google-cookies-allow-laser-guided-targeting/2924736479001" class="text">
+							Reporter: For NSA, Google Cookies Allow 'Laser...						</a>						
+					</li>
+									<li class="clearfix">
+						<a href="http://video.technology.canoe.ca/video/hub/technology/2522810455001/app-lets-patients-visit-doctor-via-smartphone/2924736478001">
+							<figure class="pictureSize8 adaptVertical">
+								<span class="videoOverlay small"></span>
+								<img alt="App Lets Patients 'Visit' Doctor via Smartphone" title="App Lets Patients 'Visit' Doctor via Smartphone" src="http://brightcove.canoe.com.edgesuite.net/2/1745097732/201312/3168/1745097732_2925200597001_639839-tmb1.jpg?pubId=1745097732">
+							</figure>
+						</a>
+						<a href="http://video.technology.canoe.ca/video/hub/technology/2522810455001/app-lets-patients-visit-doctor-via-smartphone/2924736478001" class="text">
+							App Lets Patients 'Visit' Doctor via Smartphone						</a>						
+					</li>
+				            </ul>
+            <ul class="sectionSpotlightPart2">
+				                <li><h3 class="spotlightTitleRegular">News</h3></li>
+												<li class="clearfix">
+										<a href="http://technology.canoe.ca/News/2013/12/10/21328411-relaxnews.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://technology.canoe.ca/2013/12/10/password650.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://technology.canoe.ca/News/2013/12/10/21328411-relaxnews.html" class="text">
+                        Could Microsoft guess your password?                    </a>
+                </li>
+												<li class="clearfix">
+										<a href="http://technology.canoe.ca/Gaming/News/2013/12/11/21329801.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://technology.canoe.ca/2013/12/11/xboxones650.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://technology.canoe.ca/Gaming/News/2013/12/11/21329801.html" class="text">
+                        2 million Xbox Ones sold so far                    </a>
+                </li>
+												<li class="clearfix">
+										<a href="http://technology.canoe.ca/Mobile/News/2013/12/11/21329891.html">
+                        <figure class="pictureSize8 adaptVertical">
+                            <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://technology.canoe.ca/2013/12/11/14511643.jpg&amp;size=104x59&amp;quality=85">
+                        </figure>
+                    </a>
+					                    <a href="http://technology.canoe.ca/Mobile/News/2013/12/11/21329891.html" class="text">
+                        Google says voice recognition is the future                    </a>
+                </li>
+								            </ul>
+            <ul class="sectionSpotlightSpecial">
+				                <li><h3 class="spotlightTitleRegular">Hot Topics</h3></li>
+                				<li>
+                    <article class="clearfix sectionSpotlightBox">
+                        						<figure class="pictureSize8 adaptVertical">
+                            <a href="http://technology.canoe.ca/News/2013/12/11/21329786.html">
+                                <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Includes/PortalNav/Spotlight/Tech/2013/12/11/ballmer_bates650.jpg&amp;size=104x59&amp;quality=85">
+                            </a>
+                        </figure>
+						                        <div class="text">
+                            <h4 class="sectionTitleRegular"><a href="http://technology.canoe.ca/News/2013/12/11/21329786.html">Cisco loses court challenge</a></h4>
+                            <p>Microsoft's Skype takeover to go ahead</p>
+                        </div>
+						                        						                    </article>
+                </li>
+								<li>
+                    <article class="clearfix sectionSpotlightBox">
+                        						<figure class="pictureSize8 adaptVertical">
+                            <a href="http://technology.canoe.ca/Gaming/News/2013/12/11/21329391.html">
+                                <img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://www.canoe.ca/Canoe/Includes/PortalNav/Spotlight/Tech/2013/12/11/doom650.jpg&amp;size=104x59&amp;quality=85">
+                            </a>
+                        </figure>
+						                        <div class="text">
+                            <h4 class="sectionTitleRegular"><a href="http://technology.canoe.ca/Gaming/News/2013/12/11/21329391.html">'Doom' turns 20</a></h4>
+                            <p>First-person shooter changed gaming</p>
+                        </div>
+						                        						                    </article>
+                </li>
+								            </ul>
+        </aside>
+
+    </li>
+    <li class="navAdditional videos last">
+        <a href="http://en.video.canoe.tv/" title="Videos">Videos</a>
+    </li>
+</ul>
+
+      <!-- an error occurred while processing this directive -->
+    </nav>
+    
+    <div role="main" class="mainContent clearfix">
+	
+	        
+      <div class="mainColumn">
+        
+                  <!-- @name: Leads Start -->
+<section class="box mainArticle ">
+	<h2 class="hidden">Main headline</h2>
+	<div class="carouselWrapper">
+		<div class="carouselStage carousel carousel-stage" data-visible="1">
+			<ul>
+				<li class="vertical">
+					<article>
+						<a href="http://cnews.canoe.ca/CNEWS/World/2013/12/11/21331016.html">
+							<figure class="pictureSize1 adaptVertical">
+								<img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://cnews.canoe.ca/CNEWS/2013/12/11/1297502996252.jpg&amp;size=650x366&amp;quality=85" alt="Court rules college students can keep guns in cars"  />
+							</figure>
+						</a>
+						<header class="articleHeader clearfix">
+							<div class="articleTitle">
+								<div class="sectionTitleRegular">Florida rules on appeal filed by student </div>
+								<h3 class="mainTitle"><a href="http://cnews.canoe.ca/CNEWS/World/2013/12/11/21331016.html">Court rules college students can keep guns in cars<span class="moreArrow"></span></a></h3>
+							</div>
+							<ul class="iconList">
+															</ul>
+						</header>
+											<div class="related">
+							<h2 class="sectionTitleBig">More</h2>
+							<ul class="clearfix">
+															<li class="impair texte"><a href="http://cnews.canoe.ca/CNEWS/World/2013/10/24/21220271.html"><span>Boy brings gun and 400 bullets to school</span></a></li>
+														<li class="texte"><a href="http://cnews.canoe.ca/CNEWS/World/2013/07/30/21010831.html"><span>Arkansas high school arming teachers</span></a></li>
+													</ul>
+						</div>
+										</article>
+				</li>
+				<li class="">
+					<article>
+						<a href="http://cnews.canoe.ca/CNEWS/WeirdNews/2013/12/11/21330756.html">
+							<figure class="pictureSize1 adaptVertical">
+								<img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://cnews.canoe.ca/CNEWS/2013/12/11/1297502946349.jpg&amp;size=650x366&amp;quality=85" alt="Boy, 6, suspended for kissing girl on the hand"  />
+							</figure>
+						</a>
+						<header class="articleHeader clearfix">
+							<div class="articleTitle">
+								<div class="sectionTitleRegular">School is calling it sexual harassment</div>
+								<h3 class="mainTitle"><a href="http://cnews.canoe.ca/CNEWS/WeirdNews/2013/12/11/21330756.html">Boy, 6, suspended for kissing girl on the hand<span class="moreArrow"></span></a></h3>
+							</div>
+							<ul class="iconList">
+															</ul>
+						</header>
+										</article>
+				</li>
+				<li class="">
+					<article>
+						<a href="http://cnews.canoe.ca/CNEWS/Canada/2013/12/11/21330681.html">
+							<figure class="pictureSize1 adaptVertical">
+								<img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://cnews.canoe.ca/CNEWS/2013/12/11/650_dude.jpg&amp;size=650x366&amp;quality=85" alt="Rogers charges $1,200 for cable at home destroyed in fire"  />
+							</figure>
+						</a>
+						<header class="articleHeader clearfix">
+							<div class="articleTitle">
+								<div class="sectionTitleRegular">Man shocked when a collections agency called him </div>
+								<h3 class="mainTitle"><a href="http://cnews.canoe.ca/CNEWS/Canada/2013/12/11/21330681.html">Rogers charges $1,200 for cable at home destroyed in fire<span class="moreArrow"></span></a></h3>
+							</div>
+							<ul class="iconList">
+								<li><img src="/commons/assets/img/sun-plus.png" width="39" height="17" alt="This article is reserved to SUN+ subscribers"></li>							</ul>
+						</header>
+										</article>
+				</li>
+				<li class="">
+					<article>
+						<a href="http://cnews.canoe.ca/CNEWS/Canada/2013/12/11/21330231.html">
+							<figure class="pictureSize1 adaptVertical">
+								<img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://cnews.canoe.ca/CNEWS/2013/12/11/ford650.jpg&amp;size=650x366&amp;quality=85" alt="City councillors no-shows at Rob Ford?s Christmas party"  />
+							</figure>
+						</a>
+						<header class="articleHeader clearfix">
+							<div class="articleTitle">
+								<div class="sectionTitleRegular">Media 'maggots' invited</div>
+								<h3 class="mainTitle"><a href="http://cnews.canoe.ca/CNEWS/Canada/2013/12/11/21330231.html">City councillors no-shows at Rob Ford?s Christmas party<span class="moreArrow"></span></a></h3>
+							</div>
+							<ul class="iconList">
+								<li><img src="/commons/assets/img/sun-plus.png" width="39" height="17" alt="This article is reserved to SUN+ subscribers"></li>							</ul>
+						</header>
+										</article>
+				</li>
+			</ul>
+			<a href="#" class="carouselStageHandle carouselStageHandleLeft"><span></span></a>
+			<a href="#" class="carouselStageHandle carouselStageHandleRight"><span></span></a>
+		</div>
+	</div>
+	<div class="carouselWrapper">
+		<div class="carouselNav clearfix carousel" data-visible="4">
+			<ul>
+				<li class="vertical">
+					<a href="http://cnews.canoe.ca/CNEWS/World/2013/12/11/21331016.html">
+						<figure class="pictureSize6 adaptVertical">
+							<span class="innerOverlay transparent"></span>
+							<img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://cnews.canoe.ca/CNEWS/2013/12/11/1297502996252.jpg&amp;size=150x84&amp;quality=85" alt="Court rules college students can keep guns in cars" />
+						</figure>
+					</a>
+					<a href="http://cnews.canoe.ca/CNEWS/World/2013/12/11/21331016.html" class="text">Fla. students can keep guns in cars</a>
+				</li>
+				<li>
+					<a href="http://cnews.canoe.ca/CNEWS/WeirdNews/2013/12/11/21330756.html">
+						<figure class="pictureSize6 adaptVertical">
+							<span class="innerOverlay transparent"></span>
+							<img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://cnews.canoe.ca/CNEWS/2013/12/11/1297502946349.jpg&amp;size=150x84&amp;quality=85" alt="Boy, 6, suspended for kissing girl on the hand" />
+						</figure>
+					</a>
+					<a href="http://cnews.canoe.ca/CNEWS/WeirdNews/2013/12/11/21330756.html" class="text">Boy, 6, suspended for kissing girl on the hand</a>
+				</li>
+				<li>
+					<a href="http://cnews.canoe.ca/CNEWS/Canada/2013/12/11/21330681.html">
+						<figure class="pictureSize6 adaptVertical">
+							<span class="innerOverlay transparent"></span>
+							<img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://cnews.canoe.ca/CNEWS/2013/12/11/650_dude.jpg&amp;size=150x84&amp;quality=85" alt="Rogers charges $1,200 for cable at home destroyed in fire" />
+						</figure>
+					</a>
+					<a href="http://cnews.canoe.ca/CNEWS/Canada/2013/12/11/21330681.html" class="text">Man charged $1,200 for cable at destroyed home</a>
+				</li>
+				<li>
+					<a href="http://cnews.canoe.ca/CNEWS/Canada/2013/12/11/21330231.html">
+						<figure class="pictureSize6 adaptVertical">
+							<span class="innerOverlay transparent"></span>
+							<img src="http://storage.canoe.ca/v1/dynamic_resize/?src=http://cnews.canoe.ca/CNEWS/2013/12/11/ford650.jpg&amp;size=150x84&amp;quality=85" alt="City councillors no-shows at Rob Ford?s Christmas party" />
+						</figure>
+					</a>
+					<a href="http://cnews.canoe.ca/CNEWS/Canada/2013/12/11/21330231.html" class="text">City councillors no-shows at Rob Ford?s...</a>
+				</li>
+			</ul>
+		</div>
+		<a href="#" class="carouselNavHandle carouselNavHandleLeft"><span class="ir">Previous</span></a>
+		<a href="#" class="carouselNavHandle carouselNavHandleRight"><span class="ir">Next</span></a>
+	</div>
+</section>
+<!-- @name: Leads End -->          <!-- an error occurred while processing this directive -->
+          <!-- an error occurred while processing this directive -->
+          <!-- an error occurred while processing this directive -->
+          <!-- an error occurred while processing this directive -->
+        
+              </div>
+      
+	  <!-- Different sideColumn for some sections-->
+	    <!-- an error occurred while processing this directive -->
+      
+      <!--INCLUDE VIRTUAL="/CNEWS/includes/RightRail/home.html" --><!-- make it dynamic for subsections ? -->
+      
+      <div class="bottomSection">
+        <!-- an error occurred while processing this directive -->
+      </div>
+    
+    </div>
+  
+  </div>
+  
+  <!-- an error occurred while processing this directive -->
+  <!-- an error occurred while processing this directive -->
+  <!-- an error occurred while processing this directive -->
+  
+    
+</body>
+</html>
+

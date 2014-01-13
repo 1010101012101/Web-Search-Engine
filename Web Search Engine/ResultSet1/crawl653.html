@@ -1,0 +1,1614 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<title>..:: Agora Cosmopolitan - The Canadian National Newspaper..</title>
+
+<meta name="Description" content="" />
+<meta name="Keywords" content="" />
+
+
+
+<link href="http://www.agoracosmopolitan.com/css/style.css" type="text/css" rel="stylesheet" />
+<link href="http://www.agoracosmopolitan.com/css/jquery.css" rel="stylesheet" type="text/css" />
+<link href="http://www.agoracosmopolitan.com/css/ajaxtabs.css" type="text/css" rel="stylesheet" />
+<link href="http://www.agoracosmopolitan.com/css/ajaxtabs_2.css" type="text/css" rel="stylesheet" />
+<link href="http://www.agoracosmopolitan.com/css/style_thick.css" type="text/css" rel="stylesheet" />
+<script src="http://www.agoracosmopolitan.com/js/jquery.js" type="text/javascript" language="javascript"></script>
+<script src="http://www.agoracosmopolitan.com/js/jquery-1.3.1.min.js" type="text/javascript" language="javascript"></script>
+<script src="http://www.agoracosmopolitan.com/js/thickbox.js" type="text/javascript" language="javascript"></script>
+<script src="http://www.agoracosmopolitan.com/js/jquery.maskedinput-1.2.2.js" type="text/javascript"></script>
+<script src="http://www.agoracosmopolitan.com/js/jquery.alphanumeric.js" type="text/javascript"></script>
+<script src="http://www.agoracosmopolitan.com/js/jquery.alerts.js" type="text/javascript"></script>
+<script src="http://www.agoracosmopolitan.com/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="http://www.agoracosmopolitan.com/js/formValidator.js" type="text/javascript"></script>
+<script src="http://www.agoracosmopolitan.com/Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+
+
+<!--<link type="text/css" href="http://www.agoracosmopolitan.com/chat/cometchatcss.php" rel="stylesheet" charset="utf-8">
+<script type="text/javascript" src="http://www.agoracosmopolitan.com/chat/cometchatjs.php" charset="utf-8"></script>-->
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+   /* Hide the popup */
+   $("#login_form").hide();
+   $("#registration_form").hide();
+   $("#login_forgotten_form").hide();
+
+   /* Onclick function to show popup */
+   $("#login_button").click(function(){
+   $("#registration_form").hide();
+   $("#login_forgotten_form").hide();
+      $("#login_form").show(400).load("http://www.agoracosmopolitan.com/login_form.php?redirect=dashboard");
+   });
+   
+   $("#login_article_button").click(function(){ $("#login_forgotten_form").hide();
+      $("#login_form").show(400).load("http://www.agoracosmopolitan.com/login_form.php?redirect=dashboard");
+   });
+   
+   $("#login_right_article_button").click(function(){ $("#login_forgotten_form").hide();
+      $("#login_form").show(400).load("http://www.agoracosmopolitan.com/login_form.php?redirect=dashboard");
+   });
+   
+   /* Onclick function to show registration */
+   $("#registration_button").click(function(){
+    $("#login_form").hide();
+    $("#login_forgotten_form").hide();
+      $("#registration_form").show(400).load("http://www.agoracosmopolitan.com/registrtion_form.php?redirect=dashboard");
+   });
+   
+  
+});
+</script>
+
+
+<!--google-site-verification: google49b2aa9f12233e98.html-->
+
+
+</head>
+
+<!--user Login Start-->
+<div id="login_form" style="position:absolute; z-index:1000000; left: 55px; top: 80px;"></div>
+
+<!--user Login End-->
+
+<!--user Registration Start-->
+<div id="registration_form" style="position:absolute; z-index:1000000; left: 75px; top: 80px; margin:0px auto;"></div>
+<!--user Registration End-->
+
+<!--user login_forgotten_form Start-->
+<div id="login_forgotten_form" style="position:absolute; z-index:1000000; left: 75px; top: 80px;"></div>
+<!--user login_forgotten_form End-->
+
+<body onload="MM_preloadImages('http://www.agoracosmopolitan.com/images/search_btn2.jpg','http://www.agoracosmopolitan.com/images/vote_btn2.jpg')">
+
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript" src="https://d31qbv1cthcecs.cloudfront.net/atrk.js"></script><script type="text/javascript">_atrk_opts = { atrk_acct: "N+RKf1agwt00if", domain:"agoracosmopolitan.com"}; atrk ();</script><noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=N+RKf1agwt00if" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+<div class="Container">
+    	<div class="MainDiv">
+          <div class="Header">
+            	<div class="HdrRow1">
+                
+                <div class="HdrLogo" style="float:left; margin-bottom:7px;"><a href="http://www.agoracosmopolitan.com/index.php"><img src="http://www.agoracosmopolitan.com/images/logo.jpg" alt="" width="250" height="76" /></a></div>
+                
+                
+                	<div class="HdrImg" style="width:175px" >
+                    
+                     <div style="float:left; "> <a title="Upload News" class="upload-news" href="http://www.agoracosmopolitan.com/post_article.php">Upload News</a></div>
+                    
+					
+					</div>
+					<div style="float:right; padding:2px 0px; margin-right:10px;">
+					
+					<img src="http://www.agoracosmopolitan.com/images/fone_img.jpg" alt="" width="351" height="13" />
+					<!--
+											   <a href="javascript:void(0);" id="login_article_button"  > 					<img src="http://www.agoracosmopolitan.com/images/submit_article.png" alt="" style="border:1px solid #000000;"  />
+					
+				</a>--></div>
+               
+                    <div class="HdrSrch" style="float:right; margin-top:4px; width:477px; padding-right:4px;">
+                    	<a href="http://www.agoracosmopolitan.com/login.php"><img src="http://www.agoracosmopolitan.com/images/banner.jpg" alt=""  /></a>
+                        <!--<a href="http://www.agoracosmopolitan.com/thickbox.php?placeValuesBeforeTB_=savedValues&amp;TB_iframe=false&amp;height=371&amp;width=500&amp;modal=true&amp;" class="thickbox"><img src="http://www.agoracosmopolitan.com/images/bnr_sml.jpg" alt="" width="236" height="60" /></a>-->
+                    </div>
+                </div>
+                <div class="HdrRow2">
+                	<div class="menu_blk_lrg_lc"><img src="http://www.agoracosmopolitan.com/images/menu_blk_lrg_lc.jpg" alt="" width="10" height="36" /></div>
+                    <div class="menu_blk_lrg_bg">
+                      <table width="954" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td width="26" height="36" align="left" valign="middle"><img src="http://www.agoracosmopolitan.com/images/home_icon.jpg" alt="" width="22" height="20" /></td>
+                          <td  align="center" valign="middle" class="hdr_links_wht" style="padding-left:0px;" >
+						  
+						  						  <a href="http://www.agoracosmopolitan.com/index.php"><strong>Home</strong></a>
+						  						  </td>
+                          <td width="10">&nbsp;</td>
+                          <td width="25" align="left" valign="middle"><img src="http://www.agoracosmopolitan.com/images/signin_icon.jpg" alt="" width="20" height="20" /></td>
+                          <td  align="center" valign="middle" class="hdr_links_wht" style="padding-left:0px;">
+						  						  <!--<a href="javascript:void(0);" id="login_button"  >--><a href="http://www.agoracosmopolitan.com/login.php"  ><strong>Sign in</strong></a>
+						  						 </td> 						 <td align="center" valign="middle" class="hdr_links_wht" ><!--<a href="javascript:void(0);" id="registration_button"  >--><a href="http://www.agoracosmopolitan.com/user_registration.php"  ><strong>| &nbsp; Join</strong></a></td>
+						 						  
+						
+
+						  
+						  
+						  </td>
+                          <td width="100">&nbsp;</td>
+                          <td width="71" align="center" valign="middle" class="wht_links_sml"><a href="http://www.agoracosmopolitan.com/about_us.html">About Us</a></td>
+                          <td width="1" align="center" valign="middle" class="wht_links_sml">|</td>
+                          <!--<td width="82" align="center" valign="middle" class="wht_links_sml"><a href="http://www.agoracosmopolitan.com/contact_us.php?placeValuesBeforeTB_=savedValues&amp;TB_iframe=false&amp;height=371&amp;width=500&amp;modal=true&amp;" class="thickbox">Contact Us</a></td>-->
+						  <td width="82" align="center" valign="middle" class="wht_links_sml"><a href="http://www.agoracosmopolitan.com/contact_us.html">Contact Us</a></td>
+                          <td width="1" align="center" valign="middle" class="wht_links_sml">|</td>
+                          <td width="74" align="center" valign="middle" class="wht_links_sml"><a href="http://www.agoracosmopolitan.com/thickbox.php?placeValuesBeforeTB_=savedValues&amp;TB_iframe=false&amp;height=371&amp;width=500&amp;modal=true&amp;" class="thickbox">Advertise</a></td>
+                          <td width="1" align="center" valign="middle" class="wht_links_sml">|</td>
+                          <td width="73" align="center" valign="middle" class="wht_links_sml"><a href="http://DominionFlyer.com" target="_blank">Classifieds</a></td>
+                          <td width="1" align="center" valign="middle" class="wht_links_sml">|</td>
+                          <td width="73" align="center" valign="middle" class="wht_links_sml"><a href="http://www.agoracosmopolitan.com/burlesque.html">Burlesque</a></td>
+                          <td width="1" align="center" valign="middle" class="wht_links_sml">|</td>
+                          <td width="88" align="center" valign="middle" class="wht_links_sml"><a href="http://www.agoracosmopolitan.com/print_edition.html">Print Edition</a></td>
+                          <td width="1" align="center" valign="middle" class="wht_links_sml">|</td>
+                          <td width="132" align="center" valign="middle" class="hdr_links_ylw"><a href="http://www.agoracosmopolitan.com/login.php"><strong>Become a Member</strong></a></td>
+                        </tr>
+                      </table>
+                  </div>
+                    <div class="menu_blk_lrg_rc"><img src="http://www.agoracosmopolitan.com/images/menu_blk_lrg_rc.jpg" alt="" width="10" height="36" /></div>
+                </div>
+                <div class="HdrRow3"><img src="http://www.agoracosmopolitan.com/images/spacer.gif" alt="" width="1" height="3" /></div>
+                
+                <div id="fps-container" class="menu_blk_sml_bg" style="height:200px; background-color:#000000"><div class="fps-slides-container">
+                    
+                    
+                    
+                    
+<div class="post fps-slide" style="width: 977px;">
+<div class="fps-thumb" style="margin-right:20px;">
+
+  <a href="#" ><img width="270" height="198"  src="http://www.agoracosmopolitan.com/news-img/medium/11208.jpg" class="fps-thumbnail wp-post-image" alt="" title="" /></a>
+  </div>
+<div class="fps-block" style="color:#FFFFFF;  padding:5px; height:187px; ">
+  
+                  
+                 
+                  
+                  
+                  <h2 class="contentheading" style="font-size:24px; color:#FFFFFF; padding-bottom:10px;"><a href="http://www.agoracosmopolitan.com/news/headline_news/2013/12/10/7303.html" style="color:#FFFFFF">Lottery Tickets Make A Good Christmas Present </a></h2>
+		
+	
+	Are you looking for Christmas present ideas? Are you confused about what to gift your loved ones on Christmas? You can gift lottery tickets to your loved ones on this Christmas. Lottery tickets can be the ideal present for Christmas. They provide people with an opportunity to win a lot of money. 
+The prize money offered in most lotteries is very high. Every individual, who has lottery tickets, can win the prize money. Christmas is the time when people make many wishes and expect to get better t 
+                  
+                  <div  style="border-top:1px dotted  #FFFFFF; margin-top:10px; " >
+				<dl class="article-info" style="width:100%;">
+					<dd class="create">Date: 10 December 2013  | <a href="http://www.agoracosmopolitan.com/headline_news.html">Headline News</a> | </dd><dd class="createdby">Posted By : <a href="http://www.agoracosmopolitan.com/user/tanveer1986">by Tanveer</a> | <a href="http://www.agoracosmopolitan.com/news/headline_news/2013/12/10/7303.html#comment">0 Comments</a></dd>
+				</dl>
+			</div>
+                  </div>
+
+
+</div>
+                 
+                    
+<div class="post fps-slide" style="width: 977px; display:none">
+<div class="fps-thumb" style="margin-right:20px;">
+
+  <a href="#" ><img width="270" height="198"  src="http://www.agoracosmopolitan.com/news-img/medium/11203.jpg" class="fps-thumbnail wp-post-image" alt="" title="" /></a>
+  </div>
+<div class="fps-block" style="color:#FFFFFF;  padding:5px; height:187px; ">
+  
+                  
+                 
+                  
+                  
+                  <h2 class="contentheading" style="font-size:24px; color:#FFFFFF; padding-bottom:10px;"><a href="http://www.agoracosmopolitan.com/news/headline_news/2013/12/10/7301.html" style="color:#FFFFFF">Kashmir agonised at Madeba’s loss</a></h2>
+		
+	
+	Mohan Das Karamchand Gandhi rose to pinnacle prominence and became Mahatma when destiny led him to accept an accountant´s job, for a meagre salary offered by Bombay´s Abdullah Seth, in South Africa.  Mahatma joining in to play his role in the struggle against apartheid reached the apex; and India received a well groomed visionary, a unifying force to lead an enslaved nation to achieve the cherished goal of independence.
+Nelson Rolihlahla Mandela, social activist, a philanthropist chose lockup 
+                  
+                  <div  style="border-top:1px dotted  #FFFFFF; margin-top:10px; " >
+				<dl class="article-info" style="width:100%;">
+					<dd class="create">Date: 10 December 2013  | <a href="http://www.agoracosmopolitan.com/headline_news.html">Headline News</a> | </dd><dd class="createdby">Posted By : <a href="http://www.agoracosmopolitan.com/user/AMEER">by AMEER TARIN</a> | <a href="http://www.agoracosmopolitan.com/news/headline_news/2013/12/10/7301.html#comment">0 Comments</a></dd>
+				</dl>
+			</div>
+                  </div>
+
+
+</div>
+                 
+                    
+<div class="post fps-slide" style="width: 977px; display:none">
+<div class="fps-thumb" style="margin-right:20px;">
+
+  <a href="#" ><img width="270" height="198"  src="http://www.agoracosmopolitan.com/news-img/medium/11232.jpg" class="fps-thumbnail wp-post-image" alt="" title="" /></a>
+  </div>
+<div class="fps-block" style="color:#FFFFFF;  padding:5px; height:187px; ">
+  
+                  
+                 
+                  
+                  
+                  <h2 class="contentheading" style="font-size:24px; color:#FFFFFF; padding-bottom:10px;"><a href="http://www.agoracosmopolitan.com/news/headline_news/2013/12/11/7295.html" style="color:#FFFFFF">Online Casino offers Sports Entertainment Alternative</a></h2>
+		
+	
+	Ever since the advent of dot com companies about two decades ago, one of the prominent success tales has been the phenomenal growth of online gambling casinos. Online gambling has grown into a thirty billion dollar industry with millions of players participating from all over the world.Today, thousands of online gambling websites have sprung on the internet and they offer endless choices to their member players. One such website in Canada is All Slots Casino which offers quality entertainment va 
+                  
+                  <div  style="border-top:1px dotted  #FFFFFF; margin-top:10px; " >
+				<dl class="article-info" style="width:100%;">
+					<dd class="create">Date: 11 December 2013  | <a href="http://www.agoracosmopolitan.com/headline_news.html">Headline News</a> | </dd><dd class="createdby">Posted By : <a href="http://www.agoracosmopolitan.com/user/Sadia">by Sadia Arshad</a> | <a href="http://www.agoracosmopolitan.com/news/headline_news/2013/12/11/7295.html#comment">0 Comments</a></dd>
+				</dl>
+			</div>
+                  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+ 
+
+
+
+</div></div>
+
+
+<style type="text/css">@import url(http://www.agoracosmopolitan.com/featured-posts-slider.css?v4);</style>
+<script type="text/javascript" src="http://www.agoracosmopolitan.com/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="http://www.agoracosmopolitan.com/slides.min.jquery.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {jQuery('#fps-container').slides({
+              preload: 1,
+              preloadImage: 'http://featured-posts-slider.webfactoryltd.com/wp-content/plugins/featured-posts-slider/images/preload.gif',
+              container: 'fps-slides-container',
+               generateNextPrev: 1,
+             next: 'fps-next',
+             prev: 'fps-prev',
+             pagination: true,
+             generatePagination: 0,
+             paginationClass: 'fps-pagination',
+              fadeSpeed: 300,
+              slideSpeed: 300,
+              start: 1,
+              effect: 'slide',
+              randomize: 0,
+              play: 2000,
+              pause: 2600,
+              hoverPause: 1,
+              autoHeight: 1});
+});
+</script>
+<div class="HdrRow3"><img src="http://www.agoracosmopolitan.com/images/spacer.gif" alt="" width="1" height="3" /></div>
+                <div class="HdrRow5">
+                	<div class="menu_blk_sml_lc"><img src="http://www.agoracosmopolitan.com/images/menu_blk_sml_lc.jpg" alt="" width="10" height="29" /></div>
+                    <div class="menu_blk_sml_bg">
+                      <table width="954" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td  height="29" align="center" valign="middle" class="wht_links_menu" style="padding-left:0px; padding-right:0px;"><a href="https://co.clickandpledge.com/sp/d1/default.aspx?wid=18416">Donate</a></td>
+                          <td width="1" align="center" valign="middle" class="wht_links_menu">|</td>
+                          <td style="padding-left:0px; padding-right:0px;" align="center" valign="middle" class="wht_links_menu"><a href="http://www.agoracosmopolitan.com/relationships.html">Relationships</a></td>
+                          <td width="1" align="center" valign="middle" class="wht_links_menu">|</td>
+                          <td style="padding-left:0px; padding-right:0px;" align="center" valign="middle" class="wht_links_menu"><a href="http://www.agoracosmopolitan.com/entertainment.html">Entertainment</a></td>
+                          <td width="1" align="center" valign="middle" class="wht_links_menu">|</td>
+
+
+                          <td style="padding-left:0px; padding-right:0px;" align="center" valign="middle" class="wht_links_menu"><a href="http://www.agoracosmopolitan.com/cars.html">Cars</a></td>
+						   <td width="1" align="center" valign="middle" class="wht_links_menu">|</td>
+                          <td style="padding-left:0px; padding-right:0px;" align="center" valign="middle" class="wht_links_menu"><a href="http://www.agoracosmopolitan.com/foodies.html">Foodies</a></td>
+                          <td width="1" align="center" valign="middle" class="wht_links_menu">|</td>
+                          <td style="padding-left:0px; padding-right:0px;" align="center" valign="middle" class="wht_links_menu"><a href="http://www.agoracosmopolitan.com/careers.html">Careers</a></td>
+                          <td width="1" align="center" valign="middle" class="wht_links_menu">|</td>
+                          <td style="padding-left:0px; padding-right:0px;" align="center" valign="middle" class="wht_links_menu"><a href="http://www.agoracosmopolitan.com/homes.html">Homes</a></td>
+                          <td width="1" align="center" valign="middle" class="wht_links_menu">|</td>
+                          <td style="padding-left:0px; padding-right:0px;" align="center" valign="middle" class="wht_links_menu"><a href="http://www.agoracosmopolitan.com/review.html">Books</a></td>
+                          <td width="1" align="center" valign="middle" class="wht_links_menu">|</td>
+                          <td style="padding-left:0px; padding-right:0px;" align="center" valign="middle" class="wht_links_menu"><a href="http://www.agoracosmopolitan.com/business.html">Business</a></td>
+                          <td width="1" align="center" valign="middle" class="wht_links_menu">|</td>
+                          <td style="padding-left:0px; padding-right:0px;" align="center" valign="middle" class="wht_links_menu"><a href="http://www.agoracosmopolitan.com/eco_technology.html">Eco-Tech</a></td>
+						  <td width="1" align="center" valign="middle" class="wht_links_menu">|</td>
+                          <td style="padding-left:0px; padding-right:0px;" align="center" valign="middle" class="wht_links_menu"><a href="http://www.agoracosmopolitan.com/music.html">Music</a></td>
+                          <td width="1" align="center" valign="middle" class="wht_links_menu">|</td>
+                          <td style="padding-left:0px; padding-right:0px;" align="center" valign="middle" class="wht_links_menu"><a href="http://www.agoracosmopolitan.com/ufo_extraterrestrials.html">UFO · Exopolitics</a></td>
+                          <td width="1" align="center" valign="middle" class="wht_links_menu">|</td>
+                          <td style="padding-left:0px; padding-right:0px;" align="center" valign="middle" class="wht_links_menu"><a href="http://www.agoracosmopolitan.com/editorial.html">Editorial</a></td>
+                          <td>&nbsp;</td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="menu_blk_sml_rc"><img src="http://www.agoracosmopolitan.com/images/menu_blk_sml_rc.jpg" alt="" width="10" height="29" /></div>
+            	</div>
+                <div class="HdrRow3"><img src="http://www.agoracosmopolitan.com/images/spacer.gif" alt="" width="1" height="1" /></div>
+                <div class="HdrRow6">
+                	<div class="menu_gray_lc"><img src="http://www.agoracosmopolitan.com/images/menu_gray_lc.jpg" alt="" width="10" height="29" /></div>
+                    <div class="menu_gray_bg">
+                      <table width="954" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+												
+                          <td width="66" height="29" align="center" valign="middle" class="blk_links_menu"><a href="http://www.agoracosmopolitan.com/education.html">Learning</a></td>
+                          <td width="1" align="center" valign="middle" class="blk_links_menu">|</td>
+                          <td width="49" align="center" valign="middle" class="blk_links_menu"><a href="http://www.agoracosmopolitan.com/arts.html">Arts</a></td>
+                          <td width="1" align="center" valign="middle" class="blk_links_menu">|</td>
+                          <td width="72" align="center" valign="middle" class="blk_links_menu"><a href="http://www.agoracosmopolitan.com/media_spin.html">Media Spin</a></td>
+                          <td width="1" align="center" valign="middle" class="blk_links_menu">|</td>
+                          <td width="57" align="center" valign="middle" class="blk_links_menu"><a href="http://www.agoracosmopolitan.com/retro.html">Retro</a></td>
+                          <td width="1" align="center" valign="middle" class="blk_links_menu">|</td>
+                          <td width="52" align="center" valign="middle" class="blk_links_menu"><a href="http://www.agoracosmopolitan.com/health.html">Health</a></td>
+                          <td width="1" align="center" valign="middle" class="blk_links_menu">|</td>
+                          <td width="66" align="center" valign="middle" class="blk_links_menu"><a href="http://www.agoracosmopolitan.com/lifestyles.html">Lifestyles</a></td>
+                          <td width="1" align="center" valign="middle" class="blk_links_menu">|</td>
+                          <td width="57" align="center" valign="middle" class="blk_links_menu"><a href="http://www.agoracosmopolitan.com/fashion.html">Fashion</a></td>
+                          <td width="1" align="center" valign="middle" class="blk_links_menu">|</td>
+                          <td width="58" align="center" valign="middle" class="blk_links_menu"><a href="http://www.agoracosmopolitan.com/religion.html">Religion</a></td>
+                          <td width="1" align="center" valign="middle" class="blk_links_menu">|</td>
+                          <td width="54" align="center" valign="middle" class="blk_links_menu"><a href="http://www.agoracosmopolitan.com/nature.html">Nature</a></td>
+                          <td width="1" align="center" valign="middle" class="blk_links_menu">|</td>
+                          <td width="46" align="center" valign="middle" class="blk_links_menu"><a href="http://www.agoracosmopolitan.com/news.html">News</a></td>
+                          <td width="1" align="center" valign="middle" class="blk_links_menu">|</td>
+                          <td width="65" align="center" valign="middle" class="blk_links_menu"><a href="http://www.agoracosmopolitan.com/sexuality.html">Sexuality</a></td>
+                          <td width="1" align="center" valign="middle" class="blk_links_menu">|</td>
+                          <td width="81" align="center" valign="middle" class="blk_links_menu"><a href="http://www.agoracosmopolitan.com/transgender.html">Transgender</a></td>
+                          <td width="1" align="center" valign="middle" class="blk_links_menu">|</td>
+                          <td width="52" align="center" valign="middle" class="blk_links_menu"><a href="http://www.agoracosmopolitan.com/sports.html">Sports</a></td>
+                          <td width="1" align="center" valign="middle" class="blk_links_menu">|</td>
+                          <td width="49" align="center" valign="middle" class="blk_links_menu"><a href="http://www.agoracosmopolitan.com/travel.html">Travel</a></td>
+                          <td width="1" align="center" valign="middle" class="blk_links_menu">|</td>
+                          <td width="64" align="center" valign="middle" class="blk_links_menu"><a href="http://www.agoracosmopolitan.com/archives2.html">Archives</a></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="menu_gray_rc"><img src="http://www.agoracosmopolitan.com/images/menu_gray_rc.jpg" alt="" width="10" height="29" /></div>
+            </div>
+                <div class="HdrRow3"><img src="http://www.agoracosmopolitan.com/images/spacer.gif" alt="" width="1" height="10" /></div>
+                <div class="HdrRow7">
+                  <table width="974" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="270" align="left" valign="top">
+                      
+                      <div style=" background-image:url(http://www.agoracosmopolitan.com/images/button_bg.jpg); height: 33px;padding-left: 5px; padding-top: 16px; width: 248px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px;"><a href="http://www.agoracosmopolitan.com/actualites.html" style="color:#000">Canadien Français</a> |  <a href="http://www.agoracosmopolitan.com/notizie.html" style="color:#000">Italiano</a>  |  <a href="http://www.agoracosmopolitan.com/periodico.html" style="color:#000">Español</a></div>
+                      </td>
+                      <td width="208" align="left" valign="top"> <div style=" background-image:url(http://www.agoracosmopolitan.com/images/bnr_sml_22.jpg); height: 33px;padding-left: 5px; padding-top: 16px; width: 195px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; text-align:center"><a href="http://www.agoracosmopolitan.com/press_releases.html" style="color:#000">Press Releases</a></div></td>
+                      <td width="119" align="left" valign="top"><a href="http://www.ckcufm.com/sites/default/themes/ckcu/ckcuradio.php"><img src="http://www.agoracosmopolitan.com/images/bnr_sml_3.jpg" alt="" width="107" height="49" /></a></td>
+                      <td width="140" align="left" valign="top"><a href="http://www.agorapublishing.com"><img src="http://www.agoracosmopolitan.com/images/bnr_sml_4.jpg" alt="" width="127" height="49" /></a></td>
+                      <td width="273" align="left" valign="top"><a href="http://yellowpages.agoracosmopolitan.com/"><img src="http://www.agoracosmopolitan.com/images/bnr_sml_7.jpg" alt="" width="273" height="49" /></a></td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="HdrRow3"><img src="http://www.agoracosmopolitan.com/images/spacer.gif" alt="" width="1" height="10" /></div>
+                
+       	  	</div>
+             <div class="Content">
+            	<div class="CntntLft" style="width:650px;">
+						  
+    <div class="CntntRow1">
+                	  <table width="960" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td width="142" align="center" valign="middle" class="brkng_news_bg"><img src="http://www.agoracosmopolitan.com/images/brkng_news_bg.gif" /></td>
+                          <td width="100%" valign="top" class="news_bg_ylw"><table width="495" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td width="495" height="35" align="center" class="news_links" style="padding-left:5px; padding-right:5px;">
+<marquee onMouseOver="this.stop();" onMouseOut="this.start();" truespeed="" scrollamount="1" scrolldelay="15" direction="left" loop="repeat" width="100%">
+							
+							  
+                        <a href="http://www.agoracosmopolitan.com/news/business/2013/12/11/7327.html" target="_blank" class="intro_content">
+                        Give it a shot, file your taxes online </a>&nbsp;|
+						
+												
+							  
+                        <a href="http://www.agoracosmopolitan.com/news/health/2013/12/11/7326.html" target="_blank" class="intro_content">
+                        How to dress up your smile for the New Year </a>&nbsp;|
+						
+												
+							  
+                        <a href="http://www.agoracosmopolitan.com/news/homes/2013/12/11/7325.html" target="_blank" class="intro_content">
+                        High home energy score could help sell home </a>&nbsp;|
+						
+												
+							  
+                        <a href="http://www.agoracosmopolitan.com/news/cars/2013/12/11/7324.html" target="_blank" class="intro_content">
+                        Winter tires save lives and money </a>&nbsp;|
+						
+												
+							  
+                        <a href="http://www.agoracosmopolitan.com/news/music/2013/12/11/7307.html" target="_blank" class="intro_content">
+                        Arts: Icons in music and skin care join forces to fight HIV </a>&nbsp;|
+						
+												
+							  
+                        <a href="http://www.agoracosmopolitan.com/news/editorial/2013/12/10/7305.html" target="_blank" class="intro_content">
+                        Washington signals Palestine  independence </a>&nbsp;|
+						
+												
+							  
+                        <a href="http://www.agoracosmopolitan.com/news/headline_news/2013/12/10/7303.html" target="_blank" class="intro_content">
+                        Lottery Tickets Make A Good Christmas Present  </a>&nbsp;|
+						
+												
+							  
+                        <a href="http://www.agoracosmopolitan.com/news/entertainment/2013/12/10/7302.html" target="_blank" class="intro_content">
+                        Why the Lottery can be a fun Christmas idea </a>&nbsp;|
+						
+												
+							  
+                        <a href="http://www.agoracosmopolitan.com/news/headline_news/2013/12/10/7301.html" target="_blank" class="intro_content">
+                        Kashmir agonised at Madeba’s loss </a>&nbsp;|
+						
+												
+							  
+                        <a href="http://www.agoracosmopolitan.com/news/headline_news/2013/12/11/7295.html" target="_blank" class="intro_content">
+                        Online Casino offers Sports Entertainment Alternative </a>&nbsp;|
+						
+												 </marquee></td>
+                              <td width="90" align="left" valign="middle" class="ftrd_links_red"><a href="#">Read More...</a></td>
+                            </tr>
+                          </table></td>
+                        </tr>
+                      </table>
+                	</div>            	         
+                  
+<div class="CntntRow3" style="width:650px;">
+
+
+<div style="min-height:300px">
+
+
+
+
+
+
+<div class="CntntRow8" style="width:650px;">
+<table width="650" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td  valign="middle" align="left"">
+	
+	<div style="float:left;"> <h1 class="componentheading"><span class="hbl "></span>Top News</h1></div>
+    <div style="float:left; "> <a title="Upload News" class="become_writer-news" href="http://www.agoracosmopolitan.com/post_article.php">Become a Writer</a></div>
+    <div style="float:left; "> <a title="Upload News" class="add_news_relese" href="http://www.agoracosmopolitan.com/post_article.php">Add News Relese</a></div>
+    <div style="clear:both"></div>
+	
+	<div class="contentpaneopen  " style="background:url(http://www.agoracosmopolitan.com/images/vertical-dot-1.png) repeat-y; background-position:right; padding-bottom:10px">
+	
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="nweslistTable"  >
+	
+        
+    
+  <tr>
+    <td width="305" align="left"  valign="top" >
+								<img src="http://www.agoracosmopolitan.com/news-img/newmedium/127127810680036.jpg" width="305" height="225" />
+								</td>
+    <td valign="top" align="left" >
+	
+	<h2 class="contentheading" style="font-size:24px;"><a href="http://www.agoracosmopolitan.com/news/business/2013/12/11/7327.html">Give it a shot, file your taxes online</a></h2>
+	<div class="article-tools" >
+				<dl class="article-info" style="width:100%;">
+					<dd class="create">Date: 11 December 2013  | <a href="http://www.agoracosmopolitan.com/business.html">Business</a> | </dd><dd class="createdby">Posted By : <a href="http://www.agoracosmopolitan.com/user/NewsCanada">Special to The Canadian</a> |  0 Comments</dd>
+				</dl>
+			</div>	
+	
+	(NC) – The Internet world is so  quick and convenient. You can shop, keep in touch with friends and  family, exchange pictures, listen to music, do your banking, and more.  So why aren't you filing your&nbsp;taxes&nbsp;online?
+There are plenty of good reasons to do it. First and  foremost, it's easy. You can do it from the comfort of your home at your  own pace. No need to&nbsp;go and pick up a <a href="http://www.agoracosmopolitan.com/news/business/2013/12/11/7327.html">....</a></td>
+  </tr>
+  
+  <tr><td colspan="2" height="2" style="border-bottom:2px solid #FF0000;"></td></tr>
+      
+    
+  <tr>
+    <td width="305" align="left"  valign="top" >
+								</td>
+    <td valign="top" align="left" >
+	
+	<h2 class="contentheading" style="font-size:24px;"><a href="http://www.agoracosmopolitan.com/news/health/2013/12/11/7326.html">How to dress up your smile for the New Year</a></h2>
+	<div class="article-tools" >
+				<dl class="article-info" style="width:100%;">
+					<dd class="create">Date: 11 December 2013  | <a href="http://www.agoracosmopolitan.com/health.html">Health</a> | </dd><dd class="createdby">Posted By : <a href="http://www.agoracosmopolitan.com/user/NewsCanada">Special to The Canadian</a> |  0 Comments</dd>
+				</dl>
+			</div>	
+	
+	(NC) -- The New Year is the time for goal setting,  personal rejuvenation, and feeling your best. According to a study  conducted by Philips Sonicare a great smile is the feature 53 per cent  of Canadians find most attractive when they first meet someone. Beauty  expert Janine Falcon shares a few tips on spotlighting yours that will  help you sashay through the new year.
+• Winter-proof your lip <a href="http://www.agoracosmopolitan.com/news/health/2013/12/11/7326.html">....</a></td>
+  </tr>
+  
+  <tr><td colspan="2" height="2" style="border-bottom:2px solid #FF0000;"></td></tr>
+      
+    
+  <tr>
+    <td width="305" align="left"  valign="top" >
+								<img src="http://www.agoracosmopolitan.com/news-img/newmedium/140996553980022.jpg" width="305" height="225" />
+								</td>
+    <td valign="top" align="left" >
+	
+	<h2 class="contentheading" style="font-size:24px;"><a href="http://www.agoracosmopolitan.com/news/homes/2013/12/11/7325.html">High home energy score could help sell home</a></h2>
+	<div class="article-tools" >
+				<dl class="article-info" style="width:100%;">
+					<dd class="create">Date: 11 December 2013  | <a href="http://www.agoracosmopolitan.com/homes.html">Homes</a> | </dd><dd class="createdby">Posted By : <a href="http://www.agoracosmopolitan.com/user/NewsCanada">Special to The Canadian</a> |  0 Comments</dd>
+				</dl>
+			</div>	
+	
+	(NC) -- An energy score is an rating given to your home  after it has been audited by a professional home energy auditor. Similar  to a house's walking score, an energy score can be listed on the MLS  listing for your home, and it can be a selling point for potential  buyers.
+Assessing previous energy bills are not always  indicative of the actual energy efficiency of the home. Often times,  ener <a href="http://www.agoracosmopolitan.com/news/homes/2013/12/11/7325.html">....</a></td>
+  </tr>
+  
+  <tr><td colspan="2" height="2" style="border-bottom:2px solid #FF0000;"></td></tr>
+      
+    
+  <tr>
+    <td width="305" align="left"  valign="top" >
+								<img src="http://www.agoracosmopolitan.com/news-img/newmedium/39726126879869.jpg" width="305" height="225" />
+								</td>
+    <td valign="top" align="left" >
+	
+	<h2 class="contentheading" style="font-size:24px;"><a href="http://www.agoracosmopolitan.com/news/cars/2013/12/11/7324.html">Winter tires save lives and money</a></h2>
+	<div class="article-tools" >
+				<dl class="article-info" style="width:100%;">
+					<dd class="create">Date: 11 December 2013  | <a href="http://www.agoracosmopolitan.com/cars.html">Cars</a> | </dd><dd class="createdby">Posted By : <a href="http://www.agoracosmopolitan.com/user/NewsCanada">Special to The Canadian</a> |  0 Comments</dd>
+				</dl>
+			</div>	
+	
+	(NC) -- There is nothing more beautiful than a highway  lined with autumn colours. They take one's breath away. But, just as  soon as they appear, they'll be gone and the sub-zero temperatures will  be the next thing to take one's breath away. While we can all agree that  the prospect of winter is pretty miserable — unless you're a skier —  there's really nothing worse than hitting a patch of  <a href="http://www.agoracosmopolitan.com/news/cars/2013/12/11/7324.html">....</a></td>
+  </tr>
+  
+  <tr><td colspan="2" height="2" style="border-bottom:2px solid #FF0000;"></td></tr>
+      
+    
+  <tr>
+    <td width="305" align="left"  valign="top" >
+								<img src="http://www.agoracosmopolitan.com/news-img/newmedium/67435503180110.jpg" width="305" height="225" />
+								</td>
+    <td valign="top" align="left" >
+	
+	<h2 class="contentheading" style="font-size:24px;"><a href="http://www.agoracosmopolitan.com/news/music/2013/12/11/7307.html">Arts: Icons in music and skin care join forces to fight HIV</a></h2>
+	<div class="article-tools" >
+				<dl class="article-info" style="width:100%;">
+					<dd class="create">Date: 11 December 2013  | <a href="http://www.agoracosmopolitan.com/music.html">Music</a> | </dd><dd class="createdby">Posted By : <a href="http://www.agoracosmopolitan.com/user/NewsCanada">Special to The Canadian</a> |  0 Comments</dd>
+				</dl>
+			</div>	
+	
+	(NC) -- Kiehl's Since 1851, the venerable New York-based  purveyor of fine-quality skin and hair care preparations, recently  announced a collaboration with Grammy Award winning singer/songwriter  Alicia Keys in support of Keep a Child Alive (keepachildalive.org).
+“Supportive partners like Kiehl's are part of our  extended family,” says Keys. “They share our passion for bringing  dignified  <a href="http://www.agoracosmopolitan.com/news/music/2013/12/11/7307.html">....</a></td>
+  </tr>
+  
+  <tr><td colspan="2" height="2" style="border-bottom:2px solid #FF0000;"></td></tr>
+      
+    
+  <tr>
+    <td width="305" align="left"  valign="top" >
+								<img src="http://www.agoracosmopolitan.com/news-img/newmedium/52a6e2a3d6fcdObama.png" width="305" height="225" />
+								</td>
+    <td valign="top" align="left" >
+	
+	<h2 class="contentheading" style="font-size:24px;"><a href="http://www.agoracosmopolitan.com/news/editorial/2013/12/10/7305.html">Washington signals Palestine  independence</a></h2>
+	<div class="article-tools" >
+				<dl class="article-info" style="width:100%;">
+					<dd class="create">Date: 10 December 2013  | <a href="http://www.agoracosmopolitan.com/editorial.html">Letters and Editorials</a> | </dd><dd class="createdby">Posted By : <a href="http://www.agoracosmopolitan.com/user/abdul.colachal">by DR. ABDUL RUFF COLACHAL </a> |  0 Comments</dd>
+				</dl>
+			</div>	
+	
+	Even as the Zionist regime tries &nbsp;its level best by tactfully using its western sponsors in Mideast, &nbsp;Palestine people continue to struggle to make their own home on their territories, now illegally occupied and terrorized by an arrogantly fascist Israel.&nbsp;
+From what US president barrack Obama and foreign secretary John Kerry say humanity get assured of a genuinely &nbsp;independent <a href="http://www.agoracosmopolitan.com/news/editorial/2013/12/10/7305.html">....</a></td>
+  </tr>
+  
+  <tr><td colspan="2" height="2" style="border-bottom:2px solid #FF0000;"></td></tr>
+      
+    
+  <tr>
+    <td width="305" align="left"  valign="top" >
+								<img src="http://www.agoracosmopolitan.com/news-img/newmedium/1866128614lottery.png" width="305" height="225" />
+								</td>
+    <td valign="top" align="left" >
+	
+	<h2 class="contentheading" style="font-size:24px;"><a href="http://www.agoracosmopolitan.com/news/headline_news/2013/12/10/7303.html">Lottery Tickets Make A Good Christmas Present </a></h2>
+	<div class="article-tools" >
+				<dl class="article-info" style="width:100%;">
+					<dd class="create">Date: 10 December 2013  | <a href="http://www.agoracosmopolitan.com/headline_news.html">Headline News</a> | </dd><dd class="createdby">Posted By : <a href="http://www.agoracosmopolitan.com/user/tanveer1986">by Tanveer</a> |  0 Comments</dd>
+				</dl>
+			</div>	
+	
+	Are you looking for Christmas present ideas? Are you confused about what to gift your loved ones on Christmas? You can gift lottery tickets to your loved ones on this Christmas. Lottery tickets can be the ideal present for Christmas. They provide people with an opportunity to win a lot of money. 
+The prize money offered in most lotteries is very high. Every individual, who has lottery tickets, ca <a href="http://www.agoracosmopolitan.com/news/headline_news/2013/12/10/7303.html">....</a></td>
+  </tr>
+  
+  <tr><td colspan="2" height="2" style="border-bottom:2px solid #FF0000;"></td></tr>
+      
+    
+  <tr>
+    <td width="305" align="left"  valign="top" >
+								<img src="http://www.agoracosmopolitan.com/news-img/newmedium/7450959532012-Christmas-Lottery.png" width="305" height="225" />
+								</td>
+    <td valign="top" align="left" >
+	
+	<h2 class="contentheading" style="font-size:24px;"><a href="http://www.agoracosmopolitan.com/news/entertainment/2013/12/10/7302.html">Why the Lottery can be a fun Christmas idea</a></h2>
+	<div class="article-tools" >
+				<dl class="article-info" style="width:100%;">
+					<dd class="create">Date: 10 December 2013  | <a href="http://www.agoracosmopolitan.com/entertainment.html">Entertainment</a> | </dd><dd class="createdby">Posted By : <a href="http://www.agoracosmopolitan.com/user/Chellalu">by Chella</a> |  0 Comments</dd>
+				</dl>
+			</div>	
+	
+	Christmas is but mere days away and what better way to make a score of it than by playing the Christmas lottery? This is the time of the year to really have fun with loved ones, get to know them and end the year in a blast with them. A time for sharing moments that will always be cherished; a time to gather around the Christmas tree, sing beautiful melodies and open wonderful gifts; a time to sit  <a href="http://www.agoracosmopolitan.com/news/entertainment/2013/12/10/7302.html">....</a></td>
+  </tr>
+  
+  <tr><td colspan="2" height="2" style="border-bottom:2px solid #FF0000;"></td></tr>
+      
+    
+  <tr>
+    <td width="305" align="left"  valign="top" >
+								<img src="http://www.agoracosmopolitan.com/news-img/newmedium/454987498CAliShahGeelani.jpg" width="305" height="225" />
+								</td>
+    <td valign="top" align="left" >
+	
+	<h2 class="contentheading" style="font-size:24px;"><a href="http://www.agoracosmopolitan.com/news/headline_news/2013/12/10/7301.html">Kashmir agonised at Madeba’s loss</a></h2>
+	<div class="article-tools" >
+				<dl class="article-info" style="width:100%;">
+					<dd class="create">Date: 10 December 2013  | <a href="http://www.agoracosmopolitan.com/headline_news.html">Headline News</a> | </dd><dd class="createdby">Posted By : <a href="http://www.agoracosmopolitan.com/user/AMEER">by AMEER TARIN</a> |  0 Comments</dd>
+				</dl>
+			</div>	
+	
+	Mohan Das Karamchand Gandhi rose to pinnacle prominence and became Mahatma when destiny led him to accept an accountant´s job, for a meagre salary offered by Bombay´s Abdullah Seth, in South Africa.  Mahatma joining in to play his role in the struggle against apartheid reached the apex; and India received a well groomed visionary, a unifying force to lead an enslaved nation to achieve the cheris <a href="http://www.agoracosmopolitan.com/news/headline_news/2013/12/10/7301.html">....</a></td>
+  </tr>
+  
+  <tr><td colspan="2" height="2" style="border-bottom:2px solid #FF0000;"></td></tr>
+      
+    
+  <tr>
+    <td width="305" align="left"  valign="top" >
+								<img src="http://www.agoracosmopolitan.com/news-img/newmedium/52a76c4858f0fall_slots_casino_android_phone.png" width="305" height="225" />
+								</td>
+    <td valign="top" align="left" >
+	
+	<h2 class="contentheading" style="font-size:24px;"><a href="http://www.agoracosmopolitan.com/news/headline_news/2013/12/11/7295.html">Online Casino offers Sports Entertainment Alternative</a></h2>
+	<div class="article-tools" >
+				<dl class="article-info" style="width:100%;">
+					<dd class="create">Date: 11 December 2013  | <a href="http://www.agoracosmopolitan.com/headline_news.html">Headline News</a> | </dd><dd class="createdby">Posted By : <a href="http://www.agoracosmopolitan.com/user/Sadia">by Sadia Arshad</a> |  0 Comments</dd>
+				</dl>
+			</div>	
+	
+	Ever since the advent of dot com companies about two decades ago, one of the prominent success tales has been the phenomenal growth of online gambling casinos. Online gambling has grown into a thirty billion dollar industry with millions of players participating from all over the world.Today, thousands of online gambling websites have sprung on the internet and they offer endless choices to their  <a href="http://www.agoracosmopolitan.com/news/headline_news/2013/12/11/7295.html">....</a></td>
+  </tr>
+  
+  <tr><td colspan="2" height="2" style="border-bottom:2px solid #FF0000;"></td></tr>
+      
+    
+  <tr>
+    <td width="305" align="left"  valign="top" >
+								<img src="http://www.agoracosmopolitan.com/news-img/newmedium/66869911779067.jpg" width="305" height="225" />
+								</td>
+    <td valign="top" align="left" >
+	
+	<h2 class="contentheading" style="font-size:24px;"><a href="http://www.agoracosmopolitan.com/news/business/2013/12/07/7286.html">Why everyone should consider setting up a power of attorney</a></h2>
+	<div class="article-tools" >
+				<dl class="article-info" style="width:100%;">
+					<dd class="create">Date: 07 December 2013  | <a href="http://www.agoracosmopolitan.com/business.html">Business</a> | </dd><dd class="createdby">Posted By : <a href="http://www.agoracosmopolitan.com/user/NewsCanada">Special to The Canadian</a> |  0 Comments</dd>
+				</dl>
+			</div>	
+	
+	(NC) -- A power of attorney is a legal, written document  that gives someone else the right to act on your behalf while you are  alive. This means that if you are injured, sick, or otherwise  incapacitated, someone you trust will have the legal authority to make  financial decisions, such as paying bills or managing assets.  Perhaps  more importantly, they will have the right to determine where yo <a href="http://www.agoracosmopolitan.com/news/business/2013/12/07/7286.html">....</a></td>
+  </tr>
+  
+  <tr><td colspan="2" height="2" style="border-bottom:2px solid #FF0000;"></td></tr>
+      
+    
+  <tr>
+    <td width="305" align="left"  valign="top" >
+								<img src="http://www.agoracosmopolitan.com/news-img/newmedium/131058038779175a.jpg" width="305" height="225" />
+								</td>
+    <td valign="top" align="left" >
+	
+	<h2 class="contentheading" style="font-size:24px;"><a href="http://www.agoracosmopolitan.com/news/homes/2013/12/10/7285.html">Real Estate: You buy into a business when you buy a condominium</a></h2>
+	<div class="article-tools" >
+				<dl class="article-info" style="width:100%;">
+					<dd class="create">Date: 10 December 2013  | <a href="http://www.agoracosmopolitan.com/homes.html">Homes</a> | </dd><dd class="createdby">Posted By : <a href="http://www.agoracosmopolitan.com/user/NewsCanada">Special to The Canadian</a> |  0 Comments</dd>
+				</dl>
+			</div>	
+	
+	(NC) -- Condominium units represent an affordable,  versatile and popular option in the housing market, especially for  first-time buyers and empty nesters. Approximately half of all new  housing stock in Canada is made up of multi-unit dwellings (which  includes condominiums), according to Statistics Canada's most recent  census data (2011).
+“Many people don't realize that when they purchase a <a href="http://www.agoracosmopolitan.com/news/homes/2013/12/10/7285.html">....</a></td>
+  </tr>
+  
+  <tr><td colspan="2" height="2" style="border-bottom:2px solid #FF0000;"></td></tr>
+      
+    
+  <tr>
+    <td width="305" align="left"  valign="top" >
+								<img src="http://www.agoracosmopolitan.com/news-img/newmedium/50041499878871.jpg" width="305" height="225" />
+								</td>
+    <td valign="top" align="left" >
+	
+	<h2 class="contentheading" style="font-size:24px;"><a href="http://www.agoracosmopolitan.com/news/lifestyles/2013/12/10/7284.html">Canadians get matched with loyalty programs to get rewards faster</a></h2>
+	<div class="article-tools" >
+				<dl class="article-info" style="width:100%;">
+					<dd class="create">Date: 10 December 2013  | <a href="http://www.agoracosmopolitan.com/lifestyles.html">Lifestyles</a> | </dd><dd class="createdby">Posted By : <a href="http://www.agoracosmopolitan.com/user/NewsCanada">Special to The Canadian</a> |  0 Comments</dd>
+				</dl>
+			</div>	
+	
+	(NC) -- Did you know that the average Canadian household  is signed up for eight loyalty programs? Canadians are clearly eager to  reap the rewards of loyalty membership, but are people participating in  the programs that are best suited to their shopping habits and reward  preferences?
+To find out, COLLOQUY, a LoyaltyOne research group,  commissioned the public opinion firm Environics Research G <a href="http://www.agoracosmopolitan.com/news/lifestyles/2013/12/10/7284.html">....</a></td>
+  </tr>
+  
+  <tr><td colspan="2" height="2" style="border-bottom:2px solid #FF0000;"></td></tr>
+    
+  
+ 
+</table>
+
+	
+	
+	</div>
+	
+	
+	
+	
+			
+
+
+
+
+
+
+
+
+</td>
+  </tr>
+  
+
+
+
+
+
+
+
+  
+</table>
+</div>
+
+
+
+
+
+</div>
+
+</div>
+                                    </div>
+                <div class="CntntMid"><img src="http://www.agoracosmopolitan.com/images/spacer.gif" alt="" width="11" height="11" /></div>
+                <div class="CntntRgt">
+                  <style>
+#myList li
+{
+list-style-type:decimal;
+margin:13px 0px;
+}
+
+</style>
+<table width="300" border="0" cellspacing="0" cellpadding="0">
+
+  
+				
+                     <!--<tr>
+                <td valign="top">
+                
+                <table width="306" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td align="left" valign="middle" class="popular_bg">Canadian Readers</td>
+                        </tr>
+                <tr><td>
+                <script type='text/javascript'>
+    var m3_r=Math.floor(Math.random()*999999999);
+    var ohname=encodeURIComponent(encodeURIComponent(document.URL));
+    document.write('<iframe src="http://ad.bnmla.com/serve?pid=2575&zid=89531&ohname='+ohname+'&if=1&cb='+m3_r+'&click=" frameborder="0" scrolling="no" width="300" height="250" marginheight="0" marginwidth="0"></iframe>');
+</script>
+                </td>
+                </tr>
+                </table>
+                </td></tr>
+                 <tr>
+                              <td height="10"></td>
+                            </tr>       
+                            
+                    
+				<tr>
+                <td valign="top">
+                
+                <table width="306" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td align="left" valign="middle" class="popular_bg"> U.S. Readers</td>
+                        </tr>
+                <tr><td>
+                <script type='text/javascript'>
+    var m3_r=Math.floor(Math.random()*999999999);
+    var ohname=encodeURIComponent(encodeURIComponent(document.URL));
+    document.write('<iframe src="http://ad.bnmla.com/serve?pid=2575&zid=89529&ohname='+ohname+'&if=1&cb='+m3_r+'&click=" frameborder="0" scrolling="no" width="300" height="250" marginheight="0" marginwidth="0"></iframe>');
+</script>
+                </td>
+                </tr>
+                </table>
+                </td></tr>
+                 <tr>
+                              <td height="10"></td>
+                            </tr>
+                            
+                 <tr>
+                <td valign="top">
+                
+                <table width="306" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td align="left" valign="middle" class="popular_bg">British Readers</td>
+                        </tr>
+                <tr><td>
+                <script type='text/javascript'>
+    var m3_r=Math.floor(Math.random()*999999999);
+    var ohname=encodeURIComponent(encodeURIComponent(document.URL));
+    document.write('<iframe src="http://ad.bnmla.com/serve?pid=2575&zid=89530&ohname='+ohname+'&if=1&cb='+m3_r+'&click=" frameborder="0" scrolling="no" width="300" height="250" marginheight="0" marginwidth="0"></iframe>');
+</script>
+                </td>
+                </tr>
+                </table>
+                </td></tr>-->
+                 
+                            
+                 
+                
+                <tr>
+                    
+                    
+                      <td valign="top"><table width="306" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td align="left" valign="middle" class="popular_bg">Live Chat - Customer Service</td>
+                        </tr>
+                        <tr>
+                          <td align="center" valign="top" class="popular_bg_gray">
+                          
+                          <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+<div id="SkypeButton_Call_Agoracosmopolite_1">
+  <script type="text/javascript">
+    Skype.ui({
+      "name": "call",
+      "element": "SkypeButton_Call_Agoracosmopolite_1",
+      "participants": ["Agoracosmopolite"],
+      "imageSize": 32
+    });
+  </script>
+                          
+                          </td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                    
+                     <tr>
+                      <td height="10"></td>
+                    </tr>
+                 <tr>
+                <td><a href="http://www.advertorialAgency.com"><img src="http://www.agoracosmopolitan.com/images/canadiancurrent.png" width="308" /></a></td>
+                </tr> 
+                <tr>
+                              <td height="10"></td>
+                            </tr>
+                <tr>
+                <td><a href="http://www.agorapublishing.com"><img src="http://www.agoracosmopolitan.com/images/AgoraPublishing_banner_300X250.jpg" width="308"/></a></td>
+                </tr>      
+                    <tr>
+                    
+                    
+                      <td valign="top"><table width="306" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td align="left" valign="middle" class="popular_bg">Popular on The Canadian</td>
+                        </tr>
+                        <tr>
+                          <td align="center" valign="top" class="popular_bg_gray"><table width="300" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td height="3"></td>
+                            </tr>
+                            <tr>
+                              <td height="27" align="left" valign="middle" class="popular_links"><a href="http://www.agorapublishing.com/">1. Agora Publishing Consortium</a></td>
+                            </tr>
+                           
+                            <tr>
+                              <td height="27" align="left" valign="middle" class="popular_links"><a href="http://www.lejournalcanadien.com/">2. Le Journal Canadien</a></td>
+                            </tr>
+                            
+                           
+                           
+                            <tr>
+                              <td height="27" align="left" valign="middle" class="popular_links"><a href="http://www.dominionfoodie.com/">3. Dominion: Food News</a></td>
+                            </tr>
+                            
+                             <tr>
+                              <td height="27" align="left" valign="middle" class="popular_links"><a href="http://www.TheRebellife.com/">4. The Rebellife Magazine</a></td>
+                            </tr>
+                            
+                             <!--<tr>
+                              <td height="27" align="left" valign="middle" class="popular_links"><a href="http://www.elections-canada.com/">5. The Parliament Newspaper</a></td>
+                            </tr>-->
+                            
+                             <tr>
+                              <td height="27" align="left" valign="middle" class="popular_links"><a href="http://www.LeCanadian.com/">5. LeCanadian.com</a></td>
+                            </tr>
+                            
+                          
+                            <!-- <tr>
+                              <td height="27" align="left" valign="middle" class="popular_links">4. Magasiner: <a href="http://www.myefox.fr">Grossiste en ligne</a></td>
+                            </tr>-->
+                            
+                            <tr>
+                              <td height="10"></td>
+                            </tr>
+                          </table></td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                    
+                                       <tr>
+                      <td height="10"></td>
+                    </tr>
+                     <tr>
+                      <td >
+                      
+                      <table width="306" height="62" bgcolor="#1b1b1b" style="background-image:url(http://www.torontofurnishedrentals.com/images/skyviewsuites-ad.jpg);background-repeat:no-repeat;background-position:center center;border:0px;">
+<tr>
+    <th align="center"><br>
+      <a href="http://www.torontofurnishedrentals.com" style=" color:#FFFFFF; font-weight:bold;"  target="_blank">Furnished Apartments Toronto</a></th>
+</tr>
+</table>
+                      </td>
+                    </tr>
+                    
+                    
+                    
+                                        <tr>
+                      <td height="10"></td>
+                    </tr>
+                    <tr>
+                      <td class="CntntLft" style="width:305px;" >
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%" >
+                        <tbody><tr>
+                          <td align="left" valign="left" height="30" class="popular_bg" >Featured Ads</td>
+                        </tr>
+                        
+                        <tr>
+                          <td valign="top" align="left" class="popular_bg_gray" style="padding-left:5px;">
+                          
+                          
+                          <table width="300" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td height="3"></td>
+                            </tr>
+                            <tr>
+                              <td height="27" align="left" valign="middle" class="popular_links">
+                              
+                              <ul style="margin-left:17px;" id="myList">
+                                                   
+                            <!--  <li > If you are adventurous, get a <a style="color:#0000FF; text-decoration:none " target="_blank" href="http://www.bodydragon.com/">Piercing </a></li>
+                              
+                              <li>Travelling?  Go to a '<a style="color:#0000FF; text-decoration:none " target="_blank" href="http://www.englishretreats.com">Bread and Breakfast</a>'.</li>-->
+                              
+                              <li>U.S. company seeks affordable <a style="color:#0000FF; text-decoration:none " target="_blank"  href=" http://agoracosmopolitan.com/news/business/2012/08/08/4324.html">insurance</a> offerings.</li>
+                              <!--<li>Ready for <a href="http://www.optionsclick.com/" style="color:#0000FF; text-decoration:none " target="_blank">binary options trading</a>? Earn great gains.</li>-->
+                              <li>New Book - <a style="color:#0000FF; text-decoration:none " target="_blank" href="http://www.thebaymanbook.com">Joey's Story</a>: Private financing of elections, a form of prostitution....</li>
+                             
+                                                          
+                             <!--  
+                                  -->
+                               
+                               
+                                </ul>
+                              
+                             </td>
+                            </tr>
+                           
+                           <tr>
+                           <td>
+                            <script type="text/javascript">
+ supreme_clicksor_layer_banner = false;
+ supreme_clicksor_mobile_redirect = false;
+ supreme_clicksor_max_dim = "0x0";
+ //default banner house ad url 
+ supreme_clicksor_default_url = '';
+ supreme_clicksor_banner_border = '#454534'; supreme_clicksor_banner_ad_bg = '#acfebc';
+ supreme_clicksor_banner_link_color = '#898989'; supreme_clicksor_banner_text_color = '#cc7744';
+ supreme_clicksor_banner_text_banner = true; supreme_clicksor_banner_image_banner = true;
+ supreme_clicksor_network_logo = false;
+ supreme_clicksor_post_click_url = '';
+ </script>
+ <script type="text/javascript" src="http://adserving.supreme.clicksor.com/showAd.php?nid=8&amp;pid=14&amp;adtype=7&amp;sid=18"></script>
+ <noscript><a href="http://clicksor.com">behavioral targeting</a></noscript>
+                           </td></tr>
+                           
+                           
+                          
+                         
+                            
+                            
+                            <tr>
+                              <td height="10"></td>
+                            </tr>
+                          </table>
+                          
+                          
+                          </td>
+                        </tr>
+                      </tbody></table>
+                    </td>
+                    </tr>
+                   
+                    <tr>
+                      <td height="10"></td>
+                    </tr> 
+                    
+                    <tr>
+                      <td class="popular_bg" align="left" style="padding-left:2px;">Get paid stipend to write as an independent contractor</td>
+                    </tr>
+                    <tr>
+                      <td class="popular_bg" style="padding-left:0px;"><a href="http://www.agoracosmopolitan.com/user_registration.php"><img src="http://www.agoracosmopolitan.com/images/canadian-money-20.jpg" width="305" style="border:none;"  /></a></td>
+                    </tr> 
+                    <tr>
+                      <td height="10"></td>
+                    </tr> 
+                    <tr>
+                      <td valign="top"><table width="306" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td align="left" valign="middle" class="popular_bg">Leaderboard - Top Writers</td>
+                        </tr>
+                        
+                        <tr>
+                          <td align="center" valign="top" class="popular_bg_gray"><table width="300" border="0" cellspacing="0" cellpadding="0">
+                            
+                           
+                            <tr><td>
+                            
+                            <div class="bd">
+<div class="p">
+   
+                            			<div class="pp even">
+	<div style="margin-left:15px;padding-top:3px;" class="flright tac">
+		<span class="h3">
+        
+        25305					</span>
+		<span class="tac nimp small">points</span>
+	</div>
+	<div style="width:35px;" class="flleft tac imp h3">1</div>
+		<span style="white-space:nowrap; float:left;" ><a  href="http://www.agoracosmopolitan.com/user/tanveer1986" class="userlink">
+        
+        <img border="0" align="absmiddle" class="avatar medium" title="Tanveer Masood" alt="avatar"src="http://www.agoracosmopolitan.com/user-img/ssthumb/tanveer1986.jpg" />        
+        </a>
+<a  href="http://www.agoracosmopolitan.com/user/tanveer1986" class="userlink">Tanveer Masood</a></span>
+</div>
+<div style="clear:both;"></div>
+
+			<div class="pp even">
+	<div style="margin-left:15px;padding-top:3px;" class="flright tac">
+		<span class="h3">
+        
+        11620					</span>
+		<span class="tac nimp small">points</span>
+	</div>
+	<div style="width:35px;" class="flleft tac imp h3">2</div>
+		<span style="white-space:nowrap; float:left;" ><a  href="http://www.agoracosmopolitan.com/user/AMEER" class="userlink">
+        
+        <img border="0" align="absmiddle" class="avatar medium" title="AMEER TARIN" alt="avatar"src="http://www.agoracosmopolitan.com/user-img/ssthumb/AMEER.jpg" />        
+        </a>
+<a  href="http://www.agoracosmopolitan.com/user/AMEER" class="userlink">AMEER TARIN</a></span>
+</div>
+<div style="clear:both;"></div>
+
+			<div class="pp even">
+	<div style="margin-left:15px;padding-top:3px;" class="flright tac">
+		<span class="h3">
+        
+        8295					</span>
+		<span class="tac nimp small">points</span>
+	</div>
+	<div style="width:35px;" class="flleft tac imp h3">3</div>
+		<span style="white-space:nowrap; float:left;" ><a  href="http://www.agoracosmopolitan.com/user/s_shuvro" class="userlink">
+        
+        <img border="0" align="absmiddle" class="avatar medium" title="Subrata Debnath" alt="avatar"src="http://www.agoracosmopolitan.com/user-img/ssthumb/s_shuvro.jpg" />        
+        </a>
+<a  href="http://www.agoracosmopolitan.com/user/s_shuvro" class="userlink">Subrata Debnath</a></span>
+</div>
+<div style="clear:both;"></div>
+
+			<div class="pp even">
+	<div style="margin-left:15px;padding-top:3px;" class="flright tac">
+		<span class="h3">
+        
+        6160					</span>
+		<span class="tac nimp small">points</span>
+	</div>
+	<div style="width:35px;" class="flleft tac imp h3">4</div>
+		<span style="white-space:nowrap; float:left;" ><a  href="http://www.agoracosmopolitan.com/user/isaiasbalthazar" class="userlink">
+        
+        <img border="0" align="absmiddle" class="avatar medium" title="Isaías Balthazar" alt="avatar"src="http://www.agoracosmopolitan.com/user-img/ssthumb/isaiasbalthazar.jpg" />        
+        </a>
+<a  href="http://www.agoracosmopolitan.com/user/isaiasbalthazar" class="userlink">Isaías Balthazar</a></span>
+</div>
+<div style="clear:both;"></div>
+
+			<div class="pp even">
+	<div style="margin-left:15px;padding-top:3px;" class="flright tac">
+		<span class="h3">
+        
+        5845					</span>
+		<span class="tac nimp small">points</span>
+	</div>
+	<div style="width:35px;" class="flleft tac imp h3">5</div>
+		<span style="white-space:nowrap; float:left;" ><a  href="http://www.agoracosmopolitan.com/user/NewsCanada" class="userlink">
+        
+        <img border="0" align="absmiddle" class="avatar medium" title="News Canada" alt="avatar"src="http://www.agoracosmopolitan.com/user-img/ssthumb/NewsCanada.jpg" />        
+        </a>
+<a  href="http://www.agoracosmopolitan.com/user/NewsCanada" class="userlink">News Canada</a></span>
+</div>
+<div style="clear:both;"></div>
+
+			<div class="pp even">
+	<div style="margin-left:15px;padding-top:3px;" class="flright tac">
+		<span class="h3">
+        
+        3640					</span>
+		<span class="tac nimp small">points</span>
+	</div>
+	<div style="width:35px;" class="flleft tac imp h3">6</div>
+		<span style="white-space:nowrap; float:left;" ><a  href="http://www.agoracosmopolitan.com/user/Sadia" class="userlink">
+        
+        <img border="0" align="absmiddle" class="avatar medium" title="Sadia Arshad" alt="avatar"src="http://www.agoracosmopolitan.com/user-img/ssthumb/Sadia.jpg" />        
+        </a>
+<a  href="http://www.agoracosmopolitan.com/user/Sadia" class="userlink">Sadia Arshad</a></span>
+</div>
+<div style="clear:both;"></div>
+
+			<div class="pp even">
+	<div style="margin-left:15px;padding-top:3px;" class="flright tac">
+		<span class="h3">
+        
+        3255					</span>
+		<span class="tac nimp small">points</span>
+	</div>
+	<div style="width:35px;" class="flleft tac imp h3">7</div>
+		<span style="white-space:nowrap; float:left;" ><a  href="http://www.agoracosmopolitan.com/user/momara" class="userlink">
+        
+        <img border="0" align="absmiddle" class="avatar medium" title="Mia Omara" alt="avatar"src="http://www.agoracosmopolitan.com/user-img/ssthumb/momara.jpg" />        
+        </a>
+<a  href="http://www.agoracosmopolitan.com/user/momara" class="userlink">Mia Omara</a></span>
+</div>
+<div style="clear:both;"></div>
+
+			<div class="pp even">
+	<div style="margin-left:15px;padding-top:3px;" class="flright tac">
+		<span class="h3">
+        
+        2380					</span>
+		<span class="tac nimp small">points</span>
+	</div>
+	<div style="width:35px;" class="flleft tac imp h3">8</div>
+		<span style="white-space:nowrap; float:left;" ><a  href="http://www.agoracosmopolitan.com/user/pauline87" class="userlink">
+        
+        <img border="0" align="absmiddle" class="avatar medium" title="pauline rungurua" alt="avatar"src="http://www.agoracosmopolitan.com/user-img/ssthumb/pauline87.jpg" />        
+        </a>
+<a  href="http://www.agoracosmopolitan.com/user/pauline87" class="userlink">pauline rungurua</a></span>
+</div>
+<div style="clear:both;"></div>
+
+			<div class="pp even">
+	<div style="margin-left:15px;padding-top:3px;" class="flright tac">
+		<span class="h3">
+        
+        1715					</span>
+		<span class="tac nimp small">points</span>
+	</div>
+	<div style="width:35px;" class="flleft tac imp h3">9</div>
+		<span style="white-space:nowrap; float:left;" ><a  href="http://www.agoracosmopolitan.com/user/fxadvert" class="userlink">
+        
+        <img border="0" align="absmiddle" class="avatar medium" title="Frank Falco" alt="avatar"src="http://www.agoracosmopolitan.com/user-img/ssthumb/fxadvert.jpg" />        
+        </a>
+<a  href="http://www.agoracosmopolitan.com/user/fxadvert" class="userlink">Frank Falco</a></span>
+</div>
+<div style="clear:both;"></div>
+
+			<div class="pp even">
+	<div style="margin-left:15px;padding-top:3px;" class="flright tac">
+		<span class="h3">
+        
+        1540					</span>
+		<span class="tac nimp small">points</span>
+	</div>
+	<div style="width:35px;" class="flleft tac imp h3">10</div>
+		<span style="white-space:nowrap; float:left;" ><a  href="http://www.agoracosmopolitan.com/user/shamsulislam shamsi" class="userlink">
+        
+        <img border="0" align="absmiddle" class="avatar medium" title="shamsul islam" alt="avatar"src="http://www.agoracosmopolitan.com/user-img/ssthumb/shamsulislam shamsi.jpg" />        
+        </a>
+<a  href="http://www.agoracosmopolitan.com/user/shamsulislam shamsi" class="userlink">shamsul islam</a></span>
+</div>
+<div style="clear:both;"></div>
+
+	</div>
+</div>
+                            </td></tr>
+                             <tr>
+                          <td align="center" valign="middle" bgcolor="#990000" style="color:#FFFFFF"  ><small>Point system : News + 25 -- Images + 10 -- Comment + 5</small></td>
+                        </tr>
+                            <tr>
+                              <td height="10"></td>
+                            </tr>
+                          </table></td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                   
+                    <tr>
+                      <td height="10"></td>
+                    </tr> 
+                    <tr>
+                      <td valign="top" >
+                      <script type="text/javascript">
+ supreme_clicksor_layer_banner = false;
+ supreme_clicksor_mobile_redirect = false;
+ supreme_clicksor_max_dim = "0x0";
+ //default banner house ad url
+ supreme_clicksor_default_url = '';
+ supreme_clicksor_banner_border = '#454534'; supreme_clicksor_banner_ad_bg = '#acfebc';
+ supreme_clicksor_banner_link_color = '#898989'; supreme_clicksor_banner_text_color = '#cc7744';
+ supreme_clicksor_banner_text_banner = true; supreme_clicksor_banner_image_banner = true;
+ supreme_clicksor_network_logo = false;
+ supreme_clicksor_post_click_url = '';
+ </script>
+ <script type="text/javascript" src="http://adserving.supreme.clicksor.com/showAd.php?nid=8&pid=14&adtype=7&sid=18"></script>
+ <noscript><a href="http://clicksor.com%22%3ebehavioral/"> targeting</a></noscript>
+                      </td>
+                    </tr>
+                     <tr>
+                      <td height="10"></td>
+                    </tr>
+                    
+                    <tr>
+                      <td valign="top" >
+                      
+                      <iframe style="vertical-align: middle;" width="300" height="250" src="http://geobanner.friendfinder.com/go/page/iframe_geobanner_300x250?lang=english&ad=01&no_click=1&banner=1&pid=g861-pmem" scrolling="no" frameborder="0"></iframe>
+                      
+                      
+                     </td>
+                    </tr>
+                     <tr>
+                      <td height="10"></td>
+                    </tr>
+                    
+                 <!--    
+                    <tr>
+                      <td valign="top"><table width="306" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td align="left" valign="middle" class="popular_bg">Most Read Writers</td>
+                        </tr>
+                        <tr>
+                          <td align="center" valign="top" class="popular_bg_gray"><table width="300" border="0" cellspacing="0" cellpadding="0">
+                            
+                           
+                            <tr><td>
+                            
+                            <div class="bd">
+<div class="p">
+   
+                           
+
+							
+							
+								</div>
+</div>
+                            </td></tr>
+                            
+                            <tr>
+                              <td height="10"></td>
+                            </tr>
+                          </table></td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                    
+                    
+                    
+                    
+                    <tr>
+                      <td height="10"></td>
+                    </tr>-->
+                    <tr>
+                      <td class="CntntLft" style="width:305px;" >
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%" >
+                        <tbody><tr>
+                          <td align="left" valign="left" height="30" class="popular_bg" >Directory</td>
+                        </tr>
+                        
+                        <tr>
+                          <td valign="top" align="left" class="popular_bg_gray" style="padding-left:5px;">
+                          
+                          
+                          <table width="300" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td height="3"></td>
+                            </tr>
+                            <tr>
+                              <td height="27" align="left" valign="middle" class="popular_links">1.  <a style="color:#0000FF; text-decoration:none " target="_blank" href="http://www.yellowpages.agoracosmopolitan.com
+">Add Business
+ </a></td>
+                            </tr>
+                            
+                            <tr>
+                              <td height="27" align="left" valign="middle" class="popular_links">2.  <a style="color:#0000FF; text-decoration:none " target="_blank" href="http://www.yellowpages.agoracosmopolitan.com
+">Community Events
+ </a></td>
+                            </tr>
+                           
+                            
+                            
+                            <tr>
+                              <td height="10"></td>
+                            </tr>
+                          </table>
+                          
+                          
+                          </td>
+                        </tr>
+                      </tbody></table>
+                    </td>
+                    </tr>
+                   
+                    <tr>
+                      <td height="10"></td>
+                    </tr>
+                    
+                   <!-- <tr>
+                      <td valign="top"><table width="306" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td align="left" valign="middle" class="popular_bg">Live Chat</td>
+                        </tr>
+                        <tr>
+                          <td align="center" valign="top" class="popular_bg_gray">
+                              <iframe src="http://agoracosmopolitan.com/chat/modules/chatrooms/index.php" style="width:300px; height:300px;" frameborder="0"></iframe><br/><img src="http://agoracosmopolitan.com/chat/images/final.gif" alt="LIVE CHAT" />
+
+                          
+                          </td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                    <tr>
+                      <td height="10"></td>
+                    </tr>-->
+                   <!-- 
+                    <tr>
+                      <td valign="top"><table width="306" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td align="left" valign="middle" class="popular_bg">National News</td>
+                        </tr>
+                        <tr>
+                          <td align="center" valign="top" class="popular_bg_gray"><table width="300" border="0" cellspacing="0" cellpadding="0">
+                            
+                           
+                            <tr><td align="left">
+                            
+                            <div class="with-countries">
+
+	
+
+<ul class="article-list">					
+
+<li class="article-list-item"><h3 class="compact"><a href="http://www.cbc.ca/news/canada/ottawa/canada-post-to-phase-out-urban-home-mail-delivery-1.2459618?cmp=rss" target="_blank">Door-to-door delivery coming to an end, Canada Post says</a></h3>
+<div style="font-size:13px;margin-top:-1px;padding-left:8px;background:white ;" class="abstract nimp">
+        
+                                        Canada Post is phasing out door-to-door delivery of regular mail to urban residents and increasing t</div>
+</li>
+
+<li class="article-list-item"><h3 class="compact"><a href="http://www.cbc.ca/news/canada/toronto/rob-ford-won-t-see-conrad-black-endorse-his-re-election-bid-1.2460488?cmp=rss" target="_blank">Conrad Black not eager to endorse Rob Ford's re-election campaign</a></h3>
+<div style="font-size:13px;margin-top:-1px;padding-left:8px;background:white ;" class="abstract nimp">
+        
+                                        Conrad Black appears unlikely to be putting a Rob Ford re-election sign on the lawn of his Toronto h</div>
+</li>
+
+<li class="article-list-item"><h3 class="compact"><a href="http://www.cbc.ca/news/canada/toronto/cough-syrup-marijuana-gain-popularity-among-students-1.2460412?cmp=rss" target="_blank">Cough syrup, marijuana use up in Ontario high schools</a></h3>
+<div style="font-size:13px;margin-top:-1px;padding-left:8px;background:white ;" class="abstract nimp">
+        
+                                        Ontario high school students are drinking alcohol and smoking cigarettes less than ever before, but </div>
+</li>
+
+<li class="article-list-item"><h3 class="compact"><a href="http://www.cbc.ca/news/world/mandela-s-gut-check-for-the-political-right-1.2459082?cmp=rss" target="_blank">Saint or sinner? Mandela's gut-check for the right: Neil Macdonald</a></h3>
+<div style="font-size:13px;margin-top:-1px;padding-left:8px;background:white ;" class="abstract nimp">
+        
+                                        Saint or sinner, statesman or terrorist? For some, especially Reagan-era conservatives, coming to te</div>
+</li>
+
+<li class="article-list-item"><h3 class="compact"><a href="http://www.cbc.ca/news/canada/canada-post-mail-volume-costs-and-other-quick-facts-1.2459693?cmp=rss" target="_blank">Canada Post changes: What you need to know</a></h3>
+<div style="font-size:13px;margin-top:-1px;padding-left:8px;background:white ;" class="abstract nimp">
+        
+                                        The announcement that Canada Post will phase out urban home delivery, raise the price of stamps and </div>
+</li>
+
+<li class="article-list-item"><h3 class="compact"><a href="http://www.cbc.ca/news/canada/british-columbia/turn-down-christmas-music-or-face-500-fine-kelowna-man-told-1.2459249?cmp=rss" target="_blank">Turn down Christmas music or face $500 fine, Kelowna man told</a></h3>
+<div style="font-size:13px;margin-top:-1px;padding-left:8px;background:white ;" class="abstract nimp">
+        
+                                        The City of Kelowna has threatened a resident with a $500 fine if he doesn’t tone down the Christm</div>
+</li>
+
+<li class="article-list-item"><h3 class="compact"><a href="http://www.cbc.ca/news/world/nelson-mandela-ceremony-sign-language-interpreter-a-fake-1.2459469?cmp=rss" target="_blank">Mandela ceremony sign language interpreter was 'signing gibberish'</a></h3>
+<div style="font-size:13px;margin-top:-1px;padding-left:8px;background:white ;" class="abstract nimp">
+        
+                                        As one world leader after another paid homage to Nelson Mandela at a memorial service, the man stand</div>
+</li>
+
+<li class="article-list-item"><h3 class="compact"><a href="http://www.cbc.ca/news/canada/edmonton/edmonton-car-dealer-sold-luxury-suv-to-psychiatric-patient-1.2458393?cmp=rss" target="_blank">Car dealer sold luxury SUV to psychiatric patient</a></h3>
+<div style="font-size:13px;margin-top:-1px;padding-left:8px;background:white ;" class="abstract nimp">
+        
+                                        An Edmonton car dealer acted unethically when it sold a luxury SUV to a psychiatric hospital patient</div>
+</li>
+
+<li class="article-list-item"><h3 class="compact"><a href="http://www.cbc.ca/news/arts/youtube-s-top-video-of-2013-is-what-does-the-fox-say-1.2460227?cmp=rss" target="_blank">'What Does the Fox Say?' is top YouTube video of 2013</a></h3>
+<div style="font-size:13px;margin-top:-1px;padding-left:8px;background:white ;" class="abstract nimp">
+        
+                                        YouTube has unveiled its Top 10 most popular videos of 2013, with 'The Fox (What Does The Fox Say?),</div>
+</li>
+
+<li class="article-list-item"><h3 class="compact"><a href="http://www.cbc.ca/news/canada/manitoba/gay-away-gimmick-candy-at-manitoba-store-offends-parents-1.2460527?cmp=rss" target="_blank">'Gay Away' gimmick candy at Manitoba store offends parents</a></h3>
+<div style="font-size:13px;margin-top:-1px;padding-left:8px;background:white ;" class="abstract nimp">
+        
+                                        A novelty item that claims to "cure gayness" has been removed from a store's shelves in Gimli, Man.,</div>
+</li>
+
+<li class="article-list-item"><h3 class="compact"><a href="http://www.cbc.ca/news/politics/santa-claus-is-canadian-justin-trudeau-says-1.2460445?cmp=rss" target="_blank">'Santa Claus is Canadian,' Justin Trudeau says</a></h3>
+<div style="font-size:13px;margin-top:-1px;padding-left:8px;background:white ;" class="abstract nimp">
+        
+                                        Santa Claus is Canadian, Liberal Leader Justin Trudeau said Wednesday amid a debate over whether the</div>
+</li>
+
+<li class="article-list-item"><h3 class="compact"><a href="http://www.cbc.ca/news/business/facebook-to-join-benchmark-s-p-500-stock-index-1.2460609?cmp=rss" target="_blank">Facebook to join benchmark S&P 500 stock index</a></h3>
+<div style="font-size:13px;margin-top:-1px;padding-left:8px;background:white ;" class="abstract nimp">
+        
+                                        Facebook, shares of which have risen 86 per cent this year, will join the Standard & Poor's 500 stoc</div>
+</li>
+
+<li class="article-list-item"><h3 class="compact"><a href="http://www.cbc.ca/news/canada/nova-scotia/halifax-unity-mosque-suggested-for-gay-transgender-muslims-1.2460407?cmp=rss" target="_blank">Unity mosque suggested for gay, transgender Muslims</a></h3>
+<div style="font-size:13px;margin-top:-1px;padding-left:8px;background:white ;" class="abstract nimp">
+        
+                                        A small group of Muslims in Halifax want to start a unity mosque where openly gay and transgender Mu</div>
+</li>
+
+<li class="article-list-item"><h3 class="compact"><a href="http://www.cbc.ca/news/politics/patrick-brazeau-denied-parliament-hill-press-credentials-1.2459785?cmp=rss" target="_blank">Patrick Brazeau denied press credentials for Frank freelance gig</a></h3>
+<div style="font-size:13px;margin-top:-1px;padding-left:8px;background:white ;" class="abstract nimp">
+        
+                                        Senator Patrick Brazeau may be suspended from the upper chamber but he is still a legislator and the</div>
+</li>
+
+<li class="article-list-item"><h3 class="compact"><a href="http://www.cbc.ca/news/canada/montreal/quebec-doctor-accused-of-botching-circumcisions-1.2459876?cmp=rss" target="_blank">Quebec doctor accused of botching circumcisions</a></h3>
+<div style="font-size:13px;margin-top:-1px;padding-left:8px;background:white ;" class="abstract nimp">
+        
+                                        A Quebec doctor could be prohibited from performing circumcisions after a complaint was filed allegi</div>
+</li>
+						
+	</ul>
+
+
+</div>
+
+                            </td></tr>
+                            
+                            <tr>
+                              <td height="10"></td>
+                            </tr>
+                          </table></td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                    <tr>
+                      <td height="10"></td>
+                    </tr>-->
+                    
+                    
+                   <!-- <tr>
+                      <td align="center" valign="top" class="weather_bg" style="padding-top:15px;">
+                      
+                      		<iframe marginheight="0" marginwidth="0" name="wxButtonFrame" id="wxButtonFrame" height="180" src="http://btn.weather.ca/weatherbuttons/template7.php?placeCode=CAON0696&category0=Cities&placeCode1=CAON0512&category1=Cities&placeCode2=CAMB0244&category2=Cities&placeCode3=CANB0088&category3=Cities&placeCode4=CABC0308&category4=Cities&containerWidth=180&btnNo=&backgroundColor=blue&multipleCity=1&citySearch=1&celsiusF=C" align="top" frameborder="0" width="180" scrolling="no" allowTransparency="true"></iframe>
+	
+                      
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="10"></td>
+                    </tr>-->
+                    
+                   
+                     
+                   
+                   <!-- <tr>
+                      <td align="center" valign="top" class="ftrd_img_bg"><table width="216" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td height="40" align="left" valign="middle" class="prlmntry_hdng">Parliamentary TV Watch LIVE</td>
+                        </tr>
+                        <tr>
+                          <td align="center" valign="top"><a href="http://www.cpac.ca/asx/cpac1eh.asx" target="_blank"><img src="http://www.agoracosmopolitan.com/images/tv_img.jpg" alt="" width="216" height="187" /></a></td>
+                        </tr>
+                        <tr>
+                          <td height="10"></td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                    <tr>
+                      <td height="10"></td>
+                    </tr>-->
+                    <tr>
+                      <td align="left" valign="top"><a href="http://www.adobe.com/software/flash/about/"><img src="http://www.agoracosmopolitan.com/images/flash_img.jpg" alt="" width="238" height="39" /></a></td>
+                    </tr>
+                    <tr>
+                      <td height="13"></td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top"><a href="http://www.agoracosmopolitan.com/contact_us.html"><img src="http://www.agoracosmopolitan.com/images/need_help_bnr.jpg" alt="" width="239" height="99" /></a></td>
+                    </tr>
+                    <tr>
+                      <td height="13"></td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top"><a href="#"><img src="http://www.agoracosmopolitan.com/images/canada_bnr.jpg" alt="" width="237" height="244" /></a></td>
+                    </tr>
+                    
+                  
+                  </table>                </div>
+          	</div>
+            <div class="Footer">
+            	<div class="FtrLft">
+            	  <table width="848" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td><table width="848" border="0" cellspacing="0" cellpadding="0">
+                        <tr><td width="60" height="40" align="left" valign="middle" class="ftr_links"><a href="http://www.agoracosmopolitan.com/about_us.php">About Us</a></td>
+                          <td width="1" align="center" valign="middle" class="ftr_links">|</td>
+                          <td width="82" align="center" valign="middle" class="ftr_links"><a href="http://www.agoracosmopolitan.com/contact_us.php?placeValuesBeforeTB_=savedValues&amp;TB_iframe=false&amp;height=371&amp;width=500&amp;modal=true&amp;" class="thickbox">Contact Us</a></td>
+                          <td width="1" align="center" valign="middle" class="ftr_links">|</td>
+                          <td width="74" align="center" valign="middle" class="ftr_links"><a href="http://www.agoracosmopolitan.com/thickbox.php?placeValuesBeforeTB_=savedValues&amp;TB_iframe=false&amp;height=371&amp;width=500&amp;modal=true&amp;" class="thickbox">Advertise</a></td>
+                          <td width="1" align="center" valign="middle" class="ftr_links">|</td>
+                          <td width="73" align="center" valign="middle" class="ftr_links"><a href="http://www.facebook.com/group.php?gid=19440235777&ref=ts">Facebook</a></td>
+                          <td width="1" align="center" valign="middle" class="ftr_links">|</td>
+                          <td width="88" align="center" valign="middle" class="ftr_links"><a href="http://www.agoracosmopolitan.com/print_edition.html">Print Edition</a></td>
+                          <td width="1" align="center" valign="middle" class="ftr_links">|</td>
+                          <td width="140" align="center" valign="middle" class="ftr_links_ylw"><a href="http://www.members.agoracosmopolitan.com/">Become a Member</a></td>
+                          <td width="306">&nbsp;</td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top" class="ftr_txt">Copyright &copy; 2013 by The Canadian - Agora Cosmopolitan. All Rights Reserved.&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.agoracosmopolitan.com/privacy_policy.php"">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="terms_and_conditions.html">Terms &amp; Conditions</a><br />
+                      Design &amp; Developed by <a href="http://www.AgoraPublishing.com" target="_blank">AgoraPublishing.com.</a></td>
+                    </tr>
+                  </table>
+            	</div>
+                <div class="FtrRgt">
+                  <table width="86" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td colspan="3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td height="18" colspan="3" align="left" valign="top" class="ftr_links_ylw"><strong>Follow Us</strong></td>
+                    </tr>
+                    <tr>
+                      <td width="31" align="left" valign="top"><a href="http://www.facebook.com/group.php?gid=19440235777&ref=ts"><img src="http://www.agoracosmopolitan.com/images/facebook_icon.jpg" alt="" width="25" height="25" /></a></td>
+                      <td width="30" align="left" valign="top"><a href="http://www.twitter.com/TheCanadianTV" target="_blank"><img src="http://www.agoracosmopolitan.com/images/twitter_icon.jpg" alt="" width="24" height="25" /></a></td>
+                      <td align="left" valign="top"><a href="#"><img src="http://www.agoracosmopolitan.com/images/in_icon.jpg" alt="" width="25" height="25" /></a></td>
+                    </tr>
+                  </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://www.agoracosmopolitan.com/js/mouseover.js" type="text/javascript" language="javascript"></script>
+    
+	
+    <script src="http://www.agoracosmopolitan.com/js/ajaxtabs_2.js" type="text/javascript" language="javascript"></script>
+	<script src="http://www.agoracosmopolitan.com/js/tabs_edit_2.js" type="text/javascript" language="javascript"></script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30140381-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+

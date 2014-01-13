@@ -1,0 +1,436 @@
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- // 
+UPDATES: 
+July 29-09 Andree Chenier; removed #evocontent style declarations; formatted dates; replace war_head_ with war_head1_ inlude; removed changeit() script because it's now in the header include; changed <i>, <b> <center> and <font> tags; fixed table widths; added print.css; removed favicon link; changed bgcolor and background images for classes 
+// -->
+<html>
+<head>
+<title>WarMuseum.ca - Canadian Newspapers and the Second World War: The History of World War 2</title>
+
+<meta name="civtheme" content="milihiste worlwar2e">
+
+<meta name="description" content="The Canadian War Museum's World War 2 Online Newspaper Archives - World War 2 History - This free newspaper archives offers wonderful opportunities for research into Second World War topics, including the causes of World War II, major World War Two battles and the role of the Canada in WW2. History 1939, 1940, 1941, 1942, 1943, 1944, 1945 newspapers.">
+<meta name="keywords" content="world war 2, world war II, ww2, second world war, free newspaper archives, battles, Canada, history,">
+<meta name="dc.subject" content="archives; newspapers; World war, 1939-1945; Military; museums; history; " scheme="gccore">
+<meta name="content_owner" content="Canadian Museum of Civilization Corporation - Canadian War Museum">
+<meta name="authors" content="Canadian War Museum">
+<meta name="editors" content="Canadian War Museum">
+<meta name="images" content="Canadian War Museum">
+<meta name="date_of_creation" content="2003-09-01">
+<meta name="date_of_modification" content="2005-01-18">
+<meta name="modified_by" content="Webmaster">
+<meta name="reply-to" content="webmaster@warmuseum.ca">
+<meta name="originator" content="Canadian War Museum">
+<meta name="Publisher" content="Canadian War Museum">
+<meta name="location" content="Canada">
+<meta name="Coverage" content="Worldwide">
+<meta name="rating" content="Safe For Kids">
+<meta name="copyright" content="All contents copyright 2003 Canadian War Museum All rights reserved.">
+<meta name="dc.audience" content="educators" scheme="gcaudience">
+<meta name="dc.audience" content="students" scheme="gcaudience">
+<meta name="dc.audience" content="general public" scheme="gcaudience">
+<meta name="dc.audience" content="researchers" scheme="gcaudience">
+<link rel="start" href="http://www.warmuseum.ca/cwm/exhibitions/newspapers/intro_e.shtml" title="Democracy at War: Canadian Newspapers and the Second World War">
+<link rel="alternate" hreflang="fr" href="intro_f.shtml" title="Introduction à la Deuxième Guerre mondiale">
+
+
+<meta http-equiv="pics-label" content="(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "ICRAonline EN v2.0" l gen true for "http://www.warmuseum.ca/cwm/exhibitions/newspapers/index.shtml" r (nz 1 vz 1 lz 1 oz 1 cz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "http://www.warmuseum.ca/cwm/exhibitions/newspapers/index.shtml" r (n 0 s 0 v 0 l 0))">
+<meta name="ROBOTS" content="INDEX,FOLLOW,NOARCHIVE">
+
+<meta name="Identifier-URL" content="http://www.warmuseum.ca/cwm/newspapers/">
+
+<meta http-equiv="content-language" content="en">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/javascript">
+<!-- script related to navigation bar
+
+
+
+function sendSearch(var1)
+{
+if(!var1)
+	document.location = "http://recherche.civilization.ca/search?q="+document.forms[0].textfield.value+"&site=default_collection&output=xml_no_dtd&sort=date%3AD%3AL%3Ad1&lr=lang_en&ie=latin1&oe=latin1&client=eng_frontend&proxystylesheet=eng_frontend"
+else	//advanced search (mode=adv)
+	document.location = "http://recherche.civilization.ca/search?q="+document.forms[0].textfield.value+"&sort=date%3AD%3AL%3Ad1&output=xml_no_dtd&site=default_collection&lr=lang_en&ie=latin1&oe=latin1&client=eng_frontend&proxystylesheet=eng_frontend&proxycustom=<ADVANCED/>&mode=adv"+document.forms[0].textfield.value+"&mode="+var1;
+}
+
+function goMenu(selected) {
+var URL = document.forms[0].navlist.options[selected].value;
+window.open (URL, "_self");
+}
+
+function tooltip(URL) {
+eval("page" + " = window.open(URL, '" + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=610,height=190');");
+}
+		
+//-->
+</script>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="/cmc/exhibitions/print.css" media="print">
+<link rel="stylesheet" href="/cmcprojets/css/cwmdate.css" type="text/css">
+<link rel="stylesheet" type="text/css" media="all" href="http://www.civilization.ca/wp-content/themes/war-microsite/evolutra.css" />
+<script type="text/javascript" src="http://www.civilization.ca/nouvelle-france/wp-content/themes/microsite/js/jquery.js"></script>
+<script type="text/javascript" src="http://www.civilization.ca/nouvelle-france/wp-content/themes/microsite/js/functions.js"></script>
+<link rel="stylesheet" type="text/css" href="/cmcprojets/css/cwmdate.css" />
+<script type="text/javascript">var langcpart = "intro_f.shtml";</script>
+<script type="text/javascript" src="/cmc/exhibitions/langchange.js"></script>
+</head>
+<body topmargin="0" marginwidth="0" leftmargin="0" bgcolor="#FFFFFF" marginheight="0">
+<script language="JavaScript" type="text/JavaScript"> 
+<!--
+function ChangeURL()
+{
+var str=parent.window.location.href;
+var newurl=str.replace("f.shtml","e.shtml");
+window.open (newurl, "_parent");
+}
+// -->
+</script>
+
+
+<script type="text/JavaScript"> 
+function changeit() {
+	var mainname = String(document.URL);
+	// Get Base Name
+	var dot = mainname.lastIndexOf(".");
+	var slash = mainname.lastIndexOf("/");
+	var path = mainname.substring(0,slash+1);
+	var name = mainname.substring(slash+1,dot);
+	
+	//check if last characters are 'eng' or 'e'
+	var langiseng = (mainname.substring(dot-3,dot) == "eng");
+	var langise = (mainname.substring(dot-1,dot) == "e");
+ 
+	//get file extension
+	var ext = String(document.URL);
+	ext = (ext.substring(dot,dot+6));	
+  
+	//if last 3 characters before dot are 'eng', then remove them and replace them with 'fra' and proper extension
+	if (langiseng == true) {
+		name = name.substring(0,name.length-3);
+		if (ext == ".html"){window.open (name + "fra.html", "_self");}
+			if (ext == ".shtml"){window.open (name + "fra.shtml", "_self");}
+				if (ext == ".asp"){window.open (name + "fra.asp", "_self");}
+					if (ext == ".aspx"){window.open (name + "fra.aspx", "_self");}
+	}
+ 
+	//if the last character before dot is 'e', then remove it and replace it with 'f' and proper extension	
+	else if (langise == true) {
+		name = name.substring(0,name.length-1);
+		if (ext == ".html"){window.open (name + "f.html", "_self");}
+			if (ext == ".shtml"){window.open (name + "f.shtml", "_self");}
+				if (ext == ".asp"){window.open (name + "f.asp", "_self");}
+					if (ext == ".aspx"){window.open (name + "f.aspx", "_self");}
+	}
+}
+//-->
+</script>
+
+<div id="wpheader" style="margin-left:auto; margin-right:auto">
+  <div class="bg-left"></div>
+  <div class="bg-center">
+                <a href="http://www.warmuseum.ca/home">
+                    <span class="war_logo"></span>
+                </a>
+				<div class="search-form">
+				    <div class="menu-text">
+                    <div id="menu-top" class="menu-microsite-top-container"><ul id="menu-microsite-top">
+<li id="menu-item-169" class="sidearrow menu-item menu-item-type-custom menu-item-169"><a href="http://www.warmuseum.ca/exhibitions">Back to Exhibitions</a></li>
+</ul></div>
+				    </div>
+				   <div class="submit-btt">
+        <div class="wpcenter">
+          <div class="wpleft">
+            <div class="wpright">
+                 <button type="submit" id="searchsubmit" onclick="changeit()"> FRAN&Ccedil;AIS </button>
+            </div>
+          </div>
+        </div>
+      </div>
+				</div>
+			</div>
+  <div class="bg-right"></div>
+  <div style="clear:both"></div>
+</div>
+<div id="evo-content" align="center">
+<div align="left" style="width:956px;">
+<div id="middle_wrapper">
+<div id="evocontent">
+
+<!-- navigation bar begins ***************** -->
+<!-- navigation ENDS (CR) ****************** -->
+
+<table width="952" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top"> 
+<td valign="bottom" colspan="2"> 
+<div align="right"><a href="glossary_e.shtml" title="Glossary of World War 2 Terms" class="topnav">Glossary</a> 
+&nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://collections.civilisations.ca/warclip/pages/warclip/AdvQueryE.php?lang=0" title="Free Newspaper Archives Detailed Search" class="topnav">Detailed Search</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="aboutarchives_e.shtml" title="About Democracy at War" class="topnav">About 
+<em>Democracy at War</em></a> &nbsp;&nbsp;<!-- | &nbsp;&nbsp;<A HREF="disclaimer_e.shtml" CLASS="topnav">Disclaimer</A> 
+&nbsp;&nbsp;| &nbsp;&nbsp;<A HREF="help_e.shtml" CLASS="topnav">Help</A>-->&nbsp;&nbsp;</div>
+</td>
+</tr>
+<tr valign="top"> 
+<td valign="bottom"><img width="189" alt="Democracy at War:" src="images/commn/title_cont_e.gif" height="32"></td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top"> 
+<td colspan="2"><img width="433" alt="Canadian Newspapers and the Second World War" src="images/commn/title2_cont_e.gif" height="21"></td>
+</tr>
+</table>
+<!-- #EndLibraryItem --><table width="952" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+<td><img width="19" alt="Causes of World War 2" src="images/commn/tb_on-l_intro.gif" height="30"></td>
+<td><a href="intro_e.shtml" title="Introduction to World War 2 History"><img width="69" alt="WW2 History - Introduction" src="images/commn/nav_intro_on_e.gif" height="30" border="0"></a></td>
+<td><img width="24" alt="Causes of World War two" src="images/commn/tb_on_l.gif" height="30"></td>
+<td><a href="canadawar/canadawar_e.shtml" title="Canada and World War 2"><img width="57" alt="Canada and the War" src="images/commn/nav_canadawar_e.gif" height="30" border="0"></a></td>
+<td><img width="24" alt="major battles" src="images/commn/tb_off.gif" height="30"></td>
+<td><a href="operations/operations_e.shtml" title="Major World War 2 Battles and Military Operations"><img width="58" alt="Major WW2 Battles and Military Operations" src="images/commn/nav_operations_e.gif" height="30" border="0"></a></td>
+<td><img width="24" alt="great battles" src="images/commn/tb_off.gif" height="30"></td>
+<td><a href="holocaust/holocaust_e.shtml" title="Newspaper articles on the holocaust"><img width="57" alt="The Holocaust" src="images/commn/nav_holocaust_e.gif" height="30" border="0"></a></td>
+<td width="100%" class="tbtop"><img width="19" alt="holocaust history and archives" src="images/commn/tb_end.gif" height="30"></td>
+</tr>
+<tr valign="top" class="tabbg"> 
+<td><img width="1" alt="1939" src="images/commn/spacer.gif" height="8"></td>
+<td><img width="69" alt="national archives" src="images/commn/nav_intro_bt_e.gif" height="3"></td>
+<td><img width="1" alt="1940" src="images/commn/spacer.gif" height="8"></td>
+<td><img width="1" alt="1941" src="images/commn/spacer.gif" height="8"></td>
+<td><img width="1" alt="1942" src="images/commn/spacer.gif" height="8"></td>
+<td><img width="1" alt="1943" src="images/commn/spacer.gif" height="8"></td>
+<td><img width="1" alt="1944" src="images/commn/spacer.gif" height="8"></td>
+<td><img width="1" alt="1945" src="images/commn/spacer.gif" height="8"></td>
+<td><img width="1" alt="war archives" src="images/commn/spacer.gif" height="8"></td>
+</tr>
+</table> 
+<table width="952" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+<td valign="top" class="leftnavbg"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+<td valign="top" colspan="2"><img width="1" src="images/spacer.gif" height="5"></td>
+</tr>
+<tr> 
+<td valign="top" class="dash">&nbsp;&nbsp;-</td>
+<td valign="top"><a href="information_e.shtml" title="Information, Propaganda, Censorship and Newspapers during WW2" class="white">Information, Propaganda, Censorship and Newspapers</a><br>
+</td>
+</tr>
+<tr> 
+<td valign="top" class="dash">&nbsp;&nbsp;-</td>
+<td valign="top"><a href="hamilton_e.shtml" title="The Hamilton Spectator and Its Archive" class="white">The Hamilton Spectator and Its Archive</a><br><br>
+</td>
+</tr>
+
+<tr> 
+<td valign="top" class="dash">&nbsp;&nbsp;-</td>
+<td valign="top"><a href="language-e.shtml" title="Language Advisory" class="white">Language Advisory</a><br><br>
+</td>
+</tr>
+
+<tr> 
+<td>&nbsp;</td>
+<td><img width="128" alt="Search the Free Newspaper Archives" src="images/srch_intro.gif" height="34">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr> 
+<td>&nbsp;</td>
+<td valign="top" class="white"> 
+<form name="search" action="http://collections.civilisations.ca/warclip/pages/warclip/ResultsList.php" method="post">
+<input value="WarclipCustomQueryForm" name="QueryName" type="hidden">
+<input value="" name="QueryPage" type="hidden">
+<input value="WarclipCounter" name="WarclipCounter" type="hidden">
+<input value="WarclipRelevanceRanking" name="RelevanceRanking" type="hidden">
+<input value="" name="Restriction" type="hidden">
+<input value="1" name="StartAt" type="hidden">
+<input value="0" name="lang" type="hidden">
+  
+  <table border="0" cellspacing="3">
+  <!--<tbody>-->
+  <input value="AdmWebMetadata" name="any" type="hidden">
+  <input value="WarSubjectMetaData" name="subject" type="hidden">
+  <input value="WarHeadline" name="headline" type="hidden">
+  <input value="ObjTitle" name="title" type="hidden">
+  <input value="" name="AllWords" class="WebInput" type="hidden">
+  <input value="" name="AnyWords" class="WebInput" type="hidden">
+  <input value="" name="Phrase" class="WebInput" type="hidden">
+  <tr>
+  <td align="left" class="white">Search for :<br>
+  <input value="" name="SearchWord" size="14" class="WebInput" type="text"></td>
+  </td>
+  </tr>
+  <tr>
+  <td align="left" class="white">Find :<br> 
+  <select name="QueryWord">
+  <option value="all">All of the words</option>
+  <option value="any">Any of the words</option>
+  <option value="exact">The exact phrase</option>
+  </select>
+
+  <br> Appearing :<br> 
+
+  <select name="QueryOption">
+  <option value="any">Anywhere</option>
+  <option value="headline">In the Headline</option>
+  <option value="subject">In the Subject</option>
+  <option value="title">In the Category</option>
+  </select>
+
+</td>
+</tr>
+<tr>
+<td><input alt="Search" src="images/btn_srch_intro.gif" value="SEARCH" name="image" border="0" class="WEBINPUT" type="IMAGE">
+</td>
+</tr>
+<tr>
+<td><a href="http://collections.civilisations.ca/warclip/pages/warclip/AdvQueryE.php?lang=0" class="white" title="Search the Free Newspaper Archives">Detailed Search</a></td>             
+</tr>
+<!--</tbody>-->
+      
+</table>
+</form>
+</td>
+</tr>
+</table>
+</td>
+<td class="tabbg"><img width="5" src="images/commn/spacer.gif" height="1"></td>
+<td width="100%" valign="top"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+<td valign="top" class="paprl" rowspan="2"><img width="28" alt="Free Newspaper Archives" src="images/commn/papr_tp-l.gif" height="43"></td>
+<td width="100%" valign="top" class="paprtp"><img width="1" src="images/commn/spacer.gif" height="21"></td>
+<td valign="top" class="paprrbg" rowspan="2">
+<div align="left"><img width="17" alt="Free Old Newspaper Archives" src="images/commn/papr_tp-r.gif" height="43"><br>
+<img width="17" alt="Free Newspaper Archives and the History of World War 2" src="images/photo_intro2.gif" height="354" hspace="0"></div>
+</td>
+</tr>
+<tr> 
+<td valign="top" class="contentbgcolor"><img width="186" alt="WW2 pictures and Free Newspaper articles" align="right" src="images/photo_intro1.gif" height="376" hspace="0"><img width="91" alt="WW2 History - Introduction" src="images/hdr_intro.gif" height="23">
+<p>During the <strong>Second World War</strong>, the staff of the century-old <strong>Hamilton
+Spectator newspaper</strong> kept its own monumental record of the war. This
+collection of more than <strong>144,000 newspaper articles</strong>, manually clipped,
+stamped with the date, and arranged by subject, includes news stories and
+editorials from newspapers, mostly Canadian, documenting every aspect of
+the war. You are invited to explore the online database using either the <strong>Basic
+search</strong> or the
+<a href="http://collections.civilisations.ca/warclip/pages/warclip/AdvQueryE.php?lang=0" class="seealso">detailed
+search</a>, which includes a date searching feature.
+Short historical articles on key topics from the 1939-1945 time period, along with sample
+clippings from the collection, supplement this impressive resource of news
+information "as it happened". A <a href="glossary_e.shtml">glossary</a> of
+terms, highlighted in red throughout the historical articles, provides definitions
+for technical terms and abbreviations.</p>
+
+<h1>The Second World War</h1>
+<p>Fought on every continent except Antarctica, in all the oceans, 
+and through the vast distances of the world's airspace, the Second 
+World War was the most significant person-made event in human history. 
+It shattered millions of lives and shaped the world for decades 
+to come. Its effects are felt still.</p>
+<p>An estimated fifty million people, both combatants and civilians, 
+died in battle or by execution, disease or starvation. The young 
+did most of the fighting. Those who survived often carried with 
+them disabilities, wounds and emotional illness, and their lives 
+were frequently shorter and always distorted by what they had experienced. 
+The war also caused irreparable damage to the natural environment 
+and to the world's collective cultural heritage.</p>
+<p>The detonation of two atomic bombs in Japan at war's end brought 
+a glimpse of the terror of nuclear war. The world would have to 
+live with weapons that had the potential to kill millions in moments 
+and indeed to kill the whole human race. That prospect was increased 
+when a Cold War rose out of the Second World War, and pitted the 
+Communist Soviet Union, suspicious of the West and intent on protecting 
+itself from further attacks on its soil, against democratic capitalist 
+countries such as the United States and Canada.</p>
+<p>The Second World War led to technological innovations such as synthetic rubber, 
+the computer, affordable trans-Atlantic aviation, plastics and synthetic 
+fibres, radar and the jeep. Memories of the Depression of the 1930s 
+and the war which was in many ways its child were an impetus to 
+the building of social welfare states in Canada, Britain and elsewhere 
+after 1945. The United Nations was a further attempt to turn the 
+war in the direction of constructive change, an imperfect but deliberate 
+effort to construct a system of international co-operation where 
+possible and a method of deterrence when peace failed.</p>
+
+<p><strong>Related Newspaper Articles</strong></p>
+<ul>
+<li><a href="http://collections.civilisations.ca/warclip/objects/common/webmedia.php?irn=5037769">Proclamation of War</a><br>
+The Globe and Mail, 11/09/1939<br>
+&nbsp; </li><br>
+<li><a href="http://collections.civilisations.ca/warclip/objects/common/webmedia.php?irn=5014817">A Chronology of the War in Europe: 100 Outstanding Dates</a><br>
+The New York Times, 06/05/1945<br>
+&nbsp; </li><br>
+<li><a href="http://collections.civilisations.ca/warclip/objects/common/webmedia.php?irn=5111183">The War Reviewed</a><br>
+The Toronto Daily Star, 07/05/1945<br>
+&nbsp; </li><br>
+<li><a href="http://collections.civilisations.ca/warclip/objects/common/webmedia.php?irn=5014812">The Long Road to Victory : A Historical Narrative and a Chronological Register of the Events of the War in Europe and Africa, 1939-1945</a><br>
+The Times (London), 08/05/1945<br>
+&nbsp; </li><br>
+</ul>
+</td>
+</tr>
+</table>
+</td>
+<td class="tabbg"><img width="6" alt="causes" src="images/commn/spacer.gif" height="1"></td>
+</tr>
+</table> 
+<table width="952" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+<td colspan="3" class="hrbg"><img width="1" alt="War Archives" src="images/commn/spacer.gif" height="1"></td>
+</tr>
+<tr> 
+<td colspan="3"> 
+<div align="center" class="bottomnav"><a href="intro_e.shtml" title="Introduction to World War 2 History" class="footer1">Introduction</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="canadawar/canadawar_e.shtml" title="Canada and World War 2" class="footer1">Canada 
+&amp; the War</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="operations/operations_e.shtml" title="World War 2 Battles and Military Operations" class="footer1">Operations</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="holocaust/holocaust_e.shtml" title="The Holocaust" class="footer1">The 
+Holocaust</a><br>
+<a href="glossary_e.shtml" title="Glossary of World War 2 Terms" class="footer2">Glossary</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://collections.civilisations.ca/warclip/pages/warclip/AdvQueryE.php?lang=0" title="Free Newspaper Archives Detailed Search" class="footer2">Detailed Search</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="aboutarchives_e.shtml" title="About Democracy at War" class="footer2">About 
+<em>Democracy at War</em></a> <!-- &nbsp;&nbsp;&nbsp;&nbsp;<A HREF="disclaimer_e.shtml" CLASS="footer2">Disclaimer</A> 
+&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="help_e.shtml" CLASS="footer2">Help</A> --> </div>
+</td>
+</tr>
+</table>
+<!-- administrative information ends ************************** -->
+<!-- #EndLibraryItem -->
+
+<div class="cwmdate">&nbsp;&nbsp;&nbsp; Date created: September 19, 2003 | Last updated: February 19, 2010</div>
+
+</div>
+</div>
+</div>
+</div>
+<div id="wpfooter">
+  <div class="bg-center">
+    <div class="icons">
+                <a
+href="http://twitter.com/CanWarMuseum" title="Follow us on Twitter" rel="_blank" class="twitter-btn"></a> <a
+href="http://www.facebook.com/warmuseum" title="Join us on Facebook" rel="_blank" class="facebook-btn"></a>  <a
+href="http://www.warmuseum.ca/plan-your-visit/explore-the-museum/mobile-application/" class="mobile-btn"></a>
+                </div>
+    <div class="box-right">
+                       <button onclick="window.location.href='https://form.civilisations.ca/support/donate.aspx?lang=e&amp;museum=cwm'" class="button">Give Now</button>
+                    <div id="footertext"></div>
+                </div>
+  </div>
+  <div class="bg-left"></div>
+  <div class="bg-right"></div>
+  <div align="center"><div class="box-bottom" style="margin:0 auto 0 auto"> <span>&copy; Canadian Museum of Civilization Corporation</span>
+    <div id="footercanada"></div>
+  </div></div>
+</div>
+<script type="text/javascript"> 
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17781445-1']);
+  _gaq.push(['_gat._anonymizeIp']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
+
+</body>
+</html>
+

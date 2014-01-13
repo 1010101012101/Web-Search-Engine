@@ -1,0 +1,1111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>English Online International Newspapers</title>
+<meta name="keywords" content="foreign newspapers English online newspapers middle east newspapers English">
+<meta name="description" content="A list of English-edition online newspapers from around the world.">
+	
+	<!-- Styles.inc - this file sets the styles and the first part of the 
+     javascript for the website. See the second part of the javascript 
+     in the file footer.inc -->
+
+
+	<style type="text/css"> <!--
+		.title { font-family:arial,helvetica,sans-serif; font-size:24; font-weight:bold; color:#3366ff;  }
+		.norm { font-family:arial,helvetica,sans-serif; font-size:13; }
+		.head { font-family:arial,helvetica,sans-serif; font-size:18; font-color:#0000ff; }
+		.subhead { font-family:arial,helvetica,sans-serif; font-size:14; color:#0000ff; }
+		.foot { font-family:arial,helvetica,sans-serif; font-size:11; font-style:italic; font-color:#333333; }
+ #helpNavMenu  		{ top : 262; left : 11;	 position : absolute; width : 155; }
+ .helpNavSubMenu    { top : 330; left : 145; position : absolute; visibility : hidden; width : 250; }
+#helpNavMenuCallout { top : 452; left : 60;  position : absolute; visibility : hidden; }
+#topnavMenuCallout1 { top : 50;  left : 5;   position : absolute; visibility : hidden; z-index: 500; }
+.topnavSubMenu 		{ top : 69; left : 450;  position : absolute; visibility : hidden; width : 250; }  
+#topnavMenuCallout2 { top : 50;  left : 110; position : absolute; visibility : hidden; z-index: 500; }
+.topnavSubMenu2 	{ top : 69; left : 450; position : absolute; visibility : hidden; width : 250; }  
+#topnavMenuCallout3 { top : 50;  left : 90;  position : absolute; visibility : hidden; z-index: 500; }
+.topnavSubMenu3		{ top : 69; left : 450; position : absolute; visibility : hidden; width : 250;  }  
+	--></style>
+<SCRIPT LANGUAGE=javascript>
+<!--
+
+var previousCSSObject1;
+var previousCSSObject2;
+var timer1;
+var timer2;
+
+function showNavMenu(CSSObject1, CSSObject2) {
+//This function unhides hidden stylesheet objects
+	//account for inconsistencies between browsers
+	if(document.layers) { //test for Netscape
+		if ((document.layers[CSSObject1]==null) || (document.layers[CSSObject2]==null)) {
+			return false;
+		}
+		currentCSSObject1 = document.layers[CSSObject1];
+		currentCSSObject2 = document.layers[CSSObject2];
+		visible = "show"
+		hidden = "hide"
+	} else if (document.all) { //test For Internet Exporer
+		if ((document.all(CSSObject1)==null) || (document.all(CSSObject2)==null)) {
+			return false;
+		}
+		currentCSSObject1 =  document.all(CSSObject1).style;
+		currentCSSObject2 =  document.all(CSSObject2).style;
+		visible = "visible"
+		hidden = "hidden"
+	}
+	
+	//Hide previous sub menu
+	if(previousCSSObject1) {
+			//in the case the previous link is the current link make sure the the timer	is stopped
+			window.clearTimeout(timer1);
+			window.clearTimeout(timer2);
+			//hide the objects the make up the previous sub menu 
+			previousCSSObject1.visibility = hidden;
+			previousCSSObject2.visibility = hidden;
+	}
+	
+	//Show the current sub menu
+	currentCSSObject1.visibility = visible;
+	currentCSSObject2.visibility = visible;
+
+	previousCSSObject1 = currentCSSObject1;
+	previousCSSObject2 = currentCSSObject2;
+    return false;
+}
+function delayHide(CSSObject1, CSSObject2) {
+//This function sets a delay before hidePopUp() is called
+	currentObject1 = CSSObject1;
+	currentObject2 = CSSObject2;
+	timer1 = window.setTimeout("hidePopUp(currentObject1)",500);
+	timer2 = window.setTimeout("hidePopUp(currentObject2)",500);
+}
+function showDescription(CSSObject) {
+//This function hides the Nav menus
+	if(document.layers) {	//test for Netscape
+		if (document.layers[CSSObject]==null) {return false;}	
+		document.layers[CSSObject].visibility = "show";
+	} else if (document.all) {  //test For Internet Exporer  
+		//if (document.all(CSSObject)=="undefined") {
+		if (document.all(CSSObject)==null) {
+			return false;
+		}
+		document.all(CSSObject).style.visibility = "visible";	
+	}
+	return false;
+}
+
+function hidePopUp(CSSObject) {
+//This function hides the Nav menus
+	if(document.layers) {	//test for Netscape
+		if (document.layers[CSSObject]==null) {return false;}	
+		document.layers[CSSObject].visibility = "hide";
+	} else if (document.all) {  //test For Internet Exporer  
+		if (document.all(CSSObject)==null) {
+			return false;
+		}
+		document.all(CSSObject).style.visibility = "hidden";	
+	}
+	return false;
+}
+function alertContent() {
+	alert("Content to come");
+}
+
+
+	// to fix bug with NS4.0X and the onresize event handler
+if (document.layers){
+	origWidth=innerWidth;
+	origHeight=innerHeight;
+	onresize=function(){
+		if (innerWidth!=origWidth||innerHeight!=origHeight) location.reload()
+	}
+}
+//-->
+</SCRIPT> 
+
+</head>
+<body>
+	<!-- Menu.inc - this file sets the menu/header for the website and also sets the left and right margin-->
+
+<table border="0" cellpadding="0" cellspacing="0" width="781" height="104">
+<tr valign="top">
+	<td colspan="4"><img src="http://www.inkdrop.net/syspics/row1.jpg" border="0" width="781" height="32" alt=""></td>
+</tr>
+<tr valign="top">
+	<td><img src="http://www.inkdrop.net/syspics/row2.jpg" border="0" width="444" height="22" alt=""></td>
+	<td><a href="http://www.inkdrop.net/dave/index.html" onmouseover="return showNavMenu('subMenu4', 'topnavMenuCallout1')" 
+	onmouseout="return delayHide('subMenu4', 'topnavMenuCallout1')">
+	<img src="http://www.inkdrop.net/syspics/row2-dave.jpg" border="0" width="85" height="22" alt=""></a></td>
+	
+	<td><a href="http://www.inkdrop.net/kathleen/index.html" onmouseover="return showNavMenu('subMenu5', 'topnavMenuCallout2')" 
+	onmouseout="return delayHide('subMenu5', 'topnavMenuCallout2')">
+	<img src="http://www.inkdrop.net/syspics/row2-kathleen.jpg" border="0" width="107" height="22" alt=""></a></td>
+	
+	<td><a href="http://www.inkdrop.net/index.htm" alt="Return to inkdrop.net"><img src="http://www.inkdrop.net/syspics/row2-inkdrop.jpg" border="0" width="145" height="22" alt=""></a></td>
+</tr>
+<tr>
+	<td><img src="http://www.inkdrop.net/syspics/row3.jpg" border="0" width="444" height="50" alt=""></td>
+	<td colspan="3"><img src="http://www.inkdrop.net/syspics/row3b.jpg" border="0" width="337" height="50" alt=""></td>
+</tr>
+</table>
+<!-- This following table is to force a left and right margin while leaving the middle area for content at a 
+     dynamic width that will resize as the the window size is adjusted -->
+<table border="0">
+<tr><td width="60"></td><td>
+
+	
+	<!-- BEGIN CONTENT -->
+<p align="right" class="title">English Online International Newspapers</p>
+<p class="norm">
+For a change from the same old news stories from the same old
+news networks, here are links to English-edition online newspapers from 
+other parts of the world.
+Nearly all of these are English-edition daily newspapers, with an
+emphasis on the Middle East and Asia. These sites have interesting 
+editorials and essays, and many have links to other good news sources.
+We try to limit this list to those sites which are regularly
+updated, reliable, with a high percentage of "up" time.
+Click on "contact" below to report broken links, or to suggest other
+sources.
+<p class="norm">
+We test these links every day, and report the results as follows:
+<p class="norm">
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="1.gif"> extremely reliable in the past ten days
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="3.gif"> sometimes up
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="5.gif"> mostly down during the past ten days
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="q.gif"> unchecked for various reasons
+</p>
+
+This page was generated on Wednesday December 11, 2013.
+</p>
+
+<!-- <b>If no newspapers appear below, please try again later. We
+apologize for the technical difficulties.</b> -->
+
+	      <TABLE cellPadding=0 width=620 border=0>
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE class=norm cellSpacing=0 cellPadding=3 border=0>
+              <TBODY>
+            <TR bgColor=#cccff>
+                <TD>Afghanistan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.myafghan.com/"
+                  target=ww1>www.myafghan.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Afghanistan (WN):</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.afghandaily.com/"
+                  target=ww2>www.afghandaily.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Afghanistan (WN):</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.kabuldaily.com/"
+                  target=ww3>www.kabuldaily.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Afghanistan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.aopnews.com/today.html"
+                  target=ww4>www.aopnews.com/today.html</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Africa portal:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://allafrica.com/"
+                  target=al5>allafrica.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Africa (twice weekly):</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.africafocus.org/"
+                  target=ww6>www.africafocus.org/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Africa:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.newsfromafrica.org/"
+                  target=ww7>www.newsfromafrica.org/</A><BR></TD></TR>
+            <TR>
+                <TD>Africa:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.africa-investor.com/"
+                  target=ww8>www.africa-investor.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Armenia:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://hyemedia.com/"
+                  target=hy9>hyemedia.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Asia:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.channelnewsasia.com/"
+                  target=ww10>www.channelnewsasia.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Asia:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.atimes.com/"
+                  target=ww11>www.atimes.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Asia - UN IRIN News:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.irinnews.org/"
+                  target=ww12>www.irinnews.org/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Asia & CIS:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.newscentralasia.com/"
+                  target=ww13>www.newscentralasia.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Australia:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.smh.com.au/news/"
+                  target=ww14>www.smh.com.au/news/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Australia:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.abc.net.au/"
+                  target=ww15>www.abc.net.au/</A><BR></TD></TR>
+            <TR>
+                <TD>Australia:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.heraldsun.com.au/"
+                  target=ww16>www.heraldsun.com.au/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Azerbaijan (Updated Link):</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.azernews.az/"
+                  target=ww17>www.azernews.az/</A><BR></TD></TR>
+            <TR>
+                <TD>Azerbaijan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.today.az/"
+                  target=ww18>www.today.az/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Bahrain:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.gulf-daily-news.com/home.asp"
+                  target=ww19>www.gulf-daily-news.com/home.asp</A><BR></TD></TR>
+            <TR>
+                <TD>Chile:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.ilovechile.cl/"
+                  target=ww20>www.ilovechile.cl/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>China:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://english.peopledaily.com.cn/home.html"
+                  target=en21>english.peopledaily.com.cn/home.html</A><BR></TD></TR>
+            <TR>
+                <TD>China:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.xinhuanet.com/english/"
+                  target=ww22>www.xinhuanet.com/english/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>China:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.chinadaily.com.cn/"
+                  target=ww23>www.chinadaily.com.cn/</A><BR></TD></TR>
+            <TR>
+                <TD>China:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.globaltimes.cn/"
+                  target=ww24>www.globaltimes.cn/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>China:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://english.cntv.cn/"
+                  target=en25>english.cntv.cn/</A><BR></TD></TR>
+            <TR>
+                <TD>China:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://english.cri.cn/"
+                  target=en26>english.cri.cn/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>China:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://english.eastday.com/"
+                  target=en27>english.eastday.com/</A><BR></TD></TR>
+            <TR>
+                <TD>China:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.bjreview.com.cn/"
+                  target=ww28>www.bjreview.com.cn/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>China:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://english.people.com.cn/"
+                  target=en29>english.people.com.cn/</A><BR></TD></TR>
+            <TR>
+                <TD>China:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://english.cpc.people.com.cn/"
+                  target=en30>english.cpc.people.com.cn/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Croatia:</TD>
+                <TD width=20><IMG SRC="q.gif" WIDTH=14 HEIGHT=14 ALT="not able to test"></TD>
+                <TD><A href="http://www.dubrovacki.hr/pregled/the-dubrovnik-times"
+                  target=ww31>www.dubrovacki.hr/pregled/the-dubrovnik-times</A><BR></TD></TR>
+            <TR>
+                <TD>Czech (weekly):</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.praguepost.cz/"
+                  target=ww32>www.praguepost.cz/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Egypt (Updated Link):</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.aawsat.net/"
+                  target=ww33>www.aawsat.net/</A><BR></TD></TR>
+            <TR>
+                <TD>Europe and CIS:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.eurasianet.org/"
+                  target=ww34>www.eurasianet.org/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Europe - Radio Free Europe:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.rferl.org/"
+                  target=ww35>www.rferl.org/</A><BR></TD></TR>
+            <TR>
+                <TD>Finland (New Listing!):</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.finlandtimes.fi/"
+                  target=ww36>www.finlandtimes.fi/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>France:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.france24.com/en/france/"
+                  target=ww37>www.france24.com/en/france/</A><BR></TD></TR>
+            <TR>
+                <TD>Germany:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://dw-world.de/english/"
+                  target=dw38>dw-world.de/english/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Germany:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.themunichtimes.com/"
+                  target=ww39>www.themunichtimes.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Ghana & Africa:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.accra-mail.com/"
+                  target=ww40>www.accra-mail.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Global Security News:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.globalsecurity.org/"
+                  target=ww41>www.globalsecurity.org/</A><BR></TD></TR>
+            <TR>
+                <TD>India:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.agranews.com/"
+                  target=ww42>www.agranews.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>India:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.deccan.com/"
+                  target=ww43>www.deccan.com/</A><BR></TD></TR>
+            <TR>
+                <TD>India:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://hinduonnet.com/"
+                  target=hi44>hinduonnet.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>India:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.hindustantimes.com/"
+                  target=ww45>www.hindustantimes.com/</A><BR></TD></TR>
+            <TR>
+                <TD>India:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://news.webindia123.com/news/"
+                  target=ne46>news.webindia123.com/news/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>India:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.thehindu.com/"
+                  target=ww47>www.thehindu.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Indonesia:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.thejakartapost.com/"
+                  target=ww48>www.thejakartapost.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Interfax - China:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.interfax.cn/"
+                  target=ww49>www.interfax.cn/</A><BR></TD></TR>
+            <TR>
+                <TD>Iran:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.ettelaat.com/today/P8.pdf"
+                  target=ww50>www.ettelaat.com/today/P8.pdf</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Iran:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.iran-daily.com/"
+                  target=ww51>www.iran-daily.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Iran:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.iranhello.com/"
+                  target=ww52>www.iranhello.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Iran:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.tehrantimes.com/"
+                  target=ww53>www.tehrantimes.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Iran:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://english.farsnews.com/"
+                  target=en54>english.farsnews.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Iraq-Aljazeera:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://english.aljazeera.net/"
+                  target=en55>english.aljazeera.net/</A><BR></TD></TR>
+            <TR>
+                <TD>Iraq:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.iraqdaily.com/"
+                  target=ww56>www.iraqdaily.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Israel:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.jpost.com/"
+                  target=ww57>www.jpost.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Israel:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.israelinsider.com/"
+                  target=ww58>www.israelinsider.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Israel:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.haaretz.com/"
+                  target=ww59>www.haaretz.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Israel, Mideast, World:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.imra.org.il/"
+                  target=ww60>www.imra.org.il/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Israel:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.globes.co.il/serveen/"
+                  target=ww61>www.globes.co.il/serveen/</A><BR></TD></TR>
+            <TR>
+                <TD>Israel:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.israelnationalnews.com/News/"
+                  target=ww62>www.israelnationalnews.com/News/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Israel:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.ynetnews.com/"
+                  target=ww63>www.ynetnews.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Japan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.yomiuri.co.jp/dy/"
+                  target=ww64>www.yomiuri.co.jp/dy/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Japan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.japantimes.co.jp/"
+                  target=ww65>www.japantimes.co.jp/</A><BR></TD></TR>
+            <TR>
+                <TD>Jordan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.jordantimes.com/"
+                  target=ww66>www.jordantimes.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Jordan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.petra.gov.jo/Public/Main_english.aspx?lang=2&site_id=1"
+                  target=ww67>www.petra.gov.jo/Public/Main_english.aspx?lang=2&site_id=1</A><BR></TD></TR>
+            <TR>
+                <TD>Kenya:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.standardmedia.co.ke/"
+                  target=ww68>www.standardmedia.co.ke/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Kenya & Africa:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://africasciencenews.org/asns/"
+                  target=af69>africasciencenews.org/asns/</A><BR></TD></TR>
+            <TR>
+                <TD>Kenya & East Africa:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.eastafricanewspost.com/"
+                  target=ww70>www.eastafricanewspost.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Korea:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.koreatimes.co.kr/www/index.asp"
+                  target=ww71>www.koreatimes.co.kr/www/index.asp</A><BR></TD></TR>
+            <TR>
+                <TD>Korea:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.koreaherald.co.kr/"
+                  target=ww72>www.koreaherald.co.kr/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Korea:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://theseoultimes.com/ST/"
+                  target=th73>theseoultimes.com/ST/</A><BR></TD></TR>
+            <TR>
+                <TD>Korea, North:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.kcna.co.jp/index-e.htm"
+                  target=ww74>www.kcna.co.jp/index-e.htm</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Kuwait:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.kuwaittimes.net/"
+                  target=ww75>www.kuwaittimes.net/</A><BR></TD></TR>
+            <TR>
+                <TD>Kuwait:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.arabtimesonline.com/"
+                  target=ww76>www.arabtimesonline.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Lebanon:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.dailystar.com.lb/"
+                  target=ww77>www.dailystar.com.lb/</A><BR></TD></TR>
+            <TR>
+                <TD>Libya:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.libyadaily.com/"
+                  target=ww78>www.libyadaily.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Middle East:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.albawaba.com/"
+                  target=ww79>www.albawaba.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Middle East:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.gulfinthemedia.com/"
+                  target=ww80>www.gulfinthemedia.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Middle East:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.arabianbusiness.com/"
+                  target=ww81>www.arabianbusiness.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Morocco:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.moroccomirror.com/"
+                  target=ww82>www.moroccomirror.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Muslim News Service:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.ummah.com/"
+                  target=ww83>www.ummah.com/</A><BR></TD></TR>
+            <TR>
+                <TD>New Zealand:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.nzherald.co.nz/"
+                  target=ww84>www.nzherald.co.nz/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Nigeria:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.bizhallmark.com/"
+                  target=ww85>www.bizhallmark.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Oman:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.timesofoman.com/"
+                  target=ww86>www.timesofoman.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Pakistan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.thenews.com.pk/"
+                  target=ww87>www.thenews.com.pk/</A><BR></TD></TR>
+            <TR>
+                <TD>Pakistan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.dawn.com/"
+                  target=ww88>www.dawn.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Pakistan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.onepakistan.com/news/"
+                  target=ww89>www.onepakistan.com/news/</A><BR></TD></TR>
+            <TR>
+                <TD>Palestine:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.jmcc.org/"
+                  target=ww90>www.jmcc.org/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Palestine:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.palestinechronicle.com/"
+                  target=ww91>www.palestinechronicle.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Palestine:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://english.wafa.ps/"
+                  target=en92>english.wafa.ps/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Palestine:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.palwatch.org/"
+                  target=ww93>www.palwatch.org/</A><BR></TD></TR>
+            <TR>
+                <TD>Palestine:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.palestine-info.co.uk/en/"
+                  target=ww94>www.palestine-info.co.uk/en/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Palestine:</TD>
+                <TD width=20><IMG SRC="5.gif" WIDTH=14 HEIGHT=14 ALT="down"></TD>
+                <TD><A href="http://www.palestinechronicle.com/news.php"
+                  target=ww95>www.palestinechronicle.com/news.php</A><BR></TD></TR>
+            <TR>
+                <TD>Palestine:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.miftah.org/CatIndex.cfm?CategoryID=5"
+                  target=ww96>www.miftah.org/CatIndex.cfm?CategoryID=5</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Palestine:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.jmcc.org/latestnews.aspx"
+                  target=ww97>www.jmcc.org/latestnews.aspx</A><BR></TD></TR>
+            <TR>
+                <TD>Palestine:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.imemc.org/"
+                  target=ww98>www.imemc.org/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Palestine:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.aqsa.org.uk/"
+                  target=ww99>www.aqsa.org.uk/</A><BR></TD></TR>
+            <TR>
+                <TD>Palestine:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.qassam.ps/news.html"
+                  target=ww100>www.qassam.ps/news.html</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Philippines:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.manilatimes.net/"
+                  target=ww101>www.manilatimes.net/</A><BR></TD></TR>
+            <TR>
+                <TD>Poland:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.krakowpost.com/"
+                  target=ww102>www.krakowpost.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Qatar:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.gulftimes.com/"
+                  target=ww103>www.gulftimes.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Russia:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://english.pravda.ru/"
+                  target=en104>english.pravda.ru/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Russia:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.themoscowtimes.com/"
+                  target=ww105>www.themoscowtimes.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Saudi Arabia:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.saudigazette.com.sa/"
+                  target=ww106>www.saudigazette.com.sa/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Saudi Arabia:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://arabnews.com/saudiarabia/"
+                  target=ar107>arabnews.com/saudiarabia/</A><BR></TD></TR>
+            <TR>
+                <TD>Singapore:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://straitstimes.asia1.com.sg/"
+                  target=st108>straitstimes.asia1.com.sg/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Slovakia (New Listing!):</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://spectator.sme.sk/"
+                  target=sp109>spectator.sme.sk/</A><BR></TD></TR>
+            <TR>
+                <TD>Socialist News:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.wsws.org/"
+                  target=ww110>www.wsws.org/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Somolia:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.banadir.com/"
+                  target=ww111>www.banadir.com/</A><BR></TD></TR>
+            <TR>
+                <TD>South Africa:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.NkomaziVoice.com/"
+                  target=ww112>www.NkomaziVoice.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Speigel:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.spiegel.de/international/"
+                  target=ww113>www.spiegel.de/international/</A><BR></TD></TR>
+            <TR>
+                <TD>Sri Lanka:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.lankaweb.com/news/latest.html"
+                  target=ww114>www.lankaweb.com/news/latest.html</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Sri Lanka:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.tamilnet.com/"
+                  target=ww115>www.tamilnet.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Sri Lanka:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.ethalayawebnews.com/newsfirst/"
+                  target=ww116>www.ethalayawebnews.com/newsfirst/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Sudan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.sudan.net/"
+                  target=ww117>www.sudan.net/</A><BR></TD></TR>
+            <TR>
+                <TD>Sudan (Updated Link):</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.sudanradio.org/index.php/news"
+                  target=ww118>www.sudanradio.org/index.php/news</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Sudan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.gurtong.net/"
+                  target=ww119>www.gurtong.net/</A><BR></TD></TR>
+            <TR>
+                <TD>Sudan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.sudantribune.com/"
+                  target=ww120>www.sudantribune.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Sudan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://sudaneseonline.org/cs/blogs/english/default.aspx"
+                  target=su121>sudaneseonline.org/cs/blogs/english/default.aspx</A><BR></TD></TR>
+            <TR>
+                <TD>Sudan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.sudanvisiondaily.com/"
+                  target=ww122>www.sudanvisiondaily.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Taiwan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.taipeitimes.com/"
+                  target=ww123>www.taipeitimes.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Taiwan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.chinapost.com.tw/"
+                  target=ww124>www.chinapost.com.tw/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Taiwan:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.chinataiwan.org/english/"
+                  target=ww125>www.chinataiwan.org/english/</A><BR></TD></TR>
+            <TR>
+                <TD>Thailand, Bangkok:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://bangkokpost.com/"
+                  target=ba126>bangkokpost.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Turkey:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.hurriyetdailynews.com/"
+                  target=ww127>www.hurriyetdailynews.com/</A><BR></TD></TR>
+            <TR>
+                <TD>United Arab Emirates:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.khaleejtimes.com/"
+                  target=ww128>www.khaleejtimes.com/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>United Arab Emirates:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.ameinfo.com/"
+                  target=ww129>www.ameinfo.com/</A><BR></TD></TR>
+            <TR>
+                <TD>UAE, Gulf, and World:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.gulftoday.ae/"
+                  target=ww130>www.gulftoday.ae/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Uganda:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.newvision.co.ug/"
+                  target=ww131>www.newvision.co.ug/</A><BR></TD></TR>
+            <TR>
+                <TD>UK:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://news.independent.co.uk/"
+                  target=ne132>news.independent.co.uk/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>UK:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.guardian.co.uk/theguardian"
+                  target=ww133>www.guardian.co.uk/theguardian</A><BR></TD></TR>
+            <TR>
+                <TD>Ukraine:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.brama.com/news/"
+                  target=ww134>www.brama.com/news/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Ukraine (weekly):</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.mw.ua/"
+                  target=ww135>www.mw.ua/</A><BR></TD></TR>
+            <TR>
+                <TD>Yemen:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.sabanews.net/en/"
+                  target=ww136>www.sabanews.net/en/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Yemen (weekly):</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.yementimes.com/"
+                  target=ww137>www.yementimes.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Yemen:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://yemenpost.net"
+                  target=ye138>yemenpost.net</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Yemen:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.yobserver.com/"
+                  target=ww139>www.yobserver.com/</A><BR></TD></TR>
+            <TR>
+                <TD>Yemen:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.yemenonline.info/"
+                  target=ww140>www.yemenonline.info/</A><BR></TD></TR>
+            <TR bgColor=#cccff>
+                <TD>Zimbabwe:</TD>
+                <TD width=20><IMG SRC="1.gif" WIDTH=14 HEIGHT=14 ALT="100% uptime"></TD>
+                <TD><A href="http://www.theindependent.co.zw/"
+                  target=ww141>www.theindependent.co.zw/</A><BR></TD></TR>
+            </TBODY></TABLE>
+      </TD></TR></TBODY></TABLE>
+
+
+
+
+<!--	Comment-out the following list of expanded links. These are
+	not maintained, and are used only if there is technical
+	difficulty in dynamically generating the correct links
+	in real time.
+
+
+
+
+
+
+<table border="0" cellpadding="0" width="620">
+  <tr>
+    <td>
+      <table border="0" cellspacing="0" cellpadding="3" class="norm">
+        <tr bgcolor="#cccff"><td>Afghanistan:</td><td> <a href="http://www.myafghan.com/" target="Af0">www.myafghan.com/</a><br></td></tr>
+        <tr><td>Afghanistan:</td><td> <a href="http://www.afghandaily.com/" target="Af1">www.afghandaily.com/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Afghanistan:</td><td> <a href="http://www.afgha.com/" target="Af2">www.afgha.com/</a><br></td></tr>
+        <tr><td>Afghanistan:</td><td> <a href="http://www.afghanistanpost.com/" target="Af3">www.afghanistanpost.com/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Afghanistan (WN News Network):</td><td> <a href="http://www.kabuldaily.com/" target="Af4">www.kabuldaily.com/</a><br></td></tr>
+        <tr><td>Africa portal:</td><td> <a href="http://allafrica.com/" target="Af5">allafrica.com/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Arab news:</td><td> <a href="http://www.arabicnewspaper.com/" target="Ar6">www.arabicnewspaper.com/</a><br></td></tr>
+        <tr><td>Arab-Palestine news:</td><td> <a href="http://www.amin.org/eng/" target="Ar7">www.amin.org/eng/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Asia:</td><td> <a href="http://www.atimes.com/" target="As8">www.atimes.com/</a><br></td></tr>
+        <tr><td>Asia - UN IRIN News:</td><td> <a href="http://www.irinnews.org/Asiafp.asp" target="As9">www.irinnews.org/Asiafp.asp</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Australia:</td><td> <a href="http://www.smh.com.au/news/" target="Au10">www.smh.com.au/news/</a><br></td></tr>
+        <tr><td>Australia:</td><td> <a href="http://www.abc.net.au/" target="Au11">www.abc.net.au/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Bahrain:</td><td> <a href="http://www.bahraintribune.com/home.asp" target="Ba12">www.bahraintribune.com/home.asp</a><br></td></tr>
+        <tr><td>Bahrain:</td><td> <a href="http://www.gulf-daily-news.com/home.asp" target="Ba13">www.gulf-daily-news.com/home.asp</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Balkan-Serbia/Yugoslavia:</td><td> <a href="http://blic.gates96.com/" target="Ba14">blic.gates96.com/</a><br></td></tr>
+        <tr><td>Bangladesh:</td><td> <a href="http://www.dailystarnews.com/" target="Ba15">www.dailystarnews.com/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Bangladesh:</td><td> <a href="http://independent-bangladesh.com/" target="Ba16">independent-bangladesh.com/</a><br></td></tr>
+        <tr><td>China:</td><td> <a href="http://english.peopledaily.com.cn/home.html" target="Ch17">english.peopledaily.com.cn/home.html</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>China:</td><td> <a href="http://www.xinhuanet.com/english/index.htm" target="Ch18">www.xinhuanet.com/english/index.htm</a><br></td></tr>
+        <tr><td>China:</td><td> <a href="http://www1.chinadaily.com.cn/" target="Ch19">www1.chinadaily.com.cn/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>CIS, Central Asia:</td><td> <a href="http://www.times.kg/" target="CI20">www.times.kg/</a><br></td></tr>
+        <tr><td>Czech (weekly):</td><td> <a href="http://www.praguepost.cz/" target="Cz21">www.praguepost.cz/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Eastern Europe, Central Asia:</td><td> <a href="http://www.rferl.org/newsline/" target="Ea22">www.rferl.org/newsline/</a><br></td></tr>
+        <tr><td>Finland:</td><td> <a href="http://www.helsinki-hs.net/" target="Fi23">www.helsinki-hs.net/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Germany:</td><td> <a href="http://www.faz.com/IN/INtemplates/eFAZ/" target="Ge24">www.faz.com/IN/INtemplates/eFAZ/</a><br></td></tr>
+        <tr><td>Germany:</td><td> <a href="http://dw-world.de/english/" target="Ge25">dw-world.de/english/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>India:</td><td> <a href="http://www.deccan.com/" target="In26">www.deccan.com/</a><br></td></tr>
+        <tr><td>India:</td><td> <a href="http://hinduonnet.com/" target="In27">hinduonnet.com/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>India:</td><td> <a href="http://www.indian-express.com/" target="In28">www.indian-express.com/</a><br></td></tr>
+        <tr><td>Iran:</td><td> <a href="http://www.ettelaat.com/today/P8.pdf" target="Ir29">www.ettelaat.com/today/P8.pdf</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Iraq-Aljazeera:</td><td> <a href="http://english.aljazeera.net/" target="Ir30">english.aljazeera.net/</a><br></td></tr>
+        <tr><td>Iraq:</td><td> <a href="http://www.iraqdaily.com/" target="Ir31">www.iraqdaily.com/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Israel:</td><td> <a href="http://www.jpost.com/" target="Is32">www.jpost.com/</a><br></td></tr>
+        <tr><td>Israel:</td><td> <a href="http://www.haaretzdaily.com/" target="Is33">www.haaretzdaily.com/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Israel:</td><td> <a href="http://www.israelinsider.com/" target="Is34">www.israelinsider.com/</a><br></td></tr>
+        <tr><td>Japan:</td><td> <a href="http://www.yomiuri.co.jp/index-e.htm" target="Ja35">www.yomiuri.co.jp/index-e.htm</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Japan:</td><td> <a href="http://www.japantimes.co.jp/" target="Ja36">www.japantimes.co.jp/</a><br></td></tr>
+        <tr><td>Jordan (weekly):</td><td> <a href="http://star.arabia.com/" target="Jo37">star.arabia.com/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Jordan:</td><td> <a href="http://www.jordantimes.com/" target="Jo38">www.jordantimes.com/</a><br></td></tr>
+        <tr><td>Kazakhstan:</td><td> <a href="http://www.herald.kz/" target="Ka39">www.herald.kz/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Korea:</td><td> <a href="http://www.chosun.com/g__.html" target="Ko40">www.chosun.com/g__.html</a><br></td></tr>
+        <tr><td>Korea:</td><td> <a href="http://www.koreatimes.co.kr/" target="Ko41">www.koreatimes.co.kr/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Korea:</td><td> <a href="http://www.koreaherald.co.kr/" target="Ko42">www.koreaherald.co.kr/</a><br></td></tr>
+        <tr><td>Lebanon:</td><td> <a href="http://www.alanwar.com/latestnews/lbnews.shtml" target="Le43">www.alanwar.com/latestnews/lbnews.shtml</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Lebanon:</td><td> <a href="http://www.dailystar.com.lb/" target="Le44">www.dailystar.com.lb/</a><br></td></tr>
+        <tr><td>Libya:</td><td> <a href="http://www.libyadaily.com/" target="Li45">www.libyadaily.com/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Middle East:</td><td> <a href="http://www.middleeastdaily.com/" target="Mi46">www.middleeastdaily.com/</a><br></td></tr>
+        <tr><td>Middle East:</td><td> <a href="http://www.albawaba.com/" target="Mi47">www.albawaba.com/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>New Zealand:</td><td> <a href="http://www.nzherald.co.nz/" target="Ne48">www.nzherald.co.nz/</a><br></td></tr>
+        <tr><td>Nigeria:</td><td> <a href="http://www.champion-newspapers.com/" target="Ni49">www.champion-newspapers.com/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Oman:</td><td> <a href="http://www.timesofoman.com/" target="Om50">www.timesofoman.com/</a><br></td></tr>
+        <tr><td>Oman:</td><td> <a href="http://omanobserver.com/" target="Om51">omanobserver.com/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Pakistan:</td><td> <a href="http://www.jang.com.pk/thenews/" target="Pa52">www.jang.com.pk/thenews/</a><br></td></tr>
+        <tr><td>Pakistan:</td><td> <a href="http://www.dawn.com/" target="Pa53">www.dawn.com/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Pakistan:</td><td> <a href="http://www.hipakistan.com/en/" target="Pa54">www.hipakistan.com/en/</a><br></td></tr>
+        <tr><td>Palestine:</td><td> <a href="http://www.palestinechronicle.com/" target="Pa55">www.palestinechronicle.com/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Palestine:</td><td> <a href="http://www.palestine-pmc.com/" target="Pa56">www.palestine-pmc.com/</a><br></td></tr>
+        <tr><td>Palestine:</td><td> <a href="http://electronicIntifada.net/new.html" target="Pa57">electronicIntifada.net/new.html</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Philippines:</td><td> <a href="http://www.inq7.net/" target="Ph58">www.inq7.net/</a><br></td></tr>
+        <tr><td>Philippines:</td><td> <a href="http://www.manilatimes.net/" target="Ph59">www.manilatimes.net/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Philippines:</td><td> <a href="http://www.philstar.com/" target="Ph60">www.philstar.com/</a><br></td></tr>
+        <tr><td>Qatar (Islamic news):</td><td> <a href="http://www.islamonline.net/english/index.shtml" target="Qa61">www.islamonline.net/english/index.shtml</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Russia (fixed bad link):</td><td> <a href="http://english.pravda.ru/" target="Ru62">english.pravda.ru/</a><br></td></tr>
+        <tr><td>Russia (fixed bad link):</td><td> <a href="http://vn.vladnews.ru/" target="Ru63">vn.vladnews.ru/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Russia:</td><td> <a href="http://www.themoscowtimes.com/" target="Ru64">www.themoscowtimes.com/</a><br></td></tr>
+        <tr><td>Socialist News:</td><td> <a href="http://www.wsws.org/" target="So65">www.wsws.org/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Sri Lanka:</td><td> <a href="http://www.lankaweb.com/news/latest.html" target="Sr66">www.lankaweb.com/news/latest.html</a><br></td></tr>
+        <tr><td>Switzerland:</td><td> <a href="http://www.nzz.ch/english/" target="Sw67">www.nzz.ch/english/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Syria:</td><td> <a href="http://www.sana.org/english/mainEn.htm" target="Sy68">www.sana.org/english/mainEn.htm</a><br></td></tr>
+        <tr><td>Syria:</td><td> <a href="http://www.teshreen.com/syriatimes/" target="Sy69">www.teshreen.com/syriatimes/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Taiwan:</td><td> <a href="http://www.taipeitimes.com/" target="Ta70">www.taipeitimes.com/</a><br></td></tr>
+        <tr><td>Turkey:</td><td> <a href="http://www.turkishdailynews.com/FrTDN/latest/heads.htm" target="Tu71">www.turkishdailynews.com/FrTDN/latest/heads.htm</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Ukraine:</td><td> <a href="http://www.thepost.kiev.ua/data/main.html" target="Uk72">www.thepost.kiev.ua/data/main.html</a><br></td></tr>
+        <tr><td>United Arab Emirates:</td><td> <a href="http://www.gulf-news.com/news/" target="Un73">www.gulf-news.com/news/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>United Arab Emirates:</td><td> <a href="http://www.khaleejtimes.co.ae/" target="Un74">www.khaleejtimes.co.ae/</a><br></td></tr>
+        <tr><td>UK:</td><td> <a href="http://news.independent.co.uk/" target="UK75">news.independent.co.uk/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>UK:</td><td> <a href="http://news.telegraph.co.uk/" target="UK76">news.telegraph.co.uk/</a><br></td></tr>
+        <tr><td>Ukraine:</td><td> <a href="http://www.brama.com/news/" target="Uk77">www.brama.com/news/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Yemen:</td><td> <a href="http://www.sabanews.gov.ye/indexEng.html" target="Ye78">www.sabanews.gov.ye/indexEng.html</a><br></td></tr>
+        <tr><td>Yemen (weekly):</td><td> <a href="http://www.yementimes.com/" target="Ye79">www.yementimes.com/</a><br></td></tr>
+        <tr bgcolor="#cccff"><td>Zimbabwe:</td><td> <a href="http://www.theindependent.co.zw/" target="Zi80">www.theindependent.co.zw/</a><br></td></tr>
+        <tr><td>Zimbabwe:</td><td> <a href="http://www.dailynews.co.zw/" target="Zi81">www.dailynews.co.zw/</a><br></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+  -->
+
+<!-- Footer.inc - this file sets the second part of the javascript for the website
+     as well as the footer -->
+
+<!-- The following table tags are to close off the table controlling the left and right margins. -->
+</td>
+<td width="25"></td></tr></table>
+<hr>
+
+<p align="left" class="foot">? Kathleen Mattson and Dave Miller
+ | <a href="http://www.inkdrop.net/copyright.html">Copyright information</a> 
+ | <a href="http://www.inkdrop.net/contact.html">Contact Us</a> 
+ | <a href="http://www.inkdrop.net/cgi-bin/whatsnew.pl">What's new?</a> 
+ | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="http://www.inkdrop.net/cgi-bin/search_form.html"><img src="http://www.inkdrop.net/syspics/search.gif" height="20" border="0" alt="SEARCH"></a></p>
+ 
+ <DIV CLASS="topnavSubMenu" ID="subMenu4">	
+ <!-- Submenu for Dave -->
+	<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">		
+	<TR>					     
+	    <TD>
+		<A HREF="http://www.inkdrop.net/dave/index.html" 
+			ONMOUSEOVER="return showNavMenu('subMenu4', 'topnavMenuCallout1')" 
+			ONMOUSEOUT="return delayHide('subMenu4', 'topnavMenuCallout1')">
+                <IMG SRC="http://www.inkdrop.net/syspics/rollDaveOne.gif" BORDER="0" ALT="">
+		</A>
+	    </TD>
+	    <td>
+		<A HREF="http://www.inkdrop.net/webpics/index.html" 
+			ONMOUSEOVER="return showNavMenu('subMenu4', 'topnavMenuCallout1')" 
+			ONMOUSEOUT="return delayHide('subMenu4', 'topnavMenuCallout1')">
+		<IMG SRC="http://www.inkdrop.net/syspics/rollDaveTwo.gif" BORDER="0" ALT="">
+		</A>
+	    </TD>
+	    <td>
+		<A HREF="http://www.inkdrop.net/dave/d_writings.html" 
+			ONMOUSEOVER="return showNavMenu('subMenu4', 'topnavMenuCallout1')" 
+			ONMOUSEOUT="return delayHide('subMenu4', 'topnavMenuCallout1')">
+		<IMG SRC="http://www.inkdrop.net/syspics/rollDaveThree.gif" BORDER="0" ALT="">
+		</A>
+	    </TD>		
+	</TR>				
+	</TABLE>
+</DIV>
+
+<!--top navigation callout line-->
+
+<DIV ID="topnavMenuCallout1">
+	<A HREF="#" 
+		ONMOUSEOVER="return showNavMenu('subMenu1', 'navMenuCallout1')" 
+		ONMOUSEOUT="return delayHide('subMenu4', 'topnavMenuCallout1')"></A>
+</DIV>	
+	
+<DIV CLASS="topnavSubMenu2" ID="subMenu5">	
+ <!-- Submenu for Kathleen -->
+	<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0">		
+	<TR>					    
+	    <TD>
+		<A HREF="http://www.inkdrop.net/kathleen/index.html" ONMOUSEOVER="return showNavMenu('subMenu5', 'topnavMenuCallout2')" 
+			ONMOUSEOUT="return delayHide('subMenu5', 'topnavMenuCallout2')">
+		<IMG SRC="http://www.inkdrop.net/syspics/rollKathOne.gif" BORDER="0" ALT=""></A>
+	    </TD>
+		
+    	<td>
+		<A HREF="http://www.inkdrop.net/trek/index.html" ONMOUSEOVER="return showNavMenu('subMenu5', 'topnavMenuCallout2')" 
+			ONMOUSEOUT="return delayHide('subMenu5', 'topnavMenuCallout2')">
+		<IMG SRC="http://www.inkdrop.net/syspics/rollKathTwo.gif" BORDER="0" ALT=""></A>	
+	    </TD>
+		
+	    <td>
+		<A HREF="http://www.inkdrop.net/films/index.html" ONMOUSEOVER="return showNavMenu('subMenu5', 'topnavMenuCallout2')" 
+			ONMOUSEOUT="return delayHide('subMenu5', 'topnavMenuCallout2')">
+		<IMG SRC="http://www.inkdrop.net/syspics/rollKathThree.gif" BORDER="0" ALT=""></A>
+	    </TD>	
+		
+		<td>
+		<A HREF="http://www.inkdrop.net/kathleen/k_hobby.html" ONMOUSEOVER="return showNavMenu('subMenu5', 'topnavMenuCallout2')" 
+			ONMOUSEOUT="return delayHide('subMenu5', 'topnavMenuCallout2')">
+		<IMG SRC="http://www.inkdrop.net/syspics/rollKathFour.gif" BORDER="0" ALT=""></A>
+	    </TD>		
+	</TR>				
+	</TABLE>
+</DIV>
+
+<!--top navigation callout line-->
+<DIV ID="topnavMenuCallout2">
+	<A HREF="#" 
+		ONMOUSEOVER="return showNavMenu('subMenu5', 'navMenuCallout2')" 
+		ONMOUSEOUT="return delayHide('subMenu5', 'topnavMenuCallout2')"></A>
+</DIV>		
+
+</body>
+</html>
+

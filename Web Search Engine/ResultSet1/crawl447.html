@@ -1,0 +1,153 @@
+<HTML>
+<HEAD>
+<TITLE>CRAYON.net - Create Your Own Newspaper</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<META NAME="Author" CONTENT="CRAYON">
+<META NAME="Robots" CONTENT="index,follow">
+<META NAME="description" CONTENT="CRAYON - Create Your Own Newspaper. The web's first personalized news service, custom news, headlines">
+<META NAME="keywords" CONTENT="CRAYON, create newspaper, own newspaper, personalized news, custom news, personal headlines, breaking news, current topics">
+<LINK REL=STYLESHEET TYPE="text/css" HREF="images/crayon.css" TITLE="CRAYON Style">
+<SCRIPT>
+function ReadCookie(cookieName) {
+    var theCookie=""+document.cookie;
+    var ind=theCookie.indexOf(cookieName);
+    if (ind==-1 || cookieName=="") return "";
+    var ind1=theCookie.indexOf(';',ind);
+    if (ind1==-1) ind1=theCookie.length;
+    return unescape(theCookie.substring(ind+cookieName.length+1,ind1));
+}
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" onLoad="document.login.CRemail.value=ReadCookie('email');document.login.p.value=ReadCookie('password')">
+<TABLE WIDTH=100% BORDER=0>
+<TR><TD><A HREF="http://www.crayon.net/"><IMG SRC="images/logo.gif" BORDER=0 WIDTH=341 HEIGHT=90></A></TD>
+<TD ALIGN=RIGHT CLASS="bigbold"><FORM NAME="login" METHOD=POST ACTION="http://www.crayon.net/read.cgi">
+<TABLE>
+<TR><TD NOWRAP CLASS="bigbold" COLSPAN=2 ALIGN=LEFT><FONT COLOR="#990000">Subscriber Login</FONT></TD></TR>
+<TR><TD NOWRAP CLASS="smallbold" ALIGN=RIGHT>Email address:</TD><TD COLSPAN=2><INPUT CLASS="mini" SIZE=30 NAME="CRemail" VALUE=""></TD></TR>
+<TR><TD NOWRAP CLASS="smallbold" ALIGN=RIGHT>Password:</TD>
+<TD><INPUT SIZE=10 TYPE=PASSWORD CLASS="mini" NAME="p"></TD>
+<TD ALIGN=CENTER><INPUT TYPE=SUBMIT CLASS="small" VALUE="Read My Paper"></TD></TR></TABLE>
+<DIV CLASS="mini"><A HREF="http://www.crayon.net/scripts/login.cgi?mode=create">New
+User</A>&nbsp;&#149;&nbsp;<A HREF="http://www.crayon.net/scripts/remind.cgi">Forgot Password</A></DIV></FORM></TD>
+</TR>
+</TABLE>
+
+<BR>
+
+<TABLE WIDTH=100% BORDER=0 CELLSPACING=0 CELLPADDING=3>
+<TR><TD VALIGN=TOP ALIGN=LEFT WIDTH=70%>
+<script language="JavaScript"><!--
+function leadingZero(nr)
+{
+if (nr < 10) nr = "0" + nr;
+return nr;
+}
+function makeArray() {
+     for (i = 0; i<makeArray.arguments.length; i++)
+          this[i + 1] = makeArray.arguments[i];
+}
+
+var months = new makeArray('January','February','March',
+    'April','May','June','July','August','September',
+    'October','November','December');
+
+var date = new Date();
+var day  = date.getDate();
+var month = date.getMonth() + 1;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+var hours = date.getHours();
+var minutes = leadingZero(date.getMinutes());
+
+var ampm = "am";
+if (hours > 12) {
+    ampm = "pm";
+    hours -= 12;
+}
+else if (hours == 12) {
+    ampm = "pm";
+}
+else if (hours == 0) {
+     hours = 12;
+}
+
+document.write("<SPAN CLASS=\"smallbold\">" + months[month] + " " +
+day + ", " + year + " " + hours + ":" + minutes + ampm + "</SPAN><P>");
+//--></script>
+<SPAN CLASS="smallbold">&#149; <A HREF="http://www.af.mil/news/n20020530_0870.shtml">OEF fuels folks keep things running</A></SPAN><BR>
+<SPAN CLASS="smallbold">&#149; <A HREF="http://www.af.mil/news/n20020530_0878.shtml">Gulf War vets return for war on terrorism</A></SPAN><BR>
+<SPAN CLASS="smallbold">&#149; <A HREF="http://www.af.mil/news/n20020530_0872.shtml">Luke F-16 crashes May 29</A></SPAN><BR>
+&nbsp;<SPAN CLASS="mini">&gt;&gt; <A HREF="http://www.af.mil/news/">Air Force News Service</A></SPAN><P>
+<SPAN CLASS="smallbold">&#149; <A HREF="http://www.eweek.com/cloud/mars-rover-curiositys-rock-blasting-laser-reaches-milestone.html">Mars Rover Curiosity's Rock-Blasting Laser Reaches Milestone</A></SPAN><BR>
+<SPAN CLASS="smallbold">&#149; <A HREF="http://www.eweek.com/mobile/qualcomm-unveils-new-snapdragon-networking-chips.html">Qualcomm Unveils New Snapdragon, Networking Chips</A></SPAN><BR>
+<SPAN CLASS="smallbold">&#149; <A HREF="http://www.eweek.com/cloud/national-geographic-sharing-its-maps-with-google-maps.html">National Geographic Sharing Its Maps With Google Maps</A></SPAN><BR>
+&nbsp;<SPAN CLASS="mini">&gt;&gt; <A HREF="http://www.eweek.com/">eWeek</A></SPAN><P>
+<TABLE WIDTH=100%><TR><TD CLASS="norm">
+"All successful newspapers are ceaselessly querulous and bellicose. 
+They never defend anyone or anything if they can help it; if the job
+is forced on them, they tackle it by denouncing someone or something
+else." - H.L. Mencken</TD></TR></TABLE>
+
+<HR NOSHADE SIZE=1>
+<DIV CLASS="smallbold" ALIGN=CENTER><A HREF="http://www.crayon.net/scripts/read.cgi">&gt;&gt; Read your paper for more current news</A></SPAN>
+
+</TD>
+
+<TD VALIGN=TOP ALIGN=RIGHT WIDTH=30%>
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR><TD>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD CLASS="normbold"><FONT COLOR="#990000">Current Subscribers</FONT></TD>
+</TR>
+<TR>
+<TD CLASS="norm">483,210</TD>
+</TR>
+</TABLE></TD></TR>
+</TABLE>
+
+<BR>
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR><TD>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD CLASS="normbold"><FONT COLOR="#990000">New to CRAYON?</FONT></TD>
+</TR>
+<TR>
+<TD CLASS="norm">Start getting your news, unfiltered and across the web's biggest variety of sources. <B><A HREF="http://www.crayon.net/scripts/login.cgi?mode=create">Create your FREE newspaper now</A></B>.</TD>
+</TR>
+</TABLE></TD></TR>
+</TABLE>
+
+<BR>
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR><TD>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD CLASS="normbold"><FONT COLOR="#990000">Help!!!</FONT></TD>
+</TR>
+<TR>
+<TD CLASS="norm">The best place to start is our <A HREF="about/faq.html">Frequently Asked Questions</A>. We also have <A HREF="using/how.html">Step-by-step Instructions</A>. When all else fails, just <A HREF="using/feedback.html">write us</A> and we'll try to help.</TD>
+</TR>
+</TABLE></TD></TR>
+</TABLE>
+
+</TD></TR>
+</TABLE>
+
+<BR>
+
+<DIV CLASS="normbold" ALIGN=CENTER>
+<A HREF="about/faq.html">Help</A>&nbsp;&#149;&nbsp;<A HREF="using/how.html">Instructions</A>&nbsp;&#149;&nbsp;<A HREF="using/feedback.html">Feedback</A>&nbsp;&#149;&nbsp;<A HREF="using/links.html">Links</A>&nbsp;&#149;&nbsp;<A HREF="about/who.html">About</A>&nbsp;&#149;&nbsp;<A HREF="press/">Awards</A>&nbsp;&#149;&nbsp;<A HREF="using/suggest.html">Suggest</A>
+</DIV>
+<BR>
+<DIV CLASS="smallbold" ALIGN=CENTER>Copyright &copy; 2005 David
+Maher. All Rights Reserved</DIV>
+
+</BODY>
+</HTML>
+

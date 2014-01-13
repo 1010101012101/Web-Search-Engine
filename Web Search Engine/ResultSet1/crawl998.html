@@ -1,0 +1,636 @@
+<html>
+	<head>
+				<title>Hutt River Independent</title>
+	</head>
+<body onload="DesignerWizWin=window.('http://hri.nu3.net/birthday.html', 'DesignerWizWin', 'toolbar=0, location=0, directories=0, menuBar=0, scrollbars=1, resizable=1, width=460, height=440, left=50, top=50');"  link="#00008b" vlink="#4682b4" bgcolor="#FFCC33"><!--'"</title></head>-->
+<script type="text/javascript">
+////// Compete /////////////////////
+__compete_code = '667f89f26d96c30e99728fe6a608804d';
+(function () {
+    var s = document.createElement('script'),
+        d = document.getElementsByTagName('head')[0] ||
+            document.getElementsByTagName('body')[0],
+        t = 'https:' == document.location.protocol ? 
+            'https://c.compete.com/bootstrap/' : 
+            'http://c.compete.com/bootstrap/';
+    s.src = t + __compete_code + '/bootstrap.js';
+    s.type = 'text/javascript';
+    s.async = 'async'; 
+    if (d) { d.appendChild(s); }
+})();
+
+
+////// Quantcast  /////////////////////
+function channValidator(chann) {
+    return (typeof(chann) == 'string' && chann != '');
+}
+
+function lycosQuantcast(){
+    var lb = "";
+    if(typeof(cm_host) !== 'undefined' && channValidator(cm_host)){
+        lb += cm_host.split('.')[0] + '.';
+    }
+
+    if(typeof(cm_taxid) !== 'undefined' && channValidator(cm_taxid)){
+        lb += cm_taxid;
+        lb = lb.replace('/','');
+    } else {
+        lb = lb.replace('.','');
+    }
+    return lb;
+}
+
+var _qevents = _qevents || [];
+
+(function() {
+    var elem = document.createElement('script');
+    elem.src = (document.location.protocol == "https:" ? "https://secure" :"http://edge") + ".quantserve.com/quant.js";
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+    qacct:"p-6eQegedn62bSo",
+    labels:lycosQuantcast()
+});
+
+/////// Google Analytics
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-21402695-21']);
+_gaq.push(['_setDomainName', 'angelfire.com']);
+_gaq.push(['_setCustomVar', 1, 'member_name', 'wa3/hri', 3]);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+////// Lycos Initialization /////////////////////
+var lycos_ad = Array();
+var lycos_search_query = "";
+var lycos_onload_timer;
+
+var cm_role = "live";
+var cm_host = "angelfire.lycos.com";
+var cm_taxid = "/memberembedded";
+var angelfire_member_name = "wa3/hri";
+var angelfire_member_page = "wa3/hri/index.html";
+var angelfire_ratings_hash = "1386817866:2570992933d4d9c038a4efb70052d563";
+
+var lycos_ad_category = {"dmoz":"society\/government","ontarget":"&CAT=family%20and%20lifestyles","find_what":"legal entity"};
+
+var lycos_ad_remote_addr = "76.184.251.170";
+var lycos_ad_www_server = "www.angelfire.lycos.com";
+var edit_site_url = "www.angelfire.lycos.com/landing/landing.tmpl?utm_source=house&utm_medium=landingpage&utm_campaign=toolbarlink";
+
+////// Criteo /////////////////////
+var cto_conf = { a:true, i: "294", c:"img", kw: "" } ;
+(function (){
+    var c = document.createElement("script"); c.type = "text/javascript"; c.async = true;
+    c.src = "http://www.angelfire.com/adm/js/partner/criteo_ld_kw.js";
+    var s = document.getElementsByTagName("body")[0]; s.appendChild(c);
+})(); 
+
+</script>
+<script type="text/javascript" src="http://scripts.lycos.com/catman/init.js"></script>
+<script type="text/javascript">
+(function(isV) {
+    if (!isV) {
+        return;
+    }
+
+    //this.lycos_search_query = lycos_get_search_referrer();
+    var adMgr = new AdManager();
+    var lycos_prod_set = adMgr.chooseProductSet();
+    var slots = ["leaderboard", "leaderboard2", "toolbar_image", "toolbar_text", "smallbox", "top_promo", "footer2"];
+    var adCat = this.lycos_ad_category;
+    adMgr.setForcedParam('page', (adCat && adCat.dmoz) ? adCat.dmoz : 'member');
+
+    if (this.lycos_search_query) {
+        adMgr.setForcedParam("keyword", this.lycos_search_query);
+    } 
+    else if (adCat && adCat.find_what) {
+        adMgr.setForcedParam('keyword', adCat.find_what);
+    }
+
+    for (var s in slots) {
+        var slot = slots[s];
+        if (adMgr.isSlotAvailable(slot)) {
+            this.lycos_ad[slot] = adMgr.getSlot(slot);
+        }
+    }
+
+
+    adMgr.renderHeader();
+    adMgr.renderFooter();
+}((function() {
+    var w = 0, h = 0, minimumThreshold = 300;
+    if (top == self) {
+        return true;
+    }
+
+    if (typeof(window.innerWidth) == 'number' ) {
+        w = window.innerWidth;
+        h = window.innerHeight;
+    }
+    else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+        w = document.documentElement.clientWidth;
+        h = document.documentElement.clientHeight;
+    }
+    else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+        w = document.body.clientWidth;
+        h = document.body.clientHeight;
+    }
+
+    return ((w > minimumThreshold) && (h > minimumThreshold));
+}())));
+
+
+
+window.onload = function() {
+    var f = document.getElementById("lycosFooterAd");
+    var b = document.getElementsByTagName("body")[0];
+    b.appendChild(f);
+    f.style.display = "block";
+    document.getElementById('lycosFooterAdiFrame').src = '/adm/ad/footerAd.iframe.html';
+
+    // Slider Injection
+    (function() {
+        var e = document.createElement('iframe');
+        e.style.border = '0';
+        e.style.margin = 0;
+        e.style.display = 'block';
+        e.style.cssFloat = 'right';
+        e.style.height = '254px';
+        e.style.overflow = 'hidden';
+        e.style.padding = 0;
+        e.style.width = '300px';
+        e.src = '/adm/ad/sliderAd.iframe.html';
+        var sliderBlock = document.getElementById('lyslider-adblock-wrapper');
+        var sliderHolder = document.getElementById('lyslider-adblock-holder');
+        var sliderClose = document.getElementById('lyslider-adblock-close');
+        sliderBlock.style.display = 'block';
+
+        sliderClose.onclick = function() {
+            sliderBlock.parentNode.removeChild(sliderBlock);
+            return false;
+        }
+
+        var iframeOnload = function() {
+            setTimeout((function sliiide() {
+                var s = (window.getComputedStyle) ? parseInt(getComputedStyle(sliderHolder).right) : parseInt(sliderHolder.currentStyle.right);
+                if (s <= 0) {
+                    sliderHolder.style.right = (s + 6) + 'px';
+                    setTimeout(sliiide, 10);
+                }
+                else {
+                    sliderHolder.style.right = '0px';
+                    sliderClose.style.display = 'block';
+                }
+            }), 1000);
+        }
+
+        if (e.attachEvent) {
+            e.attachEvent('onload', iframeOnload);
+        }
+        else {
+            e.addEventListener('load', iframeOnload, false);
+        }
+
+        sliderHolder.insertBefore(e, sliderHolder.firstChild);
+    })();
+}
+
+
+</script>
+
+<style>
+	#body .adCenterClass{margin:0 auto}
+</style>
+
+<div style="background:#abe6f6; border-bottom:1px solid #507a87; position:relative; z-index:9999999">
+    <div class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+        <a href="http://www.angelfire.lycos.com/" title="Angelfire.com: build your free website today!" style="display:block; float:left; width:186px; border:0">
+        <img src="/adm/ad/angelfire-freeAd.jpg" alt="Site hosted by Angelfire.com: Build your free website today!" style="display:block; border:0" />
+        </a>
+        <script type="text/javascript">document.write(lycos_ad['leaderboard']);</script>
+    </div>
+</div>
+
+<!-- ///////////////////////////////////// -->
+<div id="lyslider-adblock-wrapper" style="display:none; height:300px; overflow:hidden; position:absolute; right:0; top:150px; width:320px; z-index:99999999; ">
+<div id="lyslider-adblock-holder" style="background-color:#888; height:250px; margin-bottom:25px; padding:4px; position:absolute; right:-320px; top:10px; width:300px; ">
+<a id="lyslider-adblock-close" href="#" style="background-color:#222; bottom:-19px; color:#fff; display:block; font:10px Arial, Helvetica, Sans-serif; padding:4px; position:absolute; right:0; text-decoration:none; z-index:9999999999">Close Ad</a>
+</div>
+</div>
+
+
+<div id="lycosFooterAd" style="background:#abe6f6; border-top:1px solid #507a87; clear:both; display:none; position:relative; z-index:9999999">
+<div class="adCenterClass" style="display:block!important; overflow:hidden; width:936px;">
+	<div id="aflinksholder" style="float:left; width:186px;">
+        <a href="http://www.angelfire.lycos.com/" title="Angelfire.com: build your free website today!" style="display:block; border:0">
+            <img src="/adm/ad/angelfire-freeAd2.jpg" alt="Site hosted by Angelfire.com: Build your free website today!" style="display:block; border:0" />
+        </a>
+        <div style="text-align:center">
+        	<span style="color:#393939!important; font-size:12px!important; position:relative; top:-6px">
+            	Sponsored by
+            </span>
+            
+            <a href="http://www.listen.com/disty/index.jsp?from=lycos" target="_blank">
+                <img src="http://af.lygo.com/d/toolbar/sponsors/rhapsody_logo.jpg" alt="sponsor logo" title="Rhapsody"/>
+            </a>
+        </div>
+    </div>
+    <iframe id="lycosFooterAdiFrame" style="border:0; display:block; float:left; height:96px; overflow:hidden; padding:0; width:750px"></iframe>
+</div>
+</div>
+
+<noscript>
+<img src="http://www.angelfire.com/doc/images/track/ot_noscript.gif?rand=719269" alt="" width="1" height="1" />
+<!-- BEGIN STANDARD TAG - 728 x 90 - Lycos - Angelfire Fallthrough - DO NOT MODIFY -->
+<iframe frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="728" height="90" src="http://ad.yieldmanager.com/st?ad_type=iframe&amp;ad_size=728x90&amp;section=280303"></iframe>
+<!-- END TAG -->
+</noscript>
+
+<!-- Start Ybrant tracker -->
+<img src="http://ad.yieldmanager.com/pixel?id=1901600&t=2" width="1" height="1" />
+<!--   End Ybrant tracker -->
+
+<!-- Start Datonics -->
+<script type="text/javascript" src="http://ads.pro-market.net/ads/scripts/site-132783.js"></script>
+<!--   End Datonics -->
+
+<!-- Start Chango -->
+<script type="text/javascript">
+    var __cho__ = {"pid":1694};
+    (function() {
+        var c = document.createElement('script');
+        c.type = 'text/javascript';
+        c.async = true;
+        c.src = document.location.protocol + '//cc.chango.com/static/o.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(c, s);
+    })();
+</script>
+<!--   End Chango -->
+
+
+
+</script>
+</center><br><br><!--bannercode-->
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td align="center">
+					<table border="0" cellpadding="10" cellspacing="0" width="618">
+						<tr>
+							<td colspan="2" bgcolor="white"><img height="150" width="625" src="http://www.angelfire.com/wa3/hri/header6b.gif" border="0" usemap="#headb8366809"><map name="headb8366809"><area href="http://www.angelfire.com/wa3/hri/index.html
+" coords="332,17,576,49" shape="rect"><area href="http://www.angelfire.com/wa3/hri/index.html
+" coords="433,186,563,217" shape="rect"><area href="http://www.angelfire.com/wa3/hri/index.html
+" coords="235,189,364,216" shape="rect"><area href="http://www.angelfire.com/wa3/hri/index.html
+" coords="34,189,160,214" shape="rect"></map></td>
+						</tr>
+						<tr>
+							<td width="229" bgcolor="white" align="left" valign="top"><font size="5" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="black"><b>story index<br>
+								<br>
+								</b></font><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#483d8b" size="2"><b>right now in the Hutt River area</b></font><font size="5" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><br>
+								</font><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><P>
+								<table border="0" cellpadding="0" cellspacing="0" width="225" bgcolor="white">
+	<a href="http://www.wunderground.com/global/stations/94403.html">
+<img src="http://banners.wunderground.com/banner/gizmotimetemp_both/language/www/global/stations/94403.gif"
+alt="Click for Geraldton, Western Australia Forecast" height=41 width=127></a>
+<P>
+<table border="0" cellpadding="0" cellspacing="0" width="225" bgcolor="white">
+	<a href="http://www.angelfire.com/wa3/hri/muthangga.html">
+<img src="http://www.angelfire.com/wa3/hri/logonanda5.JPG"
+alt="Click for indigenous news" height=41 width=127></a><P>
+<P>
+<table border="0" cellpadding="0" cellspacing="0" width="225" bgcolor="white">
+	<a href="http://www.angelfire.com/wa3/hri/unpo.html">
+<img src="http://www.angelfire.com/wa3/hri/unpologo.GIF"
+alt="Click for forcus on UNPO members" height=41 width=127></a><P>
+</b></font><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#483d8b" size="2"><b>Check out this months cartoon by Jeremy Woods!</b></font><font size="5" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><br>
+								</font><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><P>
+								<table border="0" cellpadding="0" cellspacing="0" width="225" bgcolor="white">
+	<a href="http://www.angelfire.com/wa3/hri/Andanotherthing.jpg">
+<img src="http://www.angelfire.com/wa3/hri/Andanotherthing.jpg"
+alt="Cartoons" height=100 width=205></a>
+<P>
+
+</b></font><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#483d8b" size="4"><b>local features</b></font><font size="5" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><br>
+								</font><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">
+								<table border="0" cellpadding="0" cellspacing="0" width="225" bgcolor="white">
+								
+						
+<TR HEIGHT="20" VALIGN="middle">
+				  <TD><IMG SRC="http://www.angelfire.com/wa3/hri/new2.gif" BORDER="0"></TD>
+				  <TD WIDTH="25">&nbsp;</TD>
+
+	<tr>			<td><a 
+				 
+href="http://www.angelfire.com/wa3/hri/dutch.html"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"> A Dutch influence on the Nanda people? <br>
+	<P><tr>	
+<td><a 
+				 
+href="http://www.angelfire.com/wa3/hri/constitution.html"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">The "Constitution" six years old 
+<br>
+	<P><tr>	
+
+<td><a 
+				 
+href="http://www.angelfire.com/wa3/hri/outback.html"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Year of the Outback ? 2002 <br>
+	<P><tr>			
+
+					<td><a href="http://www.angelfire.com/wa3/hri/ornamentalism.html"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">A British success story?<br>
+				<br>
+											</font></a></td>
+									</tr>
+									<tr>
+										<td><a href="http://www.angelfire.com/wa3/hri/queen.html"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">The Queens speech on her 50th anniversary<br>
+											<br>
+											</font></a></td>
+									</tr>
+									<tr>
+										<td><a href="http://www.angelfire.com/wa3/hri/visit_HRPP.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Visit Hutt River!</font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"> For an alternative outback experience; visit the rural Principality!<br>
+											</font><font face="Times New Roman,Georgia,Times" size="2"><br>
+											</font></td>
+									</tr>
+									<tr>
+										<td><a href="http://www.angelfire.com/wa3/hri/inthenews.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">In the news - old news clippings<font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+											<br>
+											</font></td>
+									</tr>
+									<tr>
+																			</tr>
+									<tr>
+										<td><a href="http://www.angelfire.com/wa3/hri/english.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Jon English and the Hutt River national anthem</font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"> <br>
+											<br>
+											</font></td>
+											<br>
+											</font></td>
+									</tr>
+									
+</tr>		<td><a href="http://www.angelfire.com/wa3/hri/stamps.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Advertisement: collect Hutt River stamps!<font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+
+											<br>
+											</font></td>
+								
+								</table>
+								</font><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><br>
+								</font><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#483d8b" size="4"><b>international issues</b></font><font size="5" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><br>
+</font><font face="Arial,Geneva">
+								<table border="0" cellpadding="0" cellspacing="0" width="225">
+<TR HEIGHT="20" VALIGN="middle">
+				  <TD><IMG SRC="http://www.angelfire.com/wa3/hri/new2.gif" BORDER="0"></TD>
+				  <TD WIDTH="25">&nbsp;</TD>
+									<tr>
+										<td><a href="http://www.angelfire.com/wa3/hri/tokelau2.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"> Tokelau closer to self-determination </font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+<P><tr>
+<td><a href="http://www.angelfire.com/wa3/hri/refugee.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"> World Refugee Day 20th June </font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+<P><tr>
+
+
+									<tr>
+										<td><a href="http://www.angelfire.com/wa3/hri/eelam.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"> Tamil Eelam has set up a de-facto State </font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+<P><tr>
+
+													<tr>
+										<td><a href="http://www.angelfire.com/wa3/hri/swazi.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"> Swaziland - Democratic gains in new Constitution </font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+<P><tr>
+
+<td><a href="http://www.angelfire.com/wa3/hri/ssomaliland.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"> Somaliland: The little country that could </font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+<P><tr>
+
+
+<td><a href="http://www.angelfire.com/wa3/hri/antigua.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"> Antigua and Barbuda - Passport Office to be revamped </font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+<P><tr>
+
+
+<td><a href="http://www.angelfire.com/wa3/hri/bvi.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"> The British Virgin Islands criticise OECD for unfairly targeting small countries  </font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+<P><tr>
+<td><a 
+
+href="http://www.angelfire.com/wa3/hri/chinapng.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"> Chinese ambassador puts pressure on Papua New Guinea </font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+<P><tr>
+<td><a 
+
+
+				  				  									href="http://www.angelfire.com/wa3/hri/henry.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"> Cooks minister accuses OECD of financial terrorism </font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+<P><tr><td><a 
+<td><a 
+
+
+<td><a href="http://www.angelfire.com/wa3/hri/papua.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"> Vanuatu promotes Papua freedom to UN </font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+<P><tr><td><a 
+href="http://www.angelfire.com/wa3/hri/cook.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Little support for Cook Islands overseas seat </font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+
+<P>	<tr><td><a href="http://www.angelfire.com/wa3/hri/taiwan.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Solomon Islands urges UN recognition of Taiwan </font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+<P>					<tr><td><a href="http://www.angelfire.com/wa3/hri/palau.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Johannesburg summit: Palau president disappointed</font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+<P>	<tr><td><a href="http://www.angelfire.com/wa3/hri/oecd.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">OECDs Financial Action Task Force has suspended the publication of its annual blacklist </font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+<P>				<tr><td><a href="http://www.angelfire.com/wa3/hri/tuvalu.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Tuvalu threats to sue Australia and the U.S.</font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+<P>						<tr>
+										<td><a 	
+href="http://www.angelfire.com/wa3/hri/dominica"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Exchange of Information Bill enacted in the Parliament of Dominica </font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+<P>								<tr>
+										<td><a 	
+href="http://www.angelfire.com/wa3/hri/belize.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Belize and Grenada: Economic citizenship programme ends after pressure</font></a><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><br>
+	<P>								<tr>
+										<td><a href="http://www.angelfire.com/wa3/hri/tonga.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Tonga closes its ship register<br>
+											<br>
+											</font></td>
+											</tr>
+									<tr>
+									<td><a href="http://www.angelfire.com/wa3/hri/timor.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Vanuatu reaffirms support for East Timor <br>
+									<br>			</font></td>
+									</tr><tr>
+<td><a href="http://www.angelfire.com/wa3/hri/niue.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Niue off shore banking law repealed  <br>
+		<P>								<tr>
+	<td><a 				href="http://www.angelfire.com/wa3/hri/tokelau.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Tokelau wants to remain part of New Zealand 
+<br>
+											<br>
+											</font></td>
+											</tr>
+			
+									<tr>
+																					</font></a></td>
+									</tr>
+								</table>
+								</font><font size="5" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><br>
+								</font><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#483d8b" size="4"><b>useful information</b></font><font size="5" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><br><P>
+																<table border="0" cellpadding="0" cellspacing="0" width="225">
+									<tr>
+										<td><a href="http://www.angelfire.com/wa3/hri/entitylist.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Areas with various international legal and political status <br><P>
+	<tr> <td><a href="http://www.angelfire.com/wa3/hri/calendar.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">National days<br>
+								<br>			</font></td>
+									</tr><tr>
+<td><a href="http://www.rulers.org/"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Rulers<font></a></td>
+
+								</table>
+								</font></a><font size="5" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><br>
+								</font></td>
+							<td width="349" valign="top" bgcolor="white"><font size="6" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#483d8b"><b>APRIL 2005<br>
+								</b></font><font size="5" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#483d8b"><b><br>
+								<table border="0" cellpadding="4" cellspacing="0" bgcolor="white">
+									<tr>
+																			</tr>
+									<tr>
+										<td align="left" valign="top">
+											<div align="left">
+												<font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#191970" size="1">Welcome to the online newsprovider to the world wide community of citizens and friends of the Hutt River Province Principality. The Hutt River Independent is an independent discussion channel and provider of news for the overseas community concerned with the future of HRPP. We also provide international news from small states and territories around the world.<br>
+												</font><br>
+											</div>
+										</td>
+									</tr>
+								</table></b></font>  <font face="Arial,Geneva"><b><br><P></b></font><font size="5" face="Arial,Geneva"><b>  35 YEARS SINCE SECESSION <br>
+								</b></font>
+								<p><font face="Times New Roman,Georgia,Times">On the 21st of April Hutt River Province Principality celebrates it's 35th anniversary of Sovereignty. But the celebrations which will be conducted in the weekend 23/24th of April is a two-fold celebration for Princess Shirley and Prince Leonard which also celebrates on the 19th of April 58 years of marriage. The celebrations is open for everybody and there will be many activities in Hut River during the weekend. 
+<br>
+<font face="Arial,Geneva"><b><br><P></b></font><font size="5" face="Arial,Geneva"><b>  The Czech republic and Hutt River <br>
+								</b></font>
+								<p><font face="Times New Roman,Georgia,Times">In a speech by the Czech Minister of Interior he draws a comparison between the Hutt River Province and the Czech province of Valassko. Valassko is the border area between the Czech Republic and Slovakia that is located in the Carpathian Mountains. The Czech Government want to promote tourism and development in this area. <p>
+
+In that relation the Minister said that they have been looking at Hutt River and its influence on the regional economy. He said in the speech: ?Even though it is a case of a remote farm, it is economically very significant, because, apart from agriculture, the most important sources of income in this microregion are tourism,numismatics, philately (stamp colecting) and "positive immigration policy".?<br>
+
+
+ <font face="Arial,Geneva"><b><br><P></b></font><font size="5" face="Arial,Geneva"><b>  Difficult situation for Hutt River citizens on Haiti <br>
+								</b></font>
+								<p><font face="Times New Roman,Georgia,Times">In the Caribbean nation where an armed revolt to unseat the President who now has fleed the country, the Hutt River Province has a small community of twelve. <br>
+
+<a href=" http://www.angelfire.com/wa3/hri/haiti.html"> Read more</a> 
+
+
+</b></font><font face="Arial,Geneva"><b><br><P></b></font><font size="5" face="Arial,Geneva"><b>  Communicate with other Citizens<br>
+								</b></font>
+								<p><font face="Times New Roman,Georgia,Times">On the 15th of February the Legislation Committee launched a discussion forum on it?s website. The Legislation Committee invites all Hutt River citizens to join the discussion forum at the restricted pages. <p>We hope that as many nationals as possible will visit the forum and that it will contribute to a better communication between our citizens around the world. <p>For citizens that have not received access to the restricted pages must<a href=" http://www.huttriver.info/overseas.htm"> click here.</a> and apply for a password and username.
+
+
+
+
+</b></font><font face="Arial,Geneva"><b><br><P></b></font><font size="5" face="Arial,Geneva"><b>  Stories from the emotional heart of Australia<br>
+								</b></font>
+								<p><font face="Times New Roman,Georgia,Times">   Hutt River Province and Prince Leonard participates in an exhibition at the National Museum of Australia. The exhibition ?Eternity? brings to life the personal stories of 50 ordinary and extraordinary Australians.<P>
+
+This exhibition can be viewed at the National Museum of Australia in Canberra but those that does not live in the nearby area can visit the exhibition on the internet. <P>
+
+
+<a href="http://www.nma.gov.au/exhibitions/eternity/stories_from_the_emotional_heart_of_australia/"> Visit the National Museum of Australia</a><br>
+
+
+</b></font><font face="Arial,Geneva"><b><br><P></b></font><font size="5" face="Arial,Geneva"><b>  The Legislation Committee launches new website<br>
+								</b></font>
+								<p><font face="Times New Roman,Georgia,Times">   The Legislation Committee of the Hutt River Province has launched a new website.  <p>You will be able to look at recent proposed legislative changes to the Principality and read about the background and legality of the secession.<p>
+
+One exciting feature which will only be available to nationals of the Principality is access to a restricted area which will be password protected. <p>
+The Legislation Committee hope that this page will strengthen the communication between nationals and encourage all nationals to visit the website and register for regular news updates.<p>
+
+<a href="http://www.huttriver.info/"> Visit the Legislation Committee!</a><br>
+
+
+
+<p>
+
+</b></font><font face="Arial,Geneva"><b><br><P></b></font><font size="5" face="Arial,Geneva"><b>  Prince Leonard in Nothampton?s annual event  <br>
+								</b></font>
+								<p><font face="Times New Roman,Georgia,Times">  The Northampton Airing of the quilts is an annual affair on the second Saturday of the WA third term school holidays. <p> Prince Leonard participated together with our representative to South Australia, Maggie Harding.<p>
+
+<a href="http://www.angelfire.com/wa3/hri/quilt.html"> Read more!</a><br>
+
+</b></font><font face="Arial,Geneva"><b><br><P></b></font><font size="5" face="Arial,Geneva"><b>  Happy birthday Prince Leonard!<br>
+								</b></font>
+								<p><font face="Times New Roman,Georgia,Times">   On August 28th Prince Leonard will celebrate his 78th birtday in Hutt River. The Hutt River Independent and the overseas community congratulates him!<p>
+
+<a href="http://www.abc.net.au/dimensions/dimensions_people/Transcripts/s833528.htm"> Read this interview from April by Australian ABC radio</a><br>
+
+
+
+
+<P>
+</b></font><font face="Arial,Geneva"><b><br><P></b></font><font size="5" face="Arial,Geneva"><b>Newly appointed High Representative to the US<br>
+								</b></font>
+								<p><font face="Times New Roman,Georgia,Times">   Dr.David P.Burkart, recently appointed as Earl Marshal of The Hutt River Province, received an Exequatur from Prince Leonard on July 21, 2003 naming him High Representative to the USA . 
+ 
+<P><p>
+
+<a href="http://www.angelfire.com/wa3/hri/david.html "> Read more</a><br>
+
+
+
+
+
+</b></font><font face="Arial,Geneva"><b><br><P></b></font><font size="5" face="Arial,Geneva"><b>Areas with various international legal and political status <br>
+								</b></font>
+								<p><font face="Times New Roman,Georgia,Times">   We are introducing a new section to the Hutt River Independent. On these pages we wish to present a selection of territorial entities which have other legal and political status than the established and recognised States of the world. 
+
+ 
+<P><p>
+
+<a href="http://www.angelfire.com/wa3/hri/entitylist.html "> Read more</a><br>
+
+
+
+</b></font><font face="Arial,Geneva"><b><br><P></b></font><font size="5" face="Arial,Geneva"><b> Help Taiwan Fight SARS<br>
+								</b></font>
+								<p><font face="Times New Roman,Georgia,Times">   In an open letter by Taiwan?s president Chen Shui-bian which was published in the Washington Post 9. may 2003 he wrote the following:<P>
+?The outbreak and spread of severe acute respiratory syndrome, or SARS, has brought illness, death and economic peril to Asia and the rest of the world. It has also drawn attention to Taiwan's exclusion from the World Health Organization. If there was ever a time for my country to be allowed to join the WHO, it is now.?<P>
+ 
+The reason for Taiwan?s non-membership is mainland Chinas claim that Taiwan is only a province of China and thus does not have the right to join the organization without consent from the Chinese government. <P>Among many smaller states has Canada?s House of Commons supported a motion, against the government?s wishes, that Taiwan be granted observer status at the WHO.<P>The Hutt River Independent would in this respect draw the reader?s attention to the statement made by the Foreign Minister of HRPP Prince Arthur W. Casley on the 2. september 1999:<P>?Consistent with the principles of our foreign policy, we recognize Taiwan as one of two sovereign States constituting a divided nation and support its right to self-determination or reunification by mutual agreement between the parties.?
+ 
+<P>
+
+			<P></b></font><font size="5" face="Arial,Geneva"><b> New Earl Marshal of Hutt River Province<br>
+								</b></font>
+								<p><font face="Times New Roman,Georgia,Times">   Prince Leonard has announced the commissioning of Dr. Sir David P. Burkart, General Representative to Florida and the Caribbean Region, as Earl Marshal of Hutt River Province.  The Earl Marshal is charged with oversight of certain aspects of royal ceremonies and protocol, heraldry, chivalry, Orders of Nobility and the like and traditionally holds a high ceremonial ranking in the order of precedence of the goverment.  He is head of the Royal College of Heraldry which deals with grants and registration of arms, design and procurement of regalia, etc.  <P>
+Plans are underway for a revitalized program in which the College of Heraldry will offer registration of qualified existing arms or creation of new arms to the public at large, as well as citizens of Hutt River Province.  In doing so, Hutt River Province will join the limited number of  authorities in Europe and South Africa that offer similar registration services on a fee basis.<P>
+ 
+The office of Earl Marshal has been vacant for some years.  Prince Leonard noted that he was pleased to have Dr. Burkart fill the position.  Sir David stated, "I am pleased but humbled to receive this honor from our Sovereign. I look forward to revitalizing the Royal College of Heraldry to a position of pre-eminence in the field".  Work is underway already on the necessary norms, documents and certificates. <P> Details will be published as soon as available, including at the official HRPP website found at www.huttriverprovinceusa.org   or by e-mail to alembicent@earthlink.net   Residents of Australia with serious inquiries will be referred to the Chief Herald.
+
+ 
+<P>
+
+<P></b></font><font size="5" face="Arial,Geneva"><b> Building plans for a new university in Hutt River<br>
+								</b></font>
+								<p><font face="Times New Roman,Georgia,Times">   Plans for a new university in the Mid West of Australia are underway according to Hutt River Province?s Prince Leonard.<P> In a newly issued article in the Geraldton Guardian the Prince reveals his plans...
+
+ 
+<P>
+
+
+ <br>
+	</font><a href="http://www.geraldtonguardian.com.au/Archives/29012003/News/29012003news.htm"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Read more in the Geraldton Guardian</font></a><br>
+								<br>
+								
+<br>   <p><a href=" http://www.redearthsafaris.com.au ">
+<img src="http://www.angelfire.com/wa3/hri/sp17.GIF "
+alt="Visit W.A. and Hutt River with Red Earth Safaris " height=79 width=299></a><P>									
+	
+														
+																	</b></font>
+								
+								<br>
+					<br>
+							</td>
+						</tr>
+						<tr>
+							<td bgcolor="white" colspan="2"><a href="mailto:hri@huttriver.info"><font size="1" face="verdana,arial,helvetica">Contact the editor</font></a><font size="1" face="verdana,arial,helvetica"><br>
+								Last modified <csobj w="43" h="11" t="DateTime" format="ShortDate" region="0">27. May 2004</csobj><br>
+								<a href="http://www.angelfire.com/wa3/hri/disclaimer.html
+">About the HRI</a><br>
+								&copy;2005 by the Hutt River Independent<br>
+																</font></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+</table>
+</body>
+</html>
+<A HREF="http://beseen.com/">
+<IMG SRC="http://jupiter.beseen.com/hit.counter"
+BORDER=0></A>
+
+<IMG SRC="http://counter.digits.com/wc/-d/4/hri" ALIGN=middle
+      WIDTH=60 HEIGHT=20 BORDER=0 HSPACE=4 VSPACE=2>
+		
+

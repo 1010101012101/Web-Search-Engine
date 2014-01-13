@@ -1,0 +1,875 @@
+<!doctype html>  
+<!-- paulirish.com/2008/conditional-stylesheets-vs-_css-hacks-answer-neither/ --> 
+<!--[if IE 6 ]><html lang="en" class="no-_js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-_js ie7"> <![endif]-->
+<!--[if !(IE 7)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+	<!--
+<title> J-Lab 
+&mdash; Igniting news ideas that work.</title> 
+-->
+<title> J-Lab</title>
+	<meta name="google-site-verification" content="6U2JzUJZR2DNXNF6Fzt0GrcSiUTPqBV34pezfXfHAlA" />
+
+		
+	<meta name="description" content="J-Lab helps journalists and citizens use digital technologies to develop new ways for people to participate in public life with projects on innovations in journalism, citizen media, interactive stories, entrepreneurship, research, training, and publications. " />
+<meta name="rights" content="This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License (http://creativecommons.org/licenses/by-nc-nd/3.0/) unless otherwise stated." />
+<meta name="robots" content="index,follow,archive" />
+	
+	<link rel="shortcut icon" href="http://www.j-lab.org/favicon.ico">
+	<link rel="image_src" href="http://www.j-lab.org/fb_icon.gif" />
+	
+	<link rel="stylesheet" href="/_css/style.css" media="screen">
+	
+
+	<link rel="stylesheet" href="/_css/global.css" media="screen,print">
+
+        <script src="http://www.j-lab.org/_scripts/handlebars.js"></script>
+        <script src="http://www.j-lab.org/_scripts/tabletop.js"></script>
+	<script src="http://www.j-lab.org/_scripts/modernizr-1.6.min.js"></script>
+	<script src="http://www.j-lab.org/_scripts/jquery-1.5.2.min.js"></script>
+	<script src="http://www.j-lab.org/_scripts/jquery-ui-1.8.11.custom.min.js"></script>
+	<script src="http://www.j-lab.org/_scripts/jquery.cycle.min.js"></script>
+	<script src="http://www.j-lab.org/_scripts/jquery.emailSubmit.js"></script>
+	<script src="http://www.j-lab.org/_scripts/jquery.validate.min.js"></script>
+	
+	<script type="text/javascript" src="http://use.typekit.com/crr7oas.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			/* Global */
+			$("#sign_up").validate();
+			$("#leave_a_comment").validate();
+			
+			/* Tabbed Pages */
+			$("#tabbed_content").tabs();
+
+
+		});
+	</script>
+
+
+	
+	
+
+	
+	
+	
+	
+	<!--  Homepage */ -->
+	<script type="text/javascript">
+	$(document).ready(function(){
+	
+		$('#explore_our_projects_new .wrapper').cycle({ 
+		    fx:     'fade', 
+		    prev:   '#mod_prev', 
+		    next:   '#mod_next', 
+		    timeout:  0
+		});
+	
+		$('#featured_module .content').cycle({ 
+	    	fx: 'fade',
+		    speed:  500, 
+		    timeout: 4000,
+			pause: 'true',
+			pauseOnPagerHover: 'true',
+		    pager:  '#featured_navigation', 
+		    pagerAnchorBuilder: paginate
+		});
+
+		function paginate(ind, el)
+		{		
+
+		
+			if (ind == 0) return '<li><a href="#"><img src="http://www.j-lab.org/_uploads/home/news-chops-cover300x.jpg" width="40" height="40" /><p>News Chops: Beefing up the Journalism in Local Public Broadcasting</p></a></li>';									// and so on
+		
+						else if (ind == 1) return '<li><a href="#"><img src="http://www.j-lab.org/_uploads/about/staff/NetJforCarousel_thumb.jpg" width="40" height="40" /><p>Networked Journalism: What Works</p></a></li>';						// and so on
+		
+									else if (ind == 2) return '<li><a href="#"><img src="http://www.j-lab.org/_uploads/about/staff/CoverPage300x2502_thumb.jpg" width="40" height="40" /><p>Engaging Audiences</p></a></li>';			// and so on
+		
+
+		
+		}
+
+	});
+	</script>
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16354168-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+
+<body id="homepage">
+
+     <div id="body_wrapper">
+
+          <div id="header_wrapper">
+
+<header id="header">
+	
+	<hgroup>
+		<h1 id="logo"><a href="http://www.j-lab.org"><img src="http://www.j-lab.org/_images/global/logo.png" width="293" height="111" alt="J-Lab — Igniting news ideas that work"></a></h1>
+	</hgroup>
+
+
+	<nav id="nav_main">
+		<ul>
+			<li class="about "><h3><a href="http://www.j-lab.org/about/">About Us</a></h3>
+				<ul>
+
+	
+		<li ><a href="http://www.j-lab.org/about/jlabstaff" >Staff</a></li>
+	
+		<li ><a href="http://www.j-lab.org/about/jlabboard/" >Advisory Board</a></li>
+	
+		<li ><a href="http://www.j-lab.org/about/supporters/" >Supporters</a></li>
+	
+		<li ><a href="http://www.j-lab.org/about/consulting/" >Consulting</a></li>
+	
+		<li ><a href="http://www.j-lab.org/about/press-releases/" >Press Releases</a></li>
+	
+		<li ><a href="http://www.j-lab.org/about/news/" >J-Lab in the News</a></li>
+	
+		<li ><a href="http://www.j-lab.org/about/history/" >J-Lab History</a></li>
+	
+		<li ><a href="http://www.j-lab.org/about/contact/" >Contact Us</a></li>
+	
+		<li ><a href="http://www.j-lab.org/about/newsletter/" >J-Flash Newsletter</a></li>
+	
+
+</ul>
+			</li>
+		</ul>
+		<ul>
+			<li class="ideas "><h3><a href="http://www.j-lab.org/ideas/">Ideas &amp; Innovation</a></h3>
+				<ul>
+
+	
+		<li ><a href="http://www.j-lab.org/ideas/category/blogically-thinking/">Blogically Thinking</a></li>
+	
+		<li ><a href="http://www.j-lab.org/ideas/category/spotted/">Spotted...</a></li>
+	
+		<li ><a href="http://www.j-lab.org/ideas/category/ideas-we-like/">Ideas We Like</a></li>
+	
+		<li ><a href="http://www.j-lab.org/ideas/category/articles/">Articles</a></li>
+	
+
+</ul>
+			</li>
+		</ul>
+		<ul class="mega_menu_one">
+			<li class="projects "><h3><a href="http://www.j-lab.org/projects/">Projects</a></h3>
+				
+					
+
+
+	<ul class="left">
+		
+			
+				<li><a href="http://www.j-lab.org/projects/networked-journalism/">Networked Journalism<span class="description">Partnering traditional news organizations with hyperlocal news sites.</span></a></li>
+			
+				<li><a href="http://www.j-lab.org/projects/new-media-women-entrepreneurs/">New Media Women Entrepreneurs<span class="description">Awarding start-up funding to women-led news projects.</span></a></li>
+			
+		
+	
+	</ul>
+	<ul class="right">
+	
+		
+			
+			<li><a href="http://www.j-lab.org/projects/knight-batten-awards-for-innovations-in-journalism/">Knight-Batten Awards<span class="description">Rewarding news ideas that enhance opportunities for digital engagement.</span></a></li>
+			
+			<li><a href="http://www.j-lab.org/projects/enterprise-reporting-fund/">Enterprise Reporting Fund<span class="description">A pilot project designed to amplify public affairs journalism in a region.</span></a></li>
+			
+		
+	</ul>
+
+				
+				
+			</li>
+		</ul>
+		<ul class="mega_menu_one">
+			<li class="tools "><h3><a href="http://www.j-lab.org/tools/">Tools</a></h3>
+				
+					
+
+
+	<ul class="left">
+		
+			
+				<li><a href="http://www.j-lab.org/tools/j-learning/">J-Learning<span class="description">Your how-to guide for hyperlocal community media.</span></a></li>
+			
+				<li><a href="http://www.j-lab.org/tools/learning-modules/">Learning Modules<span class="description">Step-by-step instructions to help professional and citizen journalists.</span></a></li>
+			
+		
+	
+	</ul>
+	<ul class="right">
+	
+		
+			
+			<li><a href="http://www.j-lab.org/tools/citzien-media-database/">Community Media Directory<span class="description">Listing of more than 1,000 citizen and community media sites. </span></a></li>
+			
+			<li><a href="http://www.j-lab.org/tools/grant-funding-database/">Grant Funding Database<span class="description">J-Lab tracks grants awarded to news projects. </span></a></li>
+			
+		
+	</ul>
+
+				
+			</li>
+		</ul>
+		<ul class="mega_menu_two">
+			<li class="publications "><h3><a href="http://www.j-lab.org/publications/">Publications</a></h3>
+				<ul>
+
+			
+			<li><a href="http://www.j-lab.org/publications/net-j"><img src="http://www.j-lab.org/_uploads/about/staff/Screen_shot_2012-11-02_at_11.52_.12_AM__thumb.jpg" alt="Networked Journalism: What Works" width="75" height="100" /><span class="title">Networked Journalism: What Works</span> <span class="date">November 27, 2012</span> <span class="description">Lessons from Nine Collaborative Pilot Projects</span></a></li>
+		
+			<li><a href="http://www.j-lab.org/publications/engaging-audiences"><img src="http://www.j-lab.org/_uploads/publications/engaging-audiences/CoverPage190x250.jpg" alt="Engaging Audiences: Measuring Interactions, Engagement and Conversions" width="75" height="100" /><span class="title">Engaging Audiences: Measuring Interactions, Engagement and Conversions</span> <span class="date">May 30, 2012</span> <span class="description">A survey of "digital-first" news sites</span></a></li>
+		
+	
+	<li class="button"><a href="/publications/">View All Publications</a></li>
+</ul>
+			</li>
+		</ul>
+		<ul>
+			<li class="workshops "><h3><a href="http://www.j-lab.org/workshops/">Workshops &amp; Training</a></h3>
+				<ul>
+
+	
+		<li ><a href="http://www.j-lab.org/workshops/category/summits/">Summits</a></li>
+	
+		<li ><a href="http://www.j-lab.org/workshops/category/panels/">Panels</a></li>
+	
+		<li ><a href="http://www.j-lab.org/workshops/category/speeches/">Speeches</a></li>
+	
+		<li ><a href="http://www.j-lab.org/workshops/category/web-chats/">Web Chats</a></li>
+	
+		<li ><a href="http://www.ustream.tv/user/J-Lab">UStream</a></li>
+	
+
+</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<form id="search" method="post" action="http://www.j-lab.org/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="XID" value="a77c719cabfd943a306ad76bcbe544ac0947849c" />
+<input type="hidden" name="ACT" value="35" />
+<input type="hidden" name="results_page" value="/search/" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+		<input type="text" name="keywords" title="Search&hellip;" class="defaultText" value="" />
+		<input type="submit" name="submit" value=""/>
+	</form>
+	
+	<div id="follow_us">Follow Us: &nbsp;|&nbsp;
+		<a href="http://www.facebook.com/InstituteforInteractiveJournalism"><img src="http://www.j-lab.org/_images/global/header/facebook.gif" target="_blank" width="16" height="16" alt="Facebook"></a>&nbsp;|&nbsp;
+		<a href="http://twitter.com/jlab"><img src="http://www.j-lab.org/_images/global/header/twitter.gif" width="16" height="16" target="_blank" alt="Twitter"></a> &nbsp;|&nbsp;
+		<a href="https://www.linkedin.com/company/j-lab"><img src="http://www.j-lab.org/_images/global/header/LinkedIn_Logo16x16.png" width="16" height="16" target="_blank" alt="LinkedIn"></a> &nbsp;|&nbsp;
+		<a href="//plus.google.com/104704743737521149865?prsrc=3" rel="publisher" style="text-decoration:none;">
+<img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="Google+" style="border:0;width:16px;height:16px;"/></a> &nbsp;|&nbsp;
+		<!--<a href="http://apply.j-lab.org/applicant/login/">Login</a>-->
+	</div>
+
+<!-- THIS WIDGET MAY BE DATED	
+		<div id="twitter">
+		<div id="twitter_bird"><img src="http://www.j-lab.org/_images/global/header/twitter_bird.png" width="45" height="31" alt="Twitter Bird"></div>
+		<div id="twitter_feed"></div>
+	</div>
+-->
+
+
+</header>
+</div>
+
+<hr class="hidden"/>
+
+
+          <div id="container">
+
+               <div id="content_wrapper">
+
+                    <div id="content">
+
+                         <div id="left_column">
+
+                              <div id="featured_module">
+
+                                   
+                                   
+                                   <div class="content">
+
+                                        
+
+                                        <div class="entry">
+                                                                                     <div class="image">
+                                                  <a href="http://www.j-lab.org/publications/news-chops"><img src="http://www.j-lab.org/_uploads/home/news-chops-cover300x.jpg" width="300" height="250" /></a>
+                                             </div>
+                                             <div class="copy">
+                                                 <p class="category">FEATURED</p>
+                                                  <h2><a href="http://www.j-lab.org/publications/news-chops">News Chops: Beefing up the Journalism in Local Public Broadcasting</a></h2>
+                                                  <p class="description"><p>
+	Local public broadcasters are find new ways to engage in more local news - especially more investigative journalism &ndash; than ever before. In this report, J-Lab examined various efforts through nine case studies.</p>
+</p>
+                                             </div>
+                                                                                </div>
+
+    
+
+                                        
+
+                                        <div class="entry">
+                                                                                     <div class="image">
+                                                  <a href="http://www.j-lab.org/publications/net-j"><img src="http://www.j-lab.org/_uploads/about/staff/NetJforCarousel_thumb.jpg" width="300" height="250" /></a>
+                                             </div>
+                                             <div class="copy">
+                                                 <p class="category">FEATURED</p>
+                                                  <h2><a href="http://www.j-lab.org/publications/net-j">Networked Journalism: What Works</a></h2>
+                                                  <p class="description"><p>
+	Three years ago, J-Lab funded nine pilot projects that invited eight newspapers and one public radio station to partner with news start-ups in their communities. Results are in! View them here.</p>
+</p>
+                                             </div>
+                                                                                </div>
+
+    
+
+                                        
+
+                                        <div class="entry">
+                                                                                     <div class="image">
+                                                  <a href="http://www.j-lab.org/publications/engaging-audiences/"><img src="http://www.j-lab.org/_uploads/about/staff/CoverPage300x2502_thumb.jpg" width="300" height="250" /></a>
+                                             </div>
+                                             <div class="copy">
+                                                 <p class="category">FEATURED</p>
+                                                  <h2><a href="http://www.j-lab.org/publications/engaging-audiences/">Engaging Audiences</a></h2>
+                                                  <p class="description"><p>
+	Most online news startups say they cannot lasso data to track whether they are turning users into supporters who will help their sites survive. These are among key findings of a new survey, focusing on how &ldquo;digital-first&rdquo; news sites are engaging their audiences and measuring that engagement.</p>
+</p>
+                                             </div>
+                                                                                </div>
+
+    
+
+                                        
+
+                                   </div>
+
+                                   <ul id="featured_navigation">
+
+                                   </ul>
+
+                              </div><!-- #featured_module -->
+
+                              <hr class="hidden"/>
+
+                              <div id="the_latest_new">
+
+                                   <h2>J-Lab Activities</h2>
+
+                                   <div class="wrapper" style="height: 506px">
+
+
+                                        <div class="column first" style="height: 511px">
+                                            
+                                                     <!--added -->    <!--added -->                                              <div class="entry short first" >
+                                                  
+                                                  <div class="copy" style="width: 295px; padding-top: 5px">
+                                                 <span class="image">
+                                                       
+                                                       <a href="http://www.j-lab.org/workshops/category/summits/2013-aejmc-luncheon-journalism-collaborations-what-works/"><img src="http://www.j-lab.org/_uploads/home/aejmc2013100x100.jpg" width="75" height="75" /></a>
+                                                       
+                                                       
+                                                  </span>     
+                                                 <h3><a href="http://www.j-lab.org/workshops/category/summits/2013-aejmc-luncheon-journalism-collaborations-what-works/">Journalism Collaborations: What Works</a></h3>
+                                                       
+
+
+
+
+
+
+
+<p class="category"><a href="http://www.j-lab.org/workshops/">Workshops</a> > <a href="http://www.j-lab.org/workshops/category/panels/">Panels</a></p>
+
+
+
+                                                <p>
+	A panel of journalism innovators talked about building journalism partnerships at AEJMC 2013 on Aug. 10. <strong><a href="http://goo.gl/nc0wMs" target="_blank">See the video</a> </strong>of this J-Lab luncheon on Vimeo.</p>
+                                                  </div>
+                                             </div>
+                                                  
+                                                                                            
+                                                     <!--added -->    <!--added -->                                              <div class="entry short " >
+                                                  
+                                                  <div class="copy" style="width: 295px; padding-top: 5px">
+                                                 <span class="image">
+                                                       
+                                                       <a href="http://www.j-lab.org/ideas/category/blogically-thinking/donors-liking-public-indie-media-partnerships/"><img src="http://www.j-lab.org/_uploads/ideas/blogically_thinking/StLouis_PR_thumb.jpg" width="75" height="75" /></a>
+                                                       
+                                                       
+                                                  </span>     
+                                                 <h3><a href="http://www.j-lab.org/ideas/category/blogically-thinking/donors-liking-public-indie-media-partnerships/">Donors Liking Public-Indie Media Partnerships</a></h3>
+                                                       
+<p class="category"><a href="http://www.j-lab.org/ideas/">Ideas &amp; Innovation</a> > <a href="http://www.j-lab.org/ideas/category/blogically-thinking/">Blogically Thinking</a></p>
+
+
+
+
+
+
+
+
+
+
+                                                <p>
+	Creating public-radio and indie-media partnerships may open new paths to fundraising, station execs told a session a the Public Radio Super-Regional meeting on Nov. 11.</p>
+                                                  </div>
+                                             </div>
+                                                  
+                                                                                            
+                                                     <!--added -->    <!--added -->                                              <div class="entry short " >
+                                                  
+                                                  <div class="copy" style="width: 295px; padding-top: 5px">
+                                                 <span class="image">
+                                                       
+                                                       <a href="http://www.j-lab.org/workshops/category/speeches/the-death-and-re-birth-of-journalism/"><img src="http://www.j-lab.org/_uploads/home/death-rebirth-journalism-presentation100x100.png" width="75" height="75" /></a>
+                                                       
+                                                       
+                                                  </span>     
+                                                 <h3><a href="http://www.j-lab.org/workshops/category/speeches/the-death-and-re-birth-of-journalism/">The Death and Re-birth of Journalism</a></h3>
+                                                       
+
+
+
+
+
+
+
+
+<p class="category"><a href="http://www.j-lab.org/workshops/">Workshops</a> > <a href="http://www.j-lab.org/workshops/category/speeches/">Speeches</a></p>
+
+
+                                                <p>
+	<a href="http://www.j-lab.org/workshops/category/speeches/the-death-and-re-birth-of-journalism/">Check out</a> this presentation by Jan Schaffer, given on Oct. 29 to the Pace Information & Engagement Gathering, at the Pocantico Center in Tarrytown, N.Y.</p>
+                                                  </div>
+                                             </div>
+                                                  
+                                                                                            
+                                            
+                                        </div><!-- .column -->
+                                                    
+                                <!-- replaced by Twitter Feed" in Right Column -->
+                                    <!--    <div class="column">
+                                            
+                                                                                                                                                 <div class="entry short first" >
+                                                  
+                                                  <div class="copy" style="width: 295px; padding-top: 5px">
+                                                 <span class="image">
+                                                       
+                                                       <a href="http://www.j-lab.org/workshops/category/speeches/the-death-and-re-birth-of-journalism/"><img src="http://www.j-lab.org/_uploads/home/death-rebirth-journalism-presentation100x100.png" width="75" height="75" /></a>
+                                                       
+                                                       
+                                                  </span>     
+                                                 <h3><a href="http://www.j-lab.org/workshops/category/speeches/the-death-and-re-birth-of-journalism/">The Death and Re-birth of Journalism</a></h3>
+                                                       
+
+
+
+
+
+
+
+
+<p class="category"><a href="http://www.j-lab.org/workshops/">Workshops</a> > <a href="http://www.j-lab.org/workshops/category/speeches/">Speeches</a></p>
+
+
+                                                <p>
+	<a href="http://www.j-lab.org/workshops/category/speeches/the-death-and-re-birth-of-journalism/">Check out</a> this presentation by Jan Schaffer, given on Oct. 29 to the Pace Information & Engagement Gathering, at the Pocantico Center in Tarrytown, N.Y.</p>
+                                                  </div>
+                                             </div>
+                                                                                            
+                                                                                                                                                 <div class="entry short " >
+                                                  
+                                                  <div class="copy" style="width: 295px; padding-top: 5px">
+                                                 <span class="image">
+                                                       
+                                                       <a href="http://www.j-lab.org/workshops/category/summits/women-media-entrepreneurs-making-new-ideas-happen/"><img src="http://www.j-lab.org/_uploads/home/Storify_2013_WMES200x200.png" width="75" height="75" /></a>
+                                                       
+                                                       
+                                                  </span>     
+                                                 <h3><a href="http://www.j-lab.org/workshops/category/summits/women-media-entrepreneurs-making-new-ideas-happen/">Women Media Entrepreneurs Summit</a></h3>
+                                                       
+
+
+
+
+
+
+<p class="category"><a href="http://www.j-lab.org/workshops/">Workshops</a> > <a href="http://www.j-lab.org/workshops/category/summits/">Summits</a></p>
+
+
+
+
+                                                <p>
+	<strong>Some notable advice from the 9/12/13 summit:</strong></p>
+<p>
+	<em>- Respond to criticism, but don
+                                                  </div>
+                                             </div>
+                                                                                            
+                                        </div><!-- .column --> 
+                                        
+                                        <!-- middle column-->
+                                        <div class="column" style="height: 511px">
+                                            
+                                                                                                                                                 <div class="entry long">
+                                                  <div class="image">
+                                                       
+                                                       <a href="http://www.pbs.org/mediashift/2013/09/how-female-media-entrepreneurs-partner-early-to-grow-revenue-audience/"><img src="http://www.j-lab.org/_uploads/home/MandyJenkins-Screenshot_290X135.png" width="290" height="135" /></a>
+                                                       
+							 
+                                                  </div>
+                                                  <div class="copy">
+                                                       <h3><a href="http://www.pbs.org/mediashift/2013/09/how-female-media-entrepreneurs-partner-early-to-grow-revenue-audience/">Women Media Summit - Check out the Videos</a></h3>
+                                                       
+
+
+
+
+
+
+<p class="category"><a href="http://www.j-lab.org/workshops/">Workshops</a> > <a href="http://www.j-lab.org/workshops/category/summits/">Summits</a></p>
+
+
+
+
+                                                       <p>
+	Video is now available of the 11 presenters at the J-Lab
+                                                  </div>
+                                             </div>
+                                                
+                                                                                            
+                                            
+                                            
+                                                                                                                                            
+                                              <div class="entry short middle first">
+                                             <div class="copy" style="width: 295px; padding-top: 5px">
+                                                 <span class="image">
+                                                       
+                                                       <a href="http://www.j-lab.org/workshops/category/summits/women-media-entrepreneurs-making-new-ideas-happen/"><img src="http://www.j-lab.org/_uploads/home/Storify_2013_WMES200x200.png" width="75" height="75" /></a>
+                                                       
+                                                       
+                                                  </span>      
+                                             <h3><a href="http://www.j-lab.org/workshops/category/summits/women-media-entrepreneurs-making-new-ideas-happen/">Women Media Entrepreneurs Summit</a></h3>
+                                                       
+
+
+
+
+
+
+<p class="category"><a href="http://www.j-lab.org/workshops/">Workshops</a> > <a href="http://www.j-lab.org/workshops/category/summits/">Summits</a></p>
+
+
+
+
+                                                    <span class="description">   <p>
+	<strong>Some notable advice from the 9/12/13 summit:</strong></p>
+<p>
+	<em>- Respond to criticism, but don</span>
+                                                  </div>
+                                             </div>
+                                                
+                                                                                                  
+
+                                        </div><!-- .column -->
+                       
+
+                                   </div><!-- #wrapper -->
+
+                              </div><!-- #the_latest -->
+
+                         </div><!-- #left_column -->
+
+                         <div id="right_column">
+
+                              <div id="explore_our_projects_new">
+
+                                   <h3>Explore Our Projects</h3>
+
+                                   <div id="module_nav">
+                                        <span id="mod_prev">Previous</span> <span id="mod_next">Next</span>
+                                   </div>
+
+                                   <div class="wrapper">
+
+                                        
+                                        <div class="entry">
+                                             <div class="image">
+                                                  <a href="http://www.j-lab.org/projects/new-media-women-entrepreneurs/"><img src="http://www.j-lab.org/_uploads/projects/explore_nmwe.jpg" width="290" height="130" /></a>
+                                             </div>
+                                             <div class="copy">
+                                                  <h4><a href="http://www.j-lab.org/projects/new-media-women-entrepreneurs/">New Media Women Entrepreneurs</a></h4>
+                                                  <p>The McCormick New Media Women Entrepreneurs project provides micro grants to help women launch entrepreneurial news and information projects</p>
+                                             </div>
+                                        </div>
+                                        
+                                        <div class="entry">
+                                             <div class="image">
+                                                  <a href="http://www.j-lab.org/projects/networked-journalism/"><img src="http://www.j-lab.org/_uploads/home/explore_networked.jpg" width="290" height="130" /></a>
+                                             </div>
+                                             <div class="copy">
+                                                  <h4><a href="http://www.j-lab.org/projects/networked-journalism/">Networked Journalism</a></h4>
+                                                  <p>The Net-J project encourages collaboration among traditional news outlets and at least five entrepreneurial startups with funding for a year</p>
+                                             </div>
+                                        </div>
+                                        
+                                        <div class="entry">
+                                             <div class="image">
+                                                  <a href="http://www.j-lab.org/projects/enterprise-reporting-fund/"><img src="http://www.j-lab.org/_uploads/projects/explore_enterprise.jpg" width="290" height="130" /></a>
+                                             </div>
+                                             <div class="copy">
+                                                  <h4><a href="http://www.j-lab.org/projects/enterprise-reporting-fund/">Enterprise Reporting Fund</a></h4>
+                                                  <p>The Philadelphia Enterprise Reporting Fund is a pilot project to incentivize collaboration on in-depth reporting.</p>
+                                             </div>
+                                        </div>
+                                        
+
+                                   </div>
+
+                              </div><!-- #explore_our_projects -->
+
+                              <hr class="hidden"/>
+
+                              
+                              <a href="http://www.j-lab.org/about/consulting/" id="advertisement"><img src="http://www.j-lab.org/_uploads/about/staff/consulting3.jpg" width="320" height="70" /></a>
+                              
+
+                              <hr class="hidden"/>
+
+              <!-- Twitter Feed -->
+               <div id="the_latest_new">
+                                           
+<h2 style="text-align: center; color: #FFF; padding: 6px 10px 7px 10px; margin: 0; font-size: 17px; font-family: 'museo-slab-1','museo-slab-2', Arial, serif; font-weight: 500; text-shadow: 0px -1px 0px #000; background-color: #003F89; background-image: -webkit-gradient(linear, left bottom,left top, color-stop(0.25, rgb(14,34,71)), color-stop(0.75, rgb(0,64,137)) ); background-image: -moz-linear-gradient( center bottom, rgb(14,34,71) 25%, rgb(0,64,137) 75% );" ><a style="color: #FFF; " href="https://twitter.com/search/?q=%40jlab+OR+%40janjlab" title="Search for @jlab OR @janjlab on Twitter">@Jlab and @JanJlab on Twitter</a></h2>
+<div style="margin-bottom: 15px; clear:both; background:white"></div>
+
+<div style="margin-left:auto; margin-right:auto; width: 320px; height: 512px;  overflow: hidden; "><!--background-color: rgba(0, 83, 155, .75);-->
+<div style="margin-left:auto; margin-right:auto; margin-top: 6px; width: 253px; height: 485px; border-radius: 10px;  overflow: hidden; background-color: rgba(0, 83, 155, .75);">
+
+                                            <a style="" class="twitter-timeline" width="253" height="485" align="center" href="https://twitter.com/search?q=%40jlab+OR+%40janjlab" data-widget-id="402854361765662720">"Tweets about @Jlab OR @JanJlab"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+</div>
+
+                         </div><!-- #right_column -->
+
+
+                    </div><!-- #content -->
+
+                    
+     
+               </div><!-- #content_wrapper -->
+
+          </div><!-- #container -->
+
+     <hr class="hidden"/>
+
+<div id="footer_wrapper">
+
+<footer id="footer">
+
+	<div id="col_a">
+
+		<h2>About J-Lab</h2>
+		<h3>J-Lab is a journalism catalyst that funds new approaches to journalism, researches best practices and shares practical insights gained from years of working with news creators and news gatherers.</h3>
+		<a href="http://www.american.edu/soc/"><img src="http://www.j-lab.org/_images/global/ausoc.png" width="96" height="79" alt="American University School of Communications" /></a>
+		<p>J-Lab is a center of the School of Communication at American University.</p>
+
+	</div><!-- #col_a -->
+
+	<div id="col_b">
+
+		<h2>J-Lab Newsletter</h2>
+		<p>J-Flash, our e-newsletter, is packed full of information you need to know and learning opportunities.</p>
+		<p class="button"><a href="http://www.j-lab.org/about/newsletter/">Sign Up Today</a></p>
+		<h2 class="last">Connect With Us</h2>
+		<a href="http://twitter.com/jlab" class="icon" ><img src="http://www.j-lab.org/_images/global/footer/sm_twitter.gif" width="32" height="32" alt="Twitter" /></a>
+		<a href="http://www.facebook.com/InstituteforInteractiveJournalism" class="icon" ><img src="http://www.j-lab.org/_images/global/footer/sm_facebook.gif" width="32" height="32" alt="Facebook" /></a>
+		<a href="http://vimeo.com/jlab" class="icon" ><img src="http://www.j-lab.org/_images/global/footer/sm_vimeo.gif" width="32" height="32" alt="Vimeo" /></a>
+		<a href="https://www.linkedin.com/company/j-lab" class="icon" ><img src="http://www.j-lab.org/_images/global/footer/sm_linkedin.png" width="32" height="32" alt="LinkedIn" /></a>
+		<!-- <a href="http://www.j-lab.org/rss/" class="icon" ><img src="http://www.j-lab.org/_images/global/footer/sm_rss.gif" width="32" height="32" alt="RSS" /></a> -->
+		<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2FInstituteforInteractiveJournalism&amp;layout=standard&amp;show_faces=true&amp;width=210&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=85" style="border:none; overflow:hidden; width:210px; height:85px;"></iframe>
+
+	</div><!-- #col_b -->
+
+	<div id="col_c">
+		
+		<h2>Site Map</h2>
+
+		<nav id="nav_footer">
+			<div id="col_c1">
+				<ul>
+					<li><h3><a href="http://www.j-lab.org/about/">About Us</a></h3>
+						<ul>
+
+	
+		<li ><a href="http://www.j-lab.org/about/jlabstaff" >Staff</a></li>
+	
+		<li ><a href="http://www.j-lab.org/about/jlabboard/" >Advisory Board</a></li>
+	
+		<li ><a href="http://www.j-lab.org/about/supporters/" >Supporters</a></li>
+	
+		<li ><a href="http://www.j-lab.org/about/consulting/" >Consulting</a></li>
+	
+		<li ><a href="http://www.j-lab.org/about/press-releases/" >Press Releases</a></li>
+	
+		<li ><a href="http://www.j-lab.org/about/news/" >J-Lab in the News</a></li>
+	
+		<li ><a href="http://www.j-lab.org/about/history/" >J-Lab History</a></li>
+	
+		<li ><a href="http://www.j-lab.org/about/contact/" >Contact Us</a></li>
+	
+		<li ><a href="http://www.j-lab.org/about/newsletter/" >J-Flash Newsletter</a></li>
+	
+
+</ul>
+					</li>
+				</ul>
+				<ul>
+					<li class="active"><h3><a href="http://www.j-lab.org/ideas/">Ideas &amp; Innovation</a></h3>
+						<ul>
+
+	
+		<li ><a href="http://www.j-lab.org/ideas/category/blogically-thinking/">Blogically Thinking</a></li>
+	
+		<li ><a href="http://www.j-lab.org/ideas/category/spotted/">Spotted...</a></li>
+	
+		<li ><a href="http://www.j-lab.org/ideas/category/ideas-we-like/">Ideas We Like</a></li>
+	
+		<li ><a href="http://www.j-lab.org/ideas/category/articles/">Articles</a></li>
+	
+
+</ul>
+					</li>
+				</ul>
+			</div><!-- #col_c1 -->
+
+			<div id="col_c2">
+				<ul>
+					<li><h3><a href="http://www.j-lab.org/projects/">Projects</a></h3>
+						
+
+	<ul>
+	
+		<li ><a href="http://www.j-lab.org/projects/knight-community-news-network/">Knight Community News Network</a></li>
+	
+		<li ><a href="http://www.j-lab.org/projects/knight-batten-awards-for-innovations-in-journalism/">Knight-Batten Awards for Innovations in Journalism</a></li>
+	
+		<li ><a href="http://www.j-lab.org/projects/networked-journalism/">Networked Journalism</a></li>
+	
+		<li ><a href="http://www.j-lab.org/projects/new-media-women-entrepreneurs/">New Media Women Entrepreneurs</a></li>
+	
+		<li ><a href="http://www.j-lab.org/projects/enterprise-reporting-fund/">Enterprise Reporting Fund</a></li>
+	
+		<li ><a href="http://www.j-lab.org/projects/new-voices/">New Voices</a></li>
+	
+	</ul>
+
+
+					</li>
+				</ul>
+				<ul>
+					<li><h3><a href="http://www.j-lab.org/tools/">Tools</a></h3>
+						
+
+	<ul>
+	
+		<li ><a href="http://www.j-lab.org/tools/j-learning/">J-Learning</a></li>
+	
+		<li ><a href="http://www.j-lab.org/tools/grant-funding-database/">Grant Funding Database</a></li>
+	
+		<li ><a href="http://www.j-lab.org/tools/citzien-media-database/">Community Media Directory</a></li>
+	
+		<li ><a href="http://www.j-lab.org/tools/learning-modules/">Learning Modules</a></li>
+	
+		<li ><a href="http://www.j-lab.org/tools/case-studies/">Case Studies</a></li>
+	
+		<li ><a href="http://www.j-lab.org/tools/other-resources/">Other Resources</a></li>
+	
+		<li ><a href="http://www.j-lab.org/tools/university-community-news-sites/">University Community Sites</a></li>
+	
+		<li ><a href="http://www.j-lab.org/tools/civic-journalism-resources/">Civic Journalism Resources</a></li>
+	
+	</ul>
+
+
+					</li>
+				</ul>
+			</div><!-- #col_c2 -->
+			
+			<div id="col_c3">
+				<ul>
+					<li><h3><a href="http://www.j-lab.org/publications/">Publications</a></h3>
+						<ul>
+							<li><a href="http://www.j-lab.org/publications/">Featured Publications</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li><h3><a href="http://www.j-lab.org/workshops/">Workshops &amp; Training</a></h3>
+						<ul>
+
+	
+		<li ><a href="http://www.j-lab.org/workshops/category/summits/">Summits</a></li>
+	
+		<li ><a href="http://www.j-lab.org/workshops/category/panels/">Panels</a></li>
+	
+		<li ><a href="http://www.j-lab.org/workshops/category/speeches/">Speeches</a></li>
+	
+		<li ><a href="http://www.j-lab.org/workshops/category/web-chats/">Web Chats</a></li>
+	
+		<li ><a href="http://www.ustream.tv/user/J-Lab">UStream</a></li>
+	
+
+</ul>
+					</li>
+				</ul>
+			</div><!-- #col_c3 -->
+		</nav>
+		
+	</div><!-- #col_c -->
+
+	<hr class="hidden"/>
+
+	<div id="copyright">
+		<p>&copy; 2011, J-Lab / American University School of Communication</p>
+		<p class="privacy_policy"><a href="http://www.j-lab.org/privacy-policy/">Privacy Policy</a></p>
+	</div><!-- #copyright -->
+	
+</footer>
+
+</div>
+
+     </div>
+</body>
+</html>

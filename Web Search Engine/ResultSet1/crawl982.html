@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
+<head>
+<meta http-equiv='X-UA-Compatible' content='IE=EmulateIE7' />
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<title>Newspaper Home</title>
+<link rel='icon' href='http://trove.nla.gov.au/static/img/favicon.ico' type='image/x-icon'/>
+<link rel='stylesheet' href='/static/ndp/oxideDesign/css/jquery.bookmark.css' type='text/css' media='screen'/>
+<link rel='stylesheet' href='/static/ndp/oxideDesign/css/style.css' type='text/css' media='screen' />
+<link rel='stylesheet' href='/static/ndp/oxideDesign/css/styleTrove.css' type='text/css' media='screen' />
+<!--[if lte IE 8]><link rel='stylesheet' type='text/css' href='/static/ndp/oxideDesign/css/styleTrove-ie8.css' /><![endif]-->
+<!--[if lt IE 7]><link rel='stylesheet' href='/static/ndp/oxideDesign/css/style-ie.css' type='text/css' media='screen' /><![endif]-->
+<!--[if IE 7]><link rel='stylesheet' href='/static/ndp/oxideDesign/css/style-ie7.css' type='text/css' media='screen' /><![endif]-->
+<!--[if lt IE 7]><link rel='stylesheet' href='/static/ndp/oxideDesign/css/styleTrove-ie6.css' type='text/css' media='screen' /><![endif]-->
+<script type='text/javascript' src='/static/ndp/oxideDesign/js/jquery-1.2.6.min.js'></script>
+<script type='text/javascript' src='/static/ndp/oxideDesign/js/jquery.ui/ui.core.js'></script>
+<script type='text/javascript' src='/static/ndp/oxideDesign/js/jquery.ui/ui.slider.js'></script>
+<script type='text/javascript' src='/static/ndp/oxideDesign/js/jquery.ui/ui.accordion.js'></script>
+<script type='text/javascript' src='/static/ndp/oxideDesign/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/static/ndp/oxideDesign/js/jquery.selection.js'></script>
+<script type='text/javascript' src='/static/ndp/oxideDesign/js/jquery.contextmenu.js'></script>
+<script type='text/javascript' src='/static/ndp/oxideDesign/js/jquery.autogrow-textarea.js'></script>
+<script type='text/javascript' src='/static/ndp/oxideDesign/js/ndp.js'></script>
+<script type='text/javascript' src='/static/ndp/oxideDesign/js/articleOCRCorrection.js'></script>
+<script type='text/javascript' src='/static/ndp/oxideDesign/js/articleMiscJS.js'></script>
+<script type='text/javascript' src='/static/ndp/oxideDesign/js/oxideScript.js'></script>
+<script type='text/javascript' src='/static/ndp/oxideDesign/js/jquery.ui/ui.draggable.js'></script>
+<script type='text/javascript' src='/static/ndp/oxideDesign/js/resizeFrames.js'></script>
+<script type='text/javascript' src='/static/ndp/oxideDesign/js/jquery.ui/jquery.bookmark.js'></script>
+<script type='text/javascript'>
+var kfhomepage=false;
+</script>
+</head>
+<body spellcheck='true' id='home' class='article wcag'>
+<div id='container'>
+
+<!-- Trove header //-->
+<div id='headerdiv'>
+<div id='headerTrove'>
+<a href='/'><img width='136' height='44' alt='Trove Austalia logo' class='logo-trove' src='/static/ndp/oxideDesign/img/trove-logo-del.gif'/></a>
+<ul id='navglobal'>
+<li><span>Trove:</span> <a href='/'>Home</a></li>
+<li><a href='/general/about'>About</a></li>
+<li><a href='/general/completedlist'>Site news</a></li>
+<li><a href='/system/counts'>Statistics</a></li>
+<li><a href='/tag'>Tags</a></li>
+<li><a href='/general/faq'>Help</a></li>
+<li><a href='/forum'>Forum</a></li>
+<li class='navlast'><a href='http://librariesaustraliaref.nla.gov.au/reft100.aspx?key=TROVE&amp;qnudfta16=somewhereInNewspapers'>Contact us</a></li>
+</ul>
+<div id='dnm'><a href='/ndp/del/home'><img src='/static/ndp/oxideDesign/img/dig-news-logo.gif' alt='Digitised newspapers and more' width='272' height='17' class='logo-dig-news' /></a>
+<ul id='navnewspapers'>
+<li><a href='/newspaper'>Home</a></li>
+<li><a href='/ndp/del/about'>About</a></li>
+<li><a href='/ndp/del/browse'>Browse</a></li>
+<li class='navlast'><a href='/general/newspapers_help'>Help</a></li>
+</ul></div>
+
+<ul id='navaccount'>
+<li
+ class='navlast'><a href='/signup' class='userprofile'>Sign up</a><a href='/login' class='login'>Login</a></li>
+</ul></div>
+</div> <!-- headerdiv END //-->
+
+<div id='contentall'>
+<script src='/static/ndp/script/browseByDate.js' type='text/javascript'></script>
+<script type='text/javascript'>
+var titleId = -1;
+</script>
+<script type='text/javascript'>
+function tempDown() {
+alert("The Australian Newspapers Service and Trove storage system will be enhanced this weekend.\n \n" +"As a consequence, some functions such as logging in, signing up, " +"correcting newspaper text and adding tags and comments will be disabled between 5pm (Eastern) this Saturday 29th May and 5pm Sunday 30th May.\n \n" +"The entire system will be unavailable between 5pm and 8pm Sunday 30th May.\n \n" +"We apologise for the inconvenience.") ;
+return false ;}
+</script>
+<div id='column'>
+<span class='tagline'></span>
+
+<h3 id='homeSearchPrompt'>Find an article</h3>
+<form action='/newspaper/result' id='search' method='get'>
+	<fieldset>
+<input class='text' name='q' id='searchbox' type='text' title='Search for'/><input class='button' value='Search Articles' type='submit'/>
+    <a href='/ndp/del/search?adv=y'>Advanced Search</a>
+	</fieldset>
+</form>
+	<h3>Find an issue</h3>
+
+		<div id='findContainer'><div class='title box'>
+			<h4><span>by</span> Title</h4>
+			<ol>
+				<li><a href='/ndp/del/title/35'>The Sydney Morning Herald</a></li>
+				<li><a href='/ndp/del/title/13'>The Argus</a></li>
+				<li><a href='/ndp/del/title/9'>Northern Territory Times and Gazette</a></li>
+				<li><a href='/ndp/del/title/16'>Brisbane Courier</a></li>
+				<li><a href='/ndp/del/title/112'>The Australian Women's Weekly</a></li>
+			</ol>
+			<p class='buttons'><a href='/ndp/del/titles'>Show all titles</a></p>
+		</div>
+		<div class='state box'>
+			<h4><span>by</span> State</h4>
+			<ul>
+				<li class='act'><a href='/ndp/del/titles?state=ACT' title='Australian Capital Territory'></a></li>
+				<li class='nsw'><a href='/ndp/del/titles?state=New South Wales' title='New South Wales'></a></li>
+				<li class='vic'><a href='/ndp/del/titles?state=Victoria' title='Victoria'></a></li>
+				<li class='qld'><a href='/ndp/del/titles?state=Queensland' title='Queensland'></a></li>
+				<li class='sa'><a href='/ndp/del/titles?state=South Australia' title='South Australia'></a></li>
+				<li class='wa'><a href='/ndp/del/titles?state=Western Australia' title='Western Australia'></a></li>
+				<li class='nt'><a href='/ndp/del/titles?state=Northern Territory' title='Northern Territory'></a></li>
+				<li class='tas'><a href='/ndp/del/titles?state=Tasmania' title='Tasmania'></a></li>
+				<li class='actword'><a href='/ndp/del/titles?state=ACT' title='Australian Capital Territory'>ACT</a></li>
+				<li class='nswword'><a href='/ndp/del/titles?state=New South Wales' title='New South Wales'>NSW</a></li>
+				<li class='vicword'><a href='/ndp/del/titles?state=Victoria' title='Victoria'>VIC</a></li>
+				<li class='qldword'><a href='/ndp/del/titles?state=Queensland' title='Queensland'>QLD</a></li>
+				<li class='saword'><a href='/ndp/del/titles?state=South Australia' title='South Australia'>SA</a></li>
+				<li class='waword'><a href='/ndp/del/titles?state=Western Australia' title='Western Australia'>WA</a></li>
+				<li class='ntword'><a href='/ndp/del/titles?state=Northern Territory' title='Northern Territory'>NT</a></li>
+				<li class='tasword'><a href='/ndp/del/titles?state=Tasmania' title='Tasmania'>TAS</a></li>
+			</ul>
+		</div>
+		<div class='date box'>
+
+			<h4><span>by</span> Date</h4>
+<p class='offscreen'>1. Select a year to see which months have issues in the following month calendar.</p>				<form action='' method='get'><div><label for='date-year' class='offscreen' style='display:block;'>Select a year</label>
+				<div id='yearSelector'><select id='date-year'><option>loading...</option></select></div><p class='offscreen'>2. Select a month to see which days have issues in the following day calendar.</p>
+			<div id='monthDisplay'></div>
+<p class='offscreen'>3. Select a day to view the issue.</p>			<div id='daySelector'></div>
+
+</div></form>
+</div>
+</div><!-- findContainer END//--></div><!-- Column END//-->
+<script type='text/javascript'>var fitViewerToWindow = false;kfhomepage=false;</script>
+<link rel="stylesheet" href="/static/ndp/gsiv-1.0.1/assets/styles/gsiv.css" />
+<script type="text/javascript" src="/static/ndp/gsiv-1.0.1/assets/js/EventUtils.js"></script>
+<script type="text/javascript" src="/static/ndp/gsiv-1.0.1/assets/js/GSIV_NLA.js"></script>
+
+<script type="text/javascript">
+<!--
+var viewerBean = null;
+var maximized = false;
+
+var lastZoomLevel = 3;
+var imageService = '/ndp/imageservice/';
+
+var allSizes = [5, 15, 25, 35, 45, 55, 65, 100];
+
+function initializeGraphic(e) {
+	if (pageId == null) return ;
+	// opera triggers the onload twice
+	if (viewerBean == null) createViewerBean(pageId, highlightAreaArray) ;
+//	viewerBean.addViewerZoomedListener(this) ;
+}
+
+function reinitializeGraphic(e) {
+
+	if (viewerBean) viewerBean.resize() ;	
+}
+
+function gotoAtTopLeft(x, y) { // kkf doesnt work yet
+	var level = viewerBean.levels[viewerBean.zoomLevel];
+	var maxLevel = viewerBean.levels[viewerBean.maxZoomLevel];
+
+	var newx = x * level.scale / maxLevel.scale + level.offset.x + viewerBean.x + viewerBean.width / 2 - 20 ;
+	var newy = y * level.scale / maxLevel.scale + level.offset.y + viewerBean.y + viewerBean.height / 2 - 20 ;
+
+ var t = { 'x': newx , 'y': newy} ;
+ viewerBean.recenter(t, false) ;
+}
+
+function createViewerBean(fileId, highlightAreaArray) {
+	viewerBean = null;
+	var rescaleFactor = allSizes[lastZoomLevel] / 100 ;
+	initialX = initialX * 1.00 * rescaleFactor - 30 ; if (initialX < 0) initialX = 0 ;
+	initialY = initialY *  1.00 * rescaleFactor - 30 ; if (initialY < 0) initialY = 0 ;
+
+	viewerBean = new GSIV('viewer', {
+			tileBaseUri: imageService + 'nla.news-page' + fileId,
+			tileSize: 256,
+			tilePrefix: 'tile-',
+			tileExtension: 'jpg',
+// maxZoom is set by the image server
+//			maxZoom: 5,
+			initialZoom: lastZoomLevel,
+			initialCoords: { 'x' : -initialX, 'y' : -initialY },
+//			initialPan: { 'x' : .29, 'y' : .06 },
+			highlightAreas: highlightAreaArray,
+			blankTile: '/static/ndp/gsiv-1.0.1/assets/gfx/blank.gif',
+			loadingTile: '/static/ndp/gsiv-1.0.1/assets/gfx/blank.gif'
+	});
+	if (typeof fitViewerToWindow == 'undefined' || fitViewerToWindow) viewerBean.fitToWindow(0) ;	
+	viewerBean.init();
+//	viewerBean.addViewerZoomedListener(this) ;
+}
+
+// uses the callback format GSIV.{className}Handler
+GSIV.maximizeHandler = function(e) {
+	if (maximized) {
+		// HACK: remove auto-fit to window (this needs to be a function)
+		viewerBean.border = -1;
+		document.body.style.padding = '10px';
+		document.getElementById('header').style.display = 'block';
+		document.getElementById('footer').style.display = 'block';
+		document.getElementById('viewer').style.width = '100%';
+		document.getElementById('viewer').style.height = '400px';
+	}
+	else {
+		document.body.style.padding = '0';
+		document.getElementById('header').style.display = 'none';
+		document.getElementById('footer').style.display = 'none';
+		// HACK allow auto-fit to window (this needs to be a function)
+		viewerBean.border = 0;
+		viewerBean.resize();
+	}
+	maximized = !maximized;
+}
+EventUtils.addEventListener(window, 'load', initializeGraphic, false);
+EventUtils.addEventListener(window, 'resize', reinitializeGraphic, false);
+-->
+</script>
+
+<script type="text/javascript">
+var initialX = 262;
+var initialY = 250;
+var pageId = '10266413' ;
+var highlightAreaArray= null;
+var noSplitter = true;
+</script>
+<div id='content'>
+<div class='today'>
+<h3>On this day</h3>
+<h4><a href='/ndp/del/issue/1276259'>Newcastle Morning Herald & Miners' Advoc..., Saturday 12 December 1931</a></h4>
+<div class='help'>
+<p><strong>Navigation tips</strong> for the example newspaper page below:</p>
+<ul>
+<li><strong>Scroll</strong> with the scrollbars or your scrollwheel.</li>
+<li><strong>Pan</strong> by clicking and dragging the image.</li>
+<li><strong>Zoom</strong> with the zoom controls in the bottom right.</li>
+</ul>
+</div>
+</div>
+<div id="viewer">
+	<div class="well"><!-- --></div>
+	<div id="viewersurface" class="surface"><!-- --></div>
+	<div class="controls">
+		<h4>Zoom</h4>
+		<a class="plus" href="javascript:void(0);">plus</a>
+		<div class="slider">
+			<span class="thumb">thumb</span>
+			<span class="callout"></span>
+		</div>
+		<a class="minus" href="javascript:void(0);">minus</a>
+	</div>
+	<div class="scrollbar scroll-x">
+		<a class="left" href="javascript:void(0);">left</a>
+		<div class="slider">
+			<span class="thumb">thumb</span>
+		</div>
+		<a class="right" href="javascript:void(0);">right</a>
+	</div>
+	<div class="scrollbar scroll-y">
+		<a class="up" href="javascript:void(0);">up</a>
+		<div class="slider">
+			<span class="thumb">thumb</span>
+		</div>
+		<a class="down" href="javascript:void(0);">down</a>
+	</div>
+<!--
+	<div class="image">
+		<div class="wrapper">
+			<img alt="" src="" />
+		</div>
+	</div>
+-->
+</div>
+
+<script type='text/javascript'>$('#viewer').append('<p class="buttons" id="readarticle"><a href="javascript:showArticle(135619186, 10266413, 3);">Read this article</a></p>');</script>
+</div>
+<!-- NDP footer START //-->
+<div id='footer'>
+<div class='fame box'>
+<h5><a href='/ndp/del/hallOfFame'>Top text-correctors</a></h5>
+<ol>
+<li><a href='/userProfile?user=user:public:JohnWarren'>JohnWarren</a> <span>(2265314)</span></li>
+<li><a href='/userProfile?user=user:public:annmanley'>annmanley</a> <span>(1746963)</span></li>
+<li><a href='/userProfile?user=user:public:NeilHamilton'>NeilHamilton</a> <span>(1316009)</span></li>
+<li><a href='/userProfile?user=user:public:John.F.Hall'>John.F.Hall</a> <span>(1218843)</span></li>
+<li><a href='/userProfile?user=user:public:maurielyn'>maurielyn</a> <span>(1174703)</span></li>
+</ol></div>
+<div class='notes box'>
+<h5>Recent comments</h5>
+<ol>
+<li><a href='/ndp/del/article/12794151'>KERR, William - born 1826 in Paisley Sco...</a> <span>created 2013-12-12 14:03:36.0 by <a href='/userProfile?user=user:public:Webby'>Webby</a></span></li>
+<li><a href='/ndp/del/article/61289595'>This section contains the views of the S...</a> <span>created 2013-12-12 12:46:46.0 by <a href='/userProfile?user=user:public:JamesFrederick'>JamesFrederick</a></span></li>
+</ol>
+</div>
+<div class='tags box'>
+<h5>Recent tags</h5>
+<ul class='tags'>
+<li><a href='/newspaper/result?l-publictag=Carroll marriage'>Carroll marriage</a></li>
+<li><a href='/newspaper/result?l-publictag=Morrissey'>Morrissey</a></li>
+<li><a href='/newspaper/result?l-publictag=Daylesford railway'>Daylesford railway</a></li>
+<li><a href='/newspaper/result?l-publictag=approaching marriage'>approaching marriage</a></li>
+<li><a href='/newspaper/result?l-publictag=Michael - death'>Michael - death</a></li>
+</ul>
+>> <a href='/tag'>All tags</a>
+</div>
+</div>
+<div id='footerTrove'> <!-- Footer Trove START //-->
+<p>National Library of Australia</p>
+<ul id='navfooter'>
+<li><a href='/general/api'>API</a></li><li><a href='/general/about#disclaimer'>Disclaimer</a></li>
+<li><a href='/general/privacy'>Privacy</a></li>
+<li><a href='/general/termsofuse'>Terms of Use</a></li>
+<li class='navlast'><a href='/general/copyright'>Copyright</a></li>
+</ul>
+<span class='cnrleft'></span>   
+<span class='cnrright'></span>
+</div>  <!-- Footer Trove END //-->
+
+</div> <!-- Newspapers Content END//-->
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount','UA-8745111-2']);
+_gaq.push (['_gat._anonymizeIp']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</div>
+</body></html>
+

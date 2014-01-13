@@ -1,0 +1,1822 @@
+
+  <!DOCTYPE html>
+  <html>
+
+     <head>
+      <meta charset="utf-8">
+      <title>Featured | The Herald-Dispatch</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="description"
+            content="Featured items on the Homepage" />
+      
+      <script type="text/javascript"
+              src="http://www.herald-dispatch.com/!/assets/jquery/0"></script>
+      <script type="text/javascript"
+              src="http://www.herald-dispatch.com/!/assets/bootstrap/0/js/bootstrap.js"></script>
+      <script type="text/javascript"
+              src="http://www.herald-dispatch.com/!/assets/js/0/bootstrap-dropdown.js"></script>
+      <script type="text/javascript"
+              src="http://www.herald-dispatch.com/!/assets/mediamatch/0"></script>
+      <script type="text/javascript"
+              src="http://www.herald-dispatch.com/!/assets/enquire.min.js/0"></script>
+      <script type="text/javascript"
+              src="http://www.herald-dispatch.com/!/assets/modernizer/0"></script>
+
+      <!-- OAS Ad Server -->
+      <script type="text/javascript">OAS_url ='http://oascentral.herald-dispatch.com/RealMedia/ads/'</script>
+
+      
+        
+          <script type="text/javascript">OAS_sitepage = 'herald-dispatch/homepage'</script>
+        
+      
+
+      
+        <script type="text/javascript">
+          OAS_listpos_desktop = 'x01,x02,Top,Left,Middle,Right,Bottom,x05';
+          OAS_listpos_tablet = 'x01,x02,Top,Left,Middle,Right,Bottom,x05';
+          OAS_listpos_mobile = 'x01,x02,Top,Left,Middle,Right,Bottom,x05';
+          </script>
+      
+
+      <script type="text/javascript">
+        var OAS_listpos = '';
+        // change which OAS_listpos to use
+
+        enquire
+          .register("screen and (min-width:980px)", function() {
+              //console.log("desktop handler min width 980px");
+              OAS_listpos = OAS_listpos_desktop;
+          })
+          .register("screen and (min-width:768px) and (max-width:979px)", function() {
+              //console.log("tablet handler min width 768px");
+              OAS_listpos = OAS_listpos_tablet;
+          })
+          .register("screen and (max-width:600px)", function() {
+              //console.log("mobile handler");
+              OAS_listpos = OAS_listpos_mobile;
+          }).listen();
+          //console.log('OAS Listpos ' + OAS_listpos);
+      </script>
+
+      <script type="text/javascript">
+        //configuration
+        OAS_query = '';
+        OAS_target = '_top';
+        //end of configuration
+        OAS_version = 10;
+        OAS_rn = '001234567890'; OAS_rns = '1234567890';
+        OAS_rn = new String (Math.random()); OAS_rns = OAS_rn.substring (2, 11);
+        function OAS_NORMAL(pos) {
+          document.write('<A HREF="' + OAS_url + 'click_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + '?' + OAS_query + '" TARGET=' + OAS_target + '>');
+          document.write('<IMG SRC="' + OAS_url + 'adstream_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + '?' + OAS_query + '" BORDER=0><' + '/A>');
+        }
+      </script>
+
+      <script type="text/javascript">
+        OAS_version = 11;
+        if (navigator.userAgent.indexOf('Mozilla/3') != -1 || navigator.userAgent.indexOf('Mozilla/4.0 WebTV') != -1)
+          OAS_version = 10;
+        if (OAS_version >= 11)
+          document.write('<SCR' + 'IPT LANGUAGE=JavaScript1.1 SRC="' + OAS_url + 'adstream_mjx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '?' + OAS_query + '"><\/SCRIPT>');
+      </script>
+
+      <script type="text/javascript">
+        document.write('');
+        function OAS_AD(pos) {
+          if (OAS_version >= 11)
+            OAS_RICH(pos);
+          else
+            OAS_NORMAL(pos);
+        }
+      </script>
+
+    <script type="text/javascript"
+            src="http://www.herald-dispatch.com/@@/js.api/zcjquery.js">
+    </script>
+
+    <!-- <script type="text/javascript" tal:attributes="src here/++resource++js.api/sso.js"></script> -->
+
+    <script type="text/javascript">
+       // var site_url = 'http://www.herald-dispatch.com';
+       // var sso_api = new zc.sso.API(site_url);
+    </script>
+
+      
+      
+
+      <link rel="alternate" type="application/rss+xml"
+            title="RSS"
+            href="http://www.herald-dispatch.com/atom" />
+       
+
+       <link rel="stylesheet"
+             href="http://www.herald-dispatch.com/!/assets/bootstrap/0/css/bootstrap.css" />
+       <link rel="stylesheet"
+             href="http://www.herald-dispatch.com/!/assets/bootstrap/0/css/bootstrap-responsive.css" />
+      <!--
+      TODO: Update this file once global_dev.css is no longer a dev version
+      <link tal:attributes="href assets/css/global.css" href="assets/css/global.css" rel="stylesheet"/>
+      -->
+      <link rel="stylesheet"
+            href="http://www.herald-dispatch.com/!/assets/global_dev/0" />
+      <!-- <link tal:attributes="href assets/eedition-style" rel="stylesheet"/> -->
+      
+        <link rel="stylesheet"
+              href="http://www.herald-dispatch.com/!/assets/hd_css/3" />
+      
+
+       
+       
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!--[if IE]>
+        <style>
+          .navbar-fixed-top {position:static; margin-bottom:10px}
+          body {padding-top: 0px}
+        </style>
+        <![endif]-->
+
+       <!-- Google Analytics -->
+       
+            <script type="text/javascript"> var ga_id = 'UA-2621936-1'</script>
+            <script type="text/javascript">
+
+              var _gaq = _gaq || [];
+              _gaq.push(['_setAccount', ga_id]);
+              _gaq.push(['_trackPageview']);
+
+              (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              })();
+
+            </script>
+       
+
+      
+        
+     
+     
+        
+        
+     
+
+     </head>
+
+     <body class="homepage">
+
+       <!-- Facebook API -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+       <!-- End Facebook API -->
+
+      <header>
+       <!-- start zone-top-links -->
+       <div id="zone-top-links">
+          <nav class="navbar navbar-fixed-top hidden-phone hidden-print">
+             <div class="navbar-inner">
+                <div class="container">
+          <div class="row-fluid">
+            <a class="brand nav-header visible-phone">My profile</a>
+            <div class="pull-right">
+              <ul class="nav nav-pills">
+                
+                  <li class="hidden-phone">
+                    <a href="http://media.herald-dispatch.com/hotjobs">Jobs</a>
+                  </li>
+                
+                
+                  <li class="hidden-phone">
+                    <a href="http://media.herald-dispatch.com/cars">Cars</a>
+                  </li>
+                
+                
+                  <li class="hidden-phone">
+                    <a href="http://media.herald-dispatch.com/trulia/">Homes</a>
+                  </li>
+                
+                
+                  <li class="hidden-phone">
+                    <a href="http://www.hdclassifieds.com">Classifieds</a>
+                  </li>
+                
+                
+                  <li class="hidden-phone">
+                    <a href="http://yellowpages.herald-dispatch.com/huntington+wv.z.html">Yellow Pages</a>
+                  </li>
+                
+                
+                  <li class="hidden-phone">
+                    <a href="http://www.coupons.com/couponweb/Offers.aspx?pid=14773&amp;zid=ut96&amp;nid=10&amp;bid=alk090912093601888fbf44913&amp;opid=14773">Coupons</a>
+                  </li>
+                
+                
+                  <li class="hidden-phone">
+                    <a href="http://huntingtonheralddispatch.wv.newsmemory.com/">E-Paper</a>
+                  </li>
+                
+                
+                  <li class="hidden-phone">
+                    <a href="http://www.herald-dispatch.com/specialsections/visitorsguide">Visitors</a>
+                  </li>
+                
+                
+                  <li class="hidden-phone">
+                    <a href="http://media.herald-dispatch.com/forms/Services/">Contact Us</a>
+                  </li>
+                
+                
+                  <li class="hidden-phone">
+                    <a href="https://ssm.herald-dispatch.com/ss70/huntin02/sub/newstart/new_start_by_address.jsp">Subscribe</a>
+                  </li>
+                
+                
+                  <li class="hidden-phone">
+                    <a href="https://ssm.herald-dispatch.com/ss70/huntin02/sub/login/login.jsp">Manage your account</a>
+                  </li>
+                
+                
+              </ul>
+            </div><!-- /.pull-right -->
+            <div class="visible-desktop topnav-social">
+              
+    
+   <a rel="external"
+      href="http://www.facebook.com/theheralddispatch">
+      <image src="http://www.herald-dispatch.com/!/assets/img/0/icon-facebook.png" /></a>
+
+
+   <a rel="external"
+      href="http://twitter.com/@heralddispatch">
+      <image src="http://www.herald-dispatch.com/!/assets/img/0/icon-twitter.png" /></a>
+
+
+
+   
+   <a rel="external"
+      href="http://www.herald-dispatch.com/atom">
+      <image src="http://www.herald-dispatch.com/!/assets/img/0/icon-rss.png" /></a>   
+
+
+            </div>
+            <script>
+                    // sso_api.check_status({
+                    //      success: function(sso_data) {
+
+                    //          if (sso_data.authenticated) {
+                    // $("#logout").show();
+                    // $("#login").hide();
+                    // $("#register").hide();
+                    //          }
+                    //      }
+                    //  });
+            </script>
+        </div><!-- /.row-fluid -->
+                </div>
+          </div>
+          </nav>
+       </div>
+       <!-- end zone-top-links -->
+
+       <!-- start zone-branding-->
+       <div id="zone-branding" class="container">
+
+          <div class="row-fluid">
+           <div class="span8 site-logo">
+             <a href="http://www.herald-dispatch.com">
+               <img src="http://www.herald-dispatch.com/!/assets/hd_logo.png/3"
+                    alt="The Herald-Dispatch" />
+             </a>
+           </div>
+
+<!--       <div class="span4 weather hidden-phone">
+              <span style="display: block !important;">
+                 <a tal:attributes="href string:http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:${address_zip}.1.99999&bannertypeclick=wu_clean2day; title string:${address_city}, ${address_state} Weather Forecast">
+                  <img tal:attributes="src string:http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_clean2day_cond&airportcode=${weather_station}&ForcedCity=${address_city}&ForcedState=${address_state}&zipcode=${address_zip}&language=EN; alt string:Find more about Weather in ${address_city}, ${address_state}" width="300" />
+                 </a>
+              </span>
+           </div> -->
+
+           <div class="span4 search hidden-phone">
+               <form class="form-search" method="GET"
+                     action="http://www.herald-dispatch.com/search">
+          <div class="controls">
+                      <div class="input-append">
+                         <input type="text" class="search-query span9" name="q" />
+                         <button type="submit" class="btn">Search</button>
+                      </div>
+          </div>
+               </form>
+           </div>
+         </div><!-- end row -->
+       </div>
+       <!-- end zone-branding-->
+
+       <hr class="hidden-phone" />
+
+       <!-- start zone-leaderboard -->
+       <div id="zone-leaderboard">
+          <div class="clearfix container" style="text-align:center">
+              <div id="weather-block" class="pull-right">
+                <div class="visible-desktop">
+                <div>
+<div id="weather_brief">
+	<div id="weather_summary"><a href="http://media.herald-dispatch.com/weather">
+		<img class="icon" src="http://media.herald-dispatch.com/weather/icons/07.gif" title="Cloudy" alt="Cloudy" />
+		<p class="current_temp">33°F</p>
+		<p class="weather_type">Cloudy</p>
+		<p>wind 6 mph</p>
+	</a></div>
+	<div id="weather_hourly">
+		<p>12 am: 27°F<img src="http://media.herald-dispatch.com/weather/icons_sm/38.gif" title="Mostly Cloudy" alt="Mostly Cloudy" /></p>
+<p>2 am: 23°F<img src="http://media.herald-dispatch.com/weather/icons_sm/35.gif" title="Partly Cloudy" alt="Partly Cloudy" /></p>
+<p>4 am: 20°F<img src="http://media.herald-dispatch.com/weather/icons_sm/34.gif" title="Mostly Clear" alt="Mostly Clear" /></p>
+<p>6 am: 18°F<img src="http://media.herald-dispatch.com/weather/icons_sm/33.gif" title="Clear" alt="Clear" /></p>
+	</div>
+</div>
+<a class="smalllink" href="http://media.herald-dispatch.com/weather">More Weather</a>
+</div>
+                </div>
+              </div><!-- /.weather-block -->
+              <div class="ad-ldrboard iab-ldrbrd hidden-phone">
+    
+   <script type="text/javascript">OAS_AD('Top');</script>  
+
+</div>
+              <div class="ad-corner hidden-tablet hidden-phone"
+                   style="display: inline; height: 90px;">
+    
+   <script type="text/javascript">OAS_AD('x01');</script>  
+
+</div>
+          </div>
+       </div>
+       <!-- end zone-leaderboard -->
+
+
+
+       <!-- start zone-main-nav -->
+       <div id="zone-main-nav" class="hidden-print">
+          <nav class="main-nav">
+              <div class="navbar container">
+                 <div class="navbar-inner">
+          <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+           </button>
+          <div class="nav-collapse collapse">
+                   <ul class="nav">
+
+                     <li class="hidden-desktop hidden-tablet">
+                 <div class="search">
+                     <form class="form-search" method="GET"
+                           action="http://www.herald-dispatch.com/search">
+                        <div class="input-append">
+                           <input type="text" class="search-query" name="q" />
+                           <button type="submit" class="btn">Search</button>
+                        </div>
+                     </form>
+                 </div>
+                     </li>
+                    <li><a href="http://www.herald-dispatch.com">Home</a></li>
+                     
+                       
+                         <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                             News<b class="caret"></b>
+                           </a>
+                             <ul class="dropdown-menu">
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/news">News</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/news/ohio">Ohio News</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/news/putnam">Putnam News</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/news/marshall">Marshall University News</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/news/communities">Communities</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://hosted.ap.org/dynamic/fronts/WESTVIRGINIAHEADS?SITE=WVHUN&amp;SECTION=news&amp;TEMPLATE=hddefault">West Virginia News</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://hosted.ap.org/dynamic/fronts/HOME?SITE=WVHUN&amp;SECTION=news&amp;TEMPLATE=hddefault">Nation/World News</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://media.herald-dispatch.com/data_library/">Data Library</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/news/huntingtoninbloom">Huntington in Bloom</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/specialsections/100years">100 Years with the H-D</a>
+                               </li>
+                             </ul>
+                          </li>
+                       
+                       
+                     
+                     
+                       
+                         <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                             Sports<b class="caret"></b>
+                           </a>
+                             <ul class="dropdown-menu">
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/sports">Sports</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/sports/marshall">Marshall Sports</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/sports/highschool">High School Sports</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/sports/youth">Youth Sports</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://customwire.ap.org/dynamic/fronts/SPORTS?SITE=WVHUN&amp;SECTION=sports&amp;TEMPLATE=hddefault">National Sports</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://media.herald-dispatch.com/mucrash/">Marshall Plane Crash</a>
+                               </li>
+                             </ul>
+                          </li>
+                       
+                       
+                     
+                     
+                       
+                         <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                             Features<b class="caret"></b>
+                           </a>
+                             <ul class="dropdown-menu">
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/features">Features</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://news.herald-dispatch.com/calendar/">Tri-State Events Calendar</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://media.herald-dispatch.com/forms/hdinfo/clubscene_form.asp">Club Scene</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/life/celebrations">Celebrations</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://news.herald-dispatch.com/diningguide/">Dining Guide</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/life/healthsource">Health Source</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/specialsections/healthrevolution">Health Revolution</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://media.herald-dispatch.com/ap/aphealthvideos.html">Health Videos</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://www.udigtv.com/privatelabel2/hhd/">TV Listings</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://www.uclick.com/client/hwv/sudoc/">Sudoku</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://kidscoop.com/section_fronts/kids/">Kid Scoop</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://media.herald-dispatch.com/nie/">Newspapers in Education</a>
+                               </li>
+                             </ul>
+                          </li>
+                       
+                       
+                     
+                     
+                       
+                         <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                             Business<b class="caret"></b>
+                           </a>
+                             <ul class="dropdown-menu">
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/business">Business</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://customwire.ap.org/dynamic/fronts/TECHNOLOGY?SITE=WVHUN&amp;SECTION=business&amp;TEMPLATE=hddefault">AP Technology</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://media.herald-dispatch.com/apmoney/">AP Money</a>
+                               </li>
+                             </ul>
+                          </li>
+                       
+                       
+                     
+                     
+                       
+                         <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                             Opinions<b class="caret"></b>
+                           </a>
+                             <ul class="dropdown-menu">
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/opinions">Opinions</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://media.herald-dispatch.com/blog/">Blogs</a>
+                               </li>
+                             </ul>
+                          </li>
+                       
+                       
+                     
+                     
+                       
+                       
+                         <li>
+                           <a
+    href="http://news.herald-dispatch.com/obituaries/index.php">Obituaries</a>
+                         </li>
+                       
+                     
+                     
+                       
+                         <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                             Multimedia<b class="caret"></b>
+                           </a>
+                             <ul class="dropdown-menu">
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/multimedia">Photo Galleries</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://www.herald-dispatch.com/videos">Videos</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://media.herald-dispatch.com/ap/NDNnationalvideo.html">National Video</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://hosted.ap.org/dynamic/files/specials/homepage/index2.html?SITE=WVHUN&amp;SECTION=news&amp;TEMPLATE=hddefault">AP Photos</a>
+                               </li>
+                               <li>
+                                 <a
+    href="http://herald-dispatch.mycapture.com/mycapture/category.asp">Photo and Page Reprints</a>
+                               </li>
+                             </ul>
+                          </li>
+                       
+                       
+                     
+                     
+                       
+                       
+                         <li>
+                           <a
+    href="http://herald-dispatch.upickem.net/upickem/registration/login.asp?contestid=101758">Football Pick'Em</a>
+                         </li>
+                       
+                     
+                     
+                       
+                       
+                         <li>
+                           <a
+    href="http://www.herald-dispatch.com/specialsections/visitorsguide">Visitors Guide</a>
+                         </li>
+                       
+                     
+          
+            <li class="visible-phone">
+              <a href="http://media.herald-dispatch.com/hotjobs">Jobs</a>
+            </li>
+          
+          
+            <li class="visible-phone">
+              <a href="http://media.herald-dispatch.com/cars">Cars</a>
+            </li>
+          
+          
+            <li class="visible-phone">
+              <a href="http://media.herald-dispatch.com/trulia/">Homes</a>
+            </li>
+          
+          
+            <li class="visible-phone">
+              <a href="http://www.hdclassifieds.com">Classifieds</a>
+            </li>
+          
+          
+            <li class="visible-phone">
+              <a href="http://yellowpages.herald-dispatch.com/huntington+wv.z.html">Yellow Pages</a>
+            </li>
+          
+          
+            <li class="visible-phone">
+              <a href="http://www.coupons.com/couponweb/Offers.aspx?pid=14773&amp;zid=ut96&amp;nid=10&amp;bid=alk090912093601888fbf44913&amp;opid=14773">Coupons</a>
+            </li>
+          
+          
+            <li class="visible-phone">
+              <a href="http://huntingtonheralddispatch.wv.newsmemory.com/">E-Paper</a>
+            </li>
+          
+          
+            <li class="visible-phone">
+              <a href="http://www.herald-dispatch.com/specialsections/visitorsguide">Visitors</a>
+            </li>
+          
+          
+            <li class="visible-phone">
+              <a href="http://media.herald-dispatch.com/forms/Services/">Contact Us</a>
+            </li>
+          
+          
+            <li class="visible-phone">
+              <a href="https://ssm.herald-dispatch.com/ss70/huntin02/sub/newstart/new_start_by_address.jsp">Subscribe</a>
+            </li>
+          
+          
+            <li class="visible-phone">
+              <a href="https://ssm.herald-dispatch.com/ss70/huntin02/sub/login/login.jsp">Manage your account</a>
+            </li>
+          
+                   </ul>
+        </div> <!-- ./nav-collapse collapse -->
+                 </div><!-- end navbar-inner -->
+              </div><!-- end navbar container -->
+          </nav>
+       </div>
+       <!-- end zone-main-nav -->
+
+     </header>
+     <!-- end header -->
+
+     <!-- start zone-breaking -->
+     <div id="zone-breaking">
+        <div>
+    
+    
+
+   
+ 
+
+  </div>
+     </div>
+     <!-- end zone-breaking -->
+
+     <!-- start zone-content -->
+     <div id="zone-content" class="container">
+
+       <div class="row-fluid">
+          <!-- Allow for full page width -->
+          <div>
+        <div class="row-fluid">
+
+  
+    
+      <div class="span4">
+        
+  
+    
+
+     
+    <div class="carousel slide" id="widget-3X4FF3UL">
+
+      <div class="featured">
+        <div class="carousel-inner">
+           
+          
+            
+            <div class="item active" id="0">
+             
+                <a href="http://www.herald-dispatch.com/x780149891/Herd-puts-16-on-All-C-USA-team">
+                 <div class="carousel-img"
+                      style="background-image:url('http://d1csi9vjsd9t3h.cloudfront.net/archive/x1968861696/g2580000000000000003c8398487dceb0f1728ad8ac7b1ab76ec1bb774e.jpg')">
+                 </div>
+                 </a>
+               
+
+             <div class="captions">
+                <h2 class="small">
+                  <a href="http://www.herald-dispatch.com/x780149891/Herd-puts-16-on-All-C-USA-team">Herd has 16 on All-C-USA</a>
+                </h2>
+                <div class="muted"><p>
+	Marshall had 16 players named Monday to the All-CUSA team, its most since joining the league in 2005. All-conference voting was conducted among the 14 head coaches.</p>
+</div>
+             </div>
+           </div><!-- /.item -->
+           
+          
+          
+            
+            <div class="item" id="1">
+             
+                <a href="http://www.herald-dispatch.com/x955016845/19-pounds-of-marijuana-seized-one-arrested">
+                 <div class="carousel-img"
+                      style="background-image:url('http://d1csi9vjsd9t3h.cloudfront.net/archive/x780149859/g258000000000000000facb1c450089a42b0d6552eca3a7a1cc2ddb0799.jpg')">
+                 </div>
+                 </a>
+               
+
+             <div class="captions">
+                <h2 class="small">
+                  <a href="http://www.herald-dispatch.com/x955016845/19-pounds-of-marijuana-seized-one-arrested">19 pounds of pot seized </a>
+                </h2>
+                <div class="muted"><p>
+	IRONTON &#8212; Two packages containing about 19 pounds of marijuana were confiscated by U.S. postal inspectors and Lawrence County Drug Task Force members after they were delivered to two separate Ironton residents.</p>
+</div>
+             </div>
+           </div><!-- /.item -->
+           
+          
+          
+            
+            <div class="item" id="2">
+             
+                <a href="http://www.herald-dispatch.com/x780149881/HHSs-Tubbs-Seals-earn-top-MSAC-honors">
+                 <div class="carousel-img"
+                      style="background-image:url('http://d1csi9vjsd9t3h.cloudfront.net/archive/x1276899816/g258000000000000000e3ff89a605bfa2249ccb029e384094bd0fb2a8f8.jpg')">
+                 </div>
+                 </a>
+               
+
+             <div class="captions">
+                <h2 class="small">
+                  <a href="http://www.herald-dispatch.com/x780149881/HHSs-Tubbs-Seals-earn-top-MSAC-honors">HHS's Tubbs, Seals honored</a>
+                </h2>
+                <div class="muted"><p>
+	HUNTINGTON -- Huntington High School dominated the major awards on the All-Mountain State Athletic Conference football team.</p>
+</div>
+             </div>
+           </div><!-- /.item -->
+           
+          
+        </div><!-- end .carousel-inner -->
+      </div><!-- end .featured -->
+
+
+       <!-- Carousel nav -->
+       
+       <hr />
+       <div class="carousel-nav clearfix">
+        <div style="text-align:center">
+          <a class="left" href="#widget-3X4FF3UL"
+             data-slide="prev">
+
+            <i class="icon-chevron-left"></i>
+            <span class="muted">Prev</span>
+          </a>
+          <span class="muted" style="margin:10px 0">|</span>
+          <a class="right" href="#widget-3X4FF3UL"
+             data-slide="next">
+            <span class="muted">Next</span>
+            <i class="icon-chevron-right"></i>
+          </a>
+        </div><!-- /.pull-right -->
+      </div><!-- /.clearfix -->
+
+      <!-- ./carousel-list -->    
+
+           
+    </div><!-- /#myCarousel -->
+    
+  
+
+      </div>
+    
+    
+      <div class="span4">
+        
+   <div class="aside-section-tease clearfix">
+      <h4 class="spaced-half"> Recent News</h4>
+      
+         <div class="clearfix">
+            <div class="muted pull-left" style="width:18%">
+               <small>07:00 PM</small>
+            </div>
+            <div class="spaced-half link-title"
+                 style="margin-left:18%">
+            <a href="http://www.herald-dispatch.com/news/briefs/x955017066/W-Va-health-coverage-marketplace-enrollment-rises">W.Va. health coverage marketplace enrollment rises</a>
+            </div>
+         </div>
+      
+      
+         <div class="clearfix">
+            <div class="muted pull-left" style="width:18%">
+               <small>06:03 PM</small>
+            </div>
+            <div class="spaced-half link-title"
+                 style="margin-left:18%">
+            <a href="http://www.herald-dispatch.com/news/briefs/x955017068/Wednesday-night-obituary-update">Wednesday night obituary update</a>
+            </div>
+         </div>
+      
+      
+         <div class="clearfix">
+            <div class="muted pull-left" style="width:18%">
+               <small>05:35 PM</small>
+            </div>
+            <div class="spaced-half link-title"
+                 style="margin-left:18%">
+            <a href="http://www.herald-dispatch.com/news/briefs/x955017064/W-Va-PEIA-to-cut-premiums-by-10-in-fiscal-2015">W.Va. PEIA to cut premiums by $10 in fiscal 2015</a>
+            </div>
+         </div>
+      
+      
+         <div class="clearfix">
+            <div class="muted pull-left" style="width:18%">
+               <small>05:11 PM</small>
+            </div>
+            <div class="spaced-half link-title"
+                 style="margin-left:18%">
+            <a href="http://www.herald-dispatch.com/news/briefs/x955017058/Ohio-panel-opts-to-add-220-area-code-to-740-region">Ohio panel opts to add 220 area code to 740 region</a>
+            </div>
+         </div>
+      
+      
+         <div class="clearfix">
+            <div class="muted pull-left" style="width:18%">
+               <small>03:03 PM</small>
+            </div>
+            <div class="spaced-half link-title"
+                 style="margin-left:18%">
+            <a href="http://www.herald-dispatch.com/news/briefs/x955017050/Gallery-Volunteers-Wrap-Gifts-for-Crickets-Kids-Christmas-Party">Gallery: Volunteers Wrap Gifts for Cricket's Kids Christmas Party</a>
+            </div>
+         </div>
+      
+      
+         <div class="clearfix">
+            <div class="muted pull-left" style="width:18%">
+               <small>02:50 PM</small>
+            </div>
+            <div class="spaced-half link-title"
+                 style="margin-left:18%">
+            <a href="http://www.herald-dispatch.com/news/briefs/x955017024/Gallery-FOP-Christmas-Party">Gallery: FOP Christmas Party</a>
+            </div>
+         </div>
+      
+      
+         <div class="clearfix">
+            <div class="muted pull-left" style="width:18%">
+               <small>02:41 PM</small>
+            </div>
+            <div class="spaced-half link-title"
+                 style="margin-left:18%">
+            <a href="http://www.herald-dispatch.com/news/briefs/x955017022/Gallery-American-Country-Awards">Gallery: American Country Awards</a>
+            </div>
+         </div>
+      
+      <div class="pull-right">
+         <a class="btn btn-mini"
+            href="http://www.herald-dispatch.com/news/briefs">View All &raquo;</a>
+      </div>
+   </div>
+
+      </div>
+    
+    
+      <div class="span4">
+        
+   <script type="text/javascript">OAS_AD('Middle');</script>  
+
+      </div>
+    
+  
+
+  
+
+  
+</div><!-- /.row-fluid -->
+
+  <hr />
+
+        <div class="row-fluid">
+
+  
+    
+      <div class="span4">
+        
+   <script type="text/javascript">OAS_AD('Left');</script>  
+
+      </div>
+    
+    
+      <div class="span4">
+        
+   <div class="aside-section-tease clearfix">
+      <h4 class="spaced-half">Sports</h4>
+      
+         <div class="clearfix">
+            
+            <div class="spaced-half link-title" style="">
+            <a href="http://www.herald-dispatch.com/sports/x955017070/Marshall-getting-ready-for-the-Capital-Classic">Marshall getting ready for the Capital Classic</a>
+            </div>
+         </div>
+      
+      
+         <div class="clearfix">
+            
+            <div class="spaced-half link-title" style="">
+            <a href="http://www.herald-dispatch.com/sports/x955017054/Herds-Cato-Tindal-honored-by-C-USA">Herd's Cato, Tindal honored by C-USA</a>
+            </div>
+         </div>
+      
+      
+         <div class="clearfix">
+            
+            <div class="spaced-half link-title" style="">
+            <a href="http://www.herald-dispatch.com/sports/x780149889/Herd-gears-up-for-Capital-Classic">Herd gears up for Capital Classic</a>
+            </div>
+         </div>
+      
+      
+         <div class="clearfix">
+            
+            <div class="spaced-half link-title" style="">
+            <a href="http://www.herald-dispatch.com/sports/x780149887/Chuck-Landon-MUs-Smith-making-the-most-of-his-opportunity">Chuck Landon: MU's Smith making the most of his opportunity</a>
+            </div>
+         </div>
+      
+      
+         <div class="clearfix">
+            
+            <div class="spaced-half link-title" style="">
+            <a href="http://www.herald-dispatch.com/sports/x780149891/Herd-puts-16-on-All-C-USA-team">Herd has 16 on All-C-USA</a>
+            </div>
+         </div>
+      
+      <div class="pull-right">
+         <a class="btn btn-mini"
+            href="http://www.herald-dispatch.com/sports">View All &raquo;</a>
+      </div>
+   </div>
+
+      </div>
+    
+    
+      <div class="span4">
+        
+   <script type="text/javascript">OAS_AD('Right');</script>  
+
+      </div>
+    
+  
+
+  
+
+  
+</div><!-- /.row-fluid -->
+
+  <hr />
+
+        <div class="row-fluid">
+
+  
+
+  
+
+  
+    
+      <div class="span12">
+        
+	<iframe width="99.999%"
+         src="http://cars.herald-dispatch.com/widgets/motors/featuredAutos?clientId=heralddisp&amp;;pp=5&amp;cols=5&amp;title=Featured%20Vehicles&amp;showAllFeaturedLink=n&amp;nopageview=y&amp;nouniquevisitor=y&amp;showHeader=y&amp;showFooter=y&amp;showBorders=y"
+         style="overflow:scroll" height="240">
+	</iframe>  
+
+      </div>
+    
+  
+</div><!-- /.row-fluid -->
+
+  <hr />
+
+        <!-- /.row-fluid -->
+
+        <div class="row-fluid">
+            <div class="span4">
+                
+    
+
+  <h4 class="spaced widget-title">
+   Photo Galleries
+     <span class="pull-right">
+     <a class="btn btn-mini"
+        href="http://www.herald-dispatch.com/multimedia/galleries">View All &raquo;</a>
+     </span>
+  </h4>
+
+  
+    <div class="media">
+      
+          <a class="pull-left"
+             href="http://www.herald-dispatch.com/multimedia/galleries/x955017072/Gallery-Johnson-United-Methodist-Church-Festival-of-Nine-Lessons-and-Carols">
+            <img src="http://d1csi9vjsd9t3h.cloudfront.net/archive/x780149931/g0780780000000000005e34cc1cd072309e4f6255a30b59fc0d39ee9f05.jpg" width="120" height="80" alt="2013 1212 carols 01" title="2013 1212 carols 01" class="img-polaroid media-object" />
+          </a>
+        
+     <h4 class="media-heading">
+      <a href="http://www.herald-dispatch.com/multimedia/galleries/x955017072/Gallery-Johnson-United-Methodist-Church-Festival-of-Nine-Lessons-and-Carols">Gallery: Johnson United Methodist Church Festival of Nine Lessons and Carols</a>
+    </h4>
+    </div>    
+     <hr />
+  
+  
+    <div class="media">
+      
+          <a class="pull-left"
+             href="http://www.herald-dispatch.com/multimedia/galleries/x955017050/Gallery-Volunteers-Wrap-Gifts-for-Crickets-Kids-Christmas-Party">
+            <img src="http://d1csi9vjsd9t3h.cloudfront.net/archive/x955017026/g0780780000000000006981800c59952afbbc9511ebb6e78f69a52b818f.jpg" width="120" height="92" alt="1212_giftwrapping_01.jpg" title="1212_giftwrapping_01.jpg" class="img-polaroid media-object" />
+          </a>
+        
+     <h4 class="media-heading">
+      <a href="http://www.herald-dispatch.com/multimedia/galleries/x955017050/Gallery-Volunteers-Wrap-Gifts-for-Crickets-Kids-Christmas-Party">Gallery: Volunteers Wrap Gifts for Cricket's Kids Christmas Party</a>
+    </h4>
+    </div>    
+     <hr />
+  
+  
+    <div class="media">
+      
+          <a class="pull-left"
+             href="http://www.herald-dispatch.com/multimedia/galleries/x955017024/Gallery-FOP-Christmas-Party">
+            <img src="http://d1csi9vjsd9t3h.cloudfront.net/archive/x780149899/g078078000000000000205e002540a16e53baac3a22ea7ca2c011b49908.jpg" width="120" height="81" alt="2013 1212 FOPparty 01" title="2013 1212 FOPparty 01" class="img-polaroid media-object" />
+          </a>
+        
+     <h4 class="media-heading">
+      <a href="http://www.herald-dispatch.com/multimedia/galleries/x955017024/Gallery-FOP-Christmas-Party">Gallery: FOP Christmas Party</a>
+    </h4>
+    </div>    
+     <hr />
+  
+  
+    <div class="media">
+      
+          <a class="pull-left"
+             href="http://www.herald-dispatch.com/multimedia/galleries/x955017022/Gallery-American-Country-Awards">
+            <img src="http://d1csi9vjsd9t3h.cloudfront.net/archive/x955016992/g07807800000000000046deed8f20d564bb3ca01b8382b213ce20f092e1.jpg" width="120" height="85" alt="1211 country 14" title="1211 country 14" class="img-polaroid media-object" />
+          </a>
+        
+     <h4 class="media-heading">
+      <a href="http://www.herald-dispatch.com/multimedia/galleries/x955017022/Gallery-American-Country-Awards">Gallery: American Country Awards</a>
+    </h4>
+    </div>    
+     <hr />
+  
+  
+    <div class="media">
+      
+          <a class="pull-left"
+             href="http://www.herald-dispatch.com/multimedia/galleries/x955016935/Gallery-ThunderTones">
+            <img src="http://d1csi9vjsd9t3h.cloudfront.net/archive/x780149849/g07807800000000000003fb2a73990a4dc3a5a8d4932bc5f01c62212d5a.jpg" width="120" height="80" alt="2013 1212 Thundertones 08" title="2013 1212 Thundertones 08" class="img-polaroid media-object" />
+          </a>
+        
+     <h4 class="media-heading">
+      <a href="http://www.herald-dispatch.com/multimedia/galleries/x955016935/Gallery-ThunderTones">Gallery: ThunderTones </a>
+    </h4>
+    </div>    
+     <hr />
+  
+  
+    <div class="media">
+      
+          <a class="pull-left"
+             href="http://www.herald-dispatch.com/multimedia/galleries/x955016812/Gallery-Tech-Tryout-at-BCPL">
+            <img src="http://d1csi9vjsd9t3h.cloudfront.net/archive/x780149787/g078078000000000000c4819de236a579b8149f42dd11c7f26f24c7a3d3.jpg" width="120" height="80" alt="2013 1211 TechTryout 15" title="2013 1211 TechTryout 15" class="img-polaroid media-object" />
+          </a>
+        
+     <h4 class="media-heading">
+      <a href="http://www.herald-dispatch.com/multimedia/galleries/x955016812/Gallery-Tech-Tryout-at-BCPL">Gallery: Tech Tryout at BCPL</a>
+    </h4>
+    </div>    
+     <hr />
+  
+
+
+            </div>
+            <div class="span4">
+                
+    
+	<iframe width="99.999%"
+         src="http://embed.newsinc.com/Thumbnail/iframe.html?wid=8297&amp;cid=994&amp;freewheel=90451&amp;sitesection=heralddisp&amp;parent=ndn_sliding_launcher_1&amp;type=slider"
+         style="overflow:scroll" height="280">
+	</iframe>  
+
+
+    
+  
+    
+
+    <h4 class="spaced-half widget-title">Focus Zone</h4> 
+    <div class="carousel slide" id="widget-NKHCZJRS">
+
+      <div class="featured">
+        <div class="carousel-inner">
+           
+          
+            
+            <div class="item active" id="0">
+             
+                <a href="http://huntingtonheralddispatch.wv.newsmemory.com/special.php?date=20131128">
+                 <div class="carousel-img"
+                      style="background-image:url('http://d1csi9vjsd9t3h.cloudfront.net/archive/x1276899431/g258000000000000000f5590fd1e4514ea765c4c674046cb557d4d1dc16.jpg')">
+                 </div>
+                 </a>
+               
+
+             <div class="captions">
+                <h2 class="small">
+                  <a href="http://huntingtonheralddispatch.wv.newsmemory.com/special.php?date=20131128">Holiday Traditions</a>
+                </h2>
+                <div class="muted"><p>
+	Whether you&#8217;re ready or not, it&#8217;s holiday time in the Tri-State.</p>
+</div>
+             </div>
+           </div><!-- /.item -->
+           
+          
+          
+            
+            <div class="item" id="1">
+             
+                <a href="http://huntingtonheralddispatch.wv.newsmemory.com/special.php?date=20131117">
+                 <div class="carousel-img"
+                      style="background-image:url('http://d1csi9vjsd9t3h.cloudfront.net/archive/x1968861358/g25800000000000000082487812bb77966b515a90fe3c06629ae4f890b1.jpg')">
+                 </div>
+                 </a>
+               
+
+             <div class="captions">
+                <h2 class="small">
+                  <a href="http://huntingtonheralddispatch.wv.newsmemory.com/special.php?date=20131117">Holiday Foods</a>
+                </h2>
+                <div class="muted"><p>
+	Favorite recipes from Herald-Dispatch readers.</p>
+</div>
+             </div>
+           </div><!-- /.item -->
+           
+          
+          
+            
+            <div class="item" id="2">
+             
+                <a href="http://huntingtonheralddispatch.wv.newsmemory.com/special.php?date=20131103">
+                 <div class="carousel-img"
+                      style="background-image:url('http://d1csi9vjsd9t3h.cloudfront.net/archive/x2109949295/g258000000000000000ae304dedaa9c626342c9102f9133822a83503a69.jpg')">
+                 </div>
+                 </a>
+               
+
+             <div class="captions">
+                <h2 class="small">
+                  <a href="http://huntingtonheralddispatch.wv.newsmemory.com/special.php?date=20131103">College Basketball Preview 2013</a>
+                </h2>
+                <div class="muted"><p>
+	Catch up with our region&#39;s college basketball teams.</p>
+</div>
+             </div>
+           </div><!-- /.item -->
+           
+          
+          
+            
+            <div class="item" id="3">
+             
+                <a href="http://huntingtonheralddispatch.wv.newsmemory.com/special.php?date=20131027">
+                 <div class="carousel-img"
+                      style="background-image:url('http://d1csi9vjsd9t3h.cloudfront.net/archive/x1084576390/g258000000000000000af62ca3512213384e9ec9ca9e5bd079598e83b45.jpg')">
+                 </div>
+                 </a>
+               
+
+             <div class="captions">
+                <h2 class="small">
+                  <a href="http://huntingtonheralddispatch.wv.newsmemory.com/special.php?date=20131027">Best in the Tri-State</a>
+                </h2>
+                <div class="muted"><p>
+	As voted by readers of The Herald-Dispatch.</p>
+</div>
+             </div>
+           </div><!-- /.item -->
+           
+          
+          
+            
+            <div class="item" id="4">
+             
+                <a href="http://huntingtonheralddispatch.wv.newsmemory.com/special.php?date=20130927">
+                 <div class="carousel-img"
+                      style="background-image:url('http://d1csi9vjsd9t3h.cloudfront.net/archive/x1084574994/g258000000000000000b702ff1ea0c92e13fa0e6f291b135b4e74bdecb0.jpg')">
+                 </div>
+                 </a>
+               
+
+             <div class="captions">
+                <h2 class="small">
+                  <a href="http://huntingtonheralddispatch.wv.newsmemory.com/special.php?date=20130927">Tri-State Visitors' Guide</a>
+                </h2>
+                <div class="muted"><p>
+	Events, festivals, attractions and more.</p>
+</div>
+             </div>
+           </div><!-- /.item -->
+           
+          
+          
+            
+            <div class="item" id="5">
+             
+                <a href="http://www.herald-dispatch.com/specialsections/100years">
+                 <div class="carousel-img"
+                      style="background-image:url('http://d1csi9vjsd9t3h.cloudfront.net/archive/x1141439688/g25800000000000000081a522eedb189bd11378c87c394aa6e1803c36a6.jpg')">
+                 </div>
+                 </a>
+               
+
+             <div class="captions">
+                <h2 class="small">
+                  <a href="http://www.herald-dispatch.com/specialsections/100years">100 Years of History </a>
+                </h2>
+                <div class="muted"><p>
+	A look back at 100 years of Tri-State history.</p>
+</div>
+             </div>
+           </div><!-- /.item -->
+           
+          
+          
+            
+            <div class="item" id="6">
+             
+                <a href="http://media.herald-dispatch.com/mucrash">
+                 <div class="carousel-img"
+                      style="background-image:url('http://d1csi9vjsd9t3h.cloudfront.net/archive/x1967535883/g25800000000000000043a4e4e9860ac3a7751cfeb7c936663f43043297.jpg')">
+                 </div>
+                 </a>
+               
+
+             <div class="captions">
+                <h2 class="small">
+                  <a href="http://media.herald-dispatch.com/mucrash">Marshall Plane Crash</a>
+                </h2>
+                <div class="muted"><p>
+	From the 1970 crash to 2006&#39;s &quot;We Are Marshall.&quot;</p>
+</div>
+             </div>
+           </div><!-- /.item -->
+           
+          
+          
+            
+            <div class="item" id="7">
+             
+                <a href="http://huntingtonheralddispatch.wv.newsmemory.com/special.php?pSetup=huntingtonheralddispatch_health">
+                 <div class="carousel-img"
+                      style="background-image:url('http://d1csi9vjsd9t3h.cloudfront.net/archive/x1988589452/g258000000000000000872546cd29765c685671615801fd76d53ad55d87.jpg')">
+                 </div>
+                 </a>
+               
+
+             <div class="captions">
+                <h2 class="small">
+                  <a href="http://huntingtonheralddispatch.wv.newsmemory.com/special.php?pSetup=huntingtonheralddispatch_health">Health Source 2013</a>
+                </h2>
+                <div class="muted"><p>
+	Your source for health services and information.</p>
+</div>
+             </div>
+           </div><!-- /.item -->
+           
+          
+        </div><!-- end .carousel-inner -->
+      </div><!-- end .featured -->
+
+
+       <!-- Carousel nav -->
+       
+       <hr />
+       <div class="carousel-nav clearfix">
+        <div style="text-align:center">
+          <a class="left" href="#widget-NKHCZJRS"
+             data-slide="prev">
+
+            <i class="icon-chevron-left"></i>
+            <span class="muted">Prev</span>
+          </a>
+          <span class="muted" style="margin:10px 0">|</span>
+          <a class="right" href="#widget-NKHCZJRS"
+             data-slide="next">
+            <span class="muted">Next</span>
+            <i class="icon-chevron-right"></i>
+          </a>
+        </div><!-- /.pull-right -->
+      </div><!-- /.clearfix -->
+
+      <!-- ./carousel-list -->    
+
+           
+    </div><!-- /#myCarousel -->
+    
+  
+
+
+    
+
+<section>
+   <div class="clearfix">
+
+      <h4 class="spaced widget-title">
+         Business
+           <span class="pull-right">
+           <a class="btn btn-mini"
+              href="http://www.herald-dispatch.com/business">View All &raquo;</a>
+           </span>
+       </h4>
+
+      
+         <div class="row-fluid article-tease">
+         
+
+         
+         
+           
+
+           
+            <div class="span12">
+             <div class="muted">
+                <small>Dec. 10, 2013 @ 11:14 PM</small>
+             </div>
+             <h4><a href="http://www.herald-dispatch.com/business/x955016871/Arch-operation-in-longwall-mining-begins">Arch operation in longwall mining begins</a></h4>
+			<div class="visible-desktop">
+				<p>
+	GRAFTON, W.Va. &#8212; Arch Coal Inc. says longwall mining is underway at its Leer mine in northern West Virginia.</p>
+
+			</div>
+            </div>
+           
+         
+        
+
+         
+
+
+        </div>
+        <hr />
+      
+
+
+        <div class="pull-right">
+         
+         </div>
+   </div>
+</section>
+
+
+
+
+            </div>
+            <div class="span4">
+                
+    <iframe src="http://media.herald-dispatch.com/twitter/hd-news.html" height="394" width="294" frameborder="no" scrolling="no" noresize marginwidth="0px" marginheight="0px"></iframe>
+
+    
+
+<section>
+   <div class="clearfix">
+
+      <h4 class="spaced widget-title">
+         News
+           <span class="pull-right">
+           <a class="btn btn-mini"
+              href="http://www.herald-dispatch.com/news">View All &raquo;</a>
+           </span>
+       </h4>
+
+      
+         <div class="row-fluid article-tease">
+         
+
+         
+         
+           
+            <div class="span3 thumb pull-left hidden-phone">
+				<a href="http://www.herald-dispatch.com/news/x955017072/Gallery-Johnson-United-Methodist-Church-Festival-of-Nine-Lessons-and-Carols">
+					<img src="http://d1csi9vjsd9t3h.cloudfront.net/archive/x780149931/g1e01e00000000000008f76aafdb05bac6b9dfad06d66a948f0659a1d06.jpg" width="480" height="319" alt="2013 1212 carols 01" title="2013 1212 carols 01" class="img-polaroid" />
+				</a>
+            </div>
+            <div class="span9">
+
+	            <div class="thumb pull-left visible-phone">
+					<a href="http://www.herald-dispatch.com/news/x955017072/Gallery-Johnson-United-Methodist-Church-Festival-of-Nine-Lessons-and-Carols">
+						<img src="http://d1csi9vjsd9t3h.cloudfront.net/archive/x780149931/g12c12c0000000000003c29625e9e9cbeda6eb7833f876cf441fe0d5d30.jpg" width="300" height="199" alt="2013 1212 carols 01" title="2013 1212 carols 01" class="img-polaroid" />
+					</a>
+	            </div>
+
+				<div class="muted">
+					<small>Dec. 11, 2013 @ 09:06 PM</small>
+				</div>
+				<h4><a href="http://www.herald-dispatch.com/news/x955017072/Gallery-Johnson-United-Methodist-Church-Festival-of-Nine-Lessons-and-Carols">Gallery: Johnson United Methodist Church Festival of Nine Lessons and Carols</a></h4>
+				<div class="visible-desktop">
+					<p>
+	Johnson Memorial United Methodist Church will hosts its Festival of Nine Lessons and Carols at 10:30 a.m. and 3 p.m. Sunday, Dec. 15.</p>
+
+				</div>
+           </div>
+           
+
+           
+         
+        
+
+         
+
+
+        </div>
+        <hr />
+      
+      
+         <div class="row-fluid article-tease">
+         
+
+         
+         
+           
+
+           
+            <div class="span12">
+             <div class="muted">
+                <small>Dec. 10, 2013 @ 11:28 PM</small>
+             </div>
+             <h4><a href="http://www.herald-dispatch.com/news/x955016900/Kopp-proposes-policy-changes-for-faculty-tenure-salary">Kopp proposes policy changes for faculty tenure, salary</a></h4>
+			<div class="visible-desktop">
+				
+			</div>
+            </div>
+           
+         
+        
+
+         
+
+
+        </div>
+        <hr />
+      
+
+
+        <div class="pull-right">
+         
+         </div>
+   </div>
+</section>
+
+
+
+
+            </div>
+        </div>
+    </div><!-- /. end widepagecontent -->
+       </div><!-- /.row-fluid -->
+
+     </div><!-- end zone-content -->
+
+     <hr />
+
+     <footer class="hidden-print">
+
+        <div id="zone-footer-ldrbrd" class="container hidden-phone">
+          <div>
+    
+   <script type="text/javascript">OAS_AD('Bottom');</script>  
+
+</div>
+        </div>
+
+        <hr class="hidden-phone" />
+
+        <!-- start zone-footer -->
+
+        <div id="zone-footer" class="container">
+           <div class="row-fluid clearfix">
+              <div class="span8">
+                 <h3></h3>
+
+        <div>
+          <button id="sitemap_toggle" class="btn btn-block visible-phone" type="button" data-toggle="collapse" data-target="#sitemap" style="text-align:left; padding:5px 10px; margin-bottom:10px">
+                <i class="icon-globe">&nbsp;</i>
+                Sitemap
+                <i id="btn-down" class="icon-chevron-down pull-right"></i>
+                <i id="btn-up" class="icon-chevron-up pull-right" style="display:none"></i>
+          </button>
+
+          <script type="text/javascript">
+            $("#display-poll").click(function() {
+              $("sitemap_toggle i#btn-down").toggle();
+              $("sitemap_toggle i#btn-up").toggle();
+            });
+          </script>
+
+        </div>
+                 <div id="sitemap" class="row-fluid clearfix">
+                    <!-- start sitemap_ -->
+                    
+                       
+                          <div class="span3">
+                             <ul class="nav nav-list">
+                                
+                                  
+                                     <li class="nav-header">
+                                       <a
+    href="http://www.herald-dispatch.com/news">News</a>
+                                     </li>
+                                     
+                                  
+                                  
+                                     <li class="nav-header">
+                                       <a
+    href="http://www.herald-dispatch.com/sports">Sports</a>
+                                     </li>
+                                     
+                                  
+                                  
+                                     <li class="nav-header">
+                                       <a
+    href="http://www.herald-dispatch.com/opinions">Opinions</a>
+                                     </li>
+                                     
+                                  
+                                  
+                                     <li class="nav-header">
+                                       <a
+    href="http://news.herald-dispatch.com/obituaries/">Obituaries</a>
+                                     </li>
+                                     
+                                  
+                                
+                             </ul>
+                          </div><!-- end span3 -->
+                       
+                       
+                          <div class="span3">
+                             <ul class="nav nav-list">
+                                
+                                  
+                                     <li class="nav-header">
+                                       <a
+    href="http://www.herald-dispatch.com/features">Features</a>
+                                     </li>
+                                     
+                                  
+                                  
+                                     <li class="nav-header">
+                                       <a
+    href="http://news.herald-dispatch.com/calendar/">Events Calendar</a>
+                                     </li>
+                                     
+                                  
+                                  
+                                     <li class="nav-header">
+                                       <a
+    href="http://www.herald-dispatch.com/business">Business</a>
+                                     </li>
+                                     
+                                  
+                                  
+                                     <li class="nav-header">
+                                       <a
+    href="http://www.herald-dispatch.com/multimedia/galleries">Photo Galleries</a>
+                                     </li>
+                                     
+                                  
+                                
+                             </ul>
+                          </div><!-- end span3 -->
+                       
+                       
+                          <div class="span3">
+                             <ul class="nav nav-list">
+                                
+                                  
+                                     <li class="nav-header">
+                                       <a
+    href="http://huntingtonheralddispatch.wv.newsmemory.com/">E-paper</a>
+                                     </li>
+                                     
+                                  
+                                  
+                                     <li class="nav-header">
+                                       <a
+    href="https://ssm.herald-dispatch.com/ss70/huntin02/sub/newstart/new_start_by_address.jsp">Subscribe</a>
+                                     </li>
+                                     
+                                  
+                                  
+                                     <li class="nav-header">
+                                       <a
+    href="http://media.herald-dispatch.com/forms/hdinfo/letters.asp">Submit a Letter</a>
+                                     </li>
+                                     
+                                  
+                                  
+                                     <li class="nav-header">
+                                       <a
+    href="http://www.herald-dispatch.com/life/healthsource">Health Source</a>
+                                     </li>
+                                     
+                                  
+                                
+                             </ul>
+                          </div><!-- end span3 -->
+                       
+                       
+                          <div class="span3">
+                             <ul class="nav nav-list">
+                                
+                                  
+                                     <li class="nav-header">
+                                       <a
+    href="http://nl.newsbank.com/nl-search/we/Archives?s_site=herald-dispatch&amp;p_product=HHDB&amp;p_theme=gannett&amp;p_action=keyword">Archives</a>
+                                     </li>
+                                     
+                                  
+                                  
+                                     <li class="nav-header">
+                                       <a
+    href="http://media.herald-dispatch.com/forms/Services/">Contact Us</a>
+                                     </li>
+                                     
+                                  
+                                  
+                                     <li class="nav-header">
+                                       <a
+    href="http://www.herald-dispatch.com/terms">Terms of Service</a>
+                                     </li>
+                                     
+                                  
+                                  
+                                     <li class="nav-header">
+                                       <a
+    href="http://www.herald-dispatch.com/adchoices">Privacy Policy</a>
+                                     </li>
+                                     
+                                  
+                                
+                             </ul>
+                          </div><!-- end span3 -->
+                       
+                    
+                    <!-- end nav_sitemap -->
+                 </div><!-- end row-fluid -->
+              </div><!-- end span8 -->
+
+        <hr class="visible-phone" />
+
+              <div class="span4">
+                 <a href="http://www.herald-dispatch.com">
+                   <img src="http://www.herald-dispatch.com/!/assets/hd_logo.png/3" />
+                 </a>
+                 <div class="clearfix">
+                     <address style="float:left; width:50%">
+                       <p><small>© 2013 The Herald-Dispatch</small></p>
+                       <p><small>HD Media Company, LLC</small></p>
+                       <p><small>946 5th Avenue</small></p>
+                       <p><small>Huntington, WV 25701</small></p>
+                       
+                     </address>
+                    <div style="width:50%; float:left; text-align: right">
+                       
+    
+   <a rel="external"
+      href="http://www.facebook.com/theheralddispatch">
+      <image src="http://www.herald-dispatch.com/!/assets/img/0/icon-facebook.png" /></a>
+
+
+   <a rel="external"
+      href="http://twitter.com/@heralddispatch">
+      <image src="http://www.herald-dispatch.com/!/assets/img/0/icon-twitter.png" /></a>
+
+
+
+   
+   <a rel="external"
+      href="http://www.herald-dispatch.com/atom">
+      <image src="http://www.herald-dispatch.com/!/assets/img/0/icon-rss.png" /></a>   
+
+
+                    </div>
+                 </div>
+              </div>
+           </div><!-- end row -->
+        </div><!-- end container -->
+     </footer>
+
+    <!--
+      ENQUIRE GOODNESS
+      TODO: Move this into an external JS file
+    -->
+    <script type="text/javascript">
+
+      enquire.register("screen and (min-width:768px)", {
+
+          match : function() {
+            //console.log("handler min-width 768px");
+            $('#sitemap').addClass('collapse in').removeAttr('style');
+            $('#related_photos').addClass('collapse in').removeAttr('style');
+            $('#related_poll').addClass('collapse in').removeAttr('style');
+            $('#related_links').addClass('collapse in').removeAttr('style');
+            $('#all-photos-btn a').removeClass('img-zoom');
+          }
+
+      }).register("screen and (min-width:768px) and (max-width:800px)", {
+
+          match : function() {
+            $('#leftcol').appendTo('#rightcol');
+          }
+
+      }).register("screen and (max-width:600px)", {
+
+          match : function() {
+            //console.log("handler max-width 600px");
+            $('#sitemap').removeClass('in').addClass('collapse');
+            $('#related_photos').removeClass('in').addClass('collapse');
+            $('#related_poll').removeClass('in').addClass('collapse');
+            $('#related_links').removeClass('in').addClass('collapse');
+            $('a.addthis_button_compact').hide();
+            $('#leftcol').prependTo('#rightcol');
+            //$('#image-first').removeClass('img-zoom');
+          }
+
+      }).listen();
+
+      $(".aside a[href^='http://']").attr("target","_blank");
+      
+      $('.carousel').carousel({
+        interval: 4000
+      })
+
+    </script>
+
+    
+
+     </body>
+     </html>
+   

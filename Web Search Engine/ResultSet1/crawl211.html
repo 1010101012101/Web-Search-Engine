@@ -1,0 +1,327 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Collegiate Network</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Le styles -->
+        <link href="/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/css/main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/css/bootstrap-responsive.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+        <!-- Scripts -->
+        <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="/js/html5.js"></script><![endif]-->
+<script type="text/javascript" src="/js/splitColor.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>    </head>
+    <body>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25972950-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    <div id="adspace-wrapper-top">    
+        <a id="nro_lnk" href="http://www.nationalreview.com/college"><img src="/images/3rd-party/Nr-COLLEGE-AD-970x90.jpg" alt="" /></a>
+        <script>
+            $(function(){
+                $('#nro_lnk').click(function(e){
+                    var node = this;
+                    try {
+                        _gaq.push(['_trackEvent', 'ads' , 'nationalreview.com/college']);
+                    } catch(err){}
+                    setTimeout(function() {
+                        document.location.href = $(node).attr('href');
+                    }, 100);
+                    e.preventDefault();
+                });
+            });
+        </script>
+    </div>
+
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <span class="btn-wrapper pull-right">
+                        <a class="btn" href="http://www.cnnewslink.com/?page_id=11">Write for us</a>
+                        <a class="btn" href="/signin">Members</a>
+                    </span>
+                    <a class="brand" href="/">Collegiate Network</a>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+    <li class="active">
+        <a href="/">Home</a>
+    </li>
+    <li>
+        <a href="/about">About</a>
+    </li>
+    <li>
+        <a href="/membership">Membership</a>
+    </li>
+    <li>
+        <a href="/internships">Professional Development</a>
+    </li>
+    <li>
+        <a href="/member">Publications</a>
+    </li>
+    <li>
+        <a href="/alum">Alumni</a>
+    </li>
+</ul>                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+            <div class="navbar-extra">
+                <ul class="social">
+                    <li>
+                        <a href="http://cnnewslink.com"><img
+                            src="/images/icons/cnnl-32.png"
+                            title="CN Newslink"
+                            alt="CN Newslink" /></a>
+                    </li>
+                    <li>
+                        <a href="http://dailycaller.com/campus-caller/"><img
+                            src="/images/icons/cc-32.png"
+                            title="The Campus Caller"
+                            alt="The Campus Caller" /></a>
+                    </li>
+                    <li>
+                        <a href="http://facebook.com/collegiatenetwork"><img 
+                            src="/images/icons/fb-32.png" 
+                            title="Facebook"
+                            alt="Facebook" /></a></li>
+                    <li><a href="http://twitter.com/collegiatenet"><img
+                           src="/images/icons/twitter-32.png" 
+                           title="Twitter" 
+                           alt="Twitter" /></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-unit">
+    <div id="carousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="active item clickable">
+                <a class="btn btn-primary" href="/membership">Membership &raquo;</a>
+                <header>
+                    <h1>Get networked.</h1>
+                </header>
+                <img src="/images/group.jpg" alt="" />
+            </div>
+            <div class="item clickable">
+                <a class="btn btn-primary" href="/membership">Support &raquo;</a>
+                <header>
+                    <h1>Get published.</h1>
+                </header>
+                <img src="/images/Woman-Reading-Paper.jpg" alt="" />
+                <a href="http://www.flickr.com/photos/eflon/4728375262/" title="Untitled by eflon, on Flickr">Untitled by eflon, on Flickr</a>
+            </div>
+            <div id="placements-slide" class="item clickable">
+                <a class="btn btn-primary" href="/internships">Professional Development &raquo;</a>
+                <h1>Get placed.</h1>
+                <div id="placements" style="height:400px">
+                </div>
+            </div>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
+    </div>
+</div>
+<script>
+/**
+ * Patch to make animation of backgroundPosition work in FF + jQuery 1.8. 
+ * Thanks, Prydie!
+ * http://stackoverflow.com/a/12493380
+ */
+(function($) {
+    if(!document.defaultView || !document.defaultView.getComputedStyle){
+        var oldCSS = jQuery.css;
+        jQuery.css = function(elem, name, force){
+            if(name === 'background-position'){
+                name = 'backgroundPosition';
+            }
+            if(name !== 'backgroundPosition' || !elem.currentStyle || elem.currentStyle[ name ]){
+                return oldCSS.apply(this, arguments);
+            }
+            var style = elem.style;
+            if ( !force && style && style[ name ] ){
+                return style[ name ];
+            }
+            return oldCSS(elem, 'backgroundPositionX', force) +' '+ oldCSS(elem, 'backgroundPositionY', force);
+        };
+    }
+
+    var oldAnim = $.fn.animate;
+    $.fn.animate = function(prop){
+        if('background-position' in prop){
+            prop.backgroundPosition = prop['background-position'];
+            delete prop['background-position'];
+        }
+        if('backgroundPosition' in prop){
+            prop.backgroundPosition = '('+ prop.backgroundPosition + ')';
+        }
+        return oldAnim.apply(this, arguments);
+    };
+
+    function toArray(strg){
+        strg = strg.replace(/left|top/g,'0px');
+        strg = strg.replace(/right|bottom/g,'100%');
+        strg = strg.replace(/([0-9\.]+)(\s|\)|$)/g,"$1px$2");
+        var res = strg.match(/(-?[0-9\.]+)(px|\%|em|pt)\s(-?[0-9\.]+)(px|\%|em|pt)/);
+        return [parseFloat(res[1],10),res[2],parseFloat(res[3],10),res[4]];
+    }
+
+    $.fx.step.backgroundPosition = function(fx) {
+        if (!fx.bgPosReady) {
+            var start = $.css(fx.elem,'backgroundPosition');
+
+            if(!start){//FF2 no inline-style fallback
+                start = '0px 0px';
+            }
+
+            start = toArray(start);
+
+            fx.start = [start[0],start[2]];
+
+            var end = toArray(fx.end);
+            fx.end = [end[0],end[2]];
+
+            fx.unit = [end[1],end[3]];
+            fx.bgPosReady = true;
+        }
+
+        var nowPosX = [];
+        nowPosX[0] = ((fx.end[0] - fx.start[0]) * fx.pos) + fx.start[0] + fx.unit[0];
+        nowPosX[1] = ((fx.end[1] - fx.start[1]) * fx.pos) + fx.start[1] + fx.unit[1];
+        fx.elem.style.backgroundPosition = nowPosX[0]+' '+nowPosX[1];
+    };
+})(jQuery);
+    
+    
+    $('.active.item header').splitColor({
+        splitPoint:55
+    });
+    $('#carousel').carousel({
+        interval:8000
+    }).on('slide',function(e){
+        // Split color
+        setTimeout(function(){
+            $(e.relatedTarget).find('header').splitColor({
+                splitPoint:60
+            });
+        },200);
+        
+        var s = $(e.relatedTarget);
+        if( s.attr('id') == 'placements-slide' ){
+            setTimeout(function(){
+                var panDuration = 7000;
+                var panDelay = 200;
+                $('#placements').css('backgroundPosition','0 0');
+               
+                var boxWidth = $('#placements').innerWidth();
+                var imgWidth = 2931;
+
+                var forward = function(){
+                    $('#placements').animate({ 'backgroundPosition':boxWidth - imgWidth + ' 0'}, panDuration, 'linear',function(){
+                        setTimeout(backward,panDelay);
+                    });
+                }
+                var backward = function(){
+                    $('#placements').animate({ 'backgroundPosition':'0 0'}, panDuration, 'linear',function(){
+                        setTimeout(forward,panDelay);
+                    });
+                }
+                setTimeout(forward,panDelay);
+            },800);
+        } else {
+            $('#placements').stop();
+        }
+    });
+</script>
+
+<div class="boxWrapper" style="margin-bottom:20px; text-align:center;">
+    <h3><a href="http://www.thephillipsfoundation.org/novak_home.cfm" target="_blank">$50k and $25k Robert Novak Journalism Fellowships Offered by the 
+            Fund for American Studies</a></h3>
+    <h5>2014 Applications Available for Print and Online Journalists</h5>
+</div>
+
+<div class="row">
+    <div class="span4">
+        <div class="boxWrapper">
+            <h2>What is the Collegiate Network?</h2>
+            <p><img class="img-right" src="/images/cn-logo-150.png" alt="" />The Collegiate Network supports independent college periodicals that 
+                draw attention to the politicization and declining educational 
+                standards of America.</p>
+
+            <p><a class="btn" href="/about">Learn more &raquo;</a></p>
+        </div>
+    </div>
+
+    <div class="span4">
+        <div class="boxWrapper">
+            <h2>Featured Alumnus/Alumna</h2>
+            <div class="featured-alum-wrapper">
+                <h3>Marc Thiessen</h3>
+                <p>Author and Columnist</p>
+                <hr/>
+                <p>Dozens of public figures got their start as 
+                    members of the Collegiate Network.</p>
+            </div>
+            <p><a class="btn" href="/alum">See more alumni&raquo;</a></p>
+        </div>
+    </div>
+
+    <div class="span4">
+        <div class="boxWrapper">
+            <h2 class="cnnl-title">CN Newslink</h2>
+            <div class="newslink-feed-wrapper" data-feed-status="success">
+    <ul class="newslink-feed">
+                    <li>
+                <a class="title" href="http://www.archconuga.com">MAILBOX: A Reader Expresses Concern</a>
+                <span class="byline">By The Editors</span>
+            </li>
+                    <li>
+                <a class="title" href="http://www.purduereview.com">Christmas in the Purdue Memorial Union</a>
+                <span class="byline">By Rich Finlay</span>
+            </li>
+                    <li>
+                <a class="title" href="http://www.intercollegiatereview.com">Thereâ??s A Disorder for That</a>
+                <span class="byline">By Elisabeth Cervantes</span>
+            </li>
+                    <li>
+                <a class="title" href="http://www.intercollegiatereview.com">SYMPOSIUM: Taking Stock of Truth</a>
+                <span class="byline">By Luke Foster</span>
+            </li>
+                    <li>
+                <a class="title" href="http://thecollegeconservative.com">2,000 Deployed to Guam</a>
+                <span class="byline">By Atarah Golden</span>
+            </li>
+            </ul>
+</div>            <p><a class="btn" href="http://cnnewslink.com" target="_blank">Visit CN Newslink &raquo;</a></p>
+        </div>
+    </div>
+</div>            <footer>
+                <p>&copy; 2012 by Intercollegiate Studies Institute. All rights reserved.</p>
+                <p>The Collegiate Network is administered by the 
+                    <a href="http://home.isi.org">Intercollegiate Studies Institute</a>.</p>
+            </footer>
+        </div> <!-- /container -->
+                <script>
+            $('.clickable').click(function(e){
+                e.preventDefault();
+                var href = $(this).find('a').attr('href');
+                window.location = href;
+            });
+        </script>
+    </body>
+</html>
+

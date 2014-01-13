@@ -1,0 +1,968 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
+    <head>
+    <!--[if lte IE 6]>
+<script type="text/javascript">
+window.location = "http://www.mid-day.com/ie6.html";
+</script>
+<![endif]-->
+        <meta http-equiv= "content-type" content="text/html; charset=utf-8" />
+        <title>Latest News India, News Updates, Online News Portal - Midday</title>
+		<meta name="keywords" content="Latest News India, Online News Paper, News Portal, News Updates, Bollywood, Sports, Life and Style, Crime" />
+        <meta name="description" content="Get the latest news updates of Bollywood, Sports, Crime & Life Style in India on Midday the leading Online News Paper / Portal." />
+        <meta name="msvalidate.01" content="AD58DC6866B35E88251838152F44FBD9" />
+<link href="/css2/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>		
+		<link rel="stylesheet" href="/css2/anythingslider.css"/>
+		<script src="http://js.mid-day.com/jquery.anythingslider.js"></script>
+        <link rel="stylesheet" href="http://css.mid-day.com/demos.css"/>
+        
+        <link type="text/css" href="http://css.mid-day.com/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+        <!-- latest jQuery direct from google's CDN -->
+       <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>-->
+	    
+        <style>
+            #slider { width: 341px; height: 373px; }
+			#feedDiv
+			{
+				position:fixed;
+				z-index:999;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:12px;
+				font-weight:bold;
+				color:#FFFFFF;
+				bottom:0px;
+				right:20px;
+				padding:5px;
+				background:#D50E11;
+				
+			}
+			#feedDiv a
+			{
+				color:#FFFFFF;
+				text-decoration:none;
+			}
+			.topstories .scroll-pane{height:317px}
+			.topstories .scroll-pane .jspContainer .jspVerticalBar .jspTrack .jspDrag{height:161px !important}
+        </style>
+		        <!-- the jScrollPane script -->
+        <script type="text/javascript" src="http://js.mid-day.com/jquery.jscrollpane.js"></script>
+        <!-- the mousewheel plugin -->
+        <script type="text/javascript" src="http://js.mid-day.com/jquery.mousewheel.js"></script>
+				 <script src="http://js.mid-day.com/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+        <!--<script src="http://js.mid-day.com/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="http://js.mid-day.com/jquery.ui.core.js" type="text/javascript"></script>
+        <script src="http://js.mid-day.com/jquery.ui.widget.js" type="text/javascript"></script>
+        <script src="http://js.mid-day.com/jquery.ui.tabs.js" type="text/javascript"></script>-->
+        <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script> 
+        <!-- for cross domain -->
+        <script src="http://js.mid-day.com/jquery.xdomainajax.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+				
+				$('img').each(function(){
+                 var imagealt = $(this).attr("alt");
+                    $(this).attr("title", imagealt);
+              		});
+                //When page loads...
+                $(".tab_content").hide(); //Hide all content
+                $("ul.tabs li:first").addClass("active").show(); //Activate first tab
+                $(".tab_content:first").show(); //Show first tab content
+
+                //On Click Event
+                $("ul.tabs li").click(function() {
+
+                    $("ul.tabs li").removeClass("active"); //Remove any "active" class
+                    $(this).addClass("active"); //Add "active" class to selected tab
+                    $(".tab_content").hide(); //Hide all tab content
+
+                    var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+                    $(activeTab).fadeIn(); //Fade in the active ID content
+                    return false;
+                	
+            });
+        </script>
+		<!--jquery Lazyload script added on 23rd feb-->
+		<script src="http://js.mid-day.com/jquery.lazyload.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$("img.lazy").lazyload({ 
+			effect : "fadeIn"
+			});
+		</script>
+		<!--lazy end-->
+
+
+        <script type="text/javascript">
+            $(function()
+            {
+                $('.scroll-pane').jScrollPane(
+                {
+                    autoReinitialise: true
+                }
+            );
+            });
+	
+        </script>
+
+		<!--google font links-->
+		<link href='http://fonts.googleapis.com/css?family=Francois+One|Terminal+Dosis:600|Terminal+Dosis:300|Open+Sans+Condensed:700|Terminal+Dosis:200' rel='stylesheet' type='text/css'><!--All fonts-->
+		<!--end-->
+
+
+
+        <style type="text/css">
+            /* Styles specific to this particular page */
+            .scroll-pane
+            {
+                width: 100%;
+                height: 300px;
+                overflow: auto;
+            }</style>
+        <style type="text/css">
+
+            #twitter_update_list li {  
+                list-style-type: none;  
+            }  
+            #twitter_update_list span a  
+            {  
+                display: inline;  
+                color: #008080;  
+            }  
+            #twitter_update_list span a:hover  
+            {  
+                text-decoration: underline;  
+                color: #66CCFF;  
+            }  
+            #twitter_update_list span  
+            {  
+                color: #000000;  
+                background: white;  
+            }  
+
+
+        </style>        
+       
+        <!-- AnythingSlider initialization -->
+        <script type="text/javascript">
+            // DOM Ready
+            $(function(){
+                $('#slider').anythingSlider(
+
+            );
+            });
+        </script>
+
+        <!-- Older IE stylesheet, to reposition navigation arrows, added AFTER the theme stylesheet -->
+        <!--[if lte IE 7]>
+        <link rel="stylesheet" href="http://css.mid-day.com/anythingslider-ie.css" type="text/css" media="screen" />
+        <![endif]-->
+		
+		  <!-- Older IE stylesheet, to reposition navigation arrows, added AFTER the theme stylesheet -->
+        <!--[if lt IE 7]>
+        <link rel="stylesheet" href="http://css.mid-day.com/style-ie6.css" type="text/css" media="screen" />
+        <![endif]-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2326030-18']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- Begin comScore Tag -->
+<script>
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "12295759" });
+  (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    el.parentNode.insertBefore(s, el);
+  })();
+</script>
+<noscript>
+  <img src="http://b.scorecardresearch.com/p?c1=2&c2=12295759&cv=2.0&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+<!-- autocomplete start -->
+<script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
+	<style>
+	<!-- code for autosearch css start -->
+	.ui-menu-item{background-color:#fff;list-style-type:none;padding:5px 0 5px 5px;}
+	.ui-menu-item a{color:#000000; font-size:14px; font-weight:bold;}
+	.ui-autocomplete{width:302px !important;border:1px solid #CCCCCC;}
+	<!-- code for autosearch css end -->
+
+	.ui-autocomplete-loading 
+	{ background: white url('loader.gif') right center no-repeat; }
+	#city { width: 25em; }
+	.ui-corner-top{ z-index:-9999999; }
+	
+	</style>
+	<script>
+	$(function() {
+		function log( message ) {
+			$( "<div/>" ).text( message ).prependTo( "#log" );
+			$( "#log" ).scrollTop( 0 );
+		}
+
+		$( "#search-text" ).autocomplete({
+			source: function( request, response ) 
+			{
+			
+				$.ajax({
+					url: "https://www.googleapis.com/customsearch/v1?key=AIzaSyDHFtD1CvZRWl8y6XPaFJhd1OxpWYaSl_s&cx=007211365824283806066:c9pkylnkgay&alt=json",
+					dataType: "jsonp",
+					data: {
+						featureClass: "P",
+						style: "full",
+						maxRows: 12,
+						q: request.term
+					},
+					success: function( data ) {
+						response( $.map( data.items, function( item ) {
+							return {
+								label: item.title,
+								value: item.title
+							}
+						}));
+					}
+				});
+			},
+			minLength: 2,
+			open: function() {
+				$( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+			},
+			close: function() {
+				$( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+			}
+		});
+	});
+	</script> 
+<!-- autocomplete end -->	
+
+<!-- google DFP code starts -->	
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/1025214/I-Homepage_300x100', [300, 100], 'div-gpt-ad-1360140442133-0').addService(googletag.pubads());
+googletag.defineSlot('/1025214/I-RoN-300x600', [300, 600], 'div-gpt-ad-1365684136671-0').addService(googletag.pubads());
+googletag.defineSlot('/1025214/I-Pop_1x1', [1, 1], 'div-gpt-ad-1369743554616-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+
+
+<!-- google DFP code ends -->
+
+    </head>
+    <body>
+	<div style="display:none;" id="layerpop">&nbsp;</div>
+        <div id="container" class="wd100p"><!--container starts -->
+            <div id="wrapper" class="wd982 pd10"><!--wrapper starts -->
+			
+                <div id="header"> 
+                <link rel="stylesheet" type="text/css" href="/css2/header.css" />
+<script type="text/javascript" src="/js2/jquery-1.6.4.min.js"></script>
+ <script src="/js2/jquery.anythingslider.js"></script>
+  <script type="text/javascript" src="/js2/jquery.innerfade.js"></script>
+  <link rel="stylesheet" href="/css2/anythingslider.css"/>
+ <link type="text/css" href="/css2/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+  <!-- the jScrollPane script -->
+        <script type="text/javascript" src="/js2/jquery.jscrollpane.js"></script>
+        <!-- the mousewheel plugin -->
+        <script type="text/javascript" src="/js2/jquery.mousewheel.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/css2/style.css" />
+
+
+
+        <!-- the UI TABS -->
+         <script src="/js2/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+		 
+<div class="outer outer1">
+	<div style="height:25px;">
+    <div class="date fl pt5 mr30"></div>
+    <script>
+        var d=new Date()
+        var weekday=new Array("SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY",
+        "FRIDAY","SATURDAY")
+        var monthname=new Array("JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST",
+        "SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER")
+        var conc =  (weekday[d.getDay()] + " " + monthname[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear()  );
+        //            var now = new Date();
+        //            now.format("fullDate", true);
+        //            document.write (now.format);
+        $('.date').html(conc);
+    </script> 
+    <div class="anthem fl ml8"> <a href="http://www.mid-day.com/pdf/Mumbai-Anthem.pdf" target="_blank"><img src="http://www.mid-day.com/images/anthem-text.jpg" border="0" /></a><a href="http://www.youtube.com/watch?feature=player_embedded&v=IyXeZqB26Ss" target="_blank"><img src="http://www.mid-day.com/images/watch-tvc.jpg" border="0" /></a> </div>
+    <script>
+        
+		
+		 $(document).ready(
+				function(){
+					$('#twitter_news').innerfade({
+						animationtype: 'slide',
+						speed: 750,
+						timeout: 8000,
+						type: 'random',
+						containerheight: '1em'
+					});
+				
+				$("#twitter_update_list").css("display","inline");
+			});
+    </script> 
+   
+     
+       
+
+      <style>
+            #slider { width: 341px; height: 373px; overflow:hidden !important;}
+        </style>
+
+<div class="fr jagran mr10">
+        <a href="http://jplcorp.in/JPLWeb/JPL_GroupProfile.aspx" target="_blank" class="jagran_ico"></a>
+    </div>
+
+    <div class="fr pr20 pt5">
+      <ul class="list-header ft_arial fs10 ft_bold">
+        <li class="fl pr5 list-header_bor"><a href="http://www.facebook.com/midday.infomedia" class="facebook_ico mr5" target="_blank"></a><a href="http://www.facebook.com/midday.infomedia" target="_blank" class="social">FACEBOOK</a> </li>
+        <li class="fl pr5 pl5 list-header_bor"><a href="https://twitter.com/mid_day" class="twitter_ico mr5" target="_blank"></a><a href="https://twitter.com/mid_day" target="_blank" class="social1">TWITTER</a></li>
+        <li class="fl pr5 pl5 list-header_bor"><a href="http://pinterest.com/middaydotcom/" class="pinterest_ico mr5" target="_blank"></a><a href="http://pinterest.com/middaydotcom/" target="_blank" class="social1">PINTEREST</a></li>
+        <li class="fl pl5 list-header_bor pr5"><a href="http://www.youtube.com/user/midday" class="youtube_ico mr5" target="_blank"></a><a href="http://www.youtube.com/user/midday" target="_blank" class="social">YOUTUBE</a></li>
+        <li class="fl pl5"><a href="http://www.mid-day.com/rss.htm" class="rss_ico mr5"></a><a href="http://www.mid-day.com/rss.htm" class="social1">RSS</a></li>
+      </ul>
+    </div>
+  <div class="clr"></div>
+  </div>
+    <div class="adds_left fl pt5">
+        <div class="logo fl"><!--logo starts --->
+            <h1><a href="http://www.mid-day.com"><span class="logo_header">Mid-Day</span></a></h1>
+        </div>
+        <!--        <div class="logo fl">logo starts 
+                    <h1><a href="#"><img src="/imagedata/2012/jan/images/logo.png"/></a></h1>
+                </div>logo ends-->	
+        <div class="add fl pl10 fixed728x90">
+            <!-- header Begin //-->
+          <!-- Javascript tag: -->
+<!-- begin ZEDO for channel: Homepage , publisher: default , Ad Dimension: Super Banner - 728 x 90 -->
+ <script language="JavaScript">
+var zflag_nid="1353"; var zflag_cid="1"; var zflag_sid="0"; var zflag_width="728"; var zflag_height="90"; var zflag_sz="14"; 
+</script>
+<script language="JavaScript" src="http://d8.zedo.com/jsc/d8/fo.js"></script> 
+<!-- end ZEDO for channel: Homepage , publisher: default , Ad Dimension: Super Banner - 728 x 90 -->
+
+
+
+            <!-- header End //-->
+        </div>
+        <div class="clr"></div>
+        <div class="facebook_like fl pt5">
+            <!--<iframe src="http://www.facebook.com/plugins/like.php?href=http://www.facebook.com/midday.infomedia&amp;layout=button_count&amp;width=50&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21&amp;appId=274237562681261" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>-->
+			<fb:like href="http://www.facebook.com/midday.infomedia" send="false" layout="button_count" width="80" show_faces="false"></fb:like>
+			<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=274237562681261";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+
+        </div>
+         <div class="twitter fl pl15" style="width:600px;">
+				 <iframe src="http://www.mid-day.com/twitter.php" frameborder="0" scrolling="No" style="overflow:hidden;" width="600" height="25"></iframe>	
+        </div> 
+        <div class="fr pt10">
+            <a href="http://www.mid-day.com/epaper/index.htm" target="_blank"><img src="/images/today.png"/></a>
+        </div>
+    </div>
+	
+	<script>
+		$(document).ready(function()
+		{
+			$.ajax({
+							url:'/header_cover.htm',
+							type:'HEAD',
+							error: function()
+							{
+								$('#header_cover').html("Something went wrong");
+							},
+							success: function()
+							{
+								$('#header_cover').load('/header_cover.htm');
+							}
+					});
+		});
+	</script>
+    <div class="add_right fr pr10"> 
+		<div id="header_cover"> </div>
+	</div> 
+	<div class="clr"></div>
+    <div class="fl mb9">
+        <!---->
+        <div class="wd982 menu_bgcol fl">
+            <div class="fl ht30 strories_fnt ft13_menu">
+                <div class="fl wd230">
+                    <ul class="lst menu2 menu_home">
+                        <li class="wd25 menu_dark"><a href="http://www.mid-day.com" class="menu_fcol home_ico" target="_top" ></a></li>
+                        <li class="wd67 menu_dark"><a href="http://photos.mid-day.com/" class="menu_fcol" target="_top">PHOTOS</a></li>
+                        <li class="wd67 menu_dark"><a href="http://videos.mid-day.com/" class="menu_fcol" target="_top">VIDEOS</a></li>
+                    </ul>
+                </div>
+                <div class="fl">
+                    <ul class="lst menu2 menu_news menu_news_left lst_child menu_fcol">
+                        <li class="fl wd67 menu_lgt"><a href="http://www.mid-day.com/news/index.htm" target="_top">NEWS</a></li>
+                        <li class="fl wd107 menu_lgt"><a href="http://www.mid-day.com/entertainment/index.htm" target="_top">ENTERTAINMENT</a></li>
+                        <li class="fl wd55 menu_lgt"><a href="http://www.mid-day.com/news/crime/index.htm" target="_top">CRIME</a></li>
+                        <li class="fl wd67 menu_lgt"><a href="http://www.mid-day.com/sports/index.htm" target="_top">SPORTS</a></li>
+                        <li class="fl wd144 menu_lgt"><a href="http://www.mid-day.com/relationships/index.htm" target="_top">SEX &amp; RELATIONSHIPS</a></li>
+                        <li class="fl wd87 menu_lgt"><a href="http://www.mid-day.com/columnists/index.htm" target="_top">COLUMNISTS</a></li>
+                        <li class="fl wd87 menu_lgt"><a href="http://www.mid-day.com/horoscope/index.htm" target="_top">HOROSCOPE</a></li>
+						<li class="fl wd55 menu_lgt border_none"><a href="http://www.mid-day.com/games" target="_top">GAMES</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+             
+			<div class="clr"></div>
+        </div><div class="clr"></div>
+    </div><div class="clr"></div>
+</div>
+<script type="text/javascript" src="/js2/blogger.js">   
+</script> 
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/mid_day.json?callback=twitterCallback2&count=1">  
+</script>
+					 </div>
+                               
+                 <div class="clr"></div>
+                
+                <div id="content"><!-- content starts here -->
+                    <div class="content_left fl  pading-left10ie6 margin-right10ie"><!-- content_left starts here -->
+                        <div class="breakin_news ft_arial fs10 ft_bold">
+                          
+                            <!--                           <span class="yellow_breaking mr10"> BREAKING NEWS </span>-->
+                            <span class="">
+                                <iframe frameborder="0" scrolling="no" src="http://www.mid-day.com/breaking_news.php" style="width: 100%; height: 20px"></iframe></span>
+                          
+                        </div>
+
+                        <div class="inner_content_left pt5 fl"><!-- inner_content_left starts here -->
+                            <div class="pb10">
+                                <div id="simple">
+                                    <!-- posrel1 Begin //--><ul id="slider">	<li>		<div class="wd343p posrel">			<div class="pl1p tertre mb5 slidecol">				<h2>					<a href="http://www.mid-day.com/news/2013/dec/111213-news-asaram-babus-son-narayan-sai-admits-to-rape-charges-affair-with-8-others-police.htm">Narayan Sai accepts rape charge</a></h2>			</div>			<div>				<a href="http://www.mid-day.com/news/2013/dec/111213-news-asaram-babus-son-narayan-sai-admits-to-rape-charges-affair-with-8-others-police.htm"><img alt="Narayan Sai" src="/imagedata/2013/dec/narayan-sai-mp.jpg" style="width: 343px; height: 378px;" /></a></div>			<div class="photos_video_list pad5  pr25 ht64p posab ft_arial font_size wd343p ">				<div id="cke_pastebin">					<a href="http://www.mid-day.com/news/2013/dec/111213-news-asaram-babus-son-narayan-sai-admits-to-rape-charges-affair-with-8-others-police.htm">Asaram Babu&#39;s son admits raping woman and having an affair with 8 others, claims police</a></div>			</div>		</div>	</li>	<li>		<div class="wd343p posrel">			<div class="pl1p tertre mb5 slidecol">				<h2>					<a href="http://www.mid-day.com/sports/2013/dec/111213-cricket-centurion-odi-de-kock-dhoni-dhawan-shami-villiers-philander-kohli.htm">Rain has final word in 3rd ODI</a></h2>			</div>			<div>				<a href="http://www.mid-day.com/sports/2013/dec/111213-cricket-centurion-odi-de-kock-dhoni-dhawan-shami-villiers-philander-kohli.htm"><img alt="AB de Villiers" src="/imagedata/2013/dec/ab-de-viiliers-centurion.jpg" style="width: 343px; height: 378px;" /></a></div>			<div class="photos_video_list pad5  pr25 ht64p posab ft_arial font_size wd343p ">				<div id="cke_pastebin">					<a href="http://www.mid-day.com/sports/2013/dec/111213-cricket-centurion-odi-de-kock-dhoni-dhawan-shami-villiers-philander-kohli.htm">Centurion ODI: 3rd ODI between South Africa and India called off due to incessant rain</a></div>			</div>		</div>	</li>	<li>		<div class="wd343p posrel">			<div class="pl1p tertre mb5 slidecol">				<h2>					<a href="http://www.mid-day.com/news/2013/dec/111213-supreme-court-rules-gay-sex-is-illegal-homsexuality.htm">Gay sex is illegal, rules SC </a></h2>			</div>			<div>				<a href="http://www.mid-day.com/news/2013/dec/111213-supreme-court-rules-gay-sex-is-illegal-homsexuality.htm"><img alt="Gay sey, homosexuality, Section 377" src="/imagedata/2013/dec/gay-sex-1.jpg" style="width: 343px; height: 378px;" /></a></div>			<div class="photos_video_list pad5  pr25 ht64p posab ft_arial font_size wd343p ">				<div id="cke_pastebin">					<a href="http://www.mid-day.com/news/2013/dec/111213-supreme-court-rules-gay-sex-is-illegal-homsexuality.htm">Supreme Court sets aside Delhi High Court judgement which had decriminalised homosexuality</a></div>			</div>		</div>	</li>	<li>		<div class="wd343p posrel">			<div class="pl1p tertre mb5 slidecol">				<h2>					<a href="http://www.mid-day.com/news/2013/dec/111213-acid-attack-victims-wish-is-to-see-her-5-yr-old-girl-in-school.htm">Acid attack victim&#39;s sad ordeal</a></h2>			</div>			<div>				<a href="http://www.mid-day.com/news/2013/dec/111213-acid-attack-victims-wish-is-to-see-her-5-yr-old-girl-in-school.htm"><img alt="Acid attack victim with her daughter" src="/imagedata/2013/dec/11acidattack.jpg" style="width: 343px; height: 378px;" /></a></div>			<div class="photos_video_list pad5  pr25 ht64p posab ft_arial font_size wd343p ">				<div id="cke_pastebin">					<a href="http://www.mid-day.com/news/2013/dec/111213-acid-attack-victims-wish-is-to-see-her-5-yr-old-girl-in-school.htm">21-yr-old whose husband threw acid on her face last year wants her 5-yr-old daughter to go to school</a></div>			</div>		</div>	</li>	<li>		<div class="wd343p posrel">			<div class="pl1p tertre mb5 slidecol">				<h2>					<a href="http://www.mid-day.com/news/2013/dec/111213-give-bjp-a-missed-call-get-picked-up-for-narendra-modi-rally.htm">BJP&#39;s pick up and drop service</a></h2>			</div>			<div>				<a href="http://www.mid-day.com/news/2013/dec/111213-give-bjp-a-missed-call-get-picked-up-for-narendra-modi-rally.htm"><img alt="BJP rally" src="/imagedata/2013/dec/11modi.jpg" style="width: 343px; height: 378px;" /></a></div>			<div class="photos_video_list pad5  pr25 ht64p posab ft_arial font_size wd343p ">				<div id="cke_pastebin">					<a href="http://www.mid-day.com/news/2013/dec/111213-give-bjp-a-missed-call-get-picked-up-for-narendra-modi-rally.htm">Give BJP a missed call, get picked up for Narendra Modi rally at MMRDA grounds</a></div>			</div>		</div>	</li>	<li>		<div class="wd343p posrel">			<div class="pl1p tertre mb5 slidecol">				<h2>					<a href="http://www.mid-day.com/news/2013/dec/111213-man-commits-suicide-helps-others-live.htm">Man&#39;s suicide helps others live</a></h2>			</div>			<div>				<a href="http://www.mid-day.com/news/2013/dec/111213-man-commits-suicide-helps-others-live.htm"><img alt="Gautam Tandel" src="/imagedata/2013/dec/11Gautam-Tandel.jpg" style="width: 343px; height: 378px;" /></a></div>			<div class="photos_video_list pad5  pr25 ht64p posab ft_arial font_size wd343p ">				<div id="cke_pastebin">					<a href="http://www.mid-day.com/news/2013/dec/111213-man-commits-suicide-helps-others-live.htm">Relatives donate deceased&#39;s eyes, skin as per his last wish; cops yet to ascertain reason behind step</a></div>			</div>		</div>	</li>	<li>		<div class="wd343p posrel">			<div class="pl1p tertre mb5 slidecol">				<h2>					<a href="http://www.mid-day.com/news/2013/dec/111213-minors-gang-rape-revealed-after-she-abandoned-baby-girl.htm">Why minor abandoned baby</a></h2>			</div>			<div>				<a href="http://www.mid-day.com/news/2013/dec/111213-minors-gang-rape-revealed-after-she-abandoned-baby-girl.htm"><img alt="Teen gang-raped for 10 months" src="/imagedata/2013/dec/10women-crimes-mp.jpg" style="width: 343px; height: 378px;" /></a></div>			<div class="photos_video_list pad5  pr25 ht64p posab ft_arial font_size wd343p ">				<div id="cke_pastebin">					<a href="http://www.mid-day.com/news/2013/dec/111213-minors-gang-rape-revealed-after-she-abandoned-baby-girl.htm">Minor girl&#39;s gang-rape by 9 men came to light after she abandoned baby girl post delivery</a></div>			</div>		</div>	</li></ul><!-- posrel1 End //-->
+                                </div>
+                            </div>
+
+                            <div class="dot_border fl">
+								<div id="roh" class="fl">
+									<!-- border1 Begin //--><div class="fl pt10 pb10">	<a href="http://www.mid-day.com/entertainment/2013/dec/111213-bigg-boss-7-day-87-armaan-tanishaa-andy-sangram-gauahar-kushal-kamya-ajaz-television.htm"><img alt="Ajaz, Gauahar, Day 87 in 'Bigg Boss 7'" src="/imagedata/2013/dec/11ajaz-gauahar-mp.jpg" style="width: 162px; height: 108px;" /></a></div><div class="fl pt10 pl10 wd168 pb10 slidecol home_caption_stories">	<h1 class="uppercase strories_fnt fs11 centernews">		<a href="http://www.mid-day.com/entertainment/index.htm">TELEVISION</a></h1>	<h2 class="pb5 tertre fs16">		<a href="http://www.mid-day.com/entertainment/2013/dec/111213-bigg-boss-7-day-87-armaan-tanishaa-andy-sangram-gauahar-kushal-kamya-ajaz-television.htm">Day 87 in &#39;Bigg Boss 7&#39;</a></h2>	<h3 class="ft_arial fs11 video_col" style="font-weight: lighter">		Ajaz and Gauahar irritate Andy and Sangram during the re-introduced &#39;Bigg Box&#39; task in the race to the &#39;Bigg Boss Finale&#39;</h3></div><!-- border1 End //-->
+							   </div>
+							   
+								<div class="clr"></div>
+								<div class="dot_border">
+									<!-- border2 Begin //--><div class="fl pt10 pb10">	<a href="http://www.mid-day.com/photos/b-town-specials/rare-pictures-of-dilip-kumar/dilip-solo/"><img alt="Dilip Kumar" src="/imagedata/2013/dec/Dilip-whistle.jpg" style="width: 162px; height: 108px;" /></a></div><div class="fl pt10 pl10 wd168 pb10 slidecol home_caption_stories">	<h1 class="uppercase strories_fnt fs11 centernews">		<a href="http://www.mid-day.com/photos/">PHOTOS</a></h1>	<h2 class="pb5 tertre fs16">		<a href="http://www.mid-day.com/photos/b-town-specials/rare-pictures-of-dilip-kumar/dilip-solo/">Dilip Kumar: Rare pics</a></h2>	<h3 class="ft_arial fs11 video_col" style="font-weight: lighter;">		As the Bollywood thespian turns 91, here&rsquo;s our tribute to the legend through a compilation of his rare, candid pictures</h3></div><!-- border2 End //-->
+								</div>
+                            </div>
+                            <div class="clr"></div>
+                            <div class="dot_border pt10 wd343 slidecol home_caption_stories">
+                                <!-- dotbordercrick Begin //--><h1 class="strories_fnt fs11 centernews uppercase">	<a href="http://www.mid-day.com/sports/index.htm" target="_blank">SPORTS</a></h1><h2 class="pb5 tertre fs16">	<a href="http://www.mid-day.com/sports/2013/dec/111213-cricket-tainted-ex-india-pacer-sreesanth-to-tie-the-knot-on-thursday.htm">Sreesanth to get married tomorrow</a></h2><p>	<a href="http://www.mid-day.com/sports/2013/dec/111213-cricket-tainted-ex-india-pacer-sreesanth-to-tie-the-knot-on-thursday.htm"><img alt="Sreesanth" src="/imagedata/2013/dec/sreesanth-marriage-mp.jpg" style="width: 345px; height: 88px;" /></a></p><h3 class="ft_arial fs11 video_col" style="font-weight: lighter;">	Disgraced pacer to tie the knot with Bhuveneshwari Kumari, a girl from the Jaipur royal family, on December 12</h3><div class="cricket pt5">	<ul>		<li class="slidecol">			<h3 class="ft_arial fs11">				<a href="http://www.mid-day.com/sports/2013/dec/111213-cricket-ashes-captains-alastair-cook-micheal-clarke-99-not-out-100-test-mark-together.htm">Cook and Clarke on 99 not out, set to reach 100-Test mark together</a></h3>		</li>		<li class="slidecol">			<h3 class="ft_arial fs11">				<a href="http://www.mid-day.com/sports/2013/dec/111213-alastair-cook-brain-scrambled-geoffrey-boycott-ashes.htm">Alastair Cook&#39;s brain is scrambled, says Geoffrey Boycott</a></h3>		</li>		<li class="slidecol">			<h3 class="ft_arial fs11">				<a href="http://www.mid-day.com/sports/2013/dec/111213-ranji-trophy-wasim-jaffer-lead-mumbai-place-injured-abhishek-nayar.htm">Ranji Trophy: &#39;Injured&#39; Nayar rested; Jaffer to lead Mumbai</a></h3>		</li>		<li class="slidecol">			<h3 class="ft_arial fs11">				<a href="http://www.mid-day.com/sports/2013/dec/111213-cricket-terryfying-flight-leaves-west-indian-cricketers-shaken1.htm">&#39;Terrifying&#39; flight in NZ leaves West Indian cricketers shaken</a></h3>		</li>		<li class="slidecol">			<h3 class="ft_arial fs11">				<a href="http://www.mid-day.com/sports/2013/dec/111213-cl-stunning-city-fight-back-ends-bayern-record-run.htm">CL: &nbsp;Stunning Man City fight back ends Bayern&#39;s record run</a></h3>		</li>	</ul></div><!-- dotbordercrick End //-->
+                            </div>
+                            <div class="clr"></div>
+                            <div class="dot_border pt10 mt5 ">
+								<div id="as" class="fl">
+									<!-- bollywood Begin //--><div class="fl wd162 slidecol home_caption_stories">	<a href="http://www.mid-day.com/entertainment/2013/dec/111213-hrithik-roshan-health-reasons-busy-launches-own-fashion-label-online.htm"><img alt="Hrithik Roshan" src="/imagedata/2013/dec/11-hrithik.jpg" style="width: 162px; height: 108px;" /></a>	<h1 class="strories_fnt fs11 centernews uppercase">		<a href="http://www.mid-day.com/entertainment/index.htm" target="_blank">BOLLYWOOD</a></h1>	<h2 class="pb5 tertre fs16">		<a href="http://www.mid-day.com/entertainment/2013/dec/111213-hrithik-roshan-health-reasons-busy-launches-own-fashion-label-online.htm">Hrithik&#39;s fashion label</a></h2>	<h3 class="ft_arial fs11 video_col" style="font-weight: lighter;">		Hrithik Roshan is keeping himself busy with his other endeavours, he recently launched his own fashion label online</h3></div><!-- bollywood End //-->
+								</div>
+								
+								
+								<div id="as1">
+								<!-- bollywood1 Begin //--><div class="fl pl10 wd162 slidecol home_caption_stories">	<strong><a href="http://www.mid-day.com/entertainment/2013/dec/111213-sunny-leone-ragini-mms-2-body-double-revealing-scene.htm"><img alt="Sunny Leone" src="/imagedata/2013/dec/11Sunny-Leone-mp.jpg" style="width: 162px; height: 108px;" /></a></strong>	<h1 class="strories_fnt fs11 centernews uppercase">		<a href="http://www.mid-day.com/entertainment/index.htm">BOLLYWOOD</a></h1>	<h2 class="pb5 tertre fs16">		<a href="http://www.mid-day.com/entertainment/2013/dec/111213-sunny-leone-ragini-mms-2-body-double-revealing-scene.htm">Sunny goes coy again?</a></h2>	<h3 class="ft_arial fs11 video_col" style="font-weight:lighter;">		Ironically, former adult film star Sunny Leone apparently insisted on a body double for a revealing scene in &#39;Ragini MMS 2&#39;</h3></div><!-- bollywood1 End //-->
+								</div>
+                                
+                            </div>
+                            <div class="clr pt10"></div>
+							
+							<!-- centernews Begin //--><div class="dot_border pt10 slidecol home_caption_stories">	<h1 class="strories_fnt ft9 centernews">		<a href="http://www.mid-day.com/news/national/index.htm" target="_blank">NATIONAL</a></h1>	<h2 class="pb5 tertre fs16">		<a href="http://www.mid-day.com/news/2013/dec/111213-tarun-tejpal-to-be-produced-in-court-today.htm">Sexual assault case: Tarun Tejpal remanded to 12-day judicial custody </a></h2></div><div class="dot_border pt10 slidecol home_caption_stories">	<h1 class="strories_fnt ft9 centernews">		<a href="http://www.mid-day.com/news/national/index.htm" target="_blank">NATIONAL</a></h1>	<h2 class="pb5 tertre fs16">		<a href="http://www.mid-day.com/news/2013/dec/111213-gay-activists-disappointed-with-sc-verdict-on-homosexuality.htm">Gay activists disappointed with SC verdict on homosexuality</a></h2></div><!-- centernews End //-->
+							
+                            <div class="clr"></div>
+							
+                            <div class="dot_border pt10 wd347 slidecol home_caption_stories">
+                                <!-- centernews5 Begin //--><h1 class="strories_fnt ft9 centernews">	<a href="http://www.mid-day.com/photos/b-town-specials/" target="_blank">PHOTOS</a></h1><h2 class="pb5 tertre fs16">	<a href="http://www.mid-day.com/photos/b-town-specials/celebs-bid-farewell-to-vinay-apte/aadesh-bandekar-samir-dharm/">Celebs bid farewell to Vinay Apte</a></h2><p>	<a href="http://www.mid-day.com/photos/b-town-specials/celebs-bid-farewell-to-vinay-apte/aadesh-bandekar-samir-dharm/"><img alt="Celebs bid farewell to Vinay Apte" src="/imagedata/2013/dec/11Vinay-Apte-mp.jpg" style="width: 345px; height: 175px;" /></a></p><!-- centernews5 End //-->
+                            </div>
+                            <div class="clr"></div>
+                            <div class="dot_border pt10 wd335 slidecol home_caption_stories">
+                                <!-- centernews6 Begin //--><h1 class="strories_fnt ft9 centernews">	<a href="http://www.mid-day.com/news/national/index.htm">PUNE</a></h1><h2 class="pb5 tertre fs16">	<a href="http://www.mid-day.com/news/2013/dec/111213-pune-rogue-bus-driver-santosh-mane-awarded-death-for-killing-nine.htm">Pune rogue bus driver Santosh Mane awarded death for killing nine</a></h2><div class="dot_border pt10 wd335 slidecol">	<h1 class="strories_fnt ft9 centernews">		<a href="http://www.mid-day.com/news/national/index.htm">NATIONAL</a></h1>	<h2 class="pb5 tertre fs16">		<a href="http://www.mid-day.com/news/2013/dec/121213-news-aaps-kumar-vishwas-to-contest-against-rahul-gandhi-in-lok-sabha-elections.htm">AAP&#39;s Kumar Vishwas to contest against Rahul Gandhi in Lok Sabha elections?</a></h2></div><div class="dot_border pt10 wd335 slidecol">	<h1 class="strories_fnt ft9 centernews">		<a href="http://www.mid-day.com/news/national/index.htm">NATIONAL</a></h1>	<h2 class="pb5 tertre fs16">		<a href="http://www.mid-day.com/news/2013/dec/111213-fight-for-gay-rights-the-chronology.htm">Fight for gay rights: The chronology</a></h2>	<div class="dot_border pt10 wd335 slidecol">		<h1 class="strories_fnt ft9 centernews">			<a href="http://www.mid-day.com/news/national/index.htm">NATIONAL</a></h1>		<h2 class="pb5 tertre fs16">			<a href="http://www.mid-day.com/news/2013/dec/111213-mig-21-fl-flies-into-air-force-history.htm">MiG-21 FL flies into air force history</a></h2>	</div>	<div class="dot_border pt10 wd335 slidecol">		<h1 class="strories_fnt ft9 centernews">			<a href="http://www.mid-day.com/news/national/index.htm">NATIONAL</a></h1>		<h2 class="pb5 tertre fs16">			<a href="http://www.mid-day.com/news/2013/dec/111213-accused-in-spanish-musicians-rapee-case-claims-he-was-beaten-in-custody.htm">Accused in Spanish musician&#39;s rape case claims he was beaten in custody</a></h2>	</div>	<div class="dot_border pt10 wd335 slidecol">		<h1 class="strories_fnt ft9 centernews">			<a href="http://www.mid-day.com/news/hatke/index.htm" target="_blank">HATKE</a></h1>		<h2 class="pb5 tertre fs16">			<a href="http://www.mid-day.com/news/2013/dec/111213-hatke-news-australian-mans-belly-bursts-after-drinking-beer-from-can-he-dropped-in-river.htm">Oz man&#39;s belly bursts after drinking beer from can he dropped in river</a></h2>	</div>	<div class="dot_border pt10 wd335 slidecol">		<h1 class="strories_fnt ft9 centernews">			<a href="http://www.mid-day.com/news/national/index.htm" target="_blank">NATIONAL</a></h1>		<h2 class="pb5 tertre fs16">			<a href="http://www.mid-day.com/news/2013/dec/111213-news-80-yr-old-patient-dies-inj-k-after-official-holds-up-ambulance-for-using-red-beacon.htm">80-yr-old patient dies in J&amp;K after official holds up ambulance for using red beacon</a></h2>	</div>	<div class="dot_border pt10 wd335 slidecol">		<h1 class="strories_fnt ft9 centernews">			<a href="http://www.mid-day.com/news/international/index.htm">INTERNATIONAL</a></h1>		<h2 class="pb5 tertre fs16">			<a href="http://www.mid-day.com/news/2013/dec/111213-desmond-tutu-home-burgled-during-visit-to-nelson-mandela-memorial.htm">Desmond Tutu&#39;s home burgled while he attended Nelson Mandela memorial</a></h2>	</div></div><!-- centernews6 End //-->
+                            </div>
+
+                        </div><!-- inner_content_left ends here -->
+
+
+                        <div class="inner_content_right pt10 fr"><!-- inner_content_right starts here -->
+                            <div class="newsbox fl">
+								<!-- newsbox1 Begin //--><div class="pb10">	<div class="newsbox_header pt5 pb5 pl8 pr8 subsection_bg">		<h2 class="tertre newshead first">			<a href="http://www.mid-day.com/entertainment/2013/dec/111213-dhoom-3-aditya-chopra-team-apologise-abhishek-bachchan-injustice.htm">&#39;Dhoom 3&#39; team apologises to Abhishek</a></h2>		<div class="newsboxft ft11">			Buzz is that Aditya Chopra and team visited Abhishek Bachchan to make up for an injustice done earlier</div>	</div>	<div class="newsbox_image newsbximg">		<a href="http://www.mid-day.com/entertainment/2013/dec/111213-dhoom-3-aditya-chopra-team-apologise-abhishek-bachchan-injustice.htm"><img alt="Dhoom 3; Aamir Khan and Abhishek Bachchan" src="/imagedata/2013/dec/11-dhoom-3-2.jpg" style="width: 300px; height: 120px;" /></a>		<div class="photobg">			<a href="http://www.mid-day.com/entertainment/" target="_blank">BOLLYWOOD</a></div>	</div></div><!-- newsbox1 End //-->
+								<!-- newsbox2 Begin //--><div class="pb10">	<div class="newsbox_header pt5 pb5 pl8 pr8 slidecol">		<h2 class="tertre">			<a href="http://www.mid-day.com/photos/b-town-specials/television-stars-make-merry-at-a-party/38-gurmeet-debina-with-kunw/">TV stars make merry at a party</a></h2>		<div class="newsboxft ft11">			Aashka Goradia, Krystle D&#39;Souza, Disha Vakani and many popular telly actors were seen partying in the suburbs</div>	</div>	<div class="newsbox_image newsbximg">		<a href="http://www.mid-day.com/photos/b-town-specials/television-stars-make-merry-at-a-party/38-gurmeet-debina-with-kunw/"><img alt="Aashka Goradia, Krystle D'Souza, Disha Vakani" src="/imagedata/2013/dec/11-telly-stars.jpg" style="width: 300px; height: 120px;" /></a>		<div class="mvreviewbg">			<a href="http://www.mid-day.com/photos/b-town-specials/" target="_blank">PARTIES</a></div>	</div></div><!-- newsbox2 End //-->
+								<!-- newsbox3 Begin //--><div class="pb10">	<div class="newsbox_header pt5 pb5 pl8 pr8 slidecol">		<h2 class="tertre">			<a href="http://www.mid-day.com/photos/b-town-specials/celebs-at-love-yoou-soniye-screening/1_teejay-karanvir-love-yoou-soniye-3/">Screening of &#39;Love Yoou Soniye&#39;</a></h2>		<div class="newsboxft ft11">			Host of celebrities were in attendance at special screening of Teejay Sindhu and Karanvir Bohra&#39;s film</div>	</div>	<div class="newsbox_image newsbximg">		<a href="http://www.mid-day.com/photos/b-town-specials/celebs-at-love-yoou-soniye-screening/1_teejay-karanvir-love-yoou-soniye-3/"><img alt="Teejay Sidhu, Karanvir Bohra, Puneet, Lauren Gottlieb, 'Love  Yoou Soniye'" src="/imagedata/2013/dec/11-love-yoou-soniye.jpg" style="width: 300px; height: 120px;" /></a>		<div class="mvreviewbg">			<a href="http://www.mid-day.com/photos/b-town-specials/">PHOTOS</a></div>	</div></div><!-- newsbox3 End //-->
+								<!-- newsbox4 Begin //--><div class="newsbox_header pt5 pb5 pr8 pl8">	<h2 class="tertre">		<a href="http://videos.mid-day.com/Bigg-Boss-7-Day-87-The-Bigg-Box-task.htm">&#39;Bigg Boss 7&#39;: The &#39;Bigg Box&#39; task</a></h2>	<div class="ft11 newsboxft">		On day 86, as a part of &#39;Ticket to Finale&#39;, Sangram goes inside a box as a part of the task</div></div><div class="newsbox_image newsbximg">	<div class="plimg">		<a href="http://videos.mid-day.com/Bigg-Boss-7-Day-87-The-Bigg-Box-task.htm"><img alt="" class="fl" src="/images/play_sq.png" /></a></div>	<a href="http://videos.mid-day.com/Bigg-Boss-7-Day-87-The-Bigg-Box-task.htm"><img a="" alt="'Bigg Boss 7': The 'Bigg Box' task" apologise="" does="" guts="" have="" mother="" of="" rape="" src="/imagedata/2013/dec/The-Bigg-Box-task-big.jpg" srk="" style="width: 300px; height: 120px;" to="" vidya="" who="" would="" /></a>	<div class="photobg">		<a href="http://videos.mid-day.com/">VIDEO</a></div><!-- <a href="#"><img src="images/play_sq.png" class="newvid fl"/></a> --></div><!-- newsbox4 End //-->
+								<!-- newsbox5 Begin //--><div class="pb10">	<div class="newsbox_header pt5 pb5 pl8 pr8 slidecol">		<h2 class="tertre">			<a href="http://www.mid-day.com/photos/b-town-specials/ranbirkatrina-spotted-at-the-airport/ranbir_kapoor_1/">Katrina, Ranbir at the airport</a></h2>		<div class="newsboxft ft11">			Our shutterbugs recently captured Katrina Kaif and Ranbir Kapoor at the Mumbai airport</div>	</div>	<div class="newsbox_image newsbximg">		<a href="http://www.mid-day.com/photos/b-town-specials/ranbirkatrina-spotted-at-the-airport/ranbir_kapoor_1/"><img alt="Katrina Kaif, Ranbir Kapoor at the airport" src="/imagedata/2013/dec/10-katrina-ranbir.jpg" style="width: 300px; height: 120px;" /></a>		<div class="mvreviewbg">			<a href="http://www.mid-day.com/photos/b-town-specials/">SPOTTED</a></div>	</div></div><!-- newsbox5 End //-->
+                            </div>
+                            <div class="clr"></div>
+
+                            <div class="dot_border pt10 mt5 wd300 slidecol home_caption_stories">
+                                <!-- centernews1 Begin //--><h1 class="strories_fnt ft9 centernews">	<a href="http://www.mid-day.com/entertainment/television/index.htm" target="_blank">TELEVISION</a></h1><h2 class="pb5 tertre fs16">	<a href="http://www.mid-day.com/entertainment/2013/dec/111213-bigg-boss-saath-7-day-87-tanishaa-kushal-armaan-gauahar-andy-television.htm">&#39;Bigg Boss 7&#39;: Tanishaa refuses to participate in task on day 87. Here&#39;s why...</a></h2><div class="dot_border pt10 mt5 slidecol">	<h1 class="strories_fnt ft9 centernews">		<a href="http://www.mid-day.com/entertainment/bollywood/index.htm" target="_blank">BOLLYWOOD</a></h1>	<h2 class="pb5 tertre fs16">		<a href="http://www.mid-day.com/entertainment/2013/dec/111213-supreme-court-verdict-gay-sex-homosexuality-illegal-reactions-twitter-tweets-bollywood.htm">Bollywood lambastes Supreme Court&#39;s verdict on homosexuality</a></h2>	<div class="dot_border pt10 mt5 slidecol">		<h1 class="strories_fnt ft9 centernews">			<a href="http://www.mid-day.com/entertainment/bollywood/index.htm" target="_blank">BOLLYWOOD</a></h1>		<h2 class="pb5 tertre fs16">			<a href="http://www.mid-day.com/entertainment/2013/dec/111213-dance-on-besharam-song-katrina-kaif-ranbir-kapoors-wedding-koffee-with-karan.htm">Will dance on &#39;Besharam&#39; song at Ranbir&#39;s wedding: Katrina Kaif</a></h2>	</div>	<div class="dot_border pt10 mt5 slidecol">		<h1 class="strories_fnt ft9 centernews">			<a href="http://www.mid-day.com/entertainment/bollywood/index.htm" target="_blank">BOLLYWOOD</a></h1>		<h2 class="pb5 tertre fs16">			<a href="http://www.mid-day.com/entertainment/2013/dec/111213-mithun-chakraborty-archana-puran-singh-salman-khans-parents-kick.htm">The surprise casting in Salman Khan&#39;s &#39;Kick&#39;</a></h2>	</div>	<div class="dot_border pt10 mt5 slidecol">		<h1 class="strories_fnt ft9 centernews">			<a href="http://www.mid-day.com/entertainment/bollywood/index.htm" target="_blank">BOLLYWOOD</a></h1>		<h2 class="pb5 tertre fs16">			<a href="http://www.mid-day.com/entertainment/2013/dec/111213-bollywood-stars-controversies-didnt-disappoint-ranbir-katrina-srk-saif.htm">Bollywood&#39;s big bang theory of 2013</a></h2>	</div></div><!-- centernews1 End //-->
+                            </div>
+                          
+                            <div class="dot_border pt10 mt5 slidecol home_caption_stories">
+                                <!-- centernews2 Begin //--><h1 class="strories_fnt ft9 centernews">	<a href="http://www.mid-day.com/lifestyle/index.htm">DEAR DIANA</a></h1><h2 class="pb5 tertre fs16">	<a href="http://www.mid-day.com/relationships/2013/dec/121213-dear-diana-i-find-older-men-more-attractive.htm">&#39;I find older men more attractive...&#39;</a></h2><p>	<a href="http://www.mid-day.com/relationships/2013/dec/121213-dear-diana-i-find-older-men-more-attractive.htm"><img alt="Sex &amp; Relationships, Dear Diana" src="/imagedata/2013/dec/12diana-mp.jpg" style="width: 300px; height: 120px;" /></a></p><!-- centernews2 End //-->
+                            </div>
+                            <div class="clr"></div>
+                            <div class="dot_border  pt10 mt5 slidecol home_caption_stories">
+                                <!-- centernews3 Begin //--><h1 class="strories_fnt ft9 centernews">	<a href="http://www.mid-day.com/lifestyle/index.htm">FOOD</a></h1><h2 class="pb5 tertre fs16">	<a href="http://www.mid-day.com/lifestyle/2013/dec/111213-mumbai-guide-punjab-minus-the-masala.htm">'Amritsari Tadka' - Punjab, minus the masala</a></h2><div class="dot_border  pt10 slidecol">	<h1 class="strories_fnt ft9 centernews">		<a href="http://www.mid-day.com/lifestyle/index.htm">FEATURES</a></h1>	<h2 class="pb5 tertre fs16">		<a href="http://www.mid-day.com/lifestyle/2013/dec/111213-mumbai-guide-when-the-masters-take-stage.htm">When the masters take stage</a></h2></div><div class="dot_border  pt10 mt5 slidecol">	<h1 class="strories_fnt ft9 centernews">		<a href="http://www.mid-day.com/lifestyle/index.htm">FEATURES</a></h1>	<h2 class="pb5 tertre fs16">		<a href="http://www.mid-day.com/lifestyle/2013/dec/111213-mumbai-when-pune-got-booked.htm">Bookaroo diaries from Pune</a></h2></div><div class="dot_border  pt10 mt5 slidecol">	<h1 class="strories_fnt ft9 centernews">		<a href="http://www.mid-day.com/relationships/deardiana/index.htm">DEAR DIANA</a></h1>	<h2 class="pb5 tertre fs16">		<a href="http://www.mid-day.com/relationships/2013/dec/111213-dear-diana-my-gay-pal-is-hitting-on-my-boyfriend.htm">&#39;My gay pal is hitting on my boyfriend...&#39;</a></h2></div><!-- centernews3 End //-->
+                            </div>
+
+                            <div class="clr"></div>
+							
+                            <div id="300-250-bottom" class="fl dot_border pt10">
+                            
+                            <script type="text/javascript"><!--
+google_ad_client = "ca-pub-1915524449051254";
+/* Superhome-center-column-300-250 */
+google_ad_slot = "3820857477";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+                            
+                            
+                            
+                            </div>
+                            
+                        </div><!-- inner_content_right ends here -->
+
+
+                    </div><!-- content_left ends here -->
+
+                    <div class="content_right fr">  
+
+                     							   <div id="search1">
+<form action="http://www.mid-day.com/search.htm" method="post"> 
+<input name="q" type="text" id="search-text" class="insearchbx" style="border: medium none; height: 30px; width: 260px;"/>
+
+<input type="image" src="http://www.mid-day.com/images/search.png" name="search" value="Search">
+</form>
+</div>
+
+                        <script type="text/javascript">
+                            $(document).ready(function(){
+                                var searchBoxDefault = "Search..";
+                                var searchBox = $("#search-text");
+                                searchBox.attr("value", searchBoxDefault);
+                                searchBox.focus(function(){
+                                    if($(this).attr("value") == searchBoxDefault) $(this).attr("value", "");
+                                });
+                                searchBox.blur(function(){
+                                    if($(this).attr("value") == "") $(this).attr("value", searchBoxDefault);
+                                });
+                            });
+                        </script>
+                        
+                        
+               <div class="clr"></div>
+            <!-- Scorecard widget begins // -->
+          <div class="mt26 mb11 mt12">
+		  <iframe src="http://www.mid-day.com/IndSAtour/livescore/index.php" width="300" height="111" frameborder="0" scrolling="no"></iframe>
+          </div>
+			<!-- Scorecard widget ends //--> 
+            
+			<div class="clr"></div>
+
+                        <div id="300-250-top" class="mt10 mb11"> 
+                            <!-- Javascript tag: -->
+<!-- begin ZEDO for channel: Homepage , publisher: default , Ad Dimension: Medium Rectangle - 300 x 250 -->
+ <script language="JavaScript">
+var zflag_nid="1353"; var zflag_cid="1"; var zflag_sid="0"; var zflag_width="300"; var zflag_height="250"; var zflag_sz="9"; 
+</script>
+<script language="JavaScript" src="http://d8.zedo.com/jsc/d8/fo.js"></script> 
+<!-- end ZEDO for channel: Homepage , publisher: default , Ad Dimension: Medium Rectangle - 300 x 250 -->
+
+  <!-- I-RoN-300x600 -->
+<!--<div id='div-gpt-ad-1365684136671-0' style='width:300px; height:600px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1365684136671-0'); });
+</script>
+</div>-->
+
+                        </div>
+                 	<!--<div id="olympics-banner" class="mt10"><a href="http://www.fullyfilmi.com/contest/contest.html" target="_blank"><img src="http://images.mid-day.com/ek-tha-tiger-banner-index.gif" border="0"/></a></div>-->
+                 
+			<div class="clr"></div>
+			<div class="mb11">
+           <!--  google DFP ad-->
+            <!-- I-Homepage_300x100 -->
+                <div id='div-gpt-ad-1360140442133-0' style='width:300px; height:100px;'>
+                <script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1360140442133-0'); });
+                </script>
+                </div>
+
+            </div>
+            
+			<div class="clr"></div>
+            
+            <div class="mb11">
+            <!-- Horoscope widget-->
+			<iframe src="http://www.ganeshaspeaks.com/midday-widget-page.ajax" width="300" height="340" scrolling="no" frameborder="0"></iframe>
+            </div>
+                 
+                 
+                 
+			<div class="clr"></div>
+                                  
+          <div class="games1 fl mt10">
+          
+          
+                            <div class="pt15  pl10 ">
+                                <h2 class="strories_fnt uppercase">GET UPDATES FROM Mid-Day.com</h2>
+                            </div>
+
+                            <div class="">     
+                                <!--                                <form method="get" action="">
+                                                                    <input type="text" name="swap" id="email-text" size="25" value="Enter email address" />
+                                                                </form>-->
+                                <iframe src="http://www.mid-day.com/newsletter.htm" frameborder="0" scrolling="No" width="300" height="55"></iframe>
+                            </div>
+                        </div>
+                        <div class="clr pb10"></div>
+						
+						
+                         <div id="funlinks" class="clr pt10">
+						          <img src="/images/fun-links.gif" usemap="#Map2" />
+                                        <map name="Map2" id="Map2"><area shape="rect" coords="8,10,133,30" href="http://www.mid-day.com/comics/horoscope/index.htm" target="_self" alt="" />
+                                               <area shape="rect" coords="148,10,280,28" href="http://www.mid-day.com/comics/crossword/index.htm" target="_self" alt="" />
+                                               <area shape="rect" coords="9,39,94,57" href="http://www.mid-day.com/quiz" target="_self" alt="" />
+                                               <area shape="rect" coords="115,40,185,56" href="http://wallpapers.mid-day.com" target="_self" alt="" />
+                                               <area shape="rect" coords="210,42,247,60" href="http://www.mid-day.com/games" target="_self" alt="" />
+                                               
+									  </map>
+                            
+						 </div>
+                        
+                            
+
+                        <div class="clr"></div>
+						
+						
+                        <div class="pt10 fl">
+                            <div id="review"><!-- review Begin //--><div class="fl">	<a href="http://www.mid-day.com/entertainment/2013/dec/061213-movie-review-r-rajkumar-shahid-sonakshi-sonu.htm"><img alt="'R... Rajkumar' movie review" src="/imagedata/2013/dec/r-rajkumar-3a.jpg" style="width: 151px; height: 171px;" /></a></div><div class="fr pl9 midday_columnlist wd145">	<h2 class="strories_fnt">		<a href="http://www.mid-day.com/entertainment/2013/dec/061213-movie-review-r-rajkumar-shahid-sonakshi-sonu.htm">REVIEW</a></h2>	<h3 class="tertre sonakshi_col">		<a href="http://www.mid-day.com/entertainment/2013/dec/061213-movie-review-r-rajkumar-shahid-sonakshi-sonu.htm">&#39;R... Rajkumar&#39;</a></h3>	<a href="http://www.mid-day.com/entertainment/2013/nov/291113-movie-review-bullett-raja-saif-ali-jimmy-shergill-sonakshi.htm"><img src="/imagedata/2013/dec/1-stars_1.gif" style="width: 59px; height: 11px;" /></a><br />	<strong>It&#39;s a rehash of all that was bad with Hindi movies in the 80s<br />	</strong>	<div>		<p>			U/A; Action-Romance</p>		<p>			Director: Prabhu Dheva</p>		<p>			Cast: Shahid Kapoor, Sonakshi Sinha, Sonu Sood</p>	</div>	<div class="fr pt10 more_review">		<a href="http://www.mid-day.com/entertainment/reviews/index.htm">++more reviews </a></div></div><!-- review End //--> </div>  
+                        </div>
+						
+                        <div class="clr"></div>
+                        <div class="topstories mt5">
+                            <div class="grey pt5 pb5 pl10">
+	<h2 class="strories_fnt font_size">
+		TOP STORIES THIS WEEK</h2>
+        </div>
+        <!-- topstories Begin //--><div class="scroll-pane mb5">	<div class="fl pt15 grey_border pb10 grey_font">		<div class="fl">			<a href="http://www.mid-day.com/entertainment/2013/dec/101213-ranbir-kapoor-getting-paid-rs-12-crore-new-ad.htm"><img alt="Ranbir Kapoor" src="/imagedata/2013/mar/ranbir-ts.jpg" style="width: 61px; height: 45px;" /></a></div>		<div class="fl pl10 wd220">			<p class="grey_font">				<a href="http://www.mid-day.com/entertainment/2013/dec/101213-ranbir-kapoor-getting-paid-rs-12-crore-new-ad.htm">Ranbir Kapoor paid Rs 12 crore for a biscuit brand ad?</a></p>		</div>	</div>	<div class="fl pt15 grey_border pb10 grey_font">		<div class="fl">			<a href="http://www.mid-day.com/entertainment/2013/dec/101213-bigg-boss-saath-7-finale-task-armaan-kamya-kushal-gauahar-tanishaa-ajaz-andy-sangram1.htm"><img alt="'Bigg Boss 7' housemates" src="/imagedata/2013/dec/housemates-ts.jpg" style="width: 61px; height: 45px;" /></a></div>		<div class="fl pl10 wd220">			<p class="grey_font">				<a href="http://www.mid-day.com/entertainment/2013/dec/101213-bigg-boss-saath-7-finale-task-armaan-kamya-kushal-gauahar-tanishaa-ajaz-andy-sangram1.htm">&#39;Bigg Boss 7&#39;: Which housemate will secure a position in the Grand Finale ?</a></p>		</div>	</div>	<div class="fl pt15 grey_border pb10 grey_font">		<div class="fl">			<a href="http://www.mid-day.com/news/2013/dec/101213-9-men-gang-raped-teen-for-10-months-got-her-pregnant.htm"><img alt="9 men gang-raped teen for 10 months" src="/imagedata/2013/mar/rape-ts_1.jpg" style="width: 61px; height: 45px;" /></a></div>		<div class="fl pl10 wd220">			<p class="grey_font">				<a href="http://www.mid-day.com/news/2013/dec/101213-9-men-gang-raped-teen-for-10-months-got-her-pregnant.htm">9 men gang-raped teen for 10 months, got her pregnant</a></p>		</div>	</div>	<div class="fl pt15 grey_border pb10 grey_font">		<div class="fl">			<a href="http://www.mid-day.com/news/2013/dec/101213-pune-denied-bribe-female-cops-thrash-yerawada-jail-visitor.htm"><img alt="Female cops thrash Yerawada jail visitor" src="/imagedata/2013/dec/visitor-ts.jpg" style="width: 61px; height: 45px;" /></a></div>		<div class="fl pl10 wd220">			<p class="grey_font">				<a href="http://www.mid-day.com/news/2013/dec/101213-pune-denied-bribe-female-cops-thrash-yerawada-jail-visitor.htm">&#39;Denied bribe&#39;, female cops thrash Yerawada jail visitor</a></p>		</div>	</div>	<div class="fl pt15 grey_border pb10 grey_font">		<div class="fl">			<a href="http://www.mid-day.com/entertainment/2013/dec/101213-gauahar-khan-bigg-boss-7-contestant-celebrated-29th-birthday-two-years-ago.htm"><img alt="Gauahar Khan" src="/imagedata/2013/dec/gauahar-ts_1.jpg" style="width: 61px; height: 45px;" /></a></div>		<div class="fl pl10 wd220">			<p class="grey_font">				<a href="http://www.mid-day.com/entertainment/2013/dec/101213-gauahar-khan-bigg-boss-7-contestant-celebrated-29th-birthday-two-years-ago.htm">Gauahar Khan stuck at 29!</a></p>		</div>	</div>	<div class="fl pt15 grey_border pb10 grey_font">		<div class="fl">			<a href="http://www.mid-day.com/entertainment/2013/dec/101213-game-changers-in-bollywood-remarkably-different-deepika-priyanka-vidya.htm"><img alt="Deepika Padukone" src="/imagedata/2013/dec/deepika-ts.jpg" style="width: 61px; height: 45px;" /></a></div>		<div class="fl pl10 wd220">			<p class="grey_font">				<a href="http://www.mid-day.com/entertainment/2013/dec/101213-game-changers-in-bollywood-remarkably-different-deepika-priyanka-vidya.htm">The game changers in Bollywood in 2013</a></p>		</div>	</div>	<div class="fl pt15 grey_border pb10 grey_font">		<div class="fl">			<a href="http://www.mid-day.com/news/2013/dec/101213-police-gathering-cctv-footage-to-identify-driver.htm"><img alt="Crashed Aston Martin" src="/imagedata/2013/dec/aston-ts.jpg" style="width: 61px; height: 45px;" /></a></div>		<div class="fl pl10 wd220">			<p class="grey_font">				<a href="http://www.mid-day.com/news/2013/dec/101213-police-gathering-cctv-footage-to-identify-driver.htm">Cops hoping CCTV will reveal who was driving Aston Martin</a></p>		</div>	</div>	<div class="fl pt15 grey_border pb10 grey_font">		<div class="fl">			<a href="http://www.mid-day.com/news/2013/dec/101213-ministers-diktat-may-trigger-rs-8-lakh-crore-redevelopment-boom-in-south-mumbai.htm"><img alt="Sachin Ahir" src="/imagedata/2013/dec/sachin-ahir-ts.jpg" style="width: 61px; height: 45px;" /></a></div>		<div class="fl pl10 wd220">			<p class="grey_font">				<a href="http://www.mid-day.com/news/2013/dec/101213-ministers-diktat-may-trigger-rs-8-lakh-crore-redevelopment-boom-in-south-mumbai.htm">Minister&#39;s diktat may trigger Rs 8 lakh crore redevelopment boom in South Mumbai</a></p>		</div>	</div></div><!-- topstories End //-->
+                        </div>			 
+                        <div class="clr"></div>
+                        <div class="border fl pt20 pb20 pl15 pr15">
+                            <!-- border Begin //-->
+                            <div class="fl pr20">
+                                <div class="fl pr10 grey_font fs16 tertre">	 <strong> MID-DAY &#64;</strong></div>
+                                <div class="fl"> <a href="http://www.facebook.com/midday.infomedia">  <img src="/images/facebook_logo.png"/></a> </div>
+                            </div>
+                            <div class="fr">
+                                <!--<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.mid-day.com&amp;send=false&amp;layout=button_count&amp;width=50&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21&amp;appId=313799968643011" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>-->
+								<fb:like href="http://www.facebook.com/midday.infomedia" send="false" layout="button_count" width="100" show_faces="false"></fb:like>
+									<div id="fb-root"></div>
+									<script>(function(d, s, id) {
+									  var js, fjs = d.getElementsByTagName(s)[0];
+									  if (d.getElementById(id)) return;
+									  js = d.createElement(s); js.id = id;
+									  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=313799968643011";
+									  fjs.parentNode.insertBefore(js, fjs);
+									}(document, 'script', 'facebook-jssdk'));</script>
+                            </div>
+                            <!-- border End //-->
+                        </div>
+                        <div class="clr pt10"></div>
+                              <div id="top_games"> </div>
+
+					 <script>
+							
+                            var server = location.host;
+							
+								if(server=='cms.mid-day.com')
+								{
+									$('#top_games').load('/home/layouts/html/top_game.htm');
+								}
+								else
+								{
+									$('#top_games').load('/top_game.htm');
+								}
+                        </script>
+						
+						
+                        <div class="poll_registration wd300 pt10">
+                            
+                      <script language="JavaScript" type="text/javascript"> 
+	
+		var sSection ="Home";
+		if ((navigator.appName.indexOf("Microsoft") != -1) || 
+				(navigator.userAgent.toLowerCase().indexOf('firefox')))
+		{ 
+				document.write("<IFRAME id=\"polliframe\" scrolling=\"no\" name=\"polliframe\" width=\"300\"  frameborder=\"0\" src=\"http://poll.mid-day.com/index.php?section="+sSection+"&amp;height=\"\" style=\" height:200px; \"></IFRAME><BR>");
+		}
+		else
+		{ 
+		  document.write("<!-- //-->");
+		}
+	
+	  </script>
+                                    
+                        </div> </div>
+                    </div>
+
+                    <div class="clr"></div>
+					 <div class="coloumist_bg midpad ft_arial fs10 ft_bold uppercase">photos &amp; videos
+                    </div>
+                  
+                    <div class="clr"></div>
+                    <div class="photos_video pt5p">
+                        <div class="fl mr4p">
+							<!-- largediv Begin //--><div class="wd717p">	<div class="fl wd232p mr3p ml4p">		<div class="photos_video_list pad5">			<a href="http://www.mid-day.com/photos/b-town-specials/celebs-at-rakesh-jhunjhunwalas-nephews-sangeet/niharika-sridevi/">Bollywood celebs at a sangeet</a></div>		<div>			<a href="http://www.mid-day.com/photos/b-town-specials/celebs-at-rakesh-jhunjhunwalas-nephews-sangeet/niharika-sridevi/"><img alt="Celebs at Rakesh Jhunjhunwala's nephew's sangeet" src="/imagedata/2013/dec/11Sridevi-mp.jpg" style="width: 232px; height: 114px;" /></a></div>	</div>	<div class="fl wd232p mr3p ml4p">		<div class="photos_video_list pad5">			<a href="http://www.mid-day.com/photos/b-town-specials/celebs-at-dj-aviciis-music-concert/candy-brar/">Celebs at DJ Avicii&#39;s music concert</a></div>		<div>			<a href="http://www.mid-day.com/photos/b-town-specials/celebs-at-dj-aviciis-music-concert/candy-brar/"><img alt="Celebs at DJ Avicii's music concert" src="/imagedata/2013/dec/11DJ-Avicii-mp.jpg" style="width: 232px; height: 114px;" /></a></div>	</div></div><div class="fl wd232p mr3p ml4p">	<div class="photos_video_list pad5">		<a href="http://www.mid-day.com/photos/news/all-of-madiba___s-men/1112mandy/">All of Madiba&rsquo;s men</a></div>	<div>		<a href="http://www.mid-day.com/photos/news/all-of-madiba___s-men/1112mandy/"><img alt="All of Madiba’s men" src="/imagedata/2013/dec/11Madela-mp.jpg" style="width: 232px; height: 114px;" /></a></div></div><div class="wd717p clr pt5">	<div class="fl wd232p mr3p ml4p">		<div class="photos_video_list pad5">			<a href="http://www.mid-day.com/photos/news/the-week-that-was-dec-2-dec-8/nelson-mandela/">The week that was</a></div>		<div>			<a href="http://www.mid-day.com/photos/news/the-week-that-was-dec-2-dec-8/nelson-mandela/"><img alt="The week that was" src="/imagedata/2013/dec/10WTW-mp.jpg" style="width: 232px; height: 114px;" /></a></div>	</div>	<div class="fl wd232p mr3p ml4p">		<div class="photos_video_list pad5">			<span><span><a accesskey="/" href="http://www.mid-day.com/photos/b-town-specials/madhurihuma-on-bigg-boss-7/salman-madhuri-and-huma-1/">Madhuri, Huma on &#39;Bigg Boss 7&#39;</a></span></span></div>		<div>			<a href="http://www.mid-day.com/photos/b-town-specials/madhurihuma-on-bigg-boss-7/salman-madhuri-and-huma-1/"><img alt="Madhuri, Huma on 'Bigg Boss 7'" src="/imagedata/2013/dec/10Madhuri-Huma-mp.jpg" style="width: 232px; height: 114px;" /></a></div>	</div>	<div class="fl wd232p mr3p ml4p">		<div class="photos_video_list pad5">			<a href="http://www.mid-day.com/photos/b-town-specials/cast-of-r...-rajkumar-on-comedy-nights-with-kapil/r-rajkumar-comedy-nights-1/">&#39;R... Rajkumar&#39; cast on &#39;Comedy...&#39;</a></div>		<div>			<a href="http://www.mid-day.com/photos/b-town-specials/cast-of-r...-rajkumar-on-comedy-nights-with-kapil/r-rajkumar-comedy-nights-1/"><img alt="Sonu Sood, Shahid Kapoor and Sonakshi Sinha on 'Comedy Nights With Kapil'" src="/imagedata/2013/dec/06r-rajkumar-mp.jpg" style="width: 232px; height: 114px;" /></a></div>	</div></div><!-- largediv End //--> 
+                        </div>
+
+
+
+
+                        <div class="fl ml4p wd242p mr3p">
+                            <!-- celeb Begin //--><div>	<a href="http://www.mid-day.com/photos/image-of-the-day/image-of-the-day/11122013/" target="_blank"><img alt="Image of the day: Underwater Santa!" src="/imagedata/2013/dec/11122013-IOD.jpg" style="width: 243px; height: 278px;" /></a></div><div>	<a href="http://www.mid-day.com/photos/image-of-the-day/image-of-the-day/11122013/" target="_blank"> <img alt="" class="mate" src="/imagedata/2013/apr/image-of-the-day.gif" style="width: 114px; height: 19px;" /></a></div><div class="fr pd10">	<a href="http://www.mid-day.com/photos/image-of-the-day/image-of-the-day/" target="_blank"> <img src="/images/camera.png" />&nbsp;</a></div><!-- celeb End //-->
+                        </div>
+
+                    </div> 
+
+                    <div class="clr"></div>
+                    <div class="pl5 wd970p">
+                        <div class="ft_arial fs12">
+                           <a href="http://gallery.mid-day.com/"><span class="sonakshi_col">view all photos</span></a>
+                        </div>
+                        <div class="fr pr5">
+                           <a href="http://videos.mid-day.com/"><span class="sonakshi_col">see all videos</a>
+                        </div>
+                    </div>
+                    <div class="clr"></div>
+                    <div class="midday_video pt20">
+                        <!-- middayvideo Begin //--><div class="fl ml4p wd186 mr4p shome_videos pos_rel">	<a href="http://videos.mid-day.com/Bigg-Boss-7-Day-87-I-am-a-wrong-say-Tanishaa-to-Armaan.htm"><img alt="'Bigg Boss 7' Day 87: I am a wrong say Tanishaa to Armaan" src="/imagedata/2013/dec/BB7-Tanishaa-Armaan.jpg" style="width: 185px; height: 110px;" /></a> <a href="http://videos.mid-day.com/Bigg-Boss-7-Day-87-I-am-a-wrong-say-Tanishaa-to-Armaan.htm"><span class="play_sup"><img src="/images/video-icon.png" /></span></a>	<div>		<h3 class="terminal_dois_book">			<a href="http://videos.mid-day.com/Bigg-Boss-7-Day-87-I-am-a-wrong-say-Tanishaa-to-Armaan.htm">&#39;Bigg Boss 7&#39;: I am a wrong say Tanishaa to Armaan</a></h3>	</div></div><div class="fl ml4p wd186 mr4p shome_videos pos_rel">	<a href="http://videos.mid-day.com/Based-only-on-his-eyes-police-release-10-sketches-of-robber.htm"><img alt="CCTV: Sketches based on robber's eyes" src="/imagedata/2013/dec/Sketches-based-on-robber-eyes_1.jpg" style="width: 185px; height: 110px;" /></a> <a href="http://videos.mid-day.com/Based-only-on-his-eyes-police-release-10-sketches-of-robber.htm"><span class="play_sup"><img src="/images/video-icon.png" /><br />	</span></a>	<h3 class="terminal_dois_book">		<a href="http://videos.mid-day.com/Based-only-on-his-eyes-police-release-10-sketches-of-robber.htm">CCTV: Sketches based on robber&#39;s eyes</a></h3>	<a href="http://videos.mid-day.com/Success-party-of-Blood-Money.htm"> </a></div><p>	<a href="http://videos.mid-day.com/Success-party-of-Blood-Money.htm"> </a></p><div class="fl ml4p wd186 mr4p shome_videos pos_rel">	<a href="http://videos.mid-day.com/Success-party-of-Blood-Money.htm"> </a><a href="http://videos.mid-day.com/Bigg-Boss-7-Day-87-Rajneeti-task.htm"><img alt="'Bigg Boss 7' Day 87: 'Rajneeti' task" ramaiya="" src="/imagedata/2013/dec/BB7-Rajneeti-Task.jpg" style="width: 185px; height: 110px;" vidya="" /></a> <a href="http://videos.mid-day.com/Bigg-Boss-7-Day-87-Rajneeti-task.htm"><span class="play_sup"><img src="/images/video-icon.png" /></span></a>	<div>		<h3 class="terminal_dois_book">			<a href="http://videos.mid-day.com/Bigg-Boss-7-Day-87-Rajneeti-task.htm">&#39;Bigg Boss 7&#39; Day 87: &#39;Rajneeti&#39; task</a></h3>	</div></div><div class="fl ml4p wd186 mr4p shome_videos pos_rel">	<a href="http://videos.mid-day.com/Very-determined-guest-goes-after-bouquet.htm"><img alt="Very determined guest goes after bouquet" does="" guts="" have="" khan="" rukh="" shah="" src="/imagedata/2013/dec/woman-fall-head-first.jpg" style="width: 185px; height: 110px;" to="" /></a> <a href="http://videos.mid-day.com/Very-determined-guest-goes-after-bouquet.htm"><span class="play_sup"><img src="/images/video-icon.png" /></span></a>	<div>		<h3 class="terminal_dois_book">			<a href="http://videos.mid-day.com/Very-determined-guest-goes-after-bouquet.htm">Very determined guest goes after bouquet</a></h3>	</div></div><div class="fl ml4p wd186 mr4p shome_videos pos_rel">	<a href="http://videos.mid-day.com/Belleo-Stevenson-clash-at-heated-weigh-in.htm"><img alt="Bellew-Stevenson clash at heated weigh-in" src="/imagedata/2013/dec/Belleo-Stevenson-clash-sml.jpg" style="width: 185px; height: 110px;" /></a> <a href="http://videos.mid-day.com/Belleo-Stevenson-clash-at-heated-weigh-in.htm"><span class="play_sup"><img src="/images/video-icon.png" /></span></a>	<h3 class="terminal_dois_book">		<a href="http://videos.mid-day.com/Belleo-Stevenson-clash-at-heated-weigh-in.htm">Bellew-Stevenson clash at heated weigh-in<br />		<br />		</a></h3></div><!-- middayvideo End //-->
+                    </div> 	 
+                    <div class="clr pt20"></div>
+                    <div class="coloumist_bg midpad ft_arial fs10 ft_bold uppercase"><a href="http://www.mid-day.com/columnists/index.htm" class="midmore">Mid-day Columnists</a>                    </div>
+              <div class="clr"></div> 
+                    <div class="midday_columnlist pt5p">
+                        <!-- middaycolumnlist Begin //--><div class="fl wd140p mr11 ">	<a href="http://www.mid-day.com/columnists/2013/dec/121213-opinion-be-inclusive-even-if-laws-are-not.htm"><img alt="MiD DAY Editorial" src="/imagedata/2012/mar/editorial-op.jpg" style="width: 140px; height: 143px;" /></a>	<h2 class="tertre">		<a href="http://www.mid-day.com/columnists/editorial/index.htm">Editorial</a></h2>	<h3 class="terminal_dois_book sonakshi_col font_size">		<a href="http://www.mid-day.com/columnists/2013/dec/121213-opinion-be-inclusive-even-if-laws-are-not.htm">Be inclusive, even if laws are not</a></h3></div><div class="fl ml12p wd140p mr11">	<a href="http://www.mid-day.com/columnists/2013/dec/121213-people-react-to-the-supreme-courts-deci.htm"><img alt="Malavika Sangghvi" src="/imagedata/2012/apr/Malavika-Sangghvi-op.jpg" style="width: 140px; height: 143px;" /></a>	<h2 class="tertre">		<a href="http://www.mid-day.com/columnists/malavikasangghvi/index.htm">Malavika Sangghvi</a></h2>	<h3 class="terminal_dois_book sonakshi_col font_size">		<a href="http://www.mid-day.com/columnists/2013/dec/121213-people-react-to-the-supreme-courts-deci.htm">People react to the SC&#39;s decision to criminalise gay sex</a></h3></div><div class="fl ml12p wd140p mr11">	<a href="http://www.mid-day.com/columnists/2013/dec/121213-opinion-vikram-sood-the-message-stands-delivered.htm"><img alt="Vikram Sood" src="/imagedata/2012/may/vikram-op.jpg" style="width: 140px; height: 143px;" /></a>	<h2 class="tertre">		<a href="http://www.mid-day.com/columnists/vikramsood/index.htm">Vikram Sood</a></h2>	<h3 class="terminal_dois_book sonakshi_col font_size">		<a href="http://www.mid-day.com/columnists/2013/dec/121213-opinion-vikram-sood-the-message-stands-delivered.htm">The message stands delivered</a></h3></div><div class="fl ml12p wd140p mr11">	<a href="http://www.mid-day.com/columnists/2013/dec/111213-the-aap-experiment.htm"><img alt="Ranjona Banerji" src="/imagedata/2012/may/ranjona-op.jpg" style="width: 143px; height: 140px;" /></a>	<h2 class="tertre">		<a href="http://www.mid-day.com/columnists/ranjonabanerji/index.htm">Ranjona Banerji</a></h2>	<h3 class="terminal_dois_book sonakshi_col font_size">		<a href="http://www.mid-day.com/columnists/2013/dec/111213-the-aap-experiment.htm">The AAP experiment</a></h3></div><div class="fl ml12p wd140p mr11">	<a href="http://www.mid-day.com/columnists/2013/dec/091213-verdict-2013-a-no-confidence-vote.htm"><img alt="Smita Prakash" src="/imagedata/2012/jun/smita-op.jpg" style="width: 140px; height: 143px;" /></a>	<h2 class="tertre">		<a href="http://www.mid-day.com/columnists/smitaprakash/index.htm">Smita Prakash</a></h2>	<h3 class="terminal_dois_book sonakshi_col font_size">		<a href="http://www.mid-day.com/columnists/2013/dec/091213-verdict-2013-a-no-confidence-vote.htm">Verdict 2013: A no-confidence vote</a></h3></div><div class="fl ml12p wd140p mr11">	<a href="http://www.mid-day.com/columnists/2013/dec/091213-clean-cm-must-come-clean-on-allotment-of-funds.htm"><img alt="Ravikiran Deshmukh" src="/imagedata/2012/jun/ravikiran-op.jpg" style="width: 140px; height: 143px;" /></a>	<h2 class="tertre">		<a href="http://www.mid-day.com/columnists/othercolumnists/index.htm">Ravikiran Deshmukh</a></h2>	<h3 class="terminal_dois_book sonakshi_col font_size">		<a href="http://www.mid-day.com/columnists/2013/dec/091213-clean-cm-must-come-clean-on-allotment-of-funds.htm">Clean CM must come clean on allotment of funds</a></h3></div><!-- middaycolumnlist End //-->
+                    </div>
+                    <div class="clr pt15 pb20"></div>
+					
+				
+                    <div class="clr"></div>
+                    <div class="wd100p">
+                <div class="fl mr12p margin-right12ie" id="bottom_add">
+                   <iframe src="http://www.mid-day.com/bottom-728x90-banner.html" frameborder="0" width="728" height="90" style="overflow:hidden" scrolling="no"></iframe>
+                </div>
+                <div class="fl wd210 newsbotbg ft_arial" id="sponser_link"> <img src="http://www.mid-day.com/images/bottom_add1.png" border="0" usemap="#Map" />
+                    <map name="Map" id="Map">
+                    <area shape="rect" coords="24,10,62,83" href="http://www.mid-day.com/android" target="_blank" />
+                    <area shape="rect" coords="81,9,121,82" href="http://www.mid-day.com/iphone" target="_blank" />
+                    <area shape="rect" coords="137,8,196,83" href="http://www.mid-day.com/ipad" target="_blank" />
+                    </map>
+                </div>
+			</div>
+
+                    <div class="clr"></div>
+                   
+                    <!--<hr class="ht3">-->
+                        <div id="footer"> <link rel="stylesheet" type="text/css" href="http://css.mid-day.com/footer.css" />
+<!--[if lte IE 7]>
+	<link rel="stylesheet" href="http://css.mid-day.com/anythingslider-ie.css" type="text/css" media="screen" />
+<![endif]-->
+
+<!-- footer Begin //-->
+<div class="footer_parent pt20">
+	<div class="overflow foot_wrap">
+		<div>
+				<div class="fl font_size mid_col">
+					<ul class="newsfootli txtlower fnt16 terminalD-book">
+						<li><a href="http://www.mid-day.com/index.htm">home</a></li>
+                        <li><a href="http://photos.mid-day.com">photos</a></li>
+                        <li><a href="http://videos.mid-day.com">videos</a></li>
+                        <li><a href="http://www.mid-day.com/news/index.htm">news</a></li>
+                        <li><a href="http://www.mid-day.com/entertainment/index.htm">entertainment</a></li>
+                        <li><a href="http://www.mid-day.com/sports/index.htm">sports</a></li>
+                        <li><a href="http://www.mid-day.com/relationships/index.htm">sex &amp; relationships</a></li>
+                        <li><a href="http://www.mid-day.com/lifestyle/index.htm">lifestyle</a></li>
+                        <li><a href="http://www.mid-day.com/columnists/index.htm">columnists</a></li>
+                        <li><a href="http://www.mid-day.com/epaper/index.htm">epaper</a></li>
+                        <li><a href="http://wallpapers.mid-day.com/">wallpapers</a></li>
+                        <li><a href="http://www.mid-day.com/comics/horoscope/index.htm">horoscope</a></li>
+                        <li style="padding-right:0; background:none;"><a href="http://midday.thegamebox.com/">games</a></li>
+					</ul>
+				</div>
+				<div class="clr"></div>
+		</div>
+		<!--footer change as on 19.04.2012-->
+		<div class="clr spacer20">&nbsp;</div>
+		<div style="background:#FFF;">
+			<div class="fl foot_redbtn talign pt3">
+				<!--<span class="ft_arial ft_bold font_size"><a href="http://www.mid-day.com/sitemap.htm">SITEMAP</a></span>-->
+				<ul class="ft_arial red_list">
+					<li><a href="http://www.mid-day.com/about.htm">about</a></li>
+                    <li><a href="http://www.middayinfomedia.com/">corporate</a></li>
+                    <li><a href="http://www.mid-day.com/advertise.htm">advertise with us</a></li>
+                    <li style="border:0;"><a href="http://www.mid-day.com/sitemap.htm">sitemap</a></li>
+				</ul>
+			</div>
+			 <div class="fr ft_arial fs11 right mr3">
+				<div class="right fr">
+					<div class="fl copy_col">Network:</div>
+					<div class="fl mid_col">
+						<ul class="list-header">
+						<li class="fl list-header_bor pl5 pr5"><a href="http://www.jagran.com/" target="_blank"  style="color:#4f4b4b;">Hindi News</a></li>
+						<li class="fl list-header_bor pr5 pl5 "><a href="http://www.gujaratimidday.com/" target="_blank"  style="color:#4f4b4b;">Gujrati News</a></li>
+                        <li class="fl list-header_bor pr5 pl5 "><a href="http://www.inquilab.com/" target="_blank"  style="color:#4f4b4b;">Urdu News</a></li>
+						<li class="fl pl5"><a href="http://www.onlymyhealth.com/" target="_blank"  rel="nofollow" style="color:#4f4b4b;">Health</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clr"></div>
+				<div class="talign txt9c9c9c ft_arial fs11 fr mt5">
+					Copyright &copy; 2012 Mid-Day Infomedia Ltd. All rights reserverd.
+				</div>
+			 </div>
+			 <div class="clr"></div>
+		</div><div class="clr spacer20">&nbsp;</div>
+	<!--footer change end-->
+	</div>
+	<div class="clr"></div>
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=274237562681261";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</div>
+<!-- footer End //-->
+
+</div>
+                        
+                        <div class="clr"></div>
+                        <div class="copy_border talign copy_col pd10 ft_arial fs11">
+                            Copyright &copy; 2012 Mid-Day Infomedia Ltd. All rights reserverd.
+                        </div>
+                
+                <!----content ends----------->
+            </div><!----container ends----------->
+        </div>
+		<!-- Javascript tag: -->
+<!-- begin ZEDO for channel: Homepage , publisher: default , Ad Dimension: Pixel/Popup - 1 x 1 -->
+<script language="JavaScript">
+var zflag_nid="1353"; var zflag_cid="1"; var zflag_sid="0"; var zflag_width="1"; var zflag_height="1"; var zflag_sz="15"; 
+</script>
+<script language="JavaScript" src="http://d8.zedo.com/jsc/d8/fo.js"></script>
+<!-- end ZEDO for channel: Homepage , publisher: default , Ad Dimension: Pixel/Popup - 1 x 1 -->
+
+<!-- Javascript tag: -->
+<!-- begin ZEDO for channel: Homepage , publisher: default , Ad Dimension: Slider - 1 x 1 -->
+<script language="JavaScript">
+var zflag_nid="1353"; var zflag_cid="1"; var zflag_sid="0"; var zflag_width="1"; var zflag_height="1"; var zflag_sz="94"; 
+</script>
+<script language="JavaScript" src="http://d8.zedo.com/jsc/d8/fo.js"></script>
+<!-- end ZEDO for channel: Homepage , publisher: default , Ad Dimension: Slider - 1 x 1 -->
+
+<!-- Javascript tag: -->
+<!-- begin ZEDO for channel:  Homepage , publisher: default , Ad Dimension: Intromercial - 1 x 1 -->
+<script language="JavaScript">
+var zflag_nid="1353"; var zflag_cid="1"; var zflag_sid="0"; var zflag_width="1"; var zflag_height="1"; var zflag_sz="17"; 
+</script>
+<script language="JavaScript" src="http://d8.zedo.com/jsc/d8/fo.js"></script>
+<!-- end ZEDO for channel:  Homepage , publisher: default , Ad Dimension: Intromercial - 1 x 1 -->
+
+
+
+<!-- Javascript tag  -->
+<!-- begin ZEDO for channel:  AdTest , publisher: default , Ad Dimension: Pixel/Popup - 1 x 1 -->
+<!--<script language="JavaScript">
+var zflag_nid="1353"; var zflag_cid="46"; var zflag_sid="0"; var zflag_width="1"; var zflag_height="1"; var zflag_sz="15"; 
+</script>
+<script language="JavaScript" src="http://d8.zedo.com/jsc/d8/fo.js"></script>
+<!-- end ZEDO for channel:  AdTest , publisher: default , Ad Dimension: Pixel/Popup - 1 x 1 -->
+
+<!-- I-Pop_1x1 -->
+
+
+<div id='div-gpt-ad-1369743554616-0' style='width:1px; height:1px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1369743554616-0'); });
+</script>
+</div>
+
+<div id="feedDiv"><a href="http://www.mid-day.com/feedback/index.html" target="_blank"> Feedback</a></div>
+
+
+<!-- Affinity In-Margin code starts here -->
+<!--  <div id="phMgContainer" style="display:none;">
+<script type="text/javascript" language="javascript" >
+	var _afs = _afs || {};				
+	_afs['pb'] = "kax58";
+	_afs['aduid'] = "107";
+	(function() {
+		var mg = document.createElement('script'); mg.type = 'text/javascript'; 
+		mg.src = '//inm.affinitymatrix.com/js/mg.js?pb='+_afs['pb'];
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mg, s);
+	})();
+</script>
+</div> -->
+<!-- Affinity In-Margin code ends here -->
+
+<!-- <div id="PagePusher" style="position:absolute; right:0; top:0px;  z-index:10000000000;" align="left">
+<!-- Javascript tag  -->
+<!-- begin ZEDO for channel:  Homepage , publisher: default , Ad Dimension: Page Peel - 1 x 1 -->
+<script language="JavaScript">
+var zflag_nid="1353"; var zflag_cid="1"; var zflag_sid="0"; var zflag_width="1"; var zflag_height="1"; var zflag_sz="23"; 
+</script>
+<script language="JavaScript" src="http://d8.zedo.com/jsc/d8/fo.js"></script>
+<!-- end ZEDO for channel:  Homepage , publisher: default , Ad Dimension: Page Peel - 1 x 1 -->
+</div>-->
+
+    </body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" type="text/css" media="all" href="css/jsDatePick_ltr.min.css" />
+
+<style type="text/css">
+.JsDatePickBox {
+	left: -80px;
+	background-color:red;
+}
+</style>
+<title>:: Squared Monitoring ::</title>
+<link href="./css/style.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="./images/icon.png" type="image/x-icon" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="js/modal.popup.js"></script>
+ --><script language="javascript">
+
+   $(document).ready(function() {
+            
+		//Change these values to style your modal popup
+	 /*	var align = 'center';										//Valid values; left, right, center
+		var top = 100; 												//Use an integer (in pixels)
+		var padding = 10;											//Use an integer (in pixels)
+		var backgroundColor = '#FFFFFF'; 							//Use any hex code
+		var borderColor = '#000000'; 								//Use any hex code
+		var borderWeight = 4; 										//Use an integer (in pixels)
+		var borderRadius = 5; 										//Use an integer (in pixels)
+		var fadeOutTime = 300; 										//Use any integer, 0 = no fade
+		var disableColor = '#666666'; 								//Use any hex code
+		var disableOpacity = 40; 									//Valid range 0-100
+		var loadingImage = 'http://www.jquerypopup.com/lib/release-0.0.1/loading.gif';	//Use relative path from this page
+			
+		//This method initialises the modal popup
+        $(".modal").click(function() {
+			
+			var source = "http://www.squaredmonitoring.com/query.php";	//Refer to any page on your server, external pages are not valid
+			var width = 500; 					//Use an integer (in pixels)
+            
+			modalPopup(align, top, width, padding, disableColor, disableOpacity, backgroundColor, borderColor, borderWeight, borderRadius, fadeOutTime, source, loadingImage);
+			
+        });	*/
+		
+		//This method initialises the modal popup
+       
+		
+		//This method hides the popup when the escape key is pressed
+		$(document).keyup(function(e) {
+			
+			if (e.keyCode == 27) {
+				closePopup(fadeOutTime);
+			}
+			
+		});
+	
+	$("#advancesearch").hide();
+	$("#advnsrch").click(function(){
+        $("#advancesearch").toggle('slow');
+    });
+		
+
+    });
+	
+</script>
+</head>
+
+<body>
+<!--Header Starts here-->
+<div id="header">
+</span>
+  <div class="header">
+    <div class="logo"><a class="fl" href="./index.php"><img src="images/logo.png" width="144" height="141" alt="" border="0" /></a></div>
+    <div class="head_banner"> 
+      <!--replace this image with google adsense code - space left 728PX x 90PX --> 
+     <script type="text/javascript"><!--
+         google_ad_client = "ca-pub-3237172644338355";
+		/* Header_AD */
+		google_ad_slot = "5464107373";
+		google_ad_width = 728;
+		google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+      <!--end--> 
+    </div>
+	
+  </div>
+</div>
+<!--Header Ends-->
+<div class="clr"></div>
+<!--ID CLEARED--> 
+
+<!--Navigation Starts here-->
+<div id="navigation">
+  <div class="navigation">
+    <ul>
+      <li><a class="active" href="./index.php">Home</a></li>
+      <li><a href="./services.php">Services</a></li>
+	        <li><a href="./gallery.php">Gallery</a></li>
+	        <li ><a href="./contact-us.php">Contact&nbsp;Us</a></li>
+        	  <li class="last"><a href="./registrationform.php">Register</a></li>
+	      </ul>
+  </div>
+</div>
+<!--Navigation Ends-->
+<div class="clr"></div>
+<!--ID CLEARED--> 
+<!--Main Wrapper Starts Here-->
+<div id="wrapper">
+   <div class="wrapper-left">
+    <div class="leftwrap">
+      <div class="loginbox">
+	   <form action="check.php" method="post">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="34%" height="29" class="txt-tble">Log In</td>
+            <td width="66%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="22">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="30" class="tbletxt">Username:</td>
+            <td><input class="txtfield" name="username" type="text" /></td>
+          </tr>
+          <tr>
+            <td height="30" class="tbletxt">Password:</td>
+            <td><input class="txtfield" name="password" type="password" /></td>
+          </tr>
+          <tr>
+            <td height="35">&nbsp;</td>
+            <td><table width="100%" height="35" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+				
+                 
+                  <td width="41%"><input type="image" class="submit" src="images/login.jpg" id="subbut" value="Submit" /></td>
+				   
+                <td width="45%"><a href="registrationform.php" style="color:white;">Register</td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr>
+            <td colspan="2" height="10"></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <!--<td class="pwdtxt"><a href="#">Forgot Your Password ?</a></td>-->
+          </tr>
+        </table>
+		</form>
+      </div>
+      <div class="textbox"><a href="/recentadlist.php">Click to view <br />
+        Recent Ad Listing</a></div>
+      <div class="banner-vertical"><script type="text/javascript"><!--
+			google_ad_client = "ca-pub-3237172644338355";
+			/* left side */
+			google_ad_slot = "6558585745";
+			google_ad_width = 160;
+			google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></a></div>
+    </div>
+  </div>  <div class="wrapper-right">
+    <div class="rightwrap">
+      <h1>Welcome to Squared Monitoring</h1>
+      <p> Squared Monitoring Information & Media (P) Ltd is engaged in the business of monitoring Television Channels, Radio Channels and Press Publications (Newspapers, magazines & other periodicals) for : </p>
+      <div class="img-box">
+      <div class="img-inbox">      TV       <img class="img" src="images/tv.jpg" width="120" height="108" /></div>
+      <div class="img-inbox">     Print     <img class="img" src="images/news.jpg" width="120" height="108" /></div>
+      <div class="img-inbox">      Radio    <img class="img" src="images/fm.jpg" width="120" height="108" /></div>
+      <div class="img-inbox">     Internet  <img class="img" src="images/web.jpg" width="120" height="108" /></div>
+      <div class="img-inbox">      Newspaper<img class="img" src="images/news-2.jpg" width="120" height="108" /></div>
+      </div>
+      <p> Squared Monitoring digitally records, monitors and compiles all new TV Ads, radio Ads, Newspaper & Magazine Ads, Web Ads on a daily basis to provide solutions tailored to meet ones individual requirements. For example, an ad-hoc request for a TVC that appeared a month ago or a compilation of all TV, radio web and print ads for  Skin Care in the past year. The commercials and ads are sorted by product category, language, duration and title via specially designed database software for easy viewing and retrieval.</p>
+      <br />
+      <h4>Squared Monitoring advertising monitoring services may be acquired on an Ad Hoc or Subscription basis:</h4>
+      <p> <span class="txt">Ad Hoc</span><br />
+        Tailor your requests for ad compilations in specific categories in specific time frames. For example, all hair care tv commercials and print ads in the last 6 months.<br />
+        <br />
+        <span class="txt">Daily Free Alerts</span><br />
+        New Ads are reported to you by e-mail on a daily basis via a custom system based on the type of AD monitoring you require.<br />
+        <br />
+        <span class="txt">Monthly / Fortnightly / Weekly Update</span><br />
+        This service compiles all new ads in a month ? including revised versions of previous ads ? with a Summary Listing for your reference by the first week of the following month<br />
+        <br />
+        <span class="txt">Per Ad base Subscription</span><br />
+        This service allows you to take quota of ads and view the ads thru our online database<br />
+        <br />
+        <span class="txt">Online Access to Ad Gallery via website</span><br />
+        Post subscription one gets the access to download and view ads directly from our website<br />
+        Our databank extends from 2004 onwards till date.  We have collection of ads from TV, Print, Radio, Web, and Press News Clippings.<br />
+        <br />
+        <span class="txt">Event Tracking</span><br />
+        Analyse your visibility during a sports, awards, competition events. For example one can simply know, how many times their products have been visible and talked about in a specific event </p>
+    </div>
+  </div>
+</div>
+<!--Main Wrapper Ends-->
+<div class="clr"></div>
+<!--ID CLEARED--> 
+
+<!--Footer Starts Here-->
+<div id="footer">
+  <div class="footer-left"><a href="./index.php">Home</a> | <a href="./services.php">Services</a> | <a href="sq_allads.php">Gallery</a> | <a href="./contact-us.php">Contact&nbsp;Us</a></div>
+  <div class="footer-right">Copyright &copy; 2012. All Rights Reserved.</div>
+</div>
+<!--Footer Ends-->
+</body>
+</html>
+

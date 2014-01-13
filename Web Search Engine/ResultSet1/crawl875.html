@@ -1,0 +1,215 @@
+<html>
+	<head>
+		<title>METEO CONSULT World</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta http-equiv="Cache" content="Cache" />
+		<meta name="keywords" content="previsions meteo, meteo consult, meteo gratuite, alerte meteo, meteo portail, meteo prevision, prevision meteorologique, bulletin meteo, photo satellite, image satellite" langue="fr" />
+		<meta name="description" content="Sur METEO CONSULT, retrouvez les prévisions météo mondiales, les prévisions météo nationales, les prévisions météo régionales ainsi que les prévisions météo par ville" langue="fr" />
+		<meta name="google-site-verification" content="kTXu32wQe2V4DJO-rd_R6msa9bwJibZx3yeDRIYoYzM" />
+		<meta name="msvalidate.01" content="04835DAC5AB6479D7F60A624FFC4DB75" />
+	</head>
+	<body style="margin:0; padding:0; color:#ffffff; font-family:Arial;">
+		<script type="text/javascript">
+		var c_actif = new Array();
+		c_actif['terr'] = "#000000";
+		c_actif['mer'] = "#74a0d7";
+		var c_inactif = "#ffffff";
+			function survol_drapeau(type, lang) {
+				switch(type) {
+					case 'terr' :
+						switch(lang) {
+							case 'fr' :
+								document.getElementById("text_lang_" + type).innerHTML = "<b>Pour la m&eacute;téo terrestre</b>, choisissez votre langue";
+								document.getElementById("nom_" + type + "_" + lang).style.color = c_actif[type];
+							break;
+							case 'an' :
+								document.getElementById("text_lang_" + type).innerHTML = "<b>For weather forecasts</b>, select your language";
+								document.getElementById("nom_" + type + "_" + lang).style.color = c_actif[type];
+							break;
+							case 'es' :
+								document.getElementById("text_lang_" + type).innerHTML = "<b>Para las previsiones meteorológicas</b>, seleccione su idioma";
+								document.getElementById("nom_" + type + "_" + lang).style.color = c_actif[type];
+							break;
+							case 'it' :
+								document.getElementById("text_lang_" + type).innerHTML = "<b>Per le previsioni meteo</b>, selezionare la lingua";
+								document.getElementById("nom_" + type + "_" + lang).style.color = c_actif[type];
+							break;
+						}
+					break;
+					case 'mer' :
+						switch(lang) {
+							case 'fr' :
+								document.getElementById("text_lang_" + type).innerHTML = "<b>Pour la m&eacute;t&eacute;o marine</b>, choisissez votre langue";
+								document.getElementById("nom_" + type + "_" + lang).style.color = c_actif[type];
+							break;
+							case 'an' :
+								document.getElementById("text_lang_" + type).innerHTML = "<b>For marine forecasts</b>, select your language";
+								document.getElementById("nom_" + type + "_" + lang).style.color = c_actif[type];
+							break;
+							case 'es' :
+								document.getElementById("text_lang_" + type).innerHTML = "<b>Para las previsiones meteorol&oacute;gicas maritima</b>, seleccione su idioma";
+								document.getElementById("nom_" + type + "_" + lang).style.color = c_actif[type];
+							break;
+							case 'it' :
+								document.getElementById("text_lang_" + type).innerHTML = "<b>Per le previsioni meteo marine</b>, selezionare la lingua";
+								document.getElementById("nom_" + type + "_" + lang).style.color = c_actif[type];
+							break;
+						}
+					break;
+				}
+			}
+			function no_flag(type, pays) {
+				document.getElementById("nom_" + type + "_" + pays).style.color = c_inactif;
+			}
+		</script>
+		<div id="conteneur_page" style="position:relative; width:100%; height:100%; margin:0; padding:0;">
+						<div style="float:left; width:50%; height:100%;
+				background: rgb(128,166,205); /* Old browsers */
+				/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+				background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgwYTZjZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyZjcxYWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+				background: -moz-linear-gradient(top,  rgba(128,166,205,1) 0%, rgba(47,113,174,1) 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(128,166,205,1)), color-stop(100%,rgba(47,113,174,1))); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  rgba(128,166,205,1) 0%,rgba(47,113,174,1) 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  rgba(128,166,205,1) 0%,rgba(47,113,174,1) 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  rgba(128,166,205,1) 0%,rgba(47,113,174,1) 100%); /* IE10+ */
+				background: linear-gradient(to bottom,  rgba(128,166,205,1) 0%,rgba(47,113,174,1) 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80a6cd', endColorstr='#2f71ae',GradientType=0 ); /* IE6-8 */
+			"><!-- --></div>
+			<div style="float:left; width:50%; height:100%;
+				background: rgb(11,68,111); /* Old browsers */
+				/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+				background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBiNDQ2ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMTBhMTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+				background: -moz-linear-gradient(top,  rgba(11,68,111,1) 0%, rgba(1,10,17,1) 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(11,68,111,1)), color-stop(100%,rgba(1,10,17,1))); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  rgba(11,68,111,1) 0%,rgba(1,10,17,1) 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  rgba(11,68,111,1) 0%,rgba(1,10,17,1) 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  rgba(11,68,111,1) 0%,rgba(1,10,17,1) 100%); /* IE10+ */
+				background: linear-gradient(to bottom,  rgba(11,68,111,1) 0%,rgba(1,10,17,1) 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b446f', endColorstr='#010a11',GradientType=0 ); /* IE6-8 */
+			"><!-- --></div>
+			<div style="position:absolute; top:120px; left:0; width:100%; height:3px; background-color:#f9ba2d;"><!-- jaune fond --></div>
+
+
+
+			<div style="position:absolute; top:0; left:50%; height:100%;" id="ref_milieu">
+				<div style="position:relative; height:100%;" id="ref">
+					<div style="position:absolute; top:0; left:-500px; width:500px; height:100%;
+						background: rgb(128,166,205); /* Old browsers */
+						/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+						background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgwYTZjZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyZjcxYWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+						background: -moz-linear-gradient(top,  rgba(128,166,205,1) 0%, rgba(47,113,174,1) 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(128,166,205,1)), color-stop(100%,rgba(47,113,174,1))); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(top,  rgba(128,166,205,1) 0%,rgba(47,113,174,1) 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(top,  rgba(128,166,205,1) 0%,rgba(47,113,174,1) 100%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(top,  rgba(128,166,205,1) 0%,rgba(47,113,174,1) 100%); /* IE10+ */
+						background: linear-gradient(to bottom,  rgba(128,166,205,1) 0%,rgba(47,113,174,1) 100%); /* W3C */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80a6cd', endColorstr='#2f71ae',GradientType=0 ); /* IE6-8 */
+					"
+					onmouseover="document.getElementById('text_lang_mer').innerHTML = '<b>For marine forecasts</b>, select your language';"><!-- -->
+						<div style="position:absolute; top:40px; left:0; width:500px; text-align:center;">
+							<img src="/image/mc-com/Logo-MC-terr.png" alt="mc-terr">
+						</div>
+						<div style="position:absolute; top:120px; left:0; width:100px; height:3px; background-color:#f9ba2d;"><!-- jaune gauche --></div>
+						<div style="position:absolute; top:110px; width:100%; font-size:20px; text-align:center;">L'assistance m&eacute;t&eacute;o <b>en direct</b></div>
+						<div id="text_lang_terr" style="position:absolute; top:240px; left:0px; font-size:20px; width:100%; text-align:center;">
+							<b>For weather forecasts</b>, select your language
+						</div>
+						<div id="drapeaux_terr" style="position:absolute; top:330px; left:0; font-size:20px; margin-left:35px;">
+							<div style="float:left; padding:0 10px 0 10px;">
+								<a href="http://www.meteoconsult.fr"><img src="/image/mc-com/new_drapeau_fr.png" alt="M&eacute;t&eacute;o France" onmouseover="survol_drapeau('terr', 'fr');" onmouseout="no_flag('terr', 'fr');"></a>
+							</div>
+							<div style="float:left; padding:0 10px 0 10px;">
+								<a href="http://www.meteoconsult.co.uk"><img src="/image/mc-com/new_drapeau_an.png" alt="United Kingdom Weather" onmouseover="survol_drapeau('terr', 'an');" onmouseout="no_flag('terr', 'an');"></a>
+							</div>
+							<div style="float:left; padding:0 10px 0 10px;">
+								<a href="http://www.meteoconsult.es"><img src="/image/mc-com/new_drapeau_es.png" alt="Tiempo Espa&ntilde;a" onmouseover="survol_drapeau('terr', 'es');" onmouseout="no_flag('terr', 'es');"></a>
+							</div>
+							<div style="float:left; padding:0 10px 0 10px;">
+								<a href="http://www.meteoconsult.it"><img src="/image/mc-com/new_drapeau_it.png" alt="Meteo Italia" onmouseover="survol_drapeau('terr', 'it');" onmouseout="no_flag('terr', 'it');"></a>
+							</div>
+						</div>
+						<div style="position:absolute; top:410px; left:0px; font-size:11px; font-weight:bold; margin-left:35px;">
+							<div style="float:left; width:107px; text-align:center;"><a id="nom_terr_fr" href="http://www.meteoconsult.fr" title="M&eacute;t&eacute;o France" style="color:#ffffff; text-decoration:none;" onmouseover="survol_drapeau('terr', 'fr');" onmouseout="no_flag('terr', 'fr');">M&eacute;t&eacute;o France</a></div>
+							<div style="float:left; width:107px; text-align:center;"><a id="nom_terr_an" href="http://www.meteoconsult.co.uk" title="United Kingdom Weather" style="color:#ffffff; text-decoration:none;" onmouseover="survol_drapeau('terr', 'an');" onmouseout="no_flag('terr', 'an');">United Kingdom Weather</a></div>
+							<div style="float:left; width:107px; text-align:center;"><a id="nom_terr_es" href="http://www.meteoconsult.es" title="Tiempo Espa&ntilde;a" style="color:#ffffff; text-decoration:none;" onmouseover="survol_drapeau('terr', 'es');" onmouseout="no_flag('terr', 'es');">Tiempo Espa&ntilde;a</a></div>
+							<div style="float:left; width:107px; text-align:center;"><a id="nom_terr_it" href="http://www.meteoconsult.it" title="Meteo Italia" style="color:#ffffff; text-decoration:none;" onmouseover="survol_drapeau('terr', 'it');" onmouseout="no_flag('terr', 'it');">Meteo Italia</a></div>
+						</div>
+						<div style="position:absolute; top:120px; right:0px; width:100px; height:3px; background-color:#f9ba2d;"><!-- jaune droit --></div>
+					</div>
+
+
+
+
+					<div style="position:absolute; top:0; left:0; width:500px; height:100%;
+						background: rgb(11,68,111); /* Old browsers */
+						/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+						background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBiNDQ2ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMTBhMTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+						background: -moz-linear-gradient(top,  rgba(11,68,111,1) 0%, rgba(1,10,17,1) 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(11,68,111,1)), color-stop(100%,rgba(1,10,17,1))); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(top,  rgba(11,68,111,1) 0%,rgba(1,10,17,1) 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(top,  rgba(11,68,111,1) 0%,rgba(1,10,17,1) 100%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(top,  rgba(11,68,111,1) 0%,rgba(1,10,17,1) 100%); /* IE10+ */
+						background: linear-gradient(to bottom,  rgba(11,68,111,1) 0%,rgba(1,10,17,1) 100%); /* W3C */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b446f', endColorstr='#010a11',GradientType=0 ); /* IE6-8 */
+					"
+					onmouseover="document.getElementById('text_lang_terr').innerHTML = '<b>For weather forecasts</b>, select your language';">
+						<div style="position:absolute; top:40px; left:0; width:500px; text-align:center;">
+							<img src="/image/mc-com/Logo_MCM_entete.png" alt="mc-mer">
+						</div>
+						<div style="position:absolute; top:120px; left:0; width:100px; height:3px; background-color:#f9ba2d;"><!-- jaune gauche --></div>
+						<div style="position:absolute; top:110px; width:100%; font-size:20px; text-align:center;">L'assistance m&eacute;t&eacute;o <b>en direct</b></div>
+						<div id="text_lang_mer" style="position:absolute; top:240px; left:0px; font-size:20px; width:100%; text-align:center;">
+							<b>For marine forecasts</b>, select your language
+						</div>
+						<div id="drapeaux_mer" style="position:absolute; top:330px; left:0; font-size:20px; margin-left:35px;">
+							<div style="float:left; padding:0 10px 0 10px;">
+								<a href="http://marine.meteoconsult.fr/meteo-marine/prevision_meteo_marine.php"><img src="/image/mc-com/new_drapeau_fr.png" alt="M&eacute;t&eacute;o Marine" onmouseover="survol_drapeau('mer', 'fr');" onmouseout="no_flag('mer', 'fr');"></a>
+							</div>
+							<div style="float:left; padding:0 10px 0 10px;">
+								<a href="http://marine.meteoconsult.co.uk/mar/sommaire_marine.php?langue=an&"><img src="/image/mc-com/new_drapeau_an.png" alt="Marine Weather" onmouseover="survol_drapeau('mer', 'an');" onmouseout="no_flag('mer', 'an');"></a>
+							</div>
+							<div style="float:left; padding:0 10px 0 10px;">
+								<a href="http://maritima.meteoconsult.es/mar/sommaire_marine.php?langue=es&"><img src="/image/mc-com/new_drapeau_es.png" alt="Tiempo Maritimo" onmouseover="survol_drapeau('mer', 'es');" onmouseout="no_flag('mer', 'es');"></a>
+							</div>
+							<div style="float:left; padding:0 10px 0 10px;">
+								<a href="http://marittima.meteoconsult.it/mar/sommaire_marine.php?langue=it&"><img src="/image/mc-com/new_drapeau_it.png" alt="Meteo Marittima" onmouseover="survol_drapeau('mer', 'it');" onmouseout="no_flag('mer', 'it');"></a>
+							</div>
+						</div>
+						<div style="position:absolute; top:410px; left:0px; font-size:11px; font-weight:bold; margin-left:35px;">
+							<div style="float:left; width:107px; text-align:center;"><a id="nom_mer_fr" href="http://marine.meteoconsult.fr/meteo-marine/prevision_meteo_marine.php" title="M&eacute;t&eacute;o Marine" style="color:#ffffff; text-decoration:none;" onmouseover="survol_drapeau('mer', 'fr');" onmouseout="no_flag('mer', 'fr');">M&eacute;t&eacute;o Marine</a></div>
+							<div style="float:left; width:107px; text-align:center;"><a id="nom_mer_an" href="http://marine.meteoconsult.co.uk/mar/sommaire_marine.php?langue=an&" title="Marine Weather" style="color:#ffffff; text-decoration:none;" onmouseover="survol_drapeau('mer', 'an');" onmouseout="no_flag('mer', 'an');">Marine Weather</a></div>
+							<div style="float:left; width:107px; text-align:center;"><a id="nom_mer_es" href="http://maritima.meteoconsult.es/mar/sommaire_marine.php?langue=es&" title="Tiempo Maritimo" style="color:#ffffff; text-decoration:none;" onmouseover="survol_drapeau('mer', 'es');" onmouseout="no_flag('mer', 'es');">Tiempo Maritimo</a></div>
+							<div style="float:left; width:107px; text-align:center;"><a id="nom_mer_it" href="http://marittima.meteoconsult.it/mar/sommaire_marine.php?langue=it&" title="Meteo Marittima" style="color:#ffffff; text-decoration:none;" onmouseover="survol_drapeau('mer', 'it');" onmouseout="no_flag('mer', 'it');">Meteo Marittima</a></div>
+						</div>
+						<div style="position:absolute; top:120px; right:0px; width:100px; height:3px; background-color:#f9ba2d;"><!-- jaune droit --></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+<!-- XiTi -->
+<script type="text/javascript">
+<!--
+xtnv = document;           
+xtsd = "http://logc10";
+xtsite = "250056";
+xtn2 = "";           
+xtpage = "meteoconsult::homepage_mc_com";             
+xtmc = "";           
+xtnp = "";           
+xtac = "";           
+xtan = "";           
+roimt = "";                 
+roitest = false;             
+visiteciblee = false;          
+xtprm = "";           
+//-->
+</script>
+<script type="text/javascript" src="http://www.meteoconsult.com/xtroi.js"></script>
+<noscript>
+<img width="1" alt="" height="1" src="http://logc10.xiti.com/hit.xiti?s=250056&s2=&p=meteoconsult::homepage_mc_com&roimt=&roivc=&" >
+</noscript>
+<!-- /XiTi -->	</body>
+</html>
+

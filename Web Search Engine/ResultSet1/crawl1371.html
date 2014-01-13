@@ -1,0 +1,541 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- start /shared/head.comp -->
+
+<head>
+    <!-- start /shared/meta.comp -->
+<meta http-equiv="description" content="Home " />
+<meta http-equiv="keywords" content="Home " />
+
+<meta http-equiv="Content-Type" content="text/html; charset=" />
+<meta http-equiv="imagetoolbar" content="false" />
+
+
+
+        
+        
+        
+    
+        <link rel='alternate' type='application/rss+xml' title='all content on this page' href='/public/v-highlights/index.rss'>    
+
+<link rel="alternate" type="application/rss+xml" title="Home stories only" href="/public/index.rss">
+
+<!-- end /shared/meta.comp -->
+    <!-- start /shared/title.comp -->
+<title>McClatchy Interactive - Home</title>
+
+
+<!-- end /shared/title.comp -->        <link rel="SHORTCUT ICON" href="http://static.mcclatchyinteractive.com/static/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/static/css/master_styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/search_page.css"> 
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" type="text/css" href="/static/css/ie_hacks.css" media="screen">
+    <![endif]-->
+    <!--[if lte IE 6]>
+        <link rel="stylesheet" type="text/css" href="/static/css/ie6_hacks.css" media="screen">
+    <![endif]--> 
+    <!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="http://static.mcclatchyinteractive.com/static/css/ie7_hacks.css" media="screen">
+    <![endif]--> 
+    <link rel="stylesheet" type="text/css" href="/static/css/print.css" media="print">
+    
+    <link rel="stylesheet" type="text/css" href="/static/css/ceebox-min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/accordion.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/superfish.css">
+    
+    <script type="text/javascript" src="http://static.mcclatchyinteractive.com/static/js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="http://static.mcclatchyinteractive.com/static/js/ui.core.js"></script>
+    <script type="text/javascript" src="http://static.mcclatchyinteractive.com/static/scripts/mi/mi_script_scheduler.js"></script>
+    <script type="text/javascript" src="http://static.mcclatchyinteractive.com/static/js/jquery.ceebox-min.js"></script>
+    <script type="text/javascript" src="http://static.mcclatchyinteractive.com/static/js/javascript.js"></script>
+    <script type="text/javascript" src="http://static.mcclatchyinteractive.com/static/js/supersubs.js"></script>
+    <script type="text/javascript" src="http://static.mcclatchyinteractive.com/static/js/hoverIntent.js"></script>
+    <script type="text/javascript" src="http://static.mcclatchyinteractive.com/static/js/superfish.js"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function() { 
+            $('ul.sf-menu').supersubs({ 
+            minWidth:    12,   // minimum width of sub-menus in em units 
+            maxWidth:    40,   // maximum width of sub-menus in em units 
+            extraWidth:  1     // extra width can ensure lines don't sometimes turn over 
+                               // due to slight rounding differences and font-family 
+        }).superfish({ 
+                hoverClass:    'sfHover',          // the class applied to hovered list items 
+                pathClass:     'overideThisToUse', // the class you have applied to list items that lead to the current page 
+                pathLevels:    1,                  // the number of levels of submenus that remain open or are restored using pathClass 
+                delay:         800,                // the delay in milliseconds that the mouse can remain outside a submenu without it closing 
+                animation:     {opacity:'show'},   // an object equivalent to first parameter of jQuery’s .animate() method 
+                speed:         'normal',           // speed of the animation. Equivalent to second parameter of jQuery’s .animate() method 
+                autoArrows:    true,               // if true, arrow mark-up generated automatically = cleaner source code at expense of initialisation performance 
+                dropShadows:   true,               // completely disable drop shadows by setting this to false 
+                disableHI:     false,              // set to true to disable hoverIntent detection 
+                onInit:        function(){},       // callback function fires once Superfish is initialised – 'this' is the containing ul 
+                onBeforeShow:  function(){},       // callback function fires just before reveal animation begins – 'this' is the ul about to open 
+                onShow:        function(){},       // callback function fires once reveal animation completed – 'this' is the opened ul 
+                onHide:        function(){}        // callback function fires after a sub-menu has closed – 'this' is the ul that just closed 
+            }); 
+            
+            //////////////////// CEEBOX - modal window ////////////////////
+            $(document).ready(function(){ 
+            $(".modalWindow").ceebox();
+            });
+        }); 
+    </script>
+
+    <script type="text/javascript" src="http://static.mcclatchyinteractive.com/static/js/jquery.easing.js"></script>
+    <script type="text/javascript" src="http://static.mcclatchyinteractive.com/static/js/jquery.accordion.js"></script>
+	<script type="text/javascript">
+	jQuery().ready(function(){
+	    $(".s99").addClass("current");
+           jQuery('#subNav').accordion({
+               active: '.current',
+               autoheight: false,
+               alwaysOpen: true,
+               navigation: true,
+               event:'mouseup'
+            });   
+            $("#subNav").accordion("activate", ".current");
+        });
+	</script>
+    <!--[if lt IE 7]>
+<link href="/static/includes/browserupgrade/browserupgrade.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/static/includes/browserupgrade/jquery.cookie.js"></script>
+
+<![endif]-->
+    <script type="text/JavaScript" src="http://static.mcclatchyinteractive.com/static/js/cookies.js"></script>
+    <script type="text/javascript">
+// GENERIC COOKIE FUNCTIONS
+function getCookieVal(offset) {
+ var endstr=document.cookie.indexOf(";",offset);
+ if (endstr==-1)
+ endstr=document.cookie.length;
+ return unescape(document.cookie.substring(offset,endstr));
+}
+function GetCookie(cname) {
+ var arg=cname+"="; var alen=arg.length;
+ var clen=document.cookie.length; var i=0;
+ while (i<clen) {
+        var j=i+alen;
+        if (document.cookie.substring(i,j)==arg) return getCookieVal (j); i=document.cookie.indexOf("",i)+ 1;
+        if (i==0) break;
+ } return null;
+}
+function SaveCookie(cname,cvalue,cdays,cpath) {
+        ex = new Date; ex.setTime(ex.getTime() + (cdays*86400000));
+        if (cpath == null) { cpath = "/" } else { cpath = "; path=" + cpath }
+        sitedom=location.hostname.replace(/www\./,"");
+        document.cookie=cname + '=' + cvalue + '; expires=' + ex.toGMTString() + cpath + "; domain="+sitedom;
+}
+
+function CheckLogin() {
+    if (GetCookie(insitecookie) && !GetCookie(insitecookie).match("threshold")) {
+        return true;
+
+    } else {
+        return false;
+    } // END IF
+}
+
+function GetUser() {
+    if (CheckLogin()) {
+        return GetCookie(insitecookie).split('|')[0];
+    } else {
+        return "Guest";
+    } // END IF
+}
+
+
+//SHOW HIDE CSS
+var insitecookie=document.cookie.match('mcclatchyinteractive_user_auth');
+var icname = GetCookie(insitecookie);
+if (icname && icname.indexOf('.threshold') == -1) { 
+    document.write("<style>#nonmember{display:none;}</style>");
+ } else {
+    document.write("<style>#member{display:none;}</style>");
+ }
+
+var user_run_mode = '';
+
+</script>
+
+    </head>
+<!-- end /shared/head.comp --><body id="section99">
+<!--[if lt IE 7]>
+
+
+<div id="miub_container">    
+    <div id="miub_close">
+        <a href="#">
+            <img src="/static/includes/browserupgrade/cornerx.jpg" alt="Close this notice" />
+        </a>
+    </div>
+    <div id="miub_info">
+        <div id="miub_alert">
+            <img src="/static/includes/browserupgrade/warning.jpg" alt="Warning!" />
+        </div>
+        <div id="miub_info_box">        
+            <h2>You are using an outdated browser</h2>
+            <p>For a better experience using this site, please upgrade to a modern web browser.</p>
+        </div>
+        <div class="miub_alt_browser">
+            
+            <a href="http://www.firefox.com" target="_blank">
+            
+                <img src="/static/includes/browserupgrade/firefox.jpg" style="border: none;" alt="Get Firefox 3.5"/>
+            </a>
+        </div>
+        <div class="miub_alt_browser">
+            
+            <a href="http://www.browserforthebetter.com/download.html" target="_blank">
+            
+                <img src="/static/includes/browserupgrade/ie8.jpg" style="border: none;" alt="Get Internet Explorer 8"/>
+            </a>
+        </div>
+        <div class="miub_alt_browser">
+            
+            <a href="http://www.apple.com/safari/download/" target="_blank">
+            
+            <img src="/static/includes/browserupgrade/safari.jpg" style="border: none;" alt="Get Safari 4"/>
+            </a>
+        </div>
+        <div class="miub_alt_browser">
+            
+            <a href="http://www.google.com/chrome" target="_blank">
+            
+            <img src="/static/includes/browserupgrade/chrome.jpg" style="border: none;" alt="Get Google Chrome"/>
+            </a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+  $(document).ready(function() {
+      $("#miub_close a").click(function() {
+          $(this).parent().parent().hide();
+      });
+      if(!$.cookie("miub_timer")) { // no cookie, show the warning
+          $("#miub_container").show();
+
+          $.cookie("miub_timer","You need to upgrade your browser", { expires: 7});
+
+      }
+  });
+</script>
+<![endif]-->
+
+<a name="top"></a>
+
+
+
+
+       	<!-- Start /shared/masthead_default_v2.comp --> 
+    <div id="mastheadWrapper">
+        <div id="masthead">
+            <div id="logo">
+                <a href="/"><img src="/static/images/mi_logo_v2.gif" alt="McClatchy Interactive" class="miLogo"></a>
+            </div>
+            <div class="mastPublic mastPublic">
+            <div id="Registration">
+                <!-- Not logged in as tmarkart -->
+                Welcome, <a href="/reg-bin/tint.cgi?mode=edit"><script>document.write(GetUser());</script></a> | 
+                <script>
+                if (CheckLogin()){document.write('<a href="/reg-bin/tint.cgi?mode=logout">Log Out</a>');}
+                else{document.write('<a href="/reg-bin/int.cgi?mode=register">Register</a> | <a href="/reg-bin/int.cgi?mode=login">Log In</a>');}
+                </script>
+            </div>
+                <!-- Start SearchShell.comp -->
+                <div id="searchShell">
+                    <form method="get" action="http://www.mcclatchyinteractive.com/search_results/">
+    
+                    <input class="searchSiteField" type="text" name="q" maxlength="255" value="">
+                    <input class="submitButton" name="Search" type="submit" value="Search&nbsp;&#8250;" alt=Search>
+                    </form>
+                </div>            
+            </div>
+        </div>
+    </div>
+
+<!-- start /shared/navigation_v4.comp -->
+<div id="navigationWrapper">
+    <div id="navigation">
+        <ul id="sample-menu-1" class="sf-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="javascript:void(0);">Company Info</a>
+                <ul>
+                    <li><a href="/public/history">History</a></li>
+                    <li><a href="/public/contact">Contact Us</a></li>
+                    <li><a href="/public/mcclatchy">The McClatchy Company</a></li>
+                    <li class="last"><a href="http://www.mcclatchy.com/company_news" target="_blank">Press Releases</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);">Jobs</a>
+                <ul>
+                    <li><a href="/public/jobs">McClatchy Interactive</a></li>
+                    <li class="last"><a href="http://www.careerbuilder.com/csh/search.aspx?&csh=CSH_McClatchy&pubjobs=true&privjobs=true&int=false" target="_blank">McClatchy Properties</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul id="sample-menu-2" class="sf-menu">
+            <li class="lockedSection"><a href="javascript:void(0);" title="Restricted: McClatchy Interactive Employee Access Only">Intranet</a>
+                <ul>
+                    <li><a href="/intranet/employeedirectory">Employee Directory</a>
+                        <ul>
+                            <li><a href="/intranet/orgchart">Organizational Chart</a>
+                        </ul>
+                    </li>
+					<li><a href="/intranet/employee-recognition">Employee Recognition</a></li>
+                    <li><a href="/intranet/hr">Human Resources</a></li>
+                    <li><a href="javascript:void(0);">Departments</a>
+                        <ul>
+                            <li><a href="/intranet/creativeservices">Creative Services</a>
+                            <li><a href="/intranet/marketservices">Market Services</a>
+                            <li><a href="/intranet/technology">Technology</a>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0);">News & Updates</a>
+                        <ul>
+                            <li><a href="/intranet/calendars">Calendars</a></li>
+                            <li><a href="/intranet/gotomeeting">GoToMeeting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/intranet/logos_collateral">Logos & Collateral</a></li>
+                    <li><a href="javascript:void(0);">Documentation</a>
+                        <ul>
+                            <li><a href="/intranet/support">Support</a></li>
+                            <li><a href="http://wiki.mcclatchyinteractive.com" target="_blank">Wiki</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/intranet/events">Company Events</a></li>
+                    <li class="last"><a href="/manager">Restricted Manager Access</a></li>
+                </ul>
+            </li>
+            <li class="lockedSection"><a href="javascript:void(0);" title="Restricted: McClatchy Employee Access Only">Extranet</a>
+                <ul>
+                    <li><a href="/extranet">News & Updates</a></li>
+                    <li><a href="javascript:void(0);">Contacts</a>
+                        <ul>
+                            <li><a href="/extranet/micontacts">MI Department Contacts</a></li>
+                            <li><a href="/extranet/midirectory">MI Employee Directory</a></li>
+                            <li><a href="/extranet/contacts">Newspaper Contacts</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0);">Products</a>
+                        <ul>
+                            <li><a href="/extranet/products/advertising">Advertising & Marketplace</a></li>
+                            <li><a href="/extranet/products/archiving">Archiving</a></li>
+                            <li><a href="/extranet/products/calendar">Calendar</a></li>
+                            <li><a href="/extranet/products/classifieds">Classifieds</a></li>
+                            <li><a href="/extranet/products/cms">Content Management System</a></li>
+                            <li><a href="/extranet/products/dealsaver">dealsaver.com</a></li>
+                            <li><a href="/extranet/products/email">E-mail Marketing</a></li>
+                            <li><a href="/extranet/products/mobile">Mobile</a></li>
+                            <li><a href="/extranet/products/pandora">Pandora</a></li>
+                            <li><a href="/extranet/products/registration">Registration</a></li>
+                            <li><a href="/extranet/products/search">Search</a></li>
+                            <li><a href="/extranet/products/sem">Search Engine Marketing</a></li>
+                            <li><a href="/extranet/products/socialmedia">Social Media</a></li>
+                            <li><a href="/extranet/products/video">Video</a></li>
+                            <li><a href="/extranet/products/analytics">Web Analytics</a></li>
+                            <li><a href="/extranet/products/yahoo">Yahoo!</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0);">Resources</a>
+                        <ul>
+                            <li><a href="/extranet/analytics">Analytics</a></li>
+                            <li><a href="/extranet/resources/bestpractices">Best Practices</a></li>
+                            <li><a href="/extranet/resources/conferencecalls">Conference Calls</a></li>
+                            <li><a href="/extranet/resources/contracts">Contracts</a></li>
+                            <li><a href="/extranet/resources/documentation">Documentation</a></li>
+                            <li><a href="/extranet/resources/emergency">Emergency Request</a></li>
+                            <li><a href="/restricted/inspirationcentral">Inspiration Central</a></li>                     
+                            <li><a href="/extranet/resources/knowledgebase">Knowledge Base</a></li>
+                            <li><a href="/extranet/resources/mcclatchyuniversity">McClatchy University</a></li>
+                            <li><a href="http://www.mcclatchyinteractive.com/static/creative/media_kit" target="_blank">Media Kit</a></li>
+                            <li><a href="/extranet/resources/projectrequest">New Project Request Form</a></li>
+                            <li><a href="/extranet/resources/promos">Promotional Ads & Collateral</a></li>
+                            <li><a href="http://relnotes.mcclatchyinteractive.com" target="_blank">Release Notes</a></li>
+                            <li><a href="/extranet/customersupport/metrics">Site Performance Metrics</a></li>
+                            <li><a href="/extranet/resources/submitticket">Submit a Ticket</a></li>                        
+                            <li><a href="/extranet/resources/training">Training</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/extranet/topprojects">Top Projects</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){$('.lockedSection').find('a').click(function(){ SaveCookie('ms_rurl',this.href); })});
+</script>
+<!-- end /shared/navigation_v4.comp -->
+<div id="contentWrapper">
+    <div id="breadcrumb"></div>
+    
+    
+    <div id="columnWrapper">
+               <!-- start /pubsys/common/column_one.comp --> 
+       <div id="columnOne">
+           <div id="columnOneSlider" class="columnOneTop">
+                </div>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                    $(".s99").addClass("current");
+                    });
+                </script>
+            
+            </div>
+        </div>
+        <!-- end /pubsys/common/column_one.comp -->
+               <!-- start /pubsys/common/column_two.comp -->      
+	       
+       <div id="columnTwoWide">
+                                                    
+                                                
+        
+        
+        
+    
+        
+
+        <!-- Start: /PubSys/Assets/Highlights/highlight_story.comp -->
+<!-- section 344 = training/intructor bios -->
+<div id="topStory">
+    <div class="lastUpdated">Last Modified: 04/19/2013</div>
+    <h1></h1>
+        <h2></h2>
+       <script type="text/javascript" src="/static/js/jquery.relatedtweets-1.0.js"></script>
+<div id="newHome">
+    <h1 class="tagline">Bringing More Than 150 Years of Experience to the Web</h1>
+    <div id="promoLarge" class="boxshadow">
+        <div id="promoStats">
+            Reaching more than 35 million unique visitors and serving more than 320 million page views monthly.
+            <p id="promoStatsCredit">Omniture - January 2013</p>
+        </div>
+    </div>
+    <p class="homeContent">McClatchy Interactive serves as the interactive hub for The McClatchy Company, the third-largest newspaper company in the United States. Working hand-in-hand with 30 daily newspapers, it is our mission to help establish each one as the leading online source of local news within their respective markets. McClatchy Interactive also supports dozens of non-dailies, as well as an array of niche sites.</p>
+    <div id="promos">
+        <div id="promoMedium" class="boxshadow twitterLogo">
+            <div class="promoTitle"> 
+				<a href="/public/twitter">McClatchy On Twitter</a>
+			</div> 
+                <style>
+                    .related-tweets {display:none;}
+                </style>
+                <div class="center">
+                    <a href="/public/twitter"><img src="/static/images/mcclatchy_twitter.jpg" width="285" height="80" alt="McClatchy on Twitter"></a>
+                </div>
+            <!--[if lte IE 7]>
+			
+			
+			<![endif]-->
+            <!-- documentation - http://code.google.com/p/realtime-related-tweets-bar/wiki/Options --> 
+			<div class="related-tweets" options="{
+			   debug:false,
+               <!-- from_users:'adndotcom,beaufortgazette,bellevillenewsd,bhamherald,sunherald,idahostatesman,bradentonherald,theobserver,thestate,LedgerEnquirer,startelegram,FresnoBee,islandpacket,KCStar,heraldleader,middlegeorgia,MercedSunStar,miamiherald,modbee,TheSunNews,newsobserver,RHHerald,sacbee_news,slotribune,centredailycom,thenewstribune,kansasdotcom,McClatchyDC',-->
+               from_users:'adndotcom,beaufortgazette,bellevillenewsd,bhamherald,sunherald,idahostatesman,bradentonherald,theobserver,thestate,LedgerEnquirer,startelegram,FresnoBee,islandpacket,KCStar,heraldleader,middlegeorgia,MercedSunStar,miamiherald,modbee,TheSunNews,newsobserver,RHHerald,sacbee_news,slotribune',
+               links_only:0,
+               animate:'opacity',
+               enter_time:500,
+               stay_time:8500,
+               show_source:0,
+               }">loading..
+				<div class="clear"></div> 
+			</div> 
+        </div>
+        <div id="promoSmall" class="boxshadow">
+            <div class="promoTitle"> 
+    				McClatchy Markets
+    			</div> 
+           <a href="http://www.mcclatchy.com/our_markets/" class="modalWindow" rel="iframe"><img src="/static/images/home_markets.png" alt="McClatchy Markets" width="190" height="115" border="0"></a>
+        </div>
+        <div id="promoSmall" class="boxshadow">
+            <div class="promoTitle"> 
+    				Careers
+    			</div> 
+            <a href="/public/jobs"><img src="/static/images/home_jobs.png" alt="McClatchy Interactive Careers" width="190" height="115" border="0"></a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>    <p> 
+    </div>
+<!-- End: /PubSys/Assets/Highlights/highlight_story.comp -->
+
+                                            
+        
+        
+            
+                    </div>
+       <!-- end /pubsys/common/column_two.comp -->
+        <div class="clear"></div>
+    </div>
+</div>
+    <!-- start /shared/footer_v2.comp -->
+	<div id="footer">
+            <div class="links">
+                <a href="/" title="Home">Home</a> <span class="Separator">|</span>
+                <a href="/public/history" title="Company Info">Company Info</a> <span class="Separator">|</span>
+                <a href="/public/jobs" title="Jobs">Jobs</a> <span class="Separator">|</span>
+                <a href="/intranet/employeedirectory" title="Intranet">Intranet</a> <span class="Separator">|</span>
+                <a href="/extranet" title="Extranet">Extranet</a> <span class="Separator">|</span>
+                <a href="/public/feedback">Submit Feedback</a>
+            </div>
+        <div class="copyright">
+            <!-- <a href="http://jigsaw.w3.org/css-validator/validator?uri=www.mcclatchyinteractive.com&profile=css21&usermedium=all&warning=1&lang=en" target="_blank"><img style="border:0; width:75px; height:26px; float:right;" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a> -->
+            <img src="/static/images/mi_logo_sm.jpg" width="27" height="15" border="0" alt="McClatchy Interactive">
+            Copyright &#xA9; 2013 McClatchy Interactive
+        </div>
+        <div class="clear"></div>
+<div id="mistatstag" style="display:none;">        
+<!-- SiteCatalyst: McClatchy WorkBench Stats Tag v.1.0 -->
+
+<script language="JavaScript" type="text/javascript" src="/mistats/sites/mcc/mi.js"></script>
+<script language="JavaScript" type="text/javascript" src="/mistats/products/pubsys_s_code.js"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+measure_popularity=false;
+mistats.msr = 'MCC|MI|Intranet';
+mistats.cmsid='GUID: | Section: 99';
+mistats.pagelevel='Home';
+mistats.pagename='Homepage: Home';
+mistats.version='1.0|';
+mistats.taxonomy='_HomePage||||';
+mistats.channel='Home';
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</script>
+<script language="JavaScript" type="text/javascript" src="/mistats/products/pubsys.js"></script>
+<script language="JavaScript" type="text/javascript" src="/mistats/finalizestats.js"></script>
+
+<noscript><img src="http://mcclatchy.112.2O7.net/b/ss/nmnandomedia%2F1%2FH.10--NS%2F0%3FpageName%3DHomepage%3A%20Home&server%3Dwww.mcclatchyinteractive.com&channel%3DHome&c1%3Dhttp%26%2358%3B%26%2347%3B%26%2347%3Bwww.mcclatchyinteractive.com%26%2347%3B99%26%2347%3Bindex.html&c3%3DHome&c4%3D&c6%3DMCC%7CMI%7CIntranet&c28%3D&h1%3DMCC%7CMI%7C_HomePage%7C%7C%7C%7C%7CHome" height="1" width="1" border="0" alt="" /></noscript>
+<!-- End SiteCatalyst: McClatchy WorkBench Stats Tag v.1.0 -->
+</div>
+    </div>
+    <!-- end /shared/footer_v2.comp -->
+<!-- Start /shared/analytics/google_analytics.comp -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3270559-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<!-- Start /shared/analytics/google_analytics.comp -->
+</body>
+</html>

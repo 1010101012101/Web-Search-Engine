@@ -1,0 +1,1680 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE> International Journalist Identification Database &amp; Social Networking Community</TITLE>
+<META content="International  Journalist &amp; Social Networking Community, Journalism, Editors, Freelance, Correspondant, Writers" name=description>
+<META content=" Journalist, Community, Journalism, Editors, Freelance, Correspondant, Writers" name=keywords>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.popcss  {display:none;}
+.art a:link{font-family:Verdana,Arial,Helvetica,sans-serif,"MS sans serif";text-decoration:none;font-size:11px;}
+.art a:visited{font-family:Verdana,Arial,Helvetica,sans-serif,"MS sans serif";text-decoration:none;font-size:11px;}
+.art a:active{font-family:Verdana,Arial,Helvetica,sans-serif,"MS sans serif";text-decoration:none;font-size:11px;}
+.art a:hover{font-family:Verdana,Arial,Helvetica,sans-serif,"MS sans serif";font-size:11px;text-decoration:underline;}
+
+.highlight {
+    border:2px solid #9F1319;
+}
+.loading {
+    display:none
+}
+.done {
+	height:50px;
+	font-family:Arial;
+	font-size:20px;
+    display:none
+}
+.errortext { font-family:Arial;	font-size:20px; color:#FF0000; }
+-->
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+
+$(document).ready(function(){
+            
+    $('.subsend').click(function(){
+     var fieldId = $(this).attr('id');
+     var username = $('#username'+ fieldId).val();
+     var useremail = $('#useremail'+fieldId).val();
+     var usermessage = $('#usermessage'+fieldId).val();
+     var string = $('#string'+fieldId).val();
+     var stringextra = $('#stringextra'+fieldId).val();
+		
+        if (username=='') {
+            $('#username'+fieldId).addClass('highlight');
+            $('#username'+fieldId).focus();
+            return false;
+        } else $('#username'+fieldId).removeClass('highlight');
+		
+        if (useremail=='' || /\S+@\S+\.\S+/.test(useremail)==false) {
+            $('#useremail'+fieldId).addClass('highlight');
+            $('#useremail'+fieldId).focus();
+            return false;
+        } else $('#useremail'+fieldId).removeClass('highlight');
+		
+        if (usermessage=='') {
+            $('#usermessage'+fieldId).addClass('highlight');
+            $('#usermessage'+fieldId).focus();
+            return false;
+        } else $('#usermessage'+fieldId).removeClass('highlight');
+		
+        if (usermessage.length<100) {
+            $('#usermessage'+fieldId).addClass('highlight');
+            $('#usermessage'+fieldId).focus();
+			$('#error_message'+fieldId).html('<p class="errortext">Please give more message details.</p>');
+            return false;
+        } else {
+        	$('#usermessage'+fieldId).removeClass('highlight');
+            $('#error_message'+fieldId).html('');
+        }
+		
+        if (string=='') {
+            $('#string'+fieldId).addClass('highlight');
+            $('#string'+fieldId).focus();
+            return false;
+        } else $('#string'+fieldId).removeClass('highlight');
+		
+        if (stringextra=='') {
+            alert('Unexpected error with page!');
+            return false;
+        } 
+	 var msgdata = $("#mail"+fieldId).serialize() + "&submitmessage=send";
+	 
+	 $('#messageform'+fieldId).fadeOut('slow');
+	 $('#loading'+fieldId).fadeIn('slow');
+	 
+		$.ajax({
+			type: 'POST',
+			url: 'smailer.php?id=' + fieldId,
+			timeout: 15000,
+			data: msgdata,
+			cache: false,
+			success: function(result) {
+					// 0 = good
+					// 1 = no captcha code issue
+					// 2 = no message prob
+					// 3 = no name
+					// 4 = no email
+					// 5 = no user from db
+					// 6 = code incorrect
+				if (result==0) {
+					$('#loading'+fieldId).hide();
+					$('#string'+fieldId).val("");
+					$('#done'+fieldId).fadeIn('slow');
+				}
+				if (result==2) {
+					$('#loading'+fieldId).fadeOut('slow');
+					$('#messageform'+fieldId).fadeIn('slow');
+					$('#usermessage'+fieldId).addClass('highlight');
+					$('#usermessage'+fieldId).focus();
+					alert("Please enter more message details.");
+				}
+				if (result==3) {
+					$('#loading'+fieldId).fadeOut('slow');
+					$('#username'+fieldId).val("");
+					$('#messageform'+fieldId).fadeIn('slow');
+					$('#username'+fieldId).addClass('highlight');
+					$('#username'+fieldId).focus();
+					alert("Your name was not entered!");
+				}
+				if (result==4) {
+					$('#loading'+fieldId).fadeOut('slow');
+					$('#useremail'+fieldId).val("");
+					$('#messageform'+fieldId).fadeIn('slow');
+					$('#useremail'+fieldId).addClass('highlight');
+					$('#useremail'+fieldId).focus();
+					alert("Your email was not entered!");
+				}
+				if (result==6) {
+					$('#loading'+fieldId).fadeOut('slow');
+					$('#string'+fieldId).val("");
+					$('#messageform'+fieldId).fadeIn('slow');
+					$('#string'+fieldId).addClass('highlight');
+					$('#string'+fieldId).focus();
+					alert("The 3 letter code was incorrect, please try again!");
+				}
+			},
+			error: function(){
+				alert('message sending failed');
+				$('#loading'+fieldId).fadeOut('slow');
+				$('#messageform'+fieldId).fadeIn('slow');
+			}
+		});
+      return false;
+      });
+
+    $('.refresh').click(function () { 
+		var fieldId = $(this).attr('id');
+		$('#done'+fieldId).fadeOut('slow');
+        $('#loading'+fieldId).hide();
+		$('#messageform'+fieldId).fadeIn('slow');  
+    }); 
+            
+});
+
+function toggleBox(szDivID, iState) { 
+	if (iState==1) $('#'+szDivID).show('slow');
+	if (iState==0) $('#'+szDivID).hide();
+}
+// -->
+</script>
+<noscript>
+<style type="text/css">
+<!--
+.popcss  {display:inline;}
+// -->
+</style>
+</noscript>
+</HEAD>
+<body style="margin-left:0; margin-top:0" link="#000000" vlink="#000000" bgcolor="#FFFFFF" text="#000000">
+<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="5" rowspan="3" bgcolor="#FFFFFF">&nbsp;</td>
+    <td width="249" rowspan="3" bgcolor="#FFFFFF"><a href="http://www.journalistid.com"><img alt="JournalistID" src="images/social/logofree.gif" width="249" height="52" border="0"></a></td>
+    <td height="12" colspan="2" bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="315" border="0" cellpadding="0" cellspacing="0">
+      <tr><td width="300" bgcolor="#FFFFFF"><form style="margin-bottom:0 " name="search" method="get" action="search_members.html">
+		  <input style="font-size:24px " name="search" value="" type="text" id="search" size="15" maxlength="50">
+		  <input style="font-size:20px " type="submit" name="submit" id="submitfind" value="Search"><input type="hidden" name="country" id="country" value="all">
+        </form></td></tr></table></td>
+    <td height="24" bgcolor="#FFFFFF"><font size="2" face="arial"><b>International  Journalists</b><font size="1"> | </font><a href="register_member.html" target="_blank">join free here</a><font size="1">&nbsp;| </font><a href="journalistid_resources.html">tools</a></font>  </td>
+  </tr><tr>
+    <td height="16" colspan="2" align="right" bgcolor="#F8F8F8"><font size="1" face="arial">422 members and 168944 contacts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+  </tr>
+  <tr bgcolor="#E0E1E3">
+    <td width="5" background="images/social/blockleftbg.gif" style="font-family:Arial, Helvetica, sans-serif; color:#949494; font-size:15px; font-weight:bold"><img src="../images/social/endleft.gif" width="5" height="17" border="0" /></td>
+	<td height="17" colspan="1" background="images/social/blockleftbg.gif" style="font-family:Arial, Helvetica, sans-serif; color:#949494; font-size:15px; font-weight:bold"><i>&nbsp;&nbsp;&nbsp;168,944 contacts!</i></td>
+    <td height="17" colspan="2" align="right" background="images/social/blockleftbg.gif"><img alt="JournalistID" src="images/social/blockleft.gif" width="13" height="17"><a href="mycontacts.html"><img src="images/social/mycontacts.gif" width="72" height="17" border="0" alt="Your list of contacts"></a><a href="/partners.html"><img src="images/social/ourpartners.gif" width="72" height="17" border="0" alt="Our Partners"></a><a href="http://www.journalistid.com/email_associate.html?link=www.journalistid.com/"><img src="images/social/emailpage.gif" width="72" height="17" border="0" alt="Send page link by email"></a><a href="http://www.journalistid.com/journalistid_membership.html"><img src="images/social/aboutjournalistid.gif" alt="About JournalistID" width="72" height="17" border="0"></a><a onClick="toggleBox('popdivupdatetop',1);" href="#update_profile"><img src="images/social/loginprofile.gif" width="72" height="17" border="0" alt="Login to edit your profile"><img src="../images/social/endright.gif" width="5" height="17" border="0" /></a></td>
+  </tr>
+</table>
+<TABLE align="center" cellSpacing=0 cellPadding=0 width=778 border=0>
+  <TBODY>
+      <TR><TD align="right" colSpan=4>
+		<DIV id="popdivupdatetop" class="popcss">
+            <form name="updatetop" enctype="multipart/form-data" method="post" action="update_member.html" target="_blank" style="margin-top:0; margin-bottom:0">
+			  <font size="2" face="arial"><a name="login"></a>Your Email</font>	ID		  
+			  <input style="font-size:10px" name="useremail" type="text" size="20" maxlength="90">
+			  <font size="2" face="arial">Password</font>              
+			  <input style="font-size:10px" name="newpass" type="password" size="10" maxlength="35">
+			  <input style="font-size:10px" name="submit" type="submit" value="Login">
+            </form>
+		</DIV>
+	</TD></TR>
+    <TR>
+    <TD colSpan=4>
+      <TABLE cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD width=15><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=15></TD>
+          <TD width=7><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=7></TD>
+          <TD width="100%" colSpan=3 height=35>
+    <form style="margin-bottom:5 " name="searchcategory" method="get" action="/search_members.html">
+	  <table width ="748" align="center" border="0" cellspacing="2" cellpadding="0">
+	  <tr>
+	    <td width="2%"><input name="j1" type="checkbox" value="Online" ></td>
+	    <td width="33%"><b><font size="3" face="arial"><a href="http://www.journalistid.com?international_journalist=Online">Online Journalists</a> </font></b></td>
+	    <td width="2%"><input name="j5" type="checkbox" value="Research" ></td>
+	    <td width="28%"><b><font size="3" face="arial"><a href="http://www.journalistid.com?international_journalist=Research">Research Journalists</a> </font></b></td>
+	    <td width="36%" rowspan="6">
+<img alt="JournalistID" src="images/social/logofree.gif" width="249" height="52" border="0"></td>
+	  </tr>
+	  <tr>
+	    <td><input name="j2" type="checkbox" value="Print" ></td>
+	    <td><b><font size="3" face="arial"><a href="http://www.journalistid.com?international_journalist=Print">Print Journalists</a> </font></b></td>
+	    <td><input name="j6" type="checkbox" value="Photo" ></td>
+	    <td><b><font size="3" face="arial"><a href="http://www.journalistid.com?international_journalist=Photo">Photo Journalists</a> </font></b></td>
+	    </tr>
+	  <tr>
+	    <td><input name="j3" type="checkbox" value="Television" ></td>
+	    <td><b><font size="3" face="arial"><a href="http://www.journalistid.com?international_journalist=Television">Television Journalists</a> </font></b></td>
+	    <td><input name="j7" type="checkbox" value="Graphics" ></td>
+	    <td><b><font size="3" face="arial"><a href="http://www.journalistid.com?international_journalist=Graphics">Graphics Journalists</a> </font></b></td>
+	    </tr>
+	  <tr>
+	    <td><input name="j4" type="checkbox" value="Radio" ></td>
+	    <td><b><font size="3" face="arial"><a href="http://www.journalistid.com?international_journalist=Radio">Radio Journalists</a> </font></b></td>
+	  <td><input name="j8" type="checkbox" value="Magazine" ></td>
+	    <td><b><font size="3" face="arial"><a href="http://www.journalistid.com?international_journalist=Magazine">Magazine Journalists</a> </font></b></td>
+	  </tr>
+	  <tr>
+	    <td colspan="4" align="center"><b><font size="3" face="arial">
+		Search in country <select style="font-family:arial; font-size:14px; margin-top:0 "name="country" size="1" id="countryhead">
+                    <option value="all" selected>All Countries</option><option value="AF">Afghanistan</option>
+<option value="AL">Albania</option>
+<option value="DZ">Algeria</option>
+<option value="AS">America Samoa</option>
+<option value="AO">Angola</option>
+<option value="AR">Argentina</option>
+<option value="AM">Armenia</option>
+<option value="AU">Australia</option>
+<option value="AT">Austria</option>
+<option value="AZ">Azerbaijan</option>
+<option value="BH">Bahrain</option>
+<option value="BD">Bangladesh</option>
+<option value="BY">Belarus</option>
+<option value="BE">Belgium</option>
+<option value="BZ">Belize</option>
+<option value="BJ">Benin</option>
+<option value="BO">Bolivia</option>
+<option value="BR">Brazil</option>
+<option value="BG">Bulgaria</option>
+<option value="KH">Cambodia</option>
+<option value="CM">Cameroon</option>
+<option value="CA">Canada</option>
+<option value="CL">Chile</option>
+<option value="CN">China</option>
+<option value="CO">Colombia</option>
+<option value="CG">Congo</option>
+<option value="CR">Costa Rica</option>
+<option value="HR">Croatia</option>
+<option value="CU">Cuba</option>
+<option value="CY">Cyprus</option>
+<option value="CZ">Czech Rep</option>
+<option value="DK">Denmark</option>
+<option value="TP">East Timor</option>
+<option value="EC">Ecuador</option>
+<option value="EG">Egypt</option>
+<option value="SV">El Salvador</option>
+<option value="EE">Estonia</option>
+<option value="ET">Ethiopia</option>
+<option value="FJ">Fiji</option>
+<option value="FI">Finland</option>
+<option value="FR">France</option>
+<option value="PF">Polynesia</option>
+<option value="GA">Gabon</option>
+<option value="GE">Georgia</option>
+<option value="DE">Germany</option>
+<option value="GR">Greece</option>
+<option value="GL">Greenland</option>
+<option value="GD">Grenada</option>
+<option value="GU">Guam</option>
+<option value="GT">Guatemala</option>
+<option value="GN">Guinea</option>
+<option value="HT">Haiti</option>
+<option value="HN">Honduras</option>
+<option value="HK">Hong Kong</option>
+<option value="HU">Hungary</option>
+<option value="IS">Iceland</option>
+<option value="IN">India</option>
+<option value="ID">Indonesia</option>
+<option value="IR">Iran</option>
+<option value="IQ">Iraq</option>
+<option value="IE">Ireland</option>
+<option value="IL">Israel</option>
+<option value="IT">Italy</option>
+<option value="JM">Jamaica</option>
+<option value="JP">Japan</option>
+<option value="JO">Jordan</option>
+<option value="KZ">Kazakstan</option>
+<option value="KE">Kenya</option>
+<option value="KP">Korea, North</option>
+<option value="KR">Korea, South</option>
+<option value="KW">Kuwait</option>
+<option value="KG">Kyrgyzstan</option>
+<option value="LV">Latvia</option>
+<option value="LB">Lebanon</option>
+<option value="LR">Liberia</option>
+<option value="LI">Liechtenstein</option>
+<option value="LT">Lithuania</option>
+<option value="LU">Luxembourg</option>
+<option value="MK">Macedonia</option>
+<option value="MG">Madagascar</option>
+<option value="MW">Malawi</option>
+<option value="MY">Malaysia</option>
+<option value="MV">Maldives</option>
+<option value="MT">Malta</option>
+<option value="MX">Mexico</option>
+<option value="MD">Moldova</option>
+<option value="MC">Monaco</option>
+<option value="MN">Mongolia</option>
+<option value="MA">Morocco</option>
+<option value="MZ">Mozambique</option>
+<option value="NR">Nauru</option>
+<option value="NP">Nepal</option>
+<option value="NL">Netherlands</option>
+<option value="NC">New Caledonia</option>
+<option value="NZ">New Zealand</option>
+<option value="NG">Nigeria</option>
+<option value="NO">Norway</option>
+<option value="OM">Oman</option>
+<option value="PK">Pakistan</option>
+<option value="PS">Palestinian</option>
+<option value="PA">Panama</option>
+<option value="PG">Papua N Guinea</option>
+<option value="PY">Paraguay</option>
+<option value="PE">Peru</option>
+<option value="PH">Philippines</option>
+<option value="PL">Poland</option>
+<option value="PT">Portugal</option>
+<option value="PR">Puerto Rico</option>
+<option value="RO">Romania</option>
+<option value="RU">Russia</option>
+<option value="WS">Samoa</option>
+<option value="SA">Saudi Arabia</option>
+<option value="SN">Senegal</option>
+<option value="SC">Seychelles</option>
+<option value="SL">Sierra Leone</option>
+<option value="SG">Singapore</option>
+<option value="SK">Slovakia</option>
+<option value="SI">Slovenia</option>
+<option value="SB">Solomon</option>
+<option value="ZA">South Africa</option>
+<option value="ES">Spain</option>
+<option value="LK">Sri Lanka</option>
+<option value="SD">Sudan</option>
+<option value="SE">Sweden</option>
+<option value="CH">Switzerland</option>
+<option value="SY">Syrian</option>
+<option value="TW">Taiwan</option>
+<option value="TJ">Tajikistan</option>
+<option value="TH">Thailand</option>
+<option value="TO">Tonga</option>
+<option value="TR">Turkey</option>
+<option value="TM">Turkmenistan</option>
+<option value="UG">Uganda</option>
+<option value="UA">Ukraine</option>
+<option value="AE">U.A.E.</option>
+<option value="UK">United Kingdom</option>
+<option value="US">United States</option>
+<option value="UY">Uruguay</option>
+<option value="UZ">Uzbekistan</option>
+<option value="VU">Vanuatu</option>
+<option value="VE">Venezuela</option>
+<option value="VN">Viet Nam</option>
+<option value="YE">Yemen</option>
+<option value="YU">Yugoslavia</option>
+<option value="ZW">Zimbabwe</option>
+</select><input name="submit" type="submit" value="Search_List">			</font></b></td>
+	</tr>
+</table>
+</form>
+	  
+	  </TD></TR>
+        <TR>
+          <TD width=15 bgColor="#dbdee5"><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+          <TD width=7 bgColor="#dbdee5"><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+          <TD width=579 bgColor="#dbdee5" height=2><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=579></TD>
+          <TD width=7 bgColor="#dbdee5"><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=7></TD>
+          <TD width=170 bgColor="#dbdee5"><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=170></TD></TR>
+        <TR>
+          <TD width=15 bgColor="#f0f0f0" colSpan=5 height=16><IMG height=16 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR>
+        <TR>
+          <TD width=15 bgColor="#f0f0f0" height=1 rowSpan=3><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+          <TD width=7 height=1 rowSpan=2><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+          <TD width=579 height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+          <TD width=7 bgColor="#ffffff" rowSpan=2><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+          <TD vAlign=top align="center" width=170 bgColor="#f0f0f0" height=500 rowSpan=3>
+		  <script type="text/javascript"><!--
+google_ad_client = "ca-pub-1442603906650455";
+/* Jside160x600 */
+google_ad_slot = "3248423421";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><script type="text/javascript"><!--
+google_ad_client = "ca-pub-1442603906650455";
+/* Jside160x600 */
+google_ad_slot = "3248423421";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><script type="text/javascript"><!--
+google_ad_client = "ca-pub-1442603906650455";
+/* Jside160x600 */
+google_ad_slot = "3248423421";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></TD>
+        </TR>
+        <TR>
+          <TD vAlign=top width=579 bgColor="#ffffff">
+	<DIV style="margin-bottom:5"><font size="4" face="arial"><b>15 random journalist members of 422</b></font></DIV>						<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              			<TBODY>
+              			<TR><TD vAlign=top colSpan=3><IMG height=20 src="/images/social/pixel.gif" alt="Journalist" width=3></TD></TR>
+            			  <TR>
+             			   <TD vAlign=top width="100%"><a name="948"></a>             			     <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+             			       <TBODY>
+              			      <TR>
+             			         <TD height=28 align="left" bgColor="#EBEBEB">
+								 &nbsp;&nbsp;<A href="http://www.journalistid.com/journalistid_membership.html#visirank"><IMG height="4" alt="VisiRank +" src="images/pos.gif" width="3" align="middle" border="0"><IMG height="4" alt="VisiRank" src="images/neg.gif" width="97" align="middle" border="0"></A></TD>
+                			      <TD align=left width="100%" bgColor="#EFEFEF" height=28><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1> <B><font size="3" face="arial">
+								  Online, Print, Television, Radio, Research, Graphics, Magazine</font></B></TD>
+                 			     <TD width=11 height=28><a title="Add Contact To My Contacts" href="#948" onClick="window.open('mycontacts.html?addcontact=948','contacts','status=yes,menubar=yes,toolbar=yes,,scrollbars=yes,location=yes,directories=yes,resizable=yes')"><IMG height=28 src="images/social/corner_grey.gif" alt="Add Contact To My Contacts" width=21 border="0"></a></TD>
+								  </TR>
+                 			   <TR>
+                  			    <TD vAlign=top align=left width=126 bgColor="#F7F7F7" height=115>
+                   			     <TABLE cellSpacing=0 cellPadding=0 width=126 border=0>
+                    			      <TBODY>
+                     			     <TR>
+                   			         <TD align=right width=108 bgColor="#EAEAEA">
+									 <A title="View mark kwabena kyei Entire Profile" href="?id=948&amp;name=mark_kwabena_kyei"><IMG alt="mark kwabena kyei JournalistID member" height=100 src="members/1252088162.jpg" border=0></a>									 </TD>
+                    			        <TD vAlign=bottom width=18 bgColor="#EAEAEA"><IMG alt="Journalist" height=23 src="/images/social/results_slope.gif" width=18></TD>
+                     			     </TR></TBODY></TABLE>
+																		 </TD>
+                  			    <TD vAlign=top bgColor="#F7F7F7">
+                    			    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          			<TBODY>
+                          			<TR>
+                            			<TD height=19 bgcolor="#F7F7F7">
+										&nbsp;<A title="member name" href="?id=948&amp;name=mark_kwabena_kyei" target="_blank"><B><font size="3" face="arial">mark kwabena kyei</FONT></B></a>										</TD>
+                          				<TD height=19 align=right bgcolor="#F7F7F7"><B><font size="3" face="arial">accra, Gabon</font></B> </TD>
+									</TR>
+                          			<TR>
+                            			<TD height=15 bgcolor="#F7F7F7"> 
+																				&nbsp;<A title="members online work links" href="member_article_links.html?id=948&amp;name=mark_kwabena_kyei" target="_blank"><font size="2" face="arial"> Member Articles</font></a></TD>
+                            			<TD height=15 align="right" bgcolor="#F7F7F7"><font size="2" face="arial">
+										<input style="font-family:arial; font-size:11px" type="button" onClick="toggleBox('messageform948',1);" value="send email"><img alt="msn" src="images/contact-msn-icon.gif" width="20" height="20" border="0"><img alt="yahoo" src="images/contact-yahoo-icon.gif" width="20" height="20" border="0"><img alt="aim" src="images/contact-aim-icon.gif" width="20" height="20" border="0"><img alt="icq" src="images/contact-icq-icon.gif" width="20" height="20" border="0"><img alt="skype" src="images/contact-skype-icon.gif" width="20" height="20" border="0"></font></td>						  			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD height=15 colspan="2">
+                           			  <DIV style="PADDING-LEFT: 5px"><font size="3"><B><font size="2" face="arial">press, broadcasting, presentation, news</font></B></font></DIV></TD>
+                          			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD colspan="2"vAlign=top>
+                           			  <DIV style="PADDING-LEFT: 5px; PADDING-TOP: 5px"><font size="2" face="arial">am mark kyei, a broadcaster, radio presenter and a journalist.having diploma in communication studies and as well as diploma in radio broadcasting. having being writing, reporter for pretoria news whilst in south africa. member of commonwealth broadcasting association. has worked with a number of st</font></DIV></TD>
+                       			 </TR></TBODY></TABLE></TD>
+                      			<TD vAlign=bottom width=11 style="background-image: url(images/social/results_side_grad.gif)" height="100%" rowSpan=3><IMG height=32 src="/images/social/results_lime_corner2.gif" alt="Journalist" width=21></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR></TBODY>
+                  			</TABLE></TD></TR>
+						  </TBODY></TABLE>
+						  
+<div id="messageform948" class="popcss">
+<form style="margin-top:0" name="mail948" id="mail948" method="post" action="index.html?id=948">
+<table width="500" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#CCCCCC">
+  <tr><td bgcolor="#F7F7F7"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr><td align="center"><font size="2" face="arial">Your Name: <input style="font-family:arial; font-size:12px " name="username" type="text" size="20" maxlength="55" id="username948" value="">
+            Your Email: <input style="font-family:arial; font-size:12px " name="useremail" type="text" size="20" maxlength="90" id="useremail948" value="">
+</font></td>
+      </tr>
+      <tr><td align="center"><div id="error_message948"></div><input type="hidden" name="id" value="948"><textarea name="usermessage" cols="55" rows="6"  id="usermessage948"></textarea></td>
+      </tr>
+      <tr><td align="center"><input style="font-family:arial; font-size:12px" type="button" onClick="toggleBox('messageform948',0);" value="close email">          <font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;enter code&nbsp;</font>
+		  <img alt="letter" src="../images/characters/7ea0687101091ed96a3f214120baabf6.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/fa7bbdd671dcf52d7906c43051f90b20.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/89b095f4f45fe315c401a5ede0817f5c.gif" width="13" height="15" border="0">		  <input name="string" type="text" size="3" maxlength="3" id="string948">
+		  <input name="stringextra" value="6941e408d2cb267c2207998a6bb20845" type="hidden" id="stringextra948">
+		  <input type="submit" name="submitmessage" value="Send Email" class="subsend" id="948">
+		  </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</div>
+<div class="loading" id="loading948" height="40" align="center"><img height="19" width="220" src="/images/loading.gif" border="0"></div>
+<div class="done" id="done948" align="center">
+	<b>Thank you !</b> We have sent your message. 
+	<input name="refresh" class="refresh" id="948" type="button" value="refresh" />
+</div>
+									<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              			<TBODY>
+              			<TR><TD vAlign=top colSpan=3><IMG height=20 src="/images/social/pixel.gif" alt="Journalist" width=3></TD></TR>
+            			  <TR>
+             			   <TD vAlign=top width="100%"><a name="1095"></a>             			     <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+             			       <TBODY>
+              			      <TR>
+             			         <TD height=28 align="left" bgColor="#EBEBEB">
+								 &nbsp;&nbsp;<A href="http://www.journalistid.com/journalistid_membership.html#visirank"><IMG height="4" alt="VisiRank +" src="images/pos.gif" width="4" align="middle" border="0"><IMG height="4" alt="VisiRank" src="images/neg.gif" width="96" align="middle" border="0"></A></TD>
+                			      <TD align=left width="100%" bgColor="#EFEFEF" height=28><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1> <B><font size="3" face="arial">
+								  Online</font></B></TD>
+                 			     <TD width=11 height=28><a title="Add Contact To My Contacts" href="#1095" onClick="window.open('mycontacts.html?addcontact=1095','contacts','status=yes,menubar=yes,toolbar=yes,,scrollbars=yes,location=yes,directories=yes,resizable=yes')"><IMG height=28 src="images/social/corner_grey.gif" alt="Add Contact To My Contacts" width=21 border="0"></a></TD>
+								  </TR>
+                 			   <TR>
+                  			    <TD vAlign=top align=left width=126 bgColor="#F7F7F7" height=115>
+                   			     <TABLE cellSpacing=0 cellPadding=0 width=126 border=0>
+                    			      <TBODY>
+                     			     <TR>
+                   			         <TD align=right width=108 bgColor="#EAEAEA">
+									 <A title="View Venuela Velican Entire Profile" href="?id=1095&amp;name=venuela_velican"><IMG alt="Venuela Velican JournalistID member" height=100 src="members/1272479265.jpg" border=0></a>									 </TD>
+                    			        <TD vAlign=bottom width=18 bgColor="#EAEAEA"><IMG alt="Journalist" height=23 src="/images/social/results_slope.gif" width=18></TD>
+                     			     </TR></TBODY></TABLE>
+																		 </TD>
+                  			    <TD vAlign=top bgColor="#F7F7F7">
+                    			    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          			<TBODY>
+                          			<TR>
+                            			<TD height=19 bgcolor="#F7F7F7">
+										&nbsp;<A title="member name" href="?id=1095&amp;name=venuela_velican" target="_blank"><B><font size="3" face="arial">Venuela Velican</FONT></B></a>										</TD>
+                          				<TD height=19 align=right bgcolor="#F7F7F7"><B><font size="3" face="arial">, Romania</font></B> </TD>
+									</TR>
+                          			<TR>
+                            			<TD height=15 bgcolor="#F7F7F7"> 
+																				&nbsp;<A title="members online work links" href="member_article_links.html?id=1095&amp;name=venuela_velican" target="_blank"><font size="2" face="arial"> Member Articles</font></a></TD>
+                            			<TD height=15 align="right" bgcolor="#F7F7F7"><font size="2" face="arial">
+										<input style="font-family:arial; font-size:11px" type="button" onClick="toggleBox('messageform1095',1);" value="send email"><img alt="msn" src="images/contact-msn-icon.gif" width="20" height="20" border="0"></font></td>						  			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD height=15 colspan="2">
+                           			  <DIV style="PADDING-LEFT: 5px"><font size="3"><B><font size="2" face="arial">Poetry, Article, News/Feature, Movie & Music Review, Story, Blogs</font></B></font></DIV></TD>
+                          			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD colspan="2"vAlign=top>
+                           			  <DIV style="PADDING-LEFT: 5px; PADDING-TOP: 5px"><font size="2" face="arial">I started working as a journalist in an online newspaper,i,m interested at press,politics,research,magazine,photo.Photography is my main profession and hobby.That,s all.</font></DIV></TD>
+                       			 </TR></TBODY></TABLE></TD>
+                      			<TD vAlign=bottom width=11 style="background-image: url(images/social/results_side_grad.gif)" height="100%" rowSpan=3><IMG height=32 src="/images/social/results_lime_corner2.gif" alt="Journalist" width=21></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR></TBODY>
+                  			</TABLE></TD></TR>
+						  </TBODY></TABLE>
+						  
+<div id="messageform1095" class="popcss">
+<form style="margin-top:0" name="mail1095" id="mail1095" method="post" action="index.html?id=1095">
+<table width="500" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#CCCCCC">
+  <tr><td bgcolor="#F7F7F7"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr><td align="center"><font size="2" face="arial">Your Name: <input style="font-family:arial; font-size:12px " name="username" type="text" size="20" maxlength="55" id="username1095" value="">
+            Your Email: <input style="font-family:arial; font-size:12px " name="useremail" type="text" size="20" maxlength="90" id="useremail1095" value="">
+</font></td>
+      </tr>
+      <tr><td align="center"><div id="error_message1095"></div><input type="hidden" name="id" value="1095"><textarea name="usermessage" cols="55" rows="6"  id="usermessage1095"></textarea></td>
+      </tr>
+      <tr><td align="center"><input style="font-family:arial; font-size:12px" type="button" onClick="toggleBox('messageform1095',0);" value="close email">          <font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;enter code&nbsp;</font>
+		  <img alt="letter" src="../images/characters/4a443ad39d0dfc22745c2eaddd27319e.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/7ea0687101091ed96a3f214120baabf6.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/440b0865530c4a74d588f72396fe8158.gif" width="13" height="15" border="0">		  <input name="string" type="text" size="3" maxlength="3" id="string1095">
+		  <input name="stringextra" value="d1d10653446e75c4cd2845227e7710a9" type="hidden" id="stringextra1095">
+		  <input type="submit" name="submitmessage" value="Send Email" class="subsend" id="1095">
+		  </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</div>
+<div class="loading" id="loading1095" height="40" align="center"><img height="19" width="220" src="/images/loading.gif" border="0"></div>
+<div class="done" id="done1095" align="center">
+	<b>Thank you !</b> We have sent your message. 
+	<input name="refresh" class="refresh" id="1095" type="button" value="refresh" />
+</div>
+									<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              			<TBODY>
+              			<TR><TD vAlign=top colSpan=3><IMG height=20 src="/images/social/pixel.gif" alt="Journalist" width=3></TD></TR>
+            			  <TR>
+             			   <TD vAlign=top width="100%"><a name="340"></a>             			     <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+             			       <TBODY>
+              			      <TR>
+             			         <TD height=28 align="left" bgColor="#EBEBEB">
+								 &nbsp;&nbsp;<A href="http://www.journalistid.com/journalistid_membership.html#visirank"><IMG height="4" alt="VisiRank +" src="images/pos.gif" width="18" align="middle" border="0"><IMG height="4" alt="VisiRank" src="images/neg.gif" width="82" align="middle" border="0"></A></TD>
+                			      <TD align=left width="100%" bgColor="#EFEFEF" height=28><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1> <B><font size="3" face="arial">
+								  Online, Print, Magazine</font></B></TD>
+                 			     <TD width=11 height=28><a title="Add Contact To My Contacts" href="#340" onClick="window.open('mycontacts.html?addcontact=340','contacts','status=yes,menubar=yes,toolbar=yes,,scrollbars=yes,location=yes,directories=yes,resizable=yes')"><IMG height=28 src="images/social/corner_grey.gif" alt="Add Contact To My Contacts" width=21 border="0"></a></TD>
+								  </TR>
+                 			   <TR>
+                  			    <TD vAlign=top align=left width=126 bgColor="#F7F7F7" height=115>
+                   			     <TABLE cellSpacing=0 cellPadding=0 width=126 border=0>
+                    			      <TBODY>
+                     			     <TR>
+                   			         <TD align=right width=108 bgColor="#EAEAEA">
+									 <A title="View Jessica McCafferty Entire Profile" href="?id=340&amp;name=jessica_mccafferty"><IMG alt="Jessica McCafferty JournalistID member" height=100 src="members/1163883617.jpg" border=0></a>									 </TD>
+                    			        <TD vAlign=bottom width=18 bgColor="#EAEAEA"><IMG alt="Journalist" height=23 src="/images/social/results_slope.gif" width=18></TD>
+                     			     </TR></TBODY></TABLE>
+																		 </TD>
+                  			    <TD vAlign=top bgColor="#F7F7F7">
+                    			    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          			<TBODY>
+                          			<TR>
+                            			<TD height=19 bgcolor="#F7F7F7">
+										&nbsp;<A title="member name" href="?id=340&amp;name=jessica_mccafferty" target="_blank"><B><font size="3" face="arial">Jessica McCafferty</FONT></B></a>										</TD>
+                          				<TD height=19 align=right bgcolor="#F7F7F7"><B><font size="3" face="arial">Chicago, United States</font></B> </TD>
+									</TR>
+                          			<TR>
+                            			<TD height=15 bgcolor="#F7F7F7"> 
+																				&nbsp;<A title="members online work links" href="member_article_links.html?id=340&amp;name=jessica_mccafferty" target="_blank"><font size="2" face="arial"> Member Articles</font></a></TD>
+                            			<TD height=15 align="right" bgcolor="#F7F7F7"><font size="2" face="arial">
+										<input style="font-family:arial; font-size:11px" type="button" onClick="toggleBox('messageform340',1);" value="send email"></font></td>						  			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD height=15 colspan="2">
+                           			  <DIV style="PADDING-LEFT: 5px"><font size="3"><B><font size="2" face="arial">Entertainment and Beauty</font></B></font></DIV></TD>
+                          			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD colspan="2"vAlign=top>
+                           			  <DIV style="PADDING-LEFT: 5px; PADDING-TOP: 5px"><font size="2" face="arial">I have been a teen correspondent for the past 5 years. As a freelance writer, I have written teen and beauty orientated articles for various nationwide publications including Teen People, POPSTAR!, Sophisticate?s Hairstyle Guide, and Celebrity Hairstyles.</font></DIV></TD>
+                       			 </TR></TBODY></TABLE></TD>
+                      			<TD vAlign=bottom width=11 style="background-image: url(images/social/results_side_grad.gif)" height="100%" rowSpan=3><IMG height=32 src="/images/social/results_lime_corner2.gif" alt="Journalist" width=21></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR></TBODY>
+                  			</TABLE></TD></TR>
+						  </TBODY></TABLE>
+						  
+<div id="messageform340" class="popcss">
+<form style="margin-top:0" name="mail340" id="mail340" method="post" action="index.html?id=340">
+<table width="500" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#CCCCCC">
+  <tr><td bgcolor="#F7F7F7"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr><td align="center"><font size="2" face="arial">Your Name: <input style="font-family:arial; font-size:12px " name="username" type="text" size="20" maxlength="55" id="username340" value="">
+            Your Email: <input style="font-family:arial; font-size:12px " name="useremail" type="text" size="20" maxlength="90" id="useremail340" value="">
+</font></td>
+      </tr>
+      <tr><td align="center"><div id="error_message340"></div><input type="hidden" name="id" value="340"><textarea name="usermessage" cols="55" rows="6"  id="usermessage340"></textarea></td>
+      </tr>
+      <tr><td align="center"><input style="font-family:arial; font-size:12px" type="button" onClick="toggleBox('messageform340',0);" value="close email">          <font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;enter code&nbsp;</font>
+		  <img alt="letter" src="../images/characters/c1fe38b392df784fa8e039b51cc79bda.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/7946fd27ebd3d5c54cf3d8a00bd30d61.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/01125c6de2983089659cc7fa3db8c967.gif" width="13" height="15" border="0">		  <input name="string" type="text" size="3" maxlength="3" id="string340">
+		  <input name="stringextra" value="076563d609b622ac7ab0618b8a5ed8d4" type="hidden" id="stringextra340">
+		  <input type="submit" name="submitmessage" value="Send Email" class="subsend" id="340">
+		  </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</div>
+<div class="loading" id="loading340" height="40" align="center"><img height="19" width="220" src="/images/loading.gif" border="0"></div>
+<div class="done" id="done340" align="center">
+	<b>Thank you !</b> We have sent your message. 
+	<input name="refresh" class="refresh" id="340" type="button" value="refresh" />
+</div>
+									<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              			<TBODY>
+              			<TR><TD vAlign=top colSpan=3><IMG height=20 src="/images/social/pixel.gif" alt="Journalist" width=3></TD></TR>
+            			  <TR>
+             			   <TD vAlign=top width="100%"><a name="1342"></a>             			     <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+             			       <TBODY>
+              			      <TR>
+             			         <TD height=28 align="left" bgColor="#EBEBEB">
+								 &nbsp;&nbsp;<A href="http://www.journalistid.com/journalistid_membership.html#visirank"><IMG height="4" alt="VisiRank +" src="images/pos.gif" width="1" align="middle" border="0"><IMG height="4" alt="VisiRank" src="images/neg.gif" width="99" align="middle" border="0"></A></TD>
+                			      <TD align=left width="100%" bgColor="#EFEFEF" height=28><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1> <B><font size="3" face="arial">
+								  Online, Radio</font></B></TD>
+                 			     <TD width=11 height=28><a title="Add Contact To My Contacts" href="#1342" onClick="window.open('mycontacts.html?addcontact=1342','contacts','status=yes,menubar=yes,toolbar=yes,,scrollbars=yes,location=yes,directories=yes,resizable=yes')"><IMG height=28 src="images/social/corner_grey.gif" alt="Add Contact To My Contacts" width=21 border="0"></a></TD>
+								  </TR>
+                 			   <TR>
+                  			    <TD vAlign=top align=left width=126 bgColor="#F7F7F7" height=115>
+                   			     <TABLE cellSpacing=0 cellPadding=0 width=126 border=0>
+                    			      <TBODY>
+                     			     <TR>
+                   			         <TD align=right width=108 bgColor="#EAEAEA">
+									 <A title="View rhendrasandya Entire Profile" href="?id=1342&amp;name=rhendrasandya"><IMG alt="rhendrasandya JournalistID member" height=100 src="members/1319450302.jpg" border=0></a>									 </TD>
+                    			        <TD vAlign=bottom width=18 bgColor="#EAEAEA"><IMG alt="Journalist" height=23 src="/images/social/results_slope.gif" width=18></TD>
+                     			     </TR></TBODY></TABLE>
+																		 </TD>
+                  			    <TD vAlign=top bgColor="#F7F7F7">
+                    			    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          			<TBODY>
+                          			<TR>
+                            			<TD height=19 bgcolor="#F7F7F7">
+										&nbsp;<A title="member name" href="?id=1342&amp;name=rhendrasandya" target="_blank"><B><font size="3" face="arial">rhendrasandya</FONT></B></a>										</TD>
+                          				<TD height=19 align=right bgcolor="#F7F7F7"><B><font size="3" face="arial">Jakarta, Indonesia</font></B> </TD>
+									</TR>
+                          			<TR>
+                            			<TD height=15 bgcolor="#F7F7F7"> 
+																				&nbsp;<A title="members online work links" href="member_article_links.html?id=1342&amp;name=rhendrasandya" target="_blank"><font size="2" face="arial"> Member Articles</font></a></TD>
+                            			<TD height=15 align="right" bgcolor="#F7F7F7"><font size="2" face="arial">
+										<input style="font-family:arial; font-size:11px" type="button" onClick="toggleBox('messageform1342',1);" value="send email"><img alt="yahoo" src="images/contact-yahoo-icon.gif" width="20" height="20" border="0"></font></td>						  			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD height=15 colspan="2">
+                           			  <DIV style="PADDING-LEFT: 5px"><font size="3"><B><font size="2" face="arial">Local Headline News</font></B></font></DIV></TD>
+                          			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD colspan="2"vAlign=top>
+                           			  <DIV style="PADDING-LEFT: 5px; PADDING-TOP: 5px"><font size="2" face="arial">news reportage</font></DIV></TD>
+                       			 </TR></TBODY></TABLE></TD>
+                      			<TD vAlign=bottom width=11 style="background-image: url(images/social/results_side_grad.gif)" height="100%" rowSpan=3><IMG height=32 src="/images/social/results_lime_corner2.gif" alt="Journalist" width=21></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR></TBODY>
+                  			</TABLE></TD></TR>
+						  </TBODY></TABLE>
+						  
+<div id="messageform1342" class="popcss">
+<form style="margin-top:0" name="mail1342" id="mail1342" method="post" action="index.html?id=1342">
+<table width="500" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#CCCCCC">
+  <tr><td bgcolor="#F7F7F7"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr><td align="center"><font size="2" face="arial">Your Name: <input style="font-family:arial; font-size:12px " name="username" type="text" size="20" maxlength="55" id="username1342" value="">
+            Your Email: <input style="font-family:arial; font-size:12px " name="useremail" type="text" size="20" maxlength="90" id="useremail1342" value="">
+</font></td>
+      </tr>
+      <tr><td align="center"><div id="error_message1342"></div><input type="hidden" name="id" value="1342"><textarea name="usermessage" cols="55" rows="6"  id="usermessage1342"></textarea></td>
+      </tr>
+      <tr><td align="center"><input style="font-family:arial; font-size:12px" type="button" onClick="toggleBox('messageform1342',0);" value="close email">          <font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;enter code&nbsp;</font>
+		  <img alt="letter" src="../images/characters/2da8cfbcf7da310bd1cec8fce5db398d.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/89b095f4f45fe315c401a5ede0817f5c.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/7e3552205d1ede6ca95005a6ebd02ed5.gif" width="13" height="15" border="0">		  <input name="string" type="text" size="3" maxlength="3" id="string1342">
+		  <input name="stringextra" value="ca47f43e6f9d682d343d98a0113d505f" type="hidden" id="stringextra1342">
+		  <input type="submit" name="submitmessage" value="Send Email" class="subsend" id="1342">
+		  </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</div>
+<div class="loading" id="loading1342" height="40" align="center"><img height="19" width="220" src="/images/loading.gif" border="0"></div>
+<div class="done" id="done1342" align="center">
+	<b>Thank you !</b> We have sent your message. 
+	<input name="refresh" class="refresh" id="1342" type="button" value="refresh" />
+</div>
+									<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              			<TBODY>
+              			<TR><TD vAlign=top colSpan=3><IMG height=20 src="/images/social/pixel.gif" alt="Journalist" width=3></TD></TR>
+            			  <TR>
+             			   <TD vAlign=top width="100%"><a name="71"></a>             			     <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+             			       <TBODY>
+              			      <TR>
+             			         <TD height=28 align="left" bgColor="#EBEBEB">
+								 &nbsp;&nbsp;<A href="http://www.journalistid.com/journalistid_membership.html#visirank"><IMG height="4" alt="VisiRank +" src="images/pos.gif" width="29" align="middle" border="0"><IMG height="4" alt="VisiRank" src="images/neg.gif" width="71" align="middle" border="0"></A></TD>
+                			      <TD align=left width="100%" bgColor="#EFEFEF" height=28><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1> <B><font size="3" face="arial">
+								  Television, Radio</font></B></TD>
+                 			     <TD width=11 height=28><a title="Add Contact To My Contacts" href="#71" onClick="window.open('mycontacts.html?addcontact=71','contacts','status=yes,menubar=yes,toolbar=yes,,scrollbars=yes,location=yes,directories=yes,resizable=yes')"><IMG height=28 src="images/social/corner_grey.gif" alt="Add Contact To My Contacts" width=21 border="0"></a></TD>
+								  </TR>
+                 			   <TR>
+                  			    <TD vAlign=top align=left width=126 bgColor="#F7F7F7" height=115>
+                   			     <TABLE cellSpacing=0 cellPadding=0 width=126 border=0>
+                    			      <TBODY>
+                     			     <TR>
+                   			         <TD align=right width=108 bgColor="#EAEAEA">
+									 <A title="View Islamuddin Sajid Entire Profile" href="?id=71&amp;name=islamuddin_sajid"><IMG alt="Islamuddin Sajid JournalistID member" height=100 src="members/1116329618.jpg" border=0></a>									 </TD>
+                    			        <TD vAlign=bottom width=18 bgColor="#EAEAEA"><IMG alt="Journalist" height=23 src="/images/social/results_slope.gif" width=18></TD>
+                     			     </TR></TBODY></TABLE>
+																		 </TD>
+                  			    <TD vAlign=top bgColor="#F7F7F7">
+                    			    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          			<TBODY>
+                          			<TR>
+                            			<TD height=19 bgcolor="#F7F7F7">
+										&nbsp;<A title="member name" href="?id=71&amp;name=islamuddin_sajid" target="_blank"><B><font size="3" face="arial">Islamuddin Sajid</FONT></B></a>										</TD>
+                          				<TD height=19 align=right bgcolor="#F7F7F7"><B><font size="3" face="arial">Peshawar, Pakistan</font></B> </TD>
+									</TR>
+                          			<TR>
+                            			<TD height=15 bgcolor="#F7F7F7"> 
+																				&nbsp;<A title="members online work links" href="member_article_links.html?id=71&amp;name=islamuddin_sajid" target="_blank"><font size="2" face="arial"> Member Articles</font></a></TD>
+                            			<TD height=15 align="right" bgcolor="#F7F7F7"><font size="2" face="arial">
+										<input style="font-family:arial; font-size:11px" type="button" onClick="toggleBox('messageform71',1);" value="send email"><img alt="msn" src="images/contact-msn-icon.gif" width="20" height="20" border="0"><img alt="yahoo" src="images/contact-yahoo-icon.gif" width="20" height="20" border="0"><img alt="icq" src="images/contact-icq-icon.gif" width="20" height="20" border="0"></font></td>						  			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD height=15 colspan="2">
+                           			  <DIV style="PADDING-LEFT: 5px"><font size="3"><B><font size="2" face="arial">Afghanistan,Trible affairs, education, health and politics</font></B></font></DIV></TD>
+                          			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD colspan="2"vAlign=top>
+                           			  <DIV style="PADDING-LEFT: 5px; PADDING-TOP: 5px"><font size="2" face="arial">i  did  journalism and mass communication from university of peshawar since 2004,now-a-days  working for Express News, covering war on terror and other issue regarding security issues in the region</font></DIV></TD>
+                       			 </TR></TBODY></TABLE></TD>
+                      			<TD vAlign=bottom width=11 style="background-image: url(images/social/results_side_grad.gif)" height="100%" rowSpan=3><IMG height=32 src="/images/social/results_lime_corner2.gif" alt="Journalist" width=21></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR></TBODY>
+                  			</TABLE></TD></TR>
+						  </TBODY></TABLE>
+						  
+<div id="messageform71" class="popcss">
+<form style="margin-top:0" name="mail71" id="mail71" method="post" action="index.html?id=71">
+<table width="500" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#CCCCCC">
+  <tr><td bgcolor="#F7F7F7"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr><td align="center"><font size="2" face="arial">Your Name: <input style="font-family:arial; font-size:12px " name="username" type="text" size="20" maxlength="55" id="username71" value="">
+            Your Email: <input style="font-family:arial; font-size:12px " name="useremail" type="text" size="20" maxlength="90" id="useremail71" value="">
+</font></td>
+      </tr>
+      <tr><td align="center"><div id="error_message71"></div><input type="hidden" name="id" value="71"><textarea name="usermessage" cols="55" rows="6"  id="usermessage71"></textarea></td>
+      </tr>
+      <tr><td align="center"><input style="font-family:arial; font-size:12px" type="button" onClick="toggleBox('messageform71',0);" value="close email">          <font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;enter code&nbsp;</font>
+		  <img alt="letter" src="../images/characters/8114a0612e2a1bf6259f20da64e71363.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/7ea0687101091ed96a3f214120baabf6.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/c1fe38b392df784fa8e039b51cc79bda.gif" width="13" height="15" border="0">		  <input name="string" type="text" size="3" maxlength="3" id="string71">
+		  <input name="stringextra" value="e55646b24ce409be3a3f336a5b72b9d1" type="hidden" id="stringextra71">
+		  <input type="submit" name="submitmessage" value="Send Email" class="subsend" id="71">
+		  </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</div>
+<div class="loading" id="loading71" height="40" align="center"><img height="19" width="220" src="/images/loading.gif" border="0"></div>
+<div class="done" id="done71" align="center">
+	<b>Thank you !</b> We have sent your message. 
+	<input name="refresh" class="refresh" id="71" type="button" value="refresh" />
+</div>
+									<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              			<TBODY>
+              			<TR><TD vAlign=top colSpan=3><IMG height=20 src="/images/social/pixel.gif" alt="Journalist" width=3></TD></TR>
+            			  <TR>
+             			   <TD vAlign=top width="100%"><a name="739"></a>             			     <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+             			       <TBODY>
+              			      <TR>
+             			         <TD height=28 align="left" bgColor="#EBEBEB">
+								 &nbsp;&nbsp;<A href="http://www.journalistid.com/journalistid_membership.html#visirank"><IMG height="4" alt="VisiRank +" src="images/pos.gif" width="4" align="middle" border="0"><IMG height="4" alt="VisiRank" src="images/neg.gif" width="96" align="middle" border="0"></A></TD>
+                			      <TD align=left width="100%" bgColor="#EFEFEF" height=28><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1> <B><font size="3" face="arial">
+								  Print, Radio</font></B></TD>
+                 			     <TD width=11 height=28><a title="Add Contact To My Contacts" href="#739" onClick="window.open('mycontacts.html?addcontact=739','contacts','status=yes,menubar=yes,toolbar=yes,,scrollbars=yes,location=yes,directories=yes,resizable=yes')"><IMG height=28 src="images/social/corner_grey.gif" alt="Add Contact To My Contacts" width=21 border="0"></a></TD>
+								  </TR>
+                 			   <TR>
+                  			    <TD vAlign=top align=left width=126 bgColor="#F7F7F7" height=115>
+                   			     <TABLE cellSpacing=0 cellPadding=0 width=126 border=0>
+                    			      <TBODY>
+                     			     <TR>
+                   			         <TD align=right width=108 bgColor="#EAEAEA">
+									 <A title="View jagdish kumar Entire Profile" href="?id=739&amp;name=jagdish_kumar"><IMG alt="jagdish kumar JournalistID member" height=100 src="members/1221836994.jpg" border=0></a>									 </TD>
+                    			        <TD vAlign=bottom width=18 bgColor="#EAEAEA"><IMG alt="Journalist" height=23 src="/images/social/results_slope.gif" width=18></TD>
+                     			     </TR></TBODY></TABLE>
+																		 </TD>
+                  			    <TD vAlign=top bgColor="#F7F7F7">
+                    			    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          			<TBODY>
+                          			<TR>
+                            			<TD height=19 bgcolor="#F7F7F7">
+										&nbsp;<A title="member name" href="?id=739&amp;name=jagdish_kumar" target="_blank"><B><font size="3" face="arial">jagdish kumar</FONT></B></a>										</TD>
+                          				<TD height=19 align=right bgcolor="#F7F7F7"><B><font size="3" face="arial">mumbai, India</font></B> </TD>
+									</TR>
+                          			<TR>
+                            			<TD height=15 bgcolor="#F7F7F7"> 
+																				&nbsp;<A title="members online work links" href="member_article_links.html?id=739&amp;name=jagdish_kumar" target="_blank"><font size="2" face="arial"> Member Articles</font></a></TD>
+                            			<TD height=15 align="right" bgcolor="#F7F7F7"><font size="2" face="arial">
+										<input style="font-family:arial; font-size:11px" type="button" onClick="toggleBox('messageform739',1);" value="send email"><img alt="skype" src="images/contact-skype-icon.gif" width="20" height="20" border="0"></font></td>						  			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD height=15 colspan="2">
+                           			  <DIV style="PADDING-LEFT: 5px"><font size="3"><B><font size="2" face="arial">Aviation, General, Business</font></B></font></DIV></TD>
+                          			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD colspan="2"vAlign=top>
+                           			  <DIV style="PADDING-LEFT: 5px; PADDING-TOP: 5px"><font size="2" face="arial">Currently, I am working as Foreign Correspondent for CVC.tv. Autralia's News Network. Also worked as Journalist for Employment & NRI Times, sub-editor for Exim India Newsletter and Link Magazine, I've developed my talent and experience as a Reporter.</font></DIV></TD>
+                       			 </TR></TBODY></TABLE></TD>
+                      			<TD vAlign=bottom width=11 style="background-image: url(images/social/results_side_grad.gif)" height="100%" rowSpan=3><IMG height=32 src="/images/social/results_lime_corner2.gif" alt="Journalist" width=21></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR></TBODY>
+                  			</TABLE></TD></TR>
+						  </TBODY></TABLE>
+						  
+<div id="messageform739" class="popcss">
+<form style="margin-top:0" name="mail739" id="mail739" method="post" action="index.html?id=739">
+<table width="500" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#CCCCCC">
+  <tr><td bgcolor="#F7F7F7"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr><td align="center"><font size="2" face="arial">Your Name: <input style="font-family:arial; font-size:12px " name="username" type="text" size="20" maxlength="55" id="username739" value="">
+            Your Email: <input style="font-family:arial; font-size:12px " name="useremail" type="text" size="20" maxlength="90" id="useremail739" value="">
+</font></td>
+      </tr>
+      <tr><td align="center"><div id="error_message739"></div><input type="hidden" name="id" value="739"><textarea name="usermessage" cols="55" rows="6"  id="usermessage739"></textarea></td>
+      </tr>
+      <tr><td align="center"><input style="font-family:arial; font-size:12px" type="button" onClick="toggleBox('messageform739',0);" value="close email">          <font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;enter code&nbsp;</font>
+		  <img alt="letter" src="../images/characters/4cb6351ad12c883222cc206d51006366.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/2da8cfbcf7da310bd1cec8fce5db398d.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/e1f85cc5699401a02107ec75cc680e7c.gif" width="13" height="15" border="0">		  <input name="string" type="text" size="3" maxlength="3" id="string739">
+		  <input name="stringextra" value="516d070eec57d393abc32a9f712199e2" type="hidden" id="stringextra739">
+		  <input type="submit" name="submitmessage" value="Send Email" class="subsend" id="739">
+		  </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</div>
+<div class="loading" id="loading739" height="40" align="center"><img height="19" width="220" src="/images/loading.gif" border="0"></div>
+<div class="done" id="done739" align="center">
+	<b>Thank you !</b> We have sent your message. 
+	<input name="refresh" class="refresh" id="739" type="button" value="refresh" />
+</div>
+									<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              			<TBODY>
+              			<TR><TD vAlign=top colSpan=3><IMG height=20 src="/images/social/pixel.gif" alt="Journalist" width=3></TD></TR>
+            			  <TR>
+             			   <TD vAlign=top width="100%"><a name="387"></a>             			     <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+             			       <TBODY>
+              			      <TR>
+             			         <TD height=28 align="left" bgColor="#EBEBEB">
+								 &nbsp;&nbsp;<A href="http://www.journalistid.com/journalistid_membership.html#visirank"><IMG height="4" alt="VisiRank +" src="images/pos.gif" width="8" align="middle" border="0"><IMG height="4" alt="VisiRank" src="images/neg.gif" width="92" align="middle" border="0"></A></TD>
+                			      <TD align=left width="100%" bgColor="#EFEFEF" height=28><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1> <B><font size="3" face="arial">
+								  Online</font></B></TD>
+                 			     <TD width=11 height=28><a title="Add Contact To My Contacts" href="#387" onClick="window.open('mycontacts.html?addcontact=387','contacts','status=yes,menubar=yes,toolbar=yes,,scrollbars=yes,location=yes,directories=yes,resizable=yes')"><IMG height=28 src="images/social/corner_grey.gif" alt="Add Contact To My Contacts" width=21 border="0"></a></TD>
+								  </TR>
+                 			   <TR>
+                  			    <TD vAlign=top align=left width=126 bgColor="#F7F7F7" height=115>
+                   			     <TABLE cellSpacing=0 cellPadding=0 width=126 border=0>
+                    			      <TBODY>
+                     			     <TR>
+                   			         <TD align=right width=108 bgColor="#EAEAEA">
+									 <A title="View Rocco Curcio Entire Profile" href="?id=387&amp;name=rocco_curcio"><IMG alt="Rocco Curcio JournalistID member" height=100 src="members/1168772130.jpg" border=0></a>									 </TD>
+                    			        <TD vAlign=bottom width=18 bgColor="#EAEAEA"><IMG alt="Journalist" height=23 src="/images/social/results_slope.gif" width=18></TD>
+                     			     </TR></TBODY></TABLE>
+																		 </TD>
+                  			    <TD vAlign=top bgColor="#F7F7F7">
+                    			    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          			<TBODY>
+                          			<TR>
+                            			<TD height=19 bgcolor="#F7F7F7">
+										&nbsp;<A title="member name" href="?id=387&amp;name=rocco_curcio" target="_blank"><B><font size="3" face="arial">Rocco Curcio</FONT></B></a>										</TD>
+                          				<TD height=19 align=right bgcolor="#F7F7F7"><B><font size="3" face="arial">Avellino, Italy</font></B> </TD>
+									</TR>
+                          			<TR>
+                            			<TD height=15 bgcolor="#F7F7F7"> 
+																				&nbsp;<A title="members online work links" href="member_article_links.html?id=387&amp;name=rocco_curcio" target="_blank"><font size="2" face="arial"> Member Articles</font></a></TD>
+                            			<TD height=15 align="right" bgcolor="#F7F7F7"><font size="2" face="arial">
+										<input style="font-family:arial; font-size:11px" type="button" onClick="toggleBox('messageform387',1);" value="send email"><img alt="msn" src="images/contact-msn-icon.gif" width="20" height="20" border="0"></font></td>						  			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD height=15 colspan="2">
+                           			  <DIV style="PADDING-LEFT: 5px"><font size="3"><B><font size="2" face="arial">Sports, Soccer, Football, Basketball</font></B></font></DIV></TD>
+                          			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD colspan="2"vAlign=top>
+                           			  <DIV style="PADDING-LEFT: 5px; PADDING-TOP: 5px"><font size="2" face="arial">Presently working on sportisland.net (an Italian legally recognised news organization), I'm the responsable of the European football (including UEFA events) and Italian basketball.</font></DIV></TD>
+                       			 </TR></TBODY></TABLE></TD>
+                      			<TD vAlign=bottom width=11 style="background-image: url(images/social/results_side_grad.gif)" height="100%" rowSpan=3><IMG height=32 src="/images/social/results_lime_corner2.gif" alt="Journalist" width=21></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR></TBODY>
+                  			</TABLE></TD></TR>
+						  </TBODY></TABLE>
+						  
+<div id="messageform387" class="popcss">
+<form style="margin-top:0" name="mail387" id="mail387" method="post" action="index.html?id=387">
+<table width="500" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#CCCCCC">
+  <tr><td bgcolor="#F7F7F7"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr><td align="center"><font size="2" face="arial">Your Name: <input style="font-family:arial; font-size:12px " name="username" type="text" size="20" maxlength="55" id="username387" value="">
+            Your Email: <input style="font-family:arial; font-size:12px " name="useremail" type="text" size="20" maxlength="90" id="useremail387" value="">
+</font></td>
+      </tr>
+      <tr><td align="center"><div id="error_message387"></div><input type="hidden" name="id" value="387"><textarea name="usermessage" cols="55" rows="6"  id="usermessage387"></textarea></td>
+      </tr>
+      <tr><td align="center"><input style="font-family:arial; font-size:12px" type="button" onClick="toggleBox('messageform387',0);" value="close email">          <font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;enter code&nbsp;</font>
+		  <img alt="letter" src="../images/characters/c1fe38b392df784fa8e039b51cc79bda.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/fa7bbdd671dcf52d7906c43051f90b20.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/4a443ad39d0dfc22745c2eaddd27319e.gif" width="13" height="15" border="0">		  <input name="string" type="text" size="3" maxlength="3" id="string387">
+		  <input name="stringextra" value="532f0d9bd484202d8f1899f81ccd5241" type="hidden" id="stringextra387">
+		  <input type="submit" name="submitmessage" value="Send Email" class="subsend" id="387">
+		  </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</div>
+<div class="loading" id="loading387" height="40" align="center"><img height="19" width="220" src="/images/loading.gif" border="0"></div>
+<div class="done" id="done387" align="center">
+	<b>Thank you !</b> We have sent your message. 
+	<input name="refresh" class="refresh" id="387" type="button" value="refresh" />
+</div>
+									<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              			<TBODY>
+              			<TR><TD vAlign=top colSpan=3><IMG height=20 src="/images/social/pixel.gif" alt="Journalist" width=3></TD></TR>
+            			  <TR>
+             			   <TD vAlign=top width="100%"><a name="1028"></a>             			     <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+             			       <TBODY>
+              			      <TR>
+             			         <TD height=28 align="left" bgColor="#EBEBEB">
+								 &nbsp;&nbsp;<A href="http://www.journalistid.com/journalistid_membership.html#visirank"><IMG height="4" alt="VisiRank +" src="images/pos.gif" width="3" align="middle" border="0"><IMG height="4" alt="VisiRank" src="images/neg.gif" width="97" align="middle" border="0"></A></TD>
+                			      <TD align=left width="100%" bgColor="#EFEFEF" height=28><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1> <B><font size="3" face="arial">
+								  Online, Print</font></B></TD>
+                 			     <TD width=11 height=28><a title="Add Contact To My Contacts" href="#1028" onClick="window.open('mycontacts.html?addcontact=1028','contacts','status=yes,menubar=yes,toolbar=yes,,scrollbars=yes,location=yes,directories=yes,resizable=yes')"><IMG height=28 src="images/social/corner_grey.gif" alt="Add Contact To My Contacts" width=21 border="0"></a></TD>
+								  </TR>
+                 			   <TR>
+                  			    <TD vAlign=top align=left width=126 bgColor="#F7F7F7" height=115>
+                   			     <TABLE cellSpacing=0 cellPadding=0 width=126 border=0>
+                    			      <TBODY>
+                     			     <TR>
+                   			         <TD align=right width=108 bgColor="#EAEAEA">
+									 <A title="View Sanjeet N Mishra Entire Profile" href="?id=1028&amp;name=sanjeet_n_mishra"><IMG alt="Sanjeet N Mishra JournalistID member" height=100 src="members/1262181360.jpg" border=0></a>									 </TD>
+                    			        <TD vAlign=bottom width=18 bgColor="#EAEAEA"><IMG alt="Journalist" height=23 src="/images/social/results_slope.gif" width=18></TD>
+                     			     </TR></TBODY></TABLE>
+																		 </TD>
+                  			    <TD vAlign=top bgColor="#F7F7F7">
+                    			    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          			<TBODY>
+                          			<TR>
+                            			<TD height=19 bgcolor="#F7F7F7">
+										&nbsp;<A title="member name" href="?id=1028&amp;name=sanjeet_n_mishra" target="_blank"><B><font size="3" face="arial">Sanjeet N Mishra</FONT></B></a>										</TD>
+                          				<TD height=19 align=right bgcolor="#F7F7F7"><B><font size="3" face="arial">Patna, India</font></B> </TD>
+									</TR>
+                          			<TR>
+                            			<TD height=15 bgcolor="#F7F7F7"> 
+																				&nbsp;<A title="members online work links" href="member_article_links.html?id=1028&amp;name=sanjeet_n_mishra" target="_blank"><font size="2" face="arial"> Member Articles</font></a></TD>
+                            			<TD height=15 align="right" bgcolor="#F7F7F7"><font size="2" face="arial">
+										<input style="font-family:arial; font-size:11px" type="button" onClick="toggleBox('messageform1028',1);" value="send email"></font></td>						  			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD height=15 colspan="2">
+                           			  <DIV style="PADDING-LEFT: 5px"><font size="3"><B><font size="2" face="arial">Sr Sub Editor/ Web Co-Ordinator in I-NEXT</font></B></font></DIV></TD>
+                          			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD colspan="2"vAlign=top>
+                           			  <DIV style="PADDING-LEFT: 5px; PADDING-TOP: 5px"><font size="2" face="arial">Working as Sr Sub Editor/ Web Co-Ordinator no spam  I-NEXT (Bilingual Daily)-A Unit of JAGRAN PRAKASHAN Ltd. Simultaneously Published form Patna, Ranchi, Lucknow, Kanpur, Dehradun, Varanashi, Allahabad, Agra, Meerut and Indore.</font></DIV></TD>
+                       			 </TR></TBODY></TABLE></TD>
+                      			<TD vAlign=bottom width=11 style="background-image: url(images/social/results_side_grad.gif)" height="100%" rowSpan=3><IMG height=32 src="/images/social/results_lime_corner2.gif" alt="Journalist" width=21></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR></TBODY>
+                  			</TABLE></TD></TR>
+						  </TBODY></TABLE>
+						  
+<div id="messageform1028" class="popcss">
+<form style="margin-top:0" name="mail1028" id="mail1028" method="post" action="index.html?id=1028">
+<table width="500" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#CCCCCC">
+  <tr><td bgcolor="#F7F7F7"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr><td align="center"><font size="2" face="arial">Your Name: <input style="font-family:arial; font-size:12px " name="username" type="text" size="20" maxlength="55" id="username1028" value="">
+            Your Email: <input style="font-family:arial; font-size:12px " name="useremail" type="text" size="20" maxlength="90" id="useremail1028" value="">
+</font></td>
+      </tr>
+      <tr><td align="center"><div id="error_message1028"></div><input type="hidden" name="id" value="1028"><textarea name="usermessage" cols="55" rows="6"  id="usermessage1028"></textarea></td>
+      </tr>
+      <tr><td align="center"><input style="font-family:arial; font-size:12px" type="button" onClick="toggleBox('messageform1028',0);" value="close email">          <font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;enter code&nbsp;</font>
+		  <img alt="letter" src="../images/characters/4cb6351ad12c883222cc206d51006366.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/c1fe38b392df784fa8e039b51cc79bda.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/9ab782019a93ceca76996f301b806c0f.gif" width="13" height="15" border="0">		  <input name="string" type="text" size="3" maxlength="3" id="string1028">
+		  <input name="stringextra" value="89900dad81784e9e163267c0963cca7e" type="hidden" id="stringextra1028">
+		  <input type="submit" name="submitmessage" value="Send Email" class="subsend" id="1028">
+		  </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</div>
+<div class="loading" id="loading1028" height="40" align="center"><img height="19" width="220" src="/images/loading.gif" border="0"></div>
+<div class="done" id="done1028" align="center">
+	<b>Thank you !</b> We have sent your message. 
+	<input name="refresh" class="refresh" id="1028" type="button" value="refresh" />
+</div>
+									<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              			<TBODY>
+              			<TR><TD vAlign=top colSpan=3><IMG height=20 src="/images/social/pixel.gif" alt="Journalist" width=3></TD></TR>
+            			  <TR>
+             			   <TD vAlign=top width="100%"><a name="210"></a>             			     <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+             			       <TBODY>
+              			      <TR>
+             			         <TD height=28 align="left" bgColor="#EBEBEB">
+								 &nbsp;&nbsp;<A href="http://www.journalistid.com/journalistid_membership.html#visirank"><IMG height="4" alt="VisiRank +" src="images/pos.gif" width="19" align="middle" border="0"><IMG height="4" alt="VisiRank" src="images/neg.gif" width="81" align="middle" border="0"></A></TD>
+                			      <TD align=left width="100%" bgColor="#EFEFEF" height=28><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1> <B><font size="3" face="arial">
+								  Print, Research, Photo, Magazine</font></B></TD>
+                 			     <TD width=11 height=28><a title="Add Contact To My Contacts" href="#210" onClick="window.open('mycontacts.html?addcontact=210','contacts','status=yes,menubar=yes,toolbar=yes,,scrollbars=yes,location=yes,directories=yes,resizable=yes')"><IMG height=28 src="images/social/corner_grey.gif" alt="Add Contact To My Contacts" width=21 border="0"></a></TD>
+								  </TR>
+                 			   <TR>
+                  			    <TD vAlign=top align=left width=126 bgColor="#F7F7F7" height=115>
+                   			     <TABLE cellSpacing=0 cellPadding=0 width=126 border=0>
+                    			      <TBODY>
+                     			     <TR>
+                   			         <TD align=right width=108 bgColor="#EAEAEA">
+									 <A title="View Tariq Khattak Entire Profile" href="?id=210&amp;name=tariq_khattak"><IMG alt="Tariq Khattak JournalistID member" height=100 src="members/1143954523.jpg" border=0></a>									 </TD>
+                    			        <TD vAlign=bottom width=18 bgColor="#EAEAEA"><IMG alt="Journalist" height=23 src="/images/social/results_slope.gif" width=18></TD>
+                     			     </TR></TBODY></TABLE>
+																		 </TD>
+                  			    <TD vAlign=top bgColor="#F7F7F7">
+                    			    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          			<TBODY>
+                          			<TR>
+                            			<TD height=19 bgcolor="#F7F7F7">
+										&nbsp;<A title="member name" href="?id=210&amp;name=tariq_khattak" target="_blank"><B><font size="3" face="arial">Tariq Khattak</FONT></B></a>										</TD>
+                          				<TD height=19 align=right bgcolor="#F7F7F7"><B><font size="3" face="arial">Islamabad, Pakistan</font></B> </TD>
+									</TR>
+                          			<TR>
+                            			<TD height=15 bgcolor="#F7F7F7"> 
+																				&nbsp;<A title="members online work links" href="member_article_links.html?id=210&amp;name=tariq_khattak" target="_blank"><font size="2" face="arial"> Member Articles</font></a></TD>
+                            			<TD height=15 align="right" bgcolor="#F7F7F7"><font size="2" face="arial">
+										<input style="font-family:arial; font-size:11px" type="button" onClick="toggleBox('messageform210',1);" value="send email"><img alt="msn" src="images/contact-msn-icon.gif" width="20" height="20" border="0"><img alt="yahoo" src="images/contact-yahoo-icon.gif" width="20" height="20" border="0"></font></td>						  			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD height=15 colspan="2">
+                           			  <DIV style="PADDING-LEFT: 5px"><font size="3"><B><font size="2" face="arial">Defence, Insurgents, Crimes, Courts, Afghan, Women, Business, Commerce</font></B></font></DIV></TD>
+                          			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD colspan="2"vAlign=top>
+                           			  <DIV style="PADDING-LEFT: 5px; PADDING-TOP: 5px"><font size="2" face="arial">I am presently working for Pakistan Observer and INP news agency, Islamabad. I belongs to NWFP,Pushtoon tribe - and mainly focus on exclusive news.I have worked for a number of English, Urdu publications and knows four regional languages. Well acquainted with Tribal Areas and officials that matters.</font></DIV></TD>
+                       			 </TR></TBODY></TABLE></TD>
+                      			<TD vAlign=bottom width=11 style="background-image: url(images/social/results_side_grad.gif)" height="100%" rowSpan=3><IMG height=32 src="/images/social/results_lime_corner2.gif" alt="Journalist" width=21></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR></TBODY>
+                  			</TABLE></TD></TR>
+						  </TBODY></TABLE>
+						  
+<div id="messageform210" class="popcss">
+<form style="margin-top:0" name="mail210" id="mail210" method="post" action="index.html?id=210">
+<table width="500" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#CCCCCC">
+  <tr><td bgcolor="#F7F7F7"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr><td align="center"><font size="2" face="arial">Your Name: <input style="font-family:arial; font-size:12px " name="username" type="text" size="20" maxlength="55" id="username210" value="">
+            Your Email: <input style="font-family:arial; font-size:12px " name="useremail" type="text" size="20" maxlength="90" id="useremail210" value="">
+</font></td>
+      </tr>
+      <tr><td align="center"><div id="error_message210"></div><input type="hidden" name="id" value="210"><textarea name="usermessage" cols="55" rows="6"  id="usermessage210"></textarea></td>
+      </tr>
+      <tr><td align="center"><input style="font-family:arial; font-size:12px" type="button" onClick="toggleBox('messageform210',0);" value="close email">          <font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;enter code&nbsp;</font>
+		  <img alt="letter" src="../images/characters/4a443ad39d0dfc22745c2eaddd27319e.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/fa7bbdd671dcf52d7906c43051f90b20.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/7946fd27ebd3d5c54cf3d8a00bd30d61.gif" width="13" height="15" border="0">		  <input name="string" type="text" size="3" maxlength="3" id="string210">
+		  <input name="stringextra" value="bf6010a14db93279c5a2837f5fdc6116" type="hidden" id="stringextra210">
+		  <input type="submit" name="submitmessage" value="Send Email" class="subsend" id="210">
+		  </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</div>
+<div class="loading" id="loading210" height="40" align="center"><img height="19" width="220" src="/images/loading.gif" border="0"></div>
+<div class="done" id="done210" align="center">
+	<b>Thank you !</b> We have sent your message. 
+	<input name="refresh" class="refresh" id="210" type="button" value="refresh" />
+</div>
+									<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              			<TBODY>
+              			<TR><TD vAlign=top colSpan=3><IMG height=20 src="/images/social/pixel.gif" alt="Journalist" width=3></TD></TR>
+            			  <TR>
+             			   <TD vAlign=top width="100%"><a name="469"></a>             			     <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+             			       <TBODY>
+              			      <TR>
+             			         <TD height=28 align="left" bgColor="#EBEBEB">
+								 &nbsp;&nbsp;<A href="http://www.journalistid.com/journalistid_membership.html#visirank"><IMG height="4" alt="VisiRank +" src="images/pos.gif" width="4" align="middle" border="0"><IMG height="4" alt="VisiRank" src="images/neg.gif" width="96" align="middle" border="0"></A></TD>
+                			      <TD align=left width="100%" bgColor="#EFEFEF" height=28><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1> <B><font size="3" face="arial">
+								  Photo, Magazine</font></B></TD>
+                 			     <TD width=11 height=28><a title="Add Contact To My Contacts" href="#469" onClick="window.open('mycontacts.html?addcontact=469','contacts','status=yes,menubar=yes,toolbar=yes,,scrollbars=yes,location=yes,directories=yes,resizable=yes')"><IMG height=28 src="images/social/corner_grey.gif" alt="Add Contact To My Contacts" width=21 border="0"></a></TD>
+								  </TR>
+                 			   <TR>
+                  			    <TD vAlign=top align=left width=126 bgColor="#F7F7F7" height=115>
+                   			     <TABLE cellSpacing=0 cellPadding=0 width=126 border=0>
+                    			      <TBODY>
+                     			     <TR>
+                   			         <TD align=right width=108 bgColor="#EAEAEA">
+									 <A title="View Morten Svenningsen Entire Profile" href="?id=469&amp;name=morten_svenningsen"><IMG alt="Morten Svenningsen JournalistID member" height=100 src="members/1180157969.jpg" border=0></a>									 </TD>
+                    			        <TD vAlign=bottom width=18 bgColor="#EAEAEA"><IMG alt="Journalist" height=23 src="/images/social/results_slope.gif" width=18></TD>
+                     			     </TR></TBODY></TABLE>
+																		 </TD>
+                  			    <TD vAlign=top bgColor="#F7F7F7">
+                    			    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          			<TBODY>
+                          			<TR>
+                            			<TD height=19 bgcolor="#F7F7F7">
+										&nbsp;<A title="member name" href="?id=469&amp;name=morten_svenningsen" target="_blank"><B><font size="3" face="arial">Morten Svenningsen</FONT></B></a>										</TD>
+                          				<TD height=19 align=right bgcolor="#F7F7F7"><B><font size="3" face="arial">Kathmandu, Nepal</font></B> </TD>
+									</TR>
+                          			<TR>
+                            			<TD height=15 bgcolor="#F7F7F7"> 
+																				&nbsp;<A title="members online work links" href="member_article_links.html?id=469&amp;name=morten_svenningsen" target="_blank"><font size="2" face="arial"> Member Articles</font></a></TD>
+                            			<TD height=15 align="right" bgcolor="#F7F7F7"><font size="2" face="arial">
+										<input style="font-family:arial; font-size:11px" type="button" onClick="toggleBox('messageform469',1);" value="send email"></font></td>						  			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD height=15 colspan="2">
+                           			  <DIV style="PADDING-LEFT: 5px"><font size="3"><B><font size="2" face="arial">Documentary, Travel, News, Development</font></B></font></DIV></TD>
+                          			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD colspan="2"vAlign=top>
+                           			  <DIV style="PADDING-LEFT: 5px; PADDING-TOP: 5px"><font size="2" face="arial">Morten Svenningsen (www.mortensvenningsen.com) is a Danish photo-journalist. He graduated from Copenhagen Media School in 2004 and has been working as a freelancer since then. Based in Kathmandu, Nepal since 2005. Please DO NOT contact me through this web site, but refer to my web site for details.</font></DIV></TD>
+                       			 </TR></TBODY></TABLE></TD>
+                      			<TD vAlign=bottom width=11 style="background-image: url(images/social/results_side_grad.gif)" height="100%" rowSpan=3><IMG height=32 src="/images/social/results_lime_corner2.gif" alt="Journalist" width=21></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR></TBODY>
+                  			</TABLE></TD></TR>
+						  </TBODY></TABLE>
+						  
+<div id="messageform469" class="popcss">
+<form style="margin-top:0" name="mail469" id="mail469" method="post" action="index.html?id=469">
+<table width="500" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#CCCCCC">
+  <tr><td bgcolor="#F7F7F7"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr><td align="center"><font size="2" face="arial">Your Name: <input style="font-family:arial; font-size:12px " name="username" type="text" size="20" maxlength="55" id="username469" value="">
+            Your Email: <input style="font-family:arial; font-size:12px " name="useremail" type="text" size="20" maxlength="90" id="useremail469" value="">
+</font></td>
+      </tr>
+      <tr><td align="center"><div id="error_message469"></div><input type="hidden" name="id" value="469"><textarea name="usermessage" cols="55" rows="6"  id="usermessage469"></textarea></td>
+      </tr>
+      <tr><td align="center"><input style="font-family:arial; font-size:12px" type="button" onClick="toggleBox('messageform469',0);" value="close email">          <font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;enter code&nbsp;</font>
+		  <img alt="letter" src="../images/characters/c1fe38b392df784fa8e039b51cc79bda.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/defc768ba1378fddae3bd85a16ce5c26.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/2da8cfbcf7da310bd1cec8fce5db398d.gif" width="13" height="15" border="0">		  <input name="string" type="text" size="3" maxlength="3" id="string469">
+		  <input name="stringextra" value="397326ffa11e9211db4c0271b0ef70af" type="hidden" id="stringextra469">
+		  <input type="submit" name="submitmessage" value="Send Email" class="subsend" id="469">
+		  </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</div>
+<div class="loading" id="loading469" height="40" align="center"><img height="19" width="220" src="/images/loading.gif" border="0"></div>
+<div class="done" id="done469" align="center">
+	<b>Thank you !</b> We have sent your message. 
+	<input name="refresh" class="refresh" id="469" type="button" value="refresh" />
+</div>
+									<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              			<TBODY>
+              			<TR><TD vAlign=top colSpan=3><IMG height=20 src="/images/social/pixel.gif" alt="Journalist" width=3></TD></TR>
+            			  <TR>
+             			   <TD vAlign=top width="100%"><a name="990"></a>             			     <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+             			       <TBODY>
+              			      <TR>
+             			         <TD height=28 align="left" bgColor="#EBEBEB">
+								 &nbsp;&nbsp;<A href="http://www.journalistid.com/journalistid_membership.html#visirank"><IMG height="4" alt="VisiRank +" src="images/pos.gif" width="4" align="middle" border="0"><IMG height="4" alt="VisiRank" src="images/neg.gif" width="96" align="middle" border="0"></A></TD>
+                			      <TD align=left width="100%" bgColor="#EFEFEF" height=28><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1> <B><font size="3" face="arial">
+								  Online, Print, Photo</font></B></TD>
+                 			     <TD width=11 height=28><a title="Add Contact To My Contacts" href="#990" onClick="window.open('mycontacts.html?addcontact=990','contacts','status=yes,menubar=yes,toolbar=yes,,scrollbars=yes,location=yes,directories=yes,resizable=yes')"><IMG height=28 src="images/social/corner_grey.gif" alt="Add Contact To My Contacts" width=21 border="0"></a></TD>
+								  </TR>
+                 			   <TR>
+                  			    <TD vAlign=top align=left width=126 bgColor="#F7F7F7" height=115>
+                   			     <TABLE cellSpacing=0 cellPadding=0 width=126 border=0>
+                    			      <TBODY>
+                     			     <TR>
+                   			         <TD align=right width=108 bgColor="#EAEAEA">
+									 <A title="View Mohammed Mohsin Entire Profile" href="?id=990&amp;name=mohammed_mohsin"><IMG alt="Mohammed Mohsin JournalistID member" height=100 src="members/1257226401.jpg" border=0></a>									 </TD>
+                    			        <TD vAlign=bottom width=18 bgColor="#EAEAEA"><IMG alt="Journalist" height=23 src="/images/social/results_slope.gif" width=18></TD>
+                     			     </TR></TBODY></TABLE>
+																		 </TD>
+                  			    <TD vAlign=top bgColor="#F7F7F7">
+                    			    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          			<TBODY>
+                          			<TR>
+                            			<TD height=19 bgcolor="#F7F7F7">
+										&nbsp;<A title="member name" href="?id=990&amp;name=mohammed_mohsin" target="_blank"><B><font size="3" face="arial">Mohammed Mohsin</FONT></B></a>										</TD>
+                          				<TD height=19 align=right bgcolor="#F7F7F7"><B><font size="3" face="arial">Sylhet, Bangladesh</font></B> </TD>
+									</TR>
+                          			<TR>
+                            			<TD height=15 bgcolor="#F7F7F7"> 
+																				&nbsp;<A title="members online work links" href="member_article_links.html?id=990&amp;name=mohammed_mohsin" target="_blank"><font size="2" face="arial"> Member Articles</font></a></TD>
+                            			<TD height=15 align="right" bgcolor="#F7F7F7"><font size="2" face="arial">
+										<input style="font-family:arial; font-size:11px" type="button" onClick="toggleBox('messageform990',1);" value="send email"><img alt="skype" src="images/contact-skype-icon.gif" width="20" height="20" border="0"></font></td>						  			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD height=15 colspan="2">
+                           			  <DIV style="PADDING-LEFT: 5px"><font size="3"><B><font size="2" face="arial">All News</font></B></font></DIV></TD>
+                          			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD colspan="2"vAlign=top>
+                           			  <DIV style="PADDING-LEFT: 5px; PADDING-TOP: 5px"><font size="2" face="arial">Im Bangladeshi Journalist. Im now Working Sylhet Corespondent- United News Of Bangladesh (UNB), FortNightly Jonosheba (UK), Nationalnews.com.bd (Italy) & Daily Dinkal.</font></DIV></TD>
+                       			 </TR></TBODY></TABLE></TD>
+                      			<TD vAlign=bottom width=11 style="background-image: url(images/social/results_side_grad.gif)" height="100%" rowSpan=3><IMG height=32 src="/images/social/results_lime_corner2.gif" alt="Journalist" width=21></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR></TBODY>
+                  			</TABLE></TD></TR>
+						  </TBODY></TABLE>
+						  
+<div id="messageform990" class="popcss">
+<form style="margin-top:0" name="mail990" id="mail990" method="post" action="index.html?id=990">
+<table width="500" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#CCCCCC">
+  <tr><td bgcolor="#F7F7F7"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr><td align="center"><font size="2" face="arial">Your Name: <input style="font-family:arial; font-size:12px " name="username" type="text" size="20" maxlength="55" id="username990" value="">
+            Your Email: <input style="font-family:arial; font-size:12px " name="useremail" type="text" size="20" maxlength="90" id="useremail990" value="">
+</font></td>
+      </tr>
+      <tr><td align="center"><div id="error_message990"></div><input type="hidden" name="id" value="990"><textarea name="usermessage" cols="55" rows="6"  id="usermessage990"></textarea></td>
+      </tr>
+      <tr><td align="center"><input style="font-family:arial; font-size:12px" type="button" onClick="toggleBox('messageform990',0);" value="close email">          <font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;enter code&nbsp;</font>
+		  <img alt="letter" src="../images/characters/e1f85cc5699401a02107ec75cc680e7c.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/8114a0612e2a1bf6259f20da64e71363.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/2da8cfbcf7da310bd1cec8fce5db398d.gif" width="13" height="15" border="0">		  <input name="string" type="text" size="3" maxlength="3" id="string990">
+		  <input name="stringextra" value="4d72995c6018ce8f80f3f4dee88dcb91" type="hidden" id="stringextra990">
+		  <input type="submit" name="submitmessage" value="Send Email" class="subsend" id="990">
+		  </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</div>
+<div class="loading" id="loading990" height="40" align="center"><img height="19" width="220" src="/images/loading.gif" border="0"></div>
+<div class="done" id="done990" align="center">
+	<b>Thank you !</b> We have sent your message. 
+	<input name="refresh" class="refresh" id="990" type="button" value="refresh" />
+</div>
+									<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              			<TBODY>
+              			<TR><TD vAlign=top colSpan=3><IMG height=20 src="/images/social/pixel.gif" alt="Journalist" width=3></TD></TR>
+            			  <TR>
+             			   <TD vAlign=top width="100%"><a name="1086"></a>             			     <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+             			       <TBODY>
+              			      <TR>
+             			         <TD height=28 align="left" bgColor="#EBEBEB">
+								 &nbsp;&nbsp;<A href="http://www.journalistid.com/journalistid_membership.html#visirank"><IMG height="4" alt="VisiRank +" src="images/pos.gif" width="3" align="middle" border="0"><IMG height="4" alt="VisiRank" src="images/neg.gif" width="97" align="middle" border="0"></A></TD>
+                			      <TD align=left width="100%" bgColor="#EFEFEF" height=28><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1> <B><font size="3" face="arial">
+								  Online, Print, Research, Magazine</font></B></TD>
+                 			     <TD width=11 height=28><a title="Add Contact To My Contacts" href="#1086" onClick="window.open('mycontacts.html?addcontact=1086','contacts','status=yes,menubar=yes,toolbar=yes,,scrollbars=yes,location=yes,directories=yes,resizable=yes')"><IMG height=28 src="images/social/corner_grey.gif" alt="Add Contact To My Contacts" width=21 border="0"></a></TD>
+								  </TR>
+                 			   <TR>
+                  			    <TD vAlign=top align=left width=126 bgColor="#F7F7F7" height=115>
+                   			     <TABLE cellSpacing=0 cellPadding=0 width=126 border=0>
+                    			      <TBODY>
+                     			     <TR>
+                   			         <TD align=right width=108 bgColor="#EAEAEA">
+									 <A title="View Sally Duros Entire Profile" href="?id=1086&amp;name=sally_duros"><IMG alt="Sally Duros JournalistID member" height=100 src="members/1270943361.jpg" border=0></a>									 </TD>
+                    			        <TD vAlign=bottom width=18 bgColor="#EAEAEA"><IMG alt="Journalist" height=23 src="/images/social/results_slope.gif" width=18></TD>
+                     			     </TR></TBODY></TABLE>
+																		 </TD>
+                  			    <TD vAlign=top bgColor="#F7F7F7">
+                    			    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          			<TBODY>
+                          			<TR>
+                            			<TD height=19 bgcolor="#F7F7F7">
+										&nbsp;<A title="member name" href="?id=1086&amp;name=sally_duros" target="_blank"><B><font size="3" face="arial">Sally Duros</FONT></B></a>										</TD>
+                          				<TD height=19 align=right bgcolor="#F7F7F7"><B><font size="3" face="arial">Chicago, United States</font></B> </TD>
+									</TR>
+                          			<TR>
+                            			<TD height=15 bgcolor="#F7F7F7"> 
+																				&nbsp;<A title="members online work links" href="member_article_links.html?id=1086&amp;name=sally_duros" target="_blank"><font size="2" face="arial"> Member Articles</font></a></TD>
+                            			<TD height=15 align="right" bgcolor="#F7F7F7"><font size="2" face="arial">
+										<input style="font-family:arial; font-size:11px" type="button" onClick="toggleBox('messageform1086',1);" value="send email"></font></td>						  			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD height=15 colspan="2">
+                           			  <DIV style="PADDING-LEFT: 5px"><font size="3"><B><font size="2" face="arial">new media,Chicago neighborhoods, social enterprise, economics</font></B></font></DIV></TD>
+                          			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD colspan="2"vAlign=top>
+                           			  <DIV style="PADDING-LEFT: 5px; PADDING-TOP: 5px"><font size="2" face="arial">I?m an independent journalist whose known for my cutting edge reporting on entrepreneurship, business, social enterprise and Chicago neighborhoods.</font></DIV></TD>
+                       			 </TR></TBODY></TABLE></TD>
+                      			<TD vAlign=bottom width=11 style="background-image: url(images/social/results_side_grad.gif)" height="100%" rowSpan=3><IMG height=32 src="/images/social/results_lime_corner2.gif" alt="Journalist" width=21></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR></TBODY>
+                  			</TABLE></TD></TR>
+						  </TBODY></TABLE>
+						  
+<div id="messageform1086" class="popcss">
+<form style="margin-top:0" name="mail1086" id="mail1086" method="post" action="index.html?id=1086">
+<table width="500" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#CCCCCC">
+  <tr><td bgcolor="#F7F7F7"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr><td align="center"><font size="2" face="arial">Your Name: <input style="font-family:arial; font-size:12px " name="username" type="text" size="20" maxlength="55" id="username1086" value="">
+            Your Email: <input style="font-family:arial; font-size:12px " name="useremail" type="text" size="20" maxlength="90" id="useremail1086" value="">
+</font></td>
+      </tr>
+      <tr><td align="center"><div id="error_message1086"></div><input type="hidden" name="id" value="1086"><textarea name="usermessage" cols="55" rows="6"  id="usermessage1086"></textarea></td>
+      </tr>
+      <tr><td align="center"><input style="font-family:arial; font-size:12px" type="button" onClick="toggleBox('messageform1086',0);" value="close email">          <font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;enter code&nbsp;</font>
+		  <img alt="letter" src="../images/characters/fa7bbdd671dcf52d7906c43051f90b20.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/4cb6351ad12c883222cc206d51006366.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/89b095f4f45fe315c401a5ede0817f5c.gif" width="13" height="15" border="0">		  <input name="string" type="text" size="3" maxlength="3" id="string1086">
+		  <input name="stringextra" value="ab6a6fb30f9678ef78d2a7fa582a3a89" type="hidden" id="stringextra1086">
+		  <input type="submit" name="submitmessage" value="Send Email" class="subsend" id="1086">
+		  </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</div>
+<div class="loading" id="loading1086" height="40" align="center"><img height="19" width="220" src="/images/loading.gif" border="0"></div>
+<div class="done" id="done1086" align="center">
+	<b>Thank you !</b> We have sent your message. 
+	<input name="refresh" class="refresh" id="1086" type="button" value="refresh" />
+</div>
+									<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              			<TBODY>
+              			<TR><TD vAlign=top colSpan=3><IMG height=20 src="/images/social/pixel.gif" alt="Journalist" width=3></TD></TR>
+            			  <TR>
+             			   <TD vAlign=top width="100%"><a name="88"></a>             			     <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+             			       <TBODY>
+              			      <TR>
+             			         <TD height=28 align="left" bgColor="#EBEBEB">
+								 &nbsp;&nbsp;<A href="http://www.journalistid.com/journalistid_membership.html#visirank"><IMG height="4" alt="VisiRank +" src="images/pos.gif" width="27" align="middle" border="0"><IMG height="4" alt="VisiRank" src="images/neg.gif" width="73" align="middle" border="0"></A></TD>
+                			      <TD align=left width="100%" bgColor="#EFEFEF" height=28><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1> <B><font size="3" face="arial">
+								  Online, Print, Magazine</font></B></TD>
+                 			     <TD width=11 height=28><a title="Add Contact To My Contacts" href="#88" onClick="window.open('mycontacts.html?addcontact=88','contacts','status=yes,menubar=yes,toolbar=yes,,scrollbars=yes,location=yes,directories=yes,resizable=yes')"><IMG height=28 src="images/social/corner_grey.gif" alt="Add Contact To My Contacts" width=21 border="0"></a></TD>
+								  </TR>
+                 			   <TR>
+                  			    <TD vAlign=top align=left width=126 bgColor="#F7F7F7" height=115>
+                   			     <TABLE cellSpacing=0 cellPadding=0 width=126 border=0>
+                    			      <TBODY>
+                     			     <TR>
+                   			         <TD align=right width=108 bgColor="#EAEAEA">
+									 <A title="View Munza Mushtaq Entire Profile" href="?id=88&amp;name=munza_mushtaq"><IMG alt="Munza Mushtaq JournalistID member" height=100 src="members/1121196177.jpg" border=0></a>									 </TD>
+                    			        <TD vAlign=bottom width=18 bgColor="#EAEAEA"><IMG alt="Journalist" height=23 src="/images/social/results_slope.gif" width=18></TD>
+                     			     </TR></TBODY></TABLE>
+																		 </TD>
+                  			    <TD vAlign=top bgColor="#F7F7F7">
+                    			    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          			<TBODY>
+                          			<TR>
+                            			<TD height=19 bgcolor="#F7F7F7">
+										&nbsp;<A title="member name" href="?id=88&amp;name=munza_mushtaq" target="_blank"><B><font size="3" face="arial">Munza Mushtaq</FONT></B></a>										</TD>
+                          				<TD height=19 align=right bgcolor="#F7F7F7"><B><font size="3" face="arial">Colombo, Sri Lanka</font></B> </TD>
+									</TR>
+                          			<TR>
+                            			<TD height=15 bgcolor="#F7F7F7"> 
+																				&nbsp;<A title="members online work links" href="member_article_links.html?id=88&amp;name=munza_mushtaq" target="_blank"><font size="2" face="arial"> Member Articles</font></a></TD>
+                            			<TD height=15 align="right" bgcolor="#F7F7F7"><font size="2" face="arial">
+										<input style="font-family:arial; font-size:11px" type="button" onClick="toggleBox('messageform88',1);" value="send email"></font></td>						  			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD height=15 colspan="2">
+                           			  <DIV style="PADDING-LEFT: 5px"><font size="3"><B><font size="2" face="arial">Politics, Human Rights, Security, Energy and Current Affairs</font></B></font></DIV></TD>
+                          			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD colspan="2"vAlign=top>
+                           			  <DIV style="PADDING-LEFT: 5px; PADDING-TOP: 5px"><font size="2" face="arial">The Sri Lankan Correspondent for International News Services in UK and several other foreign newspapers and online newswires. 
+Worked at the Daily Mirror, Sunday Standard, Lanka Tribune and was the News Editor for The Nation and The Sunday Leader newspapers in Sri Lanka over a period of 10 years.</font></DIV></TD>
+                       			 </TR></TBODY></TABLE></TD>
+                      			<TD vAlign=bottom width=11 style="background-image: url(images/social/results_side_grad.gif)" height="100%" rowSpan=3><IMG height=32 src="/images/social/results_lime_corner2.gif" alt="Journalist" width=21></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR></TBODY>
+                  			</TABLE></TD></TR>
+						  </TBODY></TABLE>
+						  
+<div id="messageform88" class="popcss">
+<form style="margin-top:0" name="mail88" id="mail88" method="post" action="index.html?id=88">
+<table width="500" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#CCCCCC">
+  <tr><td bgcolor="#F7F7F7"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr><td align="center"><font size="2" face="arial">Your Name: <input style="font-family:arial; font-size:12px " name="username" type="text" size="20" maxlength="55" id="username88" value="">
+            Your Email: <input style="font-family:arial; font-size:12px " name="useremail" type="text" size="20" maxlength="90" id="useremail88" value="">
+</font></td>
+      </tr>
+      <tr><td align="center"><div id="error_message88"></div><input type="hidden" name="id" value="88"><textarea name="usermessage" cols="55" rows="6"  id="usermessage88"></textarea></td>
+      </tr>
+      <tr><td align="center"><input style="font-family:arial; font-size:12px" type="button" onClick="toggleBox('messageform88',0);" value="close email">          <font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;enter code&nbsp;</font>
+		  <img alt="letter" src="../images/characters/440b0865530c4a74d588f72396fe8158.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/9ab782019a93ceca76996f301b806c0f.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/7ea0687101091ed96a3f214120baabf6.gif" width="13" height="15" border="0">		  <input name="string" type="text" size="3" maxlength="3" id="string88">
+		  <input name="stringextra" value="23e602b2b46fa27f210770d00facbf4e" type="hidden" id="stringextra88">
+		  <input type="submit" name="submitmessage" value="Send Email" class="subsend" id="88">
+		  </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</div>
+<div class="loading" id="loading88" height="40" align="center"><img height="19" width="220" src="/images/loading.gif" border="0"></div>
+<div class="done" id="done88" align="center">
+	<b>Thank you !</b> We have sent your message. 
+	<input name="refresh" class="refresh" id="88" type="button" value="refresh" />
+</div>
+									<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              			<TBODY>
+              			<TR><TD vAlign=top colSpan=3><IMG height=20 src="/images/social/pixel.gif" alt="Journalist" width=3></TD></TR>
+            			  <TR>
+             			   <TD vAlign=top width="100%"><a name="843"></a>             			     <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+             			       <TBODY>
+              			      <TR>
+             			         <TD height=28 align="left" bgColor="#EBEBEB">
+								 &nbsp;&nbsp;<A href="http://www.journalistid.com/journalistid_membership.html#visirank"><IMG height="4" alt="VisiRank +" src="images/pos.gif" width="14" align="middle" border="0"><IMG height="4" alt="VisiRank" src="images/neg.gif" width="86" align="middle" border="0"></A></TD>
+                			      <TD align=left width="100%" bgColor="#EFEFEF" height=28><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1> <B><font size="3" face="arial">
+								  Online, Print, Research</font></B></TD>
+                 			     <TD width=11 height=28><a title="Add Contact To My Contacts" href="#843" onClick="window.open('mycontacts.html?addcontact=843','contacts','status=yes,menubar=yes,toolbar=yes,,scrollbars=yes,location=yes,directories=yes,resizable=yes')"><IMG height=28 src="images/social/corner_grey.gif" alt="Add Contact To My Contacts" width=21 border="0"></a></TD>
+								  </TR>
+                 			   <TR>
+                  			    <TD vAlign=top align=left width=126 bgColor="#F7F7F7" height=115>
+                   			     <TABLE cellSpacing=0 cellPadding=0 width=126 border=0>
+                    			      <TBODY>
+                     			     <TR>
+                   			         <TD align=right width=108 bgColor="#EAEAEA">
+									 <A title="View Granville Tolo-Hayag Ampong Entire Profile" href="?id=843&amp;name=granville_tolo_hayag_ampong"><IMG alt="Granville Tolo-Hayag Ampong JournalistID member" height=100 src="members/1237405164.jpg" border=0></a>									 </TD>
+                    			        <TD vAlign=bottom width=18 bgColor="#EAEAEA"><IMG alt="Journalist" height=23 src="/images/social/results_slope.gif" width=18></TD>
+                     			     </TR></TBODY></TABLE>
+																		 </TD>
+                  			    <TD vAlign=top bgColor="#F7F7F7">
+                    			    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          			<TBODY>
+                          			<TR>
+                            			<TD height=19 bgcolor="#F7F7F7">
+										&nbsp;<A title="member name" href="?id=843&amp;name=granville_tolo_hayag_ampong" target="_blank"><B><font size="3" face="arial">Granville Tolo-Hayag Ampong</FONT></B></a>										</TD>
+                          				<TD height=19 align=right bgcolor="#F7F7F7"><B><font size="3" face="arial">Los Angeles, United States</font></B> </TD>
+									</TR>
+                          			<TR>
+                            			<TD height=15 bgcolor="#F7F7F7"> 
+																				&nbsp;<A title="members online work links" href="member_article_links.html?id=843&amp;name=granville_tolo_hayag_ampong" target="_blank"><font size="2" face="arial">1 Member Article</font></a></TD>
+                            			<TD height=15 align="right" bgcolor="#F7F7F7"><font size="2" face="arial">
+										<input style="font-family:arial; font-size:11px" type="button" onClick="toggleBox('messageform843',1);" value="send email"><img alt="yahoo" src="images/contact-yahoo-icon.gif" width="20" height="20" border="0"></font></td>						  			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD height=15 colspan="2">
+                           			  <DIV style="PADDING-LEFT: 5px"><font size="3"><B><font size="2" face="arial">Politics, Business, Sports & Entertainment,Speechwriting for politicians</font></B></font></DIV></TD>
+                          			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD colspan="2"vAlign=top>
+                           			  <DIV style="PADDING-LEFT: 5px; PADDING-TOP: 5px"><font size="2" face="arial">Book Author,US Credentialed Journalist and Award-winning Speechwriter 
+
+Won 1st place: International Speech Competition 2000 held in Los Angeles, California; Member of the US Investigative Agency of Journalists</font></DIV></TD>
+                       			 </TR></TBODY></TABLE></TD>
+                      			<TD vAlign=bottom width=11 style="background-image: url(images/social/results_side_grad.gif)" height="100%" rowSpan=3><IMG height=32 src="/images/social/results_lime_corner2.gif" alt="Journalist" width=21></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR></TBODY>
+                  			</TABLE></TD></TR>
+						  </TBODY></TABLE>
+						  
+<div id="messageform843" class="popcss">
+<form style="margin-top:0" name="mail843" id="mail843" method="post" action="index.html?id=843">
+<table width="500" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#CCCCCC">
+  <tr><td bgcolor="#F7F7F7"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr><td align="center"><font size="2" face="arial">Your Name: <input style="font-family:arial; font-size:12px " name="username" type="text" size="20" maxlength="55" id="username843" value="">
+            Your Email: <input style="font-family:arial; font-size:12px " name="useremail" type="text" size="20" maxlength="90" id="useremail843" value="">
+</font></td>
+      </tr>
+      <tr><td align="center"><div id="error_message843"></div><input type="hidden" name="id" value="843"><textarea name="usermessage" cols="55" rows="6"  id="usermessage843"></textarea></td>
+      </tr>
+      <tr><td align="center"><input style="font-family:arial; font-size:12px" type="button" onClick="toggleBox('messageform843',0);" value="close email">          <font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;enter code&nbsp;</font>
+		  <img alt="letter" src="../images/characters/7ea0687101091ed96a3f214120baabf6.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/c1fe38b392df784fa8e039b51cc79bda.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/440b0865530c4a74d588f72396fe8158.gif" width="13" height="15" border="0">		  <input name="string" type="text" size="3" maxlength="3" id="string843">
+		  <input name="stringextra" value="3ca87be30c5e639cd9692677c93c6aef" type="hidden" id="stringextra843">
+		  <input type="submit" name="submitmessage" value="Send Email" class="subsend" id="843">
+		  </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</div>
+<div class="loading" id="loading843" height="40" align="center"><img height="19" width="220" src="/images/loading.gif" border="0"></div>
+<div class="done" id="done843" align="center">
+	<b>Thank you !</b> We have sent your message. 
+	<input name="refresh" class="refresh" id="843" type="button" value="refresh" />
+</div>
+									<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              			<TBODY>
+              			<TR><TD vAlign=top colSpan=3><IMG height=20 src="/images/social/pixel.gif" alt="Journalist" width=3></TD></TR>
+            			  <TR>
+             			   <TD vAlign=top width="100%"><a name="226"></a>             			     <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+             			       <TBODY>
+              			      <TR>
+             			         <TD height=28 align="left" bgColor="#EBEBEB">
+								 &nbsp;&nbsp;<A href="http://www.journalistid.com/journalistid_membership.html#visirank"><IMG height="4" alt="VisiRank +" src="images/pos.gif" width="14" align="middle" border="0"><IMG height="4" alt="VisiRank" src="images/neg.gif" width="86" align="middle" border="0"></A></TD>
+                			      <TD align=left width="100%" bgColor="#EFEFEF" height=28><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1> <B><font size="3" face="arial">
+								  Magazine</font></B></TD>
+                 			     <TD width=11 height=28><a title="Add Contact To My Contacts" href="#226" onClick="window.open('mycontacts.html?addcontact=226','contacts','status=yes,menubar=yes,toolbar=yes,,scrollbars=yes,location=yes,directories=yes,resizable=yes')"><IMG height=28 src="images/social/corner_grey.gif" alt="Add Contact To My Contacts" width=21 border="0"></a></TD>
+								  </TR>
+                 			   <TR>
+                  			    <TD vAlign=top align=left width=126 bgColor="#F7F7F7" height=115>
+                   			     <TABLE cellSpacing=0 cellPadding=0 width=126 border=0>
+                    			      <TBODY>
+                     			     <TR>
+                   			         <TD align=right width=108 bgColor="#EAEAEA">
+									 <A title="View Heather Steeley Entire Profile" href="?id=226&amp;name=heather_steeley"><IMG alt="Heather Steeley JournalistID member" height=100 src="members/1146337933.jpg" border=0></a>									 </TD>
+                    			        <TD vAlign=bottom width=18 bgColor="#EAEAEA"><IMG alt="Journalist" height=23 src="/images/social/results_slope.gif" width=18></TD>
+                     			     </TR></TBODY></TABLE>
+																		 </TD>
+                  			    <TD vAlign=top bgColor="#F7F7F7">
+                    			    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                          			<TBODY>
+                          			<TR>
+                            			<TD height=19 bgcolor="#F7F7F7">
+										&nbsp;<A title="member name" href="?id=226&amp;name=heather_steeley" target="_blank"><B><font size="3" face="arial">Heather Steeley</FONT></B></a>										</TD>
+                          				<TD height=19 align=right bgcolor="#F7F7F7"><B><font size="3" face="arial">Newcastle, United Kingdom</font></B> </TD>
+									</TR>
+                          			<TR>
+                            			<TD height=15 bgcolor="#F7F7F7"> 
+																				&nbsp;<A title="members online work links" href="member_article_links.html?id=226&amp;name=heather_steeley" target="_blank"><font size="2" face="arial"> Member Articles</font></a></TD>
+                            			<TD height=15 align="right" bgcolor="#F7F7F7"><font size="2" face="arial">
+										<input style="font-family:arial; font-size:11px" type="button" onClick="toggleBox('messageform226',1);" value="send email"></font></td>						  			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD height=15 colspan="2">
+                           			  <DIV style="PADDING-LEFT: 5px"><font size="3"><B><font size="2" face="arial">music</font></B></font></DIV></TD>
+                          			</TR>
+                          			<TR bgcolor="#F7F7F7">
+                            			<TD colspan="2"vAlign=top>
+                           			  <DIV style="PADDING-LEFT: 5px; PADDING-TOP: 5px"><font size="2" face="arial">Freelance writer and music journalist.</font></DIV></TD>
+                       			 </TR></TBODY></TABLE></TD>
+                      			<TD vAlign=bottom width=11 style="background-image: url(images/social/results_side_grad.gif)" height="100%" rowSpan=3><IMG height=32 src="/images/social/results_lime_corner2.gif" alt="Journalist" width=21></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e1e4e9" height=2><IMG height=2 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR>
+                    			<TR>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD>
+                      			<TD bgColor="#e7e9ec" height=1><IMG height=1 src="/images/social/pixel.gif" alt="Journalist" width=1></TD></TR></TBODY>
+                  			</TABLE></TD></TR>
+						  </TBODY></TABLE>
+						  
+<div id="messageform226" class="popcss">
+<form style="margin-top:0" name="mail226" id="mail226" method="post" action="index.html?id=226">
+<table width="500" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#CCCCCC">
+  <tr><td bgcolor="#F7F7F7"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr><td align="center"><font size="2" face="arial">Your Name: <input style="font-family:arial; font-size:12px " name="username" type="text" size="20" maxlength="55" id="username226" value="">
+            Your Email: <input style="font-family:arial; font-size:12px " name="useremail" type="text" size="20" maxlength="90" id="useremail226" value="">
+</font></td>
+      </tr>
+      <tr><td align="center"><div id="error_message226"></div><input type="hidden" name="id" value="226"><textarea name="usermessage" cols="55" rows="6"  id="usermessage226"></textarea></td>
+      </tr>
+      <tr><td align="center"><input style="font-family:arial; font-size:12px" type="button" onClick="toggleBox('messageform226',0);" value="close email">          <font size="2" face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;enter code&nbsp;</font>
+		  <img alt="letter" src="../images/characters/89b095f4f45fe315c401a5ede0817f5c.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/4cb6351ad12c883222cc206d51006366.gif" width="13" height="15" border="0"><img alt="letter" src="../images/characters/9ab782019a93ceca76996f301b806c0f.gif" width="13" height="15" border="0">		  <input name="string" type="text" size="3" maxlength="3" id="string226">
+		  <input name="stringextra" value="9d6cf7f01ee941661c79d9db254d4d75" type="hidden" id="stringextra226">
+		  <input type="submit" name="submitmessage" value="Send Email" class="subsend" id="226">
+		  </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</div>
+<div class="loading" id="loading226" height="40" align="center"><img height="19" width="220" src="/images/loading.gif" border="0"></div>
+<div class="done" id="done226" align="center">
+	<b>Thank you !</b> We have sent your message. 
+	<input name="refresh" class="refresh" id="226" type="button" value="refresh" />
+</div>
+							
+
+            </TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD colSpan=4>
+	<TABLE cellSpacing=0 cellPadding=0 width=778 border=0>
+        <TBODY>
+        <TR>
+          <TD width=15 bgColor="#f0f0f0" height=7><IMG height=1 alt="Journalist" src="images/social/pixel.gif" width=1></TD>
+          <TD width=5 bgColor="#ffffff" height=7><IMG height=1 alt="Journalist" src="images/social/pixel.gif" width=1></TD>
+          <TD width=583 bgColor="#ffffff" height=7><IMG height=1 alt="Journalist" src="images/social/pixel.gif" width=1></TD>
+          <TD width=5 bgColor="#ffffff" height=7><IMG height=1 alt="Journalist" src="images/social/pixel.gif" width=1></TD>
+          <TD bgColor="#f0f0f0"><IMG height=1 alt="Journalist" src="images/social/pixel.gif" width=1></TD></TR>
+        <TR>
+          <TD width=15 bgColor="#f0f0f0" height=50><IMG height=1 alt="Journalist" src="images/social/pixel.gif" width=1></TD>
+          <TD width=5 bgColor="#f0f0f0" height=50><IMG height=1 alt="Journalist" src="images/social/pixel.gif" width=1></TD>
+          <TD align="center" width=583 bgColor="#f0f0f0" height=50><IMG height=1 alt="Journalist" src="images/social/pixel.gif" width=1><font size="2"><font face="arial"><a href="../register_member.html">Join Here Free</a> &nbsp;| &nbsp;</font><font size="2" face="arial"><a href="../journalistid_membership.html">About JournalistID</a>&nbsp; | &nbsp;<a href="../journalistid_membership.html#upgrade">Upgrade</a></font><font face="arial">&nbsp; | &nbsp;<a href="contact.html">Contact Us</a> <font size="2">&nbsp;|&nbsp; <a href="forgot_password.html" target="_blank">Forgotten password?</a>  </font><BR>
+            Log in below to manage your JournalistID profile </font></font>
+            <form name="updatebottom" enctype="multipart/form-data" method="post" action="update_member.html" target="_blank" style="margin-top:0; margin-bottom:0">
+			  <font size="2" face="arial"><a name="login"></a>Your Email</font>	ID		  
+			  <input name="useremail" type="text" size="20" maxlength="90">
+			  <font size="2" face="arial">Password</font>              
+			  <input name="newpass" type="password" size="10" maxlength="35">
+			  <input name="submit" type="submit" value="Login">
+            </form>
+          <font size="2"></font></TD>
+          <TD width=5 bgColor="#f0f0f0" height=50><IMG height=1 alt="Journalist" src="images/social/pixel.gif" width=1></TD>
+          <TD bgColor="#f0f0f0" height=50><IMG height=1 alt="Journalist" src="images/social/pixel.gif" width=1></TD></TR></TBODY>
+      </TABLE>      </TD></TR>
+  <TR>
+<TD colSpan=4></TD></TR></TBODY></TABLE></BODY></HTML>
+

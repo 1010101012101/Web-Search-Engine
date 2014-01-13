@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<!--
+			copyright by insign gmbh. insign - simply e-business.
+			created by insign gmbh, www.insign.ch, info@insign.ch
+		-->	
+		<title>NewsIsFree: Your Personal News Portal</title>
+		<LINK REL="SHORTCUT ICON" href="http://www.newsisfree.com/favicon.ico" />
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+<META NAME="author" CONTENT="Webmaster" />
+<META NAME="publisher" CONTENT="Webmaster" />
+<META NAME="copyright" CONTENT="2003, Webmaster" />
+<META NAME="keywords" CONTENT="free news,top news,news aggregator,headlines,syndication,gratis,gratuit,finance,business,XML-RPC" />
+<META NAME="description" CONTENT="Free personale News Portal. Read and manage headlines as they appear in all the different news sites. The system is multilingual and webmasters can even export news to their own websites! This new kind of news search engine will change the way you read daily news." />
+<META NAME="revisit-after" CONTENT="1 hour" />
+<style type="text/css">
+
+/* default font size*/
+@import url(/HPE/local/x-small.css);
+
+/* Netscape 4 safe font sizes */
+body, div, p, th, td, li, dd	{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	voice-family: "\"}\""; voice-family:inherit;
+}
+</style>
+<style type="text/css">
+	@import url(http://www.newsisfree.com/HPE/local/theme5/styled_layout.css);
+	@import url(http://www.newsisfree.com/HPE/local/theme5/styled_content.css);
+	@import url(http://www.newsisfree.com/HPE/local/theme5/styled_news.css);
+</style>
+<!--[if IE 7]>
+<style>	
+	@import url(http://www.newsisfree.com/HPE/local/theme5/styled_layoutIE7.css);
+</style>
+<![endif]-->
+<script type="text/javascript"> 
+  var gaJsHost = (("https:" == document.location.protocol) ? 
+  "https://ssl." : "http://www."); 
+  document.write(unescape("%3Cscript src='" + gaJsHost + 
+  "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); 
+</script> 
+<script language="javascript" type="text/javascript" src="/js/prototype1.4.js"></script>
+<script language="javascript" type="text/javascript" src="/js/moo.fx.js"></script>
+<script language="javascript" type="text/javascript" src="/js/tiny_mce/tiny_mce.js"></script>
+<script language="javascript" type="text/javascript" src="/js/lightwin.js"></script> 
+<script language="javascript" type="text/javascript" src="/js/moo.fx.pack.js"></script>
+<script type="text/javascript">
+var itemVisit = "nop";
+var clickTarget = "_top";
+var siteHome = "http://www.newsisfree.com/";
+var siteName = "NewsIsFree";
+var themeRoot = "http://www.newsisfree.com/HPE/local/theme5";
+
+var isPremiumPortal = 0;
+var isPremiumExport = 0;
+var isPremiumNewsmap = 0;
+var HPEUserIsEditor = false;
+var HPEUserIsAdmin = false;
+var HPEEditLink = "http://spider.newsisfree.com/HPE/editor/";
+var HPEgmtdelta = 3600;
+var NIFNOADS = 1;
+
+var userEmail = "nobody@nobody.com";
+var userName = "Guest User";
+var userLogin = "guest";
+var userIsGuest = "1";
+var userGmtDiff = +0 * 3600;
+var userFilterLang = "";
+var userCanSendSms = 0;
+
+var pageLoadSeed = 260796;
+
+var curFontSize = 'x-small';
+
+var userID = "0";
+// outbrain
+var outbrain =  new Object;
+outbrain['testMode'] = '0';
+outbrain['partnerKey'] = 'GKVNPVPV11';
+				
+outbrain['IsVisible'] = true; 
+var visibleFor = ''.split(',');
+if(visibleFor[0] != '')
+{
+outbrain['IsVisible'] = false;
+	for(i in visibleFor)
+	{
+		if(visibleFor[i] == userLogin) outbrain['IsVisible'] = true;
+	}
+}
+
+
+</script>
+
+<script src="/js/nif-ajaxtoolbox.js" type="text/javascript"></script>
+
+</head>
+<body><a name="top"></a>
+	<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1010;"></div>
+
+	<div id="bg_top1">&nbsp;</div>
+	<div id="top1">
+		<a href="http://www.newsknowledge.com/" target="_blank"><img src="http://www.newsisfree.com/HPE/local/theme5/i/logo_nk_big.gif"></a>
+	</div>
+	<div id="logo"><a href="/"><img src="http://www.newsisfree.com/HPE/local/theme5/i/logo.gif" width="150" height="30" border="0" /></a></div>
+<!-- start div search -->
+<div style="display: none;" id="search"  class="notloggedin" >
+<form id="searchform" action="/pages/power/" method="get" name="formname" style="margin:0px;">
+<a onClick="document.forms['formname'].submit()"><img src="/i/searchleftcap.gif" alt="" width="17" height="19" border="0" class="srchimgs"></a><input name="query"
+id="AppSRSimpleSearchField" type="input" placeholder="search the news" autosave="Search News" results="5" style="width:170px;" value="search the news" class="sbox"
+onFocus='if(this.value=="search the news")this.value=""' /><img src="/i/searchrightcap.gif" alt="" width="9" height="19" border="0" class="srchimgs">
+		</form>
+</div>
+<!-- end div search -->
+	<!-- start div header -->
+	<div id="header" class="notloggedin">
+	<div id="tabbartop" style="white-space:nowrap">
+		<ul>
+				</ul>
+	</div>
+	<div id="tabbarmiddle" style="white-space:nowrap">
+					<span id='pagetag'>Please <a href='/user/login/'>login</a> or <a href='/user/new/'>open an account</a> 
+		to start adding pages or creating feeds, and check out our <a href="/about.php?what=premium">premium services</a>...</span>
+				</div>
+	<div id="tabbarbot"></div>
+	</div>
+	<!-- end div header -->
+<style type="text/css">
+h3.stretchertoggle {
+	background:#F3F3E7;
+	padding:3px;
+	cursor:pointer;
+	margin:0;
+	border-top:1px solid #ffffff;
+	border-bottom:1px solid #C3C3B7;
+}
+</style>
+
+<script src="js/prototype.lite.js"></script>
+<script src="js/moo.fx.js"></script>
+<script src="js/moo.fx.pack.js"></script>
+<script type="text/javascript">// http://moofx.mad4milk.net/
+var exists;
+var allStretch;
+
+//the main function, call to the effect object
+
+function checkLoginOrPassword()
+{
+	var login = document.getElementById('FUSER').value;
+	var password = document.getElementById('FPASSWD').value;
+	if (login == '' && password == '')
+	{
+		alert ('Please Enter Login and Password');
+		return false;
+	}
+	if (login == '' || password == '')
+	{
+		if (login == '')
+			alert ('Please Enter Login');
+		if (password == '')
+			alert ('Please Enter Password');
+		return false
+	}
+	return true;
+}
+function mooinit() {
+	var stretchers = document.getElementsByClassName('stretcher'); //div that stretches
+	var toggles = document.getElementsByClassName('stretchertoggle'); //h3s where I click on
+
+	//accordion effect
+	var myAccordion = new fx.Accordion(
+		toggles, stretchers, {opacity: false, duration: 400}
+	);
+
+	//hash functions
+	var found = false;
+	toggles.each(function(h3, i) {
+		var div = Element.find(h3, 'nextSibling'); //element.find is located in prototype.lite
+		if (window.location.href.indexOf(h3.title) > 0) {
+			myAccordion.showThisHideOpen(div);
+			found = true;
+		}
+	});
+	if (!found) myAccordion.showThisHideOpen(stretchers[0]);
+}
+
+</script>
+
+	<!-- start div contenthold -->
+	<div id="contenthold" class="notloggedin">
+
+	<!-- start leftcolumn -->
+	<div id="infocol-l">
+
+<!--
+	<div class="box1" style="display: none;">
+		<div class="hdrbox1">Try It!</div>
+		<div class="cntbox1">
+		Interested? <a href="/user/new/"><b>Create an account</b></a> and start building your own pages.
+		<p><form method="POST" action="/user/login/">
+		<table align="center" cellpadding="0" border="0" cellspacing="2">
+		<tr><td style="text-align:right; font-size:x-small">Login:</td><td><input type="text" name="FUSER" size="10" maxlength="32"/></td></tr>
+		<tr><td style="text-align:right; font-size:x-small">Password:</td><td><input type="password" name="FPASSWD" size="10" maxlength="10"/></td></tr>
+		<tr><td style="text-align:right; font-size:x-small" colspan="2"><input type="submit" value="Sign In" style="border-style:outset"></td></tr></table>
+		</form></p>
+		We constantly add <a href="/sources/bydate/">sources</a> and features, 
+		find out <a href="/sitenews/">what's new</a>.
+		</div>
+	</div>
+-->
+	
+	<!-- login box start -->
+	<div class="box01">
+		<!-- border top -->
+		<div class="box_border border_top">
+			<div class="corner_left_top"/></div>
+			<div class="corner_right_top"></div>
+			<br clear="all" />
+		</div>
+		<!-- conteiner -->
+		<div class="box_cnt">
+			<div class="box_content">
+				<div class="box_conteiner" style="padding: 5px 0px 0px 5px;">
+				<!-- content start -->
+					<div style="margin: 20px 0px 0px 30px;">
+						<form method="POST" action="/user/login/" onsubmit="return checkLoginOrPassword()">
+							<table>
+								<tr><td><span>Login</span></td></tr>
+								<tr><td><input type="text" id="FUSER" name="FUSER" maxlength="32" class="box01_input" /></td></tr>
+								
+								<tr><td><span>Password</span></td></tr>
+								<tr><td><input type="password" id="FPASSWD" name="FPASSWD" maxlength="10"  class="box01_input" /></td></tr>
+								<tr><td><input type="submit" value="Sign In" class="login_btn"/></td></tr>
+							</table>
+						</form>
+					
+						<div>
+							<b>NEW MEMBER?</b>
+							<br />
+							<a href="/user/new/"><b>CREATE AN ACCOUNT</b></a>
+							<br />
+							<br />
+						</div>
+					</div>
+				<!-- content end -->
+				</div>
+			</div>
+		</div>
+		<!-- border bottom -->
+		<div class="box_border border_bottom" style="float: none;">
+			<div class="corner_left_bottom"/></div>
+			<div class="corner_right_bottom"></div>
+			<br clear="all" />
+		</div>
+	</div>
+	<!-- login box end -->	
+<br /><br />
+
+<!--
+<div class="box2">
+	<div class="hdrbox2" title="Find more stuff on this site">More...</div>
+	<div class="cntbox2">
+		<ul style="padding-bottom:0px">
+			<li class="boxlist"><a href="/sources/">Find Sources</A></li>
+			<li class="boxlist"><a href="/pages/power/?cat=1">Browse Headlines</A></li>
+		</ul>
+	</div>
+	<div class="cntbox2"><ul style="padding-bottom:0px">
+		<ul>
+		<li class="boxlist"><a href="/content/mobile/">Mobile</a></li>
+		<li class="boxlist"><a href="/webservice.php">Web Services</a></li>
+
+		<li class="boxlist"><a href="/faq.php">FAQ</a></li>
+		</ul>
+	</div>
+	<div class="cntbox2" style="text-align:center">
+		<a href="/content/">Site Map</a>
+	</div>
+</div><br /><br />
+-->
+	<!-- More box start -->
+	<div class="box01">
+		<!-- border top -->
+		<div class="box_border border_top">
+			<div class="corner_left_top"/></div>
+			<div class="corner_right_top"></div>
+			<br clear="all" />
+		</div>
+		<!-- conteiner -->
+		<div class="box_cnt">
+			<div class="box_content">
+				<div class="box_conteiner" style="padding: 5px 0px 0px 5px;">
+				<!-- content start -->
+					<span title="Find more stuff on this site">More...</span>
+					<div class="box_listcont">
+						<ul>
+							<li class="boxlist"><a href="/sources/">Find Sources</A></li>
+							<li class="boxlist"><a href="/pages/power/?cat=1">Browse Headlines</A></li>
+						</ul>
+					</div>
+					<div class="box_listcont">
+						<ul>
+							<li class="boxlist"><a href="/content/mobile/">Mobile</a></li>
+							<li class="boxlist"><a href="/webservice.php">Web Services</a></li>
+							<!--
+							<li class="boxlist"><a href="/forums/">Forums</a></li>
+							-->
+							<li class="boxlist"><a href="/faq.php">FAQ</a></li>
+						</ul>
+					</div>
+					<div class="box_listcont" style="text-align: center">
+						<a href="/content/">Site Map</a>
+					</div>
+				<!-- content end -->
+				</div>
+			</div>
+		</div>
+		<!-- border bottom -->
+		<div class="box_border border_bottom" style="float: none;">
+			<div class="corner_left_bottom"/></div>
+			<div class="corner_right_bottom"></div>
+			<br clear="all" />
+		</div>
+	</div>
+	<!-- More box end -->
+
+					
+</div>
+	<!-- end leftcolumn -->
+
+
+	<!-- start div content -->
+	<div id="content">
+	<DIV id="contentbreakprotect">
+	
+	<div>
+		<!-- globed menu start -->
+		<div class="globe_menu">
+			<div class="globe_menu_item">
+				<div class="globe_menu_image">
+					<a href="/pages/power/?cat=1"><img src="http://www.newsisfree.com/HPE/local/theme5/i/newspaper.gif" /></a>
+				</div>
+				<div style="margin-left: 34px;">
+					<span>BROWSE HEADLINES</span><br/><br/>
+					<a href="/pages/power/?cat=1">Stay up to date.</a><br />
+					NewsIsFree constantly checks your favourite news sites and blogs for new content.
+				</div>
+			</div>
+			
+			<div class="globe_menu_item">
+				<div class="globe_menu_image">
+					<a href="/content/mobile/"><img src="http://www.newsisfree.com/HPE/local/theme5/i/mobile.gif" /></a>
+				</div>
+				<div style="margin-left: 34px;">
+					<span>MOBILE ALERTS</span><br/><br/>
+					<a href="/content/mobile/">Be alerted.</a><br />
+					NewsIsFree can send you Alert<br />
+					Email/SMS/Instant Messages<br />
+					(Part of Premium Service)
+				</div>
+			</div>
+			
+			<div class="globe_menu_item">
+				<div class="globe_menu_image">
+					<a href="/sources/"><img src="http://www.newsisfree.com/HPE/local/theme5/i/lupe.gif" /></a>
+				</div>
+				<div style="margin-left: 34px;">
+					<span>FIND SOURCES</span><br /><br />
+					<a href="/sources/">Find sources.</a><br />
+					We cover the broadest manually<br />
+					checked list of trusted sources<br />
+					across over 25 languages.
+					
+					<br /><br />
+					Browse the sources by:<br />
+					<a href="/sources/bycat/">Category</a><br />
+					<a href="/sources/byname/">Name</a><br />
+					<a href="/sources/bydate/">Date</a><br />
+					<a href="/sources/bylang/">Language</a><br />
+				</div>
+			</div>
+			
+			<br clear="all" />
+				
+			<!-- search form start -->
+			<div class="box02">
+				<!-- border top -->
+				<div class="box_border border_top">
+					<div class="corner_left_top"/></div>
+					<div class="corner_right_top"></div>
+					<br clear="all" />
+				</div>
+				<!-- conteiner -->
+				<div class="box_cnt">
+					<div class="box_content">
+						<div class="box_conteiner" style="padding: 5px 0px 0px 5px; height: 175px !important;">
+						<!-- content start -->
+							<form action="/pages/power/" method="get" name="formname">
+								<div class="search_box_conteiner">
+									<table style="width: 90%;" align="center">
+										<tr>
+											<td width="80%"><input name="query"  class="search_field" id="AppSRSimpleSearchField" type="input" placeholder="search the news" autosave="Search News" results="5" value="search the news" onFocus='if(this.value=="search the news")this.value=""' /></td>
+											<td width="20%"><input type="submit" class="search_btn" value="SEARCH"/></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<div class="cntstats">
+													<span>271411</span> news added last 24 hours, across <span>12609</span> sources and <span>364</span> categories
+												</div>
+											</td>
+										</tr>
+									</table>
+								</div>	
+							</form>
+						
+						
+								<!-- content end -->				
+						
+						</div>
+					</div>
+				</div>
+				<!-- border bottom -->
+				<div class="box_border border_bottom" style="float: none;">
+					<div class="corner_left_bottom"/></div>
+					<div class="corner_right_bottom"></div>
+					<br clear="all" />
+				</div>
+			</div>
+			<!-- search form end -->
+		</div>
+		<!-- globed menu end -->
+		</div>
+		
+	</div>
+	<br clear="all" />
+</div>
+
+	<!-- end div content -->
+</div></div>
+<!-- end div content -->
+</div>
+<!-- end div contenthold -->
+
+<!-- start div footer -->
+<div id="clear" style="margin-top: 50px;"></div>
+<div id="ftr" >
+	<table width="100%" border=0><tr><td>
+			<a href="/">home</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+			<a href="/content/advertising/">advertising</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+			<a href="/content/termsofservice/">terms of service</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+			<a href="/content/privacypolicy/">privacy</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+			<a href="/about.php">about us</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+			<a href="/contact.php">contact us</a>
+		</td><td align="right" valign="center">
+			<em>design by <a href=http://www.popshop.cc rel="nofollow">Popshop</a></em>&nbsp;&bull;&nbsp;&nbsp;
+			&copy; 1999-2013 <a href="http://www.newsknowledge.com/" target="_blank">NewsKnowledge</a>&nbsp;&nbsp;<img src="http://www.newsisfree.com/HPE/local/theme5/i/logo_nk.gif" align="absmiddle" /> &nbsp;<a href="http://www.page-rank-lookup.com/" title="PageRank Checker">
+<script type="text/javascript" src="http://www.page-rank-lookup.com/pr.php?style=2">
+</script></a>
+
+		</td>
+	</tr></table>
+
+</div>
+<table width="100%" border="0" style="font-size:11px;">
+	<tr>
+		<td valign="top">
+			<!--29434934837-->		</td>
+		<td valign="top">
+		</td>
+		<td valign="top">
+					</td>
+		<td valign="top">
+		</td>
+	</tr>
+</table>
+<!-- end div footer -->	
+
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-85604-1");
+pageTracker._initData(); 
+pageTracker._trackPageview(); 
+</script>
+</body></html>

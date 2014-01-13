@@ -1,0 +1,3174 @@
+<!DOCTYPE html PUBLIC"-// W3C//DTD XHTML 1.0 Transitional//EN"" http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--LAYOUT HOME-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+     <title>Daily Corinthian - News, classifieds, businesses, and events in Corinth, MS</title> 
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <meta property="og:title" content=""/>
+ <meta property="og:type" content="article"/>
+   <meta property="og:image" content="http://dailycorinthian.com/images/article.jpg"/>
+
+  <meta name="keywords" content="News, classifieds, businesses, and, events, in, Corinth, MS" /> 
+     <meta name="description" content="News, classifieds, businesses, and events in Corinth, MS "> 
+<link id="default_facebook_image" rel="image_src" href="/images/article.jpg" />
+
+<meta property="fb:admins" content="1475629869203">
+    <script type="text/javascript" src="/javascripts/jsball.js"></script>
+
+      <script type="text/javascript" charset="utf-8">
+$j(document).ready(function() {
+  $j(".breaking_news_marquee .even, .breaking_news_marquee .odd").addClass("bn_story");
+  function storyFade(){
+      $j(".breaking_news_marquee .bn_story").hide();
+      first = $j(".breaking_news_marquee .bn_story:first");
+      first.fadeIn(100);
+      $j(".breaking_news_marquee").append(first);
+      var first = $j(".breaking_news_marquee .bn_story:first");
+  }
+var number_of_stories = $j(".breaking_news_marquee .bn_story").size();
+if(number_of_stories >= 2){
+  storyFade();
+  setInterval(storyFade, 5000);
+}
+if(number_of_stories >= 1){
+ $j(".top_breaking_news_section").css("display", "block");
+}else if(!number_of_stories){
+ $j(".top_breaking_news_section").remove();
+}
+});
+</script>
+
+<script>
+	function toggleSearch(which) {
+		$A($('pt1_search_element_bar').childNodes).each(function(element) {
+			if(element.tagName == 'DIV') {
+				element.style.display = 'none'
+			}
+		})
+		
+		$('pt1_search_' + which).style.display = 'block'
+		$('pt1_search_element_select').style.display = 'block'
+		
+		$('pt1_search_dropdown').value = which
+	}
+
+	function initSearch() {
+		var pages = [
+			/* Default page */
+			[/\/$/, 'content'],
+			/* Others */
+			[/\/news/, 'content'],
+			[/\/results_content/, 'content'],
+			[/\/business_directory/, 'businesses'],
+			[/\/business_details/, 'businesses'],
+			[/\/results_businesses/, 'businesses'],
+			[/\/events/, 'events'],
+			[/klass=event/, 'events'],
+			[/klass=profile/, 'profiles']
+		]
+
+		var which_search = 'content'
+
+		pages.each(function(element) {
+			if(document.URL.search(element[0]) != -1) { which_search = element[1] }
+		})
+
+		toggleSearch(which_search)
+		
+		// Do a little cascading initializing 
+		initWeather()
+		initMenu()
+	}
+
+	function initWeather() {
+		if(!window.xml_feed_data_11194756) { return false }
+
+		/* Weather widget location */
+		var x = (Position.getPageSize().window.width / 2) + 150
+		var y = 7
+	
+		document.body.appendChild(Builder.node('div', { id:'rendered_weather' }, ''))
+		$('rendered_weather').appendChild(Builder.node('div', { id:'rendered_weather_icon' }, ' '))
+		$('rendered_weather').appendChild(Builder.node('div', { id:'rendered_weather_label' }, ''))
+		$('rendered_weather_label').appendChild(Builder.node('span', { id:'rendered_weather_label_temperature' }, window.xml_feed_data_11194756.temp_f + '°'))
+		$('rendered_weather_label').appendChild(Builder.node('span', { id:'rendered_weather_label_conditions' },  window.xml_feed_data_11194756.weather))
+		$('rendered_weather').appendChild(Builder.node('a', { id:'rendered_weather_link', href: window.xml_feed_data_11194756.two_day_history_url, target:'_NEW', className:'link' }, 'more'))
+
+		w = window.xml_feed_data_11194756.weather.toString();
+		c = $('rendered_weather_icon');
+
+		if(w.search(/Cloud|Overcast|Fog|Smoke|Haze/) != -1) { c.className = 'weatherCloudyIcon' }
+		if(w.search('Snow') != -1) { c.className = 'weatherSnowIcon' }
+		if(w.search(/Fair|Clear/) != -1) { c.className = 'weatherClearIcon' }
+		if(w.search('Thunder') != -1) { c.className = 'weatherThunderIcon' }
+		if(w.search(/Ice|Hail/) != -1) { c.className = 'weatherThunderShowersIcon' }
+		if(w.search(/Showers|Drizzle/) != -1) { c.className = 'weatherShowersIcon' }
+		if(w.search('Rain') != -1) { c.className = 'weatherRainIcon' }
+	
+		$('rendered_weather').style.left = x
+		$('rendered_weather').style.top = y
+	}
+	
+	function toggleMenu(which) {
+		$A($('pt1_main_menu').childNodes).each(function(element) {
+			if(element.className == 'pt1_item_active') {
+				element.className = 'pt1_item'
+			}
+		})
+		
+		$A($('pt1_sub_menu').childNodes).each(function(element) {
+			if(element.className == 'pt1_menu_group') {
+				element.style.display = 'none'
+			}
+		})
+		
+		$(which).className = 'pt1_item_active'
+		$(which + '_group').style.display = 'block'
+	}
+	
+	function initMenu() {
+		var pages = [
+			/* Default page */
+			[/\/$/, 'home'],
+			/* Others */
+			[/\/about_us/, 'publication'],
+			[/\/account/, 'home'],
+			[/\/ad_details/, 'classifieds'],
+			[/\/blogs/, 'community'],
+			[/\/browse/, 'classifieds'],
+			[/\/browse_by_category/, 'classifieds'],
+			[/\/business.*/, 'businesses'],
+			[/\/catalogue/, 'publication'],
+			[/\/chat/, 'my_content'],
+			[/\/classifieds/, 'home'],
+			[/\/clone_ad/, 'classifieds'],
+			[/\/contact_us/, 'home'],
+			[/\/edit_ad/, 'classifieds'],
+			[/\/edit_fob_profile/, 'my_content'],
+			[/\/edit_print_ad/, 'classifieds'],
+			[/\/edit_profile/, 'my_content'],
+			[/\/events/, 'community'],
+			[/\/feedback/, 'community'],
+			[/\/full_story/, 'home'],
+			[/\/home/, 'home'],
+			[/\/login/, 'home'],
+			[/\/matchbin/, 'publication'],
+			[/\/matchbinfaq/, 'publication'],
+			[/\/my_.*/, 'my_content'],
+			[/\/news_*/, 'news'],
+			[/\/news_obituaries/, 'community'],
+			[/\/purchase/, 'publication'],
+			[/\/recommend_ad/, 'classifieds'],
+			[/\/respond/, 'classifieds'],
+			[/\/results_*/, 'home'],
+			[/\/signup/, 'home'],
+			[/\/simple_signup/, 'classifieds'],
+			[/\/support/, 'publication'],
+			[/\/upgrade/, 'publication'],
+			[/\/user_details/, 'community'],
+			[/\/view_blog/, 'community'],
+			[/\/view_fob/, 'community'],
+			[/\/sports_*/, 'sports'],
+			[/\/business_*/, 'business'],
+			[/\/lifestyles_*/, 'lifestyles'],
+			[/\/opinion_*/, 'opinion'],
+			[/\/chh_*/, 'the_chapel_hill_herald'],
+			[/\/obituaries/, 'obituaries'],
+			[/\/celebrations/, 'celebrations'],
+			[/\/multimedia_*/, 'multimedia'],
+			[/\/welcome/, 'community'],
+                        [/\/business_directory/, 'business_directory'],
+                        [/\/results_businesses/, 'business_directory']
+		]
+
+		var which_page = 'home'
+
+		pages.each(function(element) {
+			if(document.URL.search(element[0]) != -1) { which_page = element[1] }
+		})
+
+		toggleMenu('main_menu_' + which_page)
+
+		//$('pt1_content_container').onmouseover = function() {
+		//	toggleMenu(eval('main_menu_' + which_page).id)
+		//}
+		
+		$A($('pt1_main_menu').childNodes).each(function(element) {
+			if(element.className == 'pt1_item' || element.className == 'pt1_item_active') {
+				element.onmouseover = function() {
+					toggleMenu(element.id)
+				}
+			}
+		})
+	}
+</script>
+
+    <link href="http://d2uh5w9wm14i0w.cloudfront.net/templates/publication_pods/stylesheets/global-cssball.css" media="all" rel="stylesheet" type="text/css" />            <link href="http://d2uh5w9wm14i0w.cloudfront.net/sites/731/stylesheets/dailycorinthian.com.css" media="all" rel="stylesheet" type="text/css" />
+
+        <link href="http://openwidgets.s3.amazonaws.com/themes/times/jquery-ui-1.7.2.custom.css" media="screen" rel="Stylesheet" type="text/css" />
+    <link href="http://openwidgets.s3.amazonaws.com/stylesheets/themes.css" media="screen" rel="Stylesheet" type="text/css" />
+
+
+	
+
+
+  <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><script type="text/javascript" charset="utf-8" src="http://analytics.radiatemedia.com/javascripts/analytics.js?v=3"></script></head>
+<body>
+    <div id="top_bar_container">
+      <div id="top_bar">
+        
+          	<!-- <span id="top_bar_links"><a href="/circulation_main">Circulation</a></span> -->
+	<span id="top_bar_links"><a href="/e-edition">e-Edition</a></span>
+	<span id="top_bar_links"><a href="/jobs">Jobs</a></span>
+	<span id="top_bar_links"><a href="/specialty_publications" rel="facebox">Specialty Publications</a></span>
+	<span id="top_bar_links"><a href="http://www.dotphoto.com/go.asp?l=Daily+Corinthian&AID" target="_blank">Buy Photos</a></span>
+	<!-- <span id="top_bar_links"><a href="/archives">Archives</a></span> -->
+        <span id="top_bar_links"><a href="/contact_us">Contact Us</a></span>
+	<!--<span id="top_bar_links"><a href="/weather" rel="facebox">Weather</a></span>-->
+
+        
+            
+          <div id="user_menu_container" align="left"><div class="userMenu">
+  <ul id="user_menu_login_list">
+    	<li id="sign_in"><a href="/pages/login/?">Log In</a></li>
+
+  </ul>
+</div></div><div id="user_handle_container"></div>
+        
+      </div>
+    </div>
+<div class="newline"></div>
+
+    <style type="text/css">
+    #header_ad_space {
+    height: 150px;
+    width: 100%;
+    position: relative;
+    top: 30px;
+    }
+    #header_ad_space .header_ad_space_ad {
+    float: left;
+    margin: 0px 0px 0px 30px;
+    }
+	
+	#header_ad_space .header_ad_space_ad_right {
+    float: right;
+    margin-right: 15px;
+    }
+    </style>
+
+
+
+    <div id="header">
+
+
+
+
+
+
+
+
+
+      <div id="header_ad_space">
+      	<div class="header_ad_space_ad">
+         <!-- @ @push_ad :display => leaderboard, :instance => ros_leaderboard, :tags => ros_leaderboard@ @
+		  -->
+		    <noscript>
+<a href="http://servedby.flashtalking.com/click/3/24557;674140;0;209;0/?ft_width=728&ft_height=90&url=4398270" target="_blank">
+<img border="0" src="http://servedby.flashtalking.com/imp/3/24557;674140;205;gif;CentroNetworkUS;DISCPMDailyCorinthianROSGEOTupeloCorinth728x901x1TP/?"></a>
+</noscript>
+<script language="Javascript1.1" type="text/javascript">
+var ftClick = "";
+var ftX = "";
+var ftY = "";
+var ftZ = "";
+var ftOBA = 1;
+var ftContent = "";
+var ftCustom = "";
+var ft728x90_OOBclickTrack = "";
+var ftRandom = Math.random()*1000000;
+var ftBuildTag1 = "<scr";
+var ftBuildTag2 = "</";
+var ftClick_674140 = ftClick;
+if(typeof(ft_referrer)=="undefined"){var ft_referrer=(function(){var r="";if(window==top){r=window.location.href;}else{try{r=window.parent.location.href;}catch(e){}r=(r)?r:document.referrer;}while(encodeURIComponent(r).length>1500){r=r.substring(0,r.length-1);}return r;}());}
+var ftDomain = (window==top)?"":(function(){var d=document.referrer,h=(d)?d.match("(?::q/q/)+([qw-]+(q.[qw-]+)+)(q/)?".replace(/q/g,decodeURIComponent("%"+"5C")))[1]:"";return (h&&h!=location.host)?"&ft_ifb=1&ft_domain="+encodeURIComponent(h):"";}());
+var ftTag = ftBuildTag1 + 'ipt language="javascript1.1" type="text/javascript" ';
+ftTag += 'src="http://servedby.flashtalking.com/imp/3/24557;674140;201;js;CentroNetworkUS;DISCPMDailyCorinthianROSGEOTupeloCorinth728x901x1TP/?ftx='+ftX+'&fty='+ftY+'&ftadz='+ftZ+'&ftscw='+ftContent+'&ft_custom='+ftCustom+'&ftOBA='+ftOBA+ftDomain+'&ft_referrer='+encodeURIComponent(ft_referrer)+'&cachebuster='+ftRandom+'" id="ftscript_728x90" name="ftscript_728x90"';
+ftTag += '>' + ftBuildTag2 + 'script>';
+document.write(ftTag);
+</script>
+
+
+
+        </div>
+      	<div class="header_ad_space_ad_right">
+		
+		<div style='width: 180px; height: 150px; background-image: url( http://vortex.accuweather.com/adcbin/netweather_v2/backgrounds/blue_180x150_bg.jpg ); background-repeat: no-repeat; background-color: #346797;' ><div id='NetweatherContainer' style='height: 138px;' ><script src='http://netweather.accuweather.com/adcbin/netweather_v2/netweatherV2ex.asp?partner=netweather&tStyle=whteYell&logo=1&zipcode=38834&lang=eng&size=8&theme=blue&metric=0&target=_self'></script></div><div style='text-align: center; font-family: arial, helvetica, verdana, sans-serif; font-size: 10px; line-height: 12px; color: #FFFFFF;' ><a style='color: #FFFFFF' href='http://www.accuweather.com/us/ms/corinth/38834/city-weather-forecast.asp?partner=accuweather' >Weather Forecast</a> | <a style='color: #FFFFFF' href='http://www.accuweather.com/maps-satellite.asp' >Weather Maps</a></div></div>
+				  
+		</div>
+      </div>
+
+
+
+
+      <div id="header_container">
+        <div id="header_logo">
+          <a href="/home"><img src="/sites/2530/assets/Daily_Corinthian_flag.jpg"></a>
+        </div>
+        <div id="header_date">
+          December 11, 2013
+        </div>
+        
+            <div id="menu_container">
+                <div id="pt1_menu">
+	<div id="pt1_main_menu">
+  
+  
+      <div id="main_menu_home" class="pt1_item">
+      	<a href="/home">Home</a>
+      </div>
+      <div id="main_menu_news" class="pt1_item">
+        <a href="/pages/news">News</a>
+      </div>
+      <div id="main_menu_sports" class="pt1_item">
+        <a href="/pages/sports">Sports</a>
+      </div>
+      <div id="main_menu_opinion" class="pt1_item">
+        <a href="/pages/opinion">Opinion</a>
+      </div>
+      <div id="main_menu_photos" class="pt1_item">
+        <a href="http://www.dotphoto.com/go.asp?l=Daily+Corinthian&AID" target="_blank">Photos</a>
+      </div>                
+      <div id="main_menu_obituaries" class="pt1_item">
+        <a href="/pages/obituaries">Obituaries</a>
+      </div>
+      <div id="main_menu_businesses" class="pt1_item">
+        <a href="/pages/business_directory">Businesses</a>
+      </div>                
+      <div id="main_menu_jobs" class="pt1_item">
+        <a href="/pages/jobs">Jobs</a>
+      </div>
+	 
+	  <div id="main_menu_banner" class="pt1_item">
+        <a href="/pages/banner_independent">Banner Independent</a>
+      </div>
+      <div id="main_menu_subscribe" class="pt1_item">
+        <a href="/pages/new_subscribe">Subscribe</a>
+      </div>
+	  <div id="main_menu_eedition" class="pt1_item">
+        <a href="/pages/e-edition">E-edition</a>
+      </div>
+      <div class="newline"></div>
+      
+	</div>
+
+    <div id="pt1_sub_menu">
+
+
+      <div id="main_menu_home_group" class="pt1_menu_group" style="display: none;">
+	  	
+      </div>
+      
+      <div id="main_menu_news_group" class="pt1_menu_group" style="display: none;">
+        
+        <!--<div class="pt1_item">
+          <a href="/news_local">Local</a>
+        </div>
+<div class="pt1_item">
+          <a href="/news_columnists">Columnists</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/news_nation_world">Nation/World</a>
+        </div>-->
+        
+        	  	
+
+        
+      </div>
+
+      <div id="main_menu_business_group" class="pt1_menu_group" style="display: none;">
+        
+        <!--<div class="pt1_item">
+          <a href="/business_buzz">The Buzz</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/business_local">Local/State</a>
+        </div>  -->
+        	  	
+
+
+      </div>
+
+      <div id="main_menu_sports_group" class="pt1_menu_group" style="display: none;">
+        
+        <!--<div class="pt1_item">
+          <a href="/sports_top_stories">Top Stories</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/sports_duke">Duke</a>
+        </div>
+         <div class="pt1_item">
+          <a href="/sports_unc">UNC</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/sports_nccu">NCCU</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/sports_college">Colleges</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/sports_high_school">High Schools</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/sports_pro_sports">Pro Sports</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/sports_durham_bulls">Durham Bulls</a>
+        </div>
+<div class="pt1_item">
+          <a href="/sports_columnists">Columnists</a>
+        </div>
+        
+        <!--<div class="pt1_item">
+          <a href="/sports_canes">?Canes</a>
+        </div>-->
+        
+       
+        <!--<div class="pt1_item">
+          <a href="/sports_golf">Golf</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/sports_tennis">Tennis</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/sports_auto_racing">Auto Racing</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/sports_soccer">Soccer</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/sports_columnists">?Columnists</a>
+        </div>-->
+        	  	
+
+
+      </div>
+
+      <div id="main_menu_lifestyles_group" class="pt1_menu_group" style="display: none;">
+        
+        <!--
+        <div class="pt1_item">
+          <a href="/lifestyles_schools">Schools</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/lifestyles_food">Food</a>
+        </div>
+         <div class="pt1_item">
+          <a href="/lifestyles_faith">Faith</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/lifestyles_entertainment">Entertainment</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/lifestyles_books">Books</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/lifestyles_columnists">Columnists</a>
+        </div> -->
+        	  	
+
+
+      </div>
+
+      <div id="main_menu_opinion_group" class="pt1_menu_group" style="display: none;">
+        <!--
+        <div class="pt1_item">
+          <a href="/opinion_hs_editorials">Editorials</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/opinion_hs_letters">Letters</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/opinion_hs_columnists">Columnists</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/letter_submit">Submit Letter</a>
+        </div> -->
+        	  	
+
+
+      </div>
+
+      <div id="main_menu_the_chapel_hill_herald_group" class="pt1_menu_group" style="display: none;">
+        
+       <!-- <div class="pt1_item">
+          <a href="/chh_local">Local</a>
+        </div>
+				<div class="pt1_item">
+          <a href="/chh_editorials">Editorials</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/chh_letters">Letters</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/chh_columnists">Columnists</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/letter_submit">Submit Letter</a>
+        </div> 	  	-->
+
+      </div>
+
+	  <div id="main_menu_obituaries_group" class="pt1_menu_group" style="display: none;">
+	  
+      </div>
+      
+      <div id="main_menu_celebrations_group" class="pt1_menu_group" style="display: none;">
+
+      	<!--<div class="pt1_item">
+          <a href="/lifestyles_announcements#weddings">Weddings</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/lifestyles_announcements#engagements">Engagements</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/lifestyles_announcements#births">Births</a>
+        </div>
+        <div class="pt1_item">
+          <a href="/lifestyles_announcements#anniversaries">Anniversaries</a>
+        </div>-->
+
+
+      </div>
+      
+      <div id="main_menu_multimedia_group" class="pt1_menu_group" style="display: none;">
+
+      </div>
+
+     
+
+
+
+
+		
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+  
+
+
+  <div class="newline"></div>
+</div>
+
+
+
+
+        </div>
+
+<div id="content_container" align="left">	<div>
+	<style type="text/css">
+
+#searching_bar {
+position: relative;
+float: right;
+right: 15px;
+bottom: 90px;
+}
+</style>
+
+
+<script type="text/javascript">
+
+
+$j(document).ready(function(){
+
+	$j("#searchBtn").click(function(){
+		searchFun();
+	});
+
+	$j("#searchTerm").keyup(function(e) {
+       if (e.keyCode == 13) {
+           searchFun();
+       }
+   });
+
+
+ 
+		function searchFun() {
+			var sel = $j("#searchSelect").val(),
+		            term = $j("#searchTerm").val(),
+                            page = "", klass = "", page_label = "", instance = "", url;
+			if (sel === "Articles") {
+                         page = "results_articles/search_content";
+                         klass = "";
+                         page_label = "home";
+                         instance = "";
+			} else if (sel === "Ads") {
+				 page = "results";
+				 klass = "item+service+job+auto+property+rental";
+				 page_label = "user_details";
+				 instance = "";
+			} else if(sel === "Businesses"){
+				 page = "results_businesses";
+				 klass = "business";
+				 page_label = "user_details";
+				 instance = "business";
+				
+			} else if(sel === "Events"){
+				 page = "results";
+				 klass = "event";
+				 page_label = "user_details";
+				 instance = "events";
+			} else if(sel === "Videos"){
+				 page = "search_video";
+				 klass = "";
+				 page_label = "home";
+				 instance = "video";
+			}
+			 url = "/pages/"+page+"?klass="+klass+"&page_label="+page_label+"&widget=search_bar&instance="+instance+"&string="+term+"&listener=search_bar_results&open=";
+			window.location = url;
+	} 
+});
+
+
+
+
+	
+</script>
+
+<div id="searching_bar">
+<select id="searchSelect">
+	<option>Articles</option>
+	<!--<option>Ads</option>
+	<option>Businesses</option>
+	<option>Events</option>
+	<option>Videos</option>-->
+</select>
+<input id="searchTerm"></input>
+<button id="searchBtn">Search</button>
+
+</div>
+</div>
+</div>
+
+
+
+
+      </div>
+<div class="newline"></div> 
+        </div>
+
+      
+      
+
+
+    <div id="page">
+              <div id="left_column">
+
+
+  <style type="text/css" media="screen">
+.top_breaking_news_section {
+width: 655px;
+float: left;
+margin-bottom: 10px;
+display: none;
+}
+	.top_breaking_news_section .story_item_headline a.entry-title {
+	    color: red;
+	    font-size: 16px;
+	    font-weight: bold;
+	    text-align: center;
+	}
+
+	.top_breaking_news_section .story_item_info {
+		display: none;
+	}
+
+.top_breaking_news_section .story_item_headline {
+float: left;
+margin-left: 141px;
+padding-left: 10px;
+padding-top: 6px;
+text-align: left;
+width: 756px;
+}
+
+.top_breaking_news_section .story_item_summary {
+color: #515151;
+float: left;
+padding-top: 6px;
+width: 492px;
+margin-left: 141px;
+padding-left: 10px;
+}
+	#push_home_breaking_news_container {
+		background: url("/sites/1284/assets/breaking_news_2.png") no-repeat scroll 0 0 transparent;
+		background-position: center;
+		height: 68px;
+    padding: 5px 0;
+	}
+
+
+.breaking_news_marquee {
+padding: 25px 0px 0px 10px;
+}
+.top_breaking_news_section .breaking_news_marquee a {
+color: #333;
+font-size: 14px;
+}
+</style>
+
+
+
+
+
+<div class="top_breaking_news_section">
+	<div id="push_home_breaking_news_container" align="left">  <div style="" class="breaking_news_marquee">
+      
+
+  </div>
+</div>
+</div>
+
+
+<div class="newline"></div>
+  
+<div class="pod_heading">Top News</div>
+      <div id="top_stories_pod">
+        <div id="top_stories_left">
+          <div id="push_container" align="left">  <div style="" class="">
+    <div class="even">
+        <div class="story_item hnews hentry item">
+
+<a href="/view/full_story/24206221/article-New-Walnut-plant-to-bring-125-jobs?"><div class="image_container" style="">
+	<div class="image_image">
+		<img class="image_img" src='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/EIKM_12_12_walnut_industry.jpg' alt='With shovels at hand, Gov. Phil Bryant (left) chats with ALUMA-FORM Chief Financial Officer Harry Orr (center) and Tippah County Development Foundation Board Chairman Bob Glover. / Staff photo by Jebb Johnston' title='With shovels at hand, Gov. Phil Bryant (left) chats with ALUMA-FORM Chief Financial Officer Harry Orr (center) and Tippah County Development Foundation Board Chairman Bob Glover. / Staff photo by Jebb Johnston' /><br /><div class="image_caption">With shovels at hand, Gov. Phil Bryant (left) chats with ALUMA-FORM Chief Financial Officer Harry Orr (center) and Tippah County Development Foundation Board Chairman Bob Glover. / Staff photo by Jebb Johnston</div>
+	</div>
+	<a style="display:none;" href='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/EIKM_12_12_walnut_industry.jpg' title='With shovels at hand, Gov. Phil Bryant (left) chats with ALUMA-FORM Chief Financial Officer Harry Orr (center) and Tippah County Development Foundation Board Chairman Bob Glover. / Staff photo by Jebb Johnston' rel='lightbox[24206215]'>slideshow</a>
+</div>
+</a>
+	<div class="story_item_headline"><a href="/view/full_story/24206221/article-New-Walnut-plant-to-bring-125-jobs?" class="entry-title">New Walnut plant to bring 125 jobs</a></div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Jebb Johnston</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		WALNUT — A Memphis manufacturer of overhead power distribution products for the electric utility industry is extending its reach to Walnut with a new plant expected to employ 125. Gov. Phil Bryant joined local leaders at a vacant lot in the Walnut Industrial Park Wednesday afternoon for a ceremonial groundbreaking for ALUMA-FORM, which will invest $6.7 million at the site just off U.S. Highway ...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="odd">
+        <div class="story_item hnews hentry item">
+
+	<div class="story_item_headline"><a href="/view/full_story/24206033/article-Christian-school-interested-in-one-of-former-schools?" class="entry-title">Christian school interested in one of former schools</a></div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Jebb Johnston</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		A Corinth Christian school is interested in one of the former elementary school campuses for its own classes and a new initiative to reach those who are not in school. The Board of Mayor and Aldermen took up the matter of the vacated school campuses of East, West and South in a special meeting Wednesday morning. With two aldermen absent, the board delayed taking action on the campuses, which ha...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+      
+
+  </div>
+</div>
+        </div>
+        <div id="top_stories_right">
+          <div id="push_container" align="left">  <div style="" class="top_stories_right_bull">
+    <div class="even">
+        <div class="story_item hnews hentry item">
+  
+  <strong class="story_item_title"><a href="/view/full_story/24206021/article-Experience-provides-sights--sounds-of-Christmas?" class="entry-title">Experience provides sights, so...</a></strong><br />
+  <span class="story_item_teaser entry-summary">The story never gets old. Only better. Over 2,000 years ago the Light of the World was born. Arou...</span><br />
+  <span class="story_item_info">
+ 
+        <div class="story_item_author" style="display:none;">
+          by
+          <span class="author vcard">
+            <span class="fn">Steve Beavers</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+ 
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+ <a class="story_item_full_story_link" href="/view/full_story/24206021/article-Experience-provides-sights--sounds-of-Christmas?">full story</a></span>
+</div>
+
+    </div>
+    <div class="odd">
+        <div class="story_item hnews hentry item">
+  
+  <strong class="story_item_title"><a href="/view/full_story/24205983/article-Museum-presents--Mississippi-Mandala-?" class="entry-title">Museum presents ‘Mississippi M...</a></strong><br />
+  <span class="story_item_teaser entry-summary">The Crossroads Museum presents “Mississippi Mandala,” a mixed-media artwork exhibition by Corinth...</span><br />
+  <span class="story_item_info">
+ 
+        <div class="story_item_author" style="display:none;">
+          by
+          <span class="author vcard">
+            <span class="fn">Staff Report</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+ 
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+ <a class="story_item_full_story_link" href="/view/full_story/24205983/article-Museum-presents--Mississippi-Mandala-?">full story</a></span>
+</div>
+
+    </div>
+    <div class="even">
+        <div class="story_item hnews hentry item">
+  
+  <strong class="story_item_title"><a href="/view/full_story/24197855/article-Two-K-Mart-employees-busted?" class="entry-title">Two K-Mart employees busted</a></strong><br />
+  <span class="story_item_teaser entry-summary">Two K-Mart employees no longer have jobs after being charged with embezzlement. Xavier Blathers, ...</span><br />
+  <span class="story_item_info">
+ 
+        <div class="story_item_author" style="display:none;">
+          by
+          <span class="author vcard">
+            <span class="fn">Steve Beavers</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+ 
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+ <a class="story_item_full_story_link" href="/view/full_story/24197855/article-Two-K-Mart-employees-busted?">full story</a></span>
+</div>
+
+    </div>
+    <div class="odd">
+        <div class="story_item hnews hentry item">
+  
+<div class="image_container">
+  <a href="/view/full_story/24197843/article-Lastest-CT-A-production-opens-Thursday?"><img class="small-float-left" src='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/67B9_12_11_miracle_worker_doc150X150.jpg' alt='A doctor (Richard Ribble) tries to help young Helen (Riley Budny) and her mother (Katelyn Mathis) during the production of &amp;quot;The Miracle Worker.&amp;quot; ' title='A doctor (Richard Ribble) tries to help young Helen (Riley Budny) and her mother (Katelyn Mathis) during the production of &amp;quot;The Miracle Worker.&amp;quot; ' />
+</a>
+</div>
+  <strong class="story_item_title"><a href="/view/full_story/24197843/article-Lastest-CT-A-production-opens-Thursday?" class="entry-title">Lastest CT-A production opens ...</a></strong><br />
+  <span class="story_item_teaser entry-summary">A story of hope is what audiences can expect to see when "The Miracle Worker" takes stage Thursda...</span><br />
+  <span class="story_item_info">
+ 
+        <div class="story_item_author" style="display:none;">
+          by
+          <span class="author vcard">
+            <span class="fn">Steve Beavers</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+ 
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+ <a class="story_item_full_story_link" href="/view/full_story/24197843/article-Lastest-CT-A-production-opens-Thursday?">full story</a></span>
+</div>
+
+    </div>
+    <div class="even">
+        <div class="story_item hnews hentry item">
+  
+  <strong class="story_item_title"><a href="/view/full_story/24197835/article-Academy-students--cross-country-teams--honored-by-board?" class="entry-title">Academy students, cross-countr...</a></strong><br />
+  <span class="story_item_teaser entry-summary">The Alcorn School District board meeting was held on Monday, Dec. 9 with plenty of folks on hand....</span><br />
+  <span class="story_item_info">
+ 
+        <div class="story_item_author" style="display:none;">
+          by
+          <span class="author vcard">
+            <span class="fn">Joseph Miller</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+ 
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+ <a class="story_item_full_story_link" href="/view/full_story/24197835/article-Academy-students--cross-country-teams--honored-by-board?">full story</a></span>
+</div>
+
+    </div>
+      
+
+  </div>
+</div>
+        
+          
+        </div>
+<div style="clear: both;"></div>
+      </div>
+      
+      
+
+
+<div class="pod_heading">Sports</div>
+
+      <div id="col_stories_pod">
+        
+        <div id="col_stories_left">
+          <div id="push_container" align="left">  <div style="" class="">
+    <div class="even">
+        <div class="story_item hnews hentry item">
+
+	<div class="story_item_headline"><a href="/view/full_story/24191721/article-Prep-Basketball-Results?" class="entry-title">Prep Basketball Results</a></div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          <span class="source-org author vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		Saturday (B) Corinth 63, Tupelo 58 Doc Vandiver Classic-Baldwyn Corinth 20 12 12 19 -- 63 Tupelo 21 9 6 22 -- 58 CORINTH (63): Antares Gwyn 21, Desmin Harris 16, Raheem Sor...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="odd">
+        <div class="story_item hnews hentry item">
+
+	<div class="story_item_headline"><a href="/view/full_story/24191717/article-Mississippi-St--to-play-Rice-in-Liberty-Bowl-?" class="entry-title">Mississippi St. to play R...</a></div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">The Associated Press</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Associated Press</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		The Mississippi State Bulldogs will have a chance to celebrate their 50th anniversary of the Liberty Bowl by playing in the game for the fourth time overall. Bowl officials...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="even">
+        <div class="story_item hnews hentry item">
+
+	<div class="story_item_headline"><a href="/view/full_story/24191715/article-Music-City-Bowl-pits-Ole-Miss-Tech?" class="entry-title">Music City Bowl pits Ole ...</a></div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">The Associated Press</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Associated Press</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		NASHVILLE, Tenn. — The Mississippi Rebels will finish the season in the same place where they started back in August. The Rebels will play Georgia Tech in the Music City Bo...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.</a>
+      </span>
+      
+</div>
+
+    </div>
+      
+
+  </div>
+</div>
+        </div>
+        
+        <div id="col_stories_right">
+
+
+          <div id="push_container" align="left">  <div style="" class="">
+    <div class="even">
+        <div class="story_item hnews hentry item">
+        
+	<div class="story_item_headline">
+          <a href="/view/full_story/24183921/article-Dorsey-part-of-North-coaching-staff?" class="entry-title">Dorsey part of North coaching staff</a>
+        </div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Staff Report</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		BOONEVILLE – Devario Dorsey was back on familiar ground. The Corinth native returned to the northeast Mississippi area as an all-sta...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="odd">
+        <div class="story_item hnews hentry item">
+        
+	<div class="story_item_headline">
+          <a href="/view/full_story/24178799/article-High-School-Hoop?" class="entry-title">High School Hoop</a>
+        </div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          <span class="source-org author vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="even">
+        <div class="story_item hnews hentry item">
+        
+	<div class="story_item_headline">
+          <a href="/view/full_story/24178781/article-Josey-is-game-breaker-again?" class="entry-title">Josey is game-breaker again</a>
+        </div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">R.B. Fallstrom</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		COLUMBIA, Mo. — A little more than two years ago, Henry Josey ripped his left knee to shreds making a cut. He tore the ACL, MCL and ...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="odd">
+        <div class="story_item hnews hentry item">
+        
+	<div class="story_item_headline">
+          <a href="/view/full_story/24173621/article-No-charges-for-Heisman-hopeful?" class="entry-title">No charges for Heisman hopeful</a>
+        </div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">The Associated Press</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Associated Press</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		TALLAHASSEE, Fla. — Florida State quarterback and Heisman Trophy candidate Jameis Winston will not be charged with sexually assaulti...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="even">
+        <div class="story_item hnews hentry item">
+        
+	<div class="story_item_headline">
+          <a href="/view/full_story/24173617/article-Rose-not-ruling-out-return-this-season-?" class="entry-title">Rose not ruling out return this season </a>
+        </div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">The Associated Press</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Associated Press</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		CHICAGO — Derrick Rose isn't wavering. He still sees himself as a star, a cornerstone player, despite another major knee injury that...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.</a>
+      </span>
+      
+</div>
+
+    </div>
+      
+
+  </div>
+</div>
+
+          
+    
+
+
+        </div>
+        
+<div style="clear: both;"></div>
+      </div>
+    
+  
+  
+  <div class="pod_heading">Opinion</div>
+
+      <div id="col_stories_pod">
+        
+        <div id="col_stories_left">
+          <div id="push_container" align="left">  <div style="" class="">
+    <div class="even">
+        <div class="story_item hnews hentry item">
+
+	<div class="story_item_headline"><a href="/view/full_story/24197315/article-Life-is-so-daily?" class="entry-title">Life is so daily</a></div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Rheta Grimsley Johnson</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		BAY ST. LOUIS -- If there is a prettier town than this, I don't know it, Katrina scars and all. It is no wonder that when, at age 79, renowned Mississippi folk artist Alice...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="odd">
+        <div class="story_item hnews hentry item">
+
+	<div class="story_item_headline"><a href="/view/full_story/24197313/article-Christmas-books?" class="entry-title">Christmas books</a></div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Thomas Sowell</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		As Christmas approaches, the shopping mall can become a shopping maul. One of the ways of buying gifts for family and friends, without becoming part of a mob scene in the s...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="even">
+        <div class="story_item hnews hentry item">
+
+	<div class="story_item_headline"><a href="/view/full_story/24191707/article-Allain-was-undaunted-by-power-and-money-?" class="entry-title">Allain was undaunted by p...</a></div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Emily Wagster Pettus</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Associated Press</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		JACKSON— Former Mississippi Gov. Bill Allain was known for his quick wit, sharp analytical mind and willingness to challenge entrenched interests. Allain died Dec. 2 at age...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.</a>
+      </span>
+      
+</div>
+
+    </div>
+      
+
+  </div>
+</div>
+        </div>
+        
+        <div id="col_stories_right">
+
+
+          <div id="push_container" align="left">  <div style="" class="">
+    <div class="even">
+        <div class="story_item hnews hentry item">
+        
+	<div class="story_item_headline">
+          <a href="/view/full_story/24191713/article-Here-s-hoping-earmarks-define---14-Senate-race?" class="entry-title">Here’s hoping earmarks define  ‘14 Senate race</a>
+        </div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Sid Salter</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		Before Club for Growth and others engage in revisionist history over the question of congressional earmarks in Mississippi’s 2014 U....
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="odd">
+        <div class="story_item hnews hentry item">
+        
+	<div class="story_item_headline">
+          <a href="/view/full_story/24178629/article-Good-enough-for-government?" class="entry-title">Good enough for government</a>
+        </div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Rich Lowry</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		The phrase "good enough for government work" used to be a boast. Then it became an insult. With Obamacare, it is an ethic. On Cyber ...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="even">
+        <div class="story_item hnews hentry item">
+        
+	<div class="story_item_headline">
+          <a href="/view/full_story/24178627/article-Americans-are-fleeing-TV?" class="entry-title">Americans are fleeing TV</a>
+        </div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Bill O'Reilly</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		Marketing surveys now show that when Americans come home from work, more folks turn on their computers than their television sets. T...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="odd">
+        <div class="story_item hnews hentry item">
+        
+	<div class="story_item_headline">
+          <a href="/view/full_story/24178625/article-Leaders-must-pave-way-for-solar-power?" class="entry-title">Leaders must pave way for solar power</a>
+        </div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Wyatt Emmerich</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		On a sunny day this past summer, Germany produced a world record of 24 gigawatts of electricity per hour. That’s equal to 20 nuclear...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="even">
+        <div class="story_item hnews hentry item">
+        
+	<div class="story_item_headline">
+          <a href="/view/full_story/24178623/article-Is-the-sun-rising-in-the-East-?" class="entry-title">Is the sun rising in the East?</a>
+        </div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Patrick Buchanan</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		The scores are in from the 2012 Program for International Student Assessment, which, every three years, tests 15-year-olds from the ...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+      
+
+  </div>
+</div>
+
+          
+    
+
+
+        </div>
+        
+<div style="clear: both;"></div>
+      </div>
+  
+  
+  
+    
+<div class="pod_heading">Crossroads</div>
+
+      <div id="col_stories_pod">
+        <div id="col_stories_left">
+        
+        
+          <div id="push_container" align="left">  <div style="" class="">
+    <div class="even">
+        <div class="story_item hnews hentry item">
+
+	<div class="story_item_headline"><a href="/view/full_story/23757821/article-Repairman-blessed-to-be-in-the-right-place-at-the-right-time?" class="entry-title">Repairman blessed to be i...</a></div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">The Back Porch-Lora Ann Huff</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		His shop door is open each weekday morning around eight o’clock. He’s open for business whether he has several customers or just one or two. Ralph Hurley has run a lawn mow...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="odd">
+        <div class="story_item hnews hentry item">
+
+	<div class="story_item_headline"><a href="/view/full_story/23603939/article-Country--poor--belongs--in-eye-of-the-beholder?" class="entry-title">Country ‘poor’ belongs in...</a></div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Lora Ann Huff</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		Driving through an area where large new houses were being built only a few feet apart, I made the comment to my husband I couldn’t be paid to live in such a tightly fit nei...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="even">
+        <div class="story_item hnews hentry item">
+
+	<div class="story_item_headline"><a href="/view/full_story/23459473/article-Wenasoga-native-recounts-100-years-in-community?" class="entry-title">Wenasoga native recounts ...</a></div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">The Back Porch</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		What was life like in Alcorn County 100 years ago? We’ve heard the stories passed down from our parents and grandparents and read short-story accounts of local history, but...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+      
+
+  </div>
+</div>
+        </div>
+        <div id="col_stories_right">
+        
+        
+          <div id="push_container" align="left">  <div style="" class="">
+    <div class="even">
+        <div class="story_item hnews hentry item">
+        
+	<div class="story_item_headline">
+          <a href="/view/full_story/18729704/article--The-Back-Porch--Children-learn-from--heroes-in-faith-?" class="entry-title"><b>The Back Porch: Children learn from 'heroes in faith'</b></a>
+        </div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Lora Ann Huff</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		Listening to part of a message by Dr. Charles Stanley last weekend brought back memories I cherish from my childhood and growing-up ...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="odd">
+        <div class="story_item hnews hentry item">
+        
+	<div class="story_item_headline">
+          <a href="/view/full_story/18607084/article--Avengers-activate-abilities-to-save-the-world-?" class="entry-title"><b>Avengers activate abilities to save the world</b></a>
+        </div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Terry Burns</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		Avengers activate abilities to save the world The Avengers, PG-13, ****, Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemswor...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="even">
+        <div class="story_item hnews hentry item">
+        
+	<div class="story_item_headline">
+          <a href="/view/full_story/18565773/article--The-Back-Porch--Mothers-not-always-perfect--but-Someone-it-?" class="entry-title"><b>The Back Porch: Mothers not always perfect, but Someone it</b></a>
+        </div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Lora Ann Huff</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		Well known author and Bible teacher, Beth Moore, said recently if you think you are one who “has it all together,” just have childre...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="odd">
+        <div class="story_item hnews hentry item">
+        
+	<div class="story_item_headline">
+          <a href="/view/full_story/18375117/article--The-Back-Porch--Confessing-some-burdens-only-to-God-?" class="entry-title"><b>The Back Porch: Confessing some burdens only to God</b></a>
+        </div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Lora Ann Huff</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		Everybody’s writing a book these days. Seems every time I turn the TV on, someone is being interviewed because their new book is hit...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+    <div class="even">
+        <div class="story_item hnews hentry item">
+        
+	<div class="story_item_headline">
+          <a href="/view/full_story/18345107/article-History-of-family-tree-in-a-nutshell?" class="entry-title">History of family tree in a nutshell</a>
+        </div>
+	<div class="story_item_info">
+		
+        <div class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Ryland Bruhwiler</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </div>
+      
+    
+	</div>
+	<div class="story_item_summary entry-summary">
+		When I headed up to Selmer for my appointment at a local hair salon last week, I got more than a new “do.” I got a lesson in local h...
+	</div>
+	
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+</div>
+
+    </div>
+      
+
+  </div>
+</div>
+         
+          
+          
+          
+          
+        </div>
+<div style="clear: both;"></div>
+      </div>    
+      
+
+
+
+
+
+
+<div class="pod_heading">AP Video</div>
+
+      <div id="col_stories_pod" style="height: 115px; padding-top: 10px">
+        
+        
+        
+ <iframe src="http://embed.newsinc.com/Thumbnail/iframe.html?wid=8407&cid=507&freewheel=90980&sitesection=heraldsun_hom&parent=ndn_sliding_launcher_1&type=horizontal500" height="90" width="550" frameborder="no" scrolling="no" noresize marginwidth="0px" marginheight="0px"></iframe>
+        
+        
+        
+        
+<div style="clear: both;"></div>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+            <div id="split_stories_pod">
+              <div id="split_stories_left">
+                <div class="pod_heading">This week in Pictures</div>
+                  <div id="push_week_in_pics_container" align="left">  <div style="" class="">
+    <div class="even">
+        <div class="slideshow_container" style="">
+  <div class="story_item_headline">Recent images from the Crossroads</div>
+<a style="display:none;" href='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/DQ28_window_painting_1_copy.jpg' title='Corinth High School art student Elizabeth Whitehurst touches up a snow globe mural. The globe is part of the school&amp;#x27;s design in the Long-Lewis art competition.  / Staff photo by Steve Beavers' rel='lightbox[parent24166203]'> </a>
+
+<a style="display:none;" href='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/B4GA_Horizontal.jpg' title='Staff photo by Brant Sappington
+Booneville&amp;#x27;s First Baptist Church choir brought the sounds of the season to the city&amp;#x27;s innaugural community Christmas tree lighting held Sunday in the downtown triangle. City leaders hope the community tree, purchased through a grant from ACCO Corporation to the Booneville Prentiss County Main Street Association, will become a cherished holiday tradition in years to come.' rel='lightbox[parent24166203]'> </a>
+
+<a style="display:none;" href='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/K8P4_singing_tree_1.jpg' title='' rel='lightbox[parent24166203]'> </a>
+
+<a style="display:none;" href='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/JSRI_mayor_inks_proclamation.jpg' title='Mayor Tommy Irwin signs the Fiber-to-the-Home proclamation at his downtown office at the city hall on Monday.' rel='lightbox[parent24166203]'> </a>
+
+<a style="display:none;" href='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/BHYV_helicopter_group_with_Santa.jpg' title='Ginger Stockton (far right) poses with the helicopter crew, Santa Claus and his elves on Black Friday in the Harper Square parking lot. ' rel='lightbox[parent24166203]'> </a>
+
+<a style="display:none;" href='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/7D60_web_ac_classic.jpg' title='Alcorn Central&amp;#x27;s John Wiley Works (left) scored a game-high 23 to lead the Bears past Nettleton.' rel='lightbox[parent24166203]'> </a>
+
+<a style="display:none;" href='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/6UBP_Regina_Cummings_at_Belks.jpg' title='Staff photo by Joseph Miller
+
+Belk Sales Manager, Regina Cummings, (right) helps one of her many customers on Black Friday. Linda Rossman (left) of Savannah, Tenn., says she drove all the way to Corinth for some good deals, and got just what she was looking for. ' rel='lightbox[parent24166203]'> </a>
+
+<a style="display:none;" href='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/BXV6_11.29_Lee_Thurner.jpg' title='Lee Thurner takes hot turkey and dressing to the servers Thursday morning as 1,000 meals were prepared for those who requested it on Thanksgiving Day. / Staff photo by Mark Boehler' rel='lightbox[parent24166203]'> </a>
+
+<a style="display:none;" href='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/QGB_glendale_front_copy.jpg' title='Glendale Elementary School first graders Jake Tucker (left) and Noah Wiginton set sail on the Mayflower. / Staff photo by Steve Beavers' rel='lightbox[parent24166203]'> </a>
+
+<a style="display:none;" href='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/FLI6_4H_front.jpg' title='Master of Ceremonies Tony Laudadio arranges awards to be handed out during the Alcorn County 4-H Awards Banquet.' rel='lightbox[parent24166203]'> </a>
+
+<a style="display:none;" href='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/8IRG_Front.jpg' title='Staff photo by Brant Sappington
+Catelyn Williams (left) and Cara Breedlove color their American Indian costumes as part of Thanksgiving activities at First United Methodist Church Preschool.
+' rel='lightbox[parent24166203]'> </a>
+
+<a style="display:none;" href='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/A2LW_Christmas_concert_copy.jpg' title='Jerry Pham (from left), Christian Leppan, Olivia Edmonson and Ja’myiah McGee practice singing “Rockin’ Around the Christmas Tree” at Corinth Elementary School Friday morning. Along with the rest of the class, they will participate in the Dec. 3 Christmas concert at the Corinth Coliseum Civic Center. / Staff photo by Jebb Johnston' rel='lightbox[parent24166203]'> </a>
+
+<a style="display:none;" href='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/J7YQ_first_methodist_turkey_copy.jpg' title='' rel='lightbox[parent24166203]'> </a>
+
+<a style="display:none;" href='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/2KEN_gallery_sale_copy.jpg' title='Gallery volunteers Carol Hebel (left) and Merry Overholt get locally handmade scarves and tree ornaments in place for the Christmas sale at the Corinth Artist Guild Gallery at 507 Cruise Street. / Staff photo by Jebb Johnston' rel='lightbox[parent24166203]'> </a>
+
+<a style="display:none;" href='http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/2F8I_11_22_santa_sonny.jpg' title='Santa Claus will be available for photos in effort to raise money for the Crossroads Museum on Saturday.' rel='lightbox[parent24166203]'> </a>
+
+  <div class="simple-slideshow-container">
+    <div class="slideshow-image-wrapper">
+      <img id="slideshow-image-24166203" class="image_img slideshow_image" src="http://matchbin-assets.s3.amazonaws.com/public/sites/731/assets/DQ28_window_painting_1_copy.jpg" />
+    </div>
+    <div class="simple-slideshow-nav-container">
+      <a href="#" id="simple-slideshow-play-24166203">Play</a> |
+      <a href="#" id="simple-slideshow-stop-24166203">Stop</a> |
+      <a href="#" id="simple-slideshow-prev-24166203"><< Previous</a> |
+      <a href="#" id="simple-slideshow-next-24166203">Next >></a>
+    </div>
+    <div class="image_caption image_count" id="slideshow-details-container-24166203">Image 1 / 15</div>
+    <div class="image_caption" id="slideshow-caption-container-24166203">Corinth High School art student Elizabeth Whitehurst touches up a snow globe mural. The globe is part of the school&#x27;s design in the Long-Lewis art competition.  / Staff photo by Steve Beavers</div>
+  </div>
+<script>
+  new SimpleSlideshow(Object.extend({
+    image: $('slideshow-image-24166203'),
+    playButton: "simple-slideshow-play-24166203",
+    stopButton: "simple-slideshow-stop-24166203",
+    prevButton: "simple-slideshow-prev-24166203",
+    nextButton: "simple-slideshow-next-24166203",
+    viewInterval: 6000,
+    autoplay: true,
+    imageGroup: 'lightbox[parent24166203]',
+    captionContainer: 'slideshow-caption-container-24166203',
+    detailsContainer: 'slideshow-details-container-24166203',
+    imageText: 'Image',
+    ofText: '/'
+  }));
+</script>
+
+
+</div>
+    </div>
+      
+
+  </div>
+</div>
+              </div>
+              <div id="split_stories_right">
+                <div class="pod_heading">Local Events</div>
+                
+                  <div id="todays_events_home_events_container" align="left"><script type="text/javascript" charset="utf-8">
+  //<![CDATA[
+// ** I18N
+
+// Calendar EN language
+// Author: Mihai Bazon, <mihai_bazon@yahoo.com>
+// Encoding: any
+// Distributed under the same terms as the calendar itself.
+
+// For translators: please use UTF-8 if possible.  We strongly believe that
+// Unicode is the answer to a real internationalized world.  Also please
+// include your contact information in the header, as can be seen above.
+
+// full day names
+Calendar._DN = new Array
+("Sunday",
+ "Monday",
+ "Tuesday",
+ "Wednesday",
+ "Thursday",
+ "Friday",
+ "Saturday",
+ "Sunday");
+
+// Please note that the following array of short day names (and the same goes
+// for short month names, _SMN) isn't absolutely necessary.  We give it here
+// for exemplification on how one can customize the short day names, but if
+// they are simply the first N letters of the full name you can simply say:
+//
+//   Calendar._SDN_len = N; // short day name length
+//   Calendar._SMN_len = N; // short month name length
+//
+// If N = 3 then this is not needed either since we assume a value of 3 if not
+// present, to be compatible with translation files that were written before
+// this feature.
+
+// short day names
+Calendar._SDN = "Sun,Mon,Tue,Wed,Thu,Fri,Sat,Sun".split(",");
+// First day of the week. "0" means display Sunday first, "1" means display
+// Monday first, etc.
+Calendar._FD = 0;
+
+// full month names
+Calendar._MN = "January,February,March,April,May,June,July,August,September,October,November,December".split(",");
+
+// short month names
+Calendar._SMN = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec".split(",");
+
+// tooltips
+Calendar._TT = {};
+Calendar._TT["INFO"] = "About the calendar";
+
+Calendar._TT["ABOUT"] =
+"Date selection:\n" +
+"- Use the <<, >> buttons to select year\n" +
+"- Use the <, > buttons to select month\n" +
+"- Hold mouse button on any of the above buttons for faster selection.";
+Calendar._TT["ABOUT_TIME"] = "\n\n" +
+"Time selection:\n" +
+"- Click on any of the time parts to increase it\n" +
+"- or Shift-click to decrease it\n" +
+"- or click and drag for faster selection.";
+
+Calendar._TT["PREV_YEAR"] = "Prev. year (hold for menu)";
+Calendar._TT["PREV_MONTH"] = "Prev. month (hold for menu)";
+Calendar._TT["GO_TODAY"] = "Go Today";
+Calendar._TT["NEXT_MONTH"] = "Next month (hold for menu)";
+Calendar._TT["NEXT_YEAR"] = "Next year (hold for menu)";
+Calendar._TT["SEL_DATE"] = "Select date";
+Calendar._TT["DRAG_TO_MOVE"] = "Drag to move";
+Calendar._TT["PART_TODAY"] = " (today)";
+
+// the following is to inform that "%s" is to be the first day of week
+// %s will be replaced with the day name.
+Calendar._TT["DAY_FIRST"] = "Display %s first";
+
+// This may be locale-dependent.  It specifies the week-end days, as an array
+// of comma-separated numbers.  The numbers are from 0 to 6: 0 means Sunday, 1
+// means Monday, etc.
+Calendar._TT["WEEKEND"] = "0,6";
+
+Calendar._TT["CLOSE"] = "Close";
+Calendar._TT["TODAY"] = "Go to today";
+//Calendar._TT["TIME_PART"] = "Click and drag to change value";
+Calendar._TT["TIME_PART"] = "click and drag right/left to update";
+
+// date formats
+Calendar._TT["DEF_DATE_FORMAT"] = "%Y-%m-%d";
+Calendar._TT["TT_DATE_FORMAT"] = "%a, %b %e";
+
+Calendar._TT["WK"] = "wk";
+Calendar._TT["TIME"] = "Time:";
+
+  //]]>
+</script>
+
+
+<div>
+	<span class="heading"><a class="help" href="#" onclick="show_help(this, &#x27;event_calendar_basics&#x27;);; return false;">event calendar <img alt="Icon_info" src="/images/icon_info.gif?1386779178" /></a></span>
+	<p />
+	<div align="center">
+		<div style="width: 250px;" id="calendar_container"></div>
+	</div>
+
+	<script type="text/javascript">
+
+
+		function dateChanged(calendar, additional_query_string) {
+                        if (!additional_query_string) {
+                          additional_query_string = '';
+                        }
+			new Ajax.Updater('event_list_container', '/marketplace/events/list_events?date=' + calendar.date.getFullYear() + '-' + (calendar.date.getMonth() + 1) + '-' + calendar.date.getDate() + '&amp;source=site&amp;limit=5&amp;list_format=brief&amp;source=site&amp;suppress_tags=false' + additional_query_string, {asynchronous:true, evalScripts:true}); return false;
+		}
+
+		SPECIAL_DAYS = {
+				2010: {
+					1: {
+						18: 1
+					},
+					2: {
+						24: 1,
+						27: 1
+					},
+					3: {
+						24: 1
+					},
+					4: {
+						18: 1
+					},
+					5: {
+						04: 1,
+						05: 1,
+						18: 1,
+						26: 1,
+						27: 1,
+						10: 1,
+						11: 1,
+						12: 1,
+						17: 1,
+						19: 1,
+						24: 1,
+						25: 1
+					},
+					6: {
+						10: 1,
+						09: 1,
+						08: 1,
+						01: 1,
+						02: 1,
+						03: 1,
+						15: 1,
+						16: 1,
+						17: 1,
+						22: 1,
+						23: 1,
+						24: 1,
+						29: 1,
+						30: 1
+					},
+					7: {
+						27: 1
+					},
+					8: {
+						09: 1
+					},
+					11: {
+						04: 1
+					},
+					10: {
+						01: 1
+					}
+				},
+				2011: {
+					3: {
+						16: 1
+					},
+					4: {
+						14: 1
+					},
+					5: {
+						03: 1,
+						10: 1,
+						11: 1,
+						04: 1,
+						05: 1,
+						12: 1,
+						17: 1,
+						18: 1,
+						19: 1,
+						24: 1,
+						25: 1,
+						26: 1
+					},
+					8: {
+						17: 1,
+						22: 1,
+						02: 1,
+						03: 1,
+						04: 1,
+						09: 1,
+						10: 1,
+						11: 1,
+						16: 1,
+						18: 1,
+						23: 1,
+						24: 1,
+						25: 1,
+						30: 1
+					},
+					10: {
+						17: 1,
+						04: 1,
+						05: 1,
+						06: 1,
+						11: 1,
+						12: 1,
+						13: 1,
+						18: 1,
+						19: 1,
+						20: 1,
+						25: 1,
+						26: 1,
+						27: 1
+					},
+					6: {
+						01: 1,
+						02: 1,
+						03: 1,
+						08: 1,
+						09: 1,
+						10: 1,
+						15: 1,
+						16: 1,
+						17: 1,
+						22: 1,
+						23: 1,
+						24: 1,
+						29: 1,
+						30: 1,
+						31: 1
+					},
+					7: {
+						05: 1,
+						06: 1,
+						07: 1,
+						12: 1,
+						13: 1,
+						14: 1,
+						19: 1,
+						20: 1,
+						21: 1,
+						26: 1,
+						27: 1,
+						28: 1
+					},
+					9: {
+						01: 1,
+						02: 1,
+						07: 1,
+						08: 1,
+						09: 1,
+						14: 1,
+						15: 1,
+						16: 1,
+						21: 1,
+						22: 1,
+						23: 1,
+						28: 1,
+						29: 1,
+						30: 1
+					},
+					11: {
+						02: 1,
+						03: 1,
+						04: 1,
+						09: 1,
+						10: 1,
+						11: 1,
+						16: 1,
+						17: 1,
+						18: 1,
+						23: 1,
+						24: 1,
+						25: 1,
+						30: 1,
+						31: 1
+					}
+				},
+				2012: {
+					3: {
+						12: 1,
+						01: 1,
+						06: 1,
+						07: 1,
+						08: 1,
+						13: 1,
+						14: 1,
+						15: 1,
+						20: 1,
+						21: 1,
+						22: 1,
+						27: 1,
+						28: 1,
+						29: 1
+					},
+					9: {
+						20: 1,
+						04: 1
+					},
+					6: {
+						19: 1,
+						13: 1,
+						12: 1
+					},
+					8: {
+						11: 1,
+						15: 1
+					},
+					11: {
+						01: 1
+					},
+					7: {
+						07: 1
+					},
+					0: {
+						01: 1,
+						06: 1,
+						07: 1,
+						08: 1,
+						13: 1,
+						14: 1,
+						15: 1,
+						20: 1,
+						21: 1,
+						22: 1,
+						27: 1,
+						28: 1,
+						29: 1
+					},
+					1: {
+						03: 1,
+						04: 1,
+						05: 1,
+						10: 1,
+						11: 1,
+						12: 1,
+						17: 1,
+						18: 1,
+						19: 1,
+						24: 1,
+						25: 1,
+						26: 1
+					},
+					2: {
+						02: 1,
+						03: 1,
+						04: 1,
+						09: 1,
+						10: 1,
+						11: 1,
+						16: 1,
+						17: 1,
+						18: 1,
+						23: 1,
+						24: 1,
+						25: 1,
+						30: 1,
+						31: 1
+					},
+					4: {
+						04: 1,
+						05: 1,
+						06: 1,
+						11: 1,
+						12: 1,
+						13: 1,
+						18: 1,
+						19: 1,
+						20: 1,
+						25: 1,
+						26: 1,
+						27: 1
+					},
+					5: {
+						01: 1,
+						02: 1,
+						03: 1,
+						08: 1
+					}
+				},
+				2013: {
+					3: {
+						06: 1,
+						09: 1,
+						12: 1,
+						02: 1
+					},
+					4: {
+						04: 1
+					},
+					5: {
+						08: 1,
+						11: 1,
+						22: 1
+					},
+					10: {
+						17: 1
+					}
+				}
+		}
+
+		function dateSpecial(date, y, m, d) {
+			if(SPECIAL_DAYS[y]) {
+				if(SPECIAL_DAYS[y][m]) {
+					if(SPECIAL_DAYS[y][m][d]) {
+						return 'specialDay';
+					}
+				}
+			}
+
+			return false;
+		}
+
+		Calendar.setup(
+			{
+				flat         : "calendar_container", // ID of the parent element
+				flatCallback : dateChanged,           // our callback function
+				weekNumbers  : false,
+				range        : [2012, 2014],
+				date         : 'December 11, 2013 21:43',
+				dateStatusFunc : dateSpecial
+			}
+		);
+	</script>
+	<p />
+	<div id="event_list_container" align="left" style="text-align: left;">
+			<span class="label">Wednesday, December 11, 2013</span>
+	<p />
+	<div class="note fontSmall" align="center">
+		no events are posted for this date <a href="/pages/edit_ad/edit_listing/select_klass?kind=have&amp;klass=event&amp;instance=home_events"><span class="link fontSmall">post one now</span></a> <a class="help" href="#" onclick="show_help(this, &#x27;post_an_event&#x27;);; return false;"> <img alt="Icon_info" src="/images/icon_info.gif?1386779178" /></a>
+	</div>
+
+	</div>
+</div></div>
+                  <br />
+                  <span style="float: right;"><a href="/events">see all events</a></span>
+                
+                </div>
+
+              </div>
+      <div style="clear: both;"></div>
+
+
+
+
+
+
+            </div>
+
+  
+  
+  
+    
+  <div id="right_column">
+     <div class="anything_right_column">
+  <noscript>
+<a href="http://servedby.flashtalking.com/click/3/24557;674139;0;209;0/?ft_width=300&ft_height=250&url=4398267" target="_blank">
+<img border="0" src="http://servedby.flashtalking.com/imp/3/24557;674139;205;gif;CentroNetworkUS;DISCPMDailyCorinthianROSGEOTupeloCorinth300x2501x1TP/?"></a>
+</noscript>
+<script language="Javascript1.1" type="text/javascript">
+var ftClick = "";
+var ftX = "";
+var ftY = "";
+var ftZ = "";
+var ftOBA = 1;
+var ftContent = "";
+var ftCustom = "";
+var ft300x250_OOBclickTrack = "";
+var ftRandom = Math.random()*1000000;
+var ftBuildTag1 = "<scr";
+var ftBuildTag2 = "</";
+var ftClick_674139 = ftClick;
+if(typeof(ft_referrer)=="undefined"){var ft_referrer=(function(){var r="";if(window==top){r=window.location.href;}else{try{r=window.parent.location.href;}catch(e){}r=(r)?r:document.referrer;}while(encodeURIComponent(r).length>1500){r=r.substring(0,r.length-1);}return r;}());}
+var ftDomain = (window==top)?"":(function(){var d=document.referrer,h=(d)?d.match("(?::q/q/)+([qw-]+(q.[qw-]+)+)(q/)?".replace(/q/g,decodeURIComponent("%"+"5C")))[1]:"";return (h&&h!=location.host)?"&ft_ifb=1&ft_domain="+encodeURIComponent(h):"";}());
+var ftTag = ftBuildTag1 + 'ipt language="javascript1.1" type="text/javascript" ';
+ftTag += 'src="http://servedby.flashtalking.com/imp/3/24557;674139;201;js;CentroNetworkUS;DISCPMDailyCorinthianROSGEOTupeloCorinth300x2501x1TP/?ftx='+ftX+'&fty='+ftY+'&ftadz='+ftZ+'&ftscw='+ftContent+'&ft_custom='+ftCustom+'&ftOBA='+ftOBA+ftDomain+'&ft_referrer='+encodeURIComponent(ft_referrer)+'&cachebuster='+ftRandom+'" id="ftscript_300x250" name="ftscript_300x250"';
+ftTag += '>' + ftBuildTag2 + 'script>';
+document.write(ftTag);
+</script>
+
+
+
+</div>
+
+      <div class="anything_right_column">
+            <style type="text/css" media="screen">
+	#home_eedition_pod {
+	width: 280px;
+	margin-bottom: 10px;
+	border-top: 3px solid #515151;
+	border-bottom: 3px solid #515151;
+	padding: 10px;
+	text-align: left;
+	background: #fefefe;
+	background: -moz-linear-gradient(top, #fefefe 0%, #efefef 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#efefef));
+	background: -webkit-linear-gradient(top, #fefefe 0%,#efefef 100%);
+	background: -o-linear-gradient(top, #fefefe 0%,#efefef 100%);
+	background: -ms-linear-gradient(top, #fefefe 0%,#efefef 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#efefef',GradientType=0 );
+	background: linear-gradient(top, #fefefe 0%,#efefef 100%);
+	}
+	#eedition_button {
+	margin: 15px 0px 15px 0px;
+	}
+	#eedition_button a {
+		text-align: center;
+		text-decoration: none;
+		font-size: 11px;
+		background: #425ead;
+		padding: 7px;
+		color: #ffffff;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+	#eedition_button a:hover {
+		text-align: center;
+		text-decoration: underline;
+		font-size: 11px;
+		color: #ffffff;
+	}
+	.eedition_pod_left {
+	float: left;
+	width: 45%;
+	padding: 3px;
+	}
+	.eedition_pod_left_text {
+	font-weight: bold;
+	font-size: 11px;
+	}
+	
+	.eedition_pod_right {
+	float: right;
+	width: 45%;
+	padding: 3px;
+	}
+	.eedition_right_text {
+	font-size: 11px;
+	color: red;
+	}
+	.eedition_pod_right {
+		height: 150px;
+		overflow: hidden;
+	}
+	.eedition_pod_right a:hover {
+		text-decoration: none;
+	}
+	.eedition_pod_right img {
+	background: transparent;
+	width: 110px;
+	overflow: hidden;
+	border: none;
+	}
+</style>
+
+<div id="home_eedition_pod">
+	<div class="eedition_pod_left">
+		<span class="eedition_pod_left_text"><span style="text-transform: uppercase; font-size: 12px; font-weight: bold; font-family: sans-serif; line-height: 30px;">why subscribe?</span><br />Subscribers get access to <u>all</u> content, including daily E-Edition</span><br />
+		<div id="eedition_button">
+			<a href="/new_subscribe">click here to subscribe</a><br />
+		</div>
+		<div id="eedition_button">
+			<a href="/login">already a subscriber?</a>
+		</div>
+	</div>
+	<div class="eedition_pod_right">
+		<a href="/e-edition">
+			<span class="eedition_right_text">Click for today's E-Edition</span><br />
+				<img src="/sites/731/assets/CLC2_E_Edition.jpg">
+		</a>
+	</div>
+<div class="newline"></div>
+</div>
+
+            </div>
+      
+
+
+<div class="anything_right_column">
+	  <style>
+#commented_pod .ui-widget-content {
+    margin-left: 10px;
+    margin-right: auto;
+    margin-top: 0;
+    padding: 4px;
+    width: 290px;
+}
+#commented_pod .ui-tabs .ui-tabs-panel {
+    background: none repeat scroll 0 0 transparent;
+    border-width: 0;
+    display: block;
+    padding: 5px;
+    width: auto;
+}
+#commented_ajax a:link {
+  color: #515151;
+  font-size: 12px;
+}
+#commented_ajax .even {
+    border-bottom: 1px solid #515151;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+#commented_ajax .odd {
+    border-bottom: 1px solid #515151;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+</style>
+
+
+	<div class="video_ajax_window">
+<div id="rolled_container" align="left"><script type="text/javascript">
+$j(function() {
+  $j("#commented-tabs").tabs();
+});
+</script>
+</div>
+    <div id="commented-tabs">
+
+    	<ul>
+<li><a href="#commented-tabs-1">Most Viewed</a></li>
+<li><a href="#commented-tabs-2">Most Recommended</a></li>
+
+
+    	</ul>
+
+
+    	<div id="commented-tabs-1">
+
+
+
+
+
+<div id="commented_ajax">       	
+
+ <div id="push_commented_container" align="left">  <div style="" class="story_items lead_story">
+    <div class="even">
+        <h2 class=" hnews hentry item" style="font-size:smaller;">
+  
+  <a href="/view/full_story/24064201/article-Death-notices-for-Saturday--November-16--2013?instance=commented" class="entry-title">Death notices for Saturday, November 16, 2013</a>
+  <span class="title_date updated" style="display:none;" title="2013-11-15T15:56:00-06:00"> | 11.15.13 - 03:56 pm</span>
+  <span style="display:none;">
+    
+        <span class="story_item_author" >
+          <span class="source-org author vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </span>
+      
+    
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+  </span>
+</h2>
+
+    </div>
+    <div class="odd">
+        <h2 class=" hnews hentry item" style="font-size:smaller;">
+  
+  <a href="/view/full_story/24048965/article-Death-notices-for-Thursday--November-14--2013?instance=commented" class="entry-title">Death notices for Thursday, November 14, 2013</a>
+  <span class="title_date updated" style="display:none;" title="2013-11-13T16:16:00-06:00"> | 11.13.13 - 04:16 pm</span>
+  <span style="display:none;">
+    
+        <span class="story_item_author" >
+          <span class="source-org author vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </span>
+      
+    
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+  </span>
+</h2>
+
+    </div>
+    <div class="even">
+        <h2 class=" hnews hentry item" style="font-size:smaller;">
+  
+  <a href="/view/full_story/24140107/article-Death-notices-for-Saturday--November-30--2013?instance=commented" class="entry-title">Death notices for Saturday, November 30, 2013</a>
+  <span class="title_date updated" style="display:none;" title="2013-11-29T16:02:00-06:00"> | 11.29.13 - 04:02 pm</span>
+  <span style="display:none;">
+    
+        <span class="story_item_author" >
+          <span class="source-org author vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </span>
+      
+    
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+  </span>
+</h2>
+
+    </div>
+    <div class="odd">
+        <h2 class=" hnews hentry item" style="font-size:smaller;">
+  
+  <a href="/view/full_story/24038067/article-Death-notices-for-Wednesday--November-13--2013?instance=commented" class="entry-title">Death notices for Wednesday, November 13, 2013</a>
+  <span class="title_date updated" style="display:none;" title="2013-11-12T17:11:00-06:00"> | 11.12.13 - 05:11 pm</span>
+  <span style="display:none;">
+    
+        <span class="story_item_author" >
+          <span class="source-org author vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </span>
+      
+    
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+  </span>
+</h2>
+
+    </div>
+    <div class="even">
+        <h2 class=" hnews hentry item" style="font-size:smaller;">
+  
+  <a href="/view/full_story/24151937/article-Death-notices-for-Tuesday--December-3--2013?instance=commented" class="entry-title">Death notices for Tuesday, December 3, 2013</a>
+  <span class="title_date updated" style="display:none;" title="2013-12-02T17:59:00-06:00"> | 12.02.13 - 05:59 pm</span>
+  <span style="display:none;">
+    
+        <span class="story_item_author" >
+          <span class="source-org author vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </span>
+      
+    
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+  </span>
+</h2>
+
+    </div>
+      
+
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+
+        <br>
+
+        <div class="newline"></div>
+    	</div>
+
+    	<div id="commented-tabs-2">
+
+
+
+
+<div id="commented_ajax">
+
+ <div id="push_most_recommended_container" align="left">  <div style="" class="story_items lead_story">
+    <div class="even">
+        <h2 class=" hnews hentry item" style="font-size:smaller;">
+  
+  <a href="/view/full_story/24049715/article-SEC-teams-scramble-to-salvage--upgrade-bowls?instance=most_recommended" class="entry-title">SEC teams scramble to salvage, upgrade bowls</a>
+  <span class="title_date updated" style="display:none;" title="2013-11-13T23:30:00-06:00"> | 11.13.13 - 11:30 pm</span>
+  <span style="display:none;">
+    
+        <span class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">The Associated Press</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Associated Press</span>
+          </span>
+        </span>
+      
+    
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.</a>
+      </span>
+      
+  </span>
+</h2>
+
+    </div>
+    <div class="odd">
+        <h2 class=" hnews hentry item" style="font-size:smaller;">
+  
+  <a href="/view/full_story/24029881/article-Saturday-Prep-Basketball?instance=most_recommended" class="entry-title">Saturday Prep Basketball</a>
+  <span class="title_date updated" style="display:none;" title="2013-11-11T23:35:00-06:00"> | 11.11.13 - 11:35 pm</span>
+  <span style="display:none;">
+    
+        <span class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Staff Report</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </span>
+      
+    
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+  </span>
+</h2>
+
+    </div>
+    <div class="even">
+        <h2 class=" hnews hentry item" style="font-size:smaller;">
+  
+  <a href="/view/full_story/24140107/article-Death-notices-for-Saturday--November-30--2013?instance=most_recommended" class="entry-title">Death notices for Saturday, November 30, 2013</a>
+  <span class="title_date updated" style="display:none;" title="2013-11-29T16:02:00-06:00"> | 11.29.13 - 04:02 pm</span>
+  <span style="display:none;">
+    
+        <span class="story_item_author" >
+          <span class="source-org author vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </span>
+      
+    
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+  </span>
+</h2>
+
+    </div>
+    <div class="odd">
+        <h2 class=" hnews hentry item" style="font-size:smaller;">
+  
+  <a href="/view/full_story/24038091/article-Ragin-s-3s-spark-Lady-Tigers-to-first-win?instance=most_recommended" class="entry-title">Ragin’s 3s spark Lady Tigers to first win</a>
+  <span class="title_date updated" style="display:none;" title="2013-11-12T23:30:00-06:00"> | 11.12.13 - 11:30 pm</span>
+  <span style="display:none;">
+    
+        <span class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">Staff Report</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </span>
+      
+    
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+  </span>
+</h2>
+
+    </div>
+    <div class="even">
+        <h2 class=" hnews hentry item" style="font-size:smaller;">
+  
+  <a href="/view/full_story/24029895/article-State-Cross-County-Meet--Corinth-doubles-up-as-runners-up?instance=most_recommended" class="entry-title">State Cross-County Meet: Corinth doubles up as runners-up</a>
+  <span class="title_date updated" style="display:none;" title="2013-11-11T23:40:00-06:00"> | 11.11.13 - 11:40 pm</span>
+  <span style="display:none;">
+    
+        <span class="story_item_author" >
+          by
+          <span class="author vcard">
+            <span class="fn">H. Lee Smith II</span>
+          </span>
+          
+          <span class="source-org vcard" style="display: none;">
+            <span class="org fn">Daily Corinthian</span>
+          </span>
+        </span>
+      
+    
+      <span id="copyright-container" style="display:none;">
+        <a rel="item-license" id="site_footer_container" href="#site_footer_container">Copyright 2013 Daily Corinthian. All rights reserved.</a>
+      </span>
+      
+  </span>
+</h2>
+
+    </div>
+      
+
+  </div>
+</div>
+
+</div>
+
+
+        <div class="newline"></div>
+
+    	</div>
+
+
+
+
+
+	
+		
+		
+									</div>
+<div class="newline"></div>	
+</div>
+
+</div>
+
+<div class="anything_right_column">
+<a href="/pages/gardners"><img src="/sites/731/assets/gardners-image.gif"></a>
+</div>
+
+<div class="anything_right_column">
+	<script type="text/javascript" charset="utf-8" src="http://ads.radiatemedia.com/javascripts/matchbin_ad.js"></script>
+<script type="text/javascript" charset="utf-8">
+      //do not show ads on secure connections
+      if (window.location.protocol.match(/http:/)) {
+        _matchbin_ad.showAd({"instance":"ros_top_square","tags":"ros_top_square","site_id":731,"sitename":"rm.dailycorinthian.001","inline":null,"width":300,"height":250,"site_constraints_ignored":"dimensions"});
+      }
+</script>
+
+</div>
+
+<div class="anything_right_column">
+	<script type="text/javascript" charset="utf-8" src="http://ads.radiatemedia.com/javascripts/matchbin_ad.js"></script>
+<script type="text/javascript" charset="utf-8">
+      //do not show ads on secure connections
+      if (window.location.protocol.match(/http:/)) {
+        _matchbin_ad.showAd({"instance":"ros_top_square","tags":"ros_top_square","site_id":731,"sitename":"rm.dailycorinthian.001","inline":null,"width":300,"height":250,"site_constraints_ignored":"dimensions"});
+      }
+</script>
+
+</div>
+
+<div class="anything_right_column">
+	<div id="content_container" align="left">	<div>
+	
+</div>
+</div>
+</div>
+
+
+
+<div class="anything_right_column">
+	<div class="pod_heading" style="margin-top: 25px;">Featured Businesses</div>
+	<div id="popular_listings_container" align="left"><div class="widgetBody">
+
+</div></div>
+</div>
+
+<div class="pod_heading">			
+				RSS Feeds
+			</div>
+	<div style="width: 145px;">
+<div id="push_rss_feed_Daily Corinthian Stories_container" align="left"><a class="rss_link" rel="alternate nofollow" type="application/rss+xml" href="http://dailycorinthian.com/rss/home/Daily+Corinthian+Stories?instance=Daily+Corinthian+Stories&amp;content_type=article&amp;tags=rss&amp;offset=0&amp;limit=200&amp;source=site&amp;page_name=home">Daily corinthian stories feed</a>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var link = document.createElement('link');
+  link.setAttribute('href', '');
+  link.setAttribute('title', 'Daily corinthian stories feed');
+  link.setAttribute('rel', 'alternate nofollow');
+  link.setAttribute('type', 'application/rss+xml');
+  document.getElementsByTagName("head")[0].appendChild(link);
+  //]]>
+  </script></div>	
+</div>
+	
+	
+
+
+    
+  </div>
+
+
+
+<!-- Page curl ad -->
+
+<script type="text/javascript" charset="utf-8" src="http://ads.radiatemedia.com/javascripts/matchbin_ad.js"></script>
+<script type="text/javascript" charset="utf-8">
+      //do not show ads on secure connections
+      if (window.location.protocol.match(/http:/)) {
+        _matchbin_ad.showAd({"tags":"pagecurl","instance":"pagecurl","limit":"1","site_id":731,"sitename":"rm.dailycorinthian.001","width":1,"height":1,"site_constraints_ignored":"dimensions"});
+      }
+</script>
+
+
+
+
+          <div style="clear: both;"></div>
+            <div id="content_container" align="left">	<div>
+	<iframe src="http://static.issuu.com/widgets/shelf/index.html?folderId=0db68924-ec95-4836-8346-7722f2aa8b70&amp;theme=theme1&amp;rows=1&amp;thumbSize=medium&amp;roundedCorners=false&amp;showTitle=true&amp;showAuthor=true&amp;shadow=true&amp;effect3d=true" width="100%" height="185" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+<div id="site_footer">
+	<span id="site_index">Site Index</span>
+		<div class="newline"></div>
+	<div id="footer_left">
+		<div id="one">
+			<div id="footer_heading"><a href="/news">News</a></div>
+				<!--<li><a href="/news_local">Local</a></li>
+				<li><a href="/news_state">State</a></li>
+				<li><a href="/news_columnists">Columnists</a></li> -->
+			
+			<div id="footer_heading"><a href="#">Sports</a></div>
+				<!--<li><a href="/lifestyles_schools">Schools</a></li>
+				<li><a href="/lifestyles_food">Food</a></li>
+				<li><a href="/lifestyles_faith">Faith</a></li>
+				<li><a href="/lifestyles_entertainment">Entertainment</a></li>
+				<li><a href="/lifestyles_books">Books</a></li>
+				<li><a href="/lifestyles_health">Health</a></li>
+				<li><a href="/lifestyles_columnists">Columnists</a></li> -->
+				
+						
+			<div id="footer_heading"><a href="/opinion">Opinion</a></div>
+			
+			
+			
+		</div>
+		<div id="two">
+			
+			<div id="footer_heading"><a href="http://www.dotphoto.com/go.asp?l=Daily+Corinthian&AID" target="_blank">Photos</a></div>
+				<!--
+				<li><a href="/sports_college">Colleges</a></li>
+				<li><a href="/sports_high_school">High Schools</a></li>
+				<li><a href="/sports_pro_sports">Pro Sports</a></li>
+				<li><a href="/sports_durham_bulls">Durham Bulls</a></li>
+				<li><a href="/sports_columnists">Columnists</a></li>	
+			-->
+			
+			<div id="footer_heading"><a href="obituaries">Obituaries</a></div>
+			
+			<div id="footer_heading"><a href="/business_directory">Businesses</a></div>
+				<!--<li><a href="/business_buzz">The Buzz</a></li>
+				<li><a href="/business_local">Local/State</a></li> -->
+			
+			
+			
+			
+		</div>
+		<div id="three">
+			
+			
+			
+			<div id="footer_heading"><a href="/pages/classifieds">Classifieds</a></div>
+				<!--<li><a href="/opinion_hs_editorials">Editorials</a></li>
+				<li><a href="/opinion_hs_letters">Letters</a></li>
+				<li><a href="/opinion_hs_columnists">Columnists</a></li>
+				<li><a href="letter_submit">Submit a Letter</a></li> -->
+				
+			<div id="footer_heading"><a href="/pages/banner_independent">Banner Independent</a></div>
+				<!--<li><a href="/chh_local">Local</a></li>
+				<li><a href="/chh_editorials">Editorials</a></li>
+				<li><a href="/chh_letters">Letters</a></li>
+				<li><a href="/chh_columnists">Columnists</a></li> -->
+
+			<div id="footer_heading"><a href="/subscribe">Subscribe</a></div>
+				
+				
+				
+			
+		</div>
+		<div id="four">
+		
+			<div id="footer_heading"><a href="/pages/jobs">Jobs</a></div>
+			
+			<div id="footer_heading"><a href="/pages/e-edition">E-edition</a></div>
+		
+				<div id="footer_heading"><a href="http://jobsearch.local-jobs.monster.com/jobs/?wt.mc_n=hjnpsearch&ch=dailycorinthian" target="_blank">Find Corinth, MS Jobs</a></div>
+				
+						
+		</div>
+	</div>
+	<div id="footer_right">
+		<div id="footer_right_inside_left">
+			<p style="text-align: center;">&copy; 2013  Daily Corinthian<br>1607 South Harper Road, P.O. Box 1800<br>Corinth, MS 38834.<br>662-287-6111<br>Website issues? <a href="mailto:customercare@matchbin.com">Email</a> us.</p>
+		</div>
+		<div id="footer_right_inside_right">
+			<p style="text-align: center"><a href="/contact_us">Contact Us</a> | <a href="/footer_terms_of_use">Terms of Use</a>
+				<br><br>
+					<a href=" http://www.facebook.com/pages/Daily-Corinthian/90656922163" target="_blank"><img src="/sites/1284/assets/facebook_small_footer.png" height="30px" width="30px"></a>&nbsp;
+					<a href="http://twitter.com/#!/Herald_Sun_Circ" target="_blank"><img src="/sites/1284/assets/twitter_small_footer.png" height="30px" width="30px">&nbsp;</a>
+					<a href="/rss_landing" target="_blank"><img src="/sites/1284/assets/rss_small_footer.png" height="30px" width="30px"></a>
+				<br>
+					<p id="powered_by">Software Powered by <a href="http://radiatemedia.com" target="_blank">Radiate Media, Inc.</a>
+		</div>
+	</div>
+</div>
+</div>
+</div><!-- end footer -->
+<div class="newline"></div>
+        </div><!-- end page -->
+<script type="text/javascript">initSearch()</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+#jcornerSmall, #jcornerBig { padding-top: 20px; }
+</style>
+
+
+<script type="text/javascript">
+    if (typeof(_gat) == 'undefined') {
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+</script>
+<script type="text/javascript">
+try {
+      var matchbinPageTracker = _gat._getTracker("UA-2581399-1");
+
+      matchbinPageTracker._trackPageview();
+} catch(e) {
+}
+
+try {
+
+matchbinReloadAds = function() {
+      var allFrames = $$('iframe');
+      for (var i = 0; i < allFrames.length; i++) {
+        try {
+          var frame = allFrames[i];
+          //change the src of the iframe to reload ad 
+          var src = frame.src;
+          var new_src = src.replace(/&random_for_refresh.*$/, '') + "&random_for_refresh=" + Math.random();
+
+          if (!src.match(/ads.radiatemedia.com/)) {
+            next;
+          }
+
+          if (Prototype.Browser.IE) {
+            //replace the iframe to avoid browser history problems
+            var new_iframe = frame.cloneNode(true);
+            //new_iframe.id = '';
+            var new_src = src.replace(/&random_for_refresh.*$/, '') + "&random_for_refresh=" + Math.random();
+            new_iframe.src = new_src;
+            //prevent flicker when ads are refreshed
+            if (parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf("MSIE")+5)) >= 8) {
+              $(new_iframe).observe('load', (function(event) {
+                new_iframe.style.visibility = '';
+                new_iframe.style.position = '';
+                new_iframe.stopObserving();
+                if (frame.parentNode) {
+                  frame.parentNode.replaceChild(new_iframe, frame);
+                }
+                new_iframe.id = frame.id;
+              }).bind(this));
+              new_iframe.style.visibility = 'hidden';
+              new_iframe.style.position = 'absolute';
+              frame.parentNode.appendChild(new_iframe);
+            } else {
+              frame.parentNode.replaceChild(new_iframe, frame);
+              frame.parentNode.removeChild(frame);
+            }
+          } else {
+            frame.src = new_src;
+          }
+        } catch (e) {
+        }
+      }
+}
+
+matchbinAjaxHook = (function(url) {
+      try {
+        if (url && url.match && url.match(/pages|default|comment/) && !url.match(/account|noreload|ad_frame/)) {
+          matchbinPageTracker._trackPageview(url);
+          if (window.pageTracker) {
+            window.pageTracker._trackPageview(url);
+          }
+          if (typeof(window.ajaxAnalyticsHook) == 'function') {
+            window.ajaxAnalyticsHook(url);
+          }
+          matchbinReloadAds();
+        }
+      } catch (e) {
+      }
+}).bind(this);
+} catch(e) {
+}
+</script>
+<script type="text/javascript">
+var showTynt = (("ht" + "tp:") == document.location.protocol);
+if (showTynt) {
+      var tyntVariables = {"ap":"#{Read more: }"};
+      document.write(unescape("%3Cscript src='ht" + "tp://tcr.tynt.com/javascripts/Tracer.js?user=d56qUQzfGr34Onadbi-bpO&amp;su=0&amp;st=1' type='text/javascript'%3E%3C/script%3E"));
+}
+</script>
+<script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","beacon-6.newrelic.com","0a3acb3eea","14576","cg0IQEpbX1VUFBtbXlwPE1pRQEoWQQdTXUIeCwhQXUw=",0,27,new Date().getTime(),"","","","",""]);</script></body>
+<script type="text/javascript">initMenu(); initWeather();</script>
+    <script type="text/javascript">
+          new Ajax.Updater("user_handle_container", '/pages/user_handle?random=' + Math.random(), {evalScripts: false});
+    </script>
+    
+    
+    
+    
+    
+    
+</html>

@@ -1,0 +1,2362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+<title>The Great News Network | great news for a change</title>
+<meta name="Description" content="The Great News Network provides inspirational and positive news about what's working in the world." />
+<meta name="Keywords" content="gnn, inspirational news, top news, science news, daily news, world news, positive news, environmental news,  news, ideas, environmentalism, environment, recycling, peace, diplomacy, spirituality" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.greatnewsnetwork.org/index.php/rss/feed/38" />
+<META name="verify-v1" content="E6V6qv9IOCm7pdmLJbsbjuQBje1B6eNC4Olw/sNy7nE=" />
+<meta http-equiv='content-type' content='text/html; charset=utf-8' >
+<META NAME="robots" CONTENT="ALL">
+<META NAME="distribution" CONTENT="Global">
+<meta name="msvalidate.01" content="E7FD65552CB5F4F5D80E6E80D16F03BC" />
+
+
+<!-- CSS stylesheet -->
+<link rel='stylesheet' type='text/css' media='all' href='http://www.greatnewsnetwork.org/index.php?css=news/gnn_css.v.1326047064' />
+
+<link rel="image_src" href="http://www.greatnewsnetwork.org/images/logo_gnn_abbrev.jpg" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">  if (top.location != location) { top.location.href = document.location.href; } </script>
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function switchMenu(obj) {
+	var el = document.getElementById(obj);
+	if ( el.style.display != "none" ) {
+		el.style.display = 'none';
+	}
+	else {
+		el.style.display = '';
+	}
+}
+//-->
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/scripts/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery-1.4.1.js"></script>
+
+
+
+<script>
+
+
+$(document).ready(function(){
+    
+	$('a#link_signinbox').click(function(){
+		$('#signinbox').slideDown('fast');
+	}); 
+
+	$('a#link_forgotbox').click(function(){
+		$('#forgotbox').slideDown('fast');
+	});
+	$('a#link_forgotbox2').click(function(){
+		$('#forgotbox2').slideDown('fast');
+	});
+	$('a#link_filterresultsbox').click(function(){
+		$('#filterresultsbox').slideDown('fast');
+	});
+
+
+	$('a#link_categories').click(function(){
+		if ($("#categoriesbox").is(":hidden"))
+		{
+			$('#postbox').hide();
+			$('#categoriesbox').slideDown('fast');
+		}
+		else
+		{
+			$('#categoriesbox').slideUp('fast');
+		}
+	});
+
+	$('a#link_post_ad').click(function(event){
+		if ($("#postbox").is(":hidden"))
+		{
+			$('#categoriesbox').hide();
+			$('#postbox').slideDown('fast');
+		}
+		else
+		{
+			$('#postbox').slideUp('fast');
+		}
+	});
+});
+
+
+$(document).ready(function(){
+   
+	$('a#link_footerregionsbox').click(function(event){$('#footerregionsbox').slideDown('fast');}); 
+	$('a#link_headerenvironmentbox').click(function(event){$('#headerenvironmentbox').slideDown('fast');}); 
+	$('a#link_headerregionsbox').click(function(event){$('#headerregionsbox').slideDown('fast');}); 
+	$('a#link_commentform').click(function(event){$('#commentform').slideDown('fast');}); 
+}); 
+</script>
+
+
+
+<script type="text/javascript" src="/scripts/edit.js"></script> 
+</head>
+
+<body>
+  
+<script type="text/javascript">
+
+function initOverLabels () {
+  if (!document.getElementById) return;  	
+
+  var labels, id, field;
+
+  // Set focus and blur handlers to hide and show 
+  // LABELs with 'overlabel' class names.
+  labels = document.getElementsByTagName('label');
+  for (var i = 0; i < labels.length; i++) {
+	
+    if (labels[i].className == 'overlabel') {
+
+      // Skip labels that do not have a named association
+      // with another field.
+      id = labels[i].htmlFor || labels[i].getAttribute('for');
+      if (!id || !(field = document.getElementById(id))) {continue;}
+
+      // Change the applied class to hover the label 
+      // over the form field.
+      labels[i].className = 'overlabel-apply';
+
+      // Hide any fields having an initial value.
+      if (field.value !== '') {
+        hideLabel(field.getAttribute('id'), true);
+      }
+
+      // Set handlers to show and hide labels.
+      field.onfocus = function () {
+        hideLabel(this.getAttribute('id'), true);
+      };
+      field.onblur = function () {
+        if (this.value === '') {
+          hideLabel(this.getAttribute('id'), false);
+        }
+      };
+
+      // Handle clicks to LABEL elements (for Safari).
+      labels[i].onclick = function () {
+        var id, field;
+        id = this.getAttribute('for');
+        if (id && (field = document.getElementById(id))) {field.focus();}
+      };
+
+    }
+  }
+};
+
+function hideLabel (field_id, hide) {
+  var field_for;
+  var labels = document.getElementsByTagName('label');
+  for (var i = 0; i < labels.length; i++) {
+    field_for = labels[i].htmlFor || labels[i].getAttribute('for');
+    if (field_for == field_id) {
+      labels[i].style.textIndent = (hide) ? '-10000px' : '0px';
+      return true;
+    }
+  }
+}
+
+window.onload = function () {
+  setTimeout(initOverLabels, 50);
+};
+
+</script>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=117848898269643";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div style="background: #333333;padding:10px;margin:0 auto 0 auto;background-image:url('/images/bg_toplinks.png');background-repeat:repeat-x;">
+<div style="width:910px;text-align:left;margin:0 auto 0 auto;text-transform:uppercase;"  class="footerbox">
+
+
+<div style="float:right;"><fb:like href="http://facebook.com/greatnewsnetwork" send="false" layout="button_count" width="60" show_faces="false" colorscheme="dark"></fb:like></div>
+
+
+<a  class="headerbox" href="http://www.greatnewsnetwork.org/index.php/categories/news/World">World</a> &nbsp;|&nbsp;
+
+
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/categories/news/Environment">Environment</a> 
+ &nbsp;|&nbsp;
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/categories/news/Science">Science & Technology</a> &nbsp;|&nbsp;
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/categories/news/Health">Health</a> &nbsp;|&nbsp;
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/categories/news/Human Rights">Human Rights</a> &nbsp;|&nbsp;
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/categories/news/Feel Good">Feel Good</a> &nbsp;|&nbsp;
+<a class="headerbox"  href="javascript:;"  id="link_headerregionsbox" title="news by region"  style="cursor: hand;cursor: pointer;">Regions</a>
+
+<div style="clear:both;"></div>
+
+
+
+
+
+	<div id="headerregionsbox" style="display:none;border-top:1px solid #444444;padding:10px;margin:20px auto 0 auto;background: #333333;">
+
+
+<table width=100% cellpadding=0 cellspacing=0 border=0><tr><td rowspan=4 width=224>
+	<img src="http://www.greatnewsnetwork.org/images/small_world.gif" usemap="#small_world" hspace=10 border=0 width=224 height=113>
+</td>
+
+<td colspan=3>
+
+<span style="font-size:150%;color:#ffffff">News by Region</span><br /><br />
+</td>
+
+</tr><tr>
+
+<td valign=top width=25%>
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/regions/news/Antarctica/">Antarctica</a><br>
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#africa">Africa</a><br>
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#asia">Asia</a><br>
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/regions/news/Canada/">Canada</a><br>
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#caribbean">The Caribbean</a><br>
+</td><td valign=top width=25%>
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#centralamerica">Mexico/Central America</a><br>
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#eastasia">East Asia</a><br>
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#europe">Europe</a><br>
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#indiansubcontinent">Indian Sub-Continent</a><br>
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#middleeast">The Middle East</a><br>
+</td><td valign=top width=25%>
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#oceania">Oceania</a><br>
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#southamerica">South America</a><br>
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#southeastasia">Southeast Asia</a><br>
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/regions/news/United Nations/">United Nations</a><br>
+<a class="headerbox" href="http://www.greatnewsnetwork.org/index.php/regions/news/United States/">Good news in America</a><br>
+</td>
+</tr></table>
+
+	<map id="small_world" name="small_world">
+	<area shape="poly" alt="Canada" coords="20,24,44,26,55,29,67,27,66,0,59,1,23,7,19,16" href="http://www.greatnewsnetwork.org/index.php/regions/news/Canada/" title="Canada" />
+	<area shape="poly" alt="United States" coords="18,17,22,7,15,7,0,19" href="http://www.greatnewsnetwork.org/index.php/regions/news/United States/" title="United States" />
+	<area shape="poly" alt="United States" coords="19,26,45,27,54,31,44,45,41,41,33,42,20,41,16,33" href="http://www.greatnewsnetwork.org/index.php/regions/news/United States/" title="United States" />
+	<area shape="poly" alt="Mexico and Central America" coords="19,42,32,43,39,48,38,51,46,56,44,61,27,52" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#centralamerica" title="Mexico and Central America" />
+	<area shape="poly" alt="The Caribbean" coords="40,45,45,55,59,55,58,44" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#caribbean" title="The Caribbean" />
+	<area shape="poly" alt="South America" coords="47,56,40,66,44,79,50,82,51,104,57,113,66,112,78,72,53,56" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#southamerica" title="South America" />
+	<area shape="poly" alt="Europe" coords="68,0,74,17,96,14,96,12,90,7,97,0" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#europe" title="Europe" />
+	<area shape="poly" alt="Europe" coords="96,35,118,34,120,29,127,28,127,22,117,15,117,12,113,1,105,1,94,21,94,31" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#europe" title="Europe" />
+	<area shape="poly" alt="The Middle East" coords="119,31,118,36,125,39,133,54,141,53,145,48,144,35,138,33,133,31" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#middleeast" title="The Middle East" />
+	<area shape="poly" alt="Africa" coords="98,35,107,35,125,39,132,55,139,56,138,84,134,89,121,95,114,95,110,86,109,69,105,61,99,63,93,60,88,55,88,47" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#africa" title="Africa" />
+	<area shape="poly" alt="Asia" coords="117,8,118,15,128,22,128,30,135,30,145,34,145,43,152,35,149,33,156,24,164,30,172,29,178,20,187,27,185,28,189,31,192,29,194,23,185,16,201,24,206,12,196,6,179,6,151,1" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#asia" title="Asia" />
+	<area shape="poly" alt="East Asia" coords="150,32,156,25,164,31,172,30,178,22,190,32,197,26,200,28,199,38,182,50,179,50,176,44,165,42,160,40" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#eastasia" title="East Asia" />
+	<area shape="poly" alt="Indian Sub Continent" coords="153,35,146,44,153,48,154,56,159,61,162,61,161,52,166,47,174,46,170,44,158,41" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#indiansubcontinent" title="Indian Sub-Continent" />
+	<area shape="poly" alt="Southeast Asia" coords="176,46,168,48,172,66,179,73,194,75,204,74,203,65,194,57,188,46,180,51,178,50" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#southeastasia" title="Southeast Asia" />
+	<area shape="poly" alt="Oceania" coords="205,66,215,68,224,78,225,99,211,107,180,99,181,84,196,74,204,74" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#oceania" title="Oceania" />
+	<area shape="default" nohref="nohref" alt="" />
+	</map>
+
+
+</div> <!-- end regionsbox -->
+
+
+
+</div>
+</div>
+
+<div style="clear:both;"></div>
+<div style="background: #edeff4;border-top:1px solid #ddd;border-bottom:1px solid #c1c7d7;padding:0px;margin:0 auto 0 auto;">
+<div style="width:910px;text-align:left;margin:0 auto 0 auto;text-transform:uppercase;"  class="footerbox">
+
+
+<div  style="float:right;width:230px;">
+
+<form action="http://www.greatnewsnetwork.org/index.php/news/searchresults/" >
+  
+    <input type="hidden" name="cx" value="016763778854207337833:pyakjbxgl9u" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+
+    <input type="text" name="q"  value="Search for Great News" style="font-size:120%;margin-top:10px;width:230px;"  onFocus="this.value='';" onBlur="if (this.value=='') {this.value=' Search for Great News';}"/>
+
+</form>
+ 
+</div>
+
+<div style="width:349px;height:47px;position:relative;top:-11px;left:-10px"><a href="http://www.greatnewsnetwork.org"><img src="/images/logo_great.png" width="349" height="80" border="0" alt="Great News Network" style="position:relative;"></a></div>
+
+</div>
+</div>
+
+<div style="background: #edeff4;border-top:3px solid #d2d7e2;padding:0px;margin:0 auto 20px auto;"> </div>
+
+
+<div style="clear:both;"></div>
+
+<div id=mainwrapper>
+
+<div id="t1_leftcolumn">
+
+<h1 style="font-size:35px;margin-bottom:10px;text-transform:uppercase;letter-spacing:5px;"><A href=http://www.greatnewsnetwork.org>Top story</a></h1>
+
+
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+
+
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18150">
+
+
+<h3><a href="http://www.greatnewsnetwork.org/index.php/news/article/to_tackle_pollution_china_to_drop_pursuit_of_growth_at_all_costs/">To tackle pollution, China to drop pursuit of growth at all costs</a> </h3>
+
+
+
+<div class=author>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<span style="font-size:120%">
+
+ 
+China will steer local governments away from the pursuit of economic growth at all costs and beef up their powers to punish polluters as part of a campaign to reverse the damage done by three decades of unchecked expansion.</span>
+
+
+
+
+
+</div> <!--end article edit-->
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+</table>
+<br>
+
+<table border=0  border=1><tr>
+<td style="padding-top:7px;padding-right:17px;">
+<span style="color:#999999;"><nobr>Spread the word:</nobr></span>
+</td>
+
+<td style="padding-top:7px;">
+
+
+<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.greatnewsnetwork.org/index.php/news/article/to_tackle_pollution_china_to_drop_pursuit_of_growth_at_all_costs/" data-text="To tackle pollution, China to drop pursuit of growth at all costs" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+</td>
+<td style="padding-top:9px;">
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.greatnewsnetwork.org%2Findex.php%2Fnews%2Farticle%2Fto_tackle_pollution_china_to_drop_pursuit_of_growth_at_all_costs%2F&amp;layout=button_count&amp;show_faces=true&amp;width=90&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+</td></tr></table>
+
+
+
+
+
+
+<hr size=1 color=#cccccc>
+
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: 'To tackle pollution, China to drop pursuit of growth at all costs',
+  interval: 6000,
+  title: '',
+  subject: 'Who\'s talking about this story:',
+  width: 618,
+  height: 100,
+  theme: {
+    shell: {
+      background: '#ffffff',
+      color: '#000000'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#000000',
+      links: '#3b5998'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
+
+
+
+
+
+<div style="text-align:center;padding:10px;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-5294900796123229";
+/* 468x60, created 7/16/10 */
+google_ad_slot = "8859882757";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+<hr size=1 color=#cccccc>
+
+
+
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18149">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/california_is_first_state_to_ban_lead_in_hunting_ammo/">California is first state to ban lead in hunting ammo</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.usatoday.com/story/news/nation/2013/10/11/california-bans-lead-from-hunting-ammunition/2969497/>via USA Today</a>   1 month, 2 weeks, 3 days, 19 hours, 48 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+In a move to protect wildlife and the environment, California on Friday became the first state to ban lead in hunting ammunition.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18148">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/limits_approved_for_genetically_modified_crops_in_kauai_hawaii/">Limits Approved for Genetically Modified Crops in Kauai, Hawaii</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.nytimes.com/2013/10/17/business/limits-approved-for-genetically-modified-crops-in-kauai-hawaii.html?_r=0>via New York Times</a>   1 month, 3 weeks, 4 days, 14 hours, 13 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+Legislators on the island of Kauai in Hawaii have approved a bill that would restrict the use of pesticides by companies developing genetically modified crops there.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18147">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/environmentalists_win_u.s._court_fight_to_protect_whales_from_navy_sonar/">Environmentalists win U.S. court fight to protect whales from Navy sonar</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.reuters.com/article/2013/09/27/us-usa-whales-noise-idUSBRE98P1EJ20130927>via Reuters</a>   2 months, 1 week, 5 days, 11 hours, 43 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+A federal judge in California has sided with environmental groups in their lawsuit against the U.S. government over Navy training exercises off the West Coast involving sonar that they say harms endangered whales, dolphins and other protected marine mammals.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18146">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/new_york_city_air_quality_cleanest_in_decades/">New York City Air Quality Cleanest in Decades</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://abcnews.go.com/US/wireStory/bloomberg-nyc-air-quality-cleanest-decades-20389327>via ABC</a>   2 months, 2 weeks, 11 hours, 49 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+Ahh, smell that New York City air. No, seriously, go ahead.  Mayor Michael Bloomberg on Thursday said the city's air quality has hit its highest levels in 50 years, a development officials say has led to fewer deaths and hospitalizations.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18145">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/europes_key_animals_making_a_comeback/">Europe&#8217;s key animals &#8216;making a comeback&#8217;</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.bbc.co.uk/news/science-environment-24230765>via BBC</a>   2 months, 2 weeks, 1 day, 6 hours, 49 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+Some of Europe's key animals have made a comeback over the past 50 years, a report suggests.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18144">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/a_vaccine_for_hiv_clinical_trial_successful/">A Vaccine For HIV?&nbsp; Clinical Trial Successful</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.huffingtonpost.ca/2013/09/04/aids-hiv-vaccine-western-university_n_3865059.html>via Huffington Post</a>   3 months, 6 days, 17 hours, 48 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+A vaccine to prevent HIV has aced clinical testing, according to Canadian researchers.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18143">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/nepal_sees_tiger_population_go_up_by_63_since_2009/">Nepal sees tiger population go up by 63% since 2009</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://m.bbc.co.uk/news/world-asia-23494195>via BBC</a>   4 months, 1 week, 5 days, 4 hours, 19 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+The number of wild tigers living in Nepal has increased by 63% to 198 since 2009, a government survey has shown.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18142">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/pope_francis_gay_people_should_not_be_judged/">Pope Francis: Gay People &#8216;Should Not Be Judged&#8217;</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://news.sky.com/story/1121770/pope-francis-gay-people-should-not-be-judged>via Sky News</a>   4 months, 1 week, 5 days, 4 hours, 25 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+He told reporters people should not be marginalised because of their sexual orientation - but he reaffirmed the Church's position that homosexual acts are a sin and said its opposition to gay marriage was clear.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18141">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/canadas_crime_rate_lowest_since_1972/">Canada&#8217;s crime rate lowest since 1972</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.cbc.ca/news/canada/story/2013/07/25/canada-crime-rate-lowest-decades.html>via CBC News</a>   4 months, 2 weeks, 1 day, 18 hours, 52 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+Canada's police services are once again reporting fewer crimes, a continuing trend that has cut the national crime rate to its lowest level since 1972.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18140">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/obama_to_launch_major_initiative_to_curb_wildlife_trafficking/">Obama to launch major initiative to curb wildlife trafficking</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.guardian.co.uk/environment/2013/jul/01/obama-wildlife-trafficking-executive-order?INTCMP=SRCH>via The Guardian</a>   5 months, 2 days, 9 hours, 30 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+Barack Obama launched a new initiative against wildlife trafficking on Monday, using his executive authority to take action against an illegal trade that is fuelling rebel wars and now threatens the survival of elephants and rhinoceroses.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18138">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/south_korean_airlines_ban_shark_fin_as_cargo/">South Korean airlines ban shark fin as cargo</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.timeslive.co.za/scitech/2013/06/20/south-korean-airlines-ban-shark-fin-as-cargo>via Times Live</a>   5 months, 2 weeks, 6 days, 5 hours, 30 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+South Korea's two largest airlines, Korean Air and Asiana, said Thursday they had both decided to ban shark fin from their cargo flights as part of a growing global campaign against the Asian delicacy.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18137">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/city_of_vancouver_proclaims_countrys_first_meatless_monday/">City of Vancouver proclaims country&#8217;s first Meatless Monday</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.ctvnews.ca/canada/city-of-vancouver-proclaims-country-s-first-meatless-monday-1.1320580>via CTV News</a>   5 months, 4 weeks, 2 days, 44 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+Vancouver has become the first city in Canada to embrace 'Meatless Monday,' encouraging residents to forego meat for one day a week for the sake of the planet and their health.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18136">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/eu_to_ban_pesticides_in_bee_scare/">EU to ban pesticides in bee scare</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.bbc.co.uk/news/world-europe-22335520>via BBC</a>   7 months, 1 week, 6 days, 13 hours, 12 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+The European Commission will restrict the use of pesticides linked to bee deaths by researchers, despite a split among EU states on the issue.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18135">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/most_earth-like_planets_discovered/">&#8216;Most Earth-like&#8217; planets discovered</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.bbc.co.uk/news/science-environment-22200476>via BBC</a>   7 months, 3 weeks, 2 days, 8 hours, 54 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+The search for a far-off twin of Earth has turned up two of the most intriguing candidates yet.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18134">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/new_zealand_legalises_same-sex_marriage/">New Zealand legalises same-sex marriage</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.bbc.co.uk/news/world-22184232>via BBC</a>   7 months, 3 weeks, 4 days, 11 hours, 45 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+New Zealand's parliament has legalised same-sex marriage, the first country in the Asia-Pacific region to do so.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18133">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/new_law_to_protect_puerto_rico_leatherback_turtles/">New law to protect Puerto Rico leatherback turtles</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.bbc.co.uk/news/world-us-canada-22140670>via BBC</a>   7 months, 4 weeks, 9 hours, 31 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+Puerto Rico has introduced a new law protecting a swathe of the island's coast that has become a major nesting site for the world's largest turtle, the leatherback.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18132">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/u.n._overwhelmingly_approves_global_arms_trade_treaty/">U.N. overwhelmingly approves global arms trade treaty</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.reuters.com/article/2013/04/03/us-arms-treaty-un-idUSBRE9310MN20130403>via Reuters</a>   8 months, 1 week, 2 days, 1 hour, 41 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+The 193-nation U.N. General Assembly on Tuesday overwhelmingly approved the first treaty on the global arms trade, which seeks to regulate the $70 billion business in conventional arms and keep weapons out of the hands of human rights abusers.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18131">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/safer_vaccine_created_without_virus/">Safer vaccine created without virus</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.japantimes.co.jp/news/2013/03/28/world/safer-vaccine-created-without-virus/#.UVSA7Vs-s3E>via Japan Times</a>   8 months, 2 weeks, 1 day, 1 hour, 57 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+British scientists have developed a &#8220;holy grail&#8221; vaccine for foot-and-mouth disease that is safer and more resilient than current vaccines, according to an article published in the journal PLOS Pathogens on Wednesday.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18130">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/china_worlds_largest_emitter_of_greenhouse_gasses_will_tax_carbon/">China, world&#8217;s largest emitter of greenhouse gasses, will tax carbon</a> </h2>
+
+<!--
+<div class=author>
+
+
+ 9 months, 2 weeks, 6 days, 8 hours, 7 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+China&#8217;s Ministry of Finance has announced that the country will levy a tax on carbon emissions, reports Xinhua.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18129">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/new_wind_power_cheaper_than_coal_or_gas_in_australia/">New wind power cheaper than coal or gas in Australia</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://news.mongabay.com/2013/0208-wind-power-australia.html>via MongaBay</a>   9 months, 4 weeks, 1 day, 8 hours, 52 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+Electricity supplied from a new wind farm is cheaper than that from a new gas or coal-fired power plant in Australia, reports a new analysis published by Bloomberg New Energy Finance.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18128">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/lenses_found_to_cure_colour-blindness/">Lenses found to &#8216;cure colour-blindness&#8217;</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.bbc.co.uk/news/health-21367584>via BBC</a>   10 months, 2 days, 25 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+Scientists say they have invented spectacle lenses that cure red-green colour blindness, which affects some women and one in every 10 men.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18127">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/gorillas_to_be_protected_with_new_congo_national_park/">Gorillas to Be Protected with New Congo National Park</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.livescience.com/26759-gorillas-congo-national-park.html>via Live Science</a>   10 months, 1 week, 1 day, 3 hours, 38 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+The Republic of Congo has declared a new national park that conservationists hope with protect a core population of western lowland gorillas, a critically endangered species, as well as other threatened species, the Wildlife Conservation Society announced.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18125">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/from_the_brink_of_extinction_elephant_seals_stage_remarkable_comeback/">From the brink of extinction: elephant seals stage remarkable comeback</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://news.mongabay.com/2013/0123-wcff-gervais-elephant-seals.html>via MongaBay</a>   10 months, 2 weeks, 3 days, 23 hours, 45 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+In the 19th century the Northern Pacific Elephant was thought to be extinct until a small population was discovered on an island of Baja California in 1892. Since then, the species has staged a remarkable comeback which was greatly accelerated by protective measures adopted by the U.S. and Mexican governments.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18124">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/nations_agree_on_legally_binding_mercury_rules/">Nations agree on legally binding mercury rules</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://m.bbc.co.uk/news/science-environment-21078176>via BBC</a>   10 months, 3 weeks, 1 day, 2 hours, 28 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+More than 140 countries have agreed on a set of legally binding measures to curb mercury pollution, at UN talks.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18123">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/six_million_turn_out_for_global_garbage_clean-up/">Six million turn out for global garbage clean-up</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.terradaily.com/reports/Six_million_turn_out_for_global_garbage_clean-up_999.html>via Terra Daily</a>   10 months, 4 weeks, 2 days, 1 hour, 56 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+More than six million volunteers from 96 countries collected an unprecedented 100,000 tonnes of garbage last year as part of a global, web-driven clean-up campaign, cyber-environmentalists said Friday.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18122">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/totally_blind_mice_get_sight_back/">Totally blind mice get sight back</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.bbc.co.uk/news/health-20898935>via BBC</a>   11 months, 4 days, 16 hours, 55 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+Totally blind mice have had their sight restored by injections of light-sensing cells into the eye, UK researchers report.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18121">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/obama_triples_area_of_protected_california_coastline/">Obama triples area of protected California coastline</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://news.mongabay.com/2012/1220-california-coast.html>via MongaBay</a>   11 months, 2 weeks, 5 days, 13 hours, 19 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+On Friday President Obama announced the government would add almost 3,000 square miles of California coastline to the National Marine Sanctuary system, reports the Sierra Club.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18120">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/asahis_auto_glass_blocks_uv_filters_out_ir_rays/">Asahi&#8217;s auto glass blocks UV, filters out IR rays</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://www.gizmag.com/asahi-uv-verre-premium-cool-on-glass/25540/>via Giz Mag</a>   11 months, 2 weeks, 6 days, 17 hours, 13 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+As prolonged exposure to sunlight increasingly becomes a health hazard, causing skin problems and even cancer, automakers have started to incorporate glass that blocks harmful ultraviolet light.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<p> 
+<tr>
+
+
+
+<td valign=top>
+
+
+
+
+<div id="entry_id18117">
+
+<h2><a href="http://www.greatnewsnetwork.org/index.php/news/article/swiss_parliament_passes_plastic_bag_ban/">Swiss Parliament Passes Plastic Bag Ban</a> </h2>
+
+<!--
+<div class=author>
+
+
+<a class=source href=http://ens-newswire.com/2012/12/17/swiss-parliament-passes-plastic-bag-ban/>via ENS</a>   11 months, 3 weeks, 20 hours, 10 minutes ago 
+
+
+
+
+
+
+
+
+
+</div>
+-->
+ 
+Switzerland&#8217;s Parliament has approved a motion banning single-use plastic shopping bags.  Both houses of the Swiss Parliament Thursday voted to forbid the distribution of the plastic bags. The next step is for the government to implement the ban.
+
+
+
+
+</div> <!--end article edit-->
+
+<br>
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+<tr><td colspan=2>
+<div id=paginatebox>
+
+<table border=0 width=100% cellpadding=0 cellspacing=0><tr><td>Page 1 of 158 pages &nbsp;<strong>1</strong>&nbsp;<a href="http://www.greatnewsnetwork.org/index.php/news/P29/">2</a>&nbsp;<a href="http://www.greatnewsnetwork.org/index.php/news/P58/">3</a>&nbsp;<a href="http://www.greatnewsnetwork.org/index.php/news/P29/">&gt;</a>&nbsp;&nbsp;<a href="http://www.greatnewsnetwork.org/index.php/news/P4553/">Last &raquo;</a></td>
+<td align=right>
+
+<a href="http://us.rd.yahoo.com/my/atm/Great%20News%20Network/Great%20News%20Network%3A%20Top%20Stories/*http://add.my.yahoo.com/rss?url=http%3A//www.greatnewsnetwork.org/index.php/rss/feed/38"><img src="/images/button_myyahoo.gif" width="90" height="16" vspace=3 border="0" title="Add GNN's Top Stories News feed to My Yahoo!" alt="Add GNN's Top Stories News feed to My Yahoo!"></a>
+
+<a href="http://feeds2.feedburner.com/greatnewsnetwork/IRwk"><img vspace=3 src=/images/button_rssxml.gif alt="Free RSS/XML feed of GNN's Top Stories News feed or choose from over 300 other custom feeds." title="Free RSS/XML feed of GNN's Top Stories News feed. Choose from over 300 others." border=0 width=80 height=16></a>&nbsp;
+</td></tr></table>
+</div> <!-- end paginatebox-->
+</td></tr>
+
+</table>
+
+
+</div> <!-- end leftcolumn -->
+
+<div id=t1_rightcolumn>
+<span>
+
+
+
+
+<div id=rightcolumnbox>
+
+<a class="twitter-timeline"   width="300" height="1500" border-color="#ffffff" href="https://twitter.com/greatnewsnet" data-widget-id="387262016101961728" data-chrome="nofooter noborders transparent">Tweets by @greatnewsnet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</div>
+
+
+
+<div id=rightcolumnbox>
+<script type="text/javascript"><!--
+google_ad_client = "pub-5294900796123229";
+/* 200x200, created 7/16/10 */
+google_ad_slot = "6090420708";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+
+
+<div id=rightcolumnbox>
+<b>News of a better world.</b><br>
+The great news network is a news site that reports only positive news stories.  Positive news inspires and motivates people to do their part to make a better world.  That is why we exist.
+<br />
+<ul>
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/about">learn more about the gnn</a>
+</ul>
+</div> <!-- end rightcolumnbox-->
+
+
+<div id=rightcolumnbox>
+<b>Environmental news:</b><br>
+
+<ul>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/to_tackle_pollution_china_to_drop_pursuit_of_growth_at_all_costs/">To tackle pollution, China to drop pursuit of growth at all costs</a>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/california_is_first_state_to_ban_lead_in_hunting_ammo/">California is first state to ban lead in hunting ammo</a>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/limits_approved_for_genetically_modified_crops_in_kauai_hawaii/">Limits Approved for Genetically Modified Crops in Kauai, Hawaii</a>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/environmentalists_win_u.s._court_fight_to_protect_whales_from_navy_sonar/">Environmentalists win U.S. court fight to protect whales from Navy sonar</a>
+
+</ul>
+</div> <!-- end t1_rightcolumnbox-->
+
+<div id=rightcolumnbox>
+<b>Human Rights news:</b><br>
+
+<ul>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/pope_francis_gay_people_should_not_be_judged/">Pope Francis: Gay People &#8216;Should Not Be Judged&#8217;</a>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/new_zealand_legalises_same-sex_marriage/">New Zealand legalises same-sex marriage</a>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/victories_for_marriage_equality_and_first_openly_gay_u.s._senator/">Victories for Marriage Equality and First Openly Gay U.S. Senator</a>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/hurdle_cleared_on_total_ban_on_child_labour_in_india/">Hurdle cleared on total ban on child labour in India</a>
+
+</ul>
+</div> <!-- end t1_rightcolumnbox-->
+
+
+<div id=rightcolumnbox>
+<b>Medical discoveries:</b><br>
+
+<ul>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/a_vaccine_for_hiv_clinical_trial_successful/">A Vaccine For HIV?&nbsp; Clinical Trial Successful</a>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/safer_vaccine_created_without_virus/">Safer vaccine created without virus</a>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/lenses_found_to_cure_colour-blindness/">Lenses found to &#8216;cure colour-blindness&#8217;</a>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/totally_blind_mice_get_sight_back/">Totally blind mice get sight back</a>
+
+</ul>
+</div> <!-- end t1_rightcolumnbox-->
+
+<div id=rightcolumnbox>
+<b>Technology news:</b><br>
+
+<ul>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/safer_vaccine_created_without_virus/">Safer vaccine created without virus</a>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/asahis_auto_glass_blocks_uv_filters_out_ir_rays/">Asahi&#8217;s auto glass blocks UV, filters out IR rays</a>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/new_microscopy_technique_can_see_the_lengths_of_atomic_bonds/">New Microscopy Technique Can See The Lengths Of Atomic Bonds</a>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/new_radio_telescope_to_watch_for_solar_flares/">New radio telescope to watch for solar flares</a>
+
+</ul>
+</div> <!-- end t1_rightcolumnbox-->
+
+
+
+<div id=rightcolumnbox>
+<b>Inspirational news:</b><br>
+
+<ul>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/pope_francis_gay_people_should_not_be_judged/">Pope Francis: Gay People &#8216;Should Not Be Judged&#8217;</a>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/amputee_climbs_103_stories_using_mind-controlled_bionic_leg/">Amputee Climbs 103 Stories Using Mind-Controlled Bionic Leg</a>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/victories_for_marriage_equality_and_first_openly_gay_u.s._senator/">Victories for Marriage Equality and First Openly Gay U.S. Senator</a>
+
+<li><a href="http://www.greatnewsnetwork.org/index.php/news/article/want_to_be_happier_stay_in_the_moment/">Want to be happier? Stay in the moment</a>
+
+</ul>
+</div> <!-- end t1_rightcolumnbox-->
+
+</span>
+</div> <!-- end rightcolumn -->
+
+<div style="clear:both"></div>
+
+
+
+
+
+</div> <!-- end mainwrapper -->
+
+<br style="clear:both" />
+
+
+
+
+
+
+<div style="background: #333333;border-top:1px solid #ddd;padding:20px;margin:20 auto 0 auto;">
+
+
+<div style="width:870px;text-align:left;margin:0 auto 0 auto">
+
+<div style="float:left;width:180px;padding-right:20px;" class="footerbox">
+<span style="font-size:150%;color:#ffffff">News Categories</span><br /><br />
+<ul>
+<li> <a  class="footerbox" href="http://www.greatnewsnetwork.org/index.php/categories/news/World">World</a></li>
+<li> <a  class="footerbox" href="http://www.greatnewsnetwork.org/index.php/categories/news/Human Rights">Human Rights</a></li>
+<li> <a  class="footerbox" href="http://www.greatnewsnetwork.org/index.php/categories/news/Politics">Politics</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/Feel Good">Feel good Stories</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/Heroic Stories">Heroic Stories</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/Inspirational Stories">Inspirational Stories</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/Reunited Stories">Reunited Stories</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/Environment">Environment</a><br></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/air_quality">Air quality</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/climate_and_energy">Climate and Energy</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/Forests">Forests</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/Land">Land</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/Water">Water</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/Wildlife">Wildlife</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/new_species_discoveries">New Species Discoveries</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/Science">Science</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/scientific_discoveries">Scientific Discoveries</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/ancient_discoveries">Ancient Discoveries</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/Space">Space</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/Technology">Technology</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/breakthroughs_in_technology">Breakthroughs in Technology</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/Health">Health</a><br></b>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/medical_discoveries">Medical Discoveries</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/Business">Business</a></li>
+<li> <a  class="footerbox"  href="http://www.greatnewsnetwork.org/index.php/categories/news/corporate_social_responsibility">Corporate Social Responsibility</a></li>
+<li> <a  class="footerbox"  href="javascript:;"  id="link_footerregionsbox" title="news by region"  style="cursor: hand;cursor: pointer;">News by Region</a></li>
+
+</div>
+
+
+<div style="float:left;width:300px;padding-right:20px;" class="footerbox">
+<span style="font-size:150%;color:#ffffff">Recommendations</span><br /><br />
+<div class="fb-recommendations" data-site="www.greatnewsnetwork.org" data-width="300" data-height="450" data-header="false" data-colorscheme="dark" data-linktarget="_parent" data-border-color="#333333" data-font="arial"></div>
+</div>
+
+
+<div style="float:left;width:160px;padding-right:20px;" class="footerbox">
+<span style="font-size:150%;color:#ffffff">About</span><br /><br />
+
+The Great News Network is meant to supplement your daily news sources - not replace it. It's role is to show that there is hope, people are making a difference, and that a lot of things are getting better. 
+<br /><br />
+Optimism is a great catalyst for making the world a better place. When we can see there is hope, then we'll be more compelled to make the effort to do our part.
+<br /><br />
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" name="formpaypal">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHTwYJKoZIhvcNAQcEoIIHQDCCBzwCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYBWWGgs5cYbY+4JytwOKRHQ6DZJdH5aQHjULy4HCffAmIvmqY4UfY1w9uk/+nQdSqA7UEXNhpf3Z9kCTz2tMfV0JVrRU71DG8HOQv86z0nvfqD5eN5k4EOFBBIgO2oumLkOsbhmYCG3YLdHNmBob3ONz/r9PJZnFNsHYYOnaBQU1TELMAkGBSsOAwIaBQAwgcwGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIten75qJMjwWAgah/2wOyBy7m1qRV7uI5mpZN45hv+2qPUdjF8XNNeILXvRL3pprCasm/z1BU+ra3gmzmWRtfhGWjwCQ5mbVL1r12HKA2fe2+2rXphDlENnp8YF4WMomX0PjKTwC0CH0p7fKwIQK7pdKzYzEecKjeJc3fHG8K0STHZ+tHhGZeO9V4IH2jXZYTOy+O4hyfotlrr9a9RM/vkMlFdHeOMhl0xlDl0MVST8wT4yOgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMDEwMDUwNjUxMTdaMCMGCSqGSIb3DQEJBDEWBBTrfe5/dTa3UM6LaGKjKSTl+yeupTANBgkqhkiG9w0BAQEFAASBgLkwvkfw9ZVjwnX7GeKRUEGpdasvjAWxmqt19zFVRDFpuarP0LhhYOd8GtAkdUpalVdQK4Gm79o6VZF6uNuTRGkBedrQeKbIG3xNr/egbU1bQSCD1ia0d11rFcI8JtBKrm4mHzw8AC0giWBFwubs3JBtqu3UqaGoZ26Fwkl1FIST-----END PKCS7-----
+">
+
+
+<ul>
+<li> <a  class="footerbox"   href="http://www.twitter.com/greatnewsnet">GNN on Twitter</a></li>
+<li> <a  class="footerbox"   href="http://www.greatnewsnetwork.org/index.php/news/about">About GNN</a></li>
+<li> <a  class="footerbox"   href="http://www.greatnewsnetwork.org/index.php/news/contact">Contact GNN</a></li>
+<li> <a  class="footerbox"   href="http://www.greatnewsnetwork.org/index.php/news/sitemap">Site Map</a></li>
+<li> <a  class="footerbox"   href="http://www.greatnewsnetwork.org/index.php/news/archives">Archives</a></li>
+<li> <a  class="footerbox"   href="http://mobile.greatnews.net">GNN Mobile</a></li>
+<li> <a  class="footerbox"   href="http://www.greatnewsnetwork.org/index.php/news/rss_feeds">RSS Feeds</a></li>
+<li><a  href="javascript:submitformpaypal()" class="footerbox" title="Make a donation to GNN securely with PayPal!"  >Donate to GNN</a></li>
+
+</ul>
+
+
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+
+<a href="http://feeds2.feedburner.com/greatnewsnetwork/IRwk"  title="RSS feed of GNN top stories"><img src="/images/rss.png" border=0 style="margin-top:5px;"></a>
+
+</form>
+<script type="text/javascript">
+function submitformpaypal()
+{document.formpaypal.submit();}
+
+</script>
+
+
+
+
+
+</div>
+
+
+<div style="float:left;width:170px;" class="footerbox">
+
+
+<span style="font-size:150%;color:#ffffff">Sponsors</span><br /><br />
+<ul>
+<li> <a   class="footerbox" href=http://www.mauisands.com>Maui Sands</a></li>
+<li> <a   class="footerbox" href=http://exploration.net>Compare hotel prices</a></li>
+<li> <a   class="footerbox" href=http://http://exploration.net/cheap_hotels/deals/Vancouver/>Vancouver cheap hotels</a></li>
+<li> <a   class="footerbox" href=http://sunshinecoast.gyos.ca>Sunshine Coast classifieds</a> </li>
+<li> <a class="footerbox" href=http://vancouver.gyos.ca>Vancouver classifieds</a></li>
+<li> <a   class="footerbox" href=http://powellriver.gyos.ca>Powell River classifieds</a> </li>
+<li> <a   class="footerbox" href=http://nelson.gyos.ca>Nelson classifieds</a></li>
+<li> <a   class="footerbox" href=http://www.gyos.com>Craigslist nation wide search</a> </li>
+<li> <a    class="footerbox" href=http://www.kiheivacationcondo.net>Kihei Vacation Condo</a></li>
+<li> <a  class="footerbox" href="http://www.theseedstudio.com/" target="_blank">Web Design by the Seed Studio</a></li>
+<li> <a  class="footerbox" href="http://www.traveladvisorywarnings.com/" target="_blank">Travel Advisory Warnings</a></li>
+<li> <a  class="footerbox" href="http://www.rentsunshinecoast.com/" target="_blank">Rent Sunshine Coast</a></li>
+<li> <a  class="footerbox" href="http://www.rentnelson.com/" target="_blank">Rent Nelson</a></li>
+<li> <a  class="footerbox" href=http://www.greatnewsnetwork.org/index.php/news/contact>Advertise on GNN</a></li>
+
+</ul>
+</div>
+
+
+<div style="clear:both;"></div>
+
+
+
+	<div id="footerregionsbox" style="display:none;border-top:1px solid #444444;padding:10px;margin:0 auto 0 auto;">
+
+
+<table width=100% cellpadding=0 cellspacing=0 border=0><tr><td rowspan=4 width=224>
+	<img src="http://www.greatnewsnetwork.org/images/small_world.gif" usemap="#small_world" hspace=10 border=0 width=224 height=113>
+</td>
+
+<td colspan=3>
+
+<span style="font-size:150%;color:#ffffff">News by Region</span><br /><br />
+</td>
+
+</tr><tr>
+
+<td valign=top width=25%>
+<a class="footerbox" href="http://www.greatnewsnetwork.org/index.php/regions/news/Antarctica/">Antarctica</a><br>
+<a class="footerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#africa">Africa</a><br>
+<a class="footerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#asia">Asia</a><br>
+<a class="footerbox" href="http://www.greatnewsnetwork.org/index.php/regions/news/Canada/">Canada</a><br>
+<a class="footerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#caribbean">The Caribbean</a><br>
+</td><td valign=top width=25%>
+<a class="footerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#centralamerica">Mexico/Central America</a><br>
+<a class="footerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#eastasia">East Asia</a><br>
+<a class="footerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#europe">Europe</a><br>
+<a class="footerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#indiansubcontinent">Indian Sub-Continent</a><br>
+<a class="footerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#middleeast">The Middle East</a><br>
+</td><td valign=top width=25%>
+<a class="footerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#oceania">Oceania</a><br>
+<a class="footerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#southamerica">South America</a><br>
+<a class="footerbox" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#southeastasia">Southeast Asia</a><br>
+<a class="footerbox" href="http://www.greatnewsnetwork.org/index.php/regions/news/United Nations/">United Nations</a><br>
+<a class="footerbox" href="http://www.greatnewsnetwork.org/index.php/regions/news/United States/">Good news in America</a><br>
+</td>
+</tr></table>
+
+	<map id="small_world" name="small_world">
+	<area shape="poly" alt="Canada" coords="20,24,44,26,55,29,67,27,66,0,59,1,23,7,19,16" href="http://www.greatnewsnetwork.org/index.php/regions/news/Canada/" title="Canada" />
+	<area shape="poly" alt="United States" coords="18,17,22,7,15,7,0,19" href="http://www.greatnewsnetwork.org/index.php/regions/news/United States/" title="United States" />
+	<area shape="poly" alt="United States" coords="19,26,45,27,54,31,44,45,41,41,33,42,20,41,16,33" href="http://www.greatnewsnetwork.org/index.php/regions/news/United States/" title="United States" />
+	<area shape="poly" alt="Mexico and Central America" coords="19,42,32,43,39,48,38,51,46,56,44,61,27,52" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#centralamerica" title="Mexico and Central America" />
+	<area shape="poly" alt="The Caribbean" coords="40,45,45,55,59,55,58,44" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#caribbean" title="The Caribbean" />
+	<area shape="poly" alt="South America" coords="47,56,40,66,44,79,50,82,51,104,57,113,66,112,78,72,53,56" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#southamerica" title="South America" />
+	<area shape="poly" alt="Europe" coords="68,0,74,17,96,14,96,12,90,7,97,0" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#europe" title="Europe" />
+	<area shape="poly" alt="Europe" coords="96,35,118,34,120,29,127,28,127,22,117,15,117,12,113,1,105,1,94,21,94,31" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#europe" title="Europe" />
+	<area shape="poly" alt="The Middle East" coords="119,31,118,36,125,39,133,54,141,53,145,48,144,35,138,33,133,31" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#middleeast" title="The Middle East" />
+	<area shape="poly" alt="Africa" coords="98,35,107,35,125,39,132,55,139,56,138,84,134,89,121,95,114,95,110,86,109,69,105,61,99,63,93,60,88,55,88,47" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#africa" title="Africa" />
+	<area shape="poly" alt="Asia" coords="117,8,118,15,128,22,128,30,135,30,145,34,145,43,152,35,149,33,156,24,164,30,172,29,178,20,187,27,185,28,189,31,192,29,194,23,185,16,201,24,206,12,196,6,179,6,151,1" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#asia" title="Asia" />
+	<area shape="poly" alt="East Asia" coords="150,32,156,25,164,31,172,30,178,22,190,32,197,26,200,28,199,38,182,50,179,50,176,44,165,42,160,40" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#eastasia" title="East Asia" />
+	<area shape="poly" alt="Indian Sub Continent" coords="153,35,146,44,153,48,154,56,159,61,162,61,161,52,166,47,174,46,170,44,158,41" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#indiansubcontinent" title="Indian Sub-Continent" />
+	<area shape="poly" alt="Southeast Asia" coords="176,46,168,48,172,66,179,73,194,75,204,74,203,65,194,57,188,46,180,51,178,50" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#southeastasia" title="Southeast Asia" />
+	<area shape="poly" alt="Oceania" coords="205,66,215,68,224,78,225,99,211,107,180,99,181,84,196,74,204,74" href="http://www.greatnewsnetwork.org/index.php/news/sitemap/#oceania" title="Oceania" />
+	<area shape="default" nohref="nohref" alt="" />
+	</map>
+
+
+</div> <!-- end regionsbox -->
+
+
+
+
+</div>
+</div>
+
+
+<div style="background: #000000;border-top:1px solid #444444;padding:10px;margin:0 auto 0 auto;">
+<div style="width:870px;text-align:left;margin:0 auto 0 auto"  class="footerbox">
+
+
+
+
+<div style="float:right;><fb:like href="http://facebook.com/greatnewsnetwork" send="false" layout="button_count" width="80" show_faces="false" colorscheme="dark"></fb:like></div>
+
+<div style="float:right;width:150px;">
+<a href="https://twitter.com/greatnewsnet" class="twitter-follow-button" data-show-count="false">Follow @greatnewsnet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+
+&copy; 2003-2013 GNN
+
+</div>
+</div>
+
+
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-576149-1";
+urchinTracker();
+</script>
+
+
+<!-- Paste this code just above the closing </body> of your conversion page. The tag will record a conversion every time this page is loaded. Optional 'sku' and 'value' fields are described in the Help Center. -->
+<script src="//ah8.facebook.com/js/conversions/tracking.js"></script><script type="text/javascript">
+try {
+  FB.Insights.impression({
+     'id' : 6002772209071,
+     'h' : 'f8f4251ef7',
+     'value' : 1 // you can change this dynamically
+  });
+} catch (e) {}
+</script>
+</body>
+</html>

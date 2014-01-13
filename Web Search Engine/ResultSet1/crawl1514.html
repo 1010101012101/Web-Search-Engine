@@ -1,0 +1,911 @@
+<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<title>Individual.com</title>
+
+
+<link rel="stylesheet" href="styles/stylesheet.css"/>
+<!-- BEGIN FRAME BUSTER -->
+<script language=JavaScript>
+<!--
+if (top.location != self.location){top.location = self.location;}
+// -->
+</SCRIPT>
+<!--END FRAME BUSTER -->
+<script language=JavaScript src="js/common.js"></script>
+<script language="JavaScript1.2">
+
+// Drop-in content box- By Dynamic Drive
+// For full source code and more DHTML scripts, visit http://www.dynamicdrive.com
+// This credit MUST stay intact for use
+
+var ie=document.all
+var dom=document.getElementById
+var ns4=document.layers
+var calunits=document.layers? "" : "px"
+
+var bouncelimit=32 //(must be divisible by 8)
+var direction="up"
+
+function initbox(){
+if (!dom&&!ie&&!ns4)
+return
+crossobj=(dom)?document.getElementById("dropin").style : ie? document.all.dropin : document.dropin
+scroll_top=(ie)? truebody().scrollTop : window.pageYOffset
+crossobj.top=scroll_top-250+calunits
+crossobj.visibility=(dom||ie)? "visible" : "show"
+dropstart=setInterval("dropin()",50)
+}
+
+function dropin(){
+scroll_top=(ie)? truebody().scrollTop : window.pageYOffset
+if (parseInt(crossobj.top)<100+scroll_top)
+crossobj.top=parseInt(crossobj.top)+40+calunits
+else{
+clearInterval(dropstart)
+bouncestart=setInterval("bouncein()",50)
+}
+}
+
+function bouncein(){
+crossobj.top=parseInt(crossobj.top)-bouncelimit+calunits
+if (bouncelimit<0)
+bouncelimit+=8
+bouncelimit=bouncelimit*-1
+if (bouncelimit==0){
+clearInterval(bouncestart)
+}
+}
+
+function dismissbox(){
+if (window.bouncestart) clearInterval(bouncestart)
+crossobj.visibility="hidden"
+}
+
+function truebody(){
+return (document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+
+window.onload=initbox
+
+</script>
+
+</head>
+
+
+<body bgcolor="#ffffff" text="#000000" link="#003366" alink="#3399cc" 
+vlink="#3399cc" topmargin="0" marginheight="0">
+
+
+<!--Top logo/banner section -->
+<table width="740" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="2" align="center" valign="middle">
+<img src="images/trans_sp.gif" alt="" width="728" height="3" border="0" vspace="0"/>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center" valign="middle">
+<!------ Google ad 'banner' begin ------>
+<script type="text/javascript"><!--
+google_ad_client = "pub-5014387125708611";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "image";
+google_ad_channel = "";
+google_color_border = "FF9900";
+google_color_bg = "FFFFFF";
+google_color_link = "336699";
+google_color_text = "000000";
+google_color_url = "330099";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<!------ Google ad 'banner' end ------>
+</td>
+</tr>
+
+<tr valign="middle">
+<td width="210"><a href="myIssue.php?mode=preview"><img src="images/idc_logo.gif" alt="Individual.com logo" width="193" height="48" border="0"/></a></td>
+<td width="530">
+
+<!--Top navigation section -->
+<table width="530" border="0" cellpadding="0" cellspacing="0">
+
+<tr valign="middle">
+
+<td width="20" height="23" bgcolor="#ffffff"><img src="images/top_lt_corner.gif" alt="" hspace="0" vspace="0" width="20" height="23" border="0"/></td>
+
+<td width="280" height="23" bgcolor="#003366" align="left">
+<span class="topNavLinkSmall"><a href="quickreg.php" class="topNavLinkSmall">For free personalized news click here!</a></span>&nbsp;
+</td>
+
+<td width="210" height="23" bgcolor="#003366" align="right">
+<div align="right" valign="middle">
+<a href="myIssue.php?mode=preview" class="topNavLinkSmall">Home</a><img src="images/trans_sp.gif" alt="" width="9" height="1" border="0">
+<a href="http://www.office.com/idc/help.html" class="topNavLinkSmall">Help</a><img src="images/trans_sp.gif" alt="" width="9" height="1" border="0">
+
+<a href="login.php" class="topNavLinkSmall">Log In</a>
+</div>
+</td>
+<td width="20" height="23" bgcolor="#ffffff"><img src="images/top_rt_corner.gif" alt="" hspace="0" vspace="0" width="20" height="23" border="0"/></td></tr>
+
+</table><!--End top navigation section -->
+
+</td></tr>
+
+
+</table><!--End top logo/banner section -->
+
+<!--Main section five column layout -->
+
+<table width="740" border="0" cellpadding="0" cellspacing="0">
+<tr>
+
+<td width="160"><img src="images/trans_sp.gif" alt="" width="160" height="15" hspace="0" vspace="0" border="0"/></td><!--left col-->
+<td width="10"><img src="images/trans_sp.gif" alt="" width="10" height="15" hspace="0" vspace="0" border="0"/></td><!--column divider-->
+<td width="400"><img src="images/trans_sp.gif" alt="" width="400" height="15" hspace="0" vspace="0" border="0"/></td><!--middle col-->
+<td width="10"><img src="images/trans_sp.gif" alt="" width="10" height="15" hspace="0" vspace="0" border="0"/></td><!--column divider-->
+<td width="160"><img src="images/trans_sp.gif" alt="" width="150" height="15" hspace="0" vspace="0" border="0"/></td><!--right col-->
+</tr>
+
+<tr valign="top">
+
+<td><!--Left column content-->
+<div style="position:relative; top:-10px">
+
+<!--Get date form-->
+<form action="#date" method="get" name="getDate">Select a date:<br><SELECT name=issuedate onchange=changeissuedate(this.form.issuedate)>
+<option value=myIssue.php?issuedate=2013-12-11 selected>December 11, 2013
+<option value=myIssue.php?issuedate=2013-12-10>December 10, 2013
+<option value=myIssue.php?issuedate=2013-12-09>December 9, 2013
+<option value=myIssue.php?issuedate=2013-12-08>December 8, 2013
+<option value=myIssue.php?issuedate=2013-12-07>December 7, 2013
+<option value=myIssue.php?issuedate=2013-12-06>December 6, 2013
+<option value=myIssue.php?issuedate=2013-12-05>December 5, 2013
+<option value=myIssue.php?issuedate=2013-12-04>December 4, 2013
+<option value=myIssue.php?issuedate=2013-12-03>December 3, 2013
+<option value=myIssue.php?issuedate=2013-12-02>December 2, 2013
+<option value=myIssue.php?issuedate=2013-12-01>December 1, 2013
+<option value=myIssue.php?issuedate=2013-11-30>November 30, 2013
+<option value=myIssue.php?issuedate=2013-11-29>November 29, 2013
+<option value=myIssue.php?issuedate=2013-11-28>November 28, 2013
+<option value=myIssue.php?issuedate=2013-11-27>November 27, 2013
+<option value=myIssue.php?issuedate=2013-11-26>November 26, 2013
+<option value=myIssue.php?issuedate=2013-11-25>November 25, 2013
+<option value=myIssue.php?issuedate=2013-11-24>November 24, 2013
+<option value=myIssue.php?issuedate=2013-11-23>November 23, 2013
+<option value=myIssue.php?issuedate=2013-11-22>November 22, 2013
+<option value=myIssue.php?issuedate=2013-11-21>November 21, 2013
+<option value=myIssue.php?issuedate=2013-11-20>November 20, 2013
+<option value=myIssue.php?issuedate=2013-11-19>November 19, 2013
+<option value=myIssue.php?issuedate=2013-11-18>November 18, 2013
+<option value=myIssue.php?issuedate=2013-11-17>November 17, 2013
+<option value=myIssue.php?issuedate=2013-11-16>November 16, 2013
+<option value=myIssue.php?issuedate=2013-11-15>November 15, 2013
+<option value=myIssue.php?issuedate=2013-11-14>November 14, 2013
+<option value=myIssue.php?issuedate=2013-11-13>November 13, 2013
+<option value=myIssue.php?issuedate=2013-11-12>November 12, 2013
+</SELECT></form>
+<!--End get date -->
+
+<p><!--My Topics section -->
+<table width="160" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="3"><img src="images/myTopicsHeader.gif" alt="My Topics" width="160" height="26" hspace="0" vspace="0" border="0"/></td>
+</tr>
+
+
+<tr valign="middle">
+<td width="8" background="images/leftTableLtBorder.gif"><img src="images/trans_sp.gif" alt="" width="8" height="1" hspace="0" vspace="0" border="0"/></td>
+<td width="144" bgcolor="#ffcc66">
+
+<!--
+<tmpl:topic>
+<a href="{link}{topicid}" class="topicsLink">{topic}</a><br/>
+</tmpl:topic>
+-->
+
+<a href="myIssue.php?topic=91" class="topicsLink">Antitrust<br /></a><a href="myIssue.php?topic=176" class="topicsLink">Alternative Energy<br /></a><a href="myIssue.php?topic=120" class="topicsLink">Aerospace &amp; Defense<br /></a><a href="myIssue.php?topic=1" class="topicsLink">Banking<br /></a><a href="myIssue.php?topic=58" class="topicsLink">Stock Market<br /></a>
+
+</td>
+<td width="8" background="images/leftTableRtBorder.gif"><img src="images/trans_sp.gif" alt="" width="8" height="1" hspace="0" vspace="0" border="0"/></td></tr>
+<tr>
+<td colspan="3"><img src="images/leftTableBottom.gif" alt="Table bottom" width="160" height="16" hspace="0" vspace="0" border="0"/></td>
+</tr>
+
+</table>
+
+
+</p>
+<!-- End My Topics -->
+
+
+<p><!--My Companies section -->
+<table width="160" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="3"><img src="images/myCompaniesHeader.gif" alt="My Companies" width="160" height="26" hspace="0" vspace="0" border="0"/></td>
+</tr>
+
+
+<tr valign="middle">
+<td width="8" background="images/leftTableLtBorder.gif"><img src="images/trans_sp.gif" alt="" width="8" height="1" hspace="0" vspace="0" border="0"/></td>
+<td width="144" bgcolor="#ffcc66">
+
+<a href="myCompany.php?company=417" class="topicsLink">Microsoft Corp.<br /></a><a href="myCompany.php?company=1680" class="topicsLink">Alliant Techsystems, Inc.<br /></a><a href="myCompany.php?company=668" class="topicsLink">International Business Machines Corp.<br /></a><a href="myCompany.php?company=552" class="topicsLink">Boeing Co.<br /></a><a href="myCompany.php?company=432" class="topicsLink">General Dynamics Corp.<br /></a><a href="myCompany.php?company=1314" class="topicsLink">Honeywell International, Inc.<br /></a><a href="myCompany.php?company=1303" class="topicsLink">L-3 Communications Holdings, Inc.<br /></a><a href="myCompany.php?company=442" class="topicsLink">Northrop Grumman Corp.<br /></a><a href="myCompany.php?company=1525" class="topicsLink">Rockwell Collins Inc.<br /></a><a href="myCompany.php?company=622" class="topicsLink">United Technologies Corp.<br /></a>
+
+</td>
+<td width="8" background="images/leftTableRtBorder.gif"><img src="images/trans_sp.gif" alt="" width="8" height="1" hspace="0" vspace="0" border="0"/></td></tr>
+<tr>
+<td colspan="3"><img src="images/leftTableBottom.gif" alt="Table bottom" width="160" height="16" hspace="0" vspace="0" border="0"/></td>
+</tr>
+
+</table>
+
+
+</p>
+<!-- End My Companies -->
+
+
+<p><!--Newsdesks section -->
+<table width="160" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="3"><img src="images/newsdesksHeader.gif" alt="Newsdesks" width="160" height="26" hspace="0" vspace="0" border="0"/></td>
+</tr>
+
+<tr valign="middle">
+<td width="8" background="images/leftTableLtBorder.gif"><img src="images/trans_sp.gif" alt="" width="8" height="1" hspace="0" vspace="0" border="0"/></td>
+<td width="144" bgcolor="#ffcc66">
+<a href="newsdesk.php?industry=business" class="normal">Business</a><br>
+<a href="newsdesk.php?industry=finance" class="normal">Finance</a><br>
+<a href="newsdesk.php?industry=internet" class="normal">Internet</a><br>
+<a href="newsdesk.php?industry=computer" class="normal">Computing</a><br>
+<!--<a href="" class="normal">High Tech</a><br>-->
+<!--<a href="" class="normal">Mass Media</a><br>-->
+<a href="newsdesk.php?industry=environmental" class="normal">Environmental</a><br>
+<a href="newsdesk.php?industry=energy" class="normal">Energy</a><br>
+<a href="newsdesk.php?industry=healthcare" class="normal">Healthcare</a><br>
+<a href="newsdesk.php?industry=industry%20news,%20a-z" class="normal">Industry News, A-Z</a><br>
+<a href="newsdesk.php?industry=sports" class="normal">Sports</a><br>
+<a href="newsdesk.php?industry=telecom" class="normal">Telecom</a><br>
+<a href="newsdesk.php?industry=transportation" class="normal">Transportation</a><br>
+</td>
+<td width="8" background="images/leftTableRtBorder.gif"><img src="images/trans_sp.gif" alt="" width="8" height="1" hspace="0" vspace="0" border="0"/></td></tr>
+<tr>
+<td colspan="3"><img src="images/leftTableBottom.gif" alt="Table bottom" width="160" height="16" hspace="0" vspace="0" border="0"/></td>
+</tr>
+
+</table>
+</p>
+<!-- End Newsdesks -->
+
+
+<p><!--Search section -->
+<form action="" method="get" name="frmsearch" onSubmit="return searchform();">
+<table width="160" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="3"><img src="images/searchHeader.gif" alt="Search" width="160" height="26" hspace="0" vspace="0" border="0"/></td>
+</tr>
+
+
+<tr valign="middle">
+<td width="8" background="images/leftTableLtBorder.gif"><img src="images/trans_sp.gif" alt="" width="8" height="1" hspace="0" vspace="0" border="0"/></td>
+<td width="144" bgcolor="#ffcc66">
+<img src="images/google.gif" alt="Google News" border="0" /><br />
+<table width="144" cellpadding="0" cellspacing="0" border="0">
+
+<tr valign="middle">
+<td colspan="2" height="24">
+
+<input type="text" name="searchtext" value="" size="18">
+</td>
+</tr>
+
+<tr align="left"><td colspan="2" height="5"><img src="images/trans_sp.gif" alt="" width="8" height="1" hspace="0" vspace="0" border="0"/></td></tr>
+
+<tr align="left">
+<td colspan="2" valign="middle"><input type="image" src="images/goButton.gif" name="doSearch" value="doSearch"/></td></tr>
+
+</table>
+
+</td>
+<td width="8" background="images/leftTableRtBorder.gif"><img src="images/trans_sp.gif" alt="" width="8" height="1" hspace="0" vspace="0" border="0"/></td></tr>
+
+<tr>
+
+<td colspan="3"><img src="images/leftTableBottom.gif" alt="Table bottom" width="160" height="16" hspace="0" vspace="0" border="0"/></td>
+</tr>
+
+</table>
+</form>
+</p>
+
+<!-- End Search -->
+
+
+
+<p><!--My Settings section -->
+<table width="160" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="3"><img src="images/mySettingsHeader.gif" alt="My Settings" width="160" height="26" hspace="0" vspace="0" border="0"/></td>
+</tr>
+
+<tr valign="middle">
+<td width="8" background="images/leftTableLtBorder.gif"><img src="images/trans_sp.gif" alt="" width="8" height="1" hspace="0" vspace="0" border="0"/></td>
+<td width="144" bgcolor="#ffcc66">
+
+<a href="myTopics.php" class="normal">Topics</a><br/>
+<a href="selectCompanies.php" class="normal">Companies</a><br/>
+<!--<a href="#" class="normal">Email</a><br/>-->
+<a href="myInfo.php" class="normal">Personal Info</a><br/>
+<a href="myPreferences.php" class="normal">Preferences</a><br/>
+<a href="emailPassword.php" class="normal">Forgot Password?</a><br/>
+<!--<a href="#" class="normal">Change Password</a><br/>-->
+<a href="logout.php" class="normal">Log out</a>
+</td>
+
+<td width="8" background="images/leftTableRtBorder.gif"><img src="images/trans_sp.gif" alt="" width="8" height="1" hspace="0" vspace="0" border="0"/></td></tr>
+<tr>
+<td colspan="3"><img src="images/leftTableBottom.gif" alt="Table bottom" width="160" height="16" hspace="0" vspace="0" border="0"/></td>
+</tr>
+
+</table>
+</p>
+<!-- End My Settings -->
+
+<p><!--Top Stories section -->
+<!--[idc_topstorylist]-->
+</p>
+<!-- End Top Stories -->
+
+<p><!--Top Topic section -->
+<!--[idc_toptopiclist]-->
+</p>
+<!-- End Top Topic -->
+
+</div>
+</td>
+
+<td><img src="images/trans_sp.gif" alt="" width="10" height="1" hspace="0" vspace="0" border="0"/></td>
+
+<td><!--Middle column content-->
+
+<div style="position:relative; top:-10px">
+<table border=0 cellpadding=0 cellspacing=0 width=100%><tr><td><a href="myIssue.php?topic=91" class="headerLink">Antitrust</a></td><td align=right></td></tr></table>
+<!-- <div class="homeHeader">{topic_title}</div> -->
+<div><img src="images/blue_sp.gif" alt="" vspace="5" width="400" height="2" border="0"/></div>
+
+<form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185879309" class="blurbHeadline">SHAREHOLDER ALERT: Pomerantz Law Firm Investigates Claims That the Merger May Not Be in the Best Interest of Investors of Trunkbow International Holdings Limited - TBOW</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+Pomerantz Grossman Hufford Dahlstrom &amp;amp; Gross LLP is investigating claims on behalf of investors of Trunkbow International Holdings Limited (&quot;Trunkbow&quot; or the &quot;Company&quot;) (NASDAQ: TBOW) (ISIN: US89818A1025) (CUSIP: 89818A1025) concerning the...
+</div>
+
+<div height="24" class="newsSource">PR Newswire, 1:08pm ET</div>
+<br clear=all/>
+
+<center><!------ Google ad 'x16' begin ------>
+<script type="text/javascript"><!--
+google_ad_client = "pub-5014387125708611";
+google_ad_width = 336;
+google_ad_height = 280;
+google_ad_format = "336x280_as";
+google_ad_type = "image";
+google_ad_channel = "";
+google_color_border = "FF9900";
+google_color_bg = "FFFFFF";
+google_color_link = "336699";
+google_color_text = "000000";
+google_color_url = "330099";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<!------ Google ad 'x16' end ------><br /><br /></center>
+</form><form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185879512" class="blurbHeadline"></headline><br>32059 <companyinfo>CompanyType=ImageUse:    <companydetails></companydetails></companyinfo><companyinfo>CompanyType=PixelWidth:    <companydetails></companydetails></companyinfo><companyinfo>CompanyType=PixelHeight:    <companydetails></a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+International law firm Dorsey &amp;amp; Whitney LLP announced today that Matthew        Ralph, a partner in the firm's Trial Group, has been named one of Minnesota        Lawyer's Attorneys of the Year 2013.  Mr. Ralph's recognition is largely...
+</div>
+
+<div height="24" class="newsSource">BusinessWire, 1:13pm ET</div>
+<br clear=all/>
+
+<center></center>
+</form><form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185884701" class="blurbHeadline">Women In Leadership: Silicon Valley 150 vs. The S&amp;P 100 - Fenwick Releases First Ever Survey Of Gender Diversity</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+Fenwick &amp;amp; West, one of the nation's premier law firms providing comprehensive legal services to technology, venture capital and life sciences companies, today announced the results of the first survey to analyze gender diversity on boards and...
+</div>
+
+<div height="24" class="newsSource">PR Newswire, 3:08pm ET</div>
+<br clear=all/>
+
+<center></center>
+</form><form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185855070" class="blurbHeadline">Hart-Scott-Rodino Waiting Period Expires for Shire's Acquisition of ViroPharma</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+DUBLIN, Ireland, December 11, 2013 /PRNewswire/ --  Shire plc   announces that the waiting period under the Hart-Scott-Rodino Antitrust Improvements Act of 1976 (HSR) relating to its previously announced tender offer by a wholly owned...
+</div>
+
+<div height="24" class="newsSource">PR Newswire Europe, 8:28am ET</div>
+<br clear=all/>
+
+<center></center>
+</form>
+</tmpl:headline_and_brief>
+<!-- end headline blurb source code -->
+
+<p>
+<table width="400" cellpadding="0" cellspacing="0" border="0">
+<tr valign="middle">
+<td width="133" align="left"></td>
+<td width="133" align="center"><div class="normal">1-4 of 9</div></td>
+<td width="133" align="right"><a href="myIssue.php?src=email&firstory=5&topic=91" class="normal">Next 5 >></a></td>
+</tr>
+</table>
+</p>
+<br clear=all/>
+
+<table border=0 cellpadding=0 cellspacing=0 width=100%><tr><td><a href="myIssue.php?topic=176" class="headerLink">Alternative Energy</a></td><td align=right></td></tr></table>
+<!-- <div class="homeHeader">{topic_title}</div> -->
+<div><img src="images/blue_sp.gif" alt="" vspace="5" width="400" height="2" border="0"/></div>
+
+<form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185863222" class="blurbHeadline"></headline><br>3725 <companyinfo>CompanyType=ImageUse:    <companydetails></companydetails></companyinfo><companyinfo>CompanyType=PixelWidth:    <companydetails></companydetails></companyinfo><companyinfo>CompanyType=PixelHeight:    <companydetails><</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+Ameresco,        Inc., (NYSE:AMRC), a leading energy efficiency and renewable energy        company, announced today the completion of the $1.3 million City of        Battle Creek, Parks and Recreation facility project. Ameresco is...
+</div>
+
+<div height="24" class="newsSource">BusinessWire, 9:08am ET</div>
+<br clear=all/>
+
+<center></center>
+</form><form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185879173" class="blurbHeadline"></headline><br>2015 <companyinfo>CompanyType=ImageUse:    <companydetails></companydetails></companyinfo><companyinfo>CompanyType=PixelWidth:    <companydetails></companydetails></companyinfo><companyinfo>CompanyType=PixelHeight:    <companydetails><</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+Research and Markets (http://www.researchandmarkets.com/research/g2sgmk/solar_trackers)        has announced the addition of the &quot;Solar        Trackers Market - Global Industry Analysis, Size, Share, Growth, Trends        And Forecast, 2010 -...
+</div>
+
+<div height="24" class="newsSource">BusinessWire, 1:08pm ET</div>
+<br clear=all/>
+
+<center></center>
+</form><form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185876165" class="blurbHeadline"></headline><br>4962 <companyinfo>CompanyType=ImageUse:    <companydetails></companydetails></companyinfo><companyinfo>CompanyType=PixelWidth:    <companydetails></companydetails></companyinfo><companyinfo>CompanyType=PixelHeight:    <companydetails><</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+After several meetings and facility tours at BYD's production facilities        in Shenzhen, BYD and Strata Solar have announced an extensive solar        partnership for 2014. Chapel Hill-based Strata Solar has inked a deal        with BYD to...
+</div>
+
+<div height="24" class="newsSource">BusinessWire, 12:13pm ET</div>
+<br clear=all/>
+
+<center></center>
+</form><form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185878099" class="blurbHeadline"></headline><br><headline>Panama Canal Expansion to Lower Cost of Shipping U.S. Grain to Asia by 12%, Rabobank Forecasts</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+Upon completion of the expansion of the Panama Canal, the cost to        transport grain from the U.S. corn belt to Asia will drop by an        estimated 12%, thus increasing the cost competitiveness of the U.S. as a        grain exporter to...
+</div>
+
+<div height="24" class="newsSource">BusinessWire, 12:38pm ET</div>
+<br clear=all/>
+
+<center></center>
+</form>
+</tmpl:headline_and_brief>
+<!-- end headline blurb source code -->
+
+<p>
+<table width="400" cellpadding="0" cellspacing="0" border="0">
+<tr valign="middle">
+<td width="133" align="left"></td>
+<td width="133" align="center"><div class="normal">1-4 of 127</div></td>
+<td width="133" align="right"><a href="myIssue.php?src=email&firstory=5&topic=176" class="normal">Next 20 >></a></td>
+</tr>
+</table>
+</p>
+<br clear=all/>
+
+<table border=0 cellpadding=0 cellspacing=0 width=100%><tr><td><a href="myIssue.php?topic=120" class="headerLink">Aerospace & Defense</a></td><td align=right></td></tr></table>
+<!-- <div class="homeHeader">{topic_title}</div> -->
+<div><img src="images/blue_sp.gif" alt="" vspace="5" width="400" height="2" border="0"/></div>
+
+<form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185890700" class="blurbHeadline">NASA and ATK Complete Avionics and Controls Testing for NASA's SLS Booster</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+NASA and ATK (NYSE: ATK) have successfully completed two key avionics tests for the solid rocket boosters for the space agency's new heavy lift rocket, the Space Launch System (SLS), being constructed to embark on bold missions to explore deep...
+</div>
+
+<div height="24" class="newsSource">PR Newswire, 6:23pm ET</div>
+<br clear=all/>
+
+<center></center>
+</form><form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185872845" class="blurbHeadline">Mars colonization group plans unmanned mission in 2018</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+The non-profit organization that hopes to found a permanent human settlement on Mars in 2025 said it hired two prominent aerospace companies to study the idea of sending an unmanned lander to the red planet in 2018.  Dutch-based Mars One...
+</div>
+
+<div height="24" class="newsSource">EFE News Services, 11:28am ET</div>
+<br clear=all/>
+
+<center></center>
+</form><form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185864747" class="blurbHeadline">4DSP LLC Announces Strategic Partnership with FBGS</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+4DSP LLC, a leading global developer of fiber optic strain, temperature and 3D shape sensing technology, today announced it has entered into a strategic partnership with FBGS, the premier OEM source of Fiber Bragg Gratings used in optical...
+</div>
+
+<div height="24" class="newsSource">PRWeb, 9:23am ET</div>
+<br clear=all/>
+
+<center></center>
+</form><form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185874982" class="blurbHeadline">NASA Television Coverage Set for Cygnus Launch to International Space Station</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+NASA Television will provide coverage of the upcoming Orbital Sciences' Cygnus cargo spacecraft mission to resupply the International Space Station this month.  (Logo: http://photos.prnewswire.com/prnh/20081007/38461LOGO)  On the...
+</div>
+
+<div height="24" class="newsSource">PR Newswire, 12:03pm ET</div>
+<br clear=all/>
+
+<center></center>
+</form>
+</tmpl:headline_and_brief>
+<!-- end headline blurb source code -->
+
+<p>
+<table width="400" cellpadding="0" cellspacing="0" border="0">
+<tr valign="middle">
+<td width="133" align="left"></td>
+<td width="133" align="center"><div class="normal">1-4 of 173</div></td>
+<td width="133" align="right"><a href="myIssue.php?src=email&firstory=5&topic=120" class="normal">Next 20 >></a></td>
+</tr>
+</table>
+</p>
+<br clear=all/>
+
+<table border=0 cellpadding=0 cellspacing=0 width=100%><tr><td><a href="myIssue.php?topic=1" class="headerLink">Banking</a></td><td align=right></td></tr></table>
+<!-- <div class="homeHeader">{topic_title}</div> -->
+<div><img src="images/blue_sp.gif" alt="" vspace="5" width="400" height="2" border="0"/></div>
+
+<form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185883744" class="blurbHeadline"></headline><br>3036 <companyinfo>CompanyType=ImageUse:    <companydetails></companydetails></companyinfo><companyinfo>CompanyType=PixelWidth:    <companydetails></companydetails></companyinfo><companyinfo>CompanyType=PixelHeight:    <companydetails><</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+Cassia Capital Partners, an independent investment advisory company with        regional offices in both Winston-Salem and Chicago, today announced that        Charles D. Barham, III has joined as a managing partner with the firm.        Charlie...
+</div>
+
+<div height="24" class="newsSource">BusinessWire, 2:38pm ET</div>
+<br clear=all/>
+
+<center></center>
+</form><form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185863039" class="blurbHeadline"></headline><br>4361 <companyinfo>CompanyType=ImageUse:    <companydetails></companydetails></companyinfo><companyinfo>CompanyType=PixelWidth:    <companydetails></companydetails></companyinfo><companyinfo>CompanyType=PixelHeight:    <companydetails><</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+Citigroup Inc. (&quot;Citigroup&quot;) announced today the expiration and        final tender results of its previously announced cash tender offers        (each, an &quot;Offer&quot; and, collectively, the &quot;Offers&quot;) with        respect to each series of notes...
+</div>
+
+<div height="24" class="newsSource">BusinessWire, 9:08am ET</div>
+<br clear=all/>
+
+<center></center>
+</form><form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185877703" class="blurbHeadline">Stock Investors Sell Off Shares of Bank of America, Down 1.4%</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+Bank of America (NYSE:BAC) is a company whose shares are active, trading 1.4% lower to $15.34.  The Dow is down 0.3% to 15,919 and the S&amp;amp;P is currently down 0.5% to 1,794.  Bank of America has overhead space with shares priced $15.34,...
+</div>
+
+<div height="24" class="newsSource">Financial News Network On, 12:33pm ET</div>
+<br clear=all/>
+
+<center></center>
+</form><form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185866445" class="blurbHeadline"></headline><br>27572 <companyinfo>CompanyType=ImageUse:    <companydetails></companydetails></companyinfo><companyinfo>CompanyType=PixelWidth:    <companydetails></companydetails></companyinfo><companyinfo>CompanyType=PixelHeight:    <companydetails></a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+Citi received the prestigious 'Best Bank of the Year' award from Futures        and Options World (FOW), the global derivatives publication, at an        annual international awards ceremony held last evening in London.  The awards were...
+</div>
+
+<div height="24" class="newsSource">BusinessWire, 9:58am ET</div>
+<br clear=all/>
+
+<center></center>
+</form>
+</tmpl:headline_and_brief>
+<!-- end headline blurb source code -->
+
+<p>
+<table width="400" cellpadding="0" cellspacing="0" border="0">
+<tr valign="middle">
+<td width="133" align="left"></td>
+<td width="133" align="center"><div class="normal">1-4 of 295</div></td>
+<td width="133" align="right"><a href="myIssue.php?src=email&firstory=5&topic=1" class="normal">Next 20 >></a></td>
+</tr>
+</table>
+</p>
+<br clear=all/>
+
+<table border=0 cellpadding=0 cellspacing=0 width=100%><tr><td><a href="myIssue.php?topic=58" class="headerLink">Stock Market</a></td><td align=right></td></tr></table>
+<!-- <div class="homeHeader">{topic_title}</div> -->
+<div><img src="images/blue_sp.gif" alt="" vspace="5" width="400" height="2" border="0"/></div>
+
+<form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185865486" class="blurbHeadline">Conn's, Caterpillar, Bristol-Myers Squibb, Novartis and AstraZeneca highlighted as Zacks Bull and Bear of the Day</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+Zacks Equity Research highlights Conn's (Nasdaq:CONN-Free Report) as the Bull of the Day and Caterpillar (NYSE:CAT-Free Report) as the Bear of the Day. In addition, Zacks Equity Research provides analysis on the Bristol-Myers Squibb Company...
+</div>
+
+<div height="24" class="newsSource">PR Newswire, 9:38am ET</div>
+<br clear=all/>
+
+<center></center>
+</form><form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185867295" class="blurbHeadline"></headline><br>4726 <companyinfo>CompanyType=ImageUse:    <companydetails></companydetails></companyinfo><companyinfo>CompanyType=PixelWidth:    <companydetails></companydetails></companyinfo><companyinfo>CompanyType=PixelHeight:    <companydetails><</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+UBS Investment Bank announced that today is the first day of trading on        the NYSE Arca(R) for the ETRACS        Monthly Pay 2xLeveraged Closed-End Fund ETN (NYSE:CEFL).        CEFL is linked to the monthly compounded 2x leveraged...
+</div>
+
+<div height="24" class="newsSource">BusinessWire, 10:08am ET</div>
+<br clear=all/>
+
+<center></center>
+</form><form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185865276" class="blurbHeadline">The Zacks Analyst Blog Highlights: SL Green Realty, Apple, Ralph Lauren, AT&amp;T and eBay</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+Zacks.com announces the list of stocks featured in the Analyst Blog. Every day the Zacks Equity Research analysts discuss the latest news and events impacting stocks and the financial markets. Stocks recently featured in the blog include the SL...
+</div>
+
+<div height="24" class="newsSource">PR Newswire, 9:38am ET</div>
+<br clear=all/>
+
+<center></center>
+</form><form action="#" method="get" name="getEdition">
+<!--Headline, blurb, source -->
+<tmpl:headline_and_brief>
+<div><a href="story.php?story=185865459" class="blurbHeadline">The Zacks Analyst Blog Highlights: Ford Motor, Siemens, General Motors, Toyota Motor and Chubb</a>&nbsp;&nbsp;</div>
+
+<div class="blurb">
+Zacks.com announces the list of stocks featured in the Analyst Blog. Every day the Zacks Equity Research analysts discuss the latest news and events impacting stocks and the financial markets. Stocks recently featured in the blog include the Ford...
+</div>
+
+<div height="24" class="newsSource">PR Newswire, 9:38am ET</div>
+<br clear=all/>
+
+<center></center>
+</form>
+</tmpl:headline_and_brief>
+<!-- end headline blurb source code -->
+
+<p>
+<table width="400" cellpadding="0" cellspacing="0" border="0">
+<tr valign="middle">
+<td width="133" align="left"></td>
+<td width="133" align="center"><div class="normal">1-4 of 4964</div></td>
+<td width="133" align="right"><a href="myIssue.php?src=email&firstory=5&topic=58" class="normal">Next 20 >></a></td>
+</tr>
+</table>
+</p>
+<br clear=all/>
+
+
+
+</div>
+
+</td>
+
+<td><img src="images/trans_sp.gif" alt="" width="10" height="1" hspace="0" vspace="0" border="0"/></td>
+
+<td align="center"><!--Right column content-->
+
+<div style="position:relative; top:-10px">
+<p>
+<a href="emailFriend.php"><img src="images/tellafriend.gif" alt="Tell a Friend About Us" width="150" height="53" hspace="0" vspace="0" border="0"/></a></p>
+
+<p><!--In the Markets section -->
+<!--[idc_marketsummary]-->
+<!-- End markets table -->
+
+<p>
+<!------ Google ad 'x10' begin ------>
+<script type="text/javascript"><!--
+google_ad_client = "pub-5014387125708611";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel = "";
+google_color_border = "FF9900";
+google_color_bg = "FFFFFF";
+google_color_link = "336699";
+google_color_text = "000000";
+google_color_url = "330099";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<!------ Google ad 'x10' end ------>
+</p>
+
+</div>
+</td>
+
+
+</tr>
+
+<!--Start bottom section -->
+
+<tr>
+<td colspan="5" align="center" height="110">
+<!------ Google ad 'banner' begin ------>
+<script type="text/javascript"><!--
+google_ad_client = "pub-5014387125708611";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "image";
+google_ad_channel = "";
+google_color_border = "FF9900";
+google_color_bg = "FFFFFF";
+google_color_link = "336699";
+google_color_text = "000000";
+google_color_url = "330099";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<!------ Google ad 'banner' end ------>
+</td>
+</tr>
+
+<tr>
+
+<td colspan="5" height="4" bgcolor="#003366"><img src="images/trans_sp.gif" alt="" width="740" height="4" border="0"/></td>
+</tr>
+
+<tr>
+<td colspan="5" align="center" valign="middle" height="28">
+<a href="myIssue.php?mode=preview" class="normal">Home</a><img src="images/trans_sp.gif" alt="" width="20" height="1" border="0">
+<a href="http://www.office.com/idc/help.html" class="normal">Help</a><img src="images/trans_sp.gif" alt="" width="20" height="1" border="0">
+<a href="mySettings.php" class="normal">My Settings</a><img src="images/trans_sp.gif" alt="" width="20" height="1" border="0">
+<a href="http://www.office.com/idc/privacy.html" class="normal">Privacy Policy</a><img src="images/trans_sp.gif" alt="" width="20" height="1" border="0">
+<a href="http://www.office.com/idc/terms.html" class="normal">Terms of Service</a><img src="images/trans_sp.gif" alt="" width="20" height="1" border="0">
+<a href="http://www.office.com/idc/advertising.html" class="normal">Advertising</a><img src="images/trans_sp.gif" alt="" width="20" height="1" border="0">
+
+<a href="http://www.office.com/idc/about.html" class="normal">About Us</a><img src="images/trans_sp.gif" alt="" width="20" height="1" border="0">
+<a href="http://www.office.com/idc/contact.html" class="normal">Contact Us</a><img src="images/trans_sp.gif" alt="" width="20" height="1" border="0">
+<a href="logout.php" class="normal">Logout</a>
+</td>
+</tr>
+
+<tr>
+<td colspan="5" align="center">
+<p class="smallBody10">
+Copyright <script language=JavaScript>dt = new Date();document.write(dt.getFullYear());</SCRIPT>, Individual.com, an Office.com Company. No redistribution allowed.
+</p>
+
+<!-- 
+<p class="smallBody10">
+Powered by<br>
+<img src="images/comtexLogo.gif" alt="Comtex logo" width="67" height="32" hspace="0" vspace="3" border="0"/>
+</p>
+-->
+ 
+
+</td>
+</tr>
+
+</table>
+
+<div id="dropin" style="position:absolute;visibility:hidden;left:200px;top:100px;width:370px;height:250px;background-color:#F5F5F5">
+
+<div align="right"></div>
+<table width="370" border="1" bordercolor="#000000" cellpadding="0" cellspacing="0" align="center" bgcolor="#fff8cc">
+
+<tr valign="middle" align="left">
+<td class="articleHeadline" align="center"><div style="margin:3px">Welcome to Individual.com!</div></td>
+</tr>
+
+<tr>
+<td align="center">
+  <img src="images/middleImages2.jpg" alt="Top image" width="370" height="39" hspace="0" vspace="0"></td>
+</tr>
+
+<tr>
+<td class="normal"><div style="margin:3px" align="center">
+This is a sample of edition of NewsPage<sup>sm</sup>.<br><br>
+
+Sign up today for this <strong>free</strong> customized news service.<br><br>
+
+Choose the topics and companies <strong>you</strong> want to follow.<br><br>
+
+Your NewsPage<sup>sm</sup> will be delivered daily
+via email and the Web.<br><br>
+
+<span style="margin-right:20px"><a href="/login.php" class="blurbHeadline">Log in</a></span>
+<span style="margin-right:20px"><a href="/quickreg.php" class="blurbHeadline">Join Now</a></span>
+<span style="margin-right:20px"><a href="javascript:dismissbox()" class="blurbHeadline">Close Window</a></span>
+</div>
+
+  </td>
+</tr>
+
+</table>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1938418-2");
+pageTracker._trackPageview();
+</script>
+</body></html>
+

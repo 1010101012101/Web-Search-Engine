@@ -1,0 +1,281 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="description" content="Fresh Content.net provides free, self-updating headlies for your web site. Get free newsfeeds and free web content.">
+  <meta name="keywords" content="newsfeeds, free content, free web content, rss, headlines, news">
+  <link rel="stylesheet" type="text/css" href="andreas02.css"
+ media="screen,projection">
+  <link rel="stylesheet" type="text/css" href="print.css" media="print">
+  <title>Free Web Content: get free rss feeds, news feeds, & Free Content!</title>
+  
+  <style type="text/css">
+
+#dropinboxv2cover{
+width: 320px; /*change width to desired */
+height: 220px;  /*change height to desired. REMOVE if you wish box to be content's natural height */
+position:absolute; /*Don't change below 4 rules*/
+z-index: 100;
+overflow:hidden;
+visibility: hidden;
+}
+
+#dropinboxv2{
+width: 300px; /*change width to above width-20. */
+height: 250px; /*change height to above height-20. REMOVE if you wish box to be content's natural height*/
+border: 2px solid black; /*Customize box appearance*/
+background-color: lightyellow;
+padding: 4px;
+position:absolute; /*Don't change below 3 rules */
+left: 0;
+top: 0;
+}
+
+</style>
+
+<script type="text/javascript">
+
+/***********************************************
+* Amazon style Drop-in content box- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit DynamicDrive.com for hundreds of DHTML scripts
+* This notice must stay intact for legal use
+* Go to http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var dropboxleft=200 //set left position of box (in px)
+var dropboxtop=100 //set top position of box (in px)
+var dropspeed=15 //set speed of drop animation (larger=faster)
+
+//Specify display mode. 3 possible values are:
+//1) "always"- This makes the fade-in box load each time the page is displayed
+//2) "oncepersession"- This uses cookies to display the fade-in box only once per browser session
+//3) integer (ie: 5)- Finally, you can specify an integer to display the box randomly via a frequency of 1/integer...
+// For example, 2 would display the box about (1/2) 50% of the time the page loads.
+
+var displaymode="always"
+
+///Don't edit beyond here///////////
+
+if (parseInt(displaymode)!=NaN)
+var random_num=Math.floor(Math.random()*displaymode)
+var ie=document.all
+var dom=document.getElementById
+
+function initboxv2(){
+if (!dom&&!ie)
+return
+crossboxcover=(dom)?document.getElementById("dropinboxv2cover") : document.all.dropinboxv2cover
+crossbox=(dom)?document.getElementById("dropinboxv2"): document.all.dropinboxv2
+scroll_top=(ie)? truebody().scrollTop : window.pageYOffset
+crossbox.height=crossbox.offsetHeight
+crossboxcover.style.height=parseInt(crossbox.height)+"px"
+crossbox.style.top=crossbox.height*(-1)+"px"
+crossboxcover.style.left=dropboxleft+"px"
+crossboxcover.style.top=dropboxtop+"px"
+crossboxcover.style.visibility=(dom||ie)? "visible" : "show"
+dropstart=setInterval("dropinv2()",50)
+}
+
+function dropinv2(){
+scroll_top=(ie)? truebody().scrollTop : window.pageYOffset
+if (parseInt(crossbox.style.top)<0){
+crossboxcover.style.top=scroll_top+dropboxtop+"px"
+crossbox.style.top=parseInt(crossbox.style.top)+dropspeed+"px"
+}
+else{
+clearInterval(dropstart)
+crossbox.style.top=0
+}
+}
+
+function dismissboxv2(){
+if (window.dropstart) clearInterval(dropstart)
+crossboxcover.style.visibility="hidden"
+}
+
+function truebody(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function get_cookie(Name) {
+var search = Name + "="
+var returnvalue = ""
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) {
+offset += search.length
+end = document.cookie.indexOf(";", offset)
+if (end == -1)
+end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+
+if (displaymode=="oncepersession" && get_cookie("droppedinv2")=="" || displaymode=="always" || parseInt(displaymode)!=NaN && random_num==0){
+if (window.addEventListener)
+window.addEventListener("load", initboxv2, false)
+else if (window.attachEvent)
+window.attachEvent("onload", initboxv2)
+else if (document.getElementById || document.all)
+window.onload=initboxv2
+if (displaymode=="oncepersession")
+document.cookie="droppedinv2=yes"
+}
+
+</script>
+  
+  
+</head>
+<body>
+
+<div id="toptabs">
+<p>Menu: <a class="activetoptab" href="http://www.freshcontent.net/terms_and_conditions.html">Terms of
+Use</a><span class="hide"> |&nbsp;</span><a class="toptab" href="http://www.freshcontent.net/privacy-policy.html">Privacy
+Policy</a><span class="hide"> | </span><a class="toptab" href="http://www.freshcontent.net/link_to_us.html">Link
+to Us</a><span class="hide"> |&nbsp;</span><a class="toptab" href="http://www.freshcontent.net/contact.html">Contact</a></p>
+</div>
+
+<div id="container">
+<div id="logo"><img style="width: 329px; height: 69px;"
+ alt="Fresh Content.net" src="images/freshContent_logo_cropped.jpg"><br>
+<p>&nbsp;&nbsp;&nbsp; Free, Self-updating Headlines for your Web Site<br>
+</p>
+</div>
+
+<div id="navitabs">
+<h2 class="hide">Sample navigation menu:</h2>
+<a class="activenavitab" href="http://www.freshcontent.net">Home</a><span class="hide">
+| </span> <a class="navitab" href="http://www.freshcontent.net/about.html">About Us</a><span class="hide">
+| </span> <a class="navitab" href="http://www.freshcontent.net/directory/news_feeds.html">Get Started</a><span class="hide">
+| </span> <a class="navitab" href="http://www.freshcontent.net/directory/news_feeds.html">Directory of Newsfeeds</a><span class="hide"> 
+| </span> <a class="navitab" href="http://www.freshcontent.net/faq.html">FAQ</a><span
+ class="hide"> | </span> <span class="hide"> | </span> <a
+ class="navitab" href="http://www.freshcontent.net/directory/misc/freebies.html">Free Stuff Newsfeed</a> </div>
+
+<div id="desc">
+<h2>It's so easy...</h2>
+<p>Fresh Content.net delivers free web content to your web site with
+our free rss newsfeeds. Have fresh news articles automatically appear on your site throughout the
+day. No need to register. Just copy-and-paste installation code into your web page(s) and be on your way. Handling
+your free content needs couldn't be any easier!</p>
+
+<p class="right"><a href="http://www.freshcontent.net/directory/news_feeds.html">Let's Get Started!</a> »</p>
+</div>
+
+<div id="main">
+
+<h2>Tired of Updating Your Site With Fresh Content?</h2>
+<p>
+ - Save time with our free, self-updating web content.<br>
+ - Enjoy seeing new headlines automatically appear throughout the day.<br>
+ - No programming necessary! - Anyone can Install it Quickly and Easily.<br>
+ - More sites will want to link to you and your free news feeds.<br>
+ - Users will visit your web site more often. <a href="http://www.freshcontent.net/about.html">Learn More</a> or Get Started...
+</p>
+
+<p class="block">
+<strong>
+The Importance of Content:
+</strong>
+You’ve heard the cliché "Content is King." Well it’s true. Relevant info
+drives the Internet.&nbsp; Good free content attracts visitors. And if
+you have news headlines that are fresh every day, visitors will come back again and again!</p>
+<h3>
+Install it in Seconds!
+</h3>
+<p>
+<img alt="Install it in seconds" src="http://www.freshcontent.net/images/stop_watch_76.jpg" style="width: 76px; height: 76px;" align="left" hspace="5">
+<br>
+Free and oh, so easy. No RSS readers or programming needed. Just
+copy-and-paste the installation code into your web page and forget
+about it...forever!
+<br>
+<a href="http://www.freshcontent.net/directory/news_feeds.html">See our Directory of 75 newsfeed channels here!</a>
+</p>
+<br>
+<h3>
+Why is it Free?
+</h3>
+<p>
+We work hard (sort of) to give you free web content with our rss
+news feeds. The free content floweth over and it always will. In
+exchange we simply require that you <a href="http://www.freshcontent.net/link_to_us.html">link to us here...</a>
+</p>
+<br>
+</div>
+<div id="sidebar">
+<h3>
+Today's Top Feeds:
+</h3>
+<ul class="sidelink">
+  <li><a href="http://www.freshcontent.net/directory/news/us_news.html">U.S. News: Top
+Stories</a></li>
+  <li><a href="http://www.freshcontent.net/directory/misc/freebies.html">Free Stuff Newsfeed
+  </a></li>
+  <li><a href="http://www.freshcontent.net/directory/arts/entertainment_news.html">Entertainment News
+  </a></li>
+  <li><a href="http://www.freshcontent.net/directory/news/financial_news.html">Finance/Markets News
+  </a></li>
+  <li><a href="http://www.freshcontent.net/directory/music/general_music.html">Music News
+  </a></li>
+  <li><a href="http://www.freshcontent.net/directory/news_feeds.html">View All Newsfeeds »</a>
+</li>
+</ul>
+<br>
+<h3>Other Newsfeeds:</h3>
+<ul class="sidelink">
+  <li><a href="http://www.freshcontent.net/directory/news/small-business.html">Small Business
+Newsfeed</a></li>
+  <li><a href="http://www.freshcontent.net/directory/news/personal_finance_news.html">Personal Finance
+News</a></li>
+  <li><a href="http://www.freshcontent.net/directory/news/world_news.html">World News: Top
+Stories</a></li>
+  <li><a href="http://www.freshcontent.net/directory/health/health_news.html">Health Newsfeed
+    </a></li>
+  <li><a href="http://www.freshcontent.net/directory/news/politics_news.html">Political Newsfeed
+    </a></li>
+  <li><a href="http://www.freshcontent.net/directory/sports/sports_news.html">Sports Newsfeed
+    </a></li>
+  <li><a href="http://www.freshcontent.net/directory/news_feeds.html">View all 75 Categories »</a></li>
+</ul>
+<br>
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=ra-4d7f55ca6bf748a9" class="addthis_button_compact">Share</a>
+<span class="addthis_separator">|</span>
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4d7f55ca6bf748a9"></script>
+<!-- AddThis Button END -->
+</div>
+<div id="footer">
+<p>
+<strong>
+© 2010 <a href="http://www.freshcontent.net">Fresh Content.net</a></strong> - Providing web site content to thousands of websites every day. <br>
+</p>
+</div>
+</div>
+
+ <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-254769-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+</div>
+</div>
+</body>
+</html>
+

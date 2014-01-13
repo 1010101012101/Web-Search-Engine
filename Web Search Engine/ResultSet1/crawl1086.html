@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Newslookup.com</title>
+<meta name="keywords" content="News search engine, newslookup, news lookup, news search, lookup news, news feeds" />
+<meta name="description" content="News search thousands of sites by source location, media type, document parts and more. Provider of custom news feeds and search solutions." />
+<meta http-equiv="refresh" content="180" />
+<link href="/css/master120213.css" rel="stylesheet" type="text/css" media="screen" /><link href="/css/jq022012.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="/jquery/jquery-latest.min.js"></script>
+<script type="text/javascript" src="/jquery/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="/jquery/jquery.ui.widget.min.js"></script>
+<!-- autocomplete -->
+<script type="text/javascript" src="/jquery/jquery.ui.position.min.js"></script>
+<script type="text/javascript" src="/jquery/jquery.ui.autocomplete.min.js"></script>
+<script type="text/javascript" src="/jquery/jquery.ui.menu.min.js"></script>
+
+<!--[if lt IE 10]>
+<style type="text/css">
+	#people_box { background: #e7e7ff; }  
+	.userbox { background: #e7e7ff !important; }  
+</style> 
+<![endif]--> 
+<!--[if gt IE 7]>
+<style type="text/css">
+	.button_title, .button_reg, .button_login, .button_pref { padding: 2px 12px 4px 12px;  }      
+</style> 
+<![endif]--> 
+<!--[if lt IE 9]>
+<style type="text/css">
+	.userbox input[type=submit] { filter:
+	progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=135,strength=2); }
+</style> 
+<![endif]--> 
+</head>
+<body>
+<div id="page-wrapper">	
+<div id="navbar">
+	<div id="navwrap">
+		<div id="navleft">NewsLookup - News Search Engine</div>
+		<div id="navright"> </div>
+	</div>
+</div>
+<form method="get" action="/results">	
+<div id="header">
+ <div id="search">
+  <input type="hidden" name="ps" value="10" />
+  <input type="hidden" name="tz" value=""/>			
+  <input type="text" name="q" size="30" class="textbox"/>
+  <input class="search_button" type="image" src="/images/submit.gif" alt="NEWSLOOKUP!" />
+<span style="text-align:left; margin-left: 5px;" class="opt" >  <a id="expand_opt" href="javascript:void(0);">Expand Options</a> </span>
+
+ </div>	
+ <div id="logo"><a href="http://www.newslookup.com/"><img src="http://www.newslookup.com/newslookup2010.gif"  width="350" height="60" alt="Newslookup News Search Engine" /></a>
+ </div>
+ <div id="searchoptions" style="display: none;">   Settings: 
+  <select name="hs">
+  <option value="">Whole Document</option>
+  <option value="1" >Title</option>
+  <option value="2" >Meta Keywords</option>
+  <option value="3" >Meta Description</option>
+  <option value="4" >Document Body</option>
+  </select>
+  <select name="tp">
+  <option value="">Media Type - All</option>
+  <option value="1">Internet</option>
+  <option value="2">Magazine</option>
+  <option value="3">News Agencies</option>
+  <option value="4">Newspapers</option>
+  <option value="5">Radio</option>
+  <option value="6">Television</option>
+  </select> <select name="cat">
+<option value="">Source Region - All</option>	<option value="-100" >Non U.S.</option>
+	<option value="100" >United States</option>
+	<option value="80231,81143,81157,81161,81162,81163" >->New York Metro</option>	
+	<option value="10" >Africa</option>
+	<option value="13274" >->Kenya</option>	
+	<option value="22707" >->South Africa</option>	
+	<option value="30" >Asia</option>
+	<option value="5122" >Canada</option>		
+	<option value="40" >Europe</option>	
+	<option value="35" >Middle East</option>	
+	<option value="25950" >->United Kingdom</option>
+	<option value="50" >Oceania</option>	
+	<option value="2156" >->Australia</option>
+	<option value="17913" >->New Zealand</option>
+  </select> 
+  <select name="groupby">
+  <option value="Yes">Group By Site</option>
+  <option value="No">Do Not Group</option>
+  </select>
+  <select name="s">
+<option value="" selected="selected">By Relevancy &lt; 60 days</option><option value="1" >By Date &lt; 60 days</option><option value="2" >By Relevancy&gt; 60 days</option><option value="3" >By Date &gt; 60 days</option>  </select>
+ </div>
+ <div id="tagline"><h1>Crawling the world for the latest news headlines 24x7x365</h1></div>
+</div>
+</form>	
+
+<div id="admid_collapse"> </div>
+<div id="content">
+  <div id="leftcol"><ul>
+<li class="title0"> <span style="color: #ff6600;">&raquo; </span>POPULAR</li>
+<li class="list"> &bull; <a href="http://www.newslookup.com/us/tv/">US National TV News</a></li>
+<li class="list"> &bull; <a href="http://www.newslookup.com/us_local/">US Local Markets</a></li>
+<li class="list"> &bull; <a href="http://www.newslookup.com/us_local/ny_metro/">US Metro New York</a></li>
+<li class="list"> &bull; <a href="http://www.newslookup.com/world/">World TV News</a></li>
+<li class="list"> &bull; <a href="http://www.newslookup.com/us/newspapers/">US Natl Newspapers</a></li>
+<li class="list"> &bull; <a href="http://www.newslookup.com/politics/">US Politics</a></li>
+</ul>
+
+<ul>
+<li class="title1"> <span style="color: #ff6600;">&raquo;  </span>NEWS BY TOPIC</li>
+<li class="list">&bull; <a href="http://www.newslookup.com/Business/">Business</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/entertainment/">Entertainment</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/Forum_Watch/">Forum Watch</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/health/">Health</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/politics/">Politics</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/radio/">Radio Industry </a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/science/">Science</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/Tech/">Technology</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/Wires/">Top Wires</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/world/">World TV News</a></li>
+</ul>
+<ul>
+<li class="title2"> <span style="color: #ff6600;">&raquo;  </span>PEOPLE</li>
+<li class="list">&bull; <a href="http://www.newslookup.com/people/celebrities/">Celebrities</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/people/us_governors.html">US Governors</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/people/us_house.html">US House Reps.</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/people/us_dissidents">US Political Dissidents</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/people/us_politicians_other.html">US Politicians (Other)</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/people/us_senate.html">US Senators</a></li>
+</ul>
+<ul>
+<li class="title3"> <span style="color: #ff6600;">&raquo;  </span>POLITICS</li>
+<li class="list">&bull; <a href="http://www.newslookup.com/politics/left/">Politics: Left</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/politics/right/">Politics: Right</a></li>
+</ul>
+<ul>
+<li class="title4"> <span style="color: #ff6600;">&raquo;  </span>PRESS RELEASES</li>
+<li class="list">&bull; <a href="http://www.newslookup.com/press_releases/">Aggregate</a></li>
+</ul>
+<ul>
+<li class="title1"> <span style="color: #ff6600;">&raquo;  </span>REGION EDITION</li>
+<li class="list">&bull; <a href="http://www.newslookup.com/Africa/">Africa</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/Asia/East/">East Asia</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/Europe/">Europe</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/middle_east/">Middle East</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/asia/south/">South Asia</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/Asia/SouthEast/">South East Asia</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/Australia/">Australia</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/Canada/">Canada</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/new_zealand/">New Zealand</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/US/">United States</a></li>
+</ul>
+<ul>
+<li class="title2"> <span style="color: #ff6600;">&raquo;  </span>LIVE</li>
+<li class="list">&bull; <a href="http://www.newslookup.com/Live/">Live Run Down</a></li>
+</ul>
+<ul>
+<li class="title3"> <span style="color: #ff6600;">&raquo;  </span>DOMAIN NAMES</li>
+<li class="list">&bull; <a href="http://www.newslookup.com/domain-name-sales.html">Domain Classifieds</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/domains/">Domain Industry News</a></li>
+</ul>
+<ul>
+<li class="title4"> <span style="color: #ff6600;">&raquo;  </span>SUBMISSIONS</li>
+<li class="list">&bull; <a href="http://www.newslookup.com/exclusive_submit.html">Exclusive Submit</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/rec.html">News Site Submit</a></li>
+</ul>
+<ul>
+<li class="title1"> <span style="color: #ff6600;">&raquo;  </span>SITE INFO</li>
+<li class="list">&bull; <a href="http://www.newslookup.com/advertise/"> Advertising</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/about.html">About Us</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/contact.html">Contact</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/donate">Donate</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/faq.html">FAQ</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/search_help.html">Search Help</a></li>
+</ul>
+<ul>
+<li class="title5"> <span style="color: #ff6600;">&raquo; </span>SERVICES</li>
+<li class="list"> &bull; <a href="http://www.newslookup.com/advertise/">Advertising</a></li>	
+<li class="list"> &bull; <a href="http://www.newslookup.com/Feeds/">News Feed Products</a></li>
+<li class="list"> &bull; <a href="http://kynast.com/">Kynast.com</a></li>
+</ul>
+<ul>
+<li class="title1"> <span style="color: #ff6600;">&raquo;  </span>USER MENU</li>
+<li class="list">&bull; <a href="http://www.newslookup.com/login.php">Login</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/lost_pass.php">Lost Password</a></li>
+<li class="list">&bull; <a href="http://www.newslookup.com/register.php">Register</a></li>
+</ul>
+  </div>
+  <div id="leftmid"><h2>US: National TV News Headlines</h2>
+<p class="time">&raquo; Auto updated [5] minutes ago</p>
+<a class="title" href="http://usnews.nbcnews.com/_news/2013/12/11/21868130-montana-man-pushed-off-cliff-believed-bride-accused-of-murder-had-a-surprise-for-him-testimony" >Montana man pushed off cliff believed bride accused of murder had a 'surprise' for him: testimony</a><br />
+<a class="source" href="http://usnews.nbcnews.com/" >NBC News: Lead Headline</a> <span class="stime"> | Thu Dec 12, 2013 02:56 UTC</span><br />
+<span class='desc'>A Montana man whose newlywed wife pushed him to his death off a cliff said on the morning he died that he'd canceled plans to go kayaking and golfing because his wife told him she had a "surprise" for him, his father-in-law and a friend both testified Wed</span><br /><br /><a class="title" href="http://america.aljazeera.com/watch/shows/america-tonight/america-tonight-blog/2013/12/11/inside-the-militarysmalesexualassaultproblem.html" >Inside the military's male sexual assault problem</a><br />
+<a class="source" href="http://america.aljazeera.com/topics/topic/categories/us.html" >Al Jazeera America</a> <span class="stime"> | Thu Dec 12, 2013 02:27 UTC</span><br />
+<span class='desc'>Most U.S. servicemembers who said they experienced unwanted sexual contact in 2012 were men. Lori Jane Gliha reports.</span><br /><br /><a class="title" href="http://www.cnn.com/2013/12/11/us/texas-teen-dwi-wreck/index.html" >The result of 'affluenza'?</a><br />
+<a class="source" href="http://www.cnn.com" >CNN: Lead Headline</a> <span class="stime"> | Thu Dec 12, 2013 02:19 UTC</span><br />
+<span class='desc'>A judge has sentenced a teen in Texas to 10 years&#39; probation for driving drunk and causing a crash that left two people severely injured and four others dead.</span><br /><br /><a class="title" href="http://usnews.nbcnews.com/_news/2013/12/11/21867462-veteran-arizona-state-cop-resigns-after-discovered-to-be-illegal-immigrant" >Veteran Arizona state cop resigns after discovered to be illegal immigrant </a><br />
+<a class="source" href="http://usnews.nbcnews.com/" >NBC News: Lead Headline</a> <span class="stime"> | Thu Dec 12, 2013 02:16 UTC</span><br />
+<span class='desc'>A detective for the Arizona state police resigned this week after it was revealed she isn't a U.S. citizen and had &mdash; perhaps unknowingly &mdash; misrepresented where she was born on application documents, officials said Wednesday.</span><br /><br /><a class="title" href="http://www.foxnews.com/us/2013/12/11/cancer-bride-says-was-hooked-on-heroin-when-faked-wedding-to-get-gifts/" >'Cancer bride' says she was hooked on heroin when she faked wedding to get gifts</a><br />
+<a class="source" href="http://www.foxnews.com" >Foxnews: Lead</a> <span class="stime"> | Thu Dec 12, 2013 01:59 UTC</span><br />
+<span class='desc'>A woman has admitted she was hooked on heroin when she raised thousands of dollars by falsely claiming she had cancer, prosecutors and her attorney said Wednesday.</span><br /><br /><a class="title" href="http://usnews.nbcnews.com/_news/2013/12/11/21868031-lockdown-lifted-at-american-u-after-gunman-reported" >Lockdown lifted at American U. after gunman reported</a><br />
+<a class="source" href="http://usnews.nbcnews.com/" >NBC News: Lead Headline</a> <span class="stime"> | Thu Dec 12, 2013 01:46 UTC</span><br />
+<span class='desc'>American University officials say the campus is locked down after reports of a gunman Wednesday evening.
+D.C. Police responded to Gray Hall at Newark Street and Nebraska Avenue NW just before 8 p.m.
+Students are urged to shelter and the public has been in</span><br /><br /><a class="title" href="http://usnews.nbcnews.com/_news/2013/12/11/21868031-american-u-goes-on-lockdown-after-reports-of-gunman" >American U. goes on lockdown after reports of gunman</a><br />
+<a class="source" href="http://usnews.nbcnews.com/" >NBC News: Lead Headline</a> <span class="stime"> | Thu Dec 12, 2013 01:46 UTC</span><br />
+<span class='desc'>American University officials say the campus is locked down after reports of a gunman Wednesday evening.
+D.C. Police responded to Gray Hall at Newark Street and Nebraska Avenue NW just before 8 p.m.
+Students are urged to shelter and the public has been in</span><br /><br /><a class="title" href="http://www.foxnews.com/us/2013/12/11/american-university-campus-on-lockdown-gunman-reported/" >American University campus on lockdown, gunman reported</a><br />
+<a class="source" href="http://www.foxnews.com" >Foxnews: Lead</a> <span class="stime"> | Thu Dec 12, 2013 01:44 UTC</span><br />
+<span class='desc'>Police and school officials say American University&#39;s campus in the nation&#39;s capital is on lockdown after police received calls about a man with a gun.</span><br /><br /><a class="title" href="http://www.foxnews.com/us/2013/12/11/250000-snow-leopard-among-stolen-items-at-la-backyard-bash/" >$250,000 snow leopard among stolen items at LA backyard bash</a><br />
+<a class="source" href="http://www.foxnews.com" >Foxnews: Lead</a> <span class="stime"> | Thu Dec 12, 2013 01:27 UTC</span><br />
+<span class='desc'>A backyard bash at a Los Angeles mansion last month resulted in the theft of a $250,000 snow leopard, a suit of armor and more than a dozen arrests, police said.</span><br /><br /><a class="title" href="http://usnews.nbcnews.com/_news/2013/12/11/21867811-parents-of-georgia-teen-found-dead-in-gym-mat-rally-for-inquiry" >Parents of Georgia teen found dead in gym mat rally for inquiry</a><br />
+<a class="source" href="http://usnews.nbcnews.com/" >NBC News: Lead Headline</a> <span class="stime"> | Thu Dec 12, 2013 01:24 UTC</span><br />
+<span class='desc'>ATLANTA &mdash;&nbsp;During a rally  at the state Capitol Wednesday, lawyers for the family of a Georgia teenager  found dead at school inside a rolled-up gym mat called on the governor to order  a coroner's inquest.
+The body of 17-year-old Kendrick Johns</span><br /><br /><a class="title" href="http://www.cnn.com/2013/12/11/showbiz/seaworld-joan-jett-blackfish/index.html" >Jett to SeaWorld: Stop rockin' the orcas</a><br />
+<a class="source" href="http://www.cnn.com" >CNN</a> <span class="stime"> | Thu Dec 12, 2013 00:56 UTC</span><br />
+<span class='desc'>Rocker Joan Jett warned SeaWorld to stop blasting her music at </span><br /><br /><a class="title" href="http://www.cnn.com/2013/12/11/us/new-jersey-mayor-gun-manufacturer-safety/index.html" >Mayor makes gunmakers take a quiz</a><br />
+<a class="source" href="http://www.cnn.com" >CNN</a> <span class="stime"> | Thu Dec 12, 2013 00:56 UTC</span><br />
+<span class='desc'>A New Jersey mayor is compelling gun manufacturers bidding for gun and ammunition contracts with the city police to answer questions on gun safety in what is believed to be the first such move in the nation. </span><br /><br /><a class="title" href="http://www.cnn.com/2013/12/11/justice/louisiana-boy-sentenced/index.html" >Teen sentenced for 'WWE-style' killing</a><br />
+<a class="source" href="http://www.cnn.com" >CNN</a> <span class="stime"> | Thu Dec 12, 2013 00:56 UTC</span><br />
+<span class='desc'>A 13-year-old Louisiana boy has been sentenced to three years in a juvenile facility for killing his 5-year-old sister by using WWE-style wrestling moves on her.</span><br /><br /><a class="title" href="http://america.aljazeera.com/articles/2013/12/11/fda-announces-newguidelinestolimitantibioticsinlivestock.html" >FDA announces new guidelines to limit antibiotics in livestock</a><br />
+<a class="source" href="http://america.aljazeera.com/topics/topic/categories/us.html" >Al Jazeera America</a> <span class="stime"> | Thu Dec 12, 2013 00:43 UTC</span><br />
+<span class='desc'>In a bid to curb human antibiotic resistance, FDA asks drug companies to change labeling, but compliance is voluntary</span><br /><br /><a class="title" href="http://america.aljazeera.com/articles/2013/12/11/routine-labor-violatorsreceivebillionsinfederalcontracts.html" >Routine labor violators receive billions in federal contracts</a><br />
+<a class="source" href="http://america.aljazeera.com/topics/topic/categories/us.html" >Al Jazeera America</a> <span class="stime"> | Thu Dec 12, 2013 00:42 UTC</span><br />
+<span class='desc'>Study says 30 percent of companies with the highest penalties for federal labor law violations were federal contractors</span><br /><br /><a class="title" href="http://america.aljazeera.com/articles/2013/12/11/jury-acquits-ex-copinfatalpostkatrinashooting.html" >Jury acquits ex-cop in fatal post-Katrina shooting</a><br />
+<a class="source" href="http://america.aljazeera.com/topics/topic/categories/us.html" >Al Jazeera America</a> <span class="stime"> | Thu Dec 12, 2013 00:37 UTC</span><br />
+<span class='desc'>The ruling comes as a blow to Justice Department&#39;s efforts to clean up the city&#39;s troubled police department</span><br /><br /><a class="title" href="http://america.aljazeera.com/articles/2013/12/11/nyu-students-allowedtounionizehopetosetprecedent.html" >NYU students allowed to unionize, hope to set precedent</a><br />
+<a class="source" href="http://america.aljazeera.com/topics/topic/categories/us.html" >Al Jazeera America</a> <span class="stime"> | Thu Dec 12, 2013 00:36 UTC</span><br />
+<span class='desc'>Graduate students circumvent the National Labor Relations Board in favor of independent unionization</span><br /><br /><a class="title" href="http://www.cnn.com/2013/12/11/tech/innovation/google-bus-protest/index.html" >Is S.F. becoming techies and have-nots?</a><br />
+<a class="source" href="http://www.cnn.com" >CNN</a> <span class="stime"> | Thu Dec 12, 2013 00:36 UTC</span><br />
+<span class='desc'>A fake Google bus protest draws attention to the growing tension between tech workers and working class in SF. </span><br /><br /><p class="more"><a href="/us/tv">More US: National TV News Headlines ...</a><br /></p><div style="display:block; height: 30px;"> </div><h2>World Edition Headlines</h2>
+<p class="time">&raquo; Auto updated [4] minutes ago</p>
+<a class="title" href="http://www.bbc.co.uk/news/world-europe-25342698" >US considers sanctions against Ukraine</a><br />
+<a class="source" href="http://www.bbc.co.uk/news/" >BBC News: Lead Headline</a> <span class="stime"> | Thu Dec 12, 2013 03:12 UTC</span><br />
+<span class='desc'>The US state department says it is considering all options, including sanctions, towards Ukraine after riot police moved in on protesters.</span><br /><br /><a class="title" href="http://abcnews.go.com/International/wireStory/heavy-rain-chaos-rio-dead-21187555" >Heavy Rain Causes Chaos in Rio; at Least 2 Dead</a><br />
+<a class="source" href="http://abcnews.go.com/international" >ABC News (US): International</a> <span class="stime"> | Thu Dec 12, 2013 03:10 UTC</span><br />
+<span class='desc'>Heavy Rain Causes Chaos in Rio; at Least 2 Dead</span><br /><br /><a class="title" href="http://news.sky.com/story/1181109/chicago-everyday-violence-in-us-murder-capital" >Chicago: Everyday Violence In US Murder Capital</a><br />
+<a class="source" href="http://news.sky.com/world" >Sky News</a> <span class="stime"> | Thu Dec 12, 2013 02:53 UTC</span><br />
+<span class='desc'>With more than 500 people killed in Chicago last year, guns and drugs are a part of real life for the city&#39;s residents.</span><br /><br /><a class="title" href="http://abcnews.go.com/International/wireStory/china-bad-bank-ipo-offers-bet-slowdown-21187432" >China "Bad Bank" IPO Offers Bet on Slowdown</a><br />
+<a class="source" href="http://abcnews.go.com/international" >ABC News (US): International</a> <span class="stime"> | Thu Dec 12, 2013 02:51 UTC</span><br />
+<span class='desc'>China </span><br /><br /><a class="title" href="http://www.abc.net.au/news/2013-12-12/nelson-mandela-memorial-fake-impersonator-in-gifs/5152014?section=world" >Nelson Mandela memorial fake sign language controversy in GIFs</a><br />
+<a class="source" href="http://www.abc.net.au/news/world/articles/" >ABC Australia: World Lead</a> <span class="stime"> | Thu Dec 12, 2013 02:41 UTC</span><br />
+<span class='desc'>How did the fake Mandela memorial signer's performance stack up? Dismally, say experts.</span><br /><br /><a class="title" href="http://america.aljazeera.com/watch/shows/the-stream/the-stream-officialblog/2013/12/11/colombia-storms-twittertodiscussbannedbogotamayor.html" >Colombians storm Twitter to discuss banned Bogota mayor</a><br />
+<a class="source" href="http://america.aljazeera.com/topics/topic/categories/international.html" >Al Jazeera America</a> <span class="stime"> | Thu Dec 12, 2013 02:40 UTC</span><br />
+<span class='desc'>Decision to remove Gustavo Petro from office seen as political vendetta.</span><br /><br /><a class="title" href="http://www.cbc.ca/news/world/australia-s-top-court-strikes-down-gay-marriage-law-1.2460772" >Australia's top court strikes down gay marriage law</a><br />
+<a class="source" href="http://www.cbc.ca/news/world" >CBC: World Lead</a> <span class="stime"> | Thu Dec 12, 2013 02:39 UTC</span><br />
+<span class='desc'>Australia&#39;s highest court struck down a landmark law on Thursday that had begun allowing the country&#39;s first gay marriages, shattering the dreams of more than two dozen same-sex couples less than a week after their weddings.</span><br /><br /><a class="title" href="http://america.aljazeera.com/articles/2013/12/11/israel-spurns-bloodofethiopianbornlawmaker.html" >Ethiopian-born Israeli lawmaker spurned at blood-collection drive</a><br />
+<a class="source" href="http://america.aljazeera.com/topics/topic/categories/international.html" >Al Jazeera America</a> <span class="stime"> | Thu Dec 12, 2013 02:35 UTC</span><br />
+<span class='desc'>Knesset member denounces incident as the latest in series of what she calls racist actions against black community</span><br /><br /><a class="title" href="http://news.sky.com/story/1181089/six-year-old-suspended-for-kissing-schoolmate" >Six-Year-Old Suspended For Kissing Schoolmate</a><br />
+<a class="source" href="http://news.sky.com/world" >Sky News</a> <span class="stime"> | Thu Dec 12, 2013 02:33 UTC</span><br />
+<span class='desc'>Hunter Yelton&#39;s behaviour was classified as </span><br /><br /><a class="title" href="http://news.sky.com/story/1181071/putin-to-give-state-of-the-nation-address" >Putin Set To Release Thousands Of Prisoners</a><br />
+<a class="source" href="http://news.sky.com/world" >Sky News</a> <span class="stime"> | Thu Dec 12, 2013 02:33 UTC</span><br />
+<span class='desc'>Between 50,000 and 100,000 people could be freed from Russia&#39;s jails, in a plan set to be revealed in the leader&#39;s yearly speech.</span><br /><br /><a class="title" href="http://www.bbc.co.uk/sport/0/cricket/25330276" >Australia under pressure - Gilchrist</a><br />
+<a class="source" href="http://www.bbc.co.uk/news/world/asia/" >BBC: Asia</a> <span class="stime"> | Thu Dec 12, 2013 02:21 UTC</span><br />
+<span class='desc'>Australia&#39;s lack of Ashes-winning experience may affect the third Test, according to former wicketkeeper Adam Gilchrist.</span><br /><br /><a class="title" href="http://rt.com/news/syria-lebanon-snow-refugees-091/" >Rare snowstorm near Syria-Lebanon border brings havoc, disrupts aid (PHOTOS)</a><br />
+<a class="source" href="http://rt.com/" >RT.com</a> <span class="stime"> | Thu Dec 12, 2013 02:04 UTC</span><br />
+<span class='desc'>At least two people were killed and 14 injured as the first snowfall of the season hit Syria and Lebanon. High winds and freezing temperatures affected refugee camps and disrupted international aid. More severe weather is expected this winter.</span><br /><br /><a class="title" href="http://www.bbc.co.uk/news/world-africa-25341965" >Unicef: 230m children 'do not exist'</a><br />
+<a class="source" href="http://www.bbc.co.uk/news/world/asia/" >BBC: Asia</a> <span class="stime"> | Thu Dec 12, 2013 02:02 UTC</span><br />
+<span class='desc'>The UN children&#39;s charity, Unicef, says 230m children worldwide have not had their births registered, making them vulnerable to neglect or abuse.</span><br /><br /><a class="title" href="http://abcnews.go.com/International/wireStory/australian-court-rejects-law-allowing-gay-marriage-21187213" >Australian Court Rejects Law Allowing Gay Marriage</a><br />
+<a class="source" href="http://abcnews.go.com/international" >ABC News (US): International</a> <span class="stime"> | Thu Dec 12, 2013 01:56 UTC</span><br />
+<span class='desc'>Australian Court Rejects Law Allowing Gay Marriage</span><br /><br /><a class="title" href="http://www.abc.net.au/news/2013-12-12/cecile-brossard-edouard-stern-murder-tv/5151942?section=world" >French banker's lover 'eternally' regrets his killing during S&M session</a><br />
+<a class="source" href="http://www.abc.net.au/news/world/articles/" >ABC Australia: World Lead</a> <span class="stime"> | Thu Dec 12, 2013 01:50 UTC</span><br />
+<span class='desc'>The woman who shot a top French banker during a sado-masochistic sex session in 2005 has expressed deep regret for his killing on a Swiss investigative news program.</span><br /><br /><a class="title" href="http://abcnews.go.com/International/wireStory/court-apple-violate-samsung-patents-21187210" >Court Says Apple Did Not Violate Samsung Patents</a><br />
+<a class="source" href="http://abcnews.go.com/international" >ABC News (US): International</a> <span class="stime"> | Thu Dec 12, 2013 01:46 UTC</span><br />
+<span class='desc'>Court Says Apple Did Not Violate Samsung Patents</span><br /><br /><a class="title" href="http://america.aljazeera.com/watch/shows/live-news/2013/12/heavy-snow-hammersrefugeecampinlebanon.html" >Heavy snow hammers refugee camp in Lebanon</a><br />
+<a class="source" href="http://america.aljazeera.com/topics/topic/categories/international.html" >Al Jazeera America</a> <span class="stime"> | Thu Dec 12, 2013 01:38 UTC</span><br />
+<span class='desc'>Lebanese camps, where Syrian refugees are spending their third winter, are being hit hard by Storm Alexa</span><br /><br /><a class="title" href="http://www.bbc.co.uk/news/business-25341887" >Mexico moves to open oil resources</a><br />
+<a class="source" href="http://www.bbc.co.uk/news/" >BBC News: Lead Headline</a> <span class="stime"> | Thu Dec 12, 2013 01:24 UTC</span><br />
+<span class='desc'>Mexico&#39;s Senate approves a measure to open the state-run oil fields to foreign investment for the first time in 75 years.</span><br /><br /><p class="more"><a href="/world/">More World Edition Headlines ...</a><br /></p><div style="display:block; height: 30px;"> </div>  </div>	
+  <div id="rightmid"><div id="people_box">
+	<form id="autoc" method="get" action="/">
+		<fieldset style="border:0;">
+			<label style="line-height:20px; margin-left:5px; font-family:tahoma;">Politician Run-Down:</label> <input id="auto_visible" name="auto_visible" style="width:200px; margin-right:5px;" class="text ui-widget-content ui-corner-all" value="" />
+		</fieldset>
+</form>	
+</div>
+<h4 style="text-transform:uppercase; background-color: #e7f0fa;"><a href="http://www.newslookup.com/Wires/">Top News Wires</a> &raquo; </h4><p style="margin-left: 5px"><a class="story" href="http://hosted.ap.org/dynamic/stories/U/US_STOLEN_MILITARY_IDS_MILITIA?SITE=AP&amp;SECTION=HOME&amp;TEMPLATE=DEFAULT&amp;CTIME=2013-12-11-22-11-58">APNewsBreak: Minn. man accused of Army ID theft</a><br />
+<a class="source" href="http://hosted.ap.org">AP</a><br />
+MINNEAPOLIS AP -- A Minnesota National Guard member and self-described commander of a militia group is accused of stealing classified information from his former mi....<br /><br />
+<a class="story" href="http://hosted.ap.org/dynamic/stories/A/AS_SKOREA_SAMSUNG_APPLE?SITE=AP&amp;SECTION=HOME&amp;TEMPLATE=DEFAULT&amp;CTIME=2013-12-11-22-10-22">SKorea court: Apple didn't violate Samsung patents</a><br />
+<a class="source" href="http://hosted.ap.org">AP</a><br />
+SEOUL, South Korea AP -- A Seoul court rejected Samsung's claim that iPhone and iPad models violated three of its patents, another setback for the South Korean elec....<br /><br />
+<a class="story" href="http://www.reuters.com/article/2013/12/12/us-ukraine-idUSBRE9BA04420131212">Ukraine protesters defy police, leaders reject talks with president</a><br />
+<a class="source" href="http://www.reuters.com">Reuters</a><br />
+KIEV (Reuters) - Ukrainian protesters stood their ground on Wednesday after an overnight sweep by riot police and their leaders dismissed an offer of talks from a p....<br /><br />
+<a class="story" href="http://www.upi.com/Top_News/US/2013/12/11/American-University-lockdown-lifted-one-person-in-custody/UPI-80941386817382/">American University lockdown lifted, one person in custody</a><br />
+<a class="source" href="http://www.upi.com/">UPI</a><br />
+WASHINGTON, Dec. 11 (UPI) --  American University in Washington, D.C., was locked down for a time Wednesday night after campus police said they received a report of....<br /><br />
+<a class="story" href="http://hosted.ap.org/dynamic/stories/U/US_SCI_SPACE_STATION?SITE=AP&amp;SECTION=HOME&amp;TEMPLATE=DEFAULT&amp;CTIME=2013-12-11-21-56-34">NASA: Cooling pump on space station shuts down</a><br />
+<a class="source" href="http://hosted.ap.org">AP</a><br />
+WASHINGTON AP -- NASA said Wednesday it was looking into a problem with a malfunctioning cooling pump on the International Space Station, but there was no immediate....<br /><br />
+<a class="story" href="http://hosted.ap.org/dynamic/stories/U/US_ETHICS_INVESTIGATION_GEORGIA?SITE=AP&amp;SECTION=HOME&amp;TEMPLATE=DEFAULT&amp;CTIME=2013-12-11-21-56-53">Subpoenas related to Ga. gov's ethics complaints</a><br />
+<a class="source" href="http://hosted.ap.org">AP</a><br />
+ATLANTA AP -- Two employees of the state ethics commission have received federal grand jury subpoenas seeking documents related to ethics complaints involving Georg....<br /><br />
+<a class="story" href="http://hosted.ap.org/dynamic/stories/U/US_NURSING_HOME_SHOOTING?SITE=AP&amp;SECTION=HOME&amp;TEMPLATE=DEFAULT&amp;CTIME=2013-12-11-21-43-33">Los Angeles police: Man shoots ailing wife, sister</a><br />
+<a class="source" href="http://hosted.ap.org">AP</a><br />
+LOS ANGELES AP -- A 60-year-old man fatally shot his dementia-stricken wife at their home and then walked into a convalescent home Wednesday and killed his sister, ....<br /><br />
+</p><p class="more">  <a class="sumfooter" href="http://www.newslookup.com/Wires/">More Top News Wires ...</a></p><h4 style="text-transform:uppercase; background-color: #e4d7d6;"><a href="http://www.newslookup.com/politics/">Politics</a> &raquo; </h4><p style="margin-left: 5px"><a class="story" href="http://www.msnbc.com/hardball/watch/can-obamas-approval-numbers-improve-87948867770">Can Obama's approval numbers improve?</a><br />
+<a class="source" href="http://www.msnbc.com/">MSNBC</a><br />
+Despite improvements with both the health care website and the unemployment rate, President Obama’s approval numbers remain underwater. David Axelrod and.......<br /><br />
+<a class="story" href="http://www.msnbc.com/all-in/watch/edward-snowden-vs-the-pope-88021571525">Edward Snowden vs. the Pope</a><br />
+<a class="source" href="http://www.msnbc.com/">MSNBC</a><br />
+Chris Hayes talks with The Nation's Michelle Goldberg, Business Insider's Josh Barro, and Democracy Now's Amy Goodman about TIME’s "Person of the Year" pick.....<br /><br />
+<a class="story" href="http://www.msnbc.com/all-in/watch/obamacare-enrollment-up-88001603930">Obamacare enrollment up</a><br />
+<a class="source" href="http://www.msnbc.com/">MSNBC</a><br />
+Combined with state exchanges, Obamacare enrollments are expected to surpass one million by January first - but "doc shock" will be the next meme of the GOP.....<br /><br />
+<a class="story" href="http://www.msnbc.com/all-in/watch/why-7-milk-isnt-all-bad-87999043731">Why $7 milk isn't all bad</a><br />
+<a class="source" href="http://www.msnbc.com/">MSNBC</a><br />
+The "Dairy Cliff" is a reminder that government plays an unseen role in almost every aspect of our lives.....<br /><br />
+<a class="story" href="http://www.msnbc.com/all-in/watch/person-of-the-year-88026179914">Person of the year</a><br />
+<a class="source" href="http://www.msnbc.com/">MSNBC</a><br />
+Chris Hayes talks with The Nation's Michelle Goldberg, Business Insider's Josh Barro, and Democracy Now's Amy Goodman about TIME’s "Person of the Year" pick.....<br /><br />
+<a class="story" href="http://www.msnbc.com/hardball/watch/least-productive-congress-in-history-87983683664">Least productive Congress in history?</a><br />
+<a class="source" href="http://www.msnbc.com/">MSNBC</a><br />
+Could this Congress be the most least productive in history? Jon Stewart gave his analysis on The Daily Show.....<br /><br />
+<a class="story" href="http://abcnews.go.com/blogs/politics/2013/12/asiana-crash-hearing-highlights-pilots-dependency-on-automation/">Asiana Crash Hearing Highlights Pilots' Dependency on Automation</a><br />
+<a class="source" href="http://abcnews.go.com/">ABC News (US)</a><br />
+Pilots have become overly dependent on aircraft automation to the detriment of their manual skills, according to testimony at a National Transportation Safety Board....<br /><br />
+</p><p class="more">  <a class="sumfooter" href="http://www.newslookup.com/politics/">More Politics ...</a></p><h4 style="text-transform:uppercase; background-color: #eeeeee;"><a href="http://www.newslookup.com/Business/">Top Business News</a> &raquo; </h4><p style="margin-left: 5px"><a class="story" href="http://www.bloomberg.com/news/2013-12-12/apple-sent-medical-experts-to-pegatron-plant-after-worker-deaths.html">Apple Sends Medical Team to Probe Deaths at Pegatron China Plant</a><br />
+<a class="source" href="http://www.bloomberg.com/">Bloomberg</a><br />
+Apple Inc., the world's most valuable technology company, sent independent medical experts to a Chinese factory operated by supplier Pegatron Corp. after the deaths....<br /><br />
+<a class="story" href="http://www.businessinsider.com/revenge-porn-site-owner-charged-2013-12">Revenge Porn Website Owner Arrested Charged - Business Insider</a><br />
+<a class="source" href="http://www.businessinsider.com/">Business Insider</a><br />
+He is believed to be responsible for posting more than 10,000 sexually explicit photos and charging victims up to $350 to take them down.....<br /><br />
+<a class="story" href="http://www.zerohedge.com/news/2013-12-11/federal-reserve-100-years-boom-and-bust">The Federal Reserve: 100 Years Of Boom And Bust</a><br />
+<a class="source" href="http://www.zerohedge.com/">Zero Hedge</a><br />
+<br />
+<a class="story" href="http://www.zerohedge.com/news/2013-12-11/what-americas-companies-really-think">What America's Companies Really Think</a><br />
+<a class="source" href="http://www.zerohedge.com/">Zero Hedge</a><br />
+If one believes the various US diffusion indices - among which key are the assorted regional Fed surveys the monthly PMI data - and listens to the pithy soundbites ....<br /><br />
+<a class="story" href="http://www.bloomberg.com/news/2013-12-12/india-s-nifty-stock-futures-fall-before-inflation-output-data.html">India's Nifty Stock Futures Fall Before Inflation, Output Data</a><br />
+<a class="source" href="http://www.bloomberg.com/">Bloomberg</a><br />
+Indian stock-index futures dropped and rupee forwards weakened before the release of consumer inflation and industrial output data today.....<br /><br />
+<a class="story" href="http://www.bloomberg.com/news/2013-12-12/taiwan-dollar-forwards-fall-most-in-three-weeks-on-fed-outlook.html">Taiwan Dollar Forwards Fall Most in Three Weeks on Fed Outlook</a><br />
+<a class="source" href="http://www.bloomberg.com/">Bloomberg</a><br />
+Taiwan dollar forwards fell the most in three weeks as a budget deal and improved economic data in the U.S. fueled speculation the Federal Reserve will taper its re....<br /><br />
+<a class="story" href="http://www.bloomberg.com/news/2013-12-12/mexico-lower-house-starts-oil-debate-as-opponents-hijack-chamber.html">Mexico Lower House Starts Oil Debate as Opponents Hijack Chamber</a><br />
+<a class="source" href="http://www.bloomberg.com/">Bloomberg</a><br />
+Mexico's lower house began debating an energy bill passed overnight by the Senate, with the session moving to a cramped auditorium and bypassing committees after th....<br /><br />
+</p><p class="more">  <a class="sumfooter" href="http://www.newslookup.com/Business/">More Top Business News ...</a></p><h4 style="text-transform:uppercase; background-color: #e7f0fa;"><a href="http://www.newslookup.com/Tech/">Top Tech Headlines</a> &raquo; </h4><p style="margin-left: 5px"><a class="story" href="http://mashable.com/2013/12/11/youtube-professionals/">Where Have All the Cats Gone? Professionals Now Rule YouTube</a><br />
+<a class="source" href="http://mashable.com/">Mashable</a><br />
+If YouTube began as America&#39;s Funniest Home Videos, it has now become SNL. The platform&#39;s biggest hits are all produced by professionals.....<br /><br />
+<a class="story" href="http://www.itworld.com/it-management/387286/banks-shouldnt-rely-mobile-sms-passcodes-security-firm-says">Banks shouldn't rely on mobile SMS passcodes, security firm says</a><br />
+<a class="source" href="http://www.itworld.com/">IT World</a><br />
+A widely used security feature intended to protect access to online bank accounts is becoming increasingly ineffective, as cybercriminals develop advanced malicious....<br /><br />
+<a class="story" href="http://www.theregister.co.uk/2013/12/12/government_nbn_plan_in_disarray/">'Mixed tech' NBN needs a super-sized HFC net</a><br />
+<a class="source" href="http://www.theregister.co.uk/">The Register</a><br />
+Costs will blow out, 2016 delivery a dream Even to miss its original cost targets and 2016 deadline, the federal government's “mixed technology” National Broadb....<br /><br />
+<a class="story" href="http://www.crn.com/news/channel-programs/240164684/partners-hail-dells-channel-revamp-declare-it-a-game-changer.htm?cid=rssFeed">Partners Hail Dell's Channel Revamp, Declare It A Game Changer</a><br />
+<a class="source" href="http://www.crn.com/">CRN</a><br />
+Partners are having a love fest with new channel program overhaul, claiming it will deliver more sales and better relationship with Dell in 2014.....<br /><br />
+<a class="story" href="http://www.theregister.co.uk/2013/12/12/throughwall_tracking_more_accurate_lower_power/">Through-wall tracking of humans using Wi-Fi: Now more accurate, low power</a><br />
+<a class="source" href="http://www.theregister.co.uk/">The Register</a><br />
+Targets gamers, elderly, and the utterly slothful Video  The MIT boffins that earlier this year demonstrated the ability to “see through walls” using Wi-Fi has....<br /><br />
+<a class="story" href="http://mashable.com/2013/12/11/best-movie-of-2013/">Vote for Your Favorite Movie of 2013</a><br />
+<a class="source" href="http://mashable.com/">Mashable</a><br />
+We rounded up 30 of the year&#39;s most captivating films. Vote for your favorite, tell us why you chose it and come back next week to see who wins!....<br /><br />
+<a class="story" href="http://gizmodo.com/dan-croll-is-the-perfect-commuter-crooner-1481443773">Dan Croll Is the Perfect Commuter Crooner</a><br />
+<a class="source" href="http://gizmodo.com/">Gizmodo</a><br />
+It&#39;s almost time to pack your bag again, tuck some presents under your arm and find your way back to your family. You might take a plane, drive a car or ride a ....<br /><br />
+</p><p class="more">  <a class="sumfooter" href="http://www.newslookup.com/Tech/">More Top Tech Headlines ...</a></p><h4 style="text-transform:uppercase; background-color: #e4d7d6;"><a href="http://www.newslookup.com/us/np/">US Newspapers: National</a> &raquo; </h4><p style="margin-left: 5px"><a class="story" href="http://www.nytimes.com/2013/12/12/world/africa/hometown-remembers-madiba-the-villager-well-before-mandela-the-icon.html">Hometown Remembers Madiba the Villager, Well Before Mandela the Icon</a><br />
+<a class="source" href="http://www.nytimes.com/">NY Times</a><br />
+While the world admires Nelson Mandela as a freedom fighter, residents in his hometown, where he will be buried on Sunday, considered him just another villager.....<br /><br />
+<a class="story" href="http://www.nytimes.com/2013/12/12/us/ex-officer-is-cleared-in-hurricane-katrina-shooting.html">Ex-Officer Is Cleared in Hurricane Katrina Shooting</a><br />
+<a class="source" href="http://www.nytimes.com/">NY Times</a><br />
+A jury found David Warren, 50, not guilty on all counts in the death of Henry Glover, who was killed in New Orleans after the storm.....<br /><br />
+<a class="story" href="http://www.washingtonpost.com/national/president-bush-writes-letter-to-alabama-kicker/2013/12/11/f6e5c4d0-62d2-11e3-af0d-4bb80d704888_story.html">Ex-President Bush writes letter to Alabama kicker</a><br />
+<a class="source" href="http://www.washingtonpost.com/">Washington Post</a><br />
+Alabama kicker Cade Foster received a supportive note from former President George W. Bush.....<br /><br />
+<a class="story" href="http://www.washingtonpost.com/national/subpoenas-related-to-ga-govs-ethics-complaints/2013/12/11/a0fa0638-62d4-11e3-af0d-4bb80d704888_story.html">Subpoenas related to Ga. gov’s ethics complaints</a><br />
+<a class="source" href="http://www.washingtonpost.com/">Washington Post</a><br />
+Two people with knowledge of the case say two employees of the state ethics commission have received federal grand jury subpoenas seeking documents related to ethic....<br /><br />
+<a class="story" href="http://www.nytimes.com/2013/12/12/us/politics/top-aide-to-lamar-alexander-is-investigated-for-child-pornography.html">Aide to Senator Is Arrested in Child Pornography Case</a><br />
+<a class="source" href="http://www.nytimes.com/">NY Times</a><br />
+The home of Ryan Loskarn, the chief of staff for Senator Alexander's Washington office, was searched by federal law enforcement officers on Wednesday.....<br /><br />
+<a class="story" href="http://www.nytimes.com/2013/12/12/us/ex-officer-is-cleared-in-hurricane-katrina-shooting.html?_r=0">Ex-Officer Is Cleared in Hurricane Katrina Shooting</a><br />
+<a class="source" href="http://www.nytimes.com/">NY Times</a><br />
+A jury found David Warren, 50, not guilty on all counts in the death of Henry Glover, who was killed in New Orleans after the storm.....<br /><br />
+<a class="story" href="http://www.washingtonpost.com/national/health-science/michigan-puts-restrictions-on-abortion-insurance/2013/12/11/d89c666a-62d1-11e3-af0d-4bb80d704888_story.html">Michigan puts restrictions on abortion insurance</a><br />
+<a class="source" href="http://www.washingtonpost.com/">Washington Post</a><br />
+Michigan will join more conservative states in requiring residents who want health insurance coverage for abortions to buy an extra policy, after Republican legisla....<br /><br />
+</p><p class="more">  <a class="sumfooter" href="http://www.newslookup.com/us/np/">More US Newspapers: National ...</a></p>  </div>
+  <div id="rightcol"><div class="userbox">
+		
+	<form action="http://www.newslookup.com/pref.html" method="get">
+		<fieldset>
+		<input type="hidden" name="x" value="0" />		
+		<input style="width:60px;" type="submit" value="Settings" />
+		</fieldset>
+	</form>	
+			<form action="http://www.newslookup.com/login.php" method="get">
+		<fieldset>			
+		<input type="hidden" name="x" value="0" />			
+		<input style="width:60px;" type="submit" value="Login" />
+		</fieldset>		
+	</form>	
+				<div class="userinfo">
+		<p><span style="color: #ff6600;">&raquo; </span> <a href="/pref.html">Time Zone: UTC</a></p>
+	</div>
+		<form action="http://www.newslookup.com/register.php" method="get">
+		<fieldset>
+		<input type="hidden" name="x" value="0" />
+		<input style="width:60px;" type="submit" value="Register" />
+		</fieldset>
+	</form>	
+</div>	
+
+<div style="border: 1px solid #e7e7ff; background: #ffffff; padding: 0px; margin:0px;">
+	<a href="http://www.newslookup.com/ads/ad.php?id=1074" rel="nofollow"><img src="http://www.newslookup.com/user/122/ads/lightower-ad.jpg" width="160" height="600" alt="Lightower Ad" /></a>
+	<div style="text-align:right;">
+		<a style="font-family: arial; color: #003366; font-size: 10px; margin-right:5px;" href="http://www.newslookup.com/advertise/">Ads by Newslookup.com</a>
+	</div>
+</div>	
+<br />
+  </div>
+  <div style="clear: both;"> </div>
+</div>
+<div class="push"></div>
+</div>
+<div id="footer-wrapper">
+	<div id="footer">
+<a href="http://www.newslookup.com/about.html">About us</a> • <a href="http://www.newslookup.com/advertise/">Advertise</a> • <a href="http://www.newslookup.com/contact.html">Contact</a> • <a href="http://www.newslookup.com/faq.html">FAQ</a> • <a href="http://www.newslookup.com/rec.html">News Site Submission</a> • <a href="http://www.newslookup.com/privacy.html">Privacy Policy</a> • <a href="http://www.newslookup.com/terms.html">Terms Of Service</a><br />
+Copyright ©  2000-2013 Newslookup.com, All rights reserved<br />
+<a href="http://www.newslookup.com">Newslookup.com</a> is a service of <a href="http://kynast.com">Kynast Technologies Inc.</a><br />
+    	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {	
+	$("#expand_opt").click(function() {
+	  $("#searchoptions").fadeToggle("fast", "linear");
+	  });
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$( "#auto_visible" ).autocomplete({
+		source: "/public/people_autocomplete.php",
+		minLength: 1,
+		select: function( event, ui ) {
+			$('input[name=auto_visible]').val(ui.item.value);
+			event.preventDefault();
+			window.location.href = ui.item.url;
+		}
+	});
+});
+</script>
+</body>
+</html>
+

@@ -1,0 +1,291 @@
+<html>
+<head>
+	<title>
+	Yellowbrix provides real time news and syndicated content	</title>
+	<meta http-equiv="Page-Enter" content="blendTrans(Duration=0.0)">
+	<meta http-equiv="Page-Exit" content="blendTrans(Duration=0.0)">
+	<meta name="keywords" content="business intelligence,Real-time news,business intelligence information,real time news,real-time industry news,Not RSS,Financial Market Solutions,company intelligence,financial analytics,sentiment analytics,real-time medial source,custom news,custom industry news,current awareness news,content syndication,content management,content analytics,content management solutions,real-time content solutions">
+		<meta name="description" content="Yellowbrix offers real time news, syndicated content and custom content categorization">
+		<meta name="robots" content="index, follow">
+	<meta name="googlebot" content="noodp">
+	<meta name="googlebot" content="noydir">
+	<meta name="revisit-after" content="14 days">
+
+	<link rel="stylesheet" href="inc/main.css">
+	<script type="text/javascript" src="inc/main.js"></script>
+	<script src="scripts/prototype.js" type="text/javascript"></script>
+	<script src="scripts/scriptaculous.js" type="text/javascript"></script>
+	<script src="components/ajax/js/jquery-1.1.2.js" type="text/javascript"></script>
+	<script>
+<!--
+
+var displaySummary = 0;
+var clicked = 0;
+
+function goStocks( exchange ) {
+        document.location.href = "Stocks.php?&ID=infobrix&scategory=Computers&activeLookup=1&qExchange=" + exchange + "&qType=" + document.imageStocks.qType.options[document.imageStocks.qType.selectedIndex].value;
+}
+
+function pageInit() {
+        displaySummary = 1;
+}
+function setSummary( num ) {
+        if ( displaySummary ) {
+                document.summaryApp.setSummary( num );
+//                document.applets[0].setSummary( num );
+       }
+}
+
+function setSummaryMulti( app_name, num ) {
+        if ( displaySummary ) {
+                document[app_name].setSummary( num );
+//                document.applets[0].setSummary( num );
+       }
+}
+function setCategory() {
+   var selCat;
+
+   selCat = document.cat.path.selectedIndex;
+   document.cat.category.value = document.cat.path.options[selCat].text;
+   return( true );
+}
+
+function ValidLengthEx(obj, nMin, nMax, strMessage) {
+        if ((obj.value.length >= nMin)  && (obj.value.length < nMax)) {
+                return true;
+        } else {
+                return false;
+        }
+}
+function validlength(obj, objname, len) {
+        var message;
+        message = "Please enter at least " + len + " characters";
+        if (objname != null && objname != "" ) {
+                message = message + " in the '" + objname + "' field";
+        }
+        return( ValidLengthEx(obj,len,9999,message) );
+}
+function checkClick() {
+	if ( clicked == 1 ) {
+		window.event.returnValue = false;
+		setTimeout("clicked = 0", 5000)
+	} else {
+		clicked = 1;
+	}
+}
+function popup(el)
+{
+	document.getElementById(el).style.visibility="visible";
+
+        if (document.getElementById("container").style.setAttribute) //`For IE
+        document.getElementById("container").style.overflow="hidden";
+}      
+
+function showPage(el,redirect)
+{
+	var redirect = (redirect == null) ? false : redirect;
+
+        document.getElementById(el).style.visibility="hidden";
+        if (document.getElementById("container").style.setAttribute) //`For IE
+	if (redirect)
+	{
+		location.href="D7927FFE-C5AD-4F6D-9C51-467DFA3BDDD5.html";
+	}
+}
+// -->
+</script>
+ 
+<script>
+function loadHeadlines() {
+	if (document.getElementById) {
+//		document.getElementById('sHeadlines').style.visibility = 'visible';
+	} else {
+		if (document.layers) {
+			document.hideShow.visibility = 'visible';
+		} else {
+			document.all.hideShow.style.visibility = 'visible';
+		}
+	}
+}
+</script>
+<style type="text/css">
+#tooltip {
+        border: 1px solid #1f3b6b;
+        background-color: #fff;
+        padding: 0px;
+        width: 220px;
+}
+#tooltip h3, #tooltip li { margin: 7px; }
+
+#tooltip.fancy {
+        border: 1px solid #1f3b6b;
+        text-align:left;
+	font-size: 11px;
+	color: #333333;
+        width: 220px;
+	padding-bottom:5px;
+        margin-right: 0px;
+}
+#tooltip.fancy h3 {
+        font-size: 12px;
+	color:#1f3b6b;
+}
+/* #tooltip.fancy p { width: 220px; text-align: left; } */
+
+#yahoo { width: 7em; }
+#right, #right2 { text-align: right; }
+#tooltip.right { width: 220px; }
+</style>
+<script src="components/ajax/js/jquery.tooltip.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+        // modify global settings
+        $.extend($.fn.Tooltip.defaults, {
+                track: true,
+                delay: 100,
+                showURL: false,
+                extraClass: "fancy",
+                showBody: '||'
+        });
+        $('.txthdrnopad > a').Tooltip();
+});
+
+</script>
+<link rel="icon" href="http://www.yellowbrix.net/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="http://www.yellowbrix.net/favicon.ico" type="image/x-icon" />
+</head>
+<body id="tnx">
+<div id="announcement" style="visibility:hidden;">
+        <div class="popheader">
+		<a href="#" onClick="showPage('announcement');return false;">[X]</a>
+	</div>
+        <div class="popbody">
+		<p class="txt"><span class="bold">YellowBrix is proud to announce the recent acquisition of Screaming Media, a Dow Jones property.</span></p>
+		<p class="txt"><a href="5454116A-9991-4F12-A2CA-C8B214D4C1E3.html">Click here</a> to read more about the acquisition.</p>
+		<!-- p class="txt"><a href="#" onClick="javascript:OpenWin('docs/ScreamingMediaPressRelease.pdf');showPage('announcement');return false;">Click here</a> to read more about the acquisition.</p -->
+	</div>
+</div>
+<div id="container">
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td>
+			<div id="header">
+				<p class="logolink"><a href="A65303B5-A31C-4604-8563-75407E99D6D0.html"></a></p>
+				<div class="tag">
+					<p class="xcontact">703.548.3300</p>
+				</div>
+				<div class="clear"><!-- --></div>
+			</div>			
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="nav">
+				<p><a href="2A0158F1-E52B-40FA-BDC5-77778A29231D.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','images/over_tabs02_rollover_01.jpg',1)"><img src="images/on_tabs02_rollover_01.jpg" name="Image1" width="205" height="35" border="0" alt="YellowBrix Solutions"></a><a href="5C15D685-E63A-406D-96B6-ACC014BDB6C5.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','images/over_tabs02_rollover_02.jpg',1)"><img src="images/off_tabs02_rollover_02.jpg" name="Image2" width="187" height="35" border="0" alt="By Industry"></a><a href="94AF00CE-0686-4493-9CD7-5FA520870844.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','images/over_tabs02_rollover_03.jpg',1)"><img src="images/off_tabs02_rollover_03.jpg" name="Image3" width="187" height="35" border="0" alt="By Product"></a><a href="68E3A1FF-FAFD-467F-B88A-F283E8E5D696.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','images/over_tabs02_rollover_04.jpg',1)"><img src="images/off_tabs02_rollover_04.jpg" name="Image4" width="187" height="35" border="0" alt="By Business Need"></a><a href="809C3619-C638-4C93-8771-770367979223.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','images/over_tabs02_rollover_05.jpg',1)"><img src="images/off_tabs02_rollover_05.jpg" name="Image5" width="204" height="35" border="0" alt="By Company Use"></a></p>
+			</div>
+		</td>
+	</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td>
+			<div id="hpmiddle">
+				<p class="sublock"><a href="1190DA6E-F1B2-4A87-ABDE-D91A0E84CAF4.html"></a></p>
+				<div class="boxtopx">
+					<p class="big">Classify. Analyze. Organize. Understand.</p>
+					<p class="middle">Turn your content into actionable information<br />with YellowBrix Technology Solutions.</p>
+				</div>
+				<div class="boxa">
+					<p class="header"><a href="53E9ACB1-2EB4-4866-B57B-DA351AFC4D57.html">Classification</a></p>
+					<p class="text">Make your content useful with our intelligent content classification, analytics and management solutions. <a href="53E9ACB1-2EB4-4866-B57B-DA351AFC4D57.html">Learn how >></a></p>
+				</div>
+				<div class="boxb">
+					<p class="header"><a href="DC82B189-FE38-4A35-B1E2-40533B770713.html">Sentiment Analytics</a></p>
+					<p class="text">Get real-time insight into the media and social sentiment on companies, people, products, and brand. <a href="DC82B189-FE38-4A35-B1E2-40533B770713.html">Learn how >></a></p>
+				</div>
+				<div class="boxc">
+					<p class="header"><a href="7056B842-E16A-484B-87F8-8274BB5C0A0A.html">Contextual Matching</a></p>
+					<p class="text">Make your data actionable by dynamically-matching news to relevant content, reports, promotions, ads and more. <a href="7056B842-E16A-484B-87F8-8274BB5C0A0A.html">Learn how >></a></p>
+				</div>
+			</div>
+			<!-- <div class="boxbottom" style="position:absolute;font-weight:bold;text-decoration:underline;top: 358px;left: 50px;color: #2147ad;font-size:19px;">
+				<p class="big">YellowBrix Content Package now available through NewsEdge from <a href="http://www.acquiremedia.com/" style="color:red;">Acquire Media</a>.</p>
+        	</div> -->
+
+		</td>
+	</tr>
+</table>	
+<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td>
+			<div id="hpbottomx">
+				<p class="sublock"><a href="http://www.acquiremedia.com/amc/" target="_new"></a></p>
+				<div class="boxd">
+					<p class="header"><a href="FDF4EC46-8B3E-453F-A737-F669E8DFE6D0.html">Publishers</a></p>
+					<p class="text">Automate, organize and classify your content in real-time. <a href="FDF4EC46-8B3E-453F-A737-F669E8DFE6D0.html">Read more >></a></p>
+				</div>		
+				<div class="boxe">
+					<p class="header"><a href="FDB96C76-EFCE-4733-91C7-EED1D9F9D6F1.html">Companies</a></p>
+					<p class="text">Empower your organization with just the information they need. <a href="49CA50F7-A6E0-4001-940D-B1E90CB248FE.html">Read more >></a></p>
+				</div>
+				<div class="boxf">
+					<p class="header"><a href="5E3252FA-A2E9-4993-B189-57F565D82E82.html">Financial</a></p>
+					<p class="text">Get unique insight into the<br />media sentiment that affects<br />markets. <a href="5E3252FA-A2E9-4993-B189-57F565D82E82.html">Read more >></a></p>
+				</div>
+				<div class="boxgx">					
+					<p class="headerx">Need Content?</p>
+					<p class="textx">YellowBrix Content<br />Solutions are now<br />available through<br />NewsEdge from<br />AcquireMedia.<br /><a href="http://www.acquiremedia.com/amc/" target="_new">Click here >></a></p>
+				</div>
+			</div>	
+		</td>
+	</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="fspacer"><!-- --></td>
+	</tr>
+	<tr>
+		<td class="fheader">SOME OF OUR CUSTOMERS</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<table border="0" cellpadding="7" cellspacing="0">
+				<tr>
+					<td><img src="images/customer_conagra.gif" width="100" height="37" border="0" alt="Conagra Logo" /></td>
+					<td><img src="images/customer_cp.gif" width="100" height="37" border="0" alt="Conoco Phillips" /></td>
+					<td><img src="images/customer_nt.gif" width="100" height="37" border="0" alt="Northern Trust" /></td>
+					<td><img src="images/customer_fe.gif" width="100" height="37" border="0" alt="Funds Express" /></td>
+					<td><img src="images/customer_snc.gif" width="100" height="37" border="0" alt="Sprint Nextel Corporation Logo" /></td>
+					<td><img src="images/customer_hc.gif" width="100" height="37" border="0" alt="Host Communications Logo" /></td>
+					<td><img src="images/customer_jr.gif" width="100" height="37" border="0" alt="John Ryan Logo" /></td>
+					<td><img src="images/customer_ncpa.gif" width="100" height="37" border="0" alt="NCPA Logo" /></td>
+					<!--<td><img src="images/customer_lm.gif" width="100" height="37" border="0" alt="Lockheed Martin Logo" /></td>-->
+					<!--<td><img src="images/customer_bc.gif" width="100" height="37" border="0" alt="Bowne &amp; Company Logo" /></td>-->
+				</tr>
+			</table>
+		</td>
+	</tr>	
+	
+		
+	<tr>
+		<td class="fcopy">Copyright &copy; 2013 YellowBrix, Inc. - All rights reserved. YellowBrix and the YellowBrix logo are registered trademarks of YellowBrix, Inc.</td>
+	</tr>
+	<tr>
+		<td class="fnavlinks"><a href="A65303B5-A31C-4604-8563-75407E99D6D0.html">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="2A0158F1-E52B-40FA-BDC5-77778A29231D.html">Technology Solutions</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="5C15D685-E63A-406D-96B6-ACC014BDB6C5.html">Why YellowBrix</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="94AF00CE-0686-4493-9CD7-5FA520870844.html">Technology-in-Action</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="68E3A1FF-FAFD-467F-B88A-F283E8E5D696.html">About Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="809C3619-C638-4C93-8771-770367979223.html">Contact Us</a></td>
+	</tr>
+</table>
+	
+</div>
+<br><br>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-272260-9");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>
+

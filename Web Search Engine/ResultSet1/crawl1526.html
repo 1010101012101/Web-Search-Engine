@@ -1,0 +1,843 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>News Ticker RSS -- Intelligent Information Agent by WorldFlash</TITLE>
+<!-- <TITLE>Intelligent Information Agent - WorldFlash News Ticker RSS</TITLE> -->
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
+<META name="keywords" content="ticker, news, worldfalsh, worldlflash, worlflash, worldflash gold, stock quotes, sports, sporting news, headlines, weather, stocks, business news, toolbar, financial, securities, desktop news">
+<META name="description" content="WorldFlash is an Intelligent Information Agent for Windows 95/98/NT4/2K that displays up-to-the-minute news headlines, 
+incoming email, stock quotes, weather forecasts, sports scores and more while you surf the Web. ">
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-84944-1";
+urchinTracker();
+</script>
+</HEAD>
+
+<style type="text/css">
+#mContainer {
+	position:relative;
+	width:140px;
+	height:265px;
+
+}
+
+.mPhoto {
+	position:absolute;
+	top:0px;
+	left:0px;
+	-moz-opacity:0.0;
+	filter:Alpha(opacity=0);
+	opacity:0.0;
+}
+
+#photoCredits {
+	font-family:verdana;
+	font-size:9px;
+	margin-top:5px;
+}
+
+</style>
+
+
+<script language="Javascript">
+
+function MakeImageArray(n) {
+                this.length = n
+                for (var i = 0; i<=n; i++) 
+                        {
+                        this[i] = new Image();
+                	}
+                return this
+}
+function mOver(num) {
+                if (document.images) 
+                        {
+                        if ((over[num].src != "")) 
+                                {
+                                document.images[num].src = over[num].src;}}}                         
+function mOut(num) {
+                if (document.images) 
+                        {
+                        if ((off[num].src != "")) 
+                                {
+                                document.images[num].src = off[num].src;}}}
+function PostMail(stMail, stName)
+{
+  document.write("<A HREF='mailto:" + stMail + "@worldflash.com'>" + stName + "</A>");
+}
+function PostMailSub(stMail, stSubject)
+{
+  document.write("<A HREF='mailto:" + stMail + "@worldflash.com?Subject=" + stSubject + "'>" + stMail + "@worldflash.com</A>");
+}
+
+
+var currentPhoto = 0;
+var secondPhoto = 1;
+
+var currentOpacity = new Array();
+var imageArray = new Array("images/sidebar-pic0.gif","images/sidebar-pic1.gif","images/sidebar-pic2.gif","images/sidebar-pic3.gif");
+
+var FADE_STEP = 3;
+var FADE_INTERVAL = 15;
+var pause = false;
+
+function init() {
+	currentOpacity[0] = 99;
+	for(i = 1; i < imageArray.length; i++) 
+		currentOpacity[i] = 0;
+	mHTML = "";
+	for(i = 0; i < imageArray.length; i++)
+		mHTML += "<div id=\"photo\" name=\"photo\" class=\"mPhoto\"><img src=\"" + imageArray[i]  +"\"></div>";
+	document.getElementById("mContainer").innerHTML = mHTML;
+
+	if (Boolean(window.chrome)) {
+		document.getElementsByName("photo")[currentPhoto].style.opacity = .99;
+	} else if (document.all) {
+		document.getElementsByName("photo")[currentPhoto].style.filter = "alpha(opacity=100)";
+	} else {
+		document.getElementsByName("photo")[currentPhoto].style.MozOpacity = .99;
+	}
+
+	mInterval = setInterval("crossFade()",FADE_INTERVAL);
+	pause = true;
+	xInterval = setTimeout("pause=false", 6000);
+}
+
+function crossFade() {
+	if (pause)
+		return;
+
+	currentOpacity[currentPhoto] -= FADE_STEP;
+	currentOpacity[secondPhoto]  += FADE_STEP;
+
+	if (Boolean(window.chrome)) {
+		document.getElementsByName("photo")[currentPhoto].style.opacity = currentOpacity[currentPhoto] / 100.0;
+		document.getElementsByName("photo")[secondPhoto].style.opacity =  currentOpacity[secondPhoto] / 100.0; 
+	} else if (document.all) {
+		document.getElementsByName("photo")[currentPhoto].style.filter = "alpha(opacity=" + currentOpacity[currentPhoto] + ")";
+		document.getElementsByName("photo")[secondPhoto].style.filter = "alpha(opacity=" + currentOpacity[secondPhoto] + ")";
+	} else {
+		document.getElementsByName("photo")[currentPhoto].style.MozOpacity = currentOpacity[currentPhoto] / 100;
+		document.getElementsByName("photo")[secondPhoto].style.MozOpacity =currentOpacity[secondPhoto] / 100;
+	}
+
+	if (currentOpacity[secondPhoto] / 100 >= .98) {
+		currentPhoto = secondPhoto;
+		secondPhoto++;
+		if (secondPhoto == imageArray.length)
+			secondPhoto=0;
+		pause = true;
+		xInterval = setTimeout("pause=false", 7500);
+	}
+}
+
+function doPause()  {
+	if (pause) {
+		pause = false;
+		document.getElementById("pauseBtn").value = "pause";
+	} else {
+		pause = true;
+		document.getElementById("pauseBtn").value = "play";
+	}
+}
+
+</script>
+
+<BODY onload="init();" BGCOLOR="#FFFFFF" TEXT="#000000" link="#0000CC" vlink=#666699 BACKGROUND="images/backgroundtile.gif">
+
+<!-- "Language Bar"  -->
+
+<map id="langmap" name="langmap">
+<area shape="rect" coords="0,0,77,19" alt="Español"
+		href="http://espanol.worldflash.com" target="_blank">
+<area shape="rect" coords="77,0,152,19" alt="Français"
+		href="http://france.worldflash.com" target="_blank">
+<area shape="rect" coords="152,0,205,19" alt="Arabic"
+		href="http://arabic.worldflash.com" target="_blank">
+<area shape="rect" coords="205,0,254,19" alt="Chinese"
+		href="http://chinese.worldflash.com" target="_blank">
+</map>
+
+
+<div style=" position:absolute; top:0px; left:0px;">
+<img src="images/toppiece.gif" WIDTH=780 HEIGHT=170 BORDER="0" PADDING="0" VALIGN="TOP" HSPACE="0" VSPACE="0"><br>
+
+</div>
+
+<div style="width:149px; height:18px; overflow:hidden; position:absolute; top:7px; left:630px;">
+	<IMG SRC="images/langbar1.gif" WIDTH=254 HEIGHT=18 BORDER="0" ALT="" usemap="#langmap"> 
+</div>
+
+<div style="letter-spacing:1px; font-variant:small-caps; color:#ffffff; position:absolute;
+	top:33px; left:565px; font-family:tahoma; font-size:11px; font-weight:bold; width:210px">
+<a class="wflink" href="index.html">home</a> &nbsp;? &nbsp;
+<a class="wflink" href="contact.html">contact</a> &nbsp;? &nbsp;
+<a class="wflink" href="sitemap.html">site map</a> 
+
+</div>
+
+
+<div style="position:absolute; line-height:100%; width:400px;
+	top:129px; left:376px; font-family:arial; font-size:11px; color:#666666;">
+<b>
+"I get fresh headlines and breaking news alerts that are relevant to me.<br>
+And, I'm the first on my team to learn about recent developments in<br>
+ our industry."
+</b>
+</div>
+
+<div style="position:absolute; top:170px; left:0px; background-color:#666666;
+		width:45px; height:19px; color:#666666; line-height:100%;
+			font-family:tahoma"><br>
+
+</div>
+
+<div  style="position:absolute; top:170px; left:28px; font-family:tahoma; width:754px;">
+
+<div align=right style="padding:3px; background-color:#666666; color:#ffffff; text-transform:uppercase; 
+	font-size:8pt; font-weight:bold">
+<a class="wflink" href="download.html">download</a> | 
+<a class="wflink" href="http://www.worldflash.com/features.html">demo</a> |
+<a class="wflink" href="faq.html">support</a> | 
+<a class="wflink" href="http://corp.worldflash.com/corp.html">corporate solutions</a> | 
+<a class="wflink" href="http://tvticker.worldflash.com/tvtick.html">broadcast solutions</a> 
+
+</div>
+
+
+<TABLE WIDTH="160" BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="LEFT" VALIGN="TOP">
+
+<!-- spacer -->
+<TR ALIGN="LEFT" VALIGN="TOP">
+<td colspan=3>
+
+<div  style="position:relative;  top:0px; left:-28px; height:1px; width:110%; overflow:hidden;
+	background-color:#ffffff; color:#ffffff; font-size:1pt"><br>
+</div>
+
+
+<div style="letter-spacing:2px; font-variant:small-caps; color:#ffffff; font-weight:bold; 
+		font-size:10pt; height:22px;  padding-top:8px" >
+&nbsp;Welcome
+</div>
+
+<div  style="position:relative;  top:4px; left:-28px; height:1px; width:110%; overflow:hidden;
+	background-color:#ffffff; color:#ffffff; font-size:1pt"><br>
+</div>
+
+<br>&nbsp;
+
+</td></tr>
+
+
+<!-- this has the crossfade slideshow box.....    -->
+
+<TR ALIGN="LEFT" VALIGN="TOP">
+<td colspan=3>
+<div id="mContainer">
+<br>
+</div>
+
+<!-- now draw the two white character lines... -->
+
+<div  style="position:relative;  top:0px; left:-14px; height:1px; width:154px; overflow:hidden;
+	background-color:#ffffff; color:#ffffff; font-size:1pt"><br>
+</div>
+<div  style="position:relative;  top:-268px; left:-14px; height:1px; width:154px; overflow:hidden;
+	background-color:#ffffff; color:#ffffff; font-size:1pt"><br>
+</div>
+<br>
+
+</td></tr>
+
+
+
+<TR ALIGN="LEFT" VALIGN="TOP">
+<td colspan=3>
+<div  style="position:relative;  top:-1px; left:-14px; height:1px; width:140px; overflow:hidden;
+	background-color:#ffffff; color:#ffffff; font-size:1pt"><br>
+</div>
+</td></tr>
+
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD WIDTH="18"><IMG SRC="images/spa_18.gif" WIDTH=18 HEIGHT=1 BORDER="0" ALT=""></TD>
+<TD WIDTH="108"><IMG SRC="images/spa_108.gif" WIDTH=108 HEIGHT=1 BORDER="0" ALT=""></TD>
+<TD WIDTH="34"><IMG SRC="images/spa_64.gif" WIDTH=34 HEIGHT=1 BORDER="0" ALT=""></TD></TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD WIDTH="18"><IMG SRC="images/spa_18.gif" WIDTH=18 HEIGHT=1 BORDER="0" ALT=""></TD>
+<TD WIDTH="108" BGCOLOR=#666666 ALIGN="CENTER"><FONT FACE="Tahoma,Arial,Helvetica" COLOR=#c7c7ff SIZE=2>
+<B>RSS<br> Feeds feature! <br>
+</B></FONT></TD>
+<TD WIDTH="34"><IMG SRC="images/spa_64.gif" WIDTH=34 HEIGHT=1 BORDER="0" ALT=""></TD></TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD WIDTH="18"><IMG SRC="images/spa_18.gif" WIDTH=18 HEIGHT=1 BORDER="0" ALT=""></TD>
+<TD WIDTH="108" BGCOLOR=#FFFFCC ALIGN="CENTER"><FONT FACE="Tahoma,Arial,Helvetica" COLOR=#000066 SIZE=1>
+<BR><B> Add Custom News </B><BR><BR>
+<B> Track Blogs </B><BR><BR>
+<B> Classifieds </B><BR><BR>
+<B> Job Listings </B><BR><BR>
+<B> And More </B><BR><BR>
+<B> <a href="wf-rssfeeds.html">See RSS details...</a></B><BR><br></font></TD></TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<td colspan=3>
+<div  style="position:relative;  top:1px; left:-14px; height:1px; width:140px; overflow:hidden;
+	background-color:#ffffff; color:#ffffff; font-size:1pt"><br>
+</div>
+</td></tr>
+
+
+<TR ALIGN="CENTER"  VALIGN="TOP">
+<TD COLSPAN="3">&nbsp;<BR></TD></TR>
+
+
+<TR ALIGN="LEFT" VALIGN="TOP">
+<td colspan=3>
+<div  style="position:relative;  top:-1px; left:-14px; height:1px; width:140px; overflow:hidden;
+	background-color:#ffffff; color:#ffffff; font-size:1pt"><br>
+</div>
+</td></tr>
+
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD WIDTH="18"><IMG SRC="images/spa_18.gif" WIDTH=18 HEIGHT=1 BORDER="0" ALT=""></TD>
+<TD WIDTH="108"><IMG SRC="images/spa_108.gif" WIDTH=108 HEIGHT=1 BORDER="0" ALT=""></TD>
+<TD WIDTH="34"><IMG SRC="images/spa_64.gif" WIDTH=34 HEIGHT=1 BORDER="0" ALT=""></TD></TR>
+<TR ALIGN="LEFT" VALIGN="TOP" style="font-size:14px;">
+<TD WIDTH="18"><IMG SRC="images/spa_18.gif" WIDTH=18 HEIGHT=1 BORDER="0" ALT=""></TD>
+<TD WIDTH="108" BGCOLOR=#666666 ALIGN="CENTER"><FONT FACE="Tahoma,Arial,Helvetica" COLOR=#c7c7ff>
+<B>Enterprise Case Study #1</B></FONT></TD>
+<TD WIDTH="34"><IMG SRC="images/spa_64.gif" WIDTH=34 HEIGHT=1 BORDER="0" ALT=""></TD></TR>
+<TR ALIGN="LEFT" VALIGN="TOP" style="font-size:11px;">
+<TD WIDTH="18"><IMG SRC="images/spa_18.gif" WIDTH=18 HEIGHT=1 BORDER="0" ALT=""></TD>
+<TD WIDTH="108" BGCOLOR=#FFFFCC ALIGN="CENTER"><FONT FACE="Tahoma,Arial,Helvetica" COLOR=#000066>
+
+<br><b>
+<a href="http://www.worldflash.com/kc-infosheet.html" target="_blank">
+&nbsp;See a complete<br><br>
+&nbsp;description of our<br><br> 
+&nbsp;work for the <br><br>
+&nbsp;U.S. Army<br><br>
+
+(KC-Flash Product)</a><br>
+</b>
+
+<br>
+</FONT></TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<td colspan=3>
+<div  style="position:relative;  top:1px; left:-14px; height:1px; width:140px; overflow:hidden;
+	background-color:#ffffff; color:#ffffff; font-size:1pt"><br>
+</div>
+</td></tr>
+
+<TR ALIGN="CENTER" VALIGN="TOP">
+<TD COLSPAN="3">&nbsp;&nbsp;</TD></TR>
+
+<TR ALIGN="LEFT" VALIGN="TOP">
+<td colspan=3>
+<div  style="position:relative;  top:-1px; left:-14px; height:1px; width:140px; overflow:hidden;
+	background-color:#ffffff; color:#ffffff; font-size:1pt"><br>
+</div>
+</td></tr>
+
+<TR ALIGN="LEFT" VALIGN="TOP" style="font-size:11px;">
+<TD WIDTH="18"><IMG SRC="images/spa_18.gif" WIDTH=18 HEIGHT=1 BORDER="0" ALT=""></TD>
+<TD WIDTH="108" BGCOLOR=#CCCCFF><FONT FACE="Tahoma,Arial,Helvetica" COLOR=#000066>
+<b>&nbsp;Latest Awards</b>--<br>
+
+<br>&nbsp;
+<a href="http://www.soft82.com" title="SOFT82.com" target="_blank">
+<img src="images/soft82_award_88x31.gif" WIDTH=88 HEIGHT=31 BORDER="0" ALT="SOFT82.com"><br>
+</a>
+
+<br>&nbsp;
+<a href="http://network-and-internet.softlandmark.com/newsreader_tools/WorldFlash_Gold_Info.html" target="_blank">
+<img src="images/awards5.gif" WIDTH=100 HEIGHT=43 BORDER="0" ALT="SoftLandMark"><br>
+</a>
+
+<br>&nbsp;
+<a href="http://www.sofotex.com" target="_blank">
+<img src="images/sofotex5a.gif" WIDTH=100 HEIGHT=50 BORDER="0" ALT="SofoTex"><br>
+</a>
+
+<br>&nbsp;
+<a href="http://www.brothersoft.com" target="_blank">
+<img src="images/rating5_style1.gif" WIDTH=100 HEIGHT=40 BORDER="0" ALT="BrotherSoft"><br>
+</a>
+
+<br>&nbsp;
+<a href="http://www.5star-shareware.com/Internet/" target="_blank">
+<img src="images/5stars.gif" WIDTH=88 HEIGHT=91 BORDER="0" ALT="5-Star Shareware.com"><br>
+</a>
+
+<br>&nbsp;
+<img src="images/pick.gif" WIDTH=86 HEIGHT=35 BORDER="0" ALT="Rated 4 by AgentLand"><br>
+
+<br>&nbsp;
+<img src="images/linktobotspot3.gif" WIDTH=79 HEIGHT=82 BORDER="0" ALT="The Spot for All Bots"><br>
+
+
+<!--
+
+<B><BR>&nbsp;&quot;<a href="http://www.zdnet.com/downloads/stories/info/0,10615,18893,00.html" target="_blank">
+<img src=images/zdnet-5star.gif WIDTH=58 HEIGHT=10  BORDER=0></a>!&quot;<BR>&nbsp; </B>- ZDNet<BR>&nbsp;
+<B><BR>&nbsp;"Out-of-this-world!"<BR>&nbsp; </B>- Download.com<BR>&nbsp;
+<B><BR>&nbsp;"Head-of-the-herd!"<BR>&nbsp;  </B>- Tucows<BR>&nbsp;
+-->
+</FONT></TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<td colspan=3>
+<div  style="position:relative;  top:1px; left:-14px; height:1px; width:140px; overflow:hidden;
+	background-color:#ffffff; color:#ffffff; font-size:1pt"><br>
+</div>
+</td></tr>
+
+<TR ALIGN="CENTER"  VALIGN="TOP">
+<TD COLSPAN="3">&nbsp;<BR></TD></TR>
+
+<TR ALIGN="LEFT" VALIGN="TOP">
+<td colspan=3>
+<div  style="position:relative;  top:-1px; left:-14px; height:1px; width:140px; overflow:hidden;
+	background-color:#ffffff; color:#ffffff; font-size:1pt"><br>
+</div>
+</td></tr>
+
+<TR ALIGN="LEFT" VALIGN="TOP" style="font-size:10px;">
+<TD WIDTH="18"><IMG SRC="images/spa_18.gif" WIDTH=18 HEIGHT=1 BORDER="0" ALT=""></TD>
+<TD WIDTH="108" BGCOLOR=#CCCCFF><FONT FACE="Tahoma,Arial,Helvetica" COLOR=#000066>
+<B><BR>&nbsp;Major Corporations<BR>&nbsp;Embrace WorldFlash:</B> <BR>&nbsp;
+<BR>&nbsp; Agilent, Baxter, BP
+<BR>&nbsp; Boeing, Dell, Compaq
+<BR>&nbsp; Intel, Morgan Stanley
+<BR>&nbsp; Frito Lay, GE, HP
+<BR>&nbsp; MetLife, Ray-o-vac
+<BR>&nbsp; Priceline, Siemens
+<BR>&nbsp; Paine Webber, Lucent
+<BR>&nbsp; Dynacare, Microsoft
+<BR>&nbsp; Barco, Kimberly-Clark
+<BR>&nbsp; Oracle, Pfizer
+
+<BR><BR>&nbsp; ...many, many more<BR>&nbsp;
+</FONT></TD></TR>
+
+<TR ALIGN="LEFT" VALIGN="TOP">
+<td colspan=3>
+<div  style="position:relative;  top:1px; left:-14px; height:1px; width:140px; overflow:hidden;
+	background-color:#ffffff; color:#ffffff; font-size:1pt"><br>
+</div>
+</td></tr>
+
+</TABLE>
+
+
+<TABLE WIDTH=449 BORDER="1" FRAME="box" rules="none" CELLSPACING="0" CELLPADDING="2" ALIGN="LEFT" VALIGN="TOP">
+<tr><td>&nbsp;</td></tr>
+
+<TR ALIGN="CENTER" VALIGN="BOTTOM">
+<TD COLSPAN="5">
+<div  style="position:relative; height:21px">
+<FONT FACE="Tahoma,Arial,Helvetica" SIZE="2" COLOR=#999999><b>
+
+<span style="position:absolute; top:2px; left:1px; width:100%; background-color:#FFFFCC; 
+	 color:#c0c0ff; font-size:10pt">For more than 10 years, people have been using WorldFlash to stay on
+the cutting edge of their world.  Now it's your turn!
+</span>
+<span style="position:relative; top:1px; left:0px; width:100%;  z-index:1; 
+	 color:#4040a0; font-size:10pt">For more than 10 years, people have been using WorldFlash to stay on
+the cutting edge of their world.  Now it's your turn!
+</span>
+
+</b></font>
+</div>
+</TD></TR>
+
+
+
+<TR align=center>
+<TD COLSPAN="5"><br>
+<font FACE="Tahoma,Arial,Helvetica" SIZE="2" COLOR=#000000>
+
+
+Turn relevant information into valuable knowledge.<br>
+WorldFlash proactively delivers your news and information about the latest global events.  
+Join users around the globe and start to enjoy the 
+benefits of WorldFlash -- the popular <i>News and Information Ticker.</i>
+<br>
+</FONT></TD>
+</TR>
+
+<TR ALIGN="CENTER" VALIGN="BOTTOM">
+<TD COLSPAN="5"><FONT FACE="Tahoma,Arial,Helvetica" SIZE="2" COLOR=#000066><br>
+<B>The complete story on a full screen is a click away</B>.
+<BR><BR></FONT></TD> </TR>
+<TR ALIGN="CENTER" VALIGN="BOTTOM">
+<TD COLSPAN="5">
+<A HREF="WorldFlash_Installer.exe" onClick="javascript:urchinTracker ('/WFGDownload'); ">
+<IMG SRC="images/screen-dec06-2pane.gif" WIDTH=429 HEIGHT=34 BORDER="0" ALT="Click Here to Install!"></A><BR>
+<FONT SIZE="-3" FACE="Tahoma,Arial,Helvetica"><br>
+WorldFlash Gold in Two-Pane docking display (Upper) and Four-Pane display (Lower)<br><br>
+<A HREF="WorldFlash_Installer.exe" onClick="javascript:urchinTracker ('/WFGDownload'); ">
+<IMG SRC="images/screen-dec06.gif" WIDTH=429 HEIGHT=56 BORDER="0" ALT="Click Here to Install!"></A>
+<br>
+
+<IMG SRC="images/screen-aug22-tv.gif" WIDTH=429 HEIGHT=54 BORDER="0" ALT="TV-Ticker Display Mode!">
+</FONT><BR>
+</TD></TR>
+
+
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TD COLSPAN="5">
+
+<div  style="position:relative; height:2px">
+<FONT FACE="Tahoma,Arial,Helvetica" SIZE="2" COLOR=#999999><b>
+<span style="position:absolute; top:2px; left:1px; width:100%; 
+	 background-color:#FFFFCC; color:#c0c0ff; font-size:10pt">Feature Highlights:
+</span>
+<span style="position:relative; top:1px; left:0px; width:100%; z-index:1; 
+	 color:#4040a0; font-size:10pt">Feature Highlights:
+</span></b>
+</font></div>
+<br>
+</TD></TR>
+
+<TR ALIGN="LEFT"  VALIGN="BOTTOM">
+<TD COLSPAN="5"><FONT FACE="Tahoma,Arial,Helvetica" SIZE="1">
+ 
+<SPAN STYLE="font-size: 8pt; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+			list-style-image: url(images/helpbullet.gif);">
+<UL>
+<LI>Personalized, up-to-the-minute <b>headlines</b> from over 160 distinctly prestigious news sources.
+<LI>Pop-up <b>breaking news alerts</b> keep you abreast of the latest fast-breaking stories.
+
+<!-- <LI><FONT COLOR=#008000><b>NEW!</b></FONT> Include your personal <b>RSS Feed</b> news sources. -->
+<LI>Use <b>RSS feeds</b> to track blogs, classifieds, industry news,
+job listings and other personal information sources.
+Or, publish proprietary information to your team. 
+
+<LI>Monitor your investments and keep up with the latest 
+ happenings in the financial market by personalizing your <b>stocks</b>--company specific news headlines are available.
+<LI>Track your industry competitors and hot topics with the <b>keyword alert</b> feature. 
+ Instruct the program to set aside relevant headlines so you can view them at your convenience.
+<LI><b>Minimize</b> WorldFlash and view all headlines on a full page whenever you want.
+<LI>Keep up on the latest <b>sports</b> scores for YOUR teams.		
+<LI>Personal weather station with <b>weather</b> forecasts from over 1,400 reporting cities. 
+<LI>Email alert and screening--check up to <b>12 email</b> accounts
+<i>(POP3 and Web-based Freemail).</i> WorldFlash will display 
+mail headers in the scrolling window. A vocal "New Mail" message alerts 
+you to new mail.
+<LI>Search the Web--WorldFlash keeps you connected to your preferred
+<b>search</b> engine.  Just type your query and hit enter.  Saves your search terms.
+<LI>Send headlines to your <b>friends</b> via email by clicking the "envelope" icon.
+<LI><b>1.1 Mb</b> in its entirety...  45-day free trial (1,080 free hours!)
+<P></UL>
+</span>
+<BR></FONT></TD></TR>
+
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TD COLSPAN="5" BGCOLOR=#FFFFFF>
+
+<div  style="position:relative; height:1px">
+<FONT FACE="Tahoma,Arial,Helvetica" SIZE="2" COLOR=#999999><b>
+<span style="position:absolute; top:2px; left:1px; width:100%; 
+	 background-color:#FFFFCC; color:#c0c0ff; font-size:10pt">WorldFlash Is Designed With Your Needs In Mind
+</span>
+<span style="position:relative; top:1px; left:0px; width:100%; z-index:1; 
+	 color:#4040a0; font-size:10pt">WorldFlash Is Designed With Your Needs In Mind
+</span><b>
+</font></div>
+
+</TD></TR>
+
+<TR><TD COLSPAN="5">
+<FONT FACE="Tahoma,Arial,Helvetica" SIZE="2" COLOR=#000000><br>
+<blockquote>
+Once you install WorldFlash you can sit back and relax.
+Watch as this low-bandwidth agent gently pulls in complete coverage
+of the global news and delivers it unobtrusively onto your desktop.
+Headlines serenely scroll on the top, or bottom of your screen- the full story,
+on a full page, is a double-click away.  Get the latest news as you prepare
+presentations, work on spreadsheets and generally function in the real world.
+Personalize the software to deliver information from your list of sources,
+set your chosen topics, select the stocks you wish to follow, activate the vocal
+alert system to track chosen key-phrases, customize your bandwidth usage, select Email
+accounts to receive and screen new messages, select your default search engine so
+you can do research via the Web, choose your fonts and <b>enjoy...</b>
+
+</blockquote>
+</FONT>
+</TD></TR>
+
+
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TD COLSPAN="5" BGCOLOR=#FFFFFF>
+
+<div  style="position:relative; height:1px">
+<FONT FACE="Tahoma,Arial,Helvetica" SIZE="2" COLOR=#999999><b>
+<span style="position:absolute; top:2px; left:1px; width:100%; 
+	 background-color:#FFFFCC; color:#c0c0ff; font-size:10pt">What Makes WorldFlash Better Than Other Programs?
+</span>
+<span style="position:relative; top:1px; left:0px; width:100%;  z-index:1;
+	 color:#4040a0; font-size:10pt">What Makes WorldFlash Better Than Other Programs?
+</span><b>
+</font></div>
+
+
+</TD></TR>
+
+<TR>
+<TD COLSPAN="5">
+<FONT FACE="Tahoma,Arial,Helvetica" SIZE="2" COLOR=#000000><br>
+<blockquote>
+
+Our program employs intelligent agent technologies to bring information 
+you've deemed relevant - directly to your desktop. 
+WorldFlash does not aggregate all the available information and dump it on you without discretion. 
+Instead, the program works as an intelligent web of links that actually recognizes the difference between 
+headlines, stock quotes and weather forecasts. The result is a comprehensive news and information channel. 
+All this is accomplished with minimal bandwidth and CPU requirements. We've included many of the best 
+Internet-based news and information services, and more are on the way. However, let us know if there are 
+other information services that you want to see in WorldFlash.
+
+ Just Email the URL of the service (or any other suggestions): 
+  <script>PostMail("new-services", "Send Email to WorldFlash.");</script>
+  <BR></blockquote>
+<p align=right>
+  Thanks and have fun!<br>
+  &nbsp;... The crew at WorldFlash Software<BR>&nbsp;</P></FONT></TD></TR>
+<TR><TD COLSPAN="5" ALIGN="CENTER" VALIGN="TOP" COLSPAN=2>
+<IMG SRC="images/short_ln.gif" WIDTH=410 HEIGHT=20 BORDER="0" ALT=""></TD>
+</TR>
+
+<TR style="font-size:11px;"><TD COLSPAN="5" ALIGN="CENTER" VALIGN="TOP" COLSPAN=2><FONT FACE="Tahoma,Arial,Helvetica"><B>
+<a href="index.html">home</a> &nbsp; : &nbsp;
+<a href="download.html">install</a> &nbsp; : &nbsp;
+<a href="sources.html">news sources</a> &nbsp; : &nbsp;
+<a href="http://corp.worldflash.com/corp.html">corporate solutions</a> &nbsp; : &nbsp;
+<a href="faq.html">technical support</a> 
+<BR>
+<a href="wf-registration.html">order</a> &nbsp; : &nbsp;
+<a href="wf-privacy.html">privacy</a> &nbsp; : &nbsp;
+<a href="wfhelp-gold.html">help</a> &nbsp; : &nbsp;
+<a href="http://corp.worldflash.com/company.html">company</a> &nbsp; : &nbsp;
+<a href="wf-legal.html">terms</a> &nbsp; : &nbsp;
+<script>PostMail("webmaster", "email us!");</script>
+
+</FONT>
+</B><BR>&nbsp;<br>&nbsp;
+</TD></TR>
+
+</TABLE>
+
+
+<TABLE WIDTH=143 BORDER="0" CELLSPACING="1" CELLPADDING="5" ALIGN="LEFT" VALIGN="TOP">
+
+<tr><td>
+<br>&nbsp;
+</td></tr>
+
+<tr height=36>
+<TD BGCOLOR=#FFBBFF ALIGN="CENTER" VALIGN="middle">
+
+<!-- TRY IT FREE! -->
+
+<div  style="position:relative; width:133px;"> 
+
+<div  style="position:absolute;  top:-18px; left:-5px; height:1px; width:108%;  overflow:hidden;
+	background-color:#000000; color:#000000; font-size:1pt; ">
+</div>
+<b>
+<span style="position:absolute; top:-8px; left:1px; width:100%; height:21px; 
+	 color:#999999; font-size:16px">TRY IT FREE!</span>
+<span style="position:absolute; top:-9px; left:0px; width:100%; height:21px; z-index:1;
+	 color:#800000; font-size:16px">TRY IT FREE!</span>
+</b>
+
+<div  style="position:absolute;  top:18px; left:-5px; height:1px; width:108%; overflow:hidden;
+	background-color:#000000; color:#000000; font-size:1pt;">
+</div> </div>
+
+</td></tr>
+
+<tr><td>
+<FONT size=2 color=#800000>
+<br><br><b>
+45-day<br>
+trial version of<br>
+
+<font color=#000000>
+WorldFlash</font><font color=#e4c11b size=3> Gold</font></font></b>
+<p align=right>
+<font size=1>(only 1.1Mb)</font></p>
+
+<b>
+<a style="color:#333333" href="download.html">Download Now!</a>
+</b>
+<br>&nbsp;
+
+</td></tr>
+
+
+<!-- FEATURE DEMOS -->
+
+<tr height=36><TD BGCOLOR=#FFBBFF ALIGN="CENTER" VALIGN="middle">
+
+<div  style="position:relative; width:133px;"> 
+<div  style="position:absolute;  top:-18px; left:-5px; height:1px; width:108%;  overflow:hidden;
+	background-color:#000000; color:#000000; font-size:1pt; ">
+</div>
+<b>
+<span style="position:absolute; top:-8px; left:1px; width:100%; height:21px; 
+	 color:#999999; font-size:16px">Feature Demos</span>
+<span style="position:absolute; top:-9px; left:0px; width:100%; height:21px; z-index:1;
+	 color:#800000; font-size:16px">Feature Demos</span>
+</b>
+
+<div  style="position:absolute;  top:18px; left:-5px; height:1px; width:108%; overflow:hidden;
+	background-color:#000000; color:#000000; font-size:1pt;">
+</div> </div>
+
+</td></tr>
+
+<tr><td><br>
+<span style="font-size:9pt">
+
+Find out how the well-known WorldFlash habit is established.</b>
+<br><br>
+Our demos show how to turn WorldFlash into a personally targeted information machine.
+<br><br>
+Learn how to create feeds and customize features so that the only thing you see is
+ highly relevant information to fit your demands.
+<br>
+
+</span>
+<font size=1>
+<p align=right><a style="color:#333333" href="http://www.worldflash.com/features.html"><b>click here &gt;</b></a></p>
+</font>
+</td></tr>
+
+
+<!-- PURCHASING INFORMATION -->
+
+<tr height=36><TD BGCOLOR=#FFBBFF ALIGN="CENTER" VALIGN="middle">
+
+<div  style="position:relative; width:133px;"> 
+<div  style="position:absolute;  top:-18px; left:-5px; height:1px; width:108%;  overflow:hidden;
+	background-color:#000000; color:#000000; font-size:1pt; ">
+</div>
+<b>
+<span style="position:absolute; top:-8px; left:1px; width:100%; height:21px; 
+	 color:#999999; font-size:16px">Purchasing Info</span>
+<span style="position:absolute; top:-9px; left:0px; width:100%; height:21px; z-index:1;
+	 color:#800000; font-size:16px">Purchasing Info</span>
+</b>
+
+<div  style="position:absolute;  top:18px; left:-5px; height:1px; width:108%; overflow:hidden;
+	background-color:#000000; color:#000000; font-size:1pt;">
+</div> </div>
+
+</td></tr>
+
+<tr><td><br>
+<font size=2>
+<a href="http://www.worldflash.com/wf-registration.html">
+<div class="arr">Pricing, Purchasing and Ordering Information...
+</a><br><br></font></div>
+</td></tr>
+
+
+
+<!-- NEWS SOURCES -->
+
+<tr height=36>
+<TD BGCOLOR=#FFBBFF ALIGN="CENTER" VALIGN="middle">
+
+
+<div  style="position:relative; width:133px;"> 
+
+<div  style="position:absolute;  top:-18px; left:-5px; height:1px; width:108%;  overflow:hidden;
+	background-color:#000000; color:#000000; font-size:1pt; ">
+</div>
+<b>
+<span style="position:absolute; top:-8px; left:1px; width:100%; height:21px; 
+	 color:#999999; font-size:16px">News Sources</span>
+<span style="position:absolute; top:-9px; left:0px; width:100%; height:21px; z-index:1;
+	 color:#800000; font-size:16px">News Sources</span>
+</b>
+
+<div  style="position:absolute;  top:18px; left:-5px; height:1px; width:108%; overflow:hidden;
+	background-color:#000000; color:#000000; font-size:1pt;">
+</div> </div>
+
+
+</td></tr>
+
+<tr><td><br>
+<font size=1>
+
+- San Francisco Examiner<BR>
+- The New York Times<BR>- Los Angeles Times<BR>
+- University Wire<BR>- Chicago Tribune<BR>
+- Washington Post<BR>- Fox News Wire<BR>
+- Business Week<BR>- Seattle Times<BR>
+- New York Post<BR>- Reuters News<BR>- Venture Wire<BR>
+- Boston Globe<BR>- Wired News<BR>
+- ZDNet News<BR>- C|Net News<BR>
+- USA Today<BR>- MTV News<BR>
+- PCWeek<BR>- MSNCB News<BR>
+- E! Online<BR>
+
+- Svenska Dagbladet (Sweden)<BR>
+- Diario De Noticias (Portugal)<BR>
+- Aftenposten (Norway)<BR>- Der Standard (Austria)<BR>
+- Jerusalem Post<BR>- Japan Asahi News<BR>
+- Canadian Press<BR>- Die Welt (Germany)<BR>
+- Prensa Española<BR>- NRC Netherlands News<BR>
+- The Malaysia Star<BR>- ABC Radio News (Australia)<BR>
+- Sydney Morning Herald<BR>- MagNet On-Line (France)<BR>
+- MTV3 News (Finland)<BR>- Thai Business Day<BR>
+- South China Morning Post<BR>- The Star (South Africa)<BR>
+- International Herald Tribune<BR>- Russia Today<BR>
+- BBC News
+<p align=right>...and many more!</p>
+</font>
+
+<font size=1>
+<br>
+WorldFlash has hundreds of sources
+from around the globe feeding news and
+information on all categories.
+Out index keeps growing!
+<p align=right><a style="color:#333333" href="sources.html"><b>view it here &gt;</b></a></p>
+
+</font>
+</td></tr>
+
+</TABLE>
+
+<div align=center style="position:absolute; bottom:-1px; left:-27px; height:22px; width:781px;
+	padding:0px; background-color:#707070; color:#ffffff; line-height:22px;
+	text-transform:uppercase; font-size:11px; font-weight:bold; letter-spacing:2px;">
+
+&copy;&nbsp;WorldFlash Software, Inc. 1998-2012
+
+</div>
+
+<!-- draw the 1-pixel wide white line... -->
+
+<div align=center style="position:absolute; bottom:21px; left:-27px; height:1px; width:781px;
+	background-color:#ffffff; color:#ffffff; overflow:hidden;
+	font-size:1pt">
+</div>
+
+</div>
+
+</BODY>
+</HTML>
+
+

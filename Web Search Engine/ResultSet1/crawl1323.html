@@ -1,0 +1,688 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>UC Davis News &amp; Information</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<link rel="stylesheet" href="/news_assets/news_styles/news_styles_redesign.css" type="text/css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/news_assets/news_styles/news_resize.css" />
+
+<!--[if IE 6]>
+	<link rel="stylesheet" type="text/css" href="/news_assets/news_styles/ie6_hacks.css" media="screen" />
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://news.ucdavis.edu/xml/getnews.php?type=category&amp;categories=Dateline&amp;format=rss" />
+<script src="/news_assets/news_scripts/togglelayer.js" type="text/javascript" language="javascript1.2"></script>
+
+<!-- include jQuery library -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js"></script>
+<!-- AddThis -->
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5073693b11eb74d3"></script>
+
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAuNJTovDmod0waLo171ZgxhR37E5SfRE6ccOJ9bcWWelfGbu8ZhSK7QaAmPgjYFnrmBOpVekti54VFg"></script>
+
+<script type="text/javascript">
+
+	function formatDate (theDate) {
+		var rawDate = new Date(theDate);
+		var month = rawDate.getMonth() + 1;
+		var monthDay = rawDate.getDate();
+		var year = rawDate.getFullYear().toString();
+		var thisDate = month + "." + monthDay + "." + year.substring(2,4);
+		return thisDate;
+	}
+
+
+	/* Load a feed via the Feeds API. */
+
+	// Our callback function, for when a feed is loaded.
+	function feedLoaded(result, currentElement) {
+		if (!result.error) {
+			// Grab the container we will put the results into
+			// var container = document.getElementById("egghead");
+			var container = document.getElementById(currentElement);
+			container.innerHTML = '';
+
+			// Loop through the feeds, putting the titles onto the page.
+			// Check out the result object for a list of properties returned in each entry.
+			// http://code.google.com/apis/ajaxfeeds/documentation/reference.html#JSON
+			// for (var i = 0; i < result.feed.entries.length; i++) {
+			for (var i = 0; i < 1; i++) {
+				var entry = result.feed.entries[i];
+				// date
+				var p = document.createElement("p");
+				p.setAttribute("class", "date");
+				var pubDate = formatDate(entry.publishedDate);
+				p.appendChild(document.createTextNode(" " + pubDate));
+				container.appendChild(p);
+				// title
+				var h3 = document.createElement("h3");
+				var a = document.createElement("a");
+				a.setAttribute("href", entry.link);
+				a.setAttribute("title", entry.title);
+				a.appendChild(document.createTextNode(entry.title));
+				h3.appendChild(a);
+				container.appendChild(h3);
+				// blurb
+				var p = document.createElement("p");
+				p.appendChild(document.createTextNode(entry.contentSnippet));
+				container.appendChild(p);
+			}
+		}
+	}
+
+	function OnLoad(currentFeed, currentElement) {
+		var feed = new google.feeds.Feed(currentFeed);
+		
+		// Calling load sends the request off.  It requires a callback function.
+		feed.load(function(result) {
+			feedLoaded(result, currentElement);
+		});
+	};
+
+	function initialize() {
+		var feeds_array = [
+			['blog_feed','http://blogs.ucdavis.edu/egghead/feed/']
+		];
+		
+		for (var i=0; i<=(feeds_array.length-1); i++) {
+			var currentElement = feeds_array[i][0];
+			var currentFeed = feeds_array[i][1];
+			var containerElementId = document.getElementById(currentElement);
+			containerElementId.innerHTML = 'Loading latest post <img src="http://blogs.ucdavis.edu/wp-content/themes/ucdavishome/images/ajax-loader.gif" alt="Loading..." height="16" width="16" vspace="0" hspace="0" border="0" />';
+			containerElementId.style.display = "";
+			OnLoad(currentFeed, currentElement);
+		};
+	};
+
+	google.load("feeds", "1");
+
+	window.onload = function () {
+		google.setOnLoadCallback(initialize());
+	};
+
+</script>
+
+<!-- Include assets for fancybox media lightboxing -->
+<!-- Add fancyBox -->
+
+	<!-- standard jQuery library -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="https://cmsresources.ucdavis.edu/cms_v2/js/fancybox/source/jquery.fancybox.pack.js?v=2.1.3"></script>
+	<link rel="stylesheet" type="text/css" href="https://cmsresources.ucdavis.edu/cms_v2/js/fancybox/source/jquery.fancybox.css?v=2.1.3" media="screen" />
+
+	<!-- Add fancyBox - button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="https://cmsresources.ucdavis.edu/cms_v2/js/fancybox/source/helpers/jquery.fancybox-buttons.css?v=2.1.3" />
+	<script type="text/javascript" src="https://cmsresources.ucdavis.edu/cms_v2/js/fancybox/source/helpers/jquery.fancybox-buttons.js?v=2.1.3"></script>
+
+	<!-- Add fancyBox - thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="https://cmsresources.ucdavis.edu/cms_v2/js/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=2.1.3" />
+	<script type="text/javascript" src="https://cmsresources.ucdavis.edu/cms_v2/js/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=2.1.3"></script>
+
+	<!-- Add fancyBox - media helper (this is optional) -->
+	<script type="text/javascript" src="https://cmsresources.ucdavis.edu/cms_v2/js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+	
+	<!-- Instantiate and configure fancyBox for video media -->
+	<script type="text/javascript" src="https://cmsresources.ucdavis.edu/cms_v2/js/fancybox/fancybox_config.js"></script>
+
+	<!-- Swipe support -->
+	<script src="https://cmsresources.ucdavis.edu/cms_v2/js/jquery.touchSwipe.js" type="text/javascript"></script>
+
+<!-- Include assets for shadowbox media lightboxing -->
+
+<!-- Include Shadowbox -->
+<link rel="stylesheet" type="text/css" href="/lib/shadowbox/shadowbox.css" />
+<script type="text/javascript" src="/lib/shadowbox/shadowbox.js"></script>
+
+<script type="text/javascript">
+	Shadowbox.init({
+		players: ['img','swf','flv','qt','iframe'],
+		flashParams: {
+			allowfullscreen: 'true'
+		},
+		flashVars: {
+			autostart: false,
+			backcolor: '#4c6794',
+			frontcolor: '#ffffff',
+			lightcolor: '#ffcc00'
+		}
+	});
+</script>
+
+<!-- ************* include Google Analytics code ************* -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-398023-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- ************* end GA code ************* -->
+
+</head>
+
+<body>
+
+<!-- <table border="0" cellspacing="0" cellpadding="0" width="100%" id="page_content" style="max-width: 1200px;"> -->
+<table border="0" cellspacing="0" cellpadding="0" width="100%" id="page_content">
+	<tr valign="top">
+		<td id="logo_cell">
+			<div id="logo_wrapper">
+				<a href="http://www.ucdavis.edu"><img src="/news_assets/news_images/ucdavis_logo_new.gif" width="116" height="22" border="0" alt="UC Davis Home Page" /></a>
+			</div>
+		</td>
+		<td id="masthead">
+			<div id="title_area">
+				<div id="site_title_wrapper">
+					<h1><img src="/news_assets/news_images/news_info_mast.gif" width="312" height="36" alt="News &amp; Information" /></h1>
+				</div>
+			</div>
+			<!-- ************* tabs navigation ************* -->
+			<div id="services">
+	<div id="date"><div>12.11.2013 </div></div>
+	<ul id="links">
+		<li><a href="http://calendar.ucdavis.edu/"><span>Events</span></a></li>
+		<li><a href="http://news.ucdavis.edu/sources/"><span>Experts</span></a></li>
+		<li><a href="http://www.ucdavis.edu/about/facts/"><span>Facts &amp; Figures</span></a></li>
+		<li><a href="http://strategiccommunications.ucdavis.edu/for_media.html"><span>For News Media</span></a></li>
+		<li><a href="http://news.ucdavis.edu/search/index.lasso"><span>Advanced Search</span></a></li>
+	</ul>
+</div>			<!-- ************* end tabs navigation ************* -->
+		</td>
+	</tr>
+	<tr valign="top"> 
+		<td id="left_sidebar">
+			<div id="social_media">
+				<div>
+					<a href="http://www.facebook.com/UCDavis"><img src="/news_assets/news_images/social_media_icons/facebook_small.gif" alt="facebook" /></a>
+					<p><a href="http://www.facebook.com/UCDavis">Facebook</a></p>
+				</div>
+				<div>
+					<a href="http://twitter.com/UCDavisNews"><img src="/news_assets/news_images/social_media_icons/twitter_small.gif" alt="twitter" /></a>
+					<p><a href="http://twitter.com/UCDavisNews">Twitter</a></p>
+				</div>
+				<div>
+					<a href="https://deimos.apple.com/WebObjects/Core.woa/Browsev2/ucdavis-public"><img src="/news_assets/news_images/social_media_icons/itunesu_small.gif" alt="itunesu" /></a>
+					<p><a href="https://deimos.apple.com/WebObjects/Core.woa/Browsev2/ucdavis-public">iTunes U</a></p>
+				</div>
+				<div>
+					<a href="http://www.youtube.com/ucdavis"><img src="/news_assets/news_images/social_media_icons/youtube_small.gif" alt="youtube" /></a>
+					<p><a href="http://www.youtube.com/ucdavis">YouTube</a></p>
+				</div>
+				<div>
+					<a href="http://blogs.ucdavis.edu/"><img src="/news_assets/news_images/social_media_icons/blogs_small.jpg" alt="blogs" /></a>
+					<p><a href="http://blogs.ucdavis.edu/">Blogs</a></p>
+				</div>
+				<div>
+					<a href="javascript:none(0)" onclick="toggleLayer('rss_info')"><img src="/news_assets/news_images/social_media_icons/rss_small.gif" alt="rss" /></a>
+					<p><a href="javascript:none(0)" onclick="toggleLayer('rss_info')">RSS</a></p>
+				</div>
+			</div>
+
+			<!-- <a href="javascript:none(0)" onclick="toggleLayer('rss_info')" class="xml">RSS</a> <span><a href="rss">What is RSS?</a></span> -->
+			<div id="rss_info" style="display: none;">
+					<p>To subscribe to this page's RSS feed, copy the feed URL below and paste it into your reader. Or, <a href="rss2/?categories%5B%5D=General+Interest&amp;type=category">See more subscription options</a>.</p>
+					<form action="" id="feed_url_form" name="feed_url_form">
+						<input type="text" onclick="javascript:document.feed_url_form.feed_url.select();" name="feed_url" id="feed_url" value="http://news.ucdavis.edu/xml/getnews.php?type=category&amp;categories=General+Interest&amp;format=rss" />
+				</form>
+			</div>
+
+			<!-- ************* left sidebar navigation ************* -->
+			<div id="left_nav">
+	<ul>
+	<!-- News home page link -->
+		<li><a href="http://news.ucdavis.edu/">News home page</a></li>
+
+	<!-- News by topic -->
+		<li><p>News by topic</p>
+			<ul>
+							<li><a href="http://news.ucdavis.edu/?category=Agriculture">Agriculture</a></li>
+            				<li><a href="http://news.ucdavis.edu/?category=Business">Business</a></li>
+            				<li><a href="http://news.ucdavis.edu/?category=Campus">Campus News</a></li>
+            				<li><a href="http://news.ucdavis.edu/?category=Engineering">Engineering</a></li>
+            				<li><a href="http://news.ucdavis.edu/?category=Government/Law">Government, Law</a></li>
+            				<li><a href="http://news.ucdavis.edu/?category=Health">Health</a></li>
+            				<li><a href="http://news.ucdavis.edu/?category=Science">Science News</a></li>
+            				<li><a href="http://news.ucdavis.edu/?category=Social">Social Sciences, Arts, Humanities</a></li>
+            				<li><a href="http://news.ucdavis.edu/?category=Veterinary">Veterinary Medicine</a></li>
+            			</ul>
+		</li>
+
+	<!-- UC Davis in the Media -->
+		<!-- <li><a href="http://news.ur.ucdavis.edu/in_the_news/">UC Davis in the News</a></li> -->
+
+	<!-- Publications -->
+		<li><a href="http://news.ucdavis.edu/publications.lasso">Publications</a>
+			<ul>
+				<li><a href="http://ucdavismagazine.ucdavis.edu/">UC Davis Magazine</a></li>
+				<li><a href="http://dateline.ucdavis.edu">Dateline UC Davis</a></li>
+				<li><a href="http://datelinearchive.ucdavis.edu/">Dateline electronic newsletter</a></li>
+				<li><a href="http://blogs.ucdavis.edu/egghead/">Egghead blog</a></li>
+				<li><a href="http://www.futurity.org/university/university-of-california-at-davis/">Futurity.org</a></li>
+				<li><a href="http://theaggie.org/">California Aggie</a></li>
+			</ul>
+		</li>
+
+	<!-- Video -->
+		<li><p>Video</p>
+			<ul>
+				<li><a href="http://itunes.ucdavis.edu/">iTunes U</a></li>
+				<li><a href="http://www.ucdavis.edu/social-media/youtube.html">YouTube</a></li>
+			</ul>
+		</li>
+
+	<!-- Related News -->	
+		<li><a href="http://news.ucdavis.edu/related_news.lasso">Related news</a>
+			<ul>
+				<li><a href="http://chancellor.ucdavis.edu/">Chancellor Katehi</a></li>
+				<li><a href="http://ucdavisaggies.ocsn.com/">UC Davis Athletics</a></li>
+				<li><a href="http://www.ucdmc.ucdavis.edu/publish/news/newsroom/">UC Davis Health System</a></li>
+				<li><a href="http://universityofcalifornia.edu/news">UC Newsroom</a></li>
+				<li><a href="http://www.uctv.tv">UCTV</a></li>
+			</ul>
+		</li>
+
+	<!-- News Services -->	
+		<li><p>News and Media Relations resources</p>
+			<ul>
+				<li><a href="http://strategiccommunications.ucdavis.edu/for_media.html" title="UC Davis: Strategic Communications: News Media">For the news media</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+<div id="ownership">
+	<h3><a href="http://ucomm.ucdavis.edu/">Strategic Communications</a></h3>
+	
+	<p class="address">Third floor Mrak Hall<br />
+
+	University of California, Davis<br />
+	One Shields Avenue<br />
+	Davis, CA 95616</p>
+	
+	<p class="phone">(530) 752-1930</p>
+</div>
+
+			<!-- ************* end left sidebar navigation ************* -->
+		</td>
+
+		<td>
+
+<!-- ************* main page content ************* -->
+			<div id="main_content">
+				
+				<div id="main_right_column">
+					<div id="search_feature">
+						<!-- ******** Home page mini-search feature form ******** -->
+						<form action="search/mini_search_results.lasso" method="get" name="search">
+							<input type="hidden" name="-Database" value="content"/>
+							<input type="hidden" name="-AnyError" value="search/mini_search_results.lasso"/>
+							<input type="hidden" name="-NoResultsError" value="search/mini_search_results.lasso"/>
+							<input type="hidden" name="fromMiniSearch" value="true"/>
+
+							<table cellspacing="0" class="minisrch_table">
+								<tr>
+									<td><label for="terms">Look for:</label></td>
+									<td><input type="text" name="search_terms" id="terms" /></td>
+								</tr>
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										<input type="submit" name="-Go" value="News" class="buttontext"/>
+										<input type="submit" name="-Go" value="Dateline" class="buttontext"/>
+										<input type="submit" name="-Go" value="All" class="buttontext"/>
+									</td>
+								</tr>
+							</table>
+							
+							<!-- <input type="submit" name="-Nothing" value="Go" class="buttontext"/> -->
+							<!-- <p class="minisrch_btns">
+								<input type="submit" name="-Go" value="News" class="buttontext"/>
+								<input type="submit" name="-Go" value="Dateline" class="buttontext"/>
+								<input type="submit" name="-Go" value="All" class="buttontext"/>
+							</p> -->
+							<p>For full-featured search (and instructions), go to <a href="search/index.lasso">Search/Archives</a>.</p>
+						</form>
+						<!-- ******** End home page mini-search feature form ******** -->
+					</div>
+					
+					<p id="getnews">To electronically receive the latest news about UC Davis, <a href="services/listproc.lasso">subscribe</a> to GetNews@ucdavis.edu.</p>
+
+					<!-- <hr size="1" /> -->
+
+										
+					<div id="dateline_container">
+	<h2 class="dl_head"><a href="http://dateline.ucdavis.edu/"><img src="/news_assets/news_images/dateline_mast_hm_sidebar.gif" width="258" height="42" alt="Dateline" /></a></h2>
+	<h3 class="dl_subhead">News for faculty and staff</h3>
+
+	
+			<div class="news_item">
+
+			<h3 class="title">
+							<a href="http://dateline.ucdavis.edu/dl_detail.lasso?id=14656">NEWS BRIEFS</a>
+						</h3>
+
+			<p class="description">
+							Chancellor calls for unity against cruelty and intolerance						</p>
+
+		</div>
+			<div class="news_item">
+
+			<h3 class="title">
+							<a href="http://dateline.ucdavis.edu/dl_detail.lasso?id=14657">Women in Leadership panel discussion Dec. 2</a>
+						</h3>
+
+			<p class="description">
+							Chancellor Katehi and VP Stanton among the participants						</p>
+
+		</div>
+			<div class="news_item">
+
+			<h3 class="title">
+							<a href="http://dateline.ucdavis.edu/dl_detail.lasso?id=14655">'Transitioning to Retirement' </a>
+						</h3>
+
+			<p class="description">
+							Workshop series starts Jan. 10						</p>
+
+		</div>
+	
+	<p class="more"><a href="http://dateline.ucdavis.edu/" title="More Dateline">More <em>Dateline</em>&hellip;</a></p>
+
+</div>
+
+					<!-- <hr size="1" /> -->
+					<h2>Help for the news media</h2><div id="media_help"><div>
+<h3><a href="http://news.ucdavis.edu/sources/">UC Davis experts</a></h3>
+<div><img alt="Graphic is a brightly colored exploding particle" height="62" src="/includes/media_images/gavel.jpg" style="float: right;" width="94"/></div>
+<ul>
+<li><a href="http://www.news.ucdavis.edu/search/news_detail.lasso?id=10751">Cases before the Supreme Court</a></li>
+<li><a href="http://news.ucdavis.edu/search/news_detail.lasso?id=10705">Syria</a></li>
+<li><a href="http://news.ucdavis.edu/search/news_detail.lasso?id=10703">Wildfires</a></li>
+<li><a href="http://news.ucdavis.edu/sources/default.lasso">More experts</a></li>
+</ul>
+<p class="more"><a href="http://ucomm.ucdavis.edu/for_media.html">Contact us…</a></p>
+</div></div>
+
+					
+										
+										<hr size="1" />
+					<h2>Special reports</h2>
+					<div id="special_reports"><div>
+    <ul>
+<li>The campus <a href="http://news.ucdavis.edu/special_reports/budget/">budget site</a> keeps people informed about the latest budget news.</li>
+</ul>
+
+    <p class="more"><a href="http://news.ucdavis.edu/special_reports/index.lasso">All special reports…</a></p>
+</div></div>
+					
+				</div>
+				
+				<div id="main_left_column">
+					
+										<system-region name="DEFAULT"><div class="f_txtleft_wide" id="feature"><div class="feature_image"><img alt="Photo:  Kenyan women harvesting tea" src="../images/home_features/2013/december/african-crops.jpg"/><p>Adding to major crops like tea, being picked here, the African Plant Breeding Academy will focus on 100 traditional crops that have been neglected for having lower economic priority. (Mars Inc./courtesy photo)</p></div><div class="feature_text"><h2><a href="http://news.ucdavis.edu/search/news_detail.lasso?id=10763">African Plant Breeding Academy opens</a></h2><p>The opening of the new African Plant Breeding Academy, designed to improve the livelihood and health of Africa&#8217;s 600 million smallholder farmers and their families, was celebrated Monday in Nairobi, Kenya, by researchers from UC Davis and their global partners from the African Orphan Crops Consortium.</p>
+<p>The academy plans to sequence, assemble and annotate the genomes of 100 traditional African food crops to guide development of vegetables, fruits and other agricultural products that are more robust and nutritious.<br/>
+<br/>
+This work is intended to help eliminate hunger and malnutrition, which frequently causes physical stunting and incomplete neurological development among children in rural Africa.</p>
+<div style="text-align: right;">[&#160;<a href="http://news.ucdavis.edu/search/news_detail.lasso?id=10763"><span style="text-align: right;">more about the African plans ...</span></a> ]</div></div></div><hr size="1"/></system-region>									
+											<h2>News releases</h2>
+					
+					<div class="skip_nav skip_nav_top">
+
+    
+    <div class="older"><a href="?page=2&amp;category=General Interest">Older &gt;</a></div>
+
+</div>
+
+
+					
+	<div class="news_item">
+
+				
+			<h3 class="title"><a href="/search/news_detail.lasso?id=10784">LED pioneer Jerry Woodall turns to clean energy</a></h3>
+			
+																														
+															<div class="news_image news_img_left">
+						<img border="0" hspace="0" vspace="0" src="/photos_images/news_images/2013/December/jerry_woodall-th.jpg" alt="Man sitting in a lab coat in a lab with various instruments in a row"/>
+						<p>
+																				</p>
+					</div>
+															
+							<div class="news_item_text with_left_img">
+					<p>
+													You might not know what "lattice-matched heterojunctions" are, but if you stopped at a new stoplight, played a DVD or used a laser pointer, you've made use of technology pioneered by Jerry Woodall, distinguished professor of electrical and computer engineering at the University of California,&#8230;											</p>
+				</div>
+						
+				
+	</div>
+
+					
+	<div class="news_item">
+
+				
+			<h3 class="title"><a href="/search/news_detail.lasso?id=10785">In surprise finding, blood clots absorb bacterial toxin</a></h3>
+			
+																														
+															<div class="news_image news_img_left">
+						<img border="0" hspace="0" vspace="0" src="/photos_images/news_images/2013/December/septic-th.jpg" alt="Microscope view of a blood clot with green, red and yellow areas against a gray background"/>
+						<p>
+																				</p>
+					</div>
+															
+							<div class="news_item_text with_left_img">
+					<p>
+													Blood clots play an unexpected role in protecting the body from the deadly effects of bacteria by absorbing bacterial toxins, researchers at the University of California, Davis, have found. The research was published Dec. 2 in the journal PLoS ONE.
+"It's a significant addition to the short list of&#8230;											</p>
+				</div>
+						
+				
+	</div>
+
+					
+	<div class="news_item">
+
+				
+			<h3 class="title"><a href="/search/news_detail.lasso?id=10781">New UC Davis website turns smartphones into lifelines for at-risk students</a></h3>
+			
+																														
+															<div class="news_image news_img_left">
+						<img border="0" hspace="0" vspace="0" src="/photos_images/news_images/2013/December/Justincasescreen-th.jpg" alt="Logo of the Just in Case app"/>
+						<p>
+																				</p>
+					</div>
+															
+							<div class="news_item_text with_left_img">
+					<p>
+													Smartphones could become lifelines for UC Davis students who are having trouble coping or are concerned about someone in distress, thanks to a new mobile-friendly website.
+Called “Just in Case,” the resource is part of a larger UC Davis initiative to reduce the stigma students may feel seeking&#8230;											</p>
+				</div>
+						
+				
+	</div>
+
+					
+	<div class="news_item">
+
+				
+			<h3 class="title"><a href="/search/news_detail.lasso?id=10779">California companies with more top women leaders associated with higher revenue and profits, UC Davis study says</a></h3>
+			
+																														
+															<div class="news_image news_img_left">
+						<img border="0" hspace="0" vspace="0" src="/photos_images/news_images/2013/December/wet-seal-ceo-th.jpg" alt=""/>
+						<p>
+																				</p>
+					</div>
+															
+							<div class="news_item_text with_left_img">
+					<p>
+													While women hold only one in eight of the executive and board positions in California’s top 400 public companies, an annual University of California, Davis, study shows incremental progress — the percentage of women in these top decision-making posts has increased, and the number of companies&#8230;											</p>
+				</div>
+						
+				
+	</div>
+
+					
+	<div class="news_item">
+
+				
+			<h3 class="title"><a href="/search/news_detail.lasso?id=10778">Christmas, politics and food among the holiday reads from UC Davis authors</a></h3>
+			
+																														
+															<div class="news_image news_img_left">
+						<img border="0" hspace="0" vspace="0" src="/photos_images/news_images/2013/December/white-shadow-th.jpg" alt="Screenshot from a 1924 film of a woman in a feathered hat smoking a cigarette"/>
+						<p>
+																				</p>
+					</div>
+															
+							<div class="news_item_text with_left_img">
+					<p>
+													“Wonder and Delight: A Dolph Gotelli Christmas” by Dolph Gotelli (http://Wonderanddelightbook.com, $75, 360 pages). Known as “Father Christmas,” UC Davis environmental design professor emeritus Dolph Gotelli has now featured his collection of toys and Christmas memorabilia in a book&#8230;											</p>
+				</div>
+						
+				
+	</div>
+
+					
+	<div class="news_item">
+
+				
+			<h3 class="title"><a href="/search/news_detail.lasso?id=10782">Help send warm holiday wishes and coats to pets of the homeless</a></h3>
+			
+																														
+															<div class="news_image news_img_left">
+						<img border="0" hspace="0" vspace="0" src="/photos_images/news_images/2013/December/mercer-clinic-th.jpg" alt="Long-haired dachshund in a red coat and on a leash"/>
+						<p>
+																				</p>
+					</div>
+															
+							<div class="news_item_text with_left_img">
+					<p>
+													If pets of the needy and homeless in our region could write to Santa, their wish list might include a new sweater or coat to ward off winter’s chill.
+Community members now have the opportunity to help Santa deliver on those wishes through the Mercer Clinic holiday pet basket drive, annually&#8230;											</p>
+				</div>
+						
+				
+	</div>
+
+					
+	<div class="news_item">
+
+				
+			<h3 class="title"><a href="/search/news_detail.lasso?id=10780">Cleveland Justis named executive director of UC Davis institute</a></h3>
+			
+																														
+															<div class="news_image news_img_left">
+						<img border="0" hspace="0" vspace="0" src="/photos_images/news_images/2013/December/Justis,-Cleve_th.jpg" alt="Man posing in a windowed foyer"/>
+						<p>
+																				</p>
+					</div>
+															
+							<div class="news_item_text with_left_img">
+					<p>
+													Cleveland Justis, an accomplished organizational leader with more than two decades of experience, has been named executive director of the University of California, Davis, Child Family Institute for Innovation and Entrepreneurship. He started this week. &nbsp;
+“We’re very excited to have Cleve&#8230;											</p>
+				</div>
+						
+				
+	</div>
+
+					
+	<div class="news_item">
+
+				
+			<h3 class="title"><a href="/search/news_detail.lasso?id=10777">International fruit pest targeted by genomic research</a></h3>
+			
+																														
+									
+						
+				
+	</div>
+
+					
+	<div class="news_item">
+
+				
+			<h3 class="title"><a href="/search/news_detail.lasso?id=10727">Cultivating careers in the Central Valley</a></h3>
+			
+																														
+									
+						
+				
+	</div>
+
+					
+	<div class="news_item">
+
+				
+			<h3 class="title"><a href="/search/news_detail.lasso?id=10776">Malaria mosquito groups surprisingly do mix and match, new study finds </a></h3>
+			
+																														
+									
+						
+				
+	</div>
+
+					
+	<div class="news_item">
+
+				
+			<h3 class="title"><a href="/search/news_detail.lasso?id=10774">Ten elected as fellows of American Association for the Advancement of Science</a></h3>
+			
+														
+									
+						
+				
+	</div>
+
+					
+	<div class="news_item">
+
+				
+			<h3 class="title"><a href="/search/news_detail.lasso?id=10775">UC Davis West Village: Setting the standard</a></h3>
+			
+														
+									
+						
+				
+	</div>
+
+<div class="skip_nav skip_nav_bottom">
+
+    
+    <div class="older"><a href="?page=2&amp;category=General Interest">Older &gt;</a></div>
+
+</div>
+					
+				</div>
+				
+			</div>
+			<!-- ************* end main page content ************* -->
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3" bgcolor="#002666"><img src="/news_assets/news_images/spacer.gif" alt="" width="10" height="1" /></td>	
+	</tr>
+	<tr>
+		<td colspan="3" align="center">
+			<!-- ************* footer navigation ************* -->
+			<div id="footer">
+	<p>Copyright &copy; The Regents of the University of California, Davis campus. All Rights Reserved.</p>
+</div>
+			<!-- ************* end footer navigation ************* -->
+		</td>
+	</tr>
+</table>
+</body>
+</html>
+

@@ -1,0 +1,808 @@
+?<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-rnw" lang="en-rnw" dir="ltr" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>English | Radio Netherlands Worldwide </title>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+    <meta property="fb:admins" content="531436514,100002625403003" />
+    <meta name="keywords" content="" /><meta name="description" content="" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if lte IE 8]><style type="text/css">
+  #rnwsmb-bar #rnwsmb-shares-list, .more-sso-logins { border: 1px solid #CCCCCC; }
+  </style><![endif]-->
+<link rel="shortcut icon" href="http://www.rnw.nl/data/files/wereldomroep_favicon.ico" type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" media="all" href="http://www.rnw.nl/data/files/css/css_8c1aeaf19102c5404e0c6562822a9cf6.css" />
+<link type="text/css" rel="stylesheet" media="screen" href="http://www.rnw.nl/data/files/css/css_f47daf65a224733db733f763086e9edc.css" />
+<link type="text/css" rel="stylesheet" media="print" href="http://www.rnw.nl/data/files/css/css_6847ca54e51cf2aabd5354293ae440ee.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/wereldomroep/style2.css" />
+    <script type="text/javascript" src="http://www.rnw.nl/data/files/js/js_5d6ba8263a098fca77e1fe3418c4d8c9.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "block_edit": { "hover_links": 1 }, "fivestar": { "titleUser": "Your rating: ", "titleAverage": "Average: ", "feedbackSavingVote": "Saving your vote...", "feedbackVoteSaved": "Your vote has been saved.", "feedbackDeletingVote": "Deleting your vote...", "feedbackVoteDeleted": "Your vote has been deleted." }, "lightbox2": { "rtl": "0", "file_path": "/(\\w\\w/)data/files", "default_image": "/sites/all/modules/contrib/lightbox2/images/brokenimage.jpg", "border_size": 10, "font_color": "000", "box_color": "fff", "top_position": "", "overlay_opacity": "0.8", "overlay_color": "000", "disable_close_click": 1, "resize_sequence": 0, "resize_speed": 400, "fade_in_speed": 400, "slide_down_speed": 600, "use_alt_layout": 0, "disable_resize": 0, "disable_zoom": 0, "force_show_nav": 0, "show_caption": true, "loop_items": 0, "node_link_text": "", "node_link_target": 0, "image_count": "", "video_count": "Video !current of !total", "page_count": "Page !current of !total", "lite_press_x_close": "press \x3ca href=\"#\" onclick=\"hideLightbox(); return FALSE;\"\x3e\x3ckbd\x3ex\x3c/kbd\x3e\x3c/a\x3e to close", "download_link_text": "", "enable_login": false, "enable_contact": false, "keys_close": "c x 27", "keys_previous": "p 37", "keys_next": "n 39", "keys_zoom": "z", "keys_play_pause": "32", "display_image_size": "original", "image_node_sizes": "()", "trigger_lightbox_classes": "", "trigger_lightbox_group_classes": "", "trigger_slideshow_classes": "", "trigger_lightframe_classes": "", "trigger_lightframe_group_classes": "", "custom_class_handler": 0, "custom_trigger_classes": "", "disable_for_gallery_lists": true, "disable_for_acidfree_gallery_lists": true, "enable_acidfree_videos": true, "slideshow_interval": 5000, "slideshow_automatic_start": 0, "slideshow_automatic_exit": 0, "show_play_pause": 0, "pause_on_next_click": 0, "pause_on_previous_click": 0, "loop_slides": 0, "iframe_width": 600, "iframe_height": 400, "iframe_border": 1, "enable_video": 0 }, "jcarousel": { "ajaxPath": "/english/jcarousel/ajax/views", "#jcarousel": { "visible": 4, "scroll": 1, "skin": "default" } }, "og": { "group_context": { "nid": "93", "title": "English", "type": "rnw_grp" } } });
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+$(document).ready(function(){
+      $("a.expand").click(function(){
+        $("div.more-sso-logins").addClass("expanded");
+      });
+      $("a.collapse").click(function(){
+        $("div.more-sso-logins").removeClass("expanded");
+      });
+
+    });
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+  $(document).ready(function() {
+    var effect = "scrollLeft";
+    var reffect = "scrollRight";
+    var rtl = ($("html").attr("dir").toLowerCase() == "rtl");
+    if(rtl) { effect = "scrollRight"; reffect = "scrollLeft"; }
+
+    $("#block-rnw_fp-mustcarry").each(function(i) {
+      var cont = $(".mustcarry-container",this);
+      if(cont.children().length <= 1) {
+        return;
+      }
+      
+      var $prev, $next;
+      if(!rtl) {
+        $prev = $("<div/>").addClass("carousel-left-button").append($("<div/>").addClass("carousel-icon"));
+        $next = $("<div/>").addClass("carousel-right-button").append($("<div/>").addClass("carousel-icon"));
+      } else {
+        $prev = $("<div/>").addClass("carousel-right-button").append($("<div/>").addClass("carousel-icon"));
+        $next = $("<div/>").addClass("carousel-left-button").append($("<div/>").addClass("carousel-icon"));
+      }
+      $prev.mouseover(function() { $(this).addClass("hover"); });
+      $prev.mouseout(function() { $(this).removeClass("hover"); });
+      $next.mouseover(function() { $(this).addClass("hover"); });
+      $next.mouseout(function() { $(this).removeClass("hover"); });
+      
+      $(this).prepend($prev).prepend($next);
+      
+
+      cont.cycle({
+        fx: effect,
+        speed: 500,
+        timeout: 6000,
+        pause: 1,
+        prev: $prev,
+        next: $next,
+        prevNextClick: function(isNext) {
+          if(!isNext) {
+            var d = cont.data("cycle.opts");
+            d.oneTimeFx = reffect;
+            cont.data("cycle.opts",d);
+          }
+        }
+      });
+    });
+  });
+
+//--><!]]>
+</script>
+	<link rel="alternate" title="RNW english" type="application/rss+xml" href="http://www.rnw.nl/english/feed" />
+    <script type="text/javascript" src="/sites/all/themes/wereldomroep/js/add_bookmark.js"></script>    <script type="text/javascript">
+    //<![CDATA[
+      var ns_loadingtime1 = new Date().getTime();
+    // ]]>
+    </script>
+    <!--[if IE 6]>
+      <script src="/sites/all/themes/wereldomroep/js/DD_belatedPNG.js"></script>
+      <script>
+        DD_belatedPNG.fix('.header .meridians, .header img, .header .menu, .mustcarrymeridian, .mustcarrytext, .vertical_slide_image_text, .content .ron-item-image .ron-item-meredian, .innerbottom .most-popular .most-popular-meredian, .branding a, .video-item-play-logo, .jcarousel-prev-horizontal, .jcarousel-next-horizontal, .right .block .content .dossierdescription .dossierimage h2, .int-video-first-link , .int-video-first-text, .int-video-item-image a.int-video-item-link');
+      </script>
+    <![endif]-->
+  </head>
+  <body class="normal rnw_fp en-rnw og_english">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-GSNQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-GSNQ');</script>
+<!-- End Google Tag Manager -->
+    <div class="center_floater">
+    <div class="container_16">
+      <div class="grid_16 header">
+
+      <div class="grid_16 languages" dir="ltr">
+          <div id="block-views-101_6_sig-block_1" class="clear-block block block-views lang-en-rnw ">
+  <h2>101_6_SIG</h2>
+	<div class="content"><div class="view view-101-6-sig view-id-101_6_sig view-display-id-block_1 view-dom-id-1">
+    
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+              <li class="views-row views-row-1 views-row-odd views-row-first active">   
+  <div class="views-field-title">
+                <span class="field-content"><a href="/english">English</a></span>
+  </div>
+</li>
+              <li class="views-row views-row-2 views-row-even">   
+  <div class="views-field-title">
+                <span class="field-content"><a href="/espanol">Español</a></span>
+  </div>
+</li>
+              <li class="views-row views-row-3 views-row-odd">   
+  <div class="views-field-title">
+                <span class="field-content"><a href="/chinese">??</a></span>
+  </div>
+</li>
+              <li class="views-row views-row-4 views-row-even">   
+  <div class="views-field-title">
+                <span class="field-content"><a href="/arabic">???????</a></span>
+  </div>
+</li>
+              <li class="views-row views-row-5 views-row-odd">   
+  <div class="views-field-title">
+                <span class="field-content"><a href="/afrique">Afrique</a></span>
+  </div>
+</li>
+              <li class="views-row views-row-6 views-row-even views-row-last">   
+  <div class="views-field-title">
+                <span class="field-content"><a href="/africa">Africa</a></span>
+  </div>
+</li>
+      </ul>
+</div>
+
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <li class="views-row views-row-last"><a href="http://corporate.rnw.nl/english">About RNW</a></li>
+    </div>
+  
+  
+</div> </div>
+</div>        </div>
+
+
+        <div class="grid_16 header_content">
+          <div class="header_background">
+            <h1>Radio Netherlands Worldwide</h1>
+                        <div class="meridians">
+              <div class="search">
+                <form action="/english"  accept-charset="UTF-8" method="post" id="search-theme-form">
+<div><div id="search" class="container-inline">
+  <div class="form-item" id="edit-search-theme-form-1-wrapper">
+ <label for="edit-search-theme-form-1">Search this site: </label>
+ <input type="text" maxlength="128" name="search_theme_form" id="edit-search-theme-form-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
+</div>
+<input type="submit" name="op" id="edit-submit" value="Search"  class="form-submit" />
+<input type="hidden" name="form_build_id" id="form-be56b7bdc8688b9bab53fa9cef923dca" value="form-be56b7bdc8688b9bab53fa9cef923dca"  />
+<input type="hidden" name="form_id" id="edit-search-theme-form" value="search_theme_form"  />
+</div>
+
+</div></form>
+                <div class="faux_search_button" style="display:none;"></div>
+              </div>
+              <div class="primary_menu">
+                                <ul class="primary-links"><li class="menu-2268 first last"><a href="/english/user/register" title="">Register</a></li>
+</ul>              </div>
+			  <div id="block-rnw_sso-0" class="clear-block block block-rnw_sso lang-en-rnw ">
+  <h2>SSO Login</h2>
+	<div class="content"><div class="block-rnw_sso "><div class="sso-top"><p><a href="http://m.rnw.nl/english" class="mobile-link">RNW lite website</a> | <a href="/english/user/login">Login</a> or via: </p><ul class="providercarousel-top"></ul><a href="/english" class="expand" onclick="return false;"><img src="/sites/all/modules/custom/rnw_sso/img/expand.gif" alt="Close" title="Close" width="18" height="18" /></a></div><div class="more-sso-logins "><p>More login possibilities:</p><a href="/english" class="collapse" onclick="return false;"><img src="/sites/all/modules/custom/rnw_sso/img/close.gif" alt="Close" title="Close" width="18" height="18" /></a><div class="provider-icons"><ul id="jcarousel" class="jcarousel-skin-default"><li><a href="/english/social?token_url=http%3A%2F%2Fwww.rnw.nl%2Fenglish%2Frpx%2Fend_point%3Fdestination%3Drnw_fp" class="rpxnow" onclick="return false;"><img src="/sites/all/modules/custom/rnw_sso/img/socialsignon/facebook.png" alt="Facebook" title="Facebook" width="24" height="24" /></a></li><li><a href="/english/social?token_url=http%3A%2F%2Fwww.rnw.nl%2Fenglish%2Frpx%2Fend_point%3Fdestination%3Drnw_fp" class="rpxnow" onclick="return false;"><img src="/sites/all/modules/custom/rnw_sso/img/socialsignon/flickr.png" alt="Flickr" title="Flickr" width="24" height="24" /></a></li><li><a href="/english/social?token_url=http%3A%2F%2Fwww.rnw.nl%2Fenglish%2Frpx%2Fend_point%3Fdestination%3Drnw_fp" class="rpxnow" onclick="return false;"><img src="/sites/all/modules/custom/rnw_sso/img/socialsignon/twitter.png" alt="Twitter" title="Twitter" width="24" height="24" /></a></li><li><a href="/english/social?token_url=http%3A%2F%2Fwww.rnw.nl%2Fenglish%2Frpx%2Fend_point%3Fdestination%3Drnw_fp" class="rpxnow" onclick="return false;"><img src="/sites/all/modules/custom/rnw_sso/img/socialsignon/google.png" alt="Google" title="Google" width="24" height="24" /></a></li><li><a href="/english/social?token_url=http%3A%2F%2Fwww.rnw.nl%2Fenglish%2Frpx%2Fend_point%3Fdestination%3Drnw_fp" class="rpxnow" onclick="return false;"><img src="/sites/all/modules/custom/rnw_sso/img/socialsignon/linkedin.png" alt="LinkedIn" title="LinkedIn" width="24" height="24" /></a></li></ul></div></div></div></div>
+</div>              <a class="backtohome" href="/english"><img src="/sites/all/themes/wereldomroep/images/logos/logo-93.png" alt="Home" title="Home" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid_16 slogan" dir="ltr">
+ 	    <span class="datum">Thursday 12 December</span>
+                                      &nbsp;                       </div>
+
+      </div>
+      						<div class="grid_11 content_container">
+							
+																		
+								<div class="inner_content_container">
+				
+					<div class="mustcarry">
+						<div id="block-rnw_front_tabs-0" class="clear-block block block-rnw_front_tabs lang-en-rnw ">
+	<div class="content"><div id="rnw_fron_tabs"><ul class="rnw_front"><li  class="first"><a href="/english" class="active">Home</a></li><li ><a href="/english/rnw_front_tabs/38" class="rnw_front_tab">Dossiers</a></li><li ><a href="/english/rnw_front_tabs/40" class="rnw_front_tab">Video</a></li><li  class="last"><a href="/english/rnw_front_tabs/42" class="rnw_front_tab">Your RNW</a></li></ul><div id="rnw_fron_tabs_content_hidden"></div><div id="rnw_fron_tabs_content"><div id="block-rnw_fp-mustcarry"><div class="mustcarry-container">
+
+<div class="mustcarryitem boxgrid captionfull">
+  <div class="mustcarryimage">
+    <a href="/english/article/why-mandela-my-hero"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/must_carry/images/lead/article/2013/06/teaser-mandela.jpg" alt="Nelson Mandela celebrating his 90th birthday in Cape Town, 20 August 2008" title="Nelson Mandela celebrating his 90th birthday in Cape Town, 20 August 2008"  class="imagecache imagecache-must_carry" width="650" height="330" /></a>    <div class="mustcarrymeridian meridian-none" title="Nelson Mandela celebrating his 90th birthday in Cape Town, 20 August 2008">
+      <a href="/english/article/why-mandela-my-hero"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/must_carry/images/lead/article/2013/06/teaser-mandela.jpg" alt="Nelson Mandela celebrating his 90th birthday in Cape Town, 20 August 2008" title="Nelson Mandela celebrating his 90th birthday in Cape Town, 20 August 2008"  class="imagecache imagecache-must_carry" width="650" height="330" /></a>                        <div class="globeitem move_left">
+            <a href="/english/map/node/894076">Map</a>          </div>
+                    <div class="location-shadow">
+        Hilversum, Netherlands      </div>
+      <div class="location">
+        Hilversum, Netherlands      </div>
+    </div>
+    <div class="mustcarrytext cover boxcaption">
+      <h1><a href="/english/article/why-mandela-my-hero">Why Mandela is my hero</a></h1>
+      Nelson Mandela died on Thursday evening at the age of 95. South Africa&rsquo;s great champion of unity and equality was a living symbol of freedom for millions of people around the world. RNW&rsquo;s Africa    </div>
+  </div>
+</div>
+
+</div>
+</div></div></div></div>
+</div>					</div>
+				</div>
+										</div>
+						
+						<div class="grid_5 right top">
+				<div id="block-block-43" class="clear-block block block-block lang-en-rnw ">
+  <h2>RNW on Facebook</h2>
+	<div class="content"><p><iframe frameborder="0" height="335" scrolling="no" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Frnw.org%2F&amp;width=300&amp;height=608&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=true&amp;show_border=true&amp;appId=372088699535436"></iframe></p>
+</div>
+</div><div id="block-block-1" class="clear-block block block-block lang-en-rnw rnwplayer">
+  <h2>RNW Player</h2>
+	<div class="content"><!-- <a href="http://www.facebook.com/radionetherlands" class="fb" target="_blank">RNW Facebook</a>
+<a href="http://twitter.com/RNW" class="tw" target="_blank">RNW on Twitter</a>
+<a href="http://www.youtube.com/user/RnW" class="yt" target="_blank">RNW on Youtube</a> -->
+</div>
+</div>			</div>
+						
+						
+						<div class="grid_16 etalage">
+				<div id="block-rnw_fp-etalage" class="clear-block block block-rnw_fp lang-en-rnw ">
+  <h2>Recommended</h2>
+	<div class="content"><div class="item-list"><ul><li class="first"><div class="etalage-item">
+	<div class="etalage-item-image">
+		<a href="/english/video/ladies-move-soultana"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/etalage/teaser-cr-141113.jpg" alt="Moroccan rapper Soultana" title="Moroccan rapper Soultana"  class="imagecache imagecache-etalage" width="234" height="133" /></a>    <a href="/english/video/ladies-move-soultana#video" class="etalage-item-play-logo">play this item</a>	</div>
+	<div class="etalage-item-text">
+		<span class="etalage-item-text-type">Video: </span>		<a href="/english/video/ladies-move-soultana">Ladies on the Move &amp; Soultana</a>	</div>
+</div></li>
+<li><div class="etalage-item">
+	<div class="etalage-item-image">
+		<a href="/english/article/brazil%E2%80%99s-plan-store-its-data-locally-threatens-global-internet-experts-say"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/etalage/images/lead/article/2013/11/000_was7938459-v2.jpg" alt="Rousseff addresses the UN General Assembly on US spying practices" title="Rousseff addresses the UN General Assembly on US spying practices"  class="imagecache imagecache-etalage" width="234" height="133" /></a>    	</div>
+	<div class="etalage-item-text">
+		<span class="etalage-item-text-type">Article: </span>		<a href="/english/article/brazil%E2%80%99s-plan-store-its-data-locally-threatens-global-internet-experts-say">Brazil’s plan to store its data locally threatens the global Internet, experts say</a>	</div>
+</div></li>
+<li><div class="etalage-item">
+	<div class="etalage-item-image">
+		<a href="/english/article/rnw-launches-new-flagship-site"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/etalage/images/lead/article/2013/09/teaser-new-site-rnw-050913.jpg" alt="Screenshot rnw.org" title="Screenshot rnw.org"  class="imagecache imagecache-etalage" width="234" height="133" /></a>    	</div>
+	<div class="etalage-item-text">
+		<span class="etalage-item-text-type">Article: </span>		<a href="/english/article/rnw-launches-new-flagship-site">RNW launches new flagship site</a>	</div>
+</div></li>
+<li class="last"><div class="etalage-item">
+	<div class="etalage-item-image">
+		<a href="/english/article/apple-kowtows-china%E2%80%99s-censors-removes-circumvention-app-0"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/etalage/images/lead/article/2013/10/open_door_app_in_action_650_0.jpg" alt="OpenDoor app in action" title="OpenDoor app in action"  class="imagecache imagecache-etalage" width="234" height="133" /></a>    	</div>
+	<div class="etalage-item-text">
+		<span class="etalage-item-text-type">Article: </span>		<a href="/english/article/apple-kowtows-china%E2%80%99s-censors-removes-circumvention-app-0">Apple kowtows to China’s censors; removes circumvention app</a>	</div>
+</div></li>
+</ul></div></div>
+</div>			</div>
+						
+						<div class="grid_11 content_container">
+							<div class="inner_content_container bottom">
+					
+										
+											<div class="content">
+						<div class="taxonomy-pager-top">
+  <span class="taxonomy-pager-title">Showing items for <em>English</em> on RNW</span>
+    <div class="taxonomy-pager"><div class="item-list"><ul class="pager"><li class="pager-current first">1</li>
+<li class="pager-item"><a href="/english/rnw_fp?page=1&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" title="Go to page 2" class="active">2</a></li>
+<li class="pager-item"><a href="/english/rnw_fp?page=2&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" title="Go to page 3" class="active">3</a></li>
+<li class="pager-item"><a href="/english/rnw_fp?page=3&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" title="Go to page 4" class="active">4</a></li>
+<li class="pager-item"><a href="/english/rnw_fp?page=4&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" title="Go to page 5" class="active">5</a></li>
+<li class="pager-item"><a href="/english/rnw_fp?page=5&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" title="Go to page 6" class="active">6</a></li>
+<li class="pager-item"><a href="/english/rnw_fp?page=6&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" title="Go to page 7" class="active">7</a></li>
+<li class="pager-item"><a href="/english/rnw_fp?page=7&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" title="Go to page 8" class="active">8</a></li>
+<li class="pager-item"><a href="/english/rnw_fp?page=8&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" title="Go to page 9" class="active">9</a></li>
+<li class="pager-ellipsis">…</li>
+<li class="pager-next last"><a href="/english/rnw_fp?page=1&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" class="active">next</a></li>
+</ul></div></div>  </div>
+  
+
+<div class="ron-item">
+  <div class="ron-item-image">
+    <a href="/english/article/response-nsa-revelations-internet%E2%80%99s-engineers-set-out-prism-proof-net"><img src="http://www.rnw.nl/data/files/imagecache/list/images/lead/article/2013/10/lock_2.jpg" alt="" title="In response to NSA revelations, the internet’s engineers PRISM-proof the net"  class="imagecache imagecache-list" width="230" height="160" /></a>    <div class="ron-item-meredian">
+            <span class="ron-item-image-location-shadow">Indonesia</span>
+      <span class="ron-item-image-location">Indonesia</span>
+      
+      <a href="/english/article/response-nsa-revelations-internet%E2%80%99s-engineers-set-out-prism-proof-net" class="real_link" title=""><span class="ron-item-content-type">Article: </span><span class="ron-item-content-title">In response to NSA revelations, the internet’s engineers set out to PRISM-proof the net</span></a>    </div>
+  </div>
+  
+  <div class="ron-item-content">
+    <h2><a href="/english/article/response-nsa-revelations-internet%E2%80%99s-engineers-set-out-prism-proof-net"><span class="ron-item-content-type">Article: </span><span class="ron-item-content-title">In response to NSA revelations, the internet’s engineers set out to PRISM-proof the net</span></a></h2>
+    <p>Greatly disturbed by the recent revelations of mass internet surveillance, the Internet Engineering Task Force (IETF) have announced plans to ramp up online security.</p>
+  
+    <div class="ron-item-media">
+      <ul>
+                  <li class="ron-item-links-location"><a href="/english/map/node/899515">Location</a></li>
+                
+                
+                
+      </ul>    
+    </div>
+    <div class="ron-item-links">
+      <a href="/english/article/response-nsa-revelations-internet%E2%80%99s-engineers-set-out-prism-proof-net#comment-form" class="ron-item-react"><span class="ron-item-react-text">Leave a comment</span> <span class="ron-item-react-text-count"> (2 comments)</span></a><a href="/english/article/response-nsa-revelations-internet%E2%80%99s-engineers-set-out-prism-proof-net" class="ron-item-read-more">More &gt;</a>    </div>
+  </div>
+</div>
+
+
+<div class="ron-item">
+  <div class="ron-item-image">
+    <a href="/english/article/new-app-frees-china%E2%80%99s-biggest-social-network-censorship"><img src="http://www.rnw.nl/data/files/imagecache/list/images/lead/article/2013/10/freeweibo_app_in_action_on_the_streets_of_shanghai_c_will_photography_for_rnw.jpg" alt="FreeWeibo app in action on the streets of Shanghai © Will photography for RNW" title="FreeWeibo app in action on the streets of Shanghai © Will photography for RNW"  class="imagecache imagecache-list" width="230" height="160" /></a>    <div class="ron-item-meredian">
+            <span class="ron-item-image-location-shadow">Netherlands</span>
+      <span class="ron-item-image-location">Netherlands</span>
+      
+      <a href="/english/article/new-app-frees-china%E2%80%99s-biggest-social-network-censorship" class="real_link" title="FreeWeibo app in action on the streets of Shanghai © Will photography for RNW"><span class="ron-item-content-type">Article: </span><span class="ron-item-content-title">New app frees China’s biggest social network from censorship</span></a>    </div>
+  </div>
+  
+  <div class="ron-item-content">
+    <h2><a href="/english/article/new-app-frees-china%E2%80%99s-biggest-social-network-censorship"><span class="ron-item-content-type">Article: </span><span class="ron-item-content-title">New app frees China’s biggest social network from censorship</span></a></h2>
+    <p>Tweets on politically sensitive topics in China are routinely censored. The new FreeWeibo app unblocks them.
+</p>
+  
+    <div class="ron-item-media">
+      <ul>
+                  <li class="ron-item-links-location"><a href="/english/map/node/899600">Location</a></li>
+                
+                
+                
+      </ul>    
+    </div>
+    <div class="ron-item-links">
+      <a href="/english/article/new-app-frees-china%E2%80%99s-biggest-social-network-censorship#comment-form" class="ron-item-react"><span class="ron-item-react-text">Leave a comment</span> <span class="ron-item-react-text-count"> (3 comments)</span></a><a href="/english/article/new-app-frees-china%E2%80%99s-biggest-social-network-censorship" class="ron-item-read-more">More &gt;</a>    </div>
+  </div>
+</div>
+
+
+<div class="ron-item">
+  <div class="ron-item-image">
+    <a href="/english/video/ladies-move-0"><img src="http://www.rnw.nl/data/files/imagecache/list/raja_0.jpg" alt="Raja Felgata on a motorcycle in Morocco" title="Raja Felgata on a motorcycle in Morocco"  class="imagecache imagecache-list" width="230" height="160" /></a>    <div class="ron-item-meredian">
+      <span class="ron-item-play-logo"></span>      <span class="ron-item-image-location-shadow">Morocco</span>
+      <span class="ron-item-image-location">Morocco</span>
+      
+      <a href="/english/video/ladies-move-0" class="real_link" title="Raja Felgata on a motorcycle in Morocco"><span class="ron-item-content-type">Video: </span><span class="ron-item-content-title">Ladies on the move</span></a>    </div>
+  </div>
+  
+  <div class="ron-item-content">
+    <h2><a href="/english/video/ladies-move-0"><span class="ron-item-content-type">Video: </span><span class="ron-item-content-title">Ladies on the move</span></a></h2>
+    <p>RNW is keen on featuring inspiring women in our target countries, women who make a difference, who are not afraid to speak out, who inspire others and who bring about change in their immediate surroundings and further afield.
+&nbsp;</p>
+  
+    <div class="ron-item-media">
+      <ul>
+                  <li class="ron-item-links-location"><a href="/english/map/node/898324">Location</a></li>
+                
+                
+                  <li class="ron-item-links-view"><a href="/english/video/ladies-move-0#video">Video</a></li>
+                
+      </ul>    
+    </div>
+    <div class="ron-item-links">
+      <a href="/english/video/ladies-move-0#comment-form" class="ron-item-react"><span class="ron-item-react-text">Leave a comment</span> </a><a href="/english/video/ladies-move-0" class="ron-item-read-more">More &gt;</a>    </div>
+  </div>
+</div>
+
+
+<div class="ron-item">
+  <div class="ron-item-image">
+    <a href="/english/video/what-about-men"><img src="http://www.rnw.nl/data/files/imagecache/list/teaser-men.jpg" alt="" title=""  class="imagecache imagecache-list" width="230" height="160" /></a>    <div class="ron-item-meredian">
+      <span class="ron-item-play-logo"></span>      <span class="ron-item-image-location-shadow"></span>
+      <span class="ron-item-image-location"></span>
+      
+      <a href="/english/video/what-about-men" class="real_link" title=""><span class="ron-item-content-type">Video: </span><span class="ron-item-content-title">What about men?</span></a>    </div>
+  </div>
+  
+  <div class="ron-item-content">
+    <h2><a href="/english/video/what-about-men"><span class="ron-item-content-type">Video: </span><span class="ron-item-content-title">What about men?</span></a></h2>
+    <p>In many countries, men don't stick around to raise their children. This is a missed opportunity.</p>
+  
+    <div class="ron-item-media">
+      <ul>
+                
+                
+                  <li class="ron-item-links-view"><a href="/english/video/what-about-men#video">Video</a></li>
+                
+      </ul>    
+    </div>
+    <div class="ron-item-links">
+      <a href="/english/video/what-about-men#comment-form" class="ron-item-react"><span class="ron-item-react-text">Leave a comment</span> <span class="ron-item-react-text-count"> (1 comment)</span></a><a href="/english/video/what-about-men" class="ron-item-read-more">More &gt;</a>    </div>
+  </div>
+</div>
+
+
+<div class="ron-item">
+  <div class="ron-item-image">
+    <a href="/english/video/behind-scenes-tedx-hague-academy"><img src="http://www.rnw.nl/data/files/imagecache/list/tedx.jpg" alt="Vithika Yadav, one of the speakers at the TEDx Hague Academy" title="Vithika Yadav, one of the speakers at the TEDx Hague Academy"  class="imagecache imagecache-list" width="230" height="160" /></a>    <div class="ron-item-meredian">
+      <span class="ron-item-play-logo"></span>      <span class="ron-item-image-location-shadow">Netherlands</span>
+      <span class="ron-item-image-location">Netherlands</span>
+      
+      <a href="/english/video/behind-scenes-tedx-hague-academy" class="real_link" title="Vithika Yadav, one of the speakers at the TEDx Hague Academy"><span class="ron-item-content-type">Video: </span><span class="ron-item-content-title">Behind the scenes at TEDx Hague Academy</span></a>    </div>
+  </div>
+  
+  <div class="ron-item-content">
+    <h2><a href="/english/video/behind-scenes-tedx-hague-academy"><span class="ron-item-content-type">Video: </span><span class="ron-item-content-title">Behind the scenes at TEDx Hague Academy</span></a></h2>
+    <p>Ever heard of TED Talks - the ones where one inspiring person shares a big idea and it's shared on the internet for the whole world to see?</p>
+  
+    <div class="ron-item-media">
+      <ul>
+                  <li class="ron-item-links-location"><a href="/english/map/node/897439">Location</a></li>
+                
+                
+                  <li class="ron-item-links-view"><a href="/english/video/behind-scenes-tedx-hague-academy#video">Video</a></li>
+                
+      </ul>    
+    </div>
+    <div class="ron-item-links">
+      <a href="/english/video/behind-scenes-tedx-hague-academy#comment-form" class="ron-item-react"><span class="ron-item-react-text">Leave a comment</span> <span class="ron-item-react-text-count"> (2 comments)</span></a><a href="/english/video/behind-scenes-tedx-hague-academy" class="ron-item-read-more">More &gt;</a>    </div>
+  </div>
+</div>
+
+
+<div class="ron-item">
+  <div class="ron-item-image">
+    <a href="/english/article/dutch-dj-gets-netherlands-rocking-egyptian-rap-music"><img src="http://www.rnw.nl/data/files/imagecache/list/images/lead/article/2013/09/teaser-cairo-liberation-020913.jpg" alt="Cairo Liberation Front in action" title="Cairo Liberation Front in action"  class="imagecache imagecache-list" width="230" height="160" /></a>    <div class="ron-item-meredian">
+            <span class="ron-item-image-location-shadow">Netherlands</span>
+      <span class="ron-item-image-location">Netherlands</span>
+      
+      <a href="/english/article/dutch-dj-gets-netherlands-rocking-egyptian-rap-music" class="real_link" title="Cairo Liberation Front in action"><span class="ron-item-content-type">Article: </span><span class="ron-item-content-title">Dutch DJ gets the Netherlands rocking to Egyptian rap music</span></a>    </div>
+  </div>
+  
+  <div class="ron-item-content">
+    <h2><a href="/english/article/dutch-dj-gets-netherlands-rocking-egyptian-rap-music"><span class="ron-item-content-type">Article: </span><span class="ron-item-content-title">Dutch DJ gets the Netherlands rocking to Egyptian rap music</span></a></h2>
+    <p>Dutch DJ Joost Heijthuijsen plays Egyptian Electro Sha&rsquo;bi music at dance parties in the Netherlands. &ldquo;The people here love it. Dutch and Egyptian youths are much more alike than they think.&rdquo;
+Michel Hoebink</p>
+  
+    <div class="ron-item-media">
+      <ul>
+                  <li class="ron-item-links-location"><a href="/english/map/node/897020">Location</a></li>
+                
+                
+                
+      </ul>    
+    </div>
+    <div class="ron-item-links">
+      <a href="/english/article/dutch-dj-gets-netherlands-rocking-egyptian-rap-music#comment-form" class="ron-item-react"><span class="ron-item-react-text">Leave a comment</span> <span class="ron-item-react-text-count"> (1 comment)</span></a><a href="/english/article/dutch-dj-gets-netherlands-rocking-egyptian-rap-music" class="ron-item-read-more">More &gt;</a>    </div>
+  </div>
+</div>
+
+
+<div class="ron-item">
+  <div class="ron-item-image">
+    <a href="/english/video/cuban-blogger-tackles-dutch-foreign-minister"><img src="http://www.rnw.nl/data/files/imagecache/list/bloquero_cuba_holanda650_0.jpg" alt="Cuban blogger Carlos Alberto Pérez Benítez speaks with Dutch foreign minister" title="Cuban blogger Carlos Alberto Pérez Benítez speaks with Dutch foreign minister"  class="imagecache imagecache-list" width="230" height="160" /></a>    <div class="ron-item-meredian">
+      <span class="ron-item-play-logo"></span>      <span class="ron-item-image-location-shadow"></span>
+      <span class="ron-item-image-location"></span>
+      
+      <a href="/english/video/cuban-blogger-tackles-dutch-foreign-minister" class="real_link" title="Cuban blogger Carlos Alberto Pérez Benítez speaks with Dutch foreign minister"><span class="ron-item-content-type">Video: </span><span class="ron-item-content-title">Cuban blogger tackles Dutch foreign minister</span></a>    </div>
+  </div>
+  
+  <div class="ron-item-content">
+    <h2><a href="/english/video/cuban-blogger-tackles-dutch-foreign-minister"><span class="ron-item-content-type">Video: </span><span class="ron-item-content-title">Cuban blogger tackles Dutch foreign minister</span></a></h2>
+    <p>Bloggers from various countries have been invited by the Dutch government to take part in the celebrations of the 100th anniversary of the &nbsp;Peace Palace in The Hague.</p>
+  
+    <div class="ron-item-media">
+      <ul>
+                
+                
+                  <li class="ron-item-links-view"><a href="/english/video/cuban-blogger-tackles-dutch-foreign-minister#video">Video</a></li>
+                
+      </ul>    
+    </div>
+    <div class="ron-item-links">
+      <a href="/english/video/cuban-blogger-tackles-dutch-foreign-minister#comment-form" class="ron-item-react"><span class="ron-item-react-text">Leave a comment</span> <span class="ron-item-react-text-count"> (4 comments)</span></a><a href="/english/video/cuban-blogger-tackles-dutch-foreign-minister" class="ron-item-read-more">More &gt;</a>    </div>
+  </div>
+</div>
+
+
+<div class="ron-item">
+  <div class="ron-item-image">
+    <a href="/english/video/international-bloggers-visit-rnw"><img src="http://www.rnw.nl/data/files/imagecache/list/bloggers_visit_rnw.jpg" alt="International bloggers visit RNW" title="International bloggers visit RNW"  class="imagecache imagecache-list" width="230" height="160" /></a>    <div class="ron-item-meredian">
+      <span class="ron-item-play-logo"></span>      <span class="ron-item-image-location-shadow"></span>
+      <span class="ron-item-image-location"></span>
+      
+      <a href="/english/video/international-bloggers-visit-rnw" class="real_link" title="International bloggers visit RNW"><span class="ron-item-content-type">Video: </span><span class="ron-item-content-title">International bloggers visit RNW</span></a>    </div>
+  </div>
+  
+  <div class="ron-item-content">
+    <h2><a href="/english/video/international-bloggers-visit-rnw"><span class="ron-item-content-type">Video: </span><span class="ron-item-content-title">International bloggers visit RNW</span></a></h2>
+    <p>A group of international bloggers spent a day at RNW earlier this week. They are in the Netherlands at the invitation of The Hague to join in today's celebrations of 100 years of The Peace Palace. </p>
+  
+    <div class="ron-item-media">
+      <ul>
+                
+                
+                  <li class="ron-item-links-view"><a href="/english/video/international-bloggers-visit-rnw#video">Video</a></li>
+                
+      </ul>    
+    </div>
+    <div class="ron-item-links">
+      <a href="/english/video/international-bloggers-visit-rnw#comment-form" class="ron-item-react"><span class="ron-item-react-text">Leave a comment</span> </a><a href="/english/video/international-bloggers-visit-rnw" class="ron-item-read-more">More &gt;</a>    </div>
+  </div>
+</div>
+
+
+<div class="ron-item">
+  <div class="ron-item-image">
+    <a href="/english/video/tedx-coming-town"><img src="http://www.rnw.nl/data/files/imagecache/list/new_screenshot_president_meron.jpg" alt="Theodor Meron" title="Theodor Meron"  class="imagecache imagecache-list" width="230" height="160" /></a>    <div class="ron-item-meredian">
+      <span class="ron-item-play-logo"></span>      <span class="ron-item-image-location-shadow"></span>
+      <span class="ron-item-image-location"></span>
+      
+      <a href="/english/video/tedx-coming-town" class="real_link" title="Theodor Meron"><span class="ron-item-content-type">Video: </span><span class="ron-item-content-title">TEDx is coming to town</span></a>    </div>
+  </div>
+  
+  <div class="ron-item-content">
+    <h2><a href="/english/video/tedx-coming-town"><span class="ron-item-content-type">Video: </span><span class="ron-item-content-title">TEDx is coming to town</span></a></h2>
+    <p>International peace and justice. Big concepts that RNW is committed to reporting on from a personal perspective, telling stories that make abstract concepts human.</p>
+  
+    <div class="ron-item-media">
+      <ul>
+                
+                
+                  <li class="ron-item-links-view"><a href="/english/video/tedx-coming-town#video">Video</a></li>
+                
+      </ul>    
+    </div>
+    <div class="ron-item-links">
+      <a href="/english/video/tedx-coming-town#comment-form" class="ron-item-react"><span class="ron-item-react-text">Leave a comment</span> <span class="ron-item-react-text-count"> (1 comment)</span></a><a href="/english/video/tedx-coming-town" class="ron-item-read-more">More &gt;</a>    </div>
+  </div>
+</div>
+
+
+<div class="ron-item">
+  <div class="ron-item-image">
+    <a href="/english/article/twitter%E2%80%99s-activist-roots-how-twitter%E2%80%99s-past-shapes-its-use-a-protest-tool"><img src="http://www.rnw.nl/data/files/imagecache/list/images/lead/article/2013/08/teaser-protest-160813.jpg" alt="Protestors in Egypt" title="Protestors in Egypt"  class="imagecache imagecache-list" width="230" height="160" /></a>    <div class="ron-item-meredian">
+            <span class="ron-item-image-location-shadow">Netherlands</span>
+      <span class="ron-item-image-location">Netherlands</span>
+      
+      <a href="/english/article/twitter%E2%80%99s-activist-roots-how-twitter%E2%80%99s-past-shapes-its-use-a-protest-tool" class="real_link" title="Protestors in Egypt"><span class="ron-item-content-type">Article: </span><span class="ron-item-content-title">Twitter’s activist roots: How Twitter’s past shapes its use as a protest tool</span></a>    </div>
+  </div>
+  
+  <div class="ron-item-content">
+    <h2><a href="/english/article/twitter%E2%80%99s-activist-roots-how-twitter%E2%80%99s-past-shapes-its-use-a-protest-tool"><span class="ron-item-content-type">Article: </span><span class="ron-item-content-title">Twitter’s activist roots: How Twitter’s past shapes its use as a protest tool</span></a></h2>
+    <p>Surprised when demonstrators from all over the world took to Twitter as a protest tool? Evan &ldquo;Rabble&rdquo; Henshaw-Plath, member of Twitter&rsquo;s founding team, was not.</p>
+  
+    <div class="ron-item-media">
+      <ul>
+                  <li class="ron-item-links-location"><a href="/english/map/node/896485">Location</a></li>
+                
+                
+                
+      </ul>    
+    </div>
+    <div class="ron-item-links">
+      <a href="/english/article/twitter%E2%80%99s-activist-roots-how-twitter%E2%80%99s-past-shapes-its-use-a-protest-tool#comment-form" class="ron-item-react"><span class="ron-item-react-text">Leave a comment</span> <span class="ron-item-react-text-count"> (1 comment)</span></a><a href="/english/article/twitter%E2%80%99s-activist-roots-how-twitter%E2%80%99s-past-shapes-its-use-a-protest-tool" class="ron-item-read-more">More &gt;</a>    </div>
+  </div>
+</div>
+
+<div class="taxonomy-pager">
+<div class="taxonomy-pager"><div class="item-list"><ul class="pager"><li class="pager-current first">1</li>
+<li class="pager-item"><a href="/english/rnw_fp?page=1&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" title="Go to page 2" class="active">2</a></li>
+<li class="pager-item"><a href="/english/rnw_fp?page=2&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" title="Go to page 3" class="active">3</a></li>
+<li class="pager-item"><a href="/english/rnw_fp?page=3&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" title="Go to page 4" class="active">4</a></li>
+<li class="pager-item"><a href="/english/rnw_fp?page=4&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" title="Go to page 5" class="active">5</a></li>
+<li class="pager-item"><a href="/english/rnw_fp?page=5&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" title="Go to page 6" class="active">6</a></li>
+<li class="pager-item"><a href="/english/rnw_fp?page=6&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" title="Go to page 7" class="active">7</a></li>
+<li class="pager-item"><a href="/english/rnw_fp?page=7&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" title="Go to page 8" class="active">8</a></li>
+<li class="pager-item"><a href="/english/rnw_fp?page=8&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" title="Go to page 9" class="active">9</a></li>
+<li class="pager-ellipsis">…</li>
+<li class="pager-next last"><a href="/english/rnw_fp?page=1&amp;balancer%3A%2F%2Frnw5cluster=balancer.rnw5a" class="active">next</a></li>
+</ul></div></div></div>
+					</div>
+										
+										
+									</div>
+			</div>
+			
+						
+			<div class="grid_5 right bottom">
+				<div id="block-block-146" class="clear-block block block-block lang-en-rnw ">
+	<div class="content"><style type="text/css">
+#block-block-146 { margin: 5px 0px 0px 0px;border:0px solid #006690;margin-left:0px;padding-left:0px;padding:0;}
+#block-block-146 .content {padding:0;width:300px;margin:0;margin-top:10px;}
+</style><p><img src="http://sites.rnw.nl/banners/topbannerSF.gif" /><a href="http://www.lovematters.info" alt="Love Matters"><img src="http://sites.rnw.nl/banners/BAN-Love-Matters.gif" /></a><a href="http://www.rnw.nl/eltoque" alt="El Toque"><img src="http://sites.rnw.nl/banners/BAN-El-Toque.gif" /></a><a href="http://www.rnw.nl/africa/dossier/WhatsUpAfrica" alt="Whats up Africa"><img src="http://sites.rnw.nl/banners/BAN-WUA.gif" /></a><a href="http://regardssurgbagbo.net/" alt="Gbagbo"><img src="http://sites.rnw.nl/banners/BAN-Gbagbo.gif" /></a></p>
+<!-- <iframe width="298" height="102" frameborder="0" scrolling="no" src="http://cdn.sites.radionetherlands.nl/blokken/engels/tswi/indexnew5.html"></iframe> --><!-- <iframe width="298" height="102" frameborder="0" scrolling="no" src="http://cdn.sites.radionetherlands.nl/blokken/engels/tswi/indexnew5.html"></iframe> --></div>
+</div><div id="block-rnw-video_93" class="clear-block block block-rnw lang-en-rnw ">
+  <h2>Video highlights</h2>
+	<div class="content"><div class="view view-107-video view-id-107_video view-display-id-block_1 view-dom-id-2">
+    
+  
+      <div class="attachment attachment-before">
+      <div class="view view-107-video view-id-107_video view-display-id-attachment_1 view-dom-id-2">
+    
+  
+  
+  
+  
+  
+  
+  
+  
+</div>     </div>
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    	<div class="int-video-first">
+		<div class="int-video-first-image">
+			<a href="/english/video/ladies-move-soultana" class="imagecache imagecache-video imagecache-linked imagecache-video_linked"><img src="http://www.rnw.nl/data/files/imagecache/video/teaser-cr-141113.jpg" alt="Moroccan rapper Soultana" title="Moroccan rapper Soultana"  class="imagecache imagecache-video" width="298" height="180" /></a>			<a href="/english/video/ladies-move-soultana" class="int-video-first-link">watch this video</a>			<div class="int-video-first-text">
+				<strong><a href="/english/video/ladies-move-soultana">Ladies on the Move &amp; Soultana</a></strong>
+				
+			</div>
+		</div>
+	</div>
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    	<div class="int-video-item">
+		<div class="int-video-item-image">
+			<a href="/english/video/ladies-move-0" class="imagecache imagecache-discussion imagecache-linked imagecache-discussion_linked"><img src="http://www.rnw.nl/data/files/imagecache/discussion/raja_0.jpg" alt="Raja Felgata on a motorcycle in Morocco" title="Raja Felgata on a motorcycle in Morocco"  class="imagecache imagecache-discussion" width="61" height="61" /></a>			<a href="/english/video/ladies-move-0" class="int-video-item-link">watch this video</a>		</div>
+		<div class="int-video-item-text">
+			<strong><a href="/english/video/ladies-move-0">Ladies on the move</a></strong>
+			<div class="int-video-ankeiler-text">RNW is keen on featuring inspiring women in our target countries, women who...</div>
+		</div>
+	</div>
+  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+    	<div class="int-video-item">
+		<div class="int-video-item-image">
+			<a href="/english/video/what-about-men" class="imagecache imagecache-discussion imagecache-linked imagecache-discussion_linked"><img src="http://www.rnw.nl/data/files/imagecache/discussion/teaser-men.jpg" alt="" title=""  class="imagecache imagecache-discussion" width="61" height="61" /></a>			<a href="/english/video/what-about-men" class="int-video-item-link">watch this video</a>		</div>
+		<div class="int-video-item-text">
+			<strong><a href="/english/video/what-about-men">What about men?</a></strong>
+			<div class="int-video-ankeiler-text">In many countries, men don't stick around to raise their children. This is...</div>
+		</div>
+	</div>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+</div> 
+<div class="more-link">
+  <a href="/english/video-on-rnw">more</a></div>
+</div>
+</div><div id="block-rnw_ads-85823" class="clear-block block block-rnw_ads lang-en-rnw ">
+	<div class="content"><a href="http://nl.sitestat.com/rnw/rnw/s?banner_social_media_eng&amp;ns_type=clickout" title="RNW Social media"><img src="http://www.rnw.nl/data/files/imagecache/rnw_ad/rnw-social-media-banner.gif" alt="" title=""  class="imagecache imagecache-rnw_ad" width="300" height="86" /></a></div>
+</div>			</div>
+      <div class="grid_16 footer">
+        <div class="branding">
+          <a href="/english" title="back to home">Back to Radio Netherlands Worldwide</a>
+        </div>
+        <div class="footer_inner">
+          <div id="block-menu-menu-dutch-dossiers" class="clear-block block block-menu lang-en-rnw ">
+  <h2>Dutch dossiers</h2>
+	<div class="content"><ul class="menu"><li class="leaf first"><a href="http://www.rnw.nl/english/dossier/Church-child-sex-abuse" title="Reports of child sex abuse within the Dutch Catholic Church have emerged following a joint RNW/NRC Handelsblad investigation.">Church child abuse</a></li>
+<li class="leaf"><a href="http://www.rnw.nl/dossier/Prostitution" title="Prostitution in the Netherlands dossier">Prostitution</a></li>
+<li class="leaf"><a href="http://www.rnw.nl/dossier/Same-sex-marriage" title="Since 2001, same-sex marriages have been legal in the Netherlands, and thousands of gay and lesbian couples have entered into marriage. This is a summary of the legal situation affecting same-sex couples.">Same-sex marriage</a></li>
+<li class="leaf last"><a href="http://www.rnw.nl/dossier/Soft-drugs" title="Dossier: The Netherlands&#039; tolerant policy on the use of cannabis has worked well for decades, but is coming under strain due to the free flow of people within the European Union. ">Soft drugs</a></li>
+</ul></div>
+</div><div id="block-menu-menu-en-dossiers" class="clear-block block block-menu lang-en-rnw ">
+  <h2>Special series</h2>
+	<div class="content"><ul class="menu"><li class="leaf first"><a href="http://www.rnw.nl/english/dossier/freespeech" title="The right to speak freely without censorship is subject to limitations in every country, as this series of articles and videos shows.">Free speech</a></li>
+<li class="leaf last"><a href="http://www.rnw.nl/english/dossier/Political%20prisoners" title="The plight of political prisoners in a special dossier featuring videos, radio items and articles.">Political prisoners</a></li>
+</ul></div>
+</div><div id="block-menu-menu-footer-services" class="clear-block block block-menu lang-en-rnw ">
+  <h2>Corporate</h2>
+	<div class="content"><ul class="menu"><li class="leaf first"><a href="http://corporate.rnw.nl/english" title="About Radio Netherlands Worldwide">About us</a></li>
+<li class="leaf"><a href="/english/article/copyright-0" title="">Copyright</a></li>
+<li class="leaf last"><a href="/english/node/3668" title="">Disclaimer</a></li>
+</ul></div>
+</div><div id="block-menu-menu-content" class="clear-block block block-menu lang-en-rnw ">
+  <h2>More from RNW</h2>
+	<div class="content"><ul class="menu"><li class="leaf first"><a href="http://www.rnw.nl/africa" title="">Africa</a></li>
+<li class="leaf"><a href="http://www.rnw.nl/afrique" title="">Afrique</a></li>
+<li class="leaf"><a href="http://www.rnw.nl/arabic" title="">Arabic</a></li>
+<li class="leaf"><a href="http://www.rnw.nl/chinese" title="">Chinese</a></li>
+<li class="leaf last"><a href="http://www.rnw.nl/espanol" title="">Espanol</a></li>
+</ul></div>
+</div><div id="block-menu-menu-footer-corporate" class="clear-block block block-menu lang-en-rnw ">
+  <h2>Key partners</h2>
+	<div class="content"><ul class="menu"><li class="leaf first"><a href="http://www.bbc.co.uk/worldservice/" title="">BBC World Service</a></li>
+<li class="leaf"><a href="http://www.nhk.or.jp/nhkworld/" title="">NHK World</a></li>
+<li class="leaf"><a href="http://www.radioaustralia.net.au/" title="">Radio Australia</a></li>
+<li class="leaf"><a href="http://sverigesradio.se/sida/default.aspx?programid=2054" title="">Radio Sweden</a></li>
+<li class="leaf"><a href="http://www.rcinet.ca/english/" title="">RCI</a></li>
+<li class="leaf"><a href="http://www.english.rfi.fr/" title="">RFI</a></li>
+<li class="leaf"><a href="http://www.swissinfo.ch/" title="">Swissinfo</a></li>
+<li class="leaf last"><a href="http://www.voanews.com/english/news/" title="">VOA</a></li>
+</ul></div>
+</div><div id="block-rnw_smb-0" class="clear-block block block-rnw_smb lang-en-rnw ">
+	<div class="content">
+<a id="rnwsmb-toggle">&nbsp;</a>
+<div id="rnwsmb-bar">
+  <div class="smb-regions">
+                <div class="smb-region smb-region-type-custom">
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-count="horizontal" data-url="http://rnw.eu/iVZ1" data-counturl="http://www.rnw.nl/english/rnw_fp">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>      </div>
+                <div class="smb-region-seperator">&nbsp;</div>
+            <div class="smb-region smb-region-type-custom">
+        <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>      </div>
+                <div class="smb-region-seperator">&nbsp;</div>
+            <div class="smb-region smb-region-type-share">
+        <div id="rnwsmb-share-element">
+<a id="rnwsmb-share-toggle">Share</a>
+
+<div id="rnwsmb-shares-list" class="rnwsmb-hidden">
+<div id="rnwsmb-shares-title">Share:</div>
+<div id="rnwsmb-shares-list-close">&nbsp;</div>
+<div class="rnwsmb-shares-content">
+
+  <div class="share-element">
+    <div class="share-icon"><a href="http://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow"><img src="http://www.rnw.nl/data/files/rnwsmb/facebook.png" alt="Facebook" title="Facebook" width="24" height="24" /></a></div><div class="share-link"><a href="http://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow" target="share">Facebook</a></div>  </div>
+    <div class="share-element">
+    <div class="share-icon"><a href="http://api.addthis.com/oexchange/0.8/forward/wordpress/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow"><img src="http://www.rnw.nl/data/files/rnwsmb/wordpress.png" alt="Wordpress" title="Wordpress" width="24" height="24" /></a></div><div class="share-link"><a href="http://api.addthis.com/oexchange/0.8/forward/wordpress/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow" target="share">Wordpress</a></div>  </div>
+    <div class="share-element">
+    <div class="share-icon"><a href="http://api.addthis.com/oexchange/0.8/forward/google/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow"><img src="http://www.rnw.nl/data/files/rnwsmb/google.png" alt="Google" title="Google" width="24" height="24" /></a></div><div class="share-link"><a href="http://api.addthis.com/oexchange/0.8/forward/google/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow" target="share">Google</a></div>  </div>
+  <div class="clear">&nbsp;</div>  <div class="share-element">
+    <div class="share-icon"><a href="http://api.addthis.com/oexchange/0.8/forward/hyves/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow"><img src="http://www.rnw.nl/data/files/rnwsmb/hyves.png" alt="Hyves" title="Hyves" width="24" height="24" /></a></div><div class="share-link"><a href="http://api.addthis.com/oexchange/0.8/forward/hyves/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow" target="share">Hyves</a></div>  </div>
+    <div class="share-element">
+    <div class="share-icon"><a href="http://api.addthis.com/oexchange/0.8/forward/blogger/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow"><img src="http://www.rnw.nl/data/files/rnwsmb/blogger_0.png" alt="Blogger" title="Blogger" width="24" height="24" /></a></div><div class="share-link"><a href="http://api.addthis.com/oexchange/0.8/forward/blogger/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow" target="share">Blogger</a></div>  </div>
+    <div class="share-element">
+    <div class="share-icon"><a href="http://api.addthis.com/oexchange/0.8/forward/reddit/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow"><img src="http://www.rnw.nl/data/files/rnwsmb/reddit.gif" alt="Reddit" title="Reddit" width="24" height="24" /></a></div><div class="share-link"><a href="http://api.addthis.com/oexchange/0.8/forward/reddit/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow" target="share">Reddit</a></div>  </div>
+  <div class="clear">&nbsp;</div>  <div class="share-element">
+    <div class="share-icon"><a href="http://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow"><img src="http://www.rnw.nl/data/files/rnwsmb/twitter.png" alt="Twitter" title="Twitter" width="24" height="24" /></a></div><div class="share-link"><a href="http://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow" target="share">Twitter</a></div>  </div>
+    <div class="share-element">
+    <div class="share-icon"><a href="http://api.addthis.com/oexchange/0.8/forward/tumblr/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow"><img src="http://www.rnw.nl/data/files/rnwsmb/tumblr.gif" alt="Tumblr" title="Tumblr" width="24" height="24" /></a></div><div class="share-link"><a href="http://api.addthis.com/oexchange/0.8/forward/tumblr/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow" target="share">Tumblr</a></div>  </div>
+    <div class="share-element">
+    <div class="share-icon"><a href="http://api.addthis.com/oexchange/0.8/forward/digg/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow"><img src="http://www.rnw.nl/data/files/rnwsmb/digg.gif" alt="Digg" title="Digg" width="24" height="24" /></a></div><div class="share-link"><a href="http://api.addthis.com/oexchange/0.8/forward/digg/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow" target="share">Digg</a></div>  </div>
+  <div class="clear">&nbsp;</div>  <div class="share-element">
+    <div class="share-icon"><a href="http://api.addthis.com/oexchange/0.8/forward/linkedin/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow"><img src="http://www.rnw.nl/data/files/rnwsmb/linkedin.png" alt="LinkedIn" title="LinkedIn" width="24" height="24" /></a></div><div class="share-link"><a href="http://api.addthis.com/oexchange/0.8/forward/linkedin/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow" target="share">LinkedIn</a></div>  </div>
+    <div class="share-element">
+    <div class="share-icon"><a href="http://api.addthis.com/oexchange/0.8/forward/delicious/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow"><img src="http://www.rnw.nl/data/files/rnwsmb/delicious.gif" alt="Delicious" title="Delicious" width="24" height="24" /></a></div><div class="share-link"><a href="http://api.addthis.com/oexchange/0.8/forward/delicious/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow" target="share">Delicious</a></div>  </div>
+    <div class="share-element">
+    <div class="share-icon"><a href="http://api.addthis.com/oexchange/0.8/forward/stumbleupon/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow"><img src="http://www.rnw.nl/data/files/rnwsmb/stumbleupon.gif" alt="StumbleUpon" title="StumbleUpon" width="24" height="24" /></a></div><div class="share-link"><a href="http://api.addthis.com/oexchange/0.8/forward/stumbleupon/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow" target="share">StumbleUpon</a></div>  </div>
+  <div class="clear">&nbsp;</div>  <div class="share-element">
+    <div class="share-icon"><a href="http://api.addthis.com/oexchange/0.8/forward/email/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow"><img src="http://www.rnw.nl/data/files/rnwsmb/email.gif" alt="Email" title="Email" width="24" height="24" /></a></div><div class="share-link"><a href="http://api.addthis.com/oexchange/0.8/forward/email/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow" target="share">Email</a></div>  </div>
+    <div class="share-element">
+    <div class="share-icon"><a href="http://api.addthis.com/oexchange/0.8/forward/google_plusone_share/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow"><img src="http://www.rnw.nl/data/files/rnwsmb/googleplus1.png" alt="Google +1" title="Google +1" width="24" height="24" /></a></div><div class="share-link"><a href="http://api.addthis.com/oexchange/0.8/forward/google_plusone_share/offer?url=http://www.rnw.nl/english/rnw_fp" rel="nofollow" target="share">Google +1</a></div>  </div>
+  
+</div>
+
+</div>
+</div>      </div>
+                <div class="smb-region-seperator">&nbsp;</div>
+            <div class="smb-region smb-region-type-custom">
+        <a href="/english/article/rnwnl-has-gone-social"><img src="http://www.rnw.nl/sites/all/themes/wereldomroep/images/smb/questionmark_icon.png" alt="" /></a>      </div>
+      </div>
+</div></div>
+</div>        </div>
+      </div>
+      <div class="grid_16 slogan" dir="ltr">
+          &nbsp;       </div>
+    </div>
+    </div>
+    <!-- Begin front tabs -->
+<script type="text/javascript">
+var tab_content = new Array();
+tab_content[1] = '<div id="block-rnw_fp-mustcarry"><div class="mustcarry-container"><div class="mustcarryitem boxgrid captionfull">  <div class="mustcarryimage">    <a href="/english/article/brazil%E2%80%99s-plan-store-its-data-locally-threatens-global-internet-experts-say"><img src="http://www.rnw.nl/data/files/imagecache/must_carry/images/lead/article/2013/11/000_was7938459-v2.jpg" alt="Rousseff addresses the UN General Assembly on US spying practices" title="Rousseff addresses the UN General Assembly on US spying practices"  class="imagecache imagecache-must_carry" width="650" height="330" /></a>    <div class="mustcarrymeridian meridian-none" title="Rousseff addresses the UN General Assembly on US spying practices">      <a href="/english/article/brazil%E2%80%99s-plan-store-its-data-locally-threatens-global-internet-experts-say"><img src="http://www.rnw.nl/data/files/imagecache/must_carry/images/lead/article/2013/11/000_was7938459-v2.jpg" alt="Rousseff addresses the UN General Assembly on US spying practices" title="Rousseff addresses the UN General Assembly on US spying practices"  class="imagecache imagecache-must_carry" width="650" height="330" /></a>                        <div class="globeitem move_left">            <a href="/english/map/node/900180">Map</a>          </div>                    <div class="location-shadow">        Hilversum, Netherlands      </div>      <div class="location">        Hilversum, Netherlands      </div>    </div>    <div class="mustcarrytext cover boxcaption">      <h1><a href="/english/article/brazil%E2%80%99s-plan-store-its-data-locally-threatens-global-internet-experts-say">Brazil’s plan to store its data locally threatens the global Internet, experts say</a></h1>      Brazilian President Dilma Rousseff, a staunch opponent of US mass surveillance, garnered praise for her initiatives against mass Internet monitoring on the international stage. But a plan included in a national    </div>  </div></div></div></div>';
+tab_content[38] = '<div class="view"><div class="view-content"><table class="views-view-grid"> <tbody><tr><td><div class="views-field-field-body-image-fid"><img src="http://www.rnw.nl/data/files/imagecache/dossier_front_block/free-speech-33.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://www.rnw.nl/english/dossier/freespeech">Free speech</a></span></td><td><div class="views-field-field-body-image-fid"><img src="http://www.rnw.nl/data/files/imagecache/dossier_front_block/icon_democracy.gif" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://rnw.nl/english/dossier/democracyandgoodgovernance">Democracy and Good Governance</a></span></td><td><div class="views-field-field-body-image-fid"><img src="http://www.rnw.nl/data/files/imagecache/dossier_front_block/images/lead/act-misbruik-in-de-kerk.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://www.rnw.nl/english/dossier/Church-child-sex-abuse">RC church child abuse</a></span></td></tr><tr><td><div class="views-field-field-body-image-fid"><img src="http://www.rnw.nl/data/files/imagecache/dossier_front_block/images/lead/elephant-33.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://www.rnw.nl/english/dossier/south-asia-wired">South Asia Wired</a></span></td><td><div class="views-field-field-body-image-fid"><img src="http://www.rnw.nl/data/files/imagecache/dossier_front_block/images/lead/political-prisoners-33.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://www.rnw.nl/english/dossier/Political%20prisoners">Political prisoners</a></span></td><td><div class="views-field-field-body-image-fid"><img src="http://www.rnw.nl/data/files/imagecache/dossier_front_block/images/lead/exp-geld-en-zekerheid_0.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://www.rnw.nl/english/dossier/microfinance">Microfinance</a></span></td></tr><tr><td><div class="views-field-field-body-image-fid"><img src="http://www.rnw.nl/data/files/imagecache/dossier_front_block/images/lead/love-matters-33_0.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://www.lovematters.info/about-love-matters">Love Matters</a></span></td></tbody></table></div></div>';
+tab_content[40] = '<div id="block-rnw_fp-mustcarry"><div class="view view-2010-tabs-front view-id-2010_tabs_front view-display-id-block_2 view-dom-id-8">              <div class="view-content">      <table class="views-view-grid">  <tbody>                <tr class="row-1 row-first">                  <td class="col-1">                <div class="views-field-field-lead-image-fid">                <span class="field-content"><a href="/english/video/ladies-move-soultana" class="imagecache imagecache-discussion imagecache-linked imagecache-discussion_linked"><img src="http://www.rnw.nl/data/files/imagecache/discussion/teaser-cr-141113.jpg" alt="Moroccan rapper Soultana" title="Moroccan rapper Soultana"  class="imagecache imagecache-discussion" width="61" height="61" /></a></span>  </div>    <div class="views-field-title">                <span class="field-content"><a href="/english/video/ladies-move-soultana">Ladies on the Move &amp; Soultana</a></span>  </div>    <div class="views-field-body">                <span class="field-content"><a href="/english/view">Ladies on the move is a video project produced by RNW journalists Raja Felgata en Margo de Haas....</a></span>  </div>          </td>                  <td class="col-2">                <div class="views-field-field-lead-image-fid">                <span class="field-content"><a href="/english/video/ladies-move-0" class="imagecache imagecache-discussion imagecache-linked imagecache-discussion_linked"><img src="http://www.rnw.nl/data/files/imagecache/discussion/raja_0.jpg" alt="Raja Felgata on a motorcycle in Morocco" title="Raja Felgata on a motorcycle in Morocco"  class="imagecache imagecache-discussion" width="61" height="61" /></a></span>  </div>    <div class="views-field-title">                <span class="field-content"><a href="/english/video/ladies-move-0">Ladies on the move</a></span>  </div>    <div class="views-field-body">                <span class="field-content"><a href="/english/view">RNW is keen on featuring inspiring women in our target countries, women who make a difference, who...</a></span>  </div>          </td>              </tr>                <tr class="row-2">                  <td class="col-1">                <div class="views-field-field-lead-image-fid">                <span class="field-content"><a href="/english/video/what-about-men" class="imagecache imagecache-discussion imagecache-linked imagecache-discussion_linked"><img src="http://www.rnw.nl/data/files/imagecache/discussion/teaser-men.jpg" alt="" title=""  class="imagecache imagecache-discussion" width="61" height="61" /></a></span>  </div>    <div class="views-field-title">                <span class="field-content"><a href="/english/video/what-about-men">What about men?</a></span>  </div>    <div class="views-field-body">                <span class="field-content"><a href="/english/view">In many countries, men don\'t stick around to raise their children. This is a missed opportunity....</a></span>  </div>          </td>                  <td class="col-2">                <div class="views-field-field-lead-image-fid">                <span class="field-content"><a href="/english/video/behind-scenes-tedx-hague-academy" class="imagecache imagecache-discussion imagecache-linked imagecache-discussion_linked"><img src="http://www.rnw.nl/data/files/imagecache/discussion/tedx.jpg" alt="Vithika Yadav, one of the speakers at the TEDx Hague Academy" title="Vithika Yadav, one of the speakers at the TEDx Hague Academy"  class="imagecache imagecache-discussion" width="61" height="61" /></a></span>  </div>    <div class="views-field-title">                <span class="field-content"><a href="/english/video/behind-scenes-tedx-hague-academy">Behind the scenes at TEDx Hague Academy</a></span>  </div>    <div class="views-field-body">                <span class="field-content"><a href="/english/view">Ever heard of TED Talks - the ones where one inspiring person shares a big idea and it\'s shared on...</a></span>  </div>          </td>              </tr>                <tr class="row-3 row-last">                  <td class="col-1">                <div class="views-field-field-lead-image-fid">                <span class="field-content"><a href="/english/video/cuban-blogger-tackles-dutch-foreign-minister" class="imagecache imagecache-discussion imagecache-linked imagecache-discussion_linked"><img src="http://www.rnw.nl/data/files/imagecache/discussion/bloquero_cuba_holanda650_0.jpg" alt="Cuban blogger Carlos Alberto Pérez Benítez speaks with Dutch foreign minister" title="Cuban blogger Carlos Alberto Pérez Benítez speaks with Dutch foreign minister"  class="imagecache imagecache-discussion" width="61" height="61" /></a></span>  </div>    <div class="views-field-title">                <span class="field-content"><a href="/english/video/cuban-blogger-tackles-dutch-foreign-minister">Cuban blogger tackles Dutch foreign minister</a></span>  </div>    <div class="views-field-body">                <span class="field-content"><a href="/english/view">Bloggers from various countries have been invited by the Dutch government to take part in the...</a></span>  </div>          </td>                  <td class="col-2">                <div class="views-field-field-lead-image-fid">                <span class="field-content"><a href="/english/video/international-bloggers-visit-rnw" class="imagecache imagecache-discussion imagecache-linked imagecache-discussion_linked"><img src="http://www.rnw.nl/data/files/imagecache/discussion/bloggers_visit_rnw.jpg" alt="International bloggers visit RNW" title="International bloggers visit RNW"  class="imagecache imagecache-discussion" width="61" height="61" /></a></span>  </div>    <div class="views-field-title">                <span class="field-content"><a href="/english/video/international-bloggers-visit-rnw">International bloggers visit RNW</a></span>  </div>    <div class="views-field-body">                <span class="field-content"><a href="/english/view">A group of international bloggers spent a day at RNW earlier this week. They are in the Netherlands...</a></span>  </div>          </td>              </tr>      </tbody></table>    </div>            </div> </div>';
+tab_content[42] = '<div class="view"><div class="view-content"><table class="views-view-grid"> <tbody><tr><td><div class="views-field-field-body-image-fid"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/dossier_front_block/images/lead/pro-programmagids.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://www.rnw.nl/english/guide">Listening guide</a></span></td><td><div class="views-field-field-body-image-fid"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/dossier_front_block/images/lead/satellite-33.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://www.rnw.nl/english/article/sign-our-weekly-media-network-newsletter">Sign up for our Media Network Newsletter</a></span></td><td><div class="views-field-field-body-image-fid"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/dossier_front_block/doggy.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://www.rnw.nl/english/article/sign-our-email-news-bulletin">Sign up for our email news bulletin</a></span></td></tr><tr><td><div class="views-field-field-body-image-fid"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/dossier_front_block/nl-nl-dvd.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://www.rnw.nl/english/article/sign-our-euro-hit-40-newsletter">Subscribe to the Euro Hit 40 Newsletter - Europe\'s No. 1 chart show</a></span></td><td><div class="views-field-field-body-image-fid"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/dossier_front_block/images/lead/com-wereldkrant_0.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://www.rnw.nl/english/article/subscribe-rnws-dutch-press-review">Subscribe to RNW\'s Dutch Press Review</a></span></td><td><div class="views-field-field-body-image-fid"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/dossier_front_block/images/lead/pro-nieuwslijn_magazine_0.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://corporate.rnw.nl/english/who-are-we">About Radio Netherlands Worldwide</a></span></td></tr><tr><td><div class="views-field-field-body-image-fid"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/dossier_front_block/images/lead/ser-uitzending-gemist-podcast_0.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://www.rnw.nl/english/article/times-and-frequencies">Times and frequencies</a></span></td><td><div class="views-field-field-body-image-fid"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/dossier_front_block/images/lead/pro-klare-taal_2.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://www.rnw.nl/english/article/copyright-0">Copyright</a></span></td><td><div class="views-field-field-body-image-fid"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/dossier_front_block/images/lead/exp-expatkaart_0.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://www.rnw.nl/english/info/disclaimer">Disclaimer</a></span></td></tr><tr><td><div class="views-field-field-body-image-fid"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/dossier_front_block/images/lead/pro-tijdgeesten_1.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://corporate.rnw.nl/english/article/origins">History of Radio Netherlands Worldwide</a></span></td><td><div class="views-field-field-body-image-fid"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/dossier_front_block/images/lead/com-facebook_0.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://www.facebook.com/radionetherlands">Join us on Facebook</a></span></td><td><div class="views-field-field-body-image-fid"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/dossier_front_block/images/lead/com-twitter_0.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://twitter.com/RNW">Follow us on Twitter</a></span></td></tr><tr><td><div class="views-field-field-body-image-fid"><img src="http://cdn.radionetherlands.nl/data/files/imagecache/dossier_front_block/images/lead/youtube-33.jpg" alt="" title=""  class="imagecache imagecache-dossier_front_block" width="33" height="33" /></div><span class="field-content"><a href="http://www.youtube.com/user/RnW">Visit our YouTube channel</a></span></td></tbody></table></div></div>';
+</script>
+<script type="text/javascript" src="http://www.rnw.nl/data/files/js/js_370832949aef89ed36bdd545c85abec1.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+    document.write(unescape("%3Cscript src='https://rpxnow.com/openid/v2/widget' type='text/javascript'%3E%3C/script%3E"));
+  
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+      <!-- Begin RPX Sign In from JanRain. Visit http://www.rpxnow.com/ -->
+    RPXNOW.token_url = "http://www.rnw.nl/english/rpx/end_point?destination=rnw_fp";
+  RPXNOW.realm = "rnw.rpxnow.com";
+  RPXNOW.overlay = true;
+  RPXNOW.language_preference = "en";
+  RPXNOW.flags = "delay_domain_check";
+  RPXNOW.ssl = true;
+  <!-- End RPX Sign In -->
+  
+//--><!]]>
+</script>
+
+  </body>
+</html>
+

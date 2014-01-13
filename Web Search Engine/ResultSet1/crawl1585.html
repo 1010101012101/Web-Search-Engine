@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" xmlns="http://www.w3.org/1999/xhtml"> <!--<![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	<link href="/favicon.ico" type="image/x-icon" rel="icon" /><link href="/favicon.ico" type="image/x-icon" rel="shortcut icon" />	<title>World Journalism Institute - Homepage</title>
+
+	
+	<link rel="stylesheet" type="text/css" href="/css/base.css" />
+	<link rel="stylesheet" type="text/css" href="/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="/css/appleDefault.css" />	<link rel="stylesheet" type="text/css" href="/css/homepage.css" />
+	<link rel="stylesheet" type="text/css" href="/js/lib/jquery/jquery.superfish/jquery.superfish.css" />
+
+	
+	<script type="text/javascript" src="/js/lib/swfobject.js"></script>
+	<script type="text/javascript" src="/js/lib/mediaplayer/mediaplayer.js"></script>
+	<script type="text/javascript" src="/js/lib/applesearch.js"></script>
+	<script type="text/javascript" src="/js/lib/jquery/jquery-1.4.min.js"></script>
+	<script type="text/javascript" src="/js/lib/jquery/jquery.bgiframe.js"></script>
+	<script type="text/javascript" src="/js/lib/jquery/jquery.superfish/jquery.superfish.js"></script>
+	<script type="text/javascript" src="/js/lib/jquery/jquery.qtip.js"></script>
+	<script type="text/javascript" src="/js/lib/jquery/jquery.form.js"></script>
+	<script type="text/javascript" src="/js/lib/jquery/jquery.validate.js"></script>
+	<script type="text/javascript" src="/js/lib/jquery/jquery.impromptu.js"></script>
+	<script type="text/javascript" src="/js/lib/jquery/jquery.columnize.js"></script>
+	<script type="text/javascript" src="/js/lib/jquery/jquery.tools/jquery.tools.min.js"></script>
+	<script type="text/javascript" src="/js/app.js"></script>
+	<script type="text/javascript" src="/js/homepage/index.js"></script>
+
+	
+	<!-- dummy stylesheet - href to be swapped  - it is selected by the id in the applesearch.js file-->
+	<link rel="stylesheet" type="text/css" href="/css/dummy.css" id="dummy_css"  />
+	<script type="text/javascript">
+		window.onload = function () { applesearch.init(); }
+	</script>
+
+	<!--[if IE]>
+<style type="text/css"> 
+	@import url(/app/webroot/css/ie.css);
+</style>
+<![endif]-->
+
+<!--[if IE 6]>
+<style type="text/css"> 
+	@import url(/app/webroot/css/ie6.css);
+</style>
+<script src="/js/lib/DD_belatedPNG.js"></script>
+<script>DD_belatedPNG.fix('.transImg, #sectionHeaderWrapper, #sectionHeaderInnerWrapper, #applicationDetails, a.headline');</script>
+<![endif]-->
+
+<!--[if IE 7]>
+<style type="text/css"> 
+	@import url(/app/webroot/css/ie7.css);
+</style>
+<![endif]-->
+
+	<!--[if IE]>
+	<style type="text/css">@import url(/css/ie.css);</style>
+	<![endif]-->
+
+</head>
+<body>
+
+  <div id="headerWrapper">
+	<div id="header">
+		<a href="/"><img src="/img/logo2.png" width="464" height="111" alt="Logo"></a>
+
+		<div id="headerLinks">
+			<div id="dialogueAnchor">
+				<div class="relatedImg"><a href="/forum" id="alumniLoginLink"><img src="/img/b_alumniLogin2.png" width="123" height="33" alt="Alumni Login"></a></div>
+				<div class="relatedImg"><a href="/programs"><img src="/img/b_apply.png" width="138" height="33" alt="Apply"></a></div>
+				<div class="relatedImg"><a href="/pages/view/contact" id="joinMailingListLink"><img src="/img/b_contactUs.png" width="123" height="33" alt="Contact Us"></a></div>
+				<div class="relatedImg"><a href="/pages/view/giving"><img src="/img/b_giving.png" width="138" height="33" alt="Giving"></a></div>
+			</div><!-- /#dialogueAnchor -->
+		</div><!-- /#headerLinks -->
+
+
+		<div id="alumniLogin" class="headerDialogueWrapper">
+			<div class="headerDialogue">
+
+				<form style="width:240px;" id="UserIndexForm" method="post" action="/forum/users/login" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST" /></div>										<div class="dialogueTop">
+						<a href="#" class="headerDialogueBoxCloseLink"><img class="transImg" src="/img/headerDialogueBoxX.png" width="23" height="23" alt="HeaderDialogueBoxX"/></a>
+						<p class="dialogueHeader">Student &amp; Alumni Login</p>
+																		            <input id="UserUsername" name="data[User][username]" type="text" value="USERNAME" onfocus="if (this.value == 'USERNAME') {this.value = '';}" onblur="if (this.value == '') {this.value = 'USERNAME';}"/>
+            <input id="UserPassword"type="password" name="data[User][password]" value="PASSWORD" onfocus="if (this.value == 'PASSWORD') {this.value = '';}" onblur="if (this.value == '') {this.value = 'PASSWORD';}"/>
+            <input type="hidden" name="data[User][auto_login]" value="0" id="UserAutoLogin" />
+          </div>
+					<div class="dialogueBtm">
+						<input id="loginSubmit" class="hoverButton" type="image" src="/img/b_loginGreen.png" style="border:none; float:right;" />
+						<p><a href="/forum/users/forgot">Forgot your password?</a></p>
+					</div><!-- /.dialogueBtm -->
+
+				</form>
+
+			</div><!-- /.headerDialogue -->
+		</div><!-- /#alumniLogin -->
+
+
+		<div id="joinMailingList" class="headerDialogueWrapper">
+			<div class="headerDialogue">
+				<form id="joinMail" style="width:240px" method="post" action="/users/login">
+				<div class="dialogueTop">
+					<a href="#" class="headerDialogueBoxCloseLink"><img class="transImg" src="/img/headerDialogueBoxX.png" width="23" height="23" alt="HeaderDialogueBoxX"/></a>
+					<p class="dialogueHeader">Join the WJI Mailing List</p>
+					<input id="name" name="data[User][name]" type="text" maxlength="20" value="NAME" onfocus="if (this.value == 'NAME') {this.value = '';}" onblur="if (this.value == '') {this.value = 'NAME';}" />
+					<input id="email" type="text" name="data[User][email]" type="text" value="EMAIL" onfocus="if (this.value == 'EMAIL') {this.value = '';}" onblur="if (this.value == '') {this.value = 'EMAIL';}"/>
+				</div>
+				<div class="dialogueBtm">
+					<input id="submit" class="hoverButton" type="image" src="/img/b_joinNow	Green.png" style="border:none; float:right;" />
+					<p><a href="#">Privacy Policy</a></p>
+				</div><!-- /.dialogueBtm -->
+			</form>
+			</div><!-- /.headerDialogue -->
+		</div><!-- /#joinMailingList -->
+
+
+	
+	<div id="roundedSearch">
+	<form id="search" action="/search" method="post">
+		<!-- the spans hold the front and back rounded background images -->
+		<span class="searchStart"></span>
+	    <input id="searchText" class="searchField" type="search" name="data[Search][term]" value="Search"/>
+	  <span id="searchIcon" class="searchEnd"></span>
+	</form>
+</div>
+
+
+
+
+
+	</div> <!-- /header -->
+</div> <!-- /#headerWrapper -->
+	<div id="content">
+			<script language="javascript" type="text/javascript">
+//<![CDATA[ 
+	$(document).ready(function() {
+
+
+		$("ul#topLevel li ul li:last").addClass("btmSubItem");
+
+
+	});
+//]]>
+</script>
+
+
+
+
+<div id="navbarWrapper">
+	<div id="navbar" >
+
+	<ul id="topLevel" class="sf-menu">
+		
+		<li>
+			<a class=" here " href="/">HOME</a>
+			<ul>
+							</ul>
+		</li>
+		
+		<li>
+			<a class="" href="/pages/view/about">About WJI</a>
+			<ul>
+				<li><a href="/pages/view/about">Our Mission</a></li>
+<li><a href="/pages/view/history">History</a></li>
+<li><a href="http://worldji.com/pages/view/pastprograms">Past Programs</a></li>
+<li><a href="/teachers">Teachers</a></li>
+<li><a href="/speakers">Speakers</a></li>
+<li><a href="/staff">Staff</a></li>
+<li><a href="/gallery">Photo Galleries</a></li>
+<!-- <li><a href="/publications">Publications</a></li> -->
+<li><a href="/faqs">FAQs</a></li>
+<li><a href="/pages/view/mccandlish-phillips-chair-of-journalism">McCandlish Phillips Chair of Journalism</a></li>
+<li><a href="/pages/view/francis-a-schaeffer-chair-of-apologetics">Francis Schaeffer Chair of Apologetics</a></li>
+<li><a href="/pages/view/giving">Giving</a></li>
+<li><a href="http://worldji.com//pages/view/contact">Contact Us</a></li>
+<li class="navbottom"></li>
+
+			</ul>
+		</li>
+
+		<li>
+			<a href="/programs" class="" >Programs</a>
+			<ul>
+				<li><a href="/programs/view/51">2013 Asheville Convergence Course</a></li><li>
+<li><a href="/programs/view/49">2012 Mid-Career Course</a></li><li>
+<li><a href="/programs/view/45">2013 Amy Foundation Writing Awards</a><li><li>
+<li><a href="/programs/view/47">2012 Top Grad Conference</a></li>
+<li><a href="/programs/view/43">2013 Mid-Career Workshop</a><il><li>
+<li><a href="/programs/index/internationalprogram">Belz International Media Program</a></li>
+<li><a href="/programs/view/41">Convention Booths</a></li>
+<li><a href="/monographs">Monographs</a></li>
+<li><a href="http://worldji.com/pages/view/pastprograms">Past Programs</a></li>
+<li class="navbottom"></li>
+			</ul>
+		</li>
+
+		<li>
+			<a class="" href="/news">Newsroom</a>
+		</li>
+
+		<li class=" topLevel">
+			<a class="" href="#">Resources</a>
+			<ul>
+				<li><a href="/audiovideo">Multimedia</a></li>
+<li><a href="http://itunes.apple.com/us/podcast/world-journalism-institutes/id429711604">Podcast</a></li>
+<li><a href="/industry_events">Professional Events</a></li>
+<li><a href="/bookstore">Bookstore</a></li>
+<li><a href="/articles">WJI in the News</a></li>
+<li><a href="/monographs">Monographs</a></li>
+<li><a href="/links">Links</a></li>
+<li><a href="http://www.worldji.com/pages/view/hotels">Hotels</a></li>
+<li><a href="http://www.admin.worldji.com/">Admin Log-In</a></li>
+<li class="navbottom"></li>			</ul>
+		</li>
+		
+		<li class="">
+			<a class="" href="/featured_alumni">Alumni</a>
+			<ul>
+				<li><a href="/featured_alumni">Featured Alumni</a></li>
+<li><a href="/pages/view/where-our-alumni-are">Where Our Alumni Are</a></li>
+<li><a href="/photo_galleries">Photo Galleries</a></li>
+<li><a href="/forum/users/login">Alumni Login</a></li>
+<!-- <li><a href="/alumni_info/update">Update Your Info</a></li> -->
+<li><a href="/pages/view/join-list-serv">Join Google Group</a></li>
+<li><a href="/pages/view/write-wji-times-observer">Write for WJI Times Observer</a></li>
+<li><a href="/pages/view/social-networks">Social Networks</a></li>
+<li class="navbottom"></li>			</ul>
+		</li>
+		
+		<li>
+			<a class="" href="/discuss">Discussion Board</a>
+					</li>
+
+		<!-- <li>
+					<a class="" href="http://bobby2.wordpress.com/">Blog</a>
+			</li> -->
+	</ul>
+
+
+
+	</div> <!-- /#nav -->
+</div><!-- /#navbarWrapper -->
+				<div id="sectionHeaderWrapper">
+	<div id="sectionHeaderInnerWrapper">
+		<div id="sectionHeaderInfo">
+
+				<div id='headlines'>
+					<p>Latest News<a href="/news">See All News</a></p>
+					<ul>
+												<li><div><a class="headline" href="/news/view/169"><span class="dateline">August 8, 2013<br></span>WJI Buzz - Aldrich, Branch, Grafe,  Robertson, Stauf</a> </div></li>
+												<li><div><a class="headline" href="/news/view/170"><span class="dateline">August 8, 2013<br></span>WJI Buzz - Benedetti, Speers, Taddeo, Willett, Wong, </a> </div></li>
+												<li><div><a class="headline" href="/news/view/171"><span class="dateline">August 8, 2013<br></span>WJI Buzz - Lee, Kolz, Gilman</a> </div></li>
+												<li><div><a class="headline" href="/news/view/168"><span class="dateline">May 22, 2013<br></span>WJI Buzz - Bareebe, Cheng, McDill, Owens, Willard</a> </div></li>
+											</ul>
+				</div><!-- /#headlines -->
+
+
+
+
+				<div id="featuredPrograms">
+
+          <ul id="featuredProgramsNav">
+                          <li><a href="#featuredProgram_60"></a></li>
+						          </ul>
+
+
+					<div id="featuredProgramItems" class="panes">
+
+												<div id="featuredProgram_60" class="programContainer item pane">
+							<!-- <p class="programSuperText">New York Course 09:</p>  -->
+							<a href="/programs/view/60">
+								<span class="programTitle">Maximizing your Journalistic Opportunities: Backpack Journalism In a Digital Age </span>
+																<span class="programDates">May 18, 2014 - May 31, 2014</span>
+																								<span class="introText">
+	This course has four weeks of pre-course writing, two weeks of intensive classroom training in Asheville, N.C., and&amp;nbsp;five weeks of post-course writing.
+</span>
+
+																	<!-- <a href="/programs/apply/"><img class="transImg" src="/img/b_applyHome.png" width="195" height="45" alt="B ApplyHome"></a> -->
+																<span class="moreInfo">Click for more info</span>
+
+								<span style="clear:left; display:block;">&nbsp;</span>
+							</a>
+						</div><!-- /.programContainer -->
+						
+					</div><!-- /.featuredProgramItems -->
+
+				</div><!-- /#featuredPrograms -->
+
+
+
+
+
+
+
+				<div class="clear"></div>
+
+		</div><!-- /#sectionHeaderInfo -->
+	</div><!-- /#sectionHeaderInnerWrapper -->
+</div><!-- /#sectionHeaderWrapper -->
+
+
+
+
+<div id="belowthetabs">
+<div id="mainWrapper">
+	<div id="main">
+
+	<div id="col1">
+		<h2>WJI Multimedia</h2>
+
+		<div id="featuredResourcesWrapper">
+
+			<div id="featuredResourcesNav"></div>
+
+			<div id="featuredResources">
+
+				<div id="featuredResourceItems" class="items">
+
+					
+<div class="resourceContainer item">
+	<table><tr>
+		<td class="mediaPlayer">
+							<iframe width="260" height="173" src="//www.youtube.com/embed/nR-O0rU11F8" frameborder="0" allowfullscreen></iframe>					</td>
+		<td class="resourceMeta">
+			<p class="resourceTitle">VIDEO: Asheville  Course 2013</p>
+			<p></p>
+			<div><a href="/audiovideo" class="moreLink">More</a></div>
+	</td>
+	</tr></table>
+</div><!-- /.resourceContainer -->
+
+				</div><!-- /#featuredResourceItems -->
+
+			</div><!-- /#featuredResources -->
+
+		</div><!-- /#featuredResourcesWrapper -->
+
+		<h2>WJI People</h2>
+
+		<div id="featuredAlumniWrapper">
+
+			<div id="featuredAlumniNav"></div>
+
+			<div id="featuredAlumni">
+
+				<div id="featuredAlumniItems" class="items">
+										<div class="alumniContainer item">
+						<table><tr>
+							<td>
+																	<a href="/people/view/240"><img src="http://assets.worldji.com//people_images/240_4d30784c-56dc-4fdc-a05f-7ecc45a7bdbf_sm.jpg" width="120" height="120" alt="Nick Eicher"></a>
+															</td>
+							<td style="padding-left:10px; float:left; width:400px;">
+								<h1><a href="/people/view/240">Nick Eicher</a></h1>
+								<p><p>
+	Nick Eicher is executive producer of WORLD Radio. He has been a broadcast and print journalist for over three decades. He has served WORLD magazine as a writer and reporter, editor,...</p><span class="moretext"><a href="/people/view/240">MORE About Nick Eicher ></a></span></p>
+								<!-- MORE button
+									<div><a href="/people/view/240" class="moreLink">More</a></div>
+								-->
+							</td>
+						</tr></table>
+					</div>
+										<div class="alumniContainer item">
+						<table><tr>
+							<td>
+																	<a href="/people/view/57"><img src="http://assets.worldji.com//people_images/57_20091102-140407_sm.jpg" width="120" height="120" alt="Marvin Olasky"></a>
+															</td>
+							<td style="padding-left:10px; float:left; width:400px;">
+								<h1><a href="/people/view/57">Marvin Olasky</a></h1>
+								<p><p>
+	Marvin Olasky is editor in chief of the World News Group, dean of the World Journalism Institute, and holder of the Distinguished Chair in Journalism and Public Policy at Patrick...</p><span class="moretext"><a href="/people/view/57">MORE About Marvin Olasky ></a></span></p>
+								<!-- MORE button
+									<div><a href="/people/view/57" class="moreLink">More</a></div>
+								-->
+							</td>
+						</tr></table>
+					</div>
+										<div class="alumniContainer item">
+						<table><tr>
+							<td>
+																	<a href="/people/view/10"><img src="http://assets.worldji.com//people_images/10_20090707-140903_sm.jpg" width="120" height="120" alt="Russell Pulliam"></a>
+															</td>
+							<td style="padding-left:10px; float:left; width:400px;">
+								<h1><a href="/people/view/10">Russell Pulliam</a></h1>
+								<p><p>
+	Russ is the Associate Editor of The Indianapolis Star and Director of Pulliam Fellowship Program. In the past, he has been a reporter for The New York Times, The Washington Post, The...</p><span class="moretext"><a href="/people/view/10">MORE About Russell Pulliam ></a></span></p>
+								<!-- MORE button
+									<div><a href="/people/view/10" class="moreLink">More</a></div>
+								-->
+							</td>
+						</tr></table>
+					</div>
+										<div class="alumniContainer item">
+						<table><tr>
+							<td>
+																	<a href="/people/view/266"><img src="http://assets.worldji.com//people_images/266_4e8c8525-1064-4d12-9663-0d3045a7bdbf_sm.jpg" width="120" height="120" alt="Drew Belz"></a>
+															</td>
+							<td style="padding-left:10px; float:left; width:400px;">
+								<h1><a href="/people/view/266">Drew Belz</a></h1>
+								<p><p>
+	Drew Belz grew up in the&nbsp;purple&nbsp;mountains&nbsp;of Asheville, N.C., and is son to Nat and Mindy Belz. He devoted time in high school and college to travel, exploring as much ground as...</p><span class="moretext"><a href="/people/view/266">MORE About Drew Belz ></a></span></p>
+								<!-- MORE button
+									<div><a href="/people/view/266" class="moreLink">More</a></div>
+								-->
+							</td>
+						</tr></table>
+					</div>
+										<div class="alumniContainer item">
+						<table><tr>
+							<td>
+																	<a href="/people/view/272"><img src="http://assets.worldji.com//people_images/272_4f579baa-8718-4731-b8e0-0630321c5c66_sm.jpg" width="120" height="120" alt="Susan Olasky"></a>
+															</td>
+							<td style="padding-left:10px; float:left; width:400px;">
+								<h1><a href="/people/view/272">Susan Olasky</a></h1>
+								<p><p>
+	Susan Olasky is a senior writer for WORLD, with particular responsibility for book reviews and lifestyle features. A graduate of the University of Michigan with a master&#39;s degree in...</p><span class="moretext"><a href="/people/view/272">MORE About Susan Olasky ></a></span></p>
+								<!-- MORE button
+									<div><a href="/people/view/272" class="moreLink">More</a></div>
+								-->
+							</td>
+						</tr></table>
+					</div>
+										<div class="alumniContainer item">
+						<table><tr>
+							<td>
+																	<a href="/people/view/263"><img src="http://assets.worldji.com//people_images/263_4e735d77-5ce8-4286-8b11-6c8b45a7bdbf_sm.jpg" width="120" height="120" alt="Jamie Dean"></a>
+															</td>
+							<td style="padding-left:10px; float:left; width:400px;">
+								<h1><a href="/people/view/263">Jamie Dean</a></h1>
+								<p><p>
+	Jamie Dean is news editor at WORLD Magazine, where she&rsquo;s worked as a reporter and editor since 2005. Before working at WORLD, Jamie was editor of The Charlotte World, a bi-weekly...</p><span class="moretext"><a href="/people/view/263">MORE About Jamie Dean ></a></span></p>
+								<!-- MORE button
+									<div><a href="/people/view/263" class="moreLink">More</a></div>
+								-->
+							</td>
+						</tr></table>
+					</div>
+										<div class="alumniContainer item">
+						<table><tr>
+							<td>
+																	<a href="/people/view/238"><img src="http://assets.worldji.com//people_images/238_4d014096-3f64-47cd-a609-741845a7bdbf_sm.jpg" width="120" height="120" alt="Mindy Belz"></a>
+															</td>
+							<td style="padding-left:10px; float:left; width:400px;">
+								<h1><a href="/people/view/238">Mindy Belz</a></h1>
+								<p><p>
+	Mindy Belz&nbsp;is editor of WORLD magazine. She has written for WORLD since 1986, becoming the magazine&#39;s international editor in 1994 and its editor in 2004. She has covered war in...</p><span class="moretext"><a href="/people/view/238">MORE About Mindy Belz ></a></span></p>
+								<!-- MORE button
+									<div><a href="/people/view/238" class="moreLink">More</a></div>
+								-->
+							</td>
+						</tr></table>
+					</div>
+										<div class="alumniContainer item">
+						<table><tr>
+							<td>
+																	<a href="/people/view/24"><img src="http://assets.worldji.com//people_images/24_5164cdcf-835c-496f-a456-10bf321c5c66_sm.jpg" width="120" height="120" alt="John McCandlish Phillips"></a>
+															</td>
+							<td style="padding-left:10px; float:left; width:400px;">
+								<h1><a href="/people/view/24">John McCandlish Phillips</a></h1>
+								<p><p>
+	John McCandlish Phillips</p>
+<p>
+	1927 - 2013</p>
+<p>
+	John McCandlish Phillips died today, Tuesday, April 9, 2013 in a Manhattan hospital. Mr. Phillips was a long-time teacher and mentor for...</p><span class="moretext"><a href="/people/view/24">MORE About John McCandlish Phillips ></a></span></p>
+								<!-- MORE button
+									<div><a href="/people/view/24" class="moreLink">More</a></div>
+								-->
+							</td>
+						</tr></table>
+					</div>
+					
+				</div><!-- /#featuredAlumniItems -->
+
+			</div><!-- /#featuredAlumni -->
+
+		</div><!-- /#featuredAlumniWrapper -->
+
+
+
+	</div><!-- /#col1 -->
+	<div id ="col2">
+		<div id="latestTweets">
+			<h2 class="twitterhead"><a href="http://twitter.com/WJI" target="_blank">@WJI Twitter Feed</a></h2>
+			<ul>
+						</ul>
+		</div>
+	</div><!-- /#col2 -->
+
+	<!-- <div id="leaderboards"> -->
+		<!-- <a href="http://www.wjitimesobserver.com/" target="_blank"><img src="/img/homepage_Leaderboard.jpg" width="920" height="104" border="0" alt="WJI Times Observer"> -->
+	<!-- </div> -->
+
+	</div><!-- /#main -->
+</div><!-- /#mainWrapper -->
+</div>
+		<div class="clear"></div>
+	</div><!-- /content -->
+
+	<div id="footer">
+	<p>&copy; Copyright 2013 World Journalism Institute</p>
+	<div id="footerNav">
+		<ul>
+			<li><a href="/programs">Apply Now</a></li>
+			<li><a href="/pages/view/giving">Giving to WJI</a></li>
+			<li><a href="/forum/users/login">Alumni Login</a></li>
+			<li><a href="/pages/view/join-list-serv">Join Mailing List</a></li>
+			<li><a href="/pages/view/contact">Contact</a></li>
+		</ul>
+	</div>
+</div><!--/footer-->
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20103390-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

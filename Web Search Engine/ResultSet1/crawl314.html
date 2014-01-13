@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<html xml:lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://www.w3.org/2005/10/profile">
+<link rel="icon" type="image/png" href="images/pacicon_16x16.png">
+<title>Pacifica Foundation Radio</title>
+<link rel="stylesheet" type="text/css" href="basic.css" />
+<link href="utopian-menus.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+a.toplink:link
+{
+	color:#0000cc;
+	font-style:normal;
+	text-decoration:none;
+	font-size:18pt;
+}
+a.toplink:visited
+{
+	color:#0000cc;
+	font-style:normal;
+	text-decoration:none;
+	font-size:18pt;
+}
+a.toplink:hover
+{
+	color:#0000cc;
+	font-style:italic;
+	text-decoration:none;
+	font-size:18pt;
+}
+a.toplink:active
+{
+	color:#0033cc;
+	font-style:italic;
+	text-decoration:none;
+	font-size:18pt;
+}
+-->
+</style>
+<script language="javascript" type="text/javascript">
+
+function show_hide(obj,id,e)
+{
+	if(e.stopPropagation)
+	{
+		e.stopPropagation();
+		e.preventDefault();
+	}
+
+	var div_obj = document.getElementById(id);
+	if(div_obj.style.display == 'none')
+	{
+		div_obj.style.display = '';
+		obj.innerHTML = 'Close';
+	}
+	else
+	{
+		div_obj.style.display = 'none';
+		obj.innerHTML = 'More . . .';
+	}
+	return(true);
+}
+	
+function show_nav()
+{
+	var obj = document.getElementById("navbar");
+	obj.style.display = '';
+}
+</script>
+</head>
+<body bgcolor="#5ab793" onload="show_nav();">
+<!-- <div id="navbar" style="display:none;"> -->
+<div id="navbar">
+	  <ul id="utopian-navigation" class="utopian">
+	  	<li class="dropdown active"><a href="index.php">Home</a>
+			<ul>
+			    <li><a href="index.php">Home</a></li>
+				<li><a href="http://pacificanetwork.org" target="_blank">Pacifica Network</a></li>
+			</ul>
+		</li>
+	  	<li class="dropdown "><a href="pnb_calendar.php" target="_blank">Calendar</a></li>
+		<li class="dropdown "><a href="notices_home.php">Notices & News</a>
+			<ul>
+				<li><a href="foundation_news.php">News</a></li>
+			 	<li><a href="notices_home.php">Official Notices</a></li>
+			</ul>
+		</li>
+	  	<li class="dropdown "><a href="#">PNB</a>
+			<ul>
+				<li><a href="pnb_members.php">Members</a></li>
+				<li><a href="pnb_bylaws.php">Bylaws</a></li>
+				<li><a href="http://kewg.org" target="_blank">Indexed Bylaws</a></li>
+				<li><a href="pnb_resolutions.php">Resolutions</a></li>
+				<li><a href="pnb_amendments.php">Bylaws Amendments</a></li>
+			</ul>
+		</li>
+		<li class="dropdown "><a href="#">Financials & EEO</a>
+			<ul>
+<!--			 <li><a href="finance_reports.php">National Reports</a> -->
+				<li><a href="#">National Reports</a>
+					<ul>
+					 <li><a href="finance_reports_2006.php">2006</a></li>
+					 <li><a href="finance_reports_2007.php">2007</a></li>
+					 <li><a href="finance_reports_2008.php">2008</a></li>
+					 <li><a href="finance_reports_2009.php">2009</a></li>
+					 <li><a href="finance_reports_2010.php">2010</a></li>
+					 <li><a href="finance_reports_2011.php">2011</a></li>
+					 <li><a href="finance_reports_2012.php">2012</a></li>
+					 <li><a href="finance_reports_2013.php">2013</a></li>
+					 <li><a href="finance_reports_2014.php">2014</a></li>
+					</ul>
+				   </li>
+				<li class="dropdown"><a href="#">Station Reports</a>
+					<ul>
+						<li><a href="finance_budgets_kpfa.php">KPFA</a></li>
+						<li><a href="finance_budgets_kpfk.php">KPFK</a></li>
+						<li><a href="finance_budgets_kpft.php">KPFT</a></li>
+						<li><a href="finance_budgets_wbai.php">WBAI</a></li>
+						<li><a href="finance_budgets_wpfw.php">WPFW</a></li>
+						<li><a href="finance_budgets_pra.php">PRA</a></li>
+						<li><a href="finance_budgets_natl.php">NATIONAL</a></li>
+						<li><a href="finance_budgets_consolidated.php">Consolidated</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li class="dropdown "><a href="#">Jobs</a>
+			<ul>
+				<li><a href="jobs_kpfa.php">KPFA, Berkeley CA</a></li>
+				<li><a href="jobs_kpfk.php">KPFK, Los Angeles CA</a></li>
+				<li><a href="jobs_kpft.php">KPFT, Houston TX</a></li>
+				<li><a href="jobs_wbai.php">WBAI, New York NY</a></li>
+				<li><a href="jobs_wpfw.php">WPFW, Washington DC</a></li>
+				<li><a href="jobs_pra.php">Pacifica Radio Archives, Los Angeles CA</a></li>
+				<li><a href="jobs_national.php">National Office, Berkeley CA</a></li>
+			</ul>
+		</li>
+<!--
+		<li class="dropdown "><a href="#">News</a>
+			<ul>
+				<li><a href="foundation_news.php">General</a></li>
+			</ul>
+		</li>
+-->
+		<li class="dropdown "><a href="#">About</a>
+			<ul>
+				<li><a href="about_mission.php">Mission Statement</a></li>
+				<li><a href="about_history.php">History</a></li>
+			</ul>
+		</li>
+		<li class="dropdown "><a href="contact_home.php">Contact</a></li>
+	  </ul>
+</div><table bgcolor="#5ab793" width="100%">
+ <tr>
+  <td align="left" style="padding:1px;">
+   <img src="/images/nu_logo001_500.png" border="0" />
+  </td>
+<!--
+  <td align="right">
+   <img style="position:absolute;top:40px;" src="/images/pfradio_logo.png" height="200px" width="300px" border="0" /> 
+  </td>
+-->
+ </tr>
+</table>
+<div id="main_div">
+<table width="100%" border="0">
+ <tr>
+  <td align="center" width="640px">
+   <table width="630px" border="0" style="font-family:Arial,Helvetica,sans-serif; background-color:transparent;">
+    <tr id="summer_gif" style="display:none;">
+	 <td align="center" width="100%">
+	 <img src="documents/summer_ed.gif" border="0" alt="Summer Reese Selected as Pacifica Executive Director">
+	 </td>
+	</tr>
+	<tr>
+	 <td align="center" class="more_tag" id="summer_gif_tag" align="center" width="100%" style="display:;background-color:#ffffff;">
+	 Summer Reese New Pacifica Foundation Executive Director&emsp;<br>
+	 <a class="on_white" href="" onclick="return(show_hide(this,'summer_gif',event));">More . . .</a>
+	 </td>
+	</tr>
+	<tr height="10px">
+	 <td>&nbsp;</td>
+	</tr>
+   </table>
+  </td>
+ </tr>
+<!-- pra fund drive 2013
+ <tr>
+  <td align="center">
+	<img name="pra_2013_banner" src="documents/pra_2013_banner.jpg" width="640" border="0" usemap="#m_pra_2013_banner" alt="">
+	 <map name="m_pra_2013_banner">
+	  <area shape="rect" coords="303,190,442,289" href="documents/pra_131118_premiums.php" target="_blank" title="Thank You Gifts" alt="Thank You Gifts" >
+     </map>
+  </td>
+ </tr>
+ <tr>
+  <td align="center">
+   <table style="background-color:#333333;padding:8px;">
+    <tr>
+     <td style="color:#ffffff;" align="center">
+	Listen Here<br>
+<p align="center">	<audio controls preload="none" style="outline: #ffffff solid 2px;">
+	 <source src="http://pacifica.org:8000/special" type="audio/mp3">
+	 <a href="http://pacifica.org:8000/special.m3u" style="color:#6666ff;">Live Stream</a>
+	</audio></p>     </td>
+	</tr>
+   </table>
+  </td>
+ </tr>
+ <tr>
+ end pra fund drive 2013 -->
+	<tr>
+	 <td align="center">
+<a id="bylaws"></a>
+	  <table border="1" width="560px" bgcolor="#eeeeee">
+	   <tr>
+	    <td style="font-size:12pt;font-weight:bold;" align="center">
+		 Posted Friday, October 25, 2013
+		</td>
+	   </tr>
+	   <tr>
+	    <td style="font-size:13pt;font-weight:bold;" align="center">
+	 Proposed Amendments to Pacifica Bylaws to be considered by the PNB at a meeting to be announced.<br>
+	    </td>
+	   </tr>
+	   <tr>
+	    <td style="font-size:13pt;font-weight:bold;" align="center">
+		Concerning Size of PNB, Size of LSB, Special Meetings<br>
+	 <a href="documents/bylaws_131025_master.pdf" class="on_white">Amendments Page</a>
+        </td>
+	   </tr>
+	   <tr>
+	    <td style="font-size:13pt;font-weight:bold;" align="center">
+		Election Quorum<br>
+		<a href="documents/election_quorum_131024.pdf" class="on_white">Amendment Page</a>
+	    </td>
+	   </tr>
+	   <tr>
+	    <td style="font-size:13pt;font-weight:bold;" align="center">
+		In Person PNB Meetings<br>
+		<a href="documents/meetings_131024.pdf" class="on_white">Amendment Page</a>
+	    </td>
+	   </tr>
+	   <tr>
+	    <td style="font-size:13pt;font-weight:bold;" align="center">
+		Disposition of Assets<br>
+		<a href="documents/asset_disposition_131024.pdf" class="on_white">Amendment Page</a>
+	    </td>
+	   </tr>
+	   <tr>
+	    <td style="font-size:13pt;font-weight:bold;" align="center">
+		Foudation Name<br>
+		<a href="documents/foundation_name_131024.pdf" class="on_white">Amendment Page</a>
+	    </td>
+	   </tr>
+      </table>
+     </td>
+	</tr></table>
+</div>
+<div class="side_div_2">
+<table>
+ <tr>
+  <td valign="middle">
+  	Reports on PNB Exec Sessions<br>
+  </td>
+ </tr>
+ <tr>
+  <td align="center">
+   <a href="http://pacifica.org/notices_home.php">Click Here</a>
+  </td>
+ </tr>
+</table>
+</div>
+<!-- end notice notice -->
+<!-- sidebar ends may 31 2013 -->
+<!--
+<div class="side_div">
+<table>
+ <tr>
+  <td valign="middle">
+   Pacifica Foundation Radio, the country's oldest public radio network is seeking a National Election Supervisor.<br><br>
+  </td>
+ </tr>
+ <tr>
+  <td align="center">
+   <a href="http://pacifica.org/jobs_national.php">Click Here</a>
+  </td>
+ </tr>
+</table>
+</div>
+-->
+<!-- top info bar -->
+<div class="top_div">
+<table width="100%">
+ <tr>
+  <td style="font-size:20px">
+  New PNB Resolution Concerning Elections<br>
+  Click <a href="pnb_resolutions.php">here</a>
+  </td>
+ </tr>
+</table>
+</div>
+<div class="give_div" style="overflow:hidden;">
+<!-- subscription banner -->
+   <table style="position:absolute;width:110px;">
+	<tr height="20px">
+     <td align="center" valign="bottom" style="color:#00624a; font-size:10pt; font-family:Helvetica,Arial,sans-serif; font-weight:bold;">
+	  Your Tax Deductible Donation keeps Pacifica Foundation Radio strong.<br>
+	 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	 <input type="hidden" name="cmd" value="_s-xclick">
+	 <input type="hidden" name="hosted_button_id" value="D2P5VFVH3GWYY">
+	 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	 </form><br>
+      A subscription provides ongoing support.<br>
+	 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	 <input type="hidden" name="cmd" value="_s-xclick">
+	 <input type="hidden" name="hosted_button_id" value="4526ZYG4T9AQE">
+     <input type="hidden" name="on0" value="Support Level">
+	 <span style="font-size:12px;color:#000000;line-height:30px;vertical-align:-10px;">
+	 Monthly Support Level<br>
+	 </span>
+	 <div align="left" style="text-align:left;font-size:10px;font-weight:bold;">
+		<input type="radio" name="os0" value="Basic">Basic: $10<br>
+		<input type="radio" name="os0" checked="checked" value="Sustainer">Sustainer: $20<br>
+		<input type="radio" name="os0" value="Silver Circle">Silver Circle: $50<br>
+		<input type="radio" name="os0" value="Gold Circle">Gold Circle: $100<br>
+	 </div>
+	  <input type="hidden" name="currency_code" value="USD">
+	  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	 </form>
+	 </td>
+	</tr>
+   </table>
+<!-- end subscription banner -->
+</div>
+<!-- end top info bar -->
+</body>
+</html>
+

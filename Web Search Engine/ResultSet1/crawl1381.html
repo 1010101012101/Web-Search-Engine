@@ -1,0 +1,679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="description" content="MCT Direct. News and features content service for newspapers, broadcasters and Web sites from sources such as McClatchy, Tribune and the Los Angeles Times. MCT searchable archives include photography, news, editorials, opinion, graphics, illustrations, political caricatures, paginated pages, kids content, business and interactive news." />
+    <meta name="keywords" content="MCT,McClatchy-Tribune,Direct,International,Campus,world,news,Tribune Media Services,McClatchy,graphics,photos,illustrations,archives,political,caricatures,syndicated,content,paginated pages,travel,lifestyle,niche,sports,foreign,food,entertainment,fashion,religion,automobile,kids,teen,celebrity,business,books,Mitch Albom,Dave Barry,Leonard Pitts,Dr. H,Carl Hiaasen,Andres Oppenheimer,features,interactive,home,garden,music,science,newspapers,regional,editorial,health,finance,science,That's Racin',onepages" />
+    <meta name="robots" content="no archive" />
+
+    <title>McClatchy-Tribune | Welcome to MCT Campus</title>
+    <link rel="shortcut icon" href="/includes/img/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="/includes/css/default.css" />
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/includes/js/c_config.js"></script>
+    <script type="text/javascript" src="/includes/js/c_smartmenus.js"></script>
+    <script type="text/javascript" src="/includes/js/mct.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="/includes/skins/tn3a/tn3a.css" />
+    <link type="text/css" rel="stylesheet" href="/includes/mediaelement/mediaelementplayer.css" />
+    <!-- include tn3 plugin -->
+    <script type="text/javascript" src="/includes/js/jquery.tn3.min.js"></script>
+    <script type="text/javascript" src="/includes/js/tn3.history.min.js"></script>
+    <script type="text/javascript" src="/includes/mediaelement/mediaelement-and-player.min.js"></script>
+    <script type="text/javascript" src="/includes/js/tn3.mediaelement.min.js"></script>
+
+	<script type="text/javascript">
+
+
+		var currentNav = '';
+		var currentNavSubSet = '';
+
+		var $j = jQuery.noConflict();
+
+
+	$j(document).ready(function() {
+
+		checkRelated();
+
+		var tn1 = $j('#featuredVisuals').tn3({
+			autoplay: true,
+			delay: 10000,
+			timerOverStop: true,
+			mouseWheel: false,
+		    skinDir: "/includes/skins",
+		    skin: "tn3a",
+		    imageClick: "url",
+		    image:{
+		    	stretch: true,
+				crop: false,
+				//maxZoom: 2, //Only applies if crop:true
+				clickEvent: "click",
+		    },
+		    thumbnailer: {
+				overMove: true
+		    },
+			history: {
+				slugField: "slug"
+			},
+			content:[{
+				plugin: "mediaelement",
+				options: {
+					features: ['current','progress','duration','fullscreen'],
+					useFullScreen: false
+				}
+			}]
+		});
+	});
+
+
+	////Determine current slide so I can hide/show the related links////
+	//Bind a callback that executes when document.location.hash changes.
+	$j(window).bind("hashchange", function(e){
+
+		changeRelatedLink();
+
+	});
+
+
+
+	</script>
+</head>
+<body lang="en" onload="document.getElementById('featuredVisuals').style.visibility = 'visible';"><a name="top"></a>
+
+
+<div id="topHeader">
+    <div id="header">
+        <div id="logos">
+            <div id="mainLogo">
+                <a href="/" style="text-decoration: none">
+                    <img src="/includes/img/logo_campus.gif" class="mainLogo" alt="MCT Campus - McClatchy-Tribune Information Services" />
+                </a>
+            </div>
+            <div id="header-remaining">
+
+<script type="text/javascript">
+var imagenumber = 12;
+var randomnumber = Math.random(2) ;
+var rand1 = Math.round( (imagenumber-1) * randomnumber) + 1 ;
+images = new Array
+images[1] = "/shared/banners/comics.jpg"
+images[2] = "/shared/banners/campusfeatures.jpg"
+images[3] = "/shared/banners/picspromobanner2.jpg"
+images[4] = "/shared/banners/CampusCreditAd-A.jpg"
+images[5] = "/shared/banners/Subscriber.jpg"
+images[6] = "/shared/banners/Subscriber.jpg"
+images[7] = "/shared/banners/DigitalBudget_banner.jpg"
+images[8] = "/shared/banners/DigitalBudget_banner.jpg"
+images[9] = "/shared/banners/video.jpg"
+images[10] = "/shared/banners/video.jpg"
+images[11] = "/shared/banners/video.jpg"
+images[12] = "/shared/banners/video.jpg"
+
+
+var image = images[rand1]
+links = new Array
+links[1] = 'http://mctcampus.com/comics/evil.php'
+links[2] = 'http://www.mctcampus.com/promo/campus.php'
+links[3] = '/picks/pages/toppics_promo.php'
+links[4] = '/subscribe/?site=campus'
+links[5] = 'http://www.mctcampus.com/noindex/'
+links[6] = 'http://www.mctcampus.com/noindex/'
+links[7] = '/promo/digital.php'
+links[8] = '/promo/digital.php'
+links[9] = '/promo/newvideo.php'
+links[10] = '/promo/newvideo.php'
+links[11] = '/promo/newvideo.php'
+links[12] = '/promo/newvideo.php'
+
+var link = links[rand1];
+
+showAd(link, image);
+</script>
+                <div id="social">
+                    <a href="https://twitter.com/MCTCampus" target="_blank">
+                        <img src="/includes/img/twitter.gif" alt="Twitter" title="Visit Our Twitter Page" />
+                    </a>
+                    <a href="https://www.facebook.com/pages/MCT-Campus/190359476392" target="_blank">
+                        <img src="/includes/img/facebook.gif" alt="Facebook" title="Visit Our Facebook Page" />
+                    </a>
+                </div>
+                <div id="contact" style="padding-top:5px;">
+                    <a href="/subscribe/"><span class="beige big">Subscribe</span></a>
+                    <br />College: 866-280-5210
+                    <br />High School: 866-475-6654
+                    <br />Yearbooks: 866-280-5210
+                    <br /><a href="mailto:campussales@mctinfo.com">campussales@mctinfo.com</a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="search">
+            
+<form method="get" action="/includes/searchPulldown.php">
+    <div id="searchNav">
+        <div style="padding: 6px 15px 0 0; float:left;">
+            <a href="/search/advanced.php">Advanced Search</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/guide/search_tips.php">Search Tips</a>
+        </div>
+        <div style="float:left; padding-top:2px;">
+            <select name="category">
+                <option value="v|/visuals/search.php"> Select a search</option>
+<option value="v|/visuals/search.php"> All Visuals</option>
+<option value="c|/search/search_txt.php"> All Stories</option>
+<option value="c|/news/livearchive.php"> &nbsp;&nbsp;&nbsp;All News</option>
+<option value="|/news/campusnews.php"> &nbsp;&nbsp;&nbsp;Campus News</option>
+<option value="c|/university/"> &nbsp;&nbsp;&nbsp;Campus Plus</option>
+<option value="c|/news/nationalnews.php"> &nbsp;&nbsp;&nbsp;National News</option>
+<option value="c|/news/worldnews.php"> &nbsp;&nbsp;&nbsp;World News</option>
+<option value="c|/news/sportsall.php"> &nbsp;&nbsp;&nbsp;Sports</option>
+<option value="c|/news/features.php"> &nbsp;&nbsp;&nbsp;Features</option>
+<option value="c|/news/lifestylelive.php"> &nbsp;&nbsp;&nbsp;Lifestyle</option>
+<option value="c|/news/entertainmentlive.php"> &nbsp;&nbsp;&nbsp;Entertainment</option>
+<option value="c|/regional/search.php"> &nbsp;&nbsp;&nbsp;MCT Regional News</option>
+<option value="c|/news/advisories.php"> &nbsp;&nbsp;&nbsp;Advisories</option>
+<option value="c|/photos/live.php"> All Photos</option>
+<option value="v|/gallery/"> &nbsp;&nbsp;&nbsp;MCT Photo Galleries</option>
+<option value="v|/visuals/campus/campus.php"> &nbsp;&nbsp;&nbsp;Campus Photos</option>
+<option value="c|/visuals/campus/national.php"> &nbsp;&nbsp;&nbsp;National Photos</option>
+<option value="c|/visuals/campus/world.php"> &nbsp;&nbsp;&nbsp;World Photos</option>
+<option value="c|/visuals/campus/sports.php"> &nbsp;&nbsp;&nbsp;Sports Photos</option>
+<option value="c|/visuals/campus/entertainment.php"> &nbsp;&nbsp;&nbsp;Entertainment Photos</option>
+<option value="c|/visuals/campus/lifestyle.php"> &nbsp;&nbsp;&nbsp;Lifestyle Photos</option>
+<option value="v|/photos/columnist.php"> &nbsp;&nbsp;&nbsp;Columnist Mugs</option>
+<option value="v|/graphics/livearchive.php"> Graphics</option>
+<option value="v|/graphics/features.php"> Features Graphics</option>
+<option value="v|/interactive/livearchive.php"> Interactive Graphics</option>
+<option value="c|/illustrations/livenofaces.php"> Illustrations</option>
+<option value="v|/faces/livenoillus.php"> Caricatures</option>
+<option value="v|/onepages/advisory.php"> OnePages</option>
+<option value="v|/cartoons/"> Editorial Cartoons</option>
+<option value="v|/comics/comics.php"> Comics</option>
+<option value="v|/horoscopes/horoscopes.php"> Horoscopes</option>
+<option value="c|/columnist/search.php"> Premium Content</option>
+<option value="c|/columnist/search.php"> &nbsp;&nbsp;&nbsp;Columnists</option>
+<option value="c|/extra/sudoku.php"> &nbsp;&nbsp;&nbsp;Sudoku</option>
+            </select>&nbsp;&nbsp;For&nbsp;
+            <input name="query" class="query" maxlength="90" />&nbsp;&nbsp;
+        </div>
+        <div style="float:left; padding-top:4px; padding-left: 5px; padding-right: 5px;">
+            <input type="image" src="/includes/img/go.gif" title="Search" />
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+</form>
+        </div>
+    </div>
+</div>
+
+
+<div id="topNav-left-side-outer">
+    <div id="topNav-left-side">&nbsp;</div>
+</div>
+<div id="topNav">
+    <div id="priNav">
+        <ul>
+            <li class="last"><a href="/guide/faq.php">FAQ</a></li>
+            <li><a href="/guide/">User Guides</a></li>
+            <li><a href="/lightbox/">Lightbox</a></li>
+            <li><a href="/email/alerts/">Alerts</a></li>
+            <li><a href="/contacts/">Contact Us</a></li>
+        </ul>
+    </div>
+
+		<div class="topCyan">
+			<a href="/login/">Login</a> | <a href="/login/">MyMCT</a>
+		</div>
+		<div class="topCyanEnd"></div>
+</div>
+<div id="topNav-right-side-outer">
+	<div id="topNav-right-side"></div>
+</div>
+<div class="clear" style="height:15px;">&nbsp;</div>    <div id="columns">
+
+        <div id="leftNav" class="navSection">
+	<div class="header">MCT SERVICES</div>
+
+
+<!-- Stories -->
+	<div class="sectionHead"><a href="/news/live.php">Stories</a></div>
+	<div class="navGroup" id="nav-Stories">
+		<div class="navGroup" id="nav-storiesNews">
+<!-- Stories | News Breakout -->
+			<div class="gTitle"><b><a href="/news/live.php" class="altLink">News</a></b></div>
+			<ul class="rGroup">
+                <li><a href="/digital/">Digital Budget <span style="color:red;">NEW</span></a></li>
+				<li><a href="/news/campusnews.php">Campus</a> | <a href="/university/">Campus Plus</a></li>
+				<li><a href="/news/nationalnews.php">US News</a> | <a href="/news/worldnews.php">World News</a></li>
+				<li><a href="/news/opinion.php">Opinion</a> | <a href="/news/environment.php">Environment</a></li>
+			</ul>
+			<ul class="subGroup" id="stories-news">
+				<li><a href="/news/weather.php">Weather</a> |	<a href="/news/science.php">Science</a></li>
+				<li><a href="/news/technology.php">Technology</a> | <a href="/news/medicine.php">Medicine</a></li>
+				<li><a href="/news/pfinance.php">Personal Finance</a></li>
+				<li><a href="/news/corrections.php">Corrections &amp; Kills</a></li>
+			</ul>
+			<a href="#" onclick="return showNavMore(this)" class="moreLink">more...</a>
+		</div>
+
+
+<!-- Stories | MCT Regional News -->
+		<div class="navGroup" id="nav-regionalNews">
+			<div class="gTitle"><b><a href="/regional/map.php" class="altLink">Regional News</a></b></div>
+			<ul class="subGroup">
+				<li><a href="/regional/map.php">By State</a></li>
+				<li><a href="/regional/corrections.php">Corrections &amp; Kills</a></li>
+			</ul>
+		</div>
+
+
+<!-- Stories | Sports Breakout -->
+		<div class="navGroup" id="nav-storiesSports">
+			<div class="gTitle"><b><a href="/news/sportsall.php" class="altLink">Sports</a></b></div>
+			<ul class="rGroup">
+				<li><a href="/news/sports/mlb.php">MLB</a> | <a href="/news/sports/cbaseball.php">College Baseball</a></li>
+				<li><a href="/news/sports/nba.php">NBA</a> | <a href="/news/sports/cbasketball.php">College Basketball</a></li>
+				<li><a href="/news/sports/nfl.php">NFL</a> | <a href="/news/sports/cfootball.php">College Football</a></li>
+			</ul>
+			<ul class="subGroup" id="stories-sports">
+				<li><a href="/news/sports/hockey.php">Hockey</a> |	<a href="/news/sports/auto.php">Auto Racing</a></li>
+				<li><a href="/news/sports/soccer.php">Soccer</a> | <a href="/news/sports/tennis.php">Tennis</a></li>
+				<li><a href="/news/sports/golf.php">Golf</a> | <a href="/news/sports/olympics.php">Olympics</a></li>
+				<li><a href="/news/sports/boxing.php">Boxing</a> | <a href="/news/sports/track.php">Track &amp; Field</a></li>
+			</ul>
+			<a href="#" onclick="return showNavMore(this)" class="moreLink">more...</a>
+		</div>
+
+
+<!-- Stories | Features Breakout -->
+		<div class="navGroup" id="nav-storiesFeatures">
+			<div class="gTitle"><b><a href="/news/features.php" class="altLink">Features</a></b></div>
+			<ul class="rGroup">
+				<li><a href="/news/features/entertainment.php">Entertainment</a> | <a href="/news/features/lifestyle.php">Lifestyle</a></li>
+				<li><a href="/news/features/movies.php">Movies</a> | <a href="/news/features/tv.php">TV</a> | <a href="/news/features/video.php">DVD</a></li>
+				<li><a href="/news/features/music.php">Music</a> |	<a href="/news/features/videogames.php">Video Games</a></li>
+			</ul>
+			<ul class="subGroup" id="stories-features">
+				<li><a href="/news/features/books.php">Books</a></li>
+				<li><a href="/news/features/food.php">Food</a> | <a href="/news/features/fashion.php">Fashion</a></li>
+				<li><a href="/news/features/health.php">Fitness</a> | <a href="/news/features/pets.php">Pets</a></li>
+				<li><a href="/news/features/religion.php">Religion</a> | <a href="/news/features/travel.php">Travel</a></li>
+			</ul>
+			<a href="#" onclick="return showNavMore(this)" class="moreLink">more...</a>
+		</div>
+	</div>
+
+	<hr class="silver" />
+
+
+
+<!-- Packages -->
+	<div class="sectionHead">Packages</div>
+	<div class="navGroup" id="nav-packages">
+<!-- Stories | News Breakout -->
+		<ul class="rGroup">
+			<li><a href="/adventure/">Adventure and Fitness</a></li>
+			<li><a href="/loveandrelationships/">Love &amp; Relationships</a></li>
+			<li><a href="/pluggedin/">Plugged In</a></li>
+			<li><a href="/trends/">Trends &amp; Shopping</a></li>
+		</ul>
+	</div>
+
+	<hr class="silver" />
+
+
+
+<!-- Visuals -->
+	<div class="sectionHead"><a href="/visuals/search.php">Visuals</a></div>
+	<div class="navGroup" id="nav-Visuals">
+		<div class="navGroup" id="nav-photos-premium">
+<!-- Visual | Photos Breakout -->
+			<div class="gTitle"><b><a href="/photos/live.php" class="altLink">Photos</a></b></div>
+			<ul class="rGroup">
+				<li><a href="/visuals/search.php?query=z/cmp&amp;title=Campus">Campus</a></li>
+				<li><a href="/photos/live.php?query=%22US%20NEWS%22&amp;title=National">US News</a> | <a href="/photos/live.php?query=%22WORLD%20NEWS%22&amp;title=World_News&amp;campus=on">World News</a></li>
+				<li><a href="/photos/live.php?query=Z/Sports&amp;title=Sports">Sports</a> | <a href="/photos/live.php?query=krtbusiness&amp;title=Business">Business</a></li>
+				<li style="margin-bottom:2px;"><a href="/photos/live.php?query=Z/ENTER&amp;title=Entertainment">Entertainment</a> | <a href="/photos/live.php?query=krtlifestyle&amp;title=Lifestyle">Lifestyle</a></li>
+				<li><a href="/gallery/">MCT Photo Galleries <span class="red">NEW</span></a></li>
+			</ul>
+<!-- Visual | Graphics Breakout -->
+			<div class="gTitle"><b><a href="/graphics/livearchive.php?query=krtcampus&amp;title=Campus" class="altLink">Graphics</a></b></div>
+			<ul class="rGroup">
+				<li><a href="/graphics/livearchive.php?query=krtcampus&amp;title=Campus">News Graphics</a></li>
+				<li><a href="/interactive/advisory.php">Interactive</a></li>
+				<li><a href="/visuals/md.php">Music Downloads</a></li>
+				<li><a href="/visuals/movie.php">Movie Picks</a></li>
+				<li><a href="/visuals/hl.php">Healthy Living</a></li>
+				<li><a href="/visuals/pt.php">Personal Trainer</a></li>
+				<li style="margin-bottom:2px;"><a href="/features/facethefacts.php">Face the Facts</a></li>
+			</ul>
+			<div class="gTitle"><b><a href="/faces/live.php" class="altLink">Caricatures</a></b></div>
+			<div class="gTitle"><b><a href="/illustrations/" class="altLink">Illustrations</a></b></div>
+			<div class="gTitle"><b><a href="/onepages/advisory.php" class="altLink">OnePages</a></b></div>
+		</div>
+	</div>
+
+	<hr class="silver" />
+
+
+<!-- Visual | Cartoons Breakout -->
+	<div class="sectionHead"><a href="/cartoons/">Editorial Cartoons</a></div>
+	<div class="navGroup" id="nav-edToons">
+		<ul class="subGroup">
+			<li><a href="/cartoons/beeler.php">Nate Beeler</a></li>
+			<li><a href="/cartoons/sheneman.php">Drew Sheneman</a></li>
+			<li><a href="/cartoons/LocherAward.php">AAEC/Locher Award</a></li>
+		</ul>
+	</div>
+
+
+<!-- Visual | Comics Breakout -->
+	<div class="sectionHead"><a href="/comics/">Comics</a></div>
+	<div class="navGroup" id="nav-Comics">
+		<div class="gTitle" style="margin:5px 0 2px 0;">Strips</div>
+		<ul class="rGroup">
+			<li><a href="/comics/bestinshow.php">Best in Show</a></li>
+			<li><a href="/comics/brewster.php">Brewster Rockit</a></li>
+			<li><a href="/comics/calamities.php">Calamities of Nature</a></li>
+			<li><a href="/comics/apples.php">Green Apples</a></li>
+			<li><a href="/comics/imps.php">Imps!</a></li>
+			<li><a href="/comics/ralph.php">Ralph and Chuck</a></li>
+			<li><a href="/comics/wondermark.php">Wondermark</a></li>
+		</ul>
+
+		<div class="gTitle" style="margin:5px 0 2px 0;">Panels</div>
+		<ul class="rGroup">
+			<li><a href="/comics/bliss.php">Bliss</a></li>
+			<li><a href="/comics/moreontv.php">MoreOn TV</a></li>
+		</ul>
+	</div>
+
+
+<!-- Visual | Crosswords Breakout -->
+	<div class="sectionHead"><a href="/crosswords/">Crosswords</a></div>
+	<div class="navGroup" id="nav-xWords">
+		<ul class="subGroup">
+			<li><a href="/crosswords/tvcrosswords.php">The TV Crossword</a></li>
+			<li><a href="/crosswords/dailycrosswords.php">The Daily Crossword</a></li>
+		</ul>
+	</div>
+
+
+<!-- Visual | Horoscopes Breakout -->
+	<div class="sectionHead"><a href="/horoscopes/">Horoscopes</a></div>
+	<div class="navGroup" id="nav-hScopes">
+		<ul class="subGroup">
+			<li><a href="/horoscopes/daily.php">Daily Horoscopes</a></li>
+			<li><a href="/horoscopes/weekly.php">Weekly Horoscopes</a></li>
+		</ul>
+	</div>
+
+	<hr class="silver" />
+
+
+<!-- Premium Content -->
+	<div class="sectionHead">Premium Content</div>
+	<div class="navGroup" id="nav-premiumContent">
+		<ul class="rGroup">
+			<li><a href="/columnist/pitts.php">Leonard Pitts</a></li>
+			<li><a href="/columnist/poker.php">Poker</a></li>
+			<li><a href="/extra/sudoku.php">Sudoku</a></li>
+		</ul>
+	</div>
+	<hr class="silver" />
+
+
+<!-- MCT Logo  -->
+	<div id="mctDisclaimer">
+		<a href="/guide/terms.php">
+			<img src="/includes/img/mct_logo_small.gif" alt="Not for reproduction without permission. Limitations on use of material on this site." border="0" />
+			<br />Not for reproduction without permission.
+			<br /><span>Limitations on use of material on this site.</span>
+		</a>
+	</div>
+</div>
+<div id="homeContent">
+        <script type="text/javascript">expandNav();</script>
+
+
+<div class="relatedFloat">
+    <div class="relatedLinks">
+        <div id="relatedStoriesLink"><a href="javascript:relatedLink('text');">RELATED STORIES</a></div>
+        <div id="relatedImagesLink"><a href="javascript:relatedLink('visual');">RELATED IMAGES</a></div>
+    </div>
+</div>
+
+
+<div id="featuredVisuals">
+
+    <h4>Featured Content</h4>
+    <ol>
+
+
+	<li>
+		<h4>Mandela</h4>
+		<div class="tn3 description">A poster of Nelson Mandela is seen in the crowd during a memorial service for the deceased South African anti-apartheid leader and former President at the FND Stadium in Soweto, South Africa, Tuesday. (Graeme Williams/Action Press/Zuma Press/MCT)</div>
+		<div class="tn3 slug">0</div>
+		<div class="tn3 url">/preview.php?id=201312101256MCT_____PHOTO____WORLD_NEWS_MANDELA_3_ZUM</div>
+		<a href="http://mctmedia.acquiremedia.com/cgi-bin/image_broker.cgi?size=2&amp;id=201312101256MCT_____PHOTO____WORLD_NEWS_MANDELA_3_ZUM">
+			<img src="http://mctmedia.acquiremedia.com/cgi-bin/image_thumbnail.cgi?id=201312101256MCT_____PHOTO____WORLD_NEWS_MANDELA_3_ZUM" alt="Thumb" />
+		</a>
+	</li>
+
+	<li>
+		<h4>Korean Bell</h4>
+		<div class="tn3 description">A crew of Korean painters works on the Korean Bell pagoda in San Pedro, Calif. The bell was given to the U.S. by South Korea on its 200th birthday in 1976. Mayor Bradley pushed to have it installed in San Pedro, on the water, near where soldiers leaving for the Korean War departed from the Port of Los Angeles. (Bob Chamberlin/Los Angeles Times/MCT)</div>
+		<div class="tn3 slug">1</div>
+		<div class="tn3 url">/preview.php?id=201312110502MCT_____PHOTO____US_NEWS_KOREANBELL_1_LA</div>
+		<a href="http://mctmedia.acquiremedia.com/cgi-bin/image_broker.cgi?size=2&amp;id=201312110502MCT_____PHOTO____US_NEWS_KOREANBELL_1_LA">
+			<img src="http://mctmedia.acquiremedia.com/cgi-bin/image_thumbnail.cgi?id=201312110502MCT_____PHOTO____US_NEWS_KOREANBELL_1_LA" alt="Thumb" />
+		</a>
+	</li>
+
+	<li>
+		<h4>Deer hunt</h4>
+		<div class="tn3 description">A whitetail doe checks her back trail after leaving a canyon with hunters in Russell County, Kan. (Michael Pearce/Wichita Eagle/MCT)</div>
+		<div class="tn3 slug">2</div>
+		<div class="tn3 url">/preview.php?id=201312110501MCT_____PHOTO____SPORTS_OTD-DEERHUNT_2_WI</div>
+		<a href="http://mctmedia.acquiremedia.com/cgi-bin/image_broker.cgi?size=2&amp;id=201312110501MCT_____PHOTO____SPORTS_OTD-DEERHUNT_2_WI">
+			<img src="http://mctmedia.acquiremedia.com/cgi-bin/image_thumbnail.cgi?id=201312110501MCT_____PHOTO____SPORTS_OTD-DEERHUNT_2_WI" alt="Thumb" />
+		</a>
+	</li>
+
+	<li>
+		<h4>Winter storm</h4>
+		<div class="tn3 description">A pedestrian in the mall across the street from Independence Hall during snowfall in Philadelphia Tuesday. (Alejandro A. Alvarez/Philadelphia Daily News/MCT)</div>
+		<div class="tn3 slug">3</div>
+		<div class="tn3 url">/preview.php?id=201312102057MCT_____PHOTO____US_NEWS_WEA-STORM_5_PD</div>
+		<a href="http://mctmedia.acquiremedia.com/cgi-bin/image_broker.cgi?size=2&amp;id=201312102057MCT_____PHOTO____US_NEWS_WEA-STORM_5_PD">
+			<img src="http://mctmedia.acquiremedia.com/cgi-bin/image_thumbnail.cgi?id=201312102057MCT_____PHOTO____US_NEWS_WEA-STORM_5_PD" alt="Thumb" />
+		</a>
+	</li>
+
+	<li>
+		<h4>Reptile poaching</h4>
+		<div class="tn3 description">Law enforcement officers with the Arizona Game and Fish Department use this Gila monster, dubbed Ranger, to nab reptile poachers. (Peter Haden/Cronkite News Service/MCT)</div>
+		<div class="tn3 slug">4</div>
+		<div class="tn3 url">/preview.php?id=201312110500MCT_____PHOTO____LIFE_ENV-REPTILE-POACHING_2_MCT</div>
+		<a href="http://mctmedia.acquiremedia.com/cgi-bin/image_broker.cgi?size=2&amp;id=201312110500MCT_____PHOTO____LIFE_ENV-REPTILE-POACHING_2_MCT">
+			<img src="http://mctmedia.acquiremedia.com/cgi-bin/image_thumbnail.cgi?id=201312110500MCT_____PHOTO____LIFE_ENV-REPTILE-POACHING_2_MCT" alt="Thumb" />
+		</a>
+	</li>
+
+	<li>
+		<h4>College basketball</h4>
+		<div class="tn3 description">Minnesota Gophers' Austin Hollins and South Dakota State Jackrabbits' Brayden Carlson fight for the ball during the second half at Williams Arena in Minneapolis Tuesday. (Kyndell Harkness/Minneapolis Star Tribune/MCT)</div>
+		<div class="tn3 slug">5</div>
+		<div class="tn3 url">/preview.php?id=201312102256MCT_____PHOTO____SPORTS_BKC-SDAKOTAST-MINN_9_MS</div>
+		<a href="http://mctmedia.acquiremedia.com/cgi-bin/image_broker.cgi?size=2&amp;id=201312102256MCT_____PHOTO____SPORTS_BKC-SDAKOTAST-MINN_9_MS">
+			<img src="http://mctmedia.acquiremedia.com/cgi-bin/image_thumbnail.cgi?id=201312102256MCT_____PHOTO____SPORTS_BKC-SDAKOTAST-MINN_9_MS" alt="Thumb" />
+		</a>
+	</li>
+
+	<li>
+		<h4>Ice climbing</h4>
+		<div class="tn3 description">Andy Mamrol ascends an ice wall referred to as Roadside Attraction in Anchorage, Alaska. Mamrol and friends took turns climbing. The ice was soft enough to easily accommodate ice tools and crampons without shattering. (Erik Hill/Anchorage Daily News/MCT)</div>
+		<div class="tn3 slug">6</div>
+		<div class="tn3 url">/preview.php?id=201312101743MCT_____PHOTO____LIFE_ICECLIMBING_AC</div>
+		<a href="http://mctmedia.acquiremedia.com/cgi-bin/image_broker.cgi?size=2&amp;id=201312101743MCT_____PHOTO____LIFE_ICECLIMBING_AC">
+			<img src="http://mctmedia.acquiremedia.com/cgi-bin/image_thumbnail.cgi?id=201312101743MCT_____PHOTO____LIFE_ICECLIMBING_AC" alt="Thumb" />
+		</a>
+	</li>
+	</ol>
+</div>
+
+
+<script type="text/javascript">
+var featLinks = [
+	["PC/ref.1146572","PC/ref.1146572"],
+	["PC/ref.1146584","PC/ref.1146584"],
+	["PC/ref.1146592","PC/ref.1146592"],
+	["","PC/ref.1146602"],
+	["PC/ref.1146546","PC/ref.1146546"],
+	["","PC/ref.1146606"],
+	["",""]
+];
+changeRelatedLink();
+</script>
+
+
+<!-- Center slogan -->
+
+<div>
+    <p class="slogan">Moving stories. Powerful images.</p>
+    <p class="sloganSubText">MCT Campus is the one-stop shop for all your content needs. We offer a complete lineup of news and feature stories, commentary, photos, graphics and illustrations for your print and electronic publication.</p>
+</div>
+
+
+
+<!-- 3 panel featured content -->
+
+<div class="featuredDiv">
+	<div class="featuredThumb">
+		<a href="/illustrations/advisory.php"><img src="/featured_content/campus/home/Illustrations.-201312105052.jpg" alt="Illustrations" title="Illustrations" /></a>
+	</div>
+	<div class="featuredHeadline center">Illustrations</div>
+	<p>MCT Illustrations offers more than 20 images in JPG format (300 dpi) each month. We have an archive of more than 20,000 illustrations, keyworded for easy use. Also available: a la carte illustrations from Op Art and from Bulls Press Illustrations.</p>
+	<div class="featuredSeeLatest"><a href="/illustrations/advisory.php">See our latest</a></div>
+</div>
+
+
+<div class="featuredDiv">
+	<div class="featuredThumb">
+		<a href="/faces/advisory.php"><img src="/featured_content/campus/home/Caricatures.-201312105052.jpg" alt="Caricatures" title="Caricatures" /></a>
+	</div>
+	<div class="featuredHeadline center">Caricatures</div>
+	<p>MCT Faces in the News offers one new image a week in JPG format (300 dpi). If they're in the news, they're in Faces in the News: actors, politicians, entertainers, etc.  We have an archive of more than 1,600 caricatures, keyworded for easy use.</p>
+	<div class="featuredSeeLatest"><a href="/faces/advisory.php">See our latest</a></div>
+</div>
+
+
+<div class="featuredDiv">
+	<div class="featuredThumb">
+		<a href="/graphics/live.php"><img src="/featured_content/campus/home/Graphics.-201312105052.jpg" alt="Graphics" title="Graphics" /></a>
+	</div>
+	<div class="featuredHeadline center">Graphics</div>
+	<p>MCT News Graphics offers breaking news and feature graphics for print and digital use. A growing number are being prepared specifically for use on websites, smartphones and tablet computers. Also available: Weekly Features graphics.</p>
+	<div class="featuredSeeLatest"><a href="/graphics/live.php">See our latest</a></div>
+</div>
+
+
+
+
+
+<!-- 4 panel right bar -->
+
+<div class="homeRightRail">
+
+    <div class="homeRightBox">
+
+        <img src="/includes/img/yearbook.gif" alt="Yearbook" title="Yearbook" align="right" />
+        <span class="featuredHeadline">Yearbooks</span>
+        <p style="margin-bottom: 5px;">MCT Campus caters to the yearbook crowd! We have more than 300,000 photos, illustrations, graphics, caricatures and OnePages. Our current event wrapups lead yearbook editors to great content.</p>
+        <p><a href="/yearbooks/">About Yearbooks</a> | <a href="/yearbooks/current.php">Current events</a></p>
+
+    </div>
+
+    <div class="homeRightBox">
+        <span class="featuredHeadline">Top Searches</span>
+        <div class="clear"></div>
+
+		<div class="homeRightBoxHalf" style="margin-right:15px;">
+			<ol>
+				<li>Mandela<br />
+				<p style="text-align:right;">
+					<a href="/visuals/search.php?query=Mandela">Visual</a>&nbsp;&nbsp;&nbsp;
+					<a href="/search/search_txt.php?query=Mandela">Text</a>
+				</p>
+			</li>
+				<li>Nelson Mandela<br />
+				<p style="text-align:right;">
+					<a href="/visuals/search.php?query=%22Nelson+Mandela%22">Visual</a>&nbsp;&nbsp;&nbsp;
+					<a href="/search/search_txt.php?query=%22Nelson+Mandela%22">Text</a>
+				</p>
+			</li>
+				<li>Christmas<br />
+				<p style="text-align:right;">
+					<a href="/visuals/search.php?query=Christmas">Visual</a>&nbsp;&nbsp;&nbsp;
+					<a href="/search/search_txt.php?query=Christmas">Text</a>
+				</p>
+			</li>
+			</ol>
+		</div>
+		<div class="homeRightBoxHalf">
+			<ol start="4">
+				<li>Pearl Harbor<br />
+				<p style="text-align:right;">
+					<a href="/visuals/search.php?query=%22Pearl+Harbor%22">Visual</a>&nbsp;&nbsp;&nbsp;
+					<a href="/search/search_txt.php?query=%22Pearl+Harbor%22">Text</a>
+				</p>
+			</li>
+				<li>Obama<br />
+				<p style="text-align:right;">
+					<a href="/visuals/search.php?query=Obama">Visual</a>&nbsp;&nbsp;&nbsp;
+					<a href="/search/search_txt.php?query=Obama">Text</a>
+				</p>
+			</li>
+				<li>Christmas Tree<br />
+				<p style="text-align:right;">
+					<a href="/visuals/search.php?query=%22Christmas+Tree%22">Visual</a>&nbsp;&nbsp;&nbsp;
+					<a href="/search/search_txt.php?query=%22Christmas+Tree%22">Text</a>
+				</p>
+			</li>
+			</ol>
+		</div>
+		<div class="clear"></div>
+
+    </div>
+
+</div>
+<div class="clear"></div>
+		</div>
+	</div>
+
+
+<script type="text/javascript">
+var relatedRefs = [];
+</script>
+
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+        var pageTracker = _gat._getTracker("UA-7650439-4");
+        pageTracker._trackPageview();
+        } catch(err) {}
+    </script>
+
+<!-- Start eloqua tracking code -->
+<script type="text/javascript" src="http://www.mctcampus.com/includes/elqNow/elqCfg.js"></script>
+<script type="text/javascript" src="http://www.mctcampus.com/includes/elqNow/elqImg.js"></script>
+<!-- End eloqua tracking code -->
+
+</body>
+</html>
+

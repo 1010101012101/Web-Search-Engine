@@ -1,0 +1,424 @@
+<!DOCTYPE html> <html lang="en-GB" > <head> <!-- Barlesque 2.58.8 --> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <meta name="description" content="The UK’s home of live news and live sport. With live Premier League and FA Cup football, and Formula 1, Olympics and cricket coverage. Plus politics, business, money and travel." /> <meta name="keywords" content="BBC, iPlayer Radio, Radio" />   <title>BBC - Radio 5 live - Home</title>        <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <script type="text/javascript" src="http://static.bbci.co.uk/frameworks/requirejs/0.13.1/sharedmodules/require.js"></script> <script type="text/javascript">  bbcRequireMap = {"jquery-1":"http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.7.2", "jquery-1.4":"http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.4", "jquery-1.9":"http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1", "swfobject-2":"http://static.bbci.co.uk/frameworks/swfobject/0.1.10/sharedmodules/swfobject-2", "demi-1":"http://static.bbci.co.uk/frameworks/demi/0.10.0/sharedmodules/demi-1", "gelui-1":"http://static.bbci.co.uk/frameworks/gelui/0.9.13/sharedmodules/gelui-1", "cssp!gelui-1/overlay":"http://static.bbci.co.uk/frameworks/gelui/0.9.13/sharedmodules/gelui-1/overlay.css", "istats-1":"http://static.bbci.co.uk/frameworks/istats/0.17.0/modules/istats-1", "relay-1":"http://static.bbci.co.uk/frameworks/relay/0.2.4/sharedmodules/relay-1", "clock-1":"http://static.bbci.co.uk/frameworks/clock/0.1.9/sharedmodules/clock-1", "canvas-clock-1":"http://static.bbci.co.uk/frameworks/clock/0.1.9/sharedmodules/canvas-clock-1", "cssp!clock-1":"http://static.bbci.co.uk/frameworks/clock/0.1.9/sharedmodules/clock-1.css", "jssignals-1":"http://static.bbci.co.uk/frameworks/jssignals/0.3.6/modules/jssignals-1", "jcarousel-1":"http://static.bbci.co.uk/frameworks/jcarousel/0.1.10/modules/jcarousel-1", "components/avPlayback":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/avPlayback", "components/bindRelLightbox":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/bindRelLightbox", "components/bindRelPopup":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/bindRelPopup", "components/charts":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/charts", "components/eventEmitter":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/eventEmitter", "components/favourites":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/favourites", "components/highlightsABTest":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/highlightsABTest", "components/homepageStats":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/homepageStats", "components/homepageStatsTarousel":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/homepageStatsTarousel", "components/lightbox":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/lightbox", "components/liveTab":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/liveTab", "components/manageFavourites":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/manageFavourites", "components/manage_favourites":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/manage_favourites", "components/nowAndNextService":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/nowAndNextService", "components/nowPlayingPolling":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/nowPlayingPolling", "components/playlists":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/playlists", "components/polling":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/polling", "components/responsiveimages":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/responsiveimages", "components/showLightbox":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/showLightbox", "components/showPlayer":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/showPlayer", "components/tabBarController":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/tabBarController", "components/track_lightbox":"http://static.bbci.co.uk/radio/392/1.5.4/modules/components/track_lightbox", "cssp!landing/css/ie7":"http://static.bbci.co.uk/radio/392/1.5.4/modules/landing/css/ie7.css", "cssp!landing/css/ie8":"http://static.bbci.co.uk/radio/392/1.5.4/modules/landing/css/ie8.css", "cssp!landing/css/landing":"http://static.bbci.co.uk/radio/392/1.5.4/modules/landing/css/landing.css", "cssp!landing/css/landing_320":"http://static.bbci.co.uk/radio/392/1.5.4/modules/landing/css/landing_320.css", "cssp!landing/css/landing_460":"http://static.bbci.co.uk/radio/392/1.5.4/modules/landing/css/landing_460.css", "cssp!landing/css/landing_724":"http://static.bbci.co.uk/radio/392/1.5.4/modules/landing/css/landing_724.css", "cssp!landing/css/orb-ie7":"http://static.bbci.co.uk/radio/392/1.5.4/modules/landing/css/orb-ie7.css", "cssp!landing/css/orb-ie8":"http://static.bbci.co.uk/radio/392/1.5.4/modules/landing/css/orb-ie8.css", "cssp!landing/css/orb-landing":"http://static.bbci.co.uk/radio/392/1.5.4/modules/landing/css/orb-landing.css", "cssp!landing/css/orb-landing_320":"http://static.bbci.co.uk/radio/392/1.5.4/modules/landing/css/orb-landing_320.css", "cssp!landing/css/orb-landing_480":"http://static.bbci.co.uk/radio/392/1.5.4/modules/landing/css/orb-landing_480.css", "cssp!landing/css/orb-landing_600":"http://static.bbci.co.uk/radio/392/1.5.4/modules/landing/css/orb-landing_600.css", "landing/js/landing":"http://static.bbci.co.uk/radio/392/1.5.4/modules/landing/js/landing", "landing/js/quickfind":"http://static.bbci.co.uk/radio/392/1.5.4/modules/landing/js/quickfind", "landing/js/responsiveimages":"http://static.bbci.co.uk/radio/392/1.5.4/modules/landing/js/responsiveimages", "plugins/jquery.appear":"http://static.bbci.co.uk/radio/392/1.5.4/modules/plugins/jquery.appear", "plugins/responsiveimages":"http://static.bbci.co.uk/radio/392/1.5.4/modules/plugins/responsiveimages", "polling":"http://static.bbci.co.uk/radio/392/1.5.4/modules/polling", "radioplayer":"http://static.bbci.co.uk/radio/392/1.5.4/modules/radioplayer", "responsive.load":"http://static.bbci.co.uk/radio/392/1.5.4/modules/responsive.load", "rmAjax":"http://static.bbci.co.uk/radio/392/1.5.4/modules/rmAjax", "rmAjaxMock":"http://static.bbci.co.uk/radio/392/1.5.4/modules/rmAjaxMock", "rmFlags":"http://static.bbci.co.uk/radio/392/1.5.4/modules/rmFlags", "snippets":"http://static.bbci.co.uk/radio/392/1.5.4/modules/snippets", "tarousel":"http://static.bbci.co.uk/radio/392/1.5.4/modules/tarousel", "tarouselCore":"http://static.bbci.co.uk/radio/392/1.5.4/modules/tarouselCore", "cssp!welcome/css/orb-welcome":"http://static.bbci.co.uk/radio/392/1.5.4/modules/welcome/css/orb-welcome.css", "cssp!welcome/css/welcome-copy":"http://static.bbci.co.uk/radio/392/1.5.4/modules/welcome/css/welcome-copy.css", "cssp!welcome/css/welcome":"http://static.bbci.co.uk/radio/392/1.5.4/modules/welcome/css/welcome.css", "welcome/js/namespace":"http://static.bbci.co.uk/radio/392/1.5.4/modules/welcome/js/namespace", "welcome/js/welcome":"http://static.bbci.co.uk/radio/392/1.5.4/modules/welcome/js/welcome"}; require({ baseUrl: 'http://static.bbci.co.uk/', paths: bbcRequireMap, waitSeconds: 30 }); </script>   <script type="text/javascript">/*<![CDATA[*/ if (typeof bbccookies_flag === 'undefined') { bbccookies_flag = 'ON'; } showCTA_flag = true; cta_enabled = (showCTA_flag && (bbccookies_flag === 'ON') ); (function(){var e="ckns_policy",m="Thu, 01 Jan 1970 00:00:00 GMT",k={ads:true,personalisation:true,performance:true,necessary:true};function f(p){if(f.cache[p]){return f.cache[p]}var o=p.split("/"),q=[""];do{q.unshift((o.join("/")||"/"));o.pop()}while(q[0]!=="/");f.cache[p]=q;return q}f.cache={};function a(p){if(a.cache[p]){return a.cache[p]}var q=p.split("."),o=[];while(q.length&&"|co.uk|com|".indexOf("|"+q.join(".")+"|")===-1){if(q.length){o.push(q.join("."))}q.shift()}f.cache[p]=o;return o}a.cache={};function i(o,t,p){var z=[""].concat(a(window.location.hostname)),w=f(window.location.pathname),y="",r,x;for(var s=0,v=z.length;s<v;s++){r=z[s];for(var q=0,u=w.length;q<u;q++){x=w[q];y=o+"="+t+";"+(r?"domain="+r+";":"")+(x?"path="+x+";":"")+(p?"expires="+p+";":"");bbccookies.set(y,true)}}}window.bbccookies={_setEverywhere:i,cookiesEnabled:function(){var o="ckns_testcookie"+Math.floor(Math.random()*100000);this.set(o+"=1");if(this.get().indexOf(o)>-1){g(o);return true}return false},set:function(o){return document.cookie=o},get:function(){return document.cookie},_setPolicy:function(o){return h.apply(this,arguments)},readPolicy:function(o){return b.apply(this,arguments)},_deletePolicy:function(){i(e,"",m)},isAllowed:function(){return true},_isConfirmed:function(){return c()!==null},_acceptsAll:function(){var o=b();return o&&!(j(o).indexOf("0")>-1)},_getCookieName:function(){return d.apply(this,arguments)},_showPrompt:function(){var o=(!this._isConfirmed()&&window.cta_enabled&&this.cookiesEnabled()&&!window.bbccookies_disable);return(window.orb&&window.orb.fig)?o&&(window.orb.fig("no")||window.orb.fig("ck")):o}};bbccookies._getPolicy=bbccookies.readPolicy;function d(p){var o=(""+p).match(/^([^=]+)(?==)/);return(o&&o.length?o[0]:"")}function j(o){return""+(o.ads?1:0)+(o.personalisation?1:0)+(o.performance?1:0)}function h(r){if(typeof r==="undefined"){r=k}if(typeof arguments[0]==="string"){var o=arguments[0],q=arguments[1];if(o==="necessary"){q=true}r=b();r[o]=q}else{if(typeof arguments[0]==="object"){r.necessary=true}}var p=new Date();p.setYear(p.getFullYear()+1);p=p.toUTCString();bbccookies.set(e+"="+j(r)+";domain=bbc.co.uk;path=/;expires="+p+";");bbccookies.set(e+"="+j(r)+";domain=bbc.com;path=/;expires="+p+";");return r}function l(o){if(o===null){return null}var p=o.split("");return{ads:!!+p[0],personalisation:!!+p[1],performance:!!+p[2],necessary:true}}function c(){var o=new RegExp("(?:^|; ?)"+e+"=(\\d\\d\\d)($|;)"),p=document.cookie.match(o);if(!p){return null}return p[1]}function b(o){var p=l(c());if(!p){p=k}if(o){return p[o]}else{return p}}function g(o){return document.cookie=o+"=;expires="+m+";"}function n(){var o='<script type="text/javascript" src="http://static.bbci.co.uk/frameworks/bbccookies/0.6.2/script/bbccookies.js"><\/script>';if(window.bbccookies_flag==="ON"&&!bbccookies._acceptsAll()&&!window.bbccookies_disable){document.write(o)}}n()})(); /*]]>*/</script>  <script> window.orb = window.orb || {}; (function() {
+    'use strict';
+    window.fig = window.fig || {};
+    window.fig.manager = {
+                include: function(w) {
+            w = w || window;
+            var d = w.document,
+                c = d.cookie,
+                f = c.match(/ckns_orb_fig=([^;]+)/);
+
+            if ( !f && c.indexOf('ckns_orb_nofig=1') > -1 ) {
+                this.setFig(w, {no:1});
+            }
+            else {
+                if (f) {
+                    eval('f = ' + decodeURIComponent(RegExp.$1) + ';')
+                    this.setFig(w, f);                  
+                }
+                d.write('<script src="http://www.live.bbc.co.uk/frameworks/fig/1/fig.js"><'+'/script>');
+            }         
+  
+        },
+                confirm: function(w) {
+            w = w || window;
+            if (w.orb && w.orb.fig && w.orb.fig('no')) {
+               this.setFigCookie(w);
+            }
+            
+            if (w.orb === undefined || w.orb.fig === undefined) {
+                this.setFig(w, {no:1});
+                this.setFigCookie(w);
+            }
+        },
+                setFigCookie: function(w) {
+            w.document.cookie = 'ckns_orb_nofig=1; expires=' + new Date(new Date().getTime() + 1000 * 60 * 10).toGMTString() + ';';
+        },
+                setFig: function(w, f){
+            (function(){var o=f;w.orb=w.orb||{};w.orb.fig=function(k){return (arguments.length)? o[k]:o};})();
+        }
+    }
+})();
+ fig.manager.include(); </script>  
+<!--[if (gt IE 8) | (IEMobile)]><!-->
+<link rel="stylesheet" href="http://static.bbci.co.uk/frameworks/barlesque/2.58.8/orb/4/style/orb.css">
+<!--<![endif]-->
+
+<!--[if (lt IE 9) & (!IEMobile)]>
+<link rel="stylesheet" href="http://static.bbci.co.uk/frameworks/barlesque/2.58.8/orb/4/style/orb-ie.css">
+<![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/modules/plugin/favourite/1.1.14/1_1_14/style/favourite.min.css"  />  <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/modules/personalisation/0.8.1/style/dialog.css"  />  <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/id/0.23.0/style/id-cta.css"  />  <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/radio/392/1.5.4/style/components/orb-base.css"  />  <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/radio/392/1.5.4/style/components/orb-contact.css"  />  <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/radio/392/1.5.4/style/components/lightbox.css"  />  <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/radio/392/1.5.4/style/components/showLightbox.css"  />  <script type="text/javascript">/*<![CDATA[*/ (function(undefined){if(!window.bbc){window.bbc={}}var ROLLING_PERIOD_DAYS=30;window.bbc.Mandolin=function(id,segments,opts){var now=new Date().getTime(),storedItem,DEFAULT_START=now,DEFAULT_RATE=1,COOKIE_NAME="ckpf_mandolin";opts=opts||{};this._id=id;this._segmentSet=segments;this._store=new window.window.bbc.Mandolin.Storage(COOKIE_NAME);this._opts=opts;this._rate=(opts.rate!==undefined)?+opts.rate:DEFAULT_RATE;this._startTs=(opts.start!==undefined)?new Date(opts.start).getTime():new Date(DEFAULT_START).getTime();this._endTs=(opts.end!==undefined)?new Date(opts.end).getTime():daysFromNow(ROLLING_PERIOD_DAYS);this._signupEndTs=(opts.signupEnd!==undefined)?new Date(opts.signupEnd).getTime():this._endTs;this._segment=null;if(typeof id!=="string"){throw new Error("Invalid Argument: id must be defined and be a string")}if(Object.prototype.toString.call(segments)!=="[object Array]"){throw new Error("Invalid Argument: Segments are required.")}if(opts.rate!==undefined&&(opts.rate<0||opts.rate>1)){throw new Error("Invalid Argument: Rate must be between 0 and 1.")}if(this._startTs>this._endTs){throw new Error("Invalid Argument: end date must occur after start date.")}if(!(this._startTs<this._signupEndTs&&this._signupEndTs<=this._endTs)){throw new Error("Invalid Argument: SignupEnd must be between start and end date")}removeExpired.call(this,now);if((storedItem=this._store.getItem(this._id))){this._segment=storedItem.segment}else{if(this._startTs<=now&&now<this._signupEndTs&&now<=this._endTs&&this._store.isEnabled()===true){this._segment=pick(segments,this._rate);if(opts.end===undefined){this._store.setItem(this._id,{segment:this._segment})}else{this._store.setItem(this._id,{segment:this._segment,end:this._endTs})}log.call(this,"mandolin_segment")}}log.call(this,"mandolin_view")};window.bbc.Mandolin.prototype.getSegment=function(){return this._segment};function log(actionType,params){var that=this;require(["istats-1"],function(istats){istats.log(actionType,that._id+":"+that._segment,params?params:{})})}function removeExpired(expires){var items=this._store.getItems(),expiresInt=+expires;for(var key in items){if(items[key].end!==undefined&&+items[key].end<expiresInt){this._store.removeItem(key)}}}function getLastExpirationDate(data){var winner=0,rollingExpire=daysFromNow(ROLLING_PERIOD_DAYS);for(var key in data){if(data[key].end===undefined&&rollingExpire>winner){winner=rollingExpire}else{if(+data[key].end>winner){winner=+data[key].end}}}return(winner)?new Date(winner):new Date(rollingExpire)}window.bbc.Mandolin.prototype.log=function(params){log.call(this,"mandolin_log",params)};window.bbc.Mandolin.prototype.convert=function(params){log.call(this,"mandolin_convert",params);this.convert=function(){}};function daysFromNow(n){var endDate;endDate=new Date().getTime()+(n*60*60*24)*1000;return endDate}function pick(segments,rate){var picked,min=0,max=segments.length-1;if(typeof rate==="number"&&Math.random()>rate){return null}do{picked=Math.floor(Math.random()*(max-min+1))+min}while(picked>max);return segments[picked]}window.bbc.Mandolin.Storage=function(name){this._cookieName=name;this._isEnabled=(bbccookies.isAllowed(this._cookieName)===true&&bbccookies.cookiesEnabled()===true)};window.bbc.Mandolin.Storage.prototype.setItem=function(key,value){var storeData=this.getItems();storeData[key]=value;this.save(storeData);return value};window.bbc.Mandolin.Storage.prototype.isEnabled=function(){return this._isEnabled};window.bbc.Mandolin.Storage.prototype.getItem=function(key){var storeData=this.getItems();return storeData[key]};window.bbc.Mandolin.Storage.prototype.removeItem=function(key){var storeData=this.getItems();delete storeData[key];this.save(storeData)};window.bbc.Mandolin.Storage.prototype.getItems=function(){return deserialise(this.readCookie(this._cookieName)||"")};window.bbc.Mandolin.Storage.prototype.save=function(data){window.bbccookies.set(this._cookieName+"="+serialise(data)+"; expires="+getLastExpirationDate(data).toUTCString()+";")};window.bbc.Mandolin.Storage.prototype.readCookie=function(name){var nameEQ=name+"=",ca=window.bbccookies.get().split(";"),i,c;for(i=0;i<ca.length;i++){c=ca[i];while(c.charAt(0)===" "){c=c.substring(1,c.length)}if(c.indexOf(nameEQ)===0){return c.substring(nameEQ.length,c.length)}}return null};function serialise(o){var str="";for(var p in o){if(o.hasOwnProperty(p)){str+='"'+p+'"'+":"+(typeof o[p]==="object"?(o[p]===null?"null":"{"+serialise(o[p])+"}"):'"'+o[p].toString().replace(/"/g,'\\"')+'"')+","}}return str.replace(/,\}/g,"}").replace(/,$/g,"")}function deserialise(str){var o;eval("o = {"+str+"}");return o}})(); /*]]>*/</script>  <script>  document.documentElement.className += (document.documentElement.className? ' ' : '') + 'orb-js';  fig.manager.confirm(); </script> <script src="http://static.bbci.co.uk/frameworks/barlesque/2.58.8/orb/4/script/orb/api.min.js"></script>   <script type="text/javascript"> /*<![CDATA[*/ function oqsSurveyManager(w, flag) { /* We use the pulse survey 70% of the time */ var defaultThreshold = 0.7, usePulseThreshold = (flag === 'OFF')? 1 : defaultThreshold; w.oqs = w.oqs || {}; w.oqs.usePulseThreshold = (w.document.cookie.match(/(?:^|; *)ckns_oqs_usePulseThreshold=([\d.]+)/)? RegExp.$1 : usePulseThreshold); w.oqs.usePulse = (w.Math.random() < w.oqs.usePulseThreshold); if (!w.oqs.usePulse) { /* Please note that this script and it's unminified version are included 3 times in the Barlesque code base - one for each Barlesque version */ w.document.write('<script type="text/javascript" src="http://static.bbci.co.uk/frameworks/barlesque/2.58.8/orb/4/script/vendor/edr.js"><'+'/script>'); } } oqsSurveyManager(window, 'ON'); /*]]>*/ </script>   <script type="text/javascript">  bbcRequireMap['plugins'] = 'http://static.bbci.co.uk/modules/plugin/favourite/1.1.14/modules/1_1_14/plugins';  bbcRequireMap['profiles'] = 'http://static.bbci.co.uk/modules/plugin/favourite/1.1.14/1_1_14/profiles';  bbcRequireMap['personalisation'] = 'http://static.bbci.co.uk/modules/personalisation/0.8.1/modules/personalisation';  require({paths: bbcRequireMap});  </script>   <script type="text/javascript"> (function () { if (! window.require) { throw new Error('idcta: could not find require'); } var map = {}; map['idapp-1'] = 'http://static.bbci.co.uk/idapp/0.61.5/modules/idapp/idapp-1'; map['idcta/idcta-1'] = 'http://static.bbci.co.uk/id/0.23.0/modules/idcta/idcta-1'; require({paths: map}); define('id-config', {"idapp":{"version":"0.61.5","hostname":"ssl.bbc.co.uk","tld":"bbc.co.uk"},"idtranslations":{"version":"0.27.1"},"identity":{"baseUrl":"https:\/\/talkback.live.bbc.co.uk\/identity"},"pathway":{"name":null,"staticAssetUrl":"http:\/\/static.bbci.co.uk\/idapp\/0.61.5\/modules\/idapp\/idapp-1\/View.css"}}); })(); </script>   <script type="text/javascript"> /* <![CDATA[ */ define('id-statusbar-config', { 'translation_signedout': "Sign in", 'translation_signedin': "Your account", 'use_overlay' : true, 'signin_url' : "https://ssl.bbc.co.uk/id/signin?ptrt=http%3A%2F%2Fwww.bbc.co.uk%2F5live", 'locale' : "en-GB", 'policyname' : "", 'ptrt' : "http://www.bbc.co.uk/5live" }); /* ]]> */ </script>   <script type="text/javascript" src="http://static.bbci.co.uk/frameworks/pulsesurvey/0.9.3/script/pulse.js"></script>  <script type="text/javascript" src="http://www.bbc.co.uk/survey/pulse/conf.js"></script>  <script type="text/javascript"> pulse.translations.intro = "We are always looking to improve the site and your opinions count."; pulse.translations.question = "Do you have a few minutes to tell us what you think about this site?"; pulse.translations.accept = "Yes"; pulse.translations.reject = "No";  pulse.isResponsive = true; </script> <script type="text/html" id="orb-pulse-tmpl"><![CDATA[ <section> <div id="pulse-container" class="pulse-banner orb-banner-wrapper"> <div class="orb-banner b-g-p b-r b-f"> <div class="orb-banner-inner"> <h2 class="orb-banner-title">Tell us what you think</h2> <div class="orb-banner-content"> <p>{{pulseintro}}</p> <p class="pulse-question">{{pulsequestion}}</p> </div> <ul class="orb-banner-options"> <li><a href="{{pulseaccepthref}}" id="pulse-accept">{{pulseaccept}}</a></li> <li><button type="button" id="pulse-reject">{{pulsereject}}</button></li> </ul> </div> </div> </div> </section> ]]></script>  <!--[if gt IE 8]><!--> <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/radionavresponsive/168/1.0.0/styles/radionav.css" /> <!--<![endif]--> <!--[if lt IE 9]> <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/radionavresponsive/168/1.0.0/styles/radionav_ie.css" /> <![endif]--> <script type="text/javascript" src="http://static.bbci.co.uk/radionavresponsive/168/1.0.0/modules/compiled.js"></script>  <!-- BBCDOTCOM template:client-side orb smart, showDotcom: true, adsEnabled: true -->
+
+ <style type="text/css">.bbccom_display_none{display:none;}</style>
+<script type="text/javascript">
+    /*<![CDATA[*/
+    if (bbcdotcom === undefined) {
+        var bbcdotcom = {
+            data: {},
+            advert: {
+                write: function () {},
+                show: function () {},
+                isActive: function () {
+                    return false;
+                }
+            },
+            objects: function(str) {
+                return false;
+            }
+        };
+    }
+    bbcdotcom.objects = function (strName, action, obj) {
+        var nameParts, i, len;
+        nameParts = strName.split(".");
+        if (action === undefined) {
+            action = 'valid';
+        }
+        if (obj === undefined) {
+            obj = window;
+        }
+        for (i = 0, len = nameParts.length; i < len; i++) {
+            if (obj[nameParts[i]] === undefined) {
+                if (action === 'create') {
+                    obj[nameParts[i]] = {};
+                } else {
+                    return false;
+                }
+            } else if (typeof obj[nameParts[i]] === 'function') {
+                if(obj[nameParts[i]]() !== undefined) {
+                    return obj[nameParts[i]]();
+                }
+            }
+            obj = obj[nameParts[i]];
+        }
+        return obj;
+    };
+    bbcdotcom.objects('bbcdotcom.config', 'create');
+    bbcdotcom.config =(function(ads, analytics) {
+        var adsEnabled=ads,
+            analyticsEnabled=analytics,
+            jsPrefix="http://static.bbci.co.uk/bbcdotcom/0.3.215/script",
+            swfPrefix="http://static.bbci.co.uk/bbcdotcom/0.3.215/swf",
+            cssPrefix="http://static.bbci.co.uk/bbcdotcom/0.3.215/style";
+        return {
+            setAdsEnabled: function(enabled) {
+                /* Once it has been disable to not allow it to be enabled */
+                adsEnabled = (adsEnabled !== 0) ? enabled : 0;
+            },
+            isAdsEnabled: function() {
+                return adsEnabled;
+            },
+            setAnalyticsEnabled: function(enabled) {
+                /* Once it has been disable to not allow it to be enabled */
+                analyticsEnabled = (analyticsEnabled !== 0) ? enabled : 0;
+            },
+            isAnalyticsEnabled: function() {
+                return analyticsEnabled;
+            },
+            setJsPrefix: function (prefix) {
+                jsPrefix = prefix;
+            },
+            getJsPrefix: function () {
+                return jsPrefix;
+            },
+            setSwfPrefix: function (prefix) {
+                swfPrefix = prefix;
+            },
+            getSwfPrefix: function () {
+                return swfPrefix;
+            },
+            setCssPrefix: function (prefix) {
+                cssPrefix = prefix;
+            },
+            getCssPrefix: function () {
+                return cssPrefix;
+            }
+        };
+    }(1, 1));
+    bbcdotcom.objects('create', bbcdotcom, 'siteCatalyst');
+    bbcdotcom.siteCatalyst = {"ch":"","cdp":"3","ce":"UTF-8"};
+    bbcdotcom.objects('bbcdotcom.stats', 'create');
+    /* Create BBC.adverts skeleton */
+    if (BBC === undefined) {
+        var BBC = {};
+    }
+    if (BBC.adverts === undefined) {
+        BBC.adverts = {
+            setZone: function () {},
+            configure: function () {},
+            write: function () {},
+            show: function () {},
+            isActive: function () {
+                return false;
+            },
+            setScriptRoot: function () {},
+            setImgRoot: function () {},
+            getAdvertTag: function () {},
+            getSectionPath: function() {},
+            showPartnerButtons: function() {}
+        };
+    }
+    (function(){
+        if(typeof require !== 'undefined') {
+            require({
+                paths:{
+                    "bbcdotcom":"http://static.bbci.co.uk/bbcdotcom/0.3.215/script"
+                }
+            });
+        }
+    })();
+    document.write('<script type="text/javascript" src="'+document.location.protocol+'//tps.bbc.com/wwscripts/data">\x3C/script>');
+    /*]]>*/
+</script>
+<script type="text/javascript">
+    /*<![CDATA[*/
+    if (typeof bbcdotcom.data == 'undefined' || typeof bbcdotcom.data.a == 'undefined' || typeof bbcdotcom.data.b == 'undefined' || typeof bbcdotcom.data.c == 'undefined') {
+        bbcdotcom.data = {a:0,b:0,c:0};
+    }
+    if (bbcdotcom.data.a == 1) {
+        document.write('<script type="text/javascript" src="'+document.location.protocol+'//www.bbc.co.uk/wwscripts/flag">\x3C/script>');
+    }
+    /*]]>*/
+</script>                           <script type="text/javascript">         /*<![CDATA[*/
+    if (typeof bbcdotcom.flag == 'undefined' || bbcdotcom.flag.a != 1) {
+                bbcdotcom.data.a = 0;
+    }
+</script>
+ <script type="text/javascript"> /*<![CDATA[*/ bbcdotcom.adUnit = 'bbccom.live.site.mobile.news/5live'; /*]]>*/ </script> <script type="text/javascript"> /*<![CDATA[*/ if (typeof orb !== 'undefined' && typeof orb.fig === 'function') { bbcdotcom.data = { a: orb.fig('ad')? 1 : 0, b: (0 == orb.fig('uk')) ? 1 : 0, c: orb.fig('ap')? 1 : 0 }; } else { require(['orb/fig'], function (orbFig) { if (typeof orbFig.ad !== 'undefined' && typeof orbFig.uk !== 'undefined' && typeof orbFig.ap !== 'undefined') { bbcdotcom.data = { a: orbFig.ad, b: (0 == orbFig.uk) ? 1 : 0, c: orbFig.ap }; } }); } if (typeof bbcdotcom.data.a !== 'undefined' && bbcdotcom.data.a == 1) {  document.write('<script type="text/javascript" src="'+document.location.protocol+'//www.bbc.co.uk/wwscripts/flag">\x3C/script>'); } /*]]>*/ </script>  <script type="text/javascript">  /*<![CDATA[*/ if (typeof bbcdotcom.flag == 'undefined' || (typeof bbcdotcom.data.a !== 'undefined' && bbcdotcom.flag.a != 1)) {  bbcdotcom.data.a = 0; } if (typeof bbcdotcom.data.a !== 'undefined' && bbcdotcom.data.a == 1) {  document.write('<link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/bbcdotcom/0.3.215/style/mobile/bbccom.css" />'); } /*]]>*/ </script>  <script type="text/javascript">  /*<![CDATA[*/ if (bbcdotcom.data.a == 1 || bbcdotcom.data.b == 1) { document.write('<script type="text/javascript" src="http://static.bbci.co.uk/bbcdotcom/0.3.215/script/mobile/smart.js">\x3C/script>'); } /*]]>*/ </script>  <script type="text/javascript">  /*<![CDATA[*/ if (bbcdotcom.data.a == 1 || bbcdotcom.data.b == 1) { bbcdotcom.config.setAdsEnabled(bbcdotcom.data.a); bbcdotcom.config.setAnalyticsEnabled(bbcdotcom.data.b);  bbcdotcom.advert.setData(bbcdotcom.data); if (bbcdotcom.advert.isActive('analytics')) { document.write(unescape('<div id="gnlAnalyticsEnabled" class="bbccom_display_none"></div>')); } } /* * TODO - Remove once mobile dot support has been removed. */ (function() { if ('undefined' !== typeof document && 'undefined' !== typeof document.cookie && 'undefined' !== typeof document.write) { var dateObj = new Date(), domain = (window.location.hostname.indexOf('.bbc.com') !== -1) ? '.bbc.com' : '.bbc.co.uk'; dateObj.setDate(dateObj.getDate() + 365); document.cookie = 'ckpf_ww_mobile_js=on; path=/; domain=' + domain + '; expires=' + dateObj.toUTCString(); } }()); /*]]>*/ </script>   <!--[if lt IE 9]> <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/radio/392/1.5.4/style/components/below_ie8.css" /> <![endif]--> <!--[if IE 9]> <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/radio/392/1.5.4/style/components/ie9.css" /> <![endif]-->  <link rel="shortcut icon" href="http://static.bbci.co.uk/radio/392/1.5.4/img/icons/favicon.ico" />  <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/radio/392/1.5.4/style/themes/orb-bbc_radio_five_live.css"/>               </head> <body class="radio no-js no-touch rn-network-view" id="service-5live">         <div id="blq-global"> <div id="blq-pre-mast"></div> </div>  <script type="text/html" id="blq-bbccookies-tmpl"><![CDATA[ <section> <div id="bbccookies" class="bbccookies-banner orb-banner-wrapper bbccookies-d"> <div id="bbccookies-prompt" class="orb-banner b-g-p b-r b-f"> <h2 class="orb-banner-title"> Cookies on the BBC website </h2> <p class="orb-banner-content" dir="ltr"> We use cookies to ensure that we give you the best experience on our website.<span class="bbccookies-international-message"> We also use cookies to ensure we show you advertising that is relevant to you.</span> If you continue without changing your settings, we'll assume that you are happy to receive all cookies on the BBC website. However, if you would like to, you can change your cookie settings at any time. </p> <ul class="orb-banner-options"> <li id="bbccookies-continue"> <button type="button" id="bbccookies-continue-button">Continue</button> </li> <li id="bbccookies-settings"> <a href="/privacy/cookies/managing/cookie-settings.html">Change settings</a> </li> <li id="bbccookies-more"><a href="/privacy/cookies/bbc">Find out more</a></li></ul> </div> </div> </section> ]]></script> <script type="text/javascript">/*<![CDATA[*/ (function(){if(bbccookies._showPrompt()){var g=document,b=g.getElementById("blq-pre-mast"),e=g.getElementById("blq-bbccookies-tmpl"),a,f;if(b&&g.createElement){a=g.createElement("div");f=e.innerHTML;f=f.replace("<"+"![CDATA[","").replace("]]"+">","");a.innerHTML=f;b.appendChild(a);blqCookieContinueButton=g.getElementById("bbccookies-continue-button");blqCookieContinueButton.onclick=function(){a.parentNode.removeChild(a);return false};bbccookies._setPolicy()}var c=g.getElementById("bbccookies");if(c&&!window.orb.fig("uk")){c.className=c.className.replace(/\bbbccookies-d\b/,"");c.className=c.className+(" bbccookies-w")}}})(); /*]]>*/</script>   <script type="text/javascript">/*<![CDATA[*/ bbcFlagpoles_istats = 'ON'; istatsTrackingUrl = '//sa.bbc.co.uk/bbc/bbc/s?name=5live.page&event_master_brand=bbc_radio_five_live&p_embed_addto=1&p_noun=favourite&pf_v=1_1_14&pal_route=service_show&ml_name=barlesque&app_type=web&language=en-GB&ml_version=0.17.0&pal_webapp=radio&prod_name=5live&app_name=5live'; if (window.istats_countername) { istatsTrackingUrl = istatsTrackingUrl.replace(/([?&]name=)[^&]+/ig, '$1' + istats_countername); } (function() { if ( /\bIDENTITY=/.test(document.cookie) ) { istatsTrackingUrl += '&bbc_identity=1'; } var c = (document.cookie.match(/\bckns_policy=(\d\d\d)/)||[]).pop() || ''; istatsTrackingUrl += '&bbc_mc=' + (c? 'ad'+c.charAt(0)+'ps'+c.charAt(1)+'pf'+c.charAt(2) : 'not_set'); if ( /\bckns_policy=\d\d0/.test(document.cookie) ) { istatsTrackingUrl += '&ns_nc=1'; } var screenWidthAndHeight = 'unavailable'; if (window.screen && screen.width && screen.height) { screenWidthAndHeight = screen.width + 'x' + screen.height; } istatsTrackingUrl += ('&screen_resolution=' + screenWidthAndHeight); istatsTrackingUrl += '&blq_s=4&blq_r=2.7&blq_v=default'; })(); /*]]>*/</script>  <!-- Begin iStats 20100118 (UX-CMC 1.1009.3) --> <script type="text/javascript">/*<![CDATA[*/ (function() { window.istats || (istats = {}); var cookieDisabled = (document.cookie.indexOf('NO-SA=') != -1), hasCookieLabels = (document.cookie.indexOf('sa_labels=') != -1), hasClickThrough = /^#sa-(.*?)(?:-sa(.*))?$/.test(document.location.hash), runSitestat = !cookieDisabled && !hasCookieLabels && !hasClickThrough && !istats._linkTracked; if (runSitestat && bbcFlagpoles_istats === 'ON') { sitestat(istatsTrackingUrl); } else { window.ns_pixelUrl = istatsTrackingUrl; /* used by Flash library to track */ } function sitestat(n){var j=document,f=j.location,b="";if(j.cookie.indexOf("st_ux=")!=-1){var k=j.cookie.split(";");var e="st_ux",h=document.domain,a="/";if(typeof ns_!="undefined"&&typeof ns_.ux!="undefined"){e=ns_.ux.cName||e;h=ns_.ux.cDomain||h;a=ns_.ux.cPath||a}for(var g=0,f=k.length;g<f;g++){var m=k[g].indexOf("st_ux=");if(m!=-1){b="&"+unescape(k[g].substring(m+6))}}document.cookie=e+"=; expires="+new Date(new Date().getTime()-60).toGMTString()+"; path="+a+"; domain="+h}ns_pixelUrl=n;n=ns_pixelUrl+"&ns__t="+(new Date().getTime())+"&ns_c="+((j.characterSet)?j.characterSet:j.defaultCharset)+"&ns_ti="+escape(j.title)+b+"&ns_jspageurl="+escape(f&&f.href?f.href:j.URL)+"&ns_referrer="+escape(j.referrer);if(n.length>2000&&n.lastIndexOf("&")){n=n.substring(0,n.lastIndexOf("&")+1)+"ns_cut="+n.substring(n.lastIndexOf("&")+1,n.lastIndexOf("=")).substring(0,40)}(j.images)?new Image().src=n:j.write('<p><i'+'mg src="'+n+'" height="1" width="1" alt="" /></p>')}; })(); /*]]>*/</script> <noscript><p style="position: absolute; top: -999em;"><img src="//sa.bbc.co.uk/bbc/bbc/s?name=5live.page&amp;event_master_brand=bbc_radio_five_live&amp;p_embed_addto=1&amp;p_noun=favourite&amp;pf_v=1_1_14&amp;pal_route=service_show&amp;ml_name=barlesque&amp;app_type=web&amp;language=en-GB&amp;ml_version=0.17.0&amp;pal_webapp=radio&amp;prod_name=5live&amp;app_name=5live&amp;blq_s=4&amp;blq_r=2.7&amp;blq_v=default" height="1" width="1" alt="" /></p></noscript> <!-- End iStats (UX-CMC) -->      <!--[if (gt IE 8) | (IEMobile)]><!--> <header id="orb-banner" role="banner"> <!--<![endif]--> <!--[if (lt IE 9) & (!IEMobile)]> <![if (IE 8)]> <header id="orb-banner" role="banner" class="orb-old-ie orb-ie8"> <![endif]> <![if (IE 7)]> <header id="orb-banner" role="banner" class="orb-old-ie orb-ie7"> <![endif]> <![if (IE 6)]> <header id="orb-banner" role="banner" class="orb-old-ie orb-ie6"> <![endif]> <![endif]--> <div id="orb-header"  class="orb-nav-pri orb-nav-pri-black orb-nav-empty"  > <div class="orb-nav-pri-container b-r b-g-p"> <div class="orb-nav-section orb-nav-blocks"> <a href="/"> <img class="orb-nav-theme-dynamic" src="http://static.bbci.co.uk/frameworks/barlesque/2.58.8/orb/4/img/bbc-blocks-light.png" width="84" height="24" alt="BBC" data-activesrc="http://static.bbci.co.uk/frameworks/barlesque/2.58.8/orb/4/img/bbc-blocks-dark.png"/> </a> </div> <section> <div class="orb-skip-links"> <h2>Accessibility links</h2> <ul>  <li><a href="/accessibility/">Accessibility Help</a></li> </ul> </div> </section>  <div class="orb-nav-section orb-nav-id orb-nav-focus orb-nav-id-default">     <a id="idcta-link" href="https://ssl.bbc.co.uk/id/status?ptrt=http%3A%2F%2Fwww.bbc.co.uk%2F5live"><img id="idcta-image" src="http://static.bbci.co.uk/id/0.23.0/img/bbcid_orb_signin_light.png" alt="" width="18" height="18"   class="orb-nav-theme-dynamic" data-activesrc="http://static.bbci.co.uk/id/0.23.0/img/bbcid_orb_signin_dark.png"/><span id="idcta-username">BBC iD</span></a>           </div>  <nav role="navigation" class="orb-nav"> <div class="orb-nav-section orb-nav-links orb-nav-focus" id="orb-nav-links"> <h2>BBC navigation</h2> <ul>    <li  class="orb-nav-news orb-d"  > <a href="/news/">News</a> </li>    <li  class="orb-nav-newsdotcom orb-w"  > <a href="http://www.bbc.com/news/">News</a> </li>    <li  class="orb-nav-sport"  > <a href="/sport/">Sport</a> </li>    <li  class="orb-nav-weather"  > <a href="/weather/">Weather</a> </li>    <li  class="orb-nav-shop orb-w"  > <a href="http://shop.bbc.com/">Shop</a> </li>    <li  class="orb-nav-iplayer orb-d"  > <a href="/iplayer/">iPlayer</a> </li>    <li  class="orb-nav-capital orb-w"  > <a href="http://www.bbc.com/capital/">Capital</a> </li>    <li  class="orb-nav-culture orb-w"  > <a href="http://www.bbc.com/culture/">Culture</a> </li>    <li  class="orb-nav-tv"  > <a href="/tv/">TV</a> </li>    <li  class="orb-nav-radio"  > <a href="/radio/">Radio</a> </li>    <li  class="orb-nav-cbbc"  > <a href="/cbbc/">CBBC</a> </li>    <li  class="orb-nav-cbeebies"  > <a href="/cbeebies/">CBeebies</a> </li>    <li  class="orb-nav-comedy"  > <a href="/comedy/">Comedy</a> </li>    <li  class="orb-nav-food"  > <a href="/food/">Food</a> </li>    <li  class="orb-nav-history"  > <a href="/history/">History</a> </li>    <li  class="orb-nav-learning"  > <a href="/learning/">Learning</a> </li>    <li  class="orb-nav-music"  > <a href="/music/">Music</a> </li>    <li  class="orb-nav-science"  > <a href="/science/">Science</a> </li>    <li  class="orb-nav-nature"  > <a href="/nature/">Nature</a> </li>    <li  class="orb-nav-local"  > <a href="/local/">Local</a> </li>    <li  class="orb-nav-travelnews"  > <a href="/travelnews/">Travel News</a> </li>    <li  class="orb-nav-fullaz"  > <a href="/a-z/">Full A-Z</a> </li>    <li id="orb-nav-more"><a href="#orb-footer" data-alt="More">Menu<span class="orb-icon orb-icon-arrow"></span></a></li> </ul> </div> </nav> <div class="orb-nav-section orb-nav-search"> <a href="http://search.bbc.co.uk/search"> <img class="orb-nav-theme-dynamic" src="http://static.bbci.co.uk/frameworks/barlesque/2.58.8/orb/4/img/orb-search-light.png" width="18" height="18" alt="Search the BBC" data-activesrc="http://static.bbci.co.uk/frameworks/barlesque/2.58.8/orb/4//img/orb-search-dark.png"/> </a> <form class="b-f" id="orb-search-form" role="search" method="get" action="http://search.bbc.co.uk/search" accept-charset="utf-8"> <div>  <input type="hidden" name="uri" value="/5live" />   <label for="orb-search-q">Search the BBC</label> <input id="orb-search-q" type="text" name="q" placeholder="Search" /> <input type="image" id="orb-search-button" src="http://static.bbci.co.uk/frameworks/barlesque/2.58.8/orb/4/img/orb-search-dark.png" width="17" height="17" alt="Search the BBC" /> </div> </form> </div> </div> <div id="orb-panels"  > <script type="text/template" id="orb-panel-template"><![CDATA[ <div id="orb-panel-<%= panelname %>" class="orb-panel" aria-labelledby="orb-nav-<%= panelname %>"> <div class="orb-panel-content b-g-p b-r"> <%= panelcontent %> </div> </div> ]]></script> </div> </div> </header> <!-- Styling hook for shared modules only --> <div id="orb-modules">                      <div id="blq-local-nav"> <div id="masthead">   <!-- esi include -->        <!--[if IE 7]> <div id="responsivenav" class="rsn-wrapper ie7"> <![endif]--> <!--[if IE 8]> <div id="responsivenav" class="rsn-wrapper ie8"> <![endif]--> <!--[if gt IE 8]><!--> <div id="responsivenav" class="rsn-wrapper"> <!--<![endif]--> <div class="rsn-bar b-g-m rsn-clearfix"> <a href="/radio" class="rsn-logo" title="iPlayer Radio"><span>iPlayer Radio</span></a> <a href="#rsn-links-panel" class="rsn-smallscreen-menu" id="rsn-s-menu"><span>Radio and Music menu</span></a> <ul class="rsn-links rsn-clearfix" id="rsn-main-nav"> <li> <a href="#rsn-station-panel" id="rsn-station-control" class="rsn-clearfix"> <span class="rsn-links-text">Stations</span> <span class="rsn-arrow"></span> </a> </li> <li> <a href="#rsn-category-panel" id="rsn-category-control" class="rsn-clearfix"> <span class="rsn-links-text">Categories</span> <span class="rsn-arrow"></span> </a> </li> <li> <a href="#rsn-programme-finder-panel" id="rsn-programme-finder-control" class="rsn-clearfix"> <span class="rsn-links-text">Programmes</span> <span class="rsn-arrow"></span> </a> </li> <li> <a href="/5live/programmes/schedules#on-now" id="rsn-schedules-control">Schedule</a> </li> <li> <a href="/radio/favourites" id="rsn-favourites-control">Favourites</a> </li> <li> <a href="/music/playlister" id="rsn-playlister-control">Playlister</a> </li> </ul> </div>  <div id="rsn-drawer"> </div> </div>     
+
+
+
+   </div> </div>  <div id="blq-content" class="blq-clearfix">  <div class="radio-main">         <div id="branding-wrapper" class="b-r"> <div class="bnd-inner"> <h1> <a href="/5live"> <img src="http://static.bbci.co.uk/radio/392/1.5.4/img/logos/tier_one/bbc_radio_five_live.png" alt="BBC Radio 5 live" class="bnd-logo" /> </a> </h1> </div> </div> <div id="tier1-outer" class="b-r"> <div id="tier1-wrapper"> <div class="t1-content" data-tabbar-target="true" data-tabtype="on-air"> 
+<div data-hide-enhanced-live-tab="true">
+    <div class="t1-lead">
+        <h2 class="t1-tab-title">On Air Now</h2>
+    </div>
+    <div class="t1-main-container">
+        <div class="t1-live-hero">
+            <ul id="t1-live-links" class="t1-flexbox t1-s-onair">
+                                    <li class="t1-live-listen t1-flexbox">
+                    <a data-player-html5-stream="http://www.bbc.co.uk/radio/listen/live/r5l_heaacv2.pls" data-listen-live="true" href="/radio/player/bbc_radio_five_live" data-istats="counter=listen_live::object_title=Up All Night">
+                           <div>Listen live</div>
+                       </a>
+                    </li>
+                                            <li class="t1-live-webcam t1-flexbox">
+                            <a href="http://www.bbc.co.uk/5live/webcam/videocam/" data-istats="counter=webcam::object_title=Up All Night::object_url=http://www.bbc.co.uk/5live/webcam/videocam/">
+                                <div>Webcam</div>
+                            </a>
+                        </li>
+                                                                    </ul>
+            <div class="t1-live-hero-image">
+                                    <a href="/programmes/b03ktrfw">
+                        <img src="http://ichef.bbci.co.uk/images/ic/464x261/legacy/episode/b03ktrfw.jpg?nodefault=true" alt="" width="464" height="261" />
+                    </a>
+                            </div>
+        </div>
+        
+                    <div class="t1-live-progress">
+                                    <div class="t1-live-progress-bar">
+                                                <span class="proportion">
+                            <span style="width:61%;transition-property:width;         transition-timing-function:linear;         transition-duration:5574s;-moz-transition-property:width;    -moz-transition-timing-function:linear;    -moz-transition-duration:5574s;-ms-transition-property:width;     -ms-transition-timing-function:linear;     -ms-transition-duration:5574s;-o-transition-property:width;      -o-transition-timing-function:linear;      -o-transition-duration:5574s;-webkit-transition-property:width; -webkit-transition-timing-function:linear; -webkit-transition-duration:5574s;" class="timeCode" title="61%">&nbsp;</span>
+                        </span>
+                    </div>
+                                </div>
+                
+        <div class="t1-live-on-now">
+            <div class="t1-live-meta">            
+	                        
+		            <p class="t1-live-progress-time">  
+		                <span class="t1-live-label">
+		                    On Air Now		                    <span class="blq-hide">Programmes</span>
+		                </span>
+		                <span class="blq-hide">Start Time </span>
+		                <span class="t1-live-time-start">1:00</span> -
+		                <span class="blq-hide">End Time</span>
+		                <span class="t1-live-time-end">5:00</span>
+		            </p>
+	            	                    
+	            	                <h3 class="t1-live-title">
+	                    <a href="/programmes/b03ktrfw" data-istats="counter=tier1_item0_link0_normal::object_type=Live::object_name=Up All Night::object_media=Episode::object_url=/programmes/b03ktrfw">
+	                        <span class="titling-title-inline-1">Up All Night</span><span class="titling-title-inline-2">12/12/2013</span>	                    </a>
+	                </h3>
+	                <p class="t1-live-synopsis">News from around the world with John Foster and the science phone-in with Dr Karl.</p>
+	                        </div>
+            
+                    </div>
+    </div>
+    <ul id="tier1-item-list" class="t1-item-list-sub">
+                            
+            <li class="t1-item t1-sub-promo-1">
+            	
+
+                <a class="t1-item-a" href="http://www.bbc.co.uk/programmes/b0070h86/clips" style="background: url(http://ichef.bbci.co.uk/images/ic/224x126/p01gcf44.jpg) top left no-repeat;"  
+ data-istats="counter=tier1_item1_link1_normal::object_type=Related Content::object_name=Up All Night highlights::object_media=Highlight::object_url=">
+  
+        <div class="t1-meta-wrap">
+            <div class="t1-meta ">
+                                    <div class="t1-meta-img">
+                                                  <img alt="Click Link " src="http://static.bbci.co.uk/radio/392/1.5.4/img/icons/t1_link.png" />
+                                                </span>
+                    </div>
+                                                    <p class="t1-attr">Highlights</p>
+                                <p>A selection of highlights from Up All Night.</p> 
+            </div>
+                                                            <p class="t1-info">Related Content</p>
+                                            </div>
+
+        <div class="t1-block">
+            <p class="t1-title"><span class="item-title-block">Up All Night highlights</span></p> 
+        </div>
+    </a>
+
+            
+    
+                </li>
+        
+        
+                                                
+
+            <li class="t1-item  t1-sub-promo-2">
+                
+
+                <a class="t1-item-a" href="http://www.bbc.co.uk/programmes/p01mzlyx" style="background: url(http://ichef.bbci.co.uk/images/ic/224x126/p01mzkdf.jpg) top left no-repeat;"  
+ data-istats="counter=tier1_item2_link1_normal::object_type=Related Content::object_name=Fans review the World Cup draw::object_media=Highlight::object_url=">
+  
+        <div class="t1-meta-wrap">
+            <div class="t1-meta ">
+                                    <div class="t1-meta-img">
+                                                  <img alt="Click Link " src="http://static.bbci.co.uk/radio/392/1.5.4/img/icons/t1_link.png" />
+                                                </span>
+                    </div>
+                                                    <p class="t1-attr">Highlights</p>
+                                <p>Supporters share their predictions following the 2014 World Cup draw.</p> 
+            </div>
+                                                            <p class="t1-info">Related Content</p>
+                                            </div>
+
+        <div class="t1-block">
+            <p class="t1-title"><span class="item-title-block">Fans review the World Cup draw</span></p> 
+        </div>
+    </a>
+
+            
+    
+                </li>
+        
+            </ul>
+</div>
+ </div> </div>  <div id="tabbar-wrapper" class="tbr-on-air tbr-s-on-air-page">  <div class="tbr-live-wrapper tbr-current-tab-on-air radio-container"> <p class="tbr-live"> <span>On Air Now</span> <span class="blq-hide">Start Time </span> 1:00 - <span class="blq-hide">End Time</span> 5:00 </p> </div>  <div class="tbr-content"> <ul class="tbr-tabs" data-tabbar-controller="true">  <li class="tbr-tab tbr-type-on-air" data-tab-type="on-air">   <span>Up All Night</span>  </li>  <li class="tbr-tab tbr-type-highlights" data-tab-type="highlights">   <a href="/5live/highlights" class="tbr-tab-inner "><span>Programme Highlights</span></a>  </li>  <li class="tbr-tab tbr-type-latest-clips" data-tab-type="latest-clips">   <a href="/5live/latest-clips" class="tbr-tab-inner "><span>Latest Clips</span></a>  </li>  <li class="tbr-tab tbr-type-collections" data-tab-type="collections">   <a href="/5live/collections/p01mxflr" class="tbr-tab-inner "><span>Nelson Mandela</span></a>  </li>  <li class="tbr-tab tbr-type-collections" data-tab-type="collections">   <a href="/5live/collections/p0142x4g" class="tbr-tab-inner "><span>Classic Clips</span></a>  </li>  </ul> </div> </div>  </div>  <div id="tier2-wrapper" class="b-r"> <div class="t2-content"> <ul class="t2-list t2-s-three-large">  <li class="t2-item t2-large t2-promotion"> 
+    <div class="t2-inner">
+        <a href="http://www.bbc.co.uk/programmes/b0070hx6/features/commentary" data-istats="counter=tier2_item1_link1_large::object_type=Commentaries ::object_title=">
+                            <img src="http://ichef.bbci.co.uk/images/ic/208x117/p01n1644.jpg" width="208" height="117" alt="" class="t2-image" />
+                        <h3>Commentaries </h3>
+            <p>Napoli v Arsenal, Wed, 19:45</p><p>Australia v England, Fri, 01:55</p><p>Australia v England, Sat, 02:00</p><p>Manchester City v Arsenal, Sat, 12:45</p>            <p class="t2-invite">More</p>
+        </a>
+    </div>
+    
+ </li>  <li class="t2-item t2-large t2-promotion"> 
+    <div class="t2-inner">
+        <a href="https://ssl.bbc.co.uk/programmes/b0070lvr/contact" data-istats="counter=tier2_item2_link1_large::object_type=Christmas questionnaire::object_title=">
+                            <img src="http://ichef.bbci.co.uk/images/ic/208x117/p01mscpd.jpg" width="208" height="117" alt="" class="t2-image" />
+                        <h3>Christmas questionnaire</h3>
+            <p>How are you planning to spend Christmas and how much are you planning to spend?</p><p>Add your answers to 5 live Drive's festive questionnaire.</p>            <p class="t2-invite">More</p>
+        </a>
+    </div>
+    
+ </li>  <li class="t2-item t2-large t2-promotion"> 
+    <div class="t2-inner">
+        <a href="http://www.bbc.co.uk/podcasts/series/5lspecials" data-istats="counter=tier2_item3_link1_large::object_type=Mandela and Sport::object_title=">
+                            <img src="http://ichef.bbci.co.uk/images/ic/208x117/p01n0tv0.jpg" width="208" height="117" alt="" class="t2-image" />
+                        <h3>Mandela and Sport</h3>
+            <p>High-profile figures from the world of South African sport, including Bryan Habana, Francios Pienaar, John McEnroe and many more, look back at the life of the Mandela and how sport influenced his life.</p>            <p class="t2-invite">More</p>
+        </a>
+    </div>
+    
+ </li>  <li class="t2-item t2-medium t2-commentaries"> <a class="t2-inner" href="http://www.bbc.co.uk/programmes/b0070hx6/features/commentary" data-istats="counter=tier2_item4_link1_medium::object_type=Commentaries::object_title=">Commentaries</a>
+ </li>  <li class="t2-item t2-small t2-podcasts"> <a id="podcasts_0" class="t2-inner" href="/podcasts/5live"  data-istats="counter=tier2_item5_link1_small::object_type=podcasts_0::object_title=">
+    Download Podcasts</a> </li>  <li class="t2-item t2-small t2-blogs"> 
+    <a class="t2-inner" href="http://www.bbc.co.uk/blogs/5live/" data-istats="counter=tier2_item6_link1_small::object_type=Blog::object_title=">Blog</a>
+ </li>  <li class="t2-item t2-small t2-facebook"> <a class="t2-inner" href="http://www.facebook.com/5live"  data-istats="counter=tier2_item7_link1_small::object_type=Facebook::object_title=">Facebook</a>
+ </li>  <li class="t2-item t2-small t2-twitter"> <a class="t2-inner" href="http://www.twitter.com/bbc5live" data-istats="counter=tier2_item8_link1_small::object_type=Twitter::object_title=">Twitter</a> </li>  </ul> </div> </div>   <div id="footer-wrapper" class="radio-container"> <ul id="network-language-select">  <li ><a href="/radio/language/cy">Cymraeg</a></li>  <li ><a href="/radio/language/ga">Gaeilge</a></li>  <li  class="last" ><a href="/radio/language/gd">Gàidhlig</a></li>  </ul>  <ul id="radio-links" > <li class="position-feedback" ><a href="/radio/feedback">Feedback</a></li> <li><a href="/radio/info/">About BBC Radio</a></li> <li><a href="/radio/contact/">Contact</a></li> <li class="last"><a href="http://iplayerhelp.external.bbc.co.uk/help/playing_radio_progs/">iPlayer Radio help</a></li> </ul>  </div>  </div>  </div>   <!-- esi include -->        <div class="rsn-nonjs-wrapper"> <div class="rsn-nonjs-wrapper-inner"> <div class="rsn-panel b-g-p" id="rsn-station-panel"> <h2>Station Panel Header</h2> <ul class="stations rsn-clearfix bbc_radio_five_live">  <li class="station" id="bbc_radio_one"> <a class="logo-bbc_radio_one" href="/radio1"> <span class="name rsn-hide">BBC Radio 1</span> </a> </li>  <li class="station" id="bbc_1xtra"> <a class="logo-bbc_1xtra" href="/1xtra"> <span class="name rsn-hide">BBC Radio 1Xtra</span> </a> </li>  <li class="station" id="bbc_radio_two"> <a class="logo-bbc_radio_two" href="/radio2"> <span class="name rsn-hide">BBC Radio 2</span> </a> </li>  <li class="station" id="bbc_radio_three"> <a class="logo-bbc_radio_three" href="/radio3"> <span class="name rsn-hide">BBC Radio 3</span> </a> </li>  <li class="station" id="bbc_radio_four"> <a class="logo-bbc_radio_four" href="/radio4"> <span class="name rsn-hide">BBC Radio 4</span> </a> </li>  <li class="station" id="bbc_radio_four_extra"> <a class="logo-bbc_radio_four_extra" href="/radio4extra"> <span class="name rsn-hide">BBC Radio 4 Extra</span> </a> </li>  <li class="station" id="bbc_radio_five_live"> <a class="logo-bbc_radio_five_live" href="/5live"> <span class="name rsn-hide">BBC Radio 5 live</span> </a> </li>  <li class="station" id="bbc_radio_five_live_sports_extra"> <a class="logo-bbc_radio_five_live_sports_extra" href="/5livesportsextra"> <span class="name rsn-hide">BBC Radio 5 live sports extra</span> </a> </li>  <li class="station" id="bbc_6music"> <a class="logo-bbc_6music" href="/6music"> <span class="name rsn-hide">BBC Radio 6 Music</span> </a> </li>  <li class="station" id="bbc_asian_network"> <a class="logo-bbc_asian_network" href="/asiannetwork"> <span class="name rsn-hide">BBC Asian Network</span> </a> </li>  <li class="station" id="bbc_world_service"> <a class="logo-bbc_world_service" href="/worldserviceradio"> <span class="name rsn-hide">BBC World Service</span> </a> </li>  <li class="station" id="bbc_radio_scotland"> <a class="logo-bbc_radio_scotland" href="/radioscotland"> <span class="name rsn-hide">BBC Radio Scotland</span> </a> </li>  <li class="station" id="bbc_radio_nan_gaidheal"> <a class="logo-bbc_radio_nan_gaidheal" href="/radionangaidheal"> <span class="name rsn-hide">BBC Radio Nan Gaidheal</span> </a> </li>  <li class="station" id="bbc_radio_ulster"> <a class="logo-bbc_radio_ulster" href="/radioulster"> <span class="name rsn-hide">BBC Radio Ulster</span> </a> </li>  <li class="station" id="bbc_radio_foyle"> <a class="logo-bbc_radio_foyle" href="/radiofoyle"> <span class="name rsn-hide">BBC Radio Foyle</span> </a> </li>  <li class="station" id="bbc_radio_wales"> <a class="logo-bbc_radio_wales" href="/radiowales"> <span class="name rsn-hide">BBC Radio Wales</span> </a> </li>  <li class="station" id="bbc_radio_cymru"> <a class="logo-bbc_radio_cymru" href="/radiocymru"> <span class="name rsn-hide">BBC Radio Cymru</span> </a> </li>  <li class="station" id="bbc_local_radio"> <a class="logo-bbc_local_radio" href="/radio/stations/"> <span class="name">Local Radio</span> </a> </li> </ul> </div> <div class="rsn-panel rsn-category b-g-p rsn-clearfix" id="rsn-category-panel"> <h2>Category Panel Header</h2> <ul id="rsn-category-links" class="rsn-cat-links rsn-clearfix">  <li><a href="/5live/programmes/genres/news/current">News</a></li>  <li><a href="/5live/programmes/genres/sport/current">Sport</a></li>  <li><a href="/5live/programmes/genres/entertainment/current">Entertainment</a></li>  <li class="rsn-no-border"><a href="/radio/categories" id="rsn-all-categorieslink" class="rsn-all-categories">All Categories</a></li> </ul> </div> <div class="rsn-panel b-g-p rsn-clearfix" id="rsn-programme-finder-panel"> <h2>Programme Finder Panel Header</h2> <div id="rsn-programmeFinderContainerWrapper" class="rsn-clearfix"> <div id="rsn-programmeFinderContainerLeft" class="rsn-clearfix"> <form id="rsn-qf-form" method="GET" action="/radio/programmes/a-z" class="rsn-clearfix"> <div id="rsn-inputWrapper"> <input name="q" id="rsn-programmeFinder" value="Find a programme..." type="text" placeholder="Find a programme..." autocomplete="off" maxlength="128" /> <div id="rsn-spinner"> <input name="rsn-qf-submit" id="rsn-qf-submit" type="submit" value=""> </div> </div> </form> <ul id="rsn-pf-results">  <li class="prog_a_z"><a href="/5live/programmes/a-z">Go to Radio 5 live Programmes A-Z</a></li>  </ul> </div> <div id="rsn-programmeFinderContainerRight" class="rsn-clearfix">  <span id="rsn-featuredProgrammesTitle">Featured</span> <ul id="rsn-featuredProgrammes">  <li><a href="/programmes/b0070htg">5 live Breakfast</a></li>  <li><a href="/programmes/b00lvdrj">Kermode and Mayo's Film Review</a></li>  <li><a href="/programmes/b0070hvs">Fighting Talk</a></li>  <li><a href="/programmes/b00pstlg">Richard Bacon</a></li>  <li><a href="/programmes/b007v5cz">Victoria Derbyshire</a></li>  <li class='last'><a href="/programmes/b0070hx6">5 live Sport</a></li>  </ul>  </div> </div> </div> <ul id="rsn-links-panel" class="rsn-smallscreen-links rsn-clearfix"> <li><a href="/radio/stations" id="rsn-station-link">Stations</a></li> <li><a href="/radio/categories" id="rsn-categories-link">Categories</a></li> <li><a href="/5live/programmes/a-z" id="rsn-programmes-link">Programmes</a></li> <li><a href="/5live/programmes/schedules#on-now" id="rsn-schedules-link">Schedule</a></li> <li><a href="/radio/favourites" id="rsn-favourites-link">Favourites</a></li> <li><a href="/music/playlister" id="rsn-playlister-link">Playlister</a></li> </ul> </div> </div>     
+
+
+
+        </div> <div id="orb-footer"  class="orb-footer orb-footer-black" > <aside role="complementary"> <div id="orb-aside" class="orb-nav-sec b-r b-g-p"> <div class="orb-footer-inner" role="navigation"> <h2> <img src="http://static.bbci.co.uk/frameworks/barlesque/2.58.8/orb/4/img/bbc-blocks-light.png" width="84" height="24" alt="" /> <span>BBC navigation</span> </h2>  <div id="orb-footer-promo" class="orb-d" ></div>  <div class="orb-footer-primary-links"> <ul>    <li  class="orb-nav-news orb-d"  > <a href="/news/">News</a> </li>    <li  class="orb-nav-newsdotcom orb-w"  > <a href="http://www.bbc.com/news/">News</a> </li>    <li  class="orb-nav-sport"  > <a href="/sport/">Sport</a> </li>    <li  class="orb-nav-weather"  > <a href="/weather/">Weather</a> </li>    <li  class="orb-nav-shop orb-w"  > <a href="http://shop.bbc.com/">Shop</a> </li>    <li  class="orb-nav-iplayer orb-d"  > <a href="/iplayer/">iPlayer</a> </li>    <li  class="orb-nav-capital orb-w"  > <a href="http://www.bbc.com/capital/">Capital</a> </li>    <li  class="orb-nav-culture orb-w"  > <a href="http://www.bbc.com/culture/">Culture</a> </li>    <li  class="orb-nav-tv"  > <a href="/tv/">TV</a> </li>    <li  class="orb-nav-radio"  > <a href="/radio/">Radio</a> </li>    <li  class="orb-nav-cbbc"  > <a href="/cbbc/">CBBC</a> </li>    <li  class="orb-nav-cbeebies"  > <a href="/cbeebies/">CBeebies</a> </li>    <li  class="orb-nav-comedy"  > <a href="/comedy/">Comedy</a> </li>    <li  class="orb-nav-food"  > <a href="/food/">Food</a> </li>    <li  class="orb-nav-history"  > <a href="/history/">History</a> </li>    <li  class="orb-nav-learning"  > <a href="/learning/">Learning</a> </li>    <li  class="orb-nav-music"  > <a href="/music/">Music</a> </li>    <li  class="orb-nav-science"  > <a href="/science/">Science</a> </li>    <li  class="orb-nav-nature"  > <a href="/nature/">Nature</a> </li>    <li  class="orb-nav-local"  > <a href="/local/">Local</a> </li>    <li  class="orb-nav-travelnews"  > <a href="/travelnews/">Travel News</a> </li>    <li  class="orb-nav-fullaz"  > <a href="/a-z/">Full A-Z</a> </li>    </ul> </div> </div> </div> </aside> <footer role="contentinfo"> <div id="orb-contentinfo" class="orb-nav-sec b-r b-g-p"> <div class="orb-footer-inner"> <ul>        <li  > <a href="/terms/">Terms of Use</a> </li>    <li  > <a href="/aboutthebbc/">About the BBC</a> </li>    <li  > <a href="/privacy/">Privacy Policy</a> </li>    <li  > <a href="/privacy/bbc-cookies-policy.shtml">Cookies</a> </li>    <li  > <a href="/accessibility/">Accessibility Help</a> </li>    <li  > <a href="/guidance/">Parental Guidance</a> </li>    <li  > <a href="/contact/">Contact the BBC</a> </li>        </ul> <small> <span class="orb-hilight">BBC &copy; 2013</span> The BBC is not responsible for the content of external sites. <a href="/help/web/links/" class="orb-hilight">Read about our approach to external linking.</a> </small> </div> </div> </footer> </div>   <div class="bbccom_display_none"> <script type="text/javascript">/*<![CDATA[*/ if (1 == bbcdotcom.data.b) {  var adsEnabled = (1 == bbcdotcom.data.a && bbcdotcom.config.isAdsEnabled()) ? 'yes' : 'no';  document.write('<img src="http://sa.bbc.com/b/ss/bbcwglobalprod/5/170146588?gn=m::www.bbc.co.uk/5live&amp;ch=m::5live&amp;ev=event11&amp;c31=mobile&amp;v5=m::index&amp;v7=m::5live&amp;v57=' + adsEnabled + '" height="1" width="1" alt="" style="display:none;" />');  } /*]]>*/</script>  <script type="text/javascript">/*<![CDATA[*/ if (bbcdotcom.advert.isActive('analytics')) { document.write('<img src="' + (document.location.protocol == "https:" ? "https://sb" : "http://b") + '.scorecardresearch.com/p?c1=2&amp;c2=6035051&amp;c4=www.bbc.co.uk/5live"" alt="" />'); } /*]]>*/</script>   <script type="text/javascript"> /*<![CDATA[*/ if (bbcdotcom.advert.isActive('nielsen-au')) { /* COPYRIGHT 2009 Nielsen Online */ document.write('<script type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https:' : 'http:') + '//secure-au.imrworldwide.com/v60.js">\x3C/script>'); } /*]]>*/ </script>  <script type="text/javascript">  /*<![CDATA[*/ if (bbcdotcom.advert.isActive('nielsen-au')) { nol_t({cid:"au-bbc",content:"0",server:"secure-au"}).record().post(); } /*]]>*/ </script>   <script type="text/javascript"> /*<![CDATA[*/ if (bbcdotcom.advert.isActive('nielsen-nz')) { /* COPYRIGHT 2009 Nielsen Online */ document.write('<script type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https:' : 'http:') + '//secure-nz.imrworldwide.com/v60.js">\x3C/script>'); } /*]]>*/ </script>  <script type="text/javascript">  /*<![CDATA[*/ if (bbcdotcom.advert.isActive('nielsen-nz')) { nol_t({cid:"nz-bbc",content:"0",server:"secure-nz"}).record().post(); } /*]]>*/ </script>   <script type="text/javascript"> /*<![CDATA[*/ if (bbcdotcom.advert.isActive('nielsen-us')) { /* COPYRIGHT 2010 Nielsen Online */ (function () { var d = new Image(1, 1); d.onerror = d.onload = function () { d.onerror = d.onload = null; }; d.src = [('https:' == document.location.protocol ? 'https:' : 'http:') + "//secure-us.imrworldwide.com/cgi-bin/m?ci=us-804789h&amp;cg=0&amp;cc=1&amp;si=", encodeURI(window.location.href), "&amp;rp=", encodeURI(document.referrer), "&amp;ts=compact&amp;rnd=", (new Date()).getTime()].join(''); })(); } /*]]>*/ </script>  </div>   <script type="text/javascript"> document.write('<' + 'script id="orb-js-script" data-assetpath="http://static.bbci.co.uk/frameworks/barlesque/2.58.8/orb/4/" src="http://static.bbci.co.uk/frameworks/barlesque/2.58.8/orb/4/script' + (( document.cookie.indexOf('ckns_debugorbjs') > -1 )? '-debug' : '') + '/orb.js"><' + '/script>'); </script>  <script type="text/javascript"> (function() {
+    'use strict';
+
+    var promoManager = {
+        url: '',
+        segments: ['a', 'b'],
+        promoLoaded: false,
+        makeUrl: function (path, promovariant, promotheme) {
+                        if (promotheme === 'dark')       { promotheme = 'light'; }
+            else if (promotheme === 'light') { promotheme = 'dark';  }
+
+            return window.location.protocol + '//' + window.location.host +  path + '/' + promovariant + '/' + promotheme;
+        },
+                validSegment: function (segment) {
+            var validSegments = this.segments; 
+            
+            for (var i = 0, len = validSegments.length; i < len; i++) {
+                if (validSegments[i] === segment) {
+                    return segment;
+                }
+            }
+            
+            return validSegments[0];
+        },
+                init: function(path, node) {
+            var disabledByCookie = (document.cookie.indexOf('ckns_orb_nopromo=1') > -1),
+                orbFullWidth     = (document.getElementById('orb-aside').offsetWidth >= 1008),
+                that = this;
+            
+            if (window.promomanagerOverride) {
+                for (var p in promomanagerOverride) {
+                    that[p] = promomanagerOverride[p];
+                }
+            }
+                
+            if ( window.orb.fig('uk') && orbFullWidth && !disabledByCookie ) {
+                require(['orb/async/_footerpromo', 'istats-1'], function(promo, istats) {
+                    /* The promo segment mandolin should last for 7 days */
+                    var mandolinEndDate = new Date().getTime() + (7 * 60 * 60 * 24) * 1000,
+                        mandolin = new bbc.Mandolin('footer-promo', that.segments, {rate: 0.2, end: mandolinEndDate}),
+                        segmentToRequest = that.validSegment(mandolin.getSegment());
+
+                    that.url = that.makeUrl(path, segmentToRequest, 'light');
+
+                    if (that.url) { 
+                        promo.load(that.url, node, {
+                             /* The argument 'e' passed to onSuccess is the JSON response from the promo endpoint */
+                             onSuccess: function(e) {
+                                istats.addLabels({ 'campaignID': e.campaignID });
+                                if (segmentToRequest === mandolin.getSegment()) {
+                                    istats.addLabels({ 'promo_id_segment': e.campaignID + ':' + mandolin.getSegment() });
+                                }
+                                istats.track('internal', {region: node, linkLocation : 'orb-footer-promo'});
+
+                                istats.log('display', 'orb-footer-promo-displayed', {campaignID : e.campaignID, testVariant: segmentToRequest});
+                                node.className = node.className + ' orb-footer-promo-loaded';
+                                promoManager.promoLoaded = true;
+                                promoManager.event('promo-loaded').fire(e);
+                             },
+                             onError: function() {
+                                istats.log('error', 'orb-footer-promo-failed');
+                                document.cookie = 'ckns_orb_nopromo=1; expires=' + new Date(new Date().getTime() + 1000 * 60 * 10).toGMTString() + ';';
+                             }
+                        });   
+                    }
+                });
+            }
+        }
+    };
+    
+        
+    define('orb/promomanager', ['orb/lib/_event'], function (event) {
+        event.mixin(promoManager);
+        return promoManager;
+    });
+    
+    require(['orb/promomanager'], function (promoManager) {
+        promoManager.init('/navpromo', document.getElementById('orb-footer-promo') );
+    })
+})();
+ </script>   <script type="text/javascript"> if (typeof require !== 'undefined') { require(['istats-1'], function(istats){ istats.track('external', { region: document.getElementsByTagName('body')[0] }); istats.track('download', { region: document.getElementsByTagName('body')[0] }); }); } </script>             <script type="text/javascript">   require(['jquery-1', 'tarousel', 'tarouselCore', 'components/homepageStatsTarousel', 'components/highlightsABTest'], function($, tarouselView, tarouselCore, homepageStatsTarousel, HighlightsABTest){  /* Run AB Testing in its own component */ highlightsABTest = new HighlightsABTest(); highlightsABTest.init('bbc_radio_five_live', true, 'http://polling.bbc.co.uk'); var core = new tarouselCore; var view = new tarouselView; var tabList = []; var currentTab; /* TODO: Remove jQuery Dependency */ $(function(){ $('.tbr-tabs li').each(function(){ var tab = []; var tabURL = $(this).find('a').attr('href'); tab['title'] = $(this).find('span').html(); tab['url'] = (tabURL) ? tabURL : window.location.pathname; /* type is needed for istats. There should be no hyphens in type either */ tab['type'] = $(this).attr('data-tab-type').replace(/-/, ''); tabList.push(tab); if (!tabURL) { currentTab = tabList.length - 1; $(this).wrapInner('<a href="'+ window.location.pathname +'" class="tbr-tab-inner tbr-current" />'); }; }); core.init(tabList, currentTab); /*Fixme, graphics are here as a tempory measure! */ var loadingMarkup = '<div class="tbr-loading-graphic"><img src="http://static.bbci.co.uk/radio/392/1.5.4/img/icons/spinner_36x39_dark.gif" alt="Loading Content" /></div>'; var errorMarkup = '<div class="tbr-loading-error">Sorry, there is a problem. Please try refreshing your browser.</div>'; view.init(loadingMarkup, errorMarkup); }); });   require(['components/liveTab']); require(['components/avPlayback']); require(['components/bindRelLightbox']);  require(['plugins/favourite', 'components/eventEmitter'], function(favourite, pubsub) { pubsub.addListener('carousel:display:complete', function(){ favourite.refresh(); }) });   </script> <script type="text/javascript" src="http://static.bbci.co.uk/radio/392/1.5.4/script/handlebars.js"></script> <script id="highlightsABTestingTemplate" type="text/x-handlebars-template"> {{#if relatedContent}} <li class="t1-item t1-sub-promo-1"> <a class="t1-item-a" href="{{relatedContent.url}}" style="background: url({{relatedContent.image.url}}) top left no-repeat;" data-istats="counter=tier1_item1_link1_normal::object_type=Related Content::object_name={{relatedContent.title}}::object_media=Highlight::object_url={{relatedContent.url}}"> <div class="t1-meta-wrap"> <div class="t1-meta "> <div class="t1-meta-img"> <img alt="Click Link " src="http://static.bbci.co.uk/radio/dev/img/icons/t1_link.png"> </div> <p class="t1-attr">Highlights</p> <p>{{relatedContent.title}}</p> </div> <p class="t1-info">Related Content</p> </div> <div class="t1-block"> <p class="t1-title"><span class="item-title-block">{{relatedContent.title}}</span></p> </div> </a> </li> <li class="t1-item t1-sub-promo-2"> <a class="t1-item-a" href="/programmes/{{next.episode_pid}}" style="background: url({{next.image.url}}) top left no-repeat;" data-istats="counter=tier1_item2_link1_normal::object_type=Next::object_name=One On One::object_media=Episode::object_url=/programmes/{{next.episode_pid}}"> <div class="t1-meta-wrap"> <div class="t1-meta "> <div class="t1-meta-img"> <img alt="Click Link " src="http://static.bbci.co.uk/radio/dev/img/icons/t1_link.png"> <span>{{next.duration}} mins</span> </div> <p class="t1-attr">Episode</p> <p>{{next.short_synopsis}}<p> </div> <p class="t1-info">Next <span class="t1-info-time">{{next.timeString}}</span></p> </div> <div class="t1-block"> <p class="t1-title"><span class="item-title-inline-1">{{next.raw_title}}</span><span class="item-title-inline-2">{{next.dateString}}</span></p> </div> </a> </li> {{else}} <li class="t1-item t1-sub-promo-1"> <a class="t1-item-a" href="/programmes/{{next.episode_pid}}" style="background: url({{next.image.url}}) top left no-repeat;" data-istats="counter=tier1_item1_link1_normal::object_type=Next::object_name=One On One::object_media=Episode::object_url=/programmes/{{next.episode_pid}}"> <div class="t1-meta-wrap"> <div class="t1-meta "> <div class="t1-meta-img"> <img alt="Click Link " src="http://static.bbci.co.uk/radio/dev/img/icons/t1_link.png"> <span>{{next.duration}} mins</span> </div> <p class="t1-attr">Episode</p> <p>{{next.short_synopsis}}<p> </div> <p class="t1-info">Next <span class="t1-info-time">{{next.timeString}}</span></p> </div> <div class="t1-block"> <p class="t1-title"><span class="item-title-inline-1">{{next.raw_title}}</span><span class="item-title-inline-2">{{next.dateString}}</span></p> </div> </a> </li> <li class="t1-item t1-sub-promo-2"> <a class="t1-item-a" href="/programmes/{{upcoming.episode_pid}}" style="background: url({{upcoming.image.url}}) top left no-repeat;" data-istats="counter=tier1_item2_link1_normal::object_type=Coming Up::object_name=Andrew Edwards::object_media=Episode::object_url=/programmes/{{upcoming.episode_pid}}"> <div class="t1-meta-wrap"> <div class="t1-meta "> <div class="t1-meta-img"> <img alt="Click Link " src="http://static.bbci.co.uk/radio/dev/img/icons/t1_link.png"> <span>{{upcoming.duration}} mins</span> </div> <p class="t1-attr">Episode</p> <p>{{upcoming.short_synopsis}}</p> </div> <p class="t1-info">Coming up <span class="t1-info-time">{{upcoming.timeString}}</span></p> </div> <div class="t1-block"> <p class="t1-title"><span class="item-title-inline-1">{{upcoming.raw_title}}</span><span class="item-title-inline-2">{{upcoming.dateString}}</span></p> </div> </a> </li> {{/if}} </script>    <script type="text/javascript"> require(['plugins/favourite'], function(p) { p.initialise(); }); </script>   <script type="text/javascript"> pulse.init( 'fivelive', true ); </script>  <script type="text/javascript"> /* Define a custom error handler to handle the favourites plugin failing */ require.onError = function(err) { if(!err.message.match(/plugins\/favourite/)) { throw err; } }; require(["RadionavResponsiveInit", "radionavStats", "utils", "eventEmitter"], function(RadionavResponsiveInit, radionavStats, utils, pubsub, fav) { /* Don't run any javascript for IE 7 or below */ if (utils.hasClass("ie7", document.getElementById("responsivenav")) !== true) {  var rn = new RadionavResponsiveInit('http://static.bbci.co.uk/radionavresponsive/168/1.0.0/', '5live', 'Radio 5 live', 'bbc_radio_five_live'); if (utils.hasClass("ie8", document.getElementById("responsivenav")) === false) { rn.setUpSmallScreen(); rn.onResize(); } rn.setUpWideScreen('bbc_radio_five_live'); rn.setNavLastElement(); /* We need to force resize on page load so RadionavResponsiveInit.prototype.navLayoutAdjust can run and adjust the nav */ if (document.createEvent) { var e = document.createEvent('HTMLEvents'); e.initEvent('resize', true, false); document.body.dispatchEvent(e); } else if (document.createEventObject) { document.body.fireEvent('onresize'); } pubsub.addListener('rsn:loaded', function(){ /* Remove empty non-js div's */ var selector = document.querySelector(".rsn-nonjs-wrapper"); selector.parentNode.removeChild(selector); }); /* Adding the highlight to playlister link (allow this bit to fail, hence wrapping the require.) */ require(["plugins/favourite"], function(fav) { fav.subscribe('toggledAdd', function(button) { if (button.item.type.indexOf('track') == 0) { var element = document.getElementById('rsn-playlister-control'); utils.addClass('highlight', element); window.setTimeout(function(){ element.removeAttribute('class'); }, 5000); } }); }); } }); </script>   </body> </html>           

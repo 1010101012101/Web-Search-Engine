@@ -1,0 +1,3653 @@
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><script type="text/javascript" src="http://cdn6.wn.com/vp/m/56/1af603c51ccb5264b988597ca85bad.js"></script><link type="text/css" rel="stylesheet" href="http://cdn9.wn.com/vp/m/3c/131e4527e442cb87308231210d918a.css">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <title></title>
+
+    <meta name="keywords" content=", WorldNews, World News,  Breaking News, Video, Videos and Editable pages for News,  Sign up and share your playlists, headlines, WN Archive, WN Network, Newspaper, Investigative journalism, journalist, media,  Global News, Archives, Business, Politics, Sports, Music, Entertainment, Film, Photos, International Headlines, Radio Sport, Live Sport, fm Radio Worldwide, WN, Current Events, Industry, Finance, Economy, Markets, Money, Oil, Energy, Shipping, Offshore, Broadcasts, Audio, Global Issues, Farming, Health, Knowledge, Cities, Technology, Languages, Environment, War, Reports, Geography, Breaking Headlines, Archive" />
+    <meta name="description" content=" on WN Network delivers the latest Videos and Editable pages for News &amp; Events, including Entertainment, Music, Sports, Science and more, Sign up and share your playlists." />
+
+    <link href="http://cdn3.wn.com/st/favicon.ico" type="image/x-icon" rel="SHORTCUT ICON">
+
+    <link href="http://rss.wn.com/English/keyword/" type="application/rss+xml" rel="alternate" title=" from WN">
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <script>window.google_analytics_uacct = "UA-1177289-31";</script>
+
+
+	 
+	
+
+
+	<link media="only screen and (max-width: 1200px) and (min-width: 801px)," href="http://cdn9.wn.com/or/ula/cheetah-photo-search/2013-10-25/topindex03.css" type="text/css" rel="stylesheet">
+
+	<link media="only screen and (min-width: 1200px)," href="http://cdn8.wn.com/or/ula/cheetah-photo-search/2013-10-25/leftindex.css" type="text/css" rel="stylesheet"> 
+
+	<link media="only screen and (max-width: 800px)," href="http://cdn5.wn.com/or/ula/cheetah-photo-search/2013-10-25/800res02.css" type="text/css" rel="stylesheet"> 
+
+
+	
+	
+
+	
+
+
+  
+	 
+
+	
+
+	
+	
+
+
+	
+
+    <novacuum>
+    <!--[if IE]>
+    <link href="http://cdn9.wn.com/or/ula/cheetah-photo-search/2013-10-25/topindex03.css" type="text/css" rel="stylesheet">
+    <![endif]-->
+    </novacuum>
+	
+	<link href="http://cdn0.wn.com/or/ula/cheetah-photo-search/2012-10-08/white.css" type="text/css" rel="stylesheet" title="white">
+
+
+	
+		 	 
+
+
+
+
+
+    <script type="text/javascript"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript">
+    Raven.config('http://0ccbc0f013904780ad70ba380cb3d831@sentry.wn.com/10');
+function ensure(fn) {
+    // return fn;
+    return function() {
+        try {
+            return(fn.apply(this, arguments));
+        } catch(e) {
+            Raven.captureException(e);
+            // throw e;
+        }
+    };
+}
+
+$ensure = function(f){
+    return jQuery(ensure(f));
+};
+
+    </script>
+
+		
+		
+    <script type="text/javascript">
+    function hum(s){
+        if(s>=1048576) return ((s/1048576)|0) + ' MB';
+        if(s>=1024) return ((s/1024)|0) + ' KB';
+        return s+' bytes'
+    }
+    var maSpeed = 0;
+    var maSpeed2 = 0;
+    var lastLoaded = 0;
+    updateStats = ensure(function(){
+        var pl = [];
+        var sss = 0;
+        var ttt = 0;
+        var loaded = 0;
+        for(i in videoplayers){
+            var iv = videoplayers[i].players;
+            for(j in iv){
+                try{
+                    iv[j].div.css('top', '0px');
+                    var jv = iv[j].player.ytplayer;
+                    var s = jv.getVideoBytesLoaded();
+                    var t = jv.getVideoBytesTotal();
+                    if(t){
+                        pl.push(jv);
+                        if(s == t) loaded ++;
+                        sss += s;
+                        ttt += t;
+                    }
+                }catch(e){
+                }
+            }
+        }
+        var percent = (sss+0.001)*100/(ttt+0.001);
+        var diff = (sss-lastLoaded) * 4;
+        lastLoaded = sss;
+        maSpeed = maSpeed * 0.95 + (diff<0?0:diff) * 0.05;
+        maSpeed2 = maSpeed2 * 0.995 + (diff<0?0:diff) * 0.005;
+        if(sss == ttt) maSpeed = 0;
+        if(maSpeed<0) maSpeed = 0;
+        if(maSpeed2<0) maSpeed2 = 0;
+        var eta = (ttt-sss)/(maSpeed2+0.001);
+        if(eta > 86400) eta = 'never';
+        else if(eta > 3600) eta = ((eta/3600)|0)+' hours';
+        else if(eta > 60) eta = ((eta/60)|0)+' minutes';
+        else eta = (eta|0)+' seconds';
+        $('.videoload').html("<span>players:</span> "+loaded+' of '+pl.length+" loaded<br/>"+hum(sss)+" of "+hum(ttt)+"<br /><span>loaded:</span> "+(percent|0)+"%<br/><span>loading:</span >"+hum(maSpeed|0)+"/sec<br/><span>ETA:</span> "+eta);
+    });
+    function init_videoload(){
+        if(!window.videoload){
+            window.videoload = true;
+            for(i in videoplayers){
+                videoplayers[i].setMultiplePlayers(true);
+            }
+            $ensure(function(){
+                setInterval(updateStats, 250);
+            });
+        }
+    }
+    </script>
+
+    <script nopack="1" type="text/javascript"><!--
+        function isAscii(x){
+            return x.match(/^[\t\n\r\ \!\"#$\%\&\'\(\)\*\+\,\.\/0123456789\:\;\=\?\@ABCDEFGHIJKLMNOPQRSTUVWXYZ\\\_\`abcdefghijklmnopqrstuvwxyz\|\~\ \ü]+$/);
+        }
+
+        translateHeadings = true;
+        function checkLanguage(){
+            if(jQuery('#id_language').val() == 'en'){
+                translateHeadings = true;
+            }else{
+                translateHeadings = false;
+            }
+        }
+    // -->
+    </script>
+
+
+    <script type="text/javascript"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript"></script>
+
+
+    <script>$.fn.cluetip = function(){};</script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript">if(document.location.hostname.match('(^|\.)wn\.com$')){ jQuery.cookies.setOptions({domain:'.wn.com'}); }</script>
+
+    <script type="text/javascript"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript"></script>
+
+	
+    <script type="text/javascript">
+        window.updateHeight = ensure(function(content_div){
+            var active_id = content_div;
+            if(!jQuery('li.current a').length) return;
+            if(!content_div){
+                active_id = jQuery('li.current a').get(-1).id;
+            }
+            jQuery('#tabcontainer').height(jQuery('#tabcontainer '+active_id).height());
+        });
+    </script>
+	
+	
+    <!-- scrolling credits -->
+    <script nopack="1" src="http://cdn1.wn.com/or/js/wnmoviecredits.combined.min.20131104.js" type="text/javascript"></script>
+
+
+
+     <!-- video slider -->
+    <script type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#content-slider").slider({
+            animate: true,
+            change: handleSliderChange,
+            slide: handleSliderSlide
+            });
+        });
+        function handleSliderChange(e, ui)
+        {
+          var maxScroll = $("#content-scroll").attr("scrollWidth") - $("#content-scroll").width();
+          $("#content-scroll").animate({scrollLeft: ui.value * (maxScroll / 100) }, 1000);
+        }
+
+        function handleSliderSlide(e, ui)
+        {
+          var maxScroll = $("#content-scroll").attr("scrollWidth") - $("#content-scroll").width();
+          $("#content-scroll").attr({scrollLeft: ui.value * (maxScroll / 100) });
+        }
+    </script>
+	
+		
+		
+		
+
+	
+	
+     <!-- iframe popups -->
+    <script type="text/javascript"></script>
+    <script type="text/javascript">IEDITOR_CLOSE = "http://cdn4.wn.com/or/ula/ewn/closebox.png"</script>
+    <script type="text/javascript"></script>
+
+    <script type="text/javascript"></script>
+
+    <!-- <script src="http://cdn3.wn.com/or/ula/worldnews/contentslider.js" type="text/javascript"></script> -->
+    <script type="text/javascript"></script>
+
+    <script nopack="1" src="http://cdn8.wn.com/or/js/videoplayer-20131129-2.min.js" type="text/javascript"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript"></script>
+
+    <script type="text/javascript"></script>
+	<script type="text/javascript"></script>
+
+
+
+    <script type="text/javascript"><!--
+    var showBooksDone = false;
+    showBooks = ensure(function(){
+        if(!showBooksDone) showBooksDone = true;
+        else return;
+        var query = '';
+        function esc(x){ return x.replace(/[ \"%:;_@#$&{}<>]+/g, '_');}
+        var itemTemplate = _.template('<li class="border_color opacity font_color shadow">'+
+            '<div class="img_container"><a href="<%= url %>"><img src="<%= img %>"></a></div>'+
+            '<div class="title bgr_color"><a href="<%= url %>"><%= title %></a></div>'+
+            '<div class="authors bgr_color"><span data-trans="Authors:">Authors:</span> <%= authors %></div></li>');
+        var target = jQuery('#books ul.book');
+        jQuery.ajax({
+            url: 'https://www.googleapis.com/books/v1/volumes?q='+query,
+            dataType: 'jsonp',
+            success: ensure(function(r){
+                target.find('li').detach();
+                var records = {'query': query};
+                for(var i in r.items){
+                    var vi = r.items[i].volumeInfo;
+                    if(vi.authors == null) continue;
+                    if(vi.imageLinks == null){
+                        vi.imageLinks = {};
+                    }
+                    records['id'+i] = r.items[i].id;
+                    records['authors'+i] = vi.authors.join('|');
+                    records['title'+i] = vi.title
+                    records['subtitle'+i] = vi.subtitle || '';
+                    records['img'+i] = vi.imageLinks.thumbnail;
+                    var title = vi.title;
+                    var name = vi.title;
+                    if(vi.subtitle){
+                        title = title + ': ' + vi.subtitle;
+                        name = name + '-' + vi.subtitle;
+                    }
+                    var authorLinks = [];
+                    jQuery.each(vi.authors, function(i,a){
+                        authorLinks.push('<a href="http://wn.com/'+esc(a)+'">'+a+'</a>')
+                    });
+                    var ctx = {
+                        id: r.items[i].id,
+                        url: 'http://wn.com/'+esc(vi.authors[0]+'-'+name)+'/#/book',
+                        img: vi.imageLinks.thumbnail,
+                        title: title,
+                        authors: authorLinks.join(', '),
+                    };
+                    var text = itemTemplate(ctx);
+                    target.append(text);
+                }
+                jQuery.ajax({
+                   url: 'http://my.wn.com/bookcache/',
+                   type: 'GET',
+                   dataType: 'script',
+                   data: records
+                });
+            })
+        });
+    });
+    </script>
+
+
+    <!-- bgr upload -->
+    <script type="text/javascript"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript"><!--
+    set_iframe = ensure(function(){
+        var old_close = window.ifr_close;
+        var new_ifr_close = function(){
+            window.ifr_close = old_close;
+            old_close();
+            var style = jQuery.cookies.get(wnstyle_cookie);
+            if (style) {
+                switchStyle(style);
+            }
+        }
+        if(old_close != new_ifr_close){
+            window.ifr_close = new_ifr_close;
+        }
+        return ifr_iframe(400, 520, 'http://login.wn.com/skin/');
+    });
+
+    edit_in_iframe = ensure(function(){
+        var old_close = window.ifr_close;
+        var new_ifr_close = function(){
+            window.ifr_close = old_close;
+            old_close();
+            location.reload(true);
+        }
+        if(old_close != new_ifr_close){
+            window.ifr_close = new_ifr_close;
+        }
+        var w = Math.min($(document).width(), 1024);
+        var h = Math.min($(document).height(), 800);
+        return ifr_iframe(w, h, 'http://manage.wn.com/editform/wn.com//');
+    });
+    // -->
+    </script>
+
+
+
+    <!-- popup login, requires the same jquery.postmessage.min.js that bgr upload uses ^^^^ -->
+	<script type="text/javascript">
+	login_complete_i = ensure(function(){
+	    login_close();
+	    query_user_actions();
+	});
+	</script>
+	<script type="text/javascript"></script>
+	<style>
+		iframe.ifr {
+		    border: 0px; margin: 0px; padding: 0px;
+		}
+		.ifr_close {
+		    position: absolute; right: -18px; text-indent: -1000px; top: -16px;
+		}
+		.ifr_close:hover {
+		    cursor: pointer;
+		}
+        .wikipage .mwcss .wikilink {
+            padding-left: 5px;
+        }
+	</style>
+
+
+    <!-- tooltip -->
+    <script type="text/javascript"></script>
+    
+	
+	
+	
+
+    <script type="text/javascript"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript"></script>
+
+      
+  <script type="text/javascript"></script>
+  <script type="text/javascript"></script>
+  <script><!--
+  jQuery(function(){
+    jQuery('input.top_query').autocomplete('http://', {
+        selectFirst: false,
+        matchSubset: false,
+        scroll: false,
+        max: 20,
+        doSearch: window.doAutoComplete
+    }).result(function(event, item, formatted) {
+        if(window.wn_search_mangler){
+            form = jQuery(this).parents().find('form:first')[0];
+            wn_search_mangler(form);
+        }else{
+            wn_search_performed(event, formatted);
+        }
+    });
+  });
+  // -->
+  </script>
+
+
+
+
+     <script type="text/javascript"><!--
+    // including the counter script
+    ensure(function() {
+        counter_load = ensure(function(){
+            // disabled for now
+            return false;
+
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'http://counter2.wn.com/count.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        });
+        if (window.attachEvent)
+            window.attachEvent('onload', counter_load);
+        else
+            window.addEventListener('load', counter_load, false);
+    })();
+    // done including the counter
+    // -->
+    </script>
+
+
+
+
+    <script type="text/javascript"><!--
+        playlist_name = "";
+        playlist_id = null;
+        playlists = [
+        ];
+        page_id = 1; // fixme
+        // -->
+    </script>
+
+
+
+    <script type="text/javascript"><!--
+    var ALTERNATE_CSS_BASE='http://cdn0.wn.com/or/ula/cheetah-photo-search/2012-10-08/';
+    var styleOverride = null;
+            var days = 365;
+        function setCookie(cookieName, value) {
+            var expiryDate = new Date();
+            expiryDate.setTime(expiryDate.getTime()+(days * 24 * 60 * 60 * 1000));
+
+            jQuery.cookies.set(cookieName, value, {
+                expiresAt: expiryDate
+            });
+        }
+
+        var wnstyle_cookie = 'wnstyle';
+        var bgcolor=false;
+        var linkcolor=false;
+
+        window.switchStyle = function(styleName, dontSave) {
+            if(!jQuery(".themeswitch#"+styleName).length){
+                styleName = 'white';
+            }
+            //jQuery('#videoquery0').val(jQuery('#videoquery0').val()+styleName+' ');
+            var activeStylesheetIndex = -1;
+            var activeStylesheet = null;
+            var newActiveStylesheet = null;
+            jQuery('link[@rel*=style][title]').each(
+                function(i)
+                {
+                  if(this.getAttribute('rel').match('style')){
+                    if (this.getAttribute('title') == styleName) {
+                        this.disabled = false;
+                        activeStylesheetIndex = i;
+                        newActiveStylesheet = this;
+                    }else{
+                        if(!this.disabled && !activeStylesheet){
+                            activeStylesheet = this;
+                        }else{
+                            this.disabled = true;
+                        }
+                    }
+                  }
+                }
+            );
+            if(activeStylesheetIndex == -1){
+                //jQuery('link[@rel*=style][title=white]')[0].disabled=false;
+                newActiveStylesheet = document.createElement("link");
+                newActiveStylesheet.rel = 'stylesheet alternate';
+                newActiveStylesheet.type = "text/css";
+                newActiveStylesheet.title = styleName;
+                newActiveStylesheet.href = ALTERNATE_CSS_BASE+styleName+'.css';
+                newActiveStylesheet = document.getElementsByTagName("head")[0].appendChild(newActiveStylesheet);
+                newActiveStylesheet.disabled=true;
+                if(activeStylesheet){
+                    activeStylesheet.disabled=true;
+                }
+                newActiveStylesheet.disabled=false;
+                setTimeout(function () { // repeat if style didn't load
+                    newActiveStylesheet.disabled=true;
+                    if(activeStylesheet){
+                        activeStylesheet.disabled=true;
+                    }
+                    newActiveStylesheet.disabled=false;
+                }, 500);
+            }else if(activeStylesheet && activeStylesheet.getAttribute('title') != styleName){
+                newActiveStylesheet.disabled = true;
+                activeStylesheet.disabled=true;
+                newActiveStylesheet.disabled = false;
+                // setTimeout(function () {
+                //     newActiveStylesheet.disabled = false;
+                // }, 100);
+            }
+            var bgstyle = 'transparent';
+            var styleImage = jQuery.cookies.get('wnskin');
+            if(styleImage){
+                bgstyle = 'url(http://login.wn.com/media/skins/'+styleImage+')';
+            }
+            jQuery(".custom_bgr").css({'background' : bgstyle});
+            if(!dontSave){
+                setCookie(wnstyle_cookie, styleName);
+            }
+            $('#skins').trigger('skin.changed', [styleName, styleImage]);
+        };
+
+    jQuery(function() {
+            if(styleOverride){
+                switchStyle(styleOverride, true);
+            }else{
+                var style = jQuery.cookies.get(wnstyle_cookie);
+                if (style) {
+                    switchStyle(style);
+                }
+            }
+
+            // legacy code support: updating default colors from cookies
+            if (jQuery.cookies.get('linkcolor')) { linkcolor = jQuery.cookies.get('linkcolor');}
+            else { linkcolor = 'ffffff'; }
+            if (jQuery.cookies.get('bgcolor')) { bgcolor = jQuery.cookies.get('bgcolor');}
+            else { bgcolor = '000000'; }
+            jQuery('#color-link div').css('backgroundColor', '#' + linkcolor);
+            jQuery('#color-bg div').css('backgroundColor', '#' + bgcolor);
+
+            jQuery('.themeswitch').click(function(event) {
+                event.preventDefault();
+                var style = jQuery(this).attr('id');
+                switchStyle(style);
+            });
+
+    });
+
+    // -->
+    </script>
+
+
+    <script type="text/javascript"><!--
+            $ensure(function(){
+                $('.editable').inlineEdit({
+                    edit: function(e, hash){
+                            active = true;
+                            this.find('input').autocomplete('http://', {
+                                selectFirst: false,
+                                matchSubset: false,
+                                scroll: false,
+                                max: 20,
+                                doSearch: window.doAutoComplete
+                            }).result(function(event, item, formatted) {
+                                // this.value = formatted;
+                                $('.editable button').trigger('click');
+                                // $('.editable input').trigger('blur');
+                            });
+                    },
+                    save: function(e, hash){
+                        ensure(save_title)('http://editor.wn.com/save_title/', hash);
+                    },
+                    render: function(value){
+                        return '<a href="http://wn.com/">'+value+'</a>';
+                    }
+                });
+                $('.editable').change(function(){
+                    $('.editable button').trigger('click');
+                    $('.editable input').trigger('blur');
+                });
+             });
+       // -->
+        </script>
+
+		
+
+	
+	
+    <script type="text/javascript"></script>
+
+
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5075628-13'],
+            ['_trackPageview'],
+            ['_setAccount', 'UA-1177289-31'],
+            ['_setDomainName', '.wn.com'],
+            ['_trackPageview']);
+// URL: nuclearwarheads.net
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  /* wrs: attempt to track how long people stay on the page by logging an event every 15 seconds */
+  var wrs_page_load_time = new Date().getTime();
+  var wrs_last_log_time = 0;
+  var wrs_log_interval = 30;
+
+  function wrs_log_time_on_page()
+  {
+      /* calculate time on page, fudge it up a little in case event fires early, then round down to nearest 15 seconds */
+      var wrs_time_on_page = 1 + ((new Date().getTime() - wrs_page_load_time) / 1000);
+      wrs_time_on_page = wrs_time_on_page - (wrs_time_on_page % 15);
+
+      if(wrs_time_on_page < 180 || (wrs_time_on_page - wrs_last_log_time) > wrs_log_interval){
+          wrs_last_log_time = wrs_time_on_page;
+          if(wrs_time_on_page > 600)
+              wrs_log_interval = 120;
+          if(wrs_time_on_page > 2400)
+              wrs_log_interval = 300;
+          _gaq.push(['_trackEvent', 'WNAnything', 'StillOnPage', wrs_time_on_page.toFixed()]);
+      }
+  }
+
+  setInterval(wrs_log_time_on_page, 15000);
+</script>
+
+
+
+
+
+
+		
+		
+            <meta property="og:title" content="" />
+            <meta property="og:url" content="http://wn.com/" />
+            <meta property="og:image" content="[]" />
+            <meta property="og:site_name" content="World News" />
+
+        <meta property="og:video" content="[]"/>
+        <meta property="og:video:height" content="240" />
+        <meta property="og:video:width" content="320" />
+        <meta property="og:video:type" content="application/x-shockwave-flash" />
+
+
+	<script type="text/javascript"></script>
+	
+	<style>
+	.share-content{ margin: 20px 0 0 0px;}
+	.twitter-follow-button { display: block; margin: 15px 0 20px 0;}
+	</style>
+	
+
+
+</head>
+
+
+
+<body onLoad="if(!document.location.hash){document.getElementById('video_query').focus();}">
+
+
+
+<div id="fb-root"></div>
+<script>
+    ensure(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+function add_fb_comments(){
+}
+</script>
+
+<div class="custom_bgr" style="background-position: 0px 80px !important;">
+
+
+	
+<!-- fullscreen playlist container -->
+		   
+	
+<div id="playlistcontainer_fscontainer" style="display: none;">
+			<div class="playlistcontainerfs_button"></div>
+			<ul id="playlistcontainerfs" class="playlistcontainer"></ul>
+</div>
+	
+		
+
+
+
+
+<!-- FULLSCREEN BOTTOM VIDEOS -->
+<div id="panelSlider" style="display: none;">
+	<div class="fs-videos">
+            <div id="content-scroll">
+                <div id="content-holder">
+                    <ul class="video_slider" id="suggestions_videos">
+
+                    </ul>
+                </div>
+            </div>
+            <div id="content-slider"></div>
+	</div>
+</div>
+
+
+
+<!--  FULLSCREEN BUTTONS  -->
+<div id="panelButtons" style="display: none;">	
+		
+		<div class="fs-buttons">		   
+			<div class="fs-button esc_fs">Home</div>
+			<div class="fs-button menu">Menu</div>
+			<div class="fs-button playlist">Playlist</div>
+			<div class="fs-button videos">Videos</div>
+			<div class="fs-button all">open all</div>			
+		</div>
+		
+		<div class="fs-button-switch"></div>
+</div>
+
+
+<div id="header_login">
+
+
+        <div id="lang-content">
+            <select id="id_language" onchange="setLang(this)"><option value="ar">Arabic</option>
+<option value="bn">Bengali</option>
+<option value="bg">Bulgarian</option>
+<option value="zh">Chinese</option>
+<option value="nl">Dutch</option>
+<option value="en" selected="selected">English</option>
+<option value="fi">Finnish</option>
+<option value="fr">French</option>
+<option value="de">German</option>
+<option value="gu">Gujarati</option>
+<option value="hi">Hindi</option>
+<option value="hu">Hungarian</option>
+<option value="id">Indonesian</option>
+<option value="ja">Japanese</option>
+<option value="kn">Kannada</option>
+<option value="ms">Malay</option>
+<option value="mr">Marathi</option>
+<option value="pl">Polish</option>
+<option value="pt">Portuguese</option>
+<option value="ru">Russian</option>
+<option value="es">Spanish</option>
+<option value="tl">Tagalog</option>
+<option value="ta">Tamil</option>
+<option value="te">Telugu</option>
+<option value="ur">Urdu</option></select>
+        </div>
+        <div id="skins_content">
+
+<div class="skins_icon"><img src="http://cdn8.wn.com/or/images/skins.gif" width="16" height="16" alt="Select your Background Color" title="Select your Background Color" data-title="Select your Background Color" /></div>
+
+        <!-- skins: starts -->
+            <div id="skins" class="border_color bgr_color rounded" style="width: 70px !important; display: none">
+
+                <div class="themeswitch light-skin" name="theme" id="blue"></div>
+                <div class="themeswitch dark-skin" name="theme" id="darkblue"></div>
+
+                <div class="themeswitch light-skin" name="theme" id="red"></div>
+                <div class="themeswitch dark-skin" name="theme" id="darkred"></div>
+
+                <div class="themeswitch light-skin" name="theme" id="white"></div>
+
+                <!-- <div class="themeswitch" name="theme" id="black"></div> -->
+                <div class="themeswitch dark-skin" name="theme" id="black"></div>
+
+                <div class="themeswitch light-skin" name="theme" id="purple"></div>
+                <div class="themeswitch dark-skin" name="theme" id="darkpurple"></div>
+
+                <div class="themeswitch light-skin" name="theme" id="turquoise"></div>
+                <div class="themeswitch dark-skin" name="theme" id="darkturquoise"></div>
+
+                <div class="themeswitch light-skin" name="theme" id="green"></div>
+                <div class="themeswitch dark-skin" name="theme" id="darkgreen"></div>
+
+
+                <br clear="left" />
+                <div class="bgr_upload" onclick="return set_iframe();" style="margin="10px 0;">
+                    <a href="#" onclick="return set_iframe();" alt="Change Background Image" title="Change Background Image" data-title="Change Background Image"><span data-trans="upload">upload</span></a>
+                </div>
+                <br clear="left" />
+            </div>
+        </div>
+        <!-- skins: end -->
+
+	
+	
+		
+		
+		<!-- dictionary entries  -->
+		<!-- / dictionary entries  -->
+
+
+
+	
+        <div id="login">
+
+
+
+                                <a style='border: none' href="http://editor.wn.com/login/?next=http://wn.com/" onclick="return login_iframe('http://wn.com/logged_in');"><span data-trans="Login">Login</span></a>
+								
+
+
+                                <a rel="nofollow" onclick="return login_and_save_playlist('http://editor.wn.com/save_playlist//', this.href)" href="http://editor.wn.com/fork/wn//">Edit</a>
+
+
+        </div>
+
+
+        <script type="text/javascript"><!--
+        window.page_query = '';
+        update_user_actions = ensure(function(data){
+                if(data.username){
+                    $('#login').html(data.html);
+                    window.username = data.username;
+                }
+                $ensure(function(){
+                    if(data.editable){ // user is owner
+                        $('.signup-box').html('<a id="id_save_playlist"  class="sign_up" onclick="return save_playlist(this.href)" href="http://editor.wn.com/save_playlist//"><span data-trans="Save playlist">Save playlist</span></a>');
+                        $('.button').html('<a id="id_save_playlist"  class="sign_up" onclick="return save_playlist(this.href)" style="float: none !important;" href="http://editor.wn.com/save_playlist//"><span data-trans="Save this page">Save this page</span></a>');
+                    }else if(data.username){ // watching other user page
+                        $('.signup-box').html('<a onclick="return login_and_save_playlist(\'http://editor.wn.com/save_playlist//\', this.href)" rel="nofollow" class="sign_up" href="http://editor.wn.com/fork/wn//"><span data-trans="Save playlist">Save playlist</span></a>');
+                        $('.button').html('<a onclick="return login_and_save_playlist(\'http://editor.wn.com/save_playlist//\', this.href)" rel="nofollow" class="sign_up" style="float: none !important;" href="http://editor.wn.com/fork/wn//"><span data-trans="Save this page">Save this page</span></a>');
+                    }
+                    if(data.username){
+                        $('.not_editable').hide();
+                        $('.is_editable').show();
+                    }else{
+                        $('.not_editable').show();
+                        $('.is_editable').hide();
+                    }
+                });
+        });
+
+        query_user_actions = ensure(function(){
+            jQuery.ajax({
+                data: {
+                    edit: '',
+                    owner: 'wn',
+                    ieditor: 'http://editor.wn.com',
+                },
+                dataType: 'jsonp',
+                url: 'http://login.wn.com/actions/i/',
+                success: function(data) {
+                    update_user_actions(data);
+                },
+            });
+        });
+        query_user_actions();
+        // -->
+        </script>
+
+</div>
+
+<!-- / header login -->
+
+    
+
+
+
+
+<!-- **************** header  *********  -->
+
+<div id="header" class="border_color">
+
+			
+			
+        <div class="pagewidth">
+		
+			<!-- time -->
+			
+
+			
+
+			
+
+			
+			
+		     <div id="top_tools">
+
+			
+             	<div class="lightSwitcher lights_out rounded glow vtip" title="Lights out"></div>
+			 	<div class="lightSwitcher lights_on rounded glow vtip" title="Lights on" style="display: none;"></div>
+			
+				
+					<!-- fullscreen -->
+	<a href="#" title="Fullscreen player" data-title="Fullscreen player" class="fullscreen-toggle fullscreen rounded glow multi-fullscreen vtip"></a>
+					<!-- / fullscreen -->
+	
+			
+            </div>
+            <!-- /top_tools -->
+
+
+			
+		
+			<!-- top search box -->
+            <div class="multiple-video-search top-search">
+            <form id="form-news-search" accept-charset="utf-8" method="get">
+                <input id="video_query" type="text" name="query" value="" class="top_query"  />
+                <input type="submit" value="" class="search" id="news-search"  />
+            </form>
+            </div>
+
+
+			
+			<!-- wndate -->
+	       
+	
+		    	<div class="wndate">Wednesday, 11 December 2013</div>
+				
+				
+		
+		<div id="page_title">                    
+			<div class="new_font page_title">
+				<a href="http://wn.com/" style="color: #000; cursor: pointer;"></a>
+			</div>		
+		</div>
+
+
+
+
+    </div>
+     <!-- page width ends -->
+
+
+</div>
+<!-- Header ends -->
+	
+
+
+
+    		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+	   
+
+
+
+<div class="wrapper body_bgr">
+
+
+    <!-- ====================  NAVIGATION starts ================= -->
+    <div id="nav" class="nav body_bgr">
+        <div class="pagewidth">
+
+            <ul id="main-menu" class="tabtrigger border_color body_bgr new_font" >
+		
+
+
+
+				
+				
+
+
+		
+		
+
+
+
+
+
+
+
+
+
+				
+                
+				
+				
+
+
+
+		  
+
+				
+
+
+
+				
+
+
+
+
+
+
+					
+		
+
+
+
+
+
+		
+
+
+
+
+
+        <!-- collage -->
+
+
+
+
+            <li><a href="#" id="#bing_results" onClick="ensure(load_iframe_url)('bing_results_iframe', 'http://www.bing.com/search?q='); _gaq.push(['_trackEvent', 'WNAnything', 'Bing Results', '']); return false;"><span data-trans="Bing">Bing</span></a></li>
+
+
+
+
+
+
+
+
+                <!-- Travel Booking -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               
+                <li style="display: none;"><a id="#history" onclick='return false;'><span data-trans="history">history</span></a></li>
+             
+		
+            </ul>
+
+			
+                <!-- share-content -->
+		<div class="share-content">
+                    
+                    <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FWNLive&amp;width=120&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;send=false&amp;appId=181262308596196" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width: 120px; height:21px;" allowTransparency="true"></iframe>
+
+                    
+                    <a href="https://twitter.com/worldnewsdotcom" class="twitter-follow-button twittercount" data-show-count="false" data-show-screen-name="false">Follow @worldnewsdotcom</a>
+
+		    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+				</script>
+
+	                
+              		<!-- Place this tag where you want the widget to render. -->
+              	<div class="g-follow google_plus" data-annotation="none" data-height="15" data-href="https://plus.google.com/u/0/108635711349541613409/posts" data-rel="publisher"></div>
+              
+
+              <!-- Place this tag after the last widget tag. -->
+              <script type="text/javascript">
+                (function() {
+                  var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                  po.src = 'https://apis.google.com/js/plusone.js';
+                  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+              </script>
+			</div>
+           <!-- / share-content -->
+		   
+		   
+		   
+		   
+
+        </div>
+
+    </div>
+    <!-- navigation ends  -->
+
+	
+	
+	
+	
+	<!-- SET LYRICS ARTISTS NAME -->	
+  <script type="text/javascript">
+        // this will add all available videos to playlist
+            var detailsTemplate = _.template('<div class="video-desc draggable border_color font_color <%= info %>">' +
+                '<div class="video-remove" title="Click to remove from playlist"></div>' +
+                '<div class="content"><a class="playlistitem" id="<%= id %>_line" href="#">'+
+                '<div class="video-thumb border_color bgr_color descriptions-tab-thumbnail gotop">'+
+                '<img class="video-thumbnail gotop playvideo1"  onClick="activateTab(\'playlist1\'); return false" width="300" height="225" alt="<%= title %>" src="<%= thumbnailUrl %>"></div></a>'+
+                '<div class="video-title" >'+
+                '<a class="playlistitem playvideo1 gotop"  onClick="activateTab(\'playlist1\'); return false" id="<%= id %>_more" href="#"><%= title %></a></div>'+
+                '<ul><li><span data-trans="Order:">Order:</span> <input type="text" size="2" value="<%= order %>" class="details-manual-order" />'+
+                '<a href="javascript:void(0);" class="details-manual-order-confirm" style="display:none;" title="Move to new position" data-title="Move to new position"><span data-trans="Reorder">Reorder</span></a></li>'+
+                '<li><span data-trans="Duration:">Duration:</span> <span class="video-duration"><%= durationStr %></span></li>'+
+                '<li><span data-trans="Updated:">Updated:</span> <span class="video-uploaded"><%= updated %></span></li></ul>'+
+              
+                '<div class="video-fulldescription"><%= tooltipContentBody %></div>' +
+                '<a class="fullscreen rounded glow playvideo1 gotop vtip" onClick="triggerFullscreen(1); return false;" id="<%= id %>_more" href="#" title="Play this Video in Full Screen" data-title="Play this Video in Full Screen"></a>'+
+                '<a href="http://wn.com/<%= url %>" target="_blank" style="target-name: new; target-new: tab;">'+
+                'http://wn.com/<%= title %></a><br clear="left" /></div></div>'+
+                '<span class="description-content" style="display: none;">'+
+                '<div class="tooltip-content-body"><%= tooltipContentBody %></div></span>');
+				
+    function load_wiki(el, query, main) {
+        var wikisnippet = jQuery(el).closest('.wikiparser').find('.wikisnippet');
+        jQuery(el).html('Loading... please wait...');
+        jQuery(el).closest('div').load('/api/upge/cheetah-photo-search/wiki_page?main='+main+'&query='+escape(query), function(){
+            wikisnippet.hide();
+            updateHeight();
+        });
+        return false;
+    }
+				
+    function load_playlistlyrics(query) {
+		jQuery('.lyrics_icon').hide();
+		var lyrics_query = query.replace('&', ' ').replace('[', ' ').replace(']', '').replace('@', ' ').replace('live', ' ').replace('Live', ' ').replace('(', ' ').replace(')', ' ').replace('"', ' ').replace('!', ' ')
+        jQuery.ajax({
+            url: '/api/upge/cheetah-photo-search/lyrics_playlist',
+            data: {'query': lyrics_query,
+                   'artist': ''
+            },
+            dataType: 'text',
+            success: ensure(function(text) {
+                text = text.trim().split(/<!--/,1)[0];
+                if(!text) {
+                    var song = "";                    					
+                }else{
+                    var matches = text.trim().match(/(.*)\n(.*)\n([^]*)/);
+                    var song = matches[3];
+                    jQuery('.lyrics_icon').show();
+                }
+                jQuery('.lyrics_body').html(song);
+                updateHeight();
+            })
+        });
+        return false;
+    }
+
+  </script>
+  
+  <script type="text/javascript"><!--
+    bind_videos = ensure(function(vsid){
+                        $('a#play'+vsid+'').click(ensure(function(){
+                            videoplayers[vsid].addVideo($('#details'+vsid+' .video-info'));
+                            videoplayers[vsid].addVideo($('#playlist'+vsid+' .video-info'));
+                        }));
+                        $('a#remove'+vsid+'').click(ensure(function(){
+                            $('#playlist'+vsid+' .mainvideoresults').animate({ opacity: 'hide' }, "slow");
+                            updateHeight();
+                        }));
+
+                        $('a.list-preview').click(ensure(function(){
+                            $('.list-preview').hide('fast');
+                            $('.thumb-preview').show('fast');
+                        }));
+                        $('a.thumb-preview').click(ensure(function(){
+                            $('.list-preview').show('fast');
+                            $('.thumb-preview').hide('fast');
+                        }));
+                        $('#playlist_clear'+vsid+'').click(function(){
+                            $(this).hide('fast');
+                            $('#playlist_restore'+vsid+'').show('fast');
+                         });
+                        $('#playlist_restore'+vsid+'').click(function(){
+                            $('.playlist_clear'+vsid+'').show('fast');
+                            $(this).hide('fast');
+                        });
+                        $('#sortby'+vsid+'').hide();
+                        $('a#open_sortby'+vsid+'').click(function(){
+                            $('#sortby'+vsid+'').show('slow');
+                            $('#open_sortby'+vsid+'').hide('fast');
+                            $('#close_sortby'+vsid+'').show('fast');
+                        });
+                        $('a#close_sortby'+vsid+'').click(function(){
+                            $('#sortby'+vsid+'').hide('slow');
+                            $('#open_sortby'+vsid+'').show('fast');
+                            $('#close_sortby'+vsid+'').hide('fast');
+                        });
+
+        if(!window.videoplayers){
+            videoplayers = [];
+        }
+        videoplayers[vsid] = new Videoplayer({
+            playlistContainer: "#playlistcontainer"+vsid,
+            playerContainer: "#playercontainer"+vsid,
+            playlistItemTemplate: '<li class="playlistitemli thumbnail border_color bgr_color_content font_color">' +
+'<a class="playlistitem ellipsis bgr_color" id="<%= id %>" href="#">' +
+'<div class="thumb border_color rounded"><div class="clip">' +
+'<img width="110" height="82" alt="<%= title %>" src="<%= thumbnailUrl %>" />' +
+'<div class="duration opacity"><%= durationStr %></div></div></div>' +
+'<span class="video-title"><%= title %></span>' +
+'<span class="playlistitemremove" title="Click to remove from playlist" data-title="Click to remove from playlist"></span></a>' +
+'<span class="description-content" style="display:none;"><%= tooltipContentBody %></span>' +
+'</div></li>',
+            playpositionTemplate: '<%= elapsedTime %> / <%= totalTime %>',
+            emptyItemHtml: '<li class="empty"><span data-trans="Add any items to Create Playlist by dragging or using the \"Add\" Icon on each Video thumbnail or selecting more Videos from new Searches to build your Playlist">Add any items to Create Playlist by dragging or using the "Add" Icon on each Video thumbnail or selecting more Videos from new Searches to build your Playlist</span></li>',
+            inputOrdering: true,
+            descriptionsholder: '.descriptionsplace',
+            enableLogging: false,
+
+            playTrigger: '.playvideo'+vsid+'',
+            addTrigger: '.addvideo'+vsid+'',
+            playlistRepeat: '#playlistrepeat'+vsid+'',
+            playlistShuffle: '#playlistshuffle'+vsid+'',
+            playlistClear: '.playlist_clear'+vsid+'',
+            playposition: '#playposition'+vsid+'',
+            autoplayCheckbox: '#autoplay'+vsid+'',
+            replaycurrentCheckbox: '.replaycurrent'+vsid+'',
+            autoplayCookie: (vsid==1)?'wn-videoplayer-autoplay':'',
+            playlistFormatCookie: 'wn-videoplayer-playlist-format',
+            controlNext: '.videoplayer-control-next',
+            controlPrev: '.videoplayer-control-prev',
+            controlPlay: '.videoplayer-control-play',
+            controlPause: '.videoplayer-control-pause',
+            playlistLink: '.playlist-link'
+        });
+        jQuery('.autoplay').attr('checked', jQuery('#autoplay1').attr('checked'));
+        jQuery('.autoplay').click(function(event){
+            $('.autoplay').attr('checked', $(event.target).attr('checked'));
+            videoplayers[1].onAutoplayClick();
+        });
+        videoplayers[vsid].playerContainer.bind('videoplayer.player.videoloaded', function(e, videoInfo){
+            load_playlistlyrics(videoInfo.title);
+        });
+
+        jQuery('.autoplay').attr('checked', jQuery('#autoplay1').attr('checked'));
+        jQuery('.autoplay').click(function(event){
+            $('.autoplay').attr('checked', $(event.target).attr('checked'));
+            videoplayers[1].onAutoplayClick();
+        });
+        if(vsid == 1){
+            window.videoplayer = videoplayers[1];
+        }
+
+        // this will add all available videos to playlist
+            vp = videoplayers[vsid];
+            vp.addVideo($('#video-results-'+vsid+' .video-info').slice(0, 14));
+            if(vp.getActualPlaylist().length){
+                vp.playFromPlaylist(vp.getActualPlaylist()[0], vp.autoplay);
+            }
+
+            jQuery('#videoplayer-play-all'+vsid+'').click(function(event) {
+                event.preventDefault();
+                videoplayers[vsid].clearPlaylist();
+                videoplayers[vsid].addVideo(jQuery('#video-results-'+vsid+' .video-info').slice(0, 23));
+                videoplayers[vsid].playPlaylist();
+            });
+            jQuery('#videoplayer-play-next'+vsid+'').click(function(event) {
+                event.preventDefault();
+                videoplayers[vsid].playNextPlaylistVideo();
+            });
+            jQuery('#playlist_restore'+vsid+'').click(function(event) {
+                    event.preventDefault();
+                    videoplayers[vsid].clearPlaylist();
+                    videoplayers[vsid].addVideo(jQuery('#video-results-'+vsid+' .video-info').slice(0, 14));
+                    videoplayers[vsid].playPlaylist();
+            });
+			jQuery(document).keyup(ensure(function(e) {
+	            if (e.keyCode == 27) {    			
+					jQuery('#home'+vsid+'').click();	
+	                return false;
+	            }
+	        }));
+    });
+            </script>
+
+  <script type="text/javascript"><!--
+        //jQuery(function() {
+        window.bind_video_details = ensure(function(vsid){
+            var target = $('#details'+vsid+' .center-content');
+            videoplayers[vsid].playerContainer.bind('videoplayer.player.playlistchanged', function(e, playlist){
+                target.find('.video-desc').detach();
+                for(var i in playlist){
+                    var item = playlist[i];
+                    var itemId = _.uniqueId('item_');
+                    var context = {
+                        descriptionsholder: '.descriptionsplace',
+                        id: itemId,
+                        info: "{source: '"+item.source+"', video_id: '"+item.video_id+"', duration: "+item.duration+", published: '"+item.published+"', updated: '"+item.updated+"', author: '"+item.author.replace(/'/g,"\\'")+"'}",
+                        url: item.title.replace(/ /g, '_').replace(/"/g,'&quot;')+'/video_details',
+                        title: item.title,
+                        titled: item.title+'/video details',
+                        durationStr: videoplayers[vsid].formatTime(item.duration),
+                        description: item.description,
+                        updated: item.updated,
+                        author: item.author,
+                        published: item.published,
+                        order: (+i)+1,
+                        thumbnailUrl: item.thumbnailUrl,
+                        tooltipContentBody: item.tooltipContentBody,
+                    };
+                    var item_text = detailsTemplate(context);
+                    target.append(item_text);
+                }
+            });
+
+                    // getting the video details delete button to work
+                    $('#details'+vsid+' .video-remove').live('click', function(e) {
+                        var toRemove = videoplayers[vsid].extractVideoData(this);
+                        var playlist = videoplayers[vsid].getPlaylist();
+                        for (var i = 0; i < playlist.length; i++) {
+                            var playlistItem = playlist[i];
+                            if(videoplayers[vsid].isSameVideo(playlistItem, toRemove)){
+                                playlist.splice(i--, 1);
+                            }
+                        }
+                        videoplayers[vsid].setPlaylist(playlist);
+                        $(this).parent('div.video-desc').detach();
+                        var items = $('#details'+vsid+' .video-desc .details-manual-order');
+                        for (var i = 0; i < items.length; i++) {
+                            $(items[i]).val(i+1);
+                        }
+
+                    });
+                    $('#details'+vsid+' .descriptions-tab-thumbnail').click(function(event) {//
+                            activateTab('playlist'+vsid+'');
+                     });
+                    // ordering logic
+                    var pl_len = $('#details'+vsid+' .video-desc').length;
+                    var init_vlist_value = false;
+                    var new_vlist_value = false;
+                    $('#details'+vsid+' .details-manual-order').live('hover', function(e) {
+                        $(this).select();
+                        if (!init_vlist_value) { init_vlist_value = parseInt($(this).val()); }
+                    });
+                    $('#details'+vsid+' .details-manual-order').live('focus', function(e) {
+                        if (!init_vlist_value) { init_vlist_value = parseInt($(this).val()); }
+                    });
+                        //$('#details'+vsid+' .details-manual-order').blur(function(e) {
+                        //  $(this).parent().find('.details-manual-order-confirm').hide();
+                        //})
+                        $('#details'+vsid+' .details-manual-order').live('keyup',function(e) {
+                            $(this).parent().find('.details-manual-order-confirm').hide();
+                            new_vlist_value = parseInt($(this).val());
+                            if (isNaN(new_vlist_value)) { return false; }
+                            if (new_vlist_value == undefined) { return false; }
+                            if (new_vlist_value == parseInt(init_vlist_value)) { return false; }
+                            if (new_vlist_value < 0) { return false; }
+                            if (new_vlist_value > pl_len) { return false; }
+                            if (new_vlist_value == 0) { new_vlist_value = 1; }
+                            $(this).parent().find('.details-manual-order-confirm').show();
+                        });
+                        // add the keypress event
+                        $('#details'+vsid+' .details-manual-order').live('keypress', function(e) {
+                            if(e.keyCode == 13) {
+                                var tmp = $('#details'+vsid+' .video-desc').eq(init_vlist_value-1);
+                                var target = $('#details'+vsid+' .video-desc').eq(new_vlist_value-1);
+                                var tmpc = tmp.clone(true);
+
+                                target.find('.details-manual-order').val(init_vlist_value);
+                                tmp.replaceWith(target);
+                                var place = $('#details'+vsid+' .video-desc').eq(new_vlist_value-1);
+                                tmpc.insertBefore(place);
+
+                                var items = $('#details'+vsid+' .video-desc .details-manual-order');
+                                for (var i = 0; i < items.length; i++) {
+                                    $(items[i]).val(i+1);
+                                }
+
+                                videoplayers[vsid].switchPlaylistItems(init_vlist_value, new_vlist_value);
+                                init_vlist_value = false;
+                                new_vlist_value = false;
+                                $('#details'+vsid+' .details-manual-order-confirm').hide();
+                            }
+                        });
+
+                        $('#details'+vsid+'-items .details-manual-order-confirm').live('click', function(e) {
+                                tmp = $('#details'+vsid+' .video-desc').eq(init_vlist_value-1);
+                                target = $('#details'+vsid+' .video-desc').eq(new_vlist_value-1);
+                                tmpc = tmp.clone(true);
+
+                                target.find('.details-manual-order').val(init_vlist_value);
+                                tmp.replaceWith(target);
+                                place = $('#details'+vsid+' .video-desc').eq(new_vlist_value-1);
+                                tmpc.insertBefore(place);
+
+                                var items = $('#details'+vsid+' .video-desc .details-manual-order');
+                                for (var i = 0; i < items.length; i++) {
+                                    $(items[i]).val(i+1);
+                                }
+
+                                videoplayers[vsid].switchPlaylistItems(init_vlist_value, new_vlist_value);
+                                init_vlist_value = false;
+                                new_vlist_value = false;
+                                $('#details'+vsid+' .details-manual-order-confirm').hide();
+                        });
+        });
+        // -->
+        </script>
+
+
+<script type="text/javascript">
+var remove_dynamic_playlist = ensure(function(num){
+    var target_li = $('#playlist_menu');
+    target_li.find('.remove-'+num).parent().remove();
+    var first_playlist = target_li.find('a').attr('id');
+    if(first_playlist){
+        $("#main-menu li[id='#playlist_menu'] a").attr('id', first_playlist);
+    }
+
+    var target_li = $('#details_menu');
+    target_li.find('.remove-'+num).parent().remove();
+    var first_details = target_li.find('a').attr('id');
+    if(first_details){
+        $("#main-menu li[id='#details_menu'] a").attr('id', first_details);
+    }
+    var target_pl = $('#tabcontainer');
+    target_pl.find('#playlist'+num).remove();
+    target_pl.find('#details'+num).remove();
+});
+</script>
+<script type="text/javascript">
+var found_playlists = null;
+var longest_position = 0;
+var add_cached_videos = ensure(function(count){
+    if(!count) { count = 1; }
+    if(!found_playlists){ return; }
+    if(count>found_playlists.length){
+        count = found_playlists.length;
+    }
+    if(!found_playlists.length){
+        $('.add_youtube_playlist').hide();
+        // _add_dynamic_playlist('', 'no more playlists');
+        return;
+    }
+    for(var i=0; i<+count; i++){
+        var p = found_playlists.splice(0, 1);
+        if(p.length){
+            p = p[0];
+            _add_dynamic_playlist('playlist:'+p.playlist_id, p.title, i==count-1);
+        }
+    }
+});
+
+var show_loading = ensure(function(status){
+    if(status){
+        // add class "loading" to loading button
+    }else{
+        // remove class "loading" to loading button
+    }
+})
+
+var add_longest_videos = ensure(function(){
+    var q = ''
+    var num = ++longest_position;
+    _add_dynamic_playlist(q+' duration:longest', q + ' longest #'+num, true, num*14);
+});
+
+var add_more_videos = ensure(function(count){
+    if(!count) { count = 1; }
+    if(found_playlists){
+        add_cached_videos(count);
+		$('.single-playlist-fullscreen').hide();
+    }else{
+        found_playlists = [];
+        show_loading(true);
+		$('.single-playlist-fullscreen').hide();
+        $.ajax({
+            url: 'http://wn.com/api/upge/edit/find_playlists',
+            data: {query: ''},
+            dataType: 'jsonp',
+            success: ensure(function(response){
+                show_loading(false);
+                found_playlists = response['results'];
+                if(found_playlists){
+                    add_cached_videos(count);
+                }
+            }),
+            failure: ensure(function() {
+                show_loading(false);
+            })
+        });
+    }
+});
+
+var tab_num = null;
+
+var add_dynamic_playlist = ensure(function(query, title){
+    if(!title){
+        title = query;
+    }
+    _add_dynamic_playlist(query, title, true);
+});
+
+var _add_dynamic_playlist = ensure(function(query, title, activate, offset){
+    show_loading(true);
+    if(!tab_num){
+        tab_num = $('#playlist_menu li').length;
+    }
+    var num = ++tab_num;
+
+    //add videos
+    var target_li = $('#playlist_menu');
+    var code_li = _.template('<li class=""><div id="v-remove-<%= num %>" class="remove remove-<%= num %>"></div><a href="" id="#playlist<%= num %>" '+
+            'class="playlist-menu-<%= num %>"><%= title %></a>'+
+			'<div onclick="return triggerFullscreen(<%= num %>);" class="fullscreen rounded glow"></div></li>');
+    target_li.append(code_li({num: num, title: title}));
+
+    var target_pl = $('#tabcontainer');
+    var code_pl = _.template('<div id="playlist<%= num %>" class="playlist-page" style="display: block; position: absolute; margin-left: -10000px; max-width: 9000px"></div>');
+    target_pl.append(code_pl({num: num}));
+
+    // add video details
+    var target_li = $('#details_menu');
+    var code_li = _.template('<li class=""><div id="d-remove-<%= num %>" class="remove remove-<%= num %>"></div><a href="" id="#details<%= num %>" '+
+            'class="details-menu-<%= num %>"><%= title %></a></li>');
+    target_li.append(code_li({num: num, title: title}));
+
+    var target_pl = $('#tabcontainer');
+    var code_pl = _.template('<div id="details<%= num %>" class="details-page" style="display: block; position: absolute; margin-left: -10000px; max-width: 9000px"></div>');
+    target_pl.append(code_pl({num: num}));
+
+    jQuery.ajax({
+        url: 'http://wn.com/api/upge/cheetah-photo-search/dynamic_playlist_article',
+        data: {
+           language_id: '1',
+           vsid: num,
+           query: query,
+           offset: offset|0
+        },
+        dataType: 'jsonp',
+        success: ensure(function(response) {
+            jQuery('#playlist'+num).html(response['videos']);
+            jQuery('#details'+num).html(response['video_details']);
+            bind_videos(num);
+            bind_video_details(num);
+            $('#playlist'+num).css('display', 'block');
+            // $('.tabtrigger li a[id=#playlist'+num+']').first().click();
+            // activateTab('playlist'+num);
+            updateHeight();
+            show_loading(false);
+        }),
+        failure: ensure(function() {
+            show_loading(false);
+        })
+    });
+
+    if(activate){
+        activateTab('playlist'+num);
+        $('#id_new_playlist').attr('value', '');
+	}
+    $('.single-playlist-fullscreen').hide();
+	
+    return false;
+});
+
+/* TEST
+$ensure(function(){
+    setTimeout(function(){
+        if(typeof videoplayers != 'undefined'){
+            add_dynamic_playlist('obama');
+        }
+    }, 500);
+});
+*/
+</script>
+
+
+
+
+
+
+
+
+    <div class="pagewidth submenus">
+		
+		
+						
+						
+		<!-- submenu-container -->
+		<div class="submenu-container" style="display: none;">
+		
+		
+	
+
+
+		
+		
+		
+
+        <ul class="submenu tabtrigger border_color body_bgr" id="news_menu"  style="display:none;">
+		
+            <li><a href="" id="#expand"><span data-trans="Related News">Related News</span></a></li>
+			
+            <li><a href="" id="#top_headlines_tab"><span data-trans="Top Headlines">Top Headlines</span></a></li>
+
+            <li><a id="#language--french" onClick="return load_language_results('', '5')" href=""><span data-trans="French">French</span></a></li>
+
+            <li><a id="#language--german" onClick="return load_language_results('', '6')" href=""><span data-trans="German">German</span></a></li>
+
+            <li><a id="#language--hindi" onClick="return load_language_results('', '29')" href=""><span data-trans="Hindi">Hindi</span></a></li>
+
+            <li><a id="#language--indonesian" onClick="return load_language_results('', '20')" href=""><span data-trans="Indonesian">Indonesian</span></a></li>
+
+            <li><a id="#language--italian" onClick="return load_language_results('', '2')" href=""><span data-trans="Italian">Italian</span></a></li>
+
+            <li><a id="#language--persian" onClick="return load_language_results('', '47')" href=""><span data-trans="Persian">Persian</span></a></li>
+
+            <li><a id="#language--portuguese" onClick="return load_language_results('', '3')" href=""><span data-trans="Portuguese">Portuguese</span></a></li>
+
+            <li><a id="#language--russian" onClick="return load_language_results('', '33')" href=""><span data-trans="Russian">Russian</span></a></li>
+
+            <li><a id="#language--spanish" onClick="return load_language_results('', '4')" href=""><span data-trans="Spanish">Spanish</span></a></li>
+
+        </ul>
+
+
+
+
+	
+    
+	
+        <ul class="submenu tabtrigger border_color body_bgr" id="related_menu" style="display:none;">
+		
+
+
+
+	</ul>
+	
+
+	
+
+    </div>
+	<!-- /submenu-container -->
+
+			
+			<div class="multiple-playlists">
+			<input type="search" id="id_new_playlist" value="create playlist">
+			<button onclick="add_dynamic_playlist($(this).siblings('input').val())" class="add_dynamic_playlist subtabs"></button>
+			</div>
+			
+			    
+		    <div onclick="add_more_videos()" class="related_playlist vtip" title="add  related playlist">add</div>
+			<div onclick="add_longest_videos()" class="longest_videos_playlist vtip" title="add  longest videos playlist">add longest videos</div>
+
+	</div>
+	<!-- / pagewidth submenus -->
+
+
+
+<div class="round">
+		
+
+		
+
+
+
+            <!-- play-controls -->
+            <div id="play-controls" class="controls2">
+                    <div class="fs-mode" style="display: none;">
+                    <a href="#" class="videoplayer-control-prev"></a>
+                    <a href="#" class="videoplayer-control-pause"></a>
+                    <a href="#" class="videoplayer-control-play"></a>
+                    <a href="#" class="videoplayer-control-next"></a>
+                    </div>
+                    <div class="tab-mode">
+                    <a href="#" class="videoplayer-control-prev gotop"  onClick="activateTab('playlist1'); return false" ></a>
+                    <a href="#" class="videoplayer-control-pause"></a>
+                    <a href="#" class="videoplayer-control-play gotop"  onClick="activateTab('playlist1'); return false" ></a>
+                    <a href="#" class="videoplayer-control-next gotop"  onClick="activateTab('playlist1'); return false" ></a>
+                    </div>
+            </div>
+
+    <div id="tabcontainer" class="body_bgr">
+
+
+
+
+
+
+
+<div id="history" style="display: none;">
+	<div class="center-content">
+	  			<div class="pagination border_color"></div>
+    			<div class="stream border_color">
+                    Loading...
+                </div>
+                <div class="pagination border_color"></div>
+	</div>
+</div>
+
+
+<!--  mathematics -->
+
+
+<!--  mathematics -->
+
+
+
+<!--  collage -->
+<!--  / collage -->
+
+
+
+
+
+
+
+
+
+<!--  radios -->
+<!--  / radios -->
+
+
+
+
+
+
+
+
+
+<!-- related videos -->
+<div id="no_results">
+<div class="center-content">
+<h3><span data-trans="Search tips:">Search tips:</span></h3>
+<ul>
+    <li><span data-trans="Ensure words are spelled correctly.">Ensure words are spelled correctly.</span></li>
+    <li><span data-trans="Try rephrasing keywords or using synonyms.">Try rephrasing keywords or using synonyms.</span></li>
+    <li><span data-trans="Try less specific keywords.">Try less specific keywords.</span></li>
+    <li><span data-trans="Make your queries as concise as possible.">Make your queries as concise as possible.</span></li>
+</ul>
+
+</<br><br>>
+</div>
+</div>
+<!-- / related videos -->
+
+
+
+
+
+
+
+
+<div id="ebay" style="display: none;">
+
+                     <iframe name="ebay_iframe" src="about:blank" frameborder="0" width="950px" height="5000" scrolling="Auto" marginheight="0" marginwidth="0"></iframe>
+
+</div>
+
+
+
+
+<div id="publications" style="height: 750px; display: none;">
+    <div class="center-content">
+
+                <div id="books">
+                <!--  books -->
+                <ul class="book">
+                <li class="bgr_color font_color"><div style="padding: 5px"><span data-trans="Loading...">Loading...</span><img src="http://cdn0.wn.com/or/images/loading.gif"></div></li>
+
+                </ul>
+                </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div  id="bing_results"  style="display:none; background: #fff;">
+
+    <iframe name="bing_results_iframe" src="about:blank" frameborder="0" width="980px" height="1900" scrolling="Auto" marginheight="0" marginwidth="0"></iframe>
+
+</div>
+
+
+
+
+
+
+<!-- facebook -->
+
+<!-- twitter -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  VIDEO SUGGESTIONS  -->
+
+
+
+
+
+
+
+<!-- scrolling links   -->
+<div id="related_sites" style="display: none; background: #191919;">
+
+		<div id="auto_scroll" class="newsbox autoscroll" style="height: 400px;"></div>
+
+	       <br /><br />
+               <a href="javascript:void(0);"  title="Fullscreen player" data-title="Fullscreen player" id="scrolling-fullscreen" style="margin: 15px 0; color: #f0f0f0;" class="vtip">fullscreen</a>
+               <a href="javascript:void(0);" title="Play/Pause scrolling" id="scrolling-play-pause" class="vtip"></a>
+
+    
+                <script type="text/javascript">
+                window.related_data = '[""]'
+                var mc;
+                jQuery(document).ready(function() {
+                    mc = new WNMovieCredits({
+				startstring: '<h2 style="font-size: 30px; margin-top: 410px;"><span data-trans="WN presents">WN presents</span></h2>',
+				query: '',
+                        container: '#auto_scroll',
+                        jsonpurl:'http://wn.com/api/upge/cheetah-photo-search/wiki_credits/?wiki=',
+                        endstring: '<h3>Presented by <a href="http://wn.com">WN Network &copy;</a></h3>',
+			backgroundcolor: '#141414'
+                    });
+                    //mc.startCredits();
+
+		    jQuery('#scrolling-play-pause').click(function(e) {
+			jQuery('#auto_scroll').toggleClass('paused');
+			jQuery(this).toggleClass('play');
+		    });
+				
+                    jQuery('#scrolling-fullscreen').click(function(e) {
+                        jQuery('#auto_scroll').css('position', 'fixed');
+                        jQuery('#auto_scroll').css('top', '0');
+                        jQuery('#auto_scroll').css('left', '0');
+                        jQuery('#auto_scroll').css('z-index', '113');
+                        jQuery('#auto_scroll').css('width', '100%');
+                        jQuery('#auto_scroll').css('height', $(window).height() - 16);
+                        jQuery('#auto_scroll').find('ul').css('width', '100%');
+						
+                        jQuery('#scrolling-play-pause').css('position', 'fixed');
+                        jQuery('#scrolling-play-pause').css('bottom', '80px');
+                        jQuery('#scrolling-play-pause').css('right', '80px');
+                        jQuery('#scrolling-play-pause').css('z-index', '114');
+						
+						
+                    });
+                });
+                </script>
+
+                <br clear="right" />
+
+</div>
+<!-- / scrolling links   -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  RELATED PLACES LINKS FROM WIKIPEDIA  -->
+<div id="places_tab"  style="display: none;">
+    <div class="center-content">
+                <ul class="wikilinks">
+                </ul>
+           <br clear="left" /><br clear="right" /><br clear="left" /><br clear="left" />
+    </div>
+</div>
+<!--  / RELATED PLACES LINKS FROM WIKIPEDIA   -->
+
+
+
+
+
+<!--  RELATED PEOPLE LINKS FROM WIKIPEDIA   -->
+<div id="people_tab" style="display: none;">
+    <div class="center-content">
+                <ul class="wikilinks">
+                </ul>
+
+            <br clear="left" /><br clear="right" /><br clear="left" /><br clear="left" />
+    </div>
+</div>
+<!--  RELATED PEOPLE LINKS FROM WIKIPEDIA ends  -->
+
+
+
+
+
+
+<!--  RELATED MOVIE DATA   -->
+
+
+
+
+<!--  RELATED MOVIE DATA ends  -->
+
+
+
+
+
+<!--  RELATED FILMOGRAPHY DATA   -->
+<!--  RELATED FILMOGRAPHY DATA ends  -->
+
+
+
+
+
+
+
+<!--  RELATED TV SERIES DATA   -->
+<!--  RELATED TV SERIES DATA ends  -->
+
+
+
+
+
+
+
+
+<!--  RELATED BOOKS DATA   -->
+<!--  RELATED BOOKS DATA ends  -->
+
+
+
+
+
+
+
+<!--  RELATED QUOTES DATA   -->
+<!--  RELATED QUOTES DATA ends  -->
+
+
+
+
+
+
+
+<!--  RELATED MUSIC DATA   -->
+    <div id="music_data" style="display: none;">
+        <div class="center-content">
+
+
+
+         <script type="text/javascript">
+        <!--
+	
+            function do_query_add_to_playlist(query) {
+                // search youtube for first match
+                jQuery.ajax({
+                    data: {
+                        t: 'cheetah-photo-search/mvs_videosearch.txt',
+                        query: query,
+
+                    },
+                    dataType: 'jsonp',
+                    url: 'http://upge.wn.com/',
+                    success: function(text) {
+                        video_to_add = $(text).find('.video-info').first();
+                        if (video_to_add.length > 0) {
+                            videoplayers[1].addVideo(video_to_add);
+                        }
+                        else {
+                            var text = i18n("Could not find a suitable video for \"%s\" query");
+                            $('#noresults').html(text.replace('%s', query));
+                        }
+                    }
+                });
+            }
+
+             function do_query_add_to_fs_playlist(query) {
+                // search youtube for first match
+                jQuery.ajax({
+                    data: {
+                        t: 'cheetah-photo-search/mvs_videosearch.txt',
+                        query: query,
+                    },
+                    dataType: 'jsonp',
+                    url: 'http://upge.wn.com/',
+                    success: function(text) {
+                        video_to_add = $(text).find('.video-info').first();
+                        if (video_to_add.length > 0) {
+                            videoplayer_fs.addVideo(video_to_add);
+                        }
+                        else {
+                            var text = i18n("Could not find a suitable video for \"%s\" query");
+                            $('#noresults').html(text.replace('%s', query));
+                        }
+                    }
+                });
+            }
+
+			                  
+            $ensure(function() {
+			
+                $('.instaplay-audioplayer').live('click', function(e) {
+                    e.preventDefault();
+                });
+                $('#retrieve-playlist').live('click', function(e) {
+                        $('.disco-check:checked').each(function(idx) {
+                                query = $(this).next('a').attr('title');
+                                do_query_add_to_playlist(query);
+                        });
+                });
+
+                $('.disco-check').live('click', function(e) {
+                        checks_on = $('.disco-check:checked').length;
+                        if (checks_on <= 1) {
+                            $('#retrieve-playlist').html(i18n("Use checked songs to create your playlist"));
+                        }
+                        else {
+                            var text = i18n("Use %s checked songs to add to your playlist");
+                            $('#retrieve-playlist').html(text.replace('%s', '<span class="num">' + checks_on + '</span>'));
+                        }
+                });
+
+                jQuery('.add-all-playlist').live('click', function(e) {
+                    e.preventDefault();
+                    jQuery(this).next('.disco-album-checkall').attr('checked', true);
+                    jQuery('#retrieve-playlist').click();
+                });
+
+
+                jQuery('.add-playlist').live('click', function(e) {
+                    e.preventDefault();
+                    query = $(this).attr('id');
+                    do_query_add_to_playlist(query);
+                });
+
+
+                jQuery('a.disco-album-checkall').live('click', function(e) {
+                    e.preventDefault();
+                    // deselect all other links on the page         
+				    jQuery('input.disco-check').attr('disabled', false);             
+                    jQuery('input.disco-check').attr('checked', false);
+                    var links = $(this).parents('div.rel-head:first').next('ul.links');
+                    links.find(':checkbox').each(function() {
+                        $(this).click();
+                    });
+                });
+
+                $('.toggle-tracks').live('click', function(e) {
+                    tracks_list = $(this).parents('div.rel-head').next('ul.links');
+                    if (tracks_list.length == 1) {
+                        tracks_list.find('input.disco-check').click();
+                    }
+                });
+
+                $('#retrieve-playlist').live('click', function(e) {
+                    $('.disco-check:checked').each(function(idx) {
+                        query = $(this).next('a').attr('title');
+                        $(this).attr('checked', false);
+                        $(this).attr('disabled', true);
+                        do_query_add_to_playlist(query);
+                    });
+                });
+                $('.retrieve-playlist').live('click', function(e) {
+                        $('.disco-check:checked').each(function(idx) {
+                                query = $(this).next('a').attr('title');
+                                do_query_add_to_playlist(query);
+                        });
+                });
+                $('.retrieve-fs-playlist').live('click', function(e) {
+                        $('.disco-check:checked').each(function(idx) {
+                                query = $(this).next('a').attr('title');
+                                do_query_add_to_fs_playlist(query);
+                        });
+                });
+	            $('.retrieve-karaoke-playlist').live('click', function(e) {
+                        $('.disco-check:checked').each(function(idx) {
+                                query = $(this).next('a').attr('title');
+                                do_query_add_to_fs_playlist(query + 'karaoke');
+                        });
+                });   
+
+
+            });
+        // -->
+        </script>
+    </div>
+    </div>
+<!--  RELATED MUSIC DATA ends  -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= VIDEOS  content ==================-->
+
+<!-- ================= VIDEO formatting ==================-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ===============   SLIDESHOW  ================== -->
+<!--    SLIDESHOW ENDS   -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =================== NEWS SECTION ======================= -->
+
+
+
+
+
+
+
+
+
+<!-- ---------WIKIPEDIA PARSER ------------ -->
+
+
+<!-- ---------WIKIPEDIA PARSER ends ------------ -->
+
+
+
+
+<!--  RELATED LYRICS DATA   -->
+<!--  RELATED LYRICS DATA ends  -->
+
+
+
+
+</div>
+<!--  tabcontainer ends -->
+
+
+
+	
+
+<!-- VIDEO RESULTS / ADD VIDEO RESULTS  -->
+<div id="video-results">
+
+
+
+
+
+
+
+
+
+        <div id="video-suggestions" style="display: none;">
+            <div id="rel_videos"></div>
+        </div>
+
+
+
+
+
+
+</div>
+<!-- / VIDEO RESULTS / ADD VIDEO RESULTS  -->
+
+
+
+
+
+
+    <script nopack="1" type="text/javascript">
+        var menu_names = {
+            'places_tab': ["related--places", "place"],
+            'tvseries_data': ["episodes", "tvseries"],
+            'cast_data': ["filmography", "films", "cast"],
+            'books': ["publications"],
+            'music_data': ["albums", "discography", "disco", "music"],
+            'related_links': ["related--links", "link", "site"],
+            'dictionary': ["dictionary", "dict"],
+            'bbc_results': ["bbc", "bbcresults", "bbc-results"],
+            'people_tab': ["related--people", "people", "person"],
+            'top_headlines_tab': ["news--top-headlines"],
+            'details1': ["video-details", "details", "videodetails", "video_details", "video-details"],
+            'suggestions_tab': ["related--videos", "suggestions"],
+            'travel_booking': ["travel", "booking", "travel_booking"],
+            'wiki0': ["wiki", "location", "bio", "biography", "biographie", "wikipedia", "wikipedia1"],
+            'books_data': ["books"],
+            'playlist2': ["videos2", "playlist2", "live"],
+            'playlist1': ["videos", "playlist", "vid"],
+            'related_sites': ["related"],
+            'slideshow': ["images", "image"],
+            'amazon': ["shopping", "shop"],
+            'lyrics_data': ["lyrics", "karaoke"],
+            'expand': ["news", "articles"],
+            'quotes': ["quotes", "quotes-data", "quotes_data", "quote"],
+            'movieinfo': ["movie", "imdb"],
+        };
+    </script>
+
+    <script nopack="1" type="text/javascript">
+        window.basepath = '/';
+    </script>
+    <script type="text/javascript">
+    $ensure(function(){
+        // method that scrolls the headlines to a certain position
+        function scrollRelated(seconds) {
+            window.jQueryAutoScroll.doScrollTo(25*parseInt(seconds));
+        }
+
+        var rev_names = {};
+        for(var k in menu_names){
+            for(var vi in menu_names[k]){
+                var sg = menu_names[k][vi].replace(/s$/,'');rev_names[sg] = k;
+                var pl=(sg+'s').replace(/ys$/,'ies');rev_names[pl] = k;
+            }
+        }
+        var showMenu = ensure(function(activeMenu, activeItem, shown){
+            if(window.console) console.log("Activating menu: "+activeMenu);
+            // <ul id='menu-name' class="submenu border_color tabtrigger"><li id='#child-menu-id' class="active"><a id='#opened-tab-id'>
+            // or
+            // <ul id='main_menu' class="tabtrigger"><li id='#child-menu-id' class="current"><a id='#opened-tab-id'>
+
+            var activeMenuElement = $('ul'+activeMenu);
+            var parentMenuItem = $('ul.tabtrigger li[id='+activeMenu+']');
+            var parentMenuElement = parentMenuItem.parents('ul');
+            var parentMenuName = '#'+parentMenuElement.attr('id');
+            if(parentMenuItem.length){
+                if(activeMenu != '#main-menu'){
+                    var isGoodMenu=activeMenuElement.find('li').length>1;
+                    if(isGoodMenu){
+                        activeItem.addClass('current');
+                        activeMenuElement.css('z-index', '100');
+                    }
+                    if(parentMenuName != '#undefined' && parentMenuName != activeMenu){
+                        showMenu(parentMenuName, parentMenuItem, shown);
+                    }
+                    // slide down in reverse order, from the topmost menu
+                    if(isGoodMenu){
+                        activeMenuElement.slideDown('fast');
+                        shown.push(activeMenu);
+                    }
+                }else{
+                    activeItem.addClass('current');
+                }
+            }else{
+                activeItem.addClass('current');
+            }
+        });
+
+        window.updateMenus = ensure(function(tab){
+            if(window.console) console.log("updateMenus for: "+tab);
+            jQuery('#login .history').css('color',tab=='#history'?'#c00':'');
+            // find active menu
+            var menu_item = $('.submenu li:not([id]) a[id='+tab+']').parents('li'); // item with no submenu
+            if(!menu_item.length){
+                menu_item = $('.submenu li a[id='+tab+']').parents('li'); // any submenu item
+            }
+            if(!menu_item.length){
+                menu_item = $('.tabtrigger li a[id='+tab+']').parents('li'); // main menu item
+            }
+            // reset all submenus selection
+            $('.submenu.tabtrigger').children('li').removeClass('active');
+            // reset main menu selection
+            $('.tabtrigger').children('li').removeClass('current');
+            // move all submenus back
+            $('.submenu').css('z-index', '10');
+            var shown = [];
+            var menu_name = '#'+(menu_item.parents('ul').attr('id') || 'main-menu');
+            if(menu_item && menu_name != '#undefined'){
+                showMenu(menu_name, menu_item, shown);
+            }
+            // slide all other submenus up
+            var open_submenu = false;
+            $('.submenu').each(function(n,el){
+                if($.inArray('#'+el.id, shown) == -1){
+                    $(el).css('z-index', '100').slideUp('fast');
+                }else if($(el).find('li').length<=1){
+                    // never show menus with only one element
+                }else{
+                    $(el).css('z-index', '100');
+                    open_submenu = true;
+                }
+            });
+            if(open_submenu){
+                $('.submenu-container').slideDown('fast');
+            }else{
+                $('.submenu-container').slideUp('fast');
+            }
+        });
+        window.lastHistory = '';
+        window.activeArea = '';
+        window.fsonload = null;
+
+        var matchNumber = function(x){
+            return x && x.match(/^\d+$/);
+        }
+
+        var matchDash = function(x){
+            return x && x.match(/^\d+(-\d+)?(,\d+(-\d+)?)*$/);
+        }
+
+        var matchPosition = function(x){
+            return x && x.match(/^(\d+:)?\d+:\d+$/);
+        }
+
+        var matchAction = function(x){
+            return x && x.match(/^(\d+:)?\d+:\d+(\-|\.\.)(\d+:)?\d+:\d+$/);
+        }
+
+        function parseDash(x){
+            var parts = x.split(/,/g);
+            var r = [];
+            for(var i in parts){
+                var p = parts[i];
+                if(p.match('-')){
+                    var rg = p.split('-');
+                    for(var t=rg[0]; t<=rg[1]; t++){
+                       r.push(t|0);
+                    }
+                }else{
+                    r.push(p|0);
+                }
+            }
+            return r;
+        }
+
+        var parsePosition = function(x){
+            var parts = x.split(/:/g);
+            var pos = 0;
+            for(var p in parts){
+                pos = pos*60 + parseInt(parts[p].trim() || '0', 10);
+            }
+            return pos;
+        }
+
+        window.history_pp = 20;
+
+        var renderPage = function(number, active){
+            var page = '';
+            if(number == active){
+                page += ' <span class="active">'+active+'</span> ';
+            }else{
+                page += ' <a href="#" onclick=\'activateTab("history", "'+number+'");return false;\'>'+number+'</a> ';
+            }
+            return page;
+        }
+
+        var historyTemplate = _.template('<div class="history-div">'+
+            '<a href="<%= url %>"><%= title %></a>'+
+            '<span style="color:gray;font-size:90%"><%= at %></span>'+
+            '</div>');
+
+        var renderHistory = ensure(function(result){
+            //pp = parseInt(result.pp);
+            var stream = "";
+            for(i in result.stream){
+                var item = result.stream[i];
+                var context = {
+                    title: item.title,
+                    url: item.url,
+                    at: item.at_rel,
+                };
+                stream += historyTemplate(context);
+            }
+            $('#history .stream').html(stream);
+            var page = result.page;
+            if(result.pages>1){
+                var pages = '';
+                pages += renderPage(1, page);
+                if(result.nearby && result.nearby[0]>2){
+                    pages += '...';
+                }
+                for(p in result.nearby){
+                    pages += renderPage(result.nearby[p], page);
+                }
+                if(result.nearby && result.nearby.slice(-1)[0]<result.pages-1){
+                    pages += ' ... ';
+                }
+                if(result.pages>1){
+                    pages += renderPage(result.pages, page);
+                }
+                //pages = pages + "(" + result.count;
+            }else{
+                pages = ''
+            }
+            $('.pagination').html('<p>'+pages+'</p>');
+            $('.stream > div:odd').addClass('bgr_color');
+            updateHeight('#history');
+        });
+
+        window.activateTabArea = ensure(function(tab, areas){
+            var parsed = false;
+            var parts = (areas || '').split('/');
+            window.fsonload = jQuery.inArray('fs', parts) >= 0;
+            window.offline_loading = jQuery.inArray('o', parts) >= 0 || jQuery.inArray('ro', parts) >= 0;
+            if(offline_loading){
+                for(var i=0; i<videoplayers.length; i++){
+                    var vp = i ? videoplayers[i]:videoplayer_fs;
+                    if(vp && vp.offlinePreload) {
+                        vp.offlinePreload({add: i==1});
+                    }
+                }
+            }
+
+            if(fsonload){
+                parts.splice(parts.indexOf('fs'), 1)
+            }
+            var replayMode = false;
+            if(jQuery.inArray('replay', parts)>=0){
+                replayMode = 'replay';
+            }
+            if(jQuery.inArray('repeat', parts)>=0){
+                replayMode = 'repeat';
+            }
+            if(jQuery.inArray('r', parts)>=0 || jQuery.inArray('ro', parts)>=0){
+                replayMode = 'r';
+            }
+            if(replayMode){
+                parts.splice(parts.indexOf(replayMode), 1);
+            }
+            var area = parts[0];
+
+            if(tab == 'p'){
+                tab = 'playlist1';
+                parts.unshift('p');
+                area = parts[0];
+            }
+
+            if(tab == 'history'){
+                var page = parseInt(area || '1') || 1;
+                jQuery.ajax({
+                    url: 'http://login.wn.com/recent/json/?pp='+history_pp+'&skip='+history_pp*(page-1),
+                    dataType: 'jsonp',
+                    success: function(response){
+                        $ensure(function(){
+                            renderHistory(response, page);
+                        });
+                    }
+                });
+                return true;
+            }
+            if(tab == 'related_sites' && areas && matchPosition(areas)){
+                var seconds = parsePosition(areas);
+                scrollRelated(seconds);
+                return false;
+            }
+
+            if(matchPosition(area) || matchAction(area)){
+                parts.unshift('1');
+                area = parts[0];
+            }
+
+            if(tab == 'expand' && area && area.match(/\d+/)) {
+                var num = parseInt(area);
+                if(num < 100){
+                    //FIX ME. Load news page with ajax here
+                }
+                else if(num > 1900){
+                    //FIX ME. Load timeline page with ajax here
+                }
+            }
+            else if(tab.match(/^playlist\d+$/)){
+                var playerId = parseInt(tab.substring(8));
+                var vp = videoplayers[playerId];
+                if(replayMode){
+                    $('.replaycurrent'+playerId).attr('checked', true);
+                    vp.setReplayCurrent(true);
+                }
+                var sources = {'yt': 'youtube', 'vm': 'vimeo', 'dm': 'dailymotion'};
+                var findMatchingVideo = function(vid){
+                    vid = vid.replace(/\/+$/,'');
+                    if(vid.match(/^\d+$/)){
+                        var number = parseInt(vid);
+                        var pl = vp.getActualPlaylist();
+                        return pl[number-1];
+                    }else if(vid.match(/^\w\w-/)){
+                        var pl = vp.getActualPlaylist();
+                        var s = sources[vid.substr(0, 2)];
+                        for(v in pl){
+                            if(pl[v].source == s && pl[v].video_id == vid.substr(3)){
+                                return pl[v];
+                            }
+                        }
+                    }else{
+                        if(window.console)
+                            console.log('Warning: Bad video id format:' + vid);
+                        return null;
+                    }
+                }
+
+                var parseAction = function(x){
+                    var video = null;
+                    var start = 0;
+                    var stop = null; // at the end of video
+                    if(x.match(/\//)){
+                        var vid_pos = x.split(/\//, 2);
+                        x = vid_pos[0];
+                        var positions = vid_pos[1].split(/\-|\.\./, 2);
+                        start = parsePosition(positions[0]) || 0;
+                        if(positions[1] && positions[1].trim()){
+                            stop = parsePosition(positions[1]) || null;
+                        }
+                    }
+                    video = findMatchingVideo(x);
+                    return {
+                        'video': video,
+                        'start': start,
+                        'stop': stop
+                    };
+                };
+
+                var playQueue = [];
+                window.playQueue = playQueue;
+                var playQueuePosition = 0;
+                var playShouldStart = null;
+                var playShouldStop = null;
+                var parseList = function(x){
+                    var items = x.split(/;|,/g);
+                    var results = [];
+                    for (i in items){
+                        try{
+                            var action = parseAction(items[i]);
+                            if(!action.video){
+                                if(window.console) console.log("Warning: No video for queued entry: " + items[i]);
+                            }else{
+                                results.push(action);
+                            }
+                        }catch(e){
+                            if(window.console) console.log("Warning: Can't parse queue entry: " + items[i]);
+                        }
+                    }
+                    return results;
+                };
+
+                var playQueueUpdate = function(){
+                    var playPosition = playQueue[playQueuePosition];
+                    vp.playFromPlaylist(playPosition.video);
+                    playShouldStart = playPosition.start;
+                    playShouldStop = playPosition.stop;
+                };
+
+                var playQueueAdvancePosition = function(){
+                    if(window.console) console.log("Advancing play position...");
+                    playQueuePosition ++;
+                    if(playQueuePosition < playQueue.length){
+                        playQueueUpdate();
+                    }else if(vp.getReplayCurrent()){
+                        playQueuePosition = 0;
+                        playQueueUpdate();
+                        vp.seekTo(playShouldStart);
+                        vp.playVideo();
+                    }else{
+                        vp.pauseVideo();
+                        playShouldStop = null;
+                        playShouldStart = null;
+                    }
+                };
+
+               if(parts.length == 1 && matchDash(parts[0])){
+                    var pl = vp.getActualPlaylist();
+                    var vids = parseDash(parts[0]);
+                    parts = [];
+                    for(var i = 0; i < vids.length; i++){
+                        playQueue.push({
+                            'video': pl[vids[i]-1],
+                            'start': 0,
+                            'stop': null
+                        })
+                    }
+                    if(playQueue){
+                        playQueueUpdate();
+                        vp.playVideo();
+                        parsed = true;
+                        playShouldStart = 0;
+                    }
+               }
+
+               if(area == 'p'){
+                    var vids = [0, 0];
+                    var dur = 0;
+                    var pl = vp.getActualPlaylist();
+                    parts.shift();
+                    area = parts[0];
+                    if(parts.length == 1 && matchPosition(parts[0])){
+                        vids = parseDash('1-'+pl.length);
+                        dur = parsePosition(parts[0]);
+                        parts = [];
+                    }else
+                    if(parts.length == 2 && matchDash(parts[0]) && matchPosition(parts[1])){
+                        vids = parseDash(parts[0]);
+                        dur = parsePosition(parts[1]);
+                        parts = [];
+                    }
+                    for(var i = 0; i < vids.length; i++){
+                        playQueue.push({
+                            'video': pl[vids[i]-1],
+                            'start': 0,
+                            'stop': dur
+                        })
+                    }
+                    if(playQueue){
+                        playQueueUpdate();
+                        vp.playVideo();
+                        parsed = true;
+                    }
+                }
+
+                if(area){
+                    var sel = findMatchingVideo(area);
+                    if(sel){
+                        vp.playFromPlaylist(sel);
+                        playShouldStart = 0;
+                        parsed = true;
+                    }
+                }
+
+                if(fsonload){
+                    playShouldStart = 0;
+                }
+
+                if(document.location.search.match('at=|queue=')){
+                    var opts = document.location.search.replace(/^\?/,'').split(/&/g);
+                    for(var o in opts){
+                        if(opts[o].match(/^at=(\d+:)?(\d+:)?\d+$/)){
+                            playShouldStart = parsePosition(opts[o].substr(3))
+                        }
+                        if(opts[o].match(/^queue=/)){
+                            playQueue = parseList(opts[o].substr(6));
+                            if(playQueue){
+                                playQueuePosition = 0;
+                                playQueueUpdate();
+                            }
+                        }
+                    }
+                }
+
+                if(matchPosition(parts[1])){
+                        playShouldStart = parsePosition(parts[1]);
+                        parsed = true;
+                }
+
+                if(matchAction(parts[1])){
+                        var action = parseAction(area+'/'+parts[1]);
+                        playShouldStart = action.start;
+                        playShouldStop = action.stop;
+                        parsed = true;
+                }
+
+                if(playShouldStart !== null && !playQueue.length){
+                    playQueue.push({
+                        video: vp.getCurrentVideo(),
+                        start: playShouldStart,
+                        stop: playShouldStop
+                    });
+                }
+
+                if(playShouldStart != null || fsonload){
+                    setInterval(function(){
+                        if(playShouldStop && vp.currentPlayer && vp.currentPlayer.getCurrentTime() > playShouldStop){
+                            playShouldStop = null;
+                            if(vp.getCurrentVideo() == playQueue[playQueuePosition].video){
+                                playQueueAdvancePosition();
+                            }else{
+                                playShouldStart = null;
+                            }
+                        }
+                    }, 500);
+                    vp.playerContainer.bind('videoplayer.player.statechange', function(e, state){
+                        if(state == 'ended'){ // advance to the next video
+                            playQueueAdvancePosition();
+                        }
+                    });
+                    vp.playerContainer.bind('videoplayer.player.readychange', function(e, state){
+                        if(fsonload) {
+                            triggerFullscreen(playerId); fsonload = false;
+                        }
+                        if(state){
+                            if(playShouldStart !== null){
+                                vp.seekTo(playShouldStart);
+                                playShouldStart = null;
+                            }else{
+                                playShouldStop = null; // someone started other video, stop playing from playQueue
+                            }
+                        }
+                    });
+                }
+            }
+            else if(tab.match(/^wiki\d+$/) && area){
+                var areaNode = $('#'+area);
+                if(areaNode.length>0){
+                    $('html, body').scrollTop(areaNode.offset().top + 20);
+                    return true;
+                }
+            }
+            return parsed;
+        })
+
+        window.activateTab = ensure(function(tab, area){
+            window.activeArea = null;
+            if(tab in rev_names){
+                tab = rev_names[tab];
+            }
+            if(tab.match(':')){ return false; }
+            var sup = $('ul li a[id=#'+tab+']');
+            if(sup && sup.length>0){
+                window.activeArea = area;
+                sup.first().click();
+                if(!window.activateTabArea(tab, area)){
+                    window.activeArea = null;
+                }
+                window.activeArea = null;
+                return true;
+            }else{
+                var have_tabs = $('#playlist_menu li').length;
+                if(tab.match(/^playlists?\d+$/)){
+                    var to_add = +tab.substring(8).replace(/^s/,'')-have_tabs;
+                    if(to_add>0){
+                        add_more_videos(to_add);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        });
+        window.currentPath = ensure(function(){
+            return window.lastHistory.replace(basepath, '').split('?')[0];
+        });
+
+        window.addHistory = ensure(function(path){
+            if(window.console) console.log("Adding to history: "+path);
+            if(window.history && history.replaceState && document.location.hostname.match(/^(\w{2,3}\.)?wn\.com$/)){
+                if(path == 'videos' || path == '' || path == '/') {
+                    path = basepath;
+                } else {
+                    path = basepath + '/' + path.replace('--','/');
+                }
+                if(document.location.search){
+                    path += document.location.search;
+                }
+                if(window.lastHistory)
+                    history.pushState(null, null, path);
+                else if(window.lastHistory != path){
+                    history.replaceState(null, null, path);
+                    window.lastHistory = path;
+                }
+            }else{
+                path = path.replace('--','/');
+                if(window.lastHistory != '/'+path){
+                    window.location.hash = '/'+path;
+                    window.lastHistory = '/'+path;
+                }
+            }
+        });
+        $('.tabtrigger li a').live('click', ensure(function() {
+            var tab = $(this).attr('id');
+            if(tab.substring(0,1) == '#'){
+                var name = tab.substring(1);
+                if(name in menu_names){
+                    name = menu_names[name][0];
+                }
+                if(window.console) console.log("Triggering tab: "+name+(window.activeArea?" activeArea="+window.activeArea:''));
+                var path = name;
+                if(window.activeArea){
+                    path = path + '/' + window.activeArea;
+                }
+				if(tab.match(/playlist/)){
+                        jQuery('#top_tools .multi-fullscreen').hide().delay(500);	
+                }else {
+                       jQuery('#top_tools .multi-fullscreen').show();	
+                }
+				if(tab.match(/#playlist\d+/) || tab.match(/#details\d+/)){
+                        $('.multiple-playlists').show();
+                        $('.related_playlist').show();
+                        $('.longest_videos_playlist').show();
+                }else {
+                        $('.multiple-playlists').hide();
+                        $('.related_playlist').hide();
+                        $('.longest_videos_playlist').hide();
+                }
+
+                // start the related script only when the tab is on screen showing
+                if (tab.match(/related_sites/)) {
+                    if (mc) {
+                        mc.startCredits();
+                    }
+                }
+
+                addHistory(path);
+                setTimeout(ensure(function(){
+                    if(tab.match(/language--/)){
+                        jQuery('.tabtrigger').offscreentabs('activateTab', 'language');
+                    }
+                    if(tab.match(/weather/)) {
+                     jQuery('.tabtrigger').offscreentabs('activateTab', 'weather');
+                     loadContinent();
+                    }
+                    updateMenus(tab);
+                    updateHeight();
+                }), 10);
+            }
+            return false;
+        }));
+
+        jQuery('.tabtrigger').offscreentabs({container: '#tabcontainer'});
+        var parts = document.location.hash.replace(/[#\/]*/,'').split('/');
+        var switches = parts.slice(1).join('/');
+        if (jQuery('#live-tv').length > 0) {
+            // do nothing, live tv is on
+            activateTab('livetv');
+        }
+        else if (jQuery('#liveradio').length > 0) {
+            activateTab('liveradio');
+
+            // try to identify the exact radio name
+            radio_query = "";
+            default_radio_obj = jQuery('a.load_radio_iframe').first()
+            jQuery('a.load_radio_iframe').each(function(index) {
+                if (jQuery(this).html().toLowerCase() == radio_query) {
+                    default_radio_obj = jQuery(this);
+                }
+            })
+
+            // the radio iframe needs to be manually linked
+            default_radio_obj.click();
+            jQuery('ul.radio-menu').find('li').removeClass('active');
+            default_radio_obj.parent().addClass('active');
+            $('#liveradio_iframe').attr('src', default_radio_obj.attr('href'));
+        }
+        else if(matchDash(parts[0]) || matchNumber(parts[0]) || matchAction(parts[0]) || matchPosition(parts[0]) || parts[0] == 'fs' || parts[0] == 'ro'
+                                    || parts[0] == 'o' || parts[0] == 'r' || parts[0] == 'repeat' || parts[0] == 'replay' || parts[0] == 'p'){
+             // missing 'video'
+            activateTab('playlist1', parts.join('/'));
+        }else if(parts[1] && activateTab(parts[0]+'--'+parts[1]));
+        else if(parts[0] && activateTab(parts[0], switches));
+        else if(activateTab('playlist1'));
+        else activateTab('expand');
+    });
+    </script>
+    <script type="text/javascript">
+        $(document).bind('videoplayback.repeat', function(e, playerContainer){
+            $.each(videoplayers, function(i, vp){
+                if(vp && vp.playerContainer == playerContainer){
+                    var info=vp.getActualPlaylist()[vp.getPlaylistPosition()];
+                    $.ajax({
+                        url: 'http://login.wn.com/videos/star/',
+                        data:{
+                            title: info.title,
+                            video: info.source+':'+info.video_id,
+                        },
+                        dataType: 'jsonp',
+                    });
+                }
+            });
+        });
+    </script>
+	
+	
+	
+  <div class="clearfix"></div>
+
+</div>
+<!--  round ends -->
+<br><br><br><br><br><br><br>
+
+</div>
+<!-- / wrapper  -->
+
+
+<div id="shadow_under" title="on WN Network delivers the latest Videos and Editable pages for News &amp; Events, including Entertainment, Music, Sports, Science and more, Sign up and ... [Google displayed text stops approximately here] ... share your playlists. [Fallback to previous description behaviour]"></div>
+
+
+
+</div>
+<!-- / custombgr -->
+
+		
+
+	
+
+
+    
+
+	
+
+	<!-- help reveal box -->
+    <div id="help-content" class="reveal-modal help-modal">
+		<a class="close-reveal-modal help">&#215;</a>
+		<iframe src="about:blank" name="help_iframe" frameborder="0" width="100%" height="100%" scrolling="auto" marginheight="0" marginwidth="0"></iframe>
+
+    </div>
+	
+	
+	<div id="footer-content" class="reveal-modal footer_content">
+			<a class="close-reveal-modal help">&#215;</a>
+			<div>	
+				<iframe  src="about:blank" name="footer_iframe" frameborder="0" width="550" height="500" scrolling="auto" marginheight="0" marginwidth="10"></iframe>
+			</div>
+	</div>
+
+
+
+        <!-- bottom-links -->
+        <div class="footer_links">
+
+               <ul>
+                    <li><a href="#" class="toplink" style="font-color: #f0f0f0"><span data-trans="go top">go top</span></a></li>
+
+                    <li><a class="footer help" onClick="ensure(load_iframe_url)('help_iframe', 'http://cdn9.wn.com/or/media/modal/index.html'); return false;"  data-reveal-id="help-content"><span data-trans="Help">Help</span></a></li>
+
+                    <li><a href="#" class="footer" onClick="ensure(load_iframe_url)('footer_iframe', 'http://cdn9.wn.com/or/html/mediakit/about-us.html');return false;" data-reveal-id="footer-content"><span data-trans="About WN">About WN</span></a></li>
+
+                    <li><a href="#" class="footer" onClick="ensure(load_iframe_url)('footer_iframe', 'http://cdn5.wn.com/or/html/mediakit/privacypolicy.html');return false;" data-reveal-id="footer-content"><span data-trans="Privacy Policy">Privacy Policy</span></a></li>
+
+                    <li><a href="#" class="footer" onClick="ensure(load_iframe_url)('footer_iframe', 'http://cdn1.wn.com/or/html/mediakit/contact.html');return false;" data-reveal-id="footer-content"><span data-trans="Contact">Contact</span></a></li>
+
+
+                    <li><a href="#" class="footer" onClick="ensure(load_iframe_url)('footer_iframe', 'http://newerforms.wn.com/form/help_page/');return false;" data-reveal-id="footer-content"><span data-trans="Feedback">Feedback</span></a></li>
+
+                    <li><a href="#" class="footer" onClick="ensure(load_iframe_url)('footer_iframe', 'http://upge.wn.com/api/upge/cheetah-photo-search/send_email?title=&url=http://wn.com/&description=[]');return false;" data-reveal-id="footer-content"><span data-trans="Email this page">Email this page</span></a></li>
+
+                    <li><a href="#" class="footer" onClick="ensure(load_iframe_url)('footer_iframe', 'http://upge.wn.com/api/upge/cheetah-photo-search/send_sms?title=&url=http://wn.com/');return false;" data-reveal-id="footer-content"><span data-trans="Sms this page">Sms this page</span></a></li>
+	
+                    <li class="copyright"><a href="http://wn.com/">&copy; 2013 World News Inc., all Rights Reserved</a></li>
+                </ul>
+
+    <script type="text/javascript"><!--
+
+	
+   	function load_city_info(city) {	
+			jQuery.ajax({			
+			url: '/api/upge/cheetah-photo-search/wikipedia',
+			data: {'query': city},  
+			success: function(text) {    
+				var aTag = $("a[name='city_wiki']");				
+				$('.city-data .city_wiki').find('.content').html(jQuery(text));
+				$('html,body').animate({scrollTop: aTag.offset().top},'fast');			
+				 
+				}
+		});	
+	}	
+	function load_videos(city){	
+				query = city + 'city'
+				jQuery.ajax({
+				url: '/api/upge/cheetah-photo-search/video_results',
+				data: {'query': city },  
+				success: function(text){
+					jQuery('.city-data .video-results').find('.content').html(jQuery(text));	
+					}
+				});
+	}
+	
+	function load_news(city){	
+				query = city + 'city'
+				jQuery.ajax({
+				url: '/api/upge/cheetah-photo-search/news_headlines',
+				data: {'query': city },  
+				success: function(text){
+					jQuery('.city-data .news-results').find('.content').html(jQuery(text));	
+					}
+				});
+	}
+          var find_video_andplayfs = ensure(function(query) {
+               // search youtube for first match
+               jQuery.ajax({
+                   data: {
+                       t: 'cheetah-photo-search/mvs_videosearch.txt',
+                       query: query,
+                     },
+                   dataType: 'jsonp',
+                   url: 'http://upge.wn.com/',
+                   success: function(text) {
+                       videoplayer_fs.clearPlaylist();
+                       video_to_add = $(text).find('.video-info').first();
+                       if (video_to_add.length > 0) {
+                                videoplayer_fs.addVideo(video_to_add);
+                                videoplayer_fs.playlistContainer.find('li').last().find('a.playlistitem').click();
+                                 $('html, body').animate({scrollTop:0}, 'slow');
+								triggerFullscreen(1);
+                       }
+                       else {
+                           $('#noresults').html('<span data-trans="Could not find a suitable video!">Could not find a suitable video!</span>');
+                       }
+                   }
+               });
+               return false;
+           });
+
+     // -->
+    </script>
+
+  <script type="text/javascript">
+    <!--
+        jQuery(".fullscreen-toggle").click(function(e) {
+            triggerFullscreen(1);
+        });
+    -->
+    </script>
+
+
+
+                <script type="text/javascript">
+                <!--
+				function open_in_new_tab(url)
+				{
+				  window.open(url, '_blank');
+				  window.focus();
+				}
+				function triggerLoadFile(file){
+					var file_name = file;				
+            		jQuery('#writers .byNames').find('.column-left').load('http://wn.com/api/upge/shared/' + file_name);
+					jQuery('.byNames').show().css('height', $('.byNames').height());
+					jQuery('.byCountry').hide();
+					updateHeight();
+	       		}
+				function triggerLoadList(file){
+				var file_name = file;				
+            		jQuery('#writers').find('.byCountry').load('http://wn.com/api/upge/shared/' + file_name);
+					jQuery('.byNames').hide();
+					jQuery('.byCountry').show().css('height', $('.byCountry').height());					
+					updateHeight();
+	       		}
+                function scrollToAnchor(aid){
+                    var aTag = $("a[name='"+ aid +"']");
+                    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+                }
+
+                $ensure(function(){
+			
+					$('.footer.help').click(ensure(function(){
+						$('body').css('overflow', 'hidden');
+						$('.controls2').css('z-index', '10002');	
+				    }));
+					$('.close-reveal-modal.help').click(ensure(function(){
+						$('body').css('overflow', 'show');						
+						$('.controls2').css('z-index', '115');	
+				    }));
+
+					$(document).keyup(ensure(function(e) {
+				  		if (e.keyCode == 27) { $('.close-reveal-modal.help').click();}   
+				  		else if (e.keyCode == 8) { $('.close-reveal-modal.help').click();	}
+					}));
+					
+					
+                    $("#shadow_under").css("height", $(document).height()).hide();
+                    $('.lightSwitcher.lights_out').click(ensure(function(){
+						$('#shadow_under').show();
+						$(this).hide();
+						$('.lightSwitcher.lights_on').show();
+					  }));
+
+                    $('.lightSwitcher.lights_on').click(ensure(function(){
+						$('#shadow_under').hide();
+						$(this).hide();
+						$('.lightSwitcher.lights_out').show();
+					  }));
+	
+	
+	                $('#mainvideoresults').show();
+                    $('a#play_mainvideoresults').click(ensure(function(){
+                          videoplayer.addVideo($('.video_results .video-info'));
+                    }));
+                    $('a#open_mainvideoresults').click(ensure(function(){
+                        $('.videos_15_24').show('slow');
+                        $('#open_mainvideoresults').hide('slow');
+                        $('#close_mainvideoresults').show('slow');
+                    }));
+                    $('a#close_mainvideoresults').click(ensure(function(){
+                        $('.videos_15_24').hide('slow');
+                        $('#open_mainvideoresults').show('slow');
+                        $('#close_mainvideoresults').hide('slow');
+                    }));
+                    $('a#remove_mainvideoresults').click(ensure(function(){
+                        $('#mainvideoresults').animate({ opacity: 'hide' }, "slow");
+                    }));
+
+                   $('#related_videos').show();
+
+                    $('a#play_related_videos').click(ensure(function(){
+                         videoplayer.addVideo($('.related_videos .video-info'));
+                    }));
+                    $('a#open_related_videos').click(ensure(function(){
+                        $('.related_videos').show('slow');
+                        $('#open_related_videos').hide('slow');
+                        $('#close_related_videos').show('slow');
+                    }));
+                    $('a#close_related_videos').click(ensure(function(){
+                        $('.related_videos').hide('slow');
+                        $('#open_related_videos').show('slow');
+                        $('#close_related_videos').hide('slow');
+                    }));
+                    $('a#remove_related_videos').click(ensure(function(){
+                        $('#related_videos_remove').animate({ opacity: 'hide' }, "slow");
+                    }));
+
+                    $('#multiple_video').show();
+                    $('.close_multiple').click(ensure(function(){
+                        $('#multiple_video').hide('fast');
+                        $('#video-results').addClass("hide");
+                    }));
+                    $('.open_multiple').click(ensure(function(){
+                        $('#multiple_video').show('fast');
+                        $('#video-results').removeClass("hide");
+                    }));
+
+					$('#id_new_playlist' ).bind('keypress', ensure(function(e){
+						if ( e.keyCode == 13 ) {
+						$('.add_dynamic_playlist.subtabs').click();
+						}
+					}));
+					$("#id_new_playlist").click(ensure(function(){ 
+						$(this).attr('value', '');
+					}));
+					$("li .remove").live('click', ensure(function(){
+                        var num = this.id.substring(9);
+                        remove_dynamic_playlist(num);
+					}));
+					
+
+	
+                   $('.tools.player').animate({ opacity: 'hide' }, "slow");
+                   $('.tools_container').hover(ensure(function(){
+                       $(this).find('.tools.player').animate({ opacity: 'show' }, "fast"); 
+                   }), ensure(function(){
+                       $(this).find('.tools.player').animate({ opacity: 'hide' }, "slow");
+                   }));
+						
+						
+						  
+                    // overwrite the playlist titles
+                    $('#playlistcontainer1').find('.playlistitemli a.playlistitem').mouseover(ensure(function(e) {
+                        var t = $(this);
+                        var pos = null;
+                        $('#playlistcontainer1 .playlistitemli a.playlistitem').each(function(i,e){
+                            if(e.id == t.attr('id')){
+                                pos = i;
+                            }
+                        });
+                        var updated = $('div.video-desc:eq('+pos+') span.video-uploaded');
+                        var published = $('div.video-desc:eq('+pos+') span.video-published');
+                        var video_title = $('div.video-desc:eq('+pos+') div.video-title');
+                        $(this).attr('title', video_title.text() + ', updated: '+updated.text()+', published: '+published.text());
+                        //$(e).addClass('vtip');
+                    }));
+
+                    // save_collagee
+                    $('.save_collage').click(ensure(function(){
+                        window.open('[]', '_blank');
+                    }));
+                    // load_radio_iframe
+                    $('a.load_radio_iframe').click(ensure(function() {
+                            if ($('#liveradio_iframe').attr('src') == $(this).attr('href')) {
+                                return false;
+                            }
+                            $('#liveradio_iframe').attr('src', $(this).attr('href'));
+                            return false;
+                    }));
+                    $('.radio-menu li a').click(ensure(function(){
+                        $('.radio-menu li').removeClass('active');
+                        $(this).parent().addClass('active');
+                   }));
+
+
+                    //show-hide-skins
+                    $("#skins").hide();
+
+                    $('#skins_content').click(ensure(function() {
+                        $("#skins").slideToggle(500);
+                    }));
+                    $("body").click(ensure(function(e) {
+                        if(e.target.className !== "skins")
+                        {
+                          $(".skins").hide();
+                        }
+                    }));
+                    //show-hide-dictionary
+                    $("#dictionary").hide();
+
+                    $('#dictionary_content').click(ensure(function() {
+                        $("#dictionary").slideToggle(500);
+                    }));
+                    $("body").click(ensure(function(e) {
+                        if(e.target.className !== "dictionary")
+                        {
+                          $(".dictionary").hide();
+                        }
+                    }));
+
+                    //to the top
+                    $('.gotop').click(ensure(function(){
+                        $('body,html').animate({ scrollTop: 0}, 800);
+                    }));
+
+                    //lyrics toggle
+                    $('.lyrics_toggle').click(ensure(function() {
+                            $(this).find("div").toggle();
+                            $("#lyrics_container").slideToggle(500);
+                    // $('#tabcontainer').height($(".playlist-page").height() + 500);
+                            updateHeight();
+                    }));
+                    //lyrics karaoke on/off
+
+                    $('.karaoke_on_off').mouseover(ensure(function() {
+                          $('.karaoke').removeClass('off');
+                    }));
+                    $('.karaoke_on_off').mouseleave(ensure(function(){
+                           $('.karaoke').addClass('off');
+                    }));
+
+                    $('.artist_data li').hover(ensure(function(){
+                        $(this).find('.karaoke').toggleClass('off');
+                    }));
+                    $('.artist_data li').hover(ensure(function(){
+                        $(this).find('.fullscreen').toggleClass('off');
+                    }));
+
+                    //timeline news / hide other sections
+                    $('.current_year').click(ensure(function() {
+                        $("#news_stories").show();
+                        $("#timeline_results").hide();
+                        // $('#tabcontainer').height($("#expand").height());
+                        updateHeight();
+                     }));
+                    $('.timeline li a').click(ensure(function(){
+                        $('.timeline li').removeClass('bold');
+                        $(this).parent().addClass('bold');
+                    }));
+
+
+		    		//reloads sms/email iframes	
+                    $('.send').click(ensure(function() {
+                        $('.reload').attr('src', $('.reload').attr('src'));
+                    }));
+			
+
+
+                    // show_synopsis					
+                    $('.show_synopsis').hover(ensure(function(){
+                        $(this).find('.synopsis-box').show().delay('6000');
+                      }, function(){
+                        $(this).find('.synopsis-box').hide().delay('6000');
+                    }));
+					
+			
+
+
+				    var $title_count = $('.page_title').text().length;
+					if ($title_count > 37) {
+					  $('.page_title').addClass('smaller_font');
+					} else {
+					  $('.page_title').addClass('bigger_font');
+					}
+
+				    $('.weather-data').hover(function() {
+				                     $('.forecast-data').animate({ width: 'toggle'}, 900);
+				    });
+
+
+
+					
+                    $('.offine_download').live('click', function() {
+                        init_videoload();
+                        $(".videoload-container").toggle(500);
+                    });
+					
+					
+				
+				var fullscreen_interval_caller = false;
+				
+				jQuery('.play-album-fullscreen').live('click', ensure(function(e) {
+					videoplayer_fs.clearPlaylist();
+					
+					// checking if we have at least one video in the playlist in order to click it
+					fullscreen_interval_caller = setInterval(function(){
+						first_video = jQuery('#playlistcontainer_fs').find('a.playlistitem:first');
+						if (first_video) {
+							first_video.find('img.playlist-thumbnail').click();
+							triggerFullscreen(1);
+							clearInterval(fullscreen_interval_caller);
+						}
+					}, 1000);
+				}));
+				
+				jQuery('.play-fullscreen').live('click', ensure(function(e) {
+					videoplayer_fs.clearPlaylist();
+					fullscreen_interval_caller = setInterval(function(){
+						first_video = videoplayer_fs.playlistContainer.find('li').first().find('a.playlistitem');
+						if (first_video) {
+							first_video.click();						
+							triggerFullscreen(1);
+							clearInterval(fullscreen_interval_caller);
+						}
+					}, 1000);
+
+				}));
+
+
+				
+
+        });
+    // -->
+    </script>
+
+		<script type="text/javascript"><!--
+	  	$ensure(function(){
+	   		jQuery('input.query').autocomplete('http://', {
+	        	selectFirst: false,
+	        	matchSubset: false,
+	        	scroll: false,
+	        	max: 20,
+	        	doSearch: window.doAutoComplete
+	    	})
+	  	});
+	  	// -->
+	  	</script>
+		
+			   
+
+			   
+		<script type="text/javascript"><!--
+		$ensure(function() {
+		        $('#panelSlider').hover(function() {
+		             $(this).stop(true, false).animate({'bottom': '0px'}, 900);	
+					 $(this).find('.fs-videos').css("background-image", "url(http://cdn1.wn.com/or/images/double-down-arrow.png)");  
+					 
+					
+		        }, function() {
+		            $(this).stop(true, false).animate({'bottom': '-190px'}, 900);
+					$(this).find('.fs-videos').css("background-image", "url(http://cdn0.wn.com/or/images/double-up-arrow.png)");  						
+
+		        });	
+				
+				$('.playlistformating').hover(function() {		
+				            $('.playlistformating.fsmode').stop(true, false).animate({'right': '0px'}, 900);	
+							$('.playlistformating.fsmode').css("background-image", "url(http://cdn3.wn.com/or/images/double-right-arrow.png)");  	
+				        }, function() {
+				            $('.playlistformating.fsmode').stop(true, false).animate({'right': '-365px'}, 900);
+							$('.playlistformating.fsmode').css("background-image", "url(http://cdn8.wn.com/or/images/double-left-arrow.png)");  						
+			
+				});
+				
+				
+				$('#nav').hover(function() {									
+				            $('.nav.fsmode').stop(true, false).animate({'left': '0px'}, 900);	
+							$('.nav.fsmode').css("background-image", "url(http://cdn8.wn.com/or/images/double-left-arrow.png)");  	
+				        }, function() {
+				            $('.nav.fsmode').animate({'left': '-180px'}, 900);
+							$('.nav.fsmode').css("background-image", "url(http://cdn3.wn.com/or/images/double-right-arrow.png)");  			
+							
+				});
+				$('#panelButtons').hover(function() {
+		            $(this).stop(true, false).animate({'top': '0px'}, 900);	
+					$('.fs-button-switch').css('background-image', 'url(http://cdn0.wn.com/or/images/double-up-arrow.png)');  	
+					$('.fs-button').show();		
+		        }, function() {
+		            $(this).stop(true, false).animate({'top': '-27px'}, 900);	
+					$('.fs-button-switch').css('background-image', 'url(http://cdn1.wn.com/or/images/double-down-arrow.png)');  	
+					$('.fs-button').hide();		
+		        });		
+
+                /* esc fs mode on tab click */
+                $('.fsmode li a').live('click', function() {
+                    $('.fs-close').click();
+                });		
+                /* esc fs mode on tab click */
+                $('.fs-button.esc_fs').live('click', function() {
+                    $('.fs-close').click();
+                });		
+				
+				
+
+				$('.fs-button.playlist').click(function(){		
+							var toggle_switch = $(this);
+							  if(toggle_switch.html()=='Playlist'){		
+							  	toggle_switch.html('Hide Playlist');									
+								$('.playlistformating.fsmode').animate({'right': '0px'}, 900);	
+							  }else{				                              
+								toggle_switch.html('Playlist');										
+								$('.playlistformating.fsmode').animate({'right': '-365px'}, 900);		
+							  }
+				});
+				$('.fs-button.videos').click(function(){		
+								var toggle_switch = $(this);
+							  if(toggle_switch.html()=='Videos'){		
+							  	toggle_switch.html('Hide Videos');									
+								$('#panelSlider').animate({'bottom': '0px'}, 900);	
+							  }else{				                              
+								toggle_switch.html('Videos');										
+								$('#panelSlider').animate({'bottom': '-190px'}, 900);	
+							  }
+				});
+				$('.fs-button.menu').click(function(){		
+							 var toggle_switch = $(this);
+							  if(toggle_switch.html()=='Menu'){		
+							  	toggle_switch.html('Hide Menu');									
+								$('.nav.fsmode').animate({'left': '0px'}, 900);	
+							  }else{				                              
+								toggle_switch.html('Menu');										
+								$('.nav.fsmode').animate({'left': '-180px'}, 900);	
+							  }
+				});
+				$('.fs-button.all').click(function(){		
+							 var toggle_switch = $(this);
+							  if(toggle_switch.html()=='open all'){		
+							  	toggle_switch.html('close all');	
+								$('.fs-button.playlist').html('Hide Playlist');		
+								$('.fs-button.videos').html('Hide Videos');	
+								$('.fs-button.menu').html('Hide Menu');		
+								$('.nav.fsmode').animate({'left': '0px'}, 900);	
+								$('#panelSlider').animate({'bottom': '0px'}, 900);	
+								$('.playlistformating.fsmode').animate({'right': '0px'}, 900);	
+							  }else{				                              
+								toggle_switch.html('open all');			
+								$('.fs-button.playlist').html('Playlist');		
+								$('.fs-button.videos').html('Videos');	
+								$('.fs-button.menu').html('Menu');									
+								$('.nav.fsmode').animate({'left': '-180px'}, 900);	
+								$('#panelSlider').animate({'bottom': '-190px'}, 900);	
+								$('.playlistformating.fsmode').animate({'right': '-365px'}, 900);		
+								
+							  }
+				});
+				
+				
+		});
+		// -->
+		</script>
+
+
+
+            <script type="text/javascript">
+            <!--
+            getCookie = ensure(function(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+                for(var i=0;i < ca.length;i++) {
+                    var c = ca[i];
+                    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+                }
+                return null;
+            });
+            $ensure(function(){
+                // determine what display the video gallery uses
+                var cookie = getCookie("wn-videoplayer-playlist-format");
+                if (cookie && cookie.indexOf("playlist-template-with-images") > 0) {
+                    $('.list-preview').show();
+                    $('.thumb-preview').hide();
+                }
+            });
+            for(c in $.cookies.get()){
+                if(c.match('/')){
+                    $.cookies.del(c);
+                }
+            }
+            // -->
+            </script>
+
+	
+    <div style="display: none;">
+    <img src="http://cdn1.wn.com/or/images/soundON.png" alt="" width="0" height="0" />
+    <img src="http://cdn2.wn.com/or/images/playlist/current.png" alt="" width="0" height="0" />
+    <img src="http://cdn8.wn.com/or/images/playlist/play_remove.png" alt="" width="0" height="0" />
+    <img src="http://cdn5.wn.com/or/images/playlist/remove.png" alt="" width="0" height="0" />
+    <img src="http://cdn2.wn.com/or/images/playlist/tools/openON.png" alt="" width="0" height="0" />
+    <img src="http://cdn5.wn.com/or/images/playlist/tools/close.png" alt="" width="0" height="0" />
+    <img src="http://cdn9.wn.com/or/ula/cheetah-photo-search/remove_black.png" width="" height="" alt="" />
+    </div>
+
+	
+<div class="videoload-container" style="top: 22px; right: 10px; z-index: 10000; display: none;">
+	<div class="arrow"></div>
+	<div class="videoload"></div>
+</div>
+								
+								
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+    var elem = document.createElement('script');
+    elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+    qacct:"p-69LMgINxZpq8g"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-69LMgINxZpq8g.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+</body>
+
+</html>
+
+
+
+
+
+<!-- BEGIN TIMER SUMMARY OUTPUT
+
+Timer summary by type (using simple addition):
+ 0.000s (  0%)  related-queries
+ 0.000s (  0%)  vimeo-search
+ 0.000s (  0%)  youtube-search
+ 0.000s (  0%)  radios_search
+ 0.000s (  0%)  books_search
+ 0.000s (  0%)  quotes_search
+ 0.000s (  0%)  imdb_cast_search
+ 0.000s (  0%)  imdb_charname_search
+ 0.000s (  0%)  music_search
+ 0.000s (  0%)  database-fetch-articles
+ 0.000s (  0%)  wikipedia
+ 0.000s (  0%)  tvseries_search
+ 0.000s (  0%)  upge-load-template
+ 0.000s (  0%)  lyrics_search
+ 0.000s (  0%)  produce-description
+ 0.001s (  0%)  include-file
+ 0.001s (  0%)  xapian2-search
+ 0.006s (  1%)  spelling_search
+ 0.010s (  2%)  upge-page-fixups
+ 0.011s (  3%)  produce-html
+ 0.298s ( 80%)  facebook_search
+ 0.352s ( 94%)  gather-results
+ 0.370s (100%)  upge-fill-template
+
+Timer summary by type (accounting for overlapping threads):
+   0.000s  related-queries (1 timers, 1 groups, timers: 0.000s)
+   0.000s  vimeo-search (1 timers, 1 groups, timers: 0.000s)
+   0.000s  youtube-search (1 timers, 1 groups, timers: 0.000s)
+   0.000s  radios_search (1 timers, 1 groups, timers: 0.000s)
+   0.000s  books_search (1 timers, 1 groups, timers: 0.000s)
+   0.000s  quotes_search (1 timers, 1 groups, timers: 0.000s)
+   0.000s  imdb_cast_search (1 timers, 1 groups, timers: 0.000s)
+   0.000s  imdb_charname_search (1 timers, 1 groups, timers: 0.000s)
+   0.000s  music_search (1 timers, 1 groups, timers: 0.000s)
+   0.000s  database-fetch-articles (2 timers, 2 groups, timers: 0.000s, 0.000s)
+   0.000s  wikipedia (3 timers, 3 groups, timers: 0.000s, 0.000s, 0.000s)
+   0.000s  tvseries_search (1 timers, 1 groups, timers: 0.000s)
+   0.000s  upge-load-template (1 timers, 1 groups, timers: 0.000s)
+   0.000s  lyrics_search (1 timers, 1 groups, timers: 0.000s)
+   0.000s  produce-description (1 timers, 1 groups, timers: 0.000s)
+   0.001s  include-file (4 timers, 4 groups, timers: 0.000s, 0.000s, 0.000s, 0.000s)
+   0.001s  xapian2-search (1 timers, 1 groups, timers: 0.001s)
+   0.006s  spelling_search (1 timers, 1 groups, timers: 0.006s)
+   0.010s  upge-page-fixups (1 timers, 1 groups, timers: 0.010s)
+   0.011s  produce-html (1 timers, 1 groups, timers: 0.011s)
+   0.298s  facebook_search (1 timers, 1 groups, timers: 0.298s)
+   0.352s  gather-results (1 timers, 1 groups, timers: 0.352s)
+   0.370s  upge-fill-template (1 timers, 1 groups, timers: 0.370s)
+
+
+END TIMER SUMMARY OUTPUT-->
+

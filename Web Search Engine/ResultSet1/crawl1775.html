@@ -1,0 +1,552 @@
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Paperless 2000</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+
+
+
+
+
+
+
+
+
+<!--mstheme--><link rel="stylesheet" type="text/css" href="_themes/bubbles/bubb1110.css"><meta name="Microsoft Theme" content="bubbles 1110, default">
+<meta name="Microsoft Border" content="tlb, default">
+</head>
+
+<html>
+
+<body><!--'"</title></head>-->
+<script type="text/javascript">
+////// Compete /////////////////////
+__compete_code = '667f89f26d96c30e99728fe6a608804d';
+(function () {
+    var s = document.createElement('script'),
+        d = document.getElementsByTagName('head')[0] ||
+            document.getElementsByTagName('body')[0],
+        t = 'https:' == document.location.protocol ? 
+            'https://c.compete.com/bootstrap/' : 
+            'http://c.compete.com/bootstrap/';
+    s.src = t + __compete_code + '/bootstrap.js';
+    s.type = 'text/javascript';
+    s.async = 'async'; 
+    if (d) { d.appendChild(s); }
+})();
+
+
+////// Quantcast  /////////////////////
+function channValidator(chann) {
+    return (typeof(chann) == 'string' && chann != '');
+}
+
+function lycosQuantcast(){
+    var lb = "";
+    if(typeof(cm_host) !== 'undefined' && channValidator(cm_host)){
+        lb += cm_host.split('.')[0] + '.';
+    }
+
+    if(typeof(cm_taxid) !== 'undefined' && channValidator(cm_taxid)){
+        lb += cm_taxid;
+        lb = lb.replace('/','');
+    } else {
+        lb = lb.replace('.','');
+    }
+    return lb;
+}
+
+var _qevents = _qevents || [];
+
+(function() {
+    var elem = document.createElement('script');
+    elem.src = (document.location.protocol == "https:" ? "https://secure" :"http://edge") + ".quantserve.com/quant.js";
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+    qacct:"p-6eQegedn62bSo",
+    labels:lycosQuantcast()
+});
+
+////// OwnerIQ  /////////////////////
+var __oiq_pct = 50;
+if( __oiq_pct>=100 || Math.floor(Math.random()*100/(100-__oiq_pct)) > 0 ) {
+    var _oiqq = _oiqq || [];
+    _oiqq.push(['oiq_addPageBrand', 'Lycos']);
+    _oiqq.push(['oiq_addPageCat', 'Internet > Websites']);
+    _oiqq.push(['oiq_addPageLifecycle', 'Intend']);
+    _oiqq.push(['oiq_doTag']);
+
+    (function() {
+        var oiq = document.createElement('script'); oiq.type = 'text/javascript'; oiq.async = true;
+        oiq.src = document.location.protocol + '//px.owneriq.net/stas/s/lycosn.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(oiq, s);
+    })();
+}
+
+
+
+/////// Google Analytics ////////////
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-21402695-19']);
+_gaq.push(['_setDomainName', 'tripod.com']);
+_gaq.push(['_setCustomVar', 1, 'member_name', 'egulphy', 3]);
+_gaq.push(['_trackPageview']);
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+
+/////// Lycos Initialization ////////////
+function getReferrer() {
+    // Reads the referrer out of the cookie, if available.
+    var all= this.document.cookie;
+    if (all== '') return false;
+    var cookie_name = 'REFERRER=';
+    var start = all.lastIndexOf(cookie_name);
+    if (start == -1) return false;  // referrer URL not found.
+    start += cookie_name.length;
+    var end = all.indexOf(';', start);
+    if (end == -1) end = all.length;
+    return all.substring(start, end);
+}
+function getQuery() {
+    // Get the referrer search query from cookie, if available.
+    var rfr = getReferrer();
+    if (rfr == '') return false;
+    var q = extractQuery(rfr, 'yahoo.com', 'p=');
+    if (q) return q;
+    q = extractQuery(rfr, '', 'q=');
+    return q ? q : "";
+}
+function extractQuery(full, site, q_param) {
+    var start = full.lastIndexOf(site);
+    if (start == -1) return false;
+    start = full.lastIndexOf(q_param);
+    if (start == -1) return false;
+    start += q_param.length;
+    var end = full.indexOf('&', start);
+    if (end == -1) end = full.length;
+    return unescape(full.substring(start, end)).split(" ").join("+");
+}
+
+function generateHref(atag, template){
+    atag.href=template.replace('_MYURL_', window.location.href.replace('http://', '')).replace('_MYTITLE_', 'Check%20out%20this%20Tripod%20Member%20site!'); 
+}
+
+
+var lycos_ad = Array();
+var lycos_onload_timer;
+
+var cm_role = "live";
+var cm_host = "tripod.lycos.com";
+var cm_taxid = "/memberembedded";
+var tripod_member_name = "egulphy";
+var tripod_member_page = "egulphy/pap2k.html";
+var tripod_ratings_hash = "1386819993:dbf0e4e52883c5bba27b2018115b1f27";
+
+var lycos_ad_category = {"dmoz":"news\/satire","ontarget":"&CAT=news","find_what":"busness"};
+
+var lycos_ad_remote_addr = "76.184.251.170";
+var lycos_ad_www_server = "www.tripod.lycos.com";
+var lycos_ad_track_small = "http://members.tripod.com/adm/img/common/ot_smallframe.gif?rand=229137";
+var lycos_ad_track_served = "http://members.tripod.com/adm/img/common/ot_adserved.gif?rand=229137";
+var lycos_search_query = getQuery();
+
+
+////// Criteo /////////////////////
+var cto_conf = { a:true, i: "294", c:"img", kw: "" } ;
+(function (){
+    var c = document.createElement("script"); c.type = "text/javascript"; c.async = true;
+    c.src = "http://members.tripod.com/adm/partner/criteo_ld_kw.js";
+    var s = document.getElementsByTagName("body")[0]; s.appendChild(c);
+})(); 
+
+</script>
+
+<script type="text/javascript" src="http://scripts.lycos.com/catman/init.js"></script>
+<script type="text/javascript"> 
+
+(function(isV) {
+    if (!isV) {
+        return;
+    }
+
+    //this.lycos_search_query = lycos_get_search_referrer();
+    var adMgr = new AdManager();
+    var lycos_prod_set = adMgr.chooseProductSet();
+    var slots = ["leaderboard", "leaderboard2", "toolbar_image", "toolbar_text", "smallbox", "top_promo", "footer2"];
+    var adCat = this.lycos_ad_category;
+    adMgr.setForcedParam('page', (adCat && adCat.dmoz) ? adCat.dmoz : 'member');
+
+    if (this.lycos_search_query) {
+        adMgr.setForcedParam("keyword", this.lycos_search_query);
+    } 
+    else if (adCat && adCat.find_what) {
+        adMgr.setForcedParam('keyword', adCat.find_what);
+    }
+
+    for (var s in slots) {
+        var slot = slots[s];
+        if (adMgr.isSlotAvailable(slot)) {
+            this.lycos_ad[slot] = adMgr.getSlot(slot);
+        }
+    }
+
+    adMgr.renderHeader();
+    adMgr.renderFooter();
+}((function() {
+    var w = 0, h = 0, minimumThreshold = 300;
+    if (top == self) {
+        return true;
+    }
+
+    if (typeof(window.innerWidth) == 'number' ) {
+        w = window.innerWidth;
+        h = window.innerHeight;
+    }
+    else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+        w = document.documentElement.clientWidth;
+        h = document.documentElement.clientHeight;
+    }
+    else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+        w = document.body.clientWidth;
+        h = document.body.clientHeight;
+    }
+
+    return ((w > minimumThreshold) && (h > minimumThreshold));
+}())));
+    
+window.onload = function() {
+    var f = document.getElementById("FooterAd");
+    var b = document.getElementsByTagName("body")[0];
+    b.appendChild(f);
+    f.style.display = "block";
+    document.getElementById('lycosFooterAdiFrame').src = '/adm/ad/footerAd.iframe.html';
+
+
+    // DOM Injection Ad
+    (function(isTrellix) {
+        var e = document.createElement('iframe');
+        e.style.border = '0';
+        e.style.margin = 0;
+        e.style.display = 'block';
+        e.style.cssFloat = 'right';
+        e.style.height = '254px';
+        e.style.overflow = 'hidden';
+        e.style.padding = 0;
+        e.style.width = '300px';
+
+        var getCommentNodes = function(regexPattern) {
+            var nodes = {};
+            var nodesA = [];
+            var preferredNodesList = ['a', 'c', 'b'];
+
+            (function getNodesThatHaveComments(n, pattern) {
+                if (n.hasChildNodes()) {
+                    if (n.tagName === 'IFRAME') {
+                        return false;
+                    }
+                    for (var i = 0; i < n.childNodes.length; i++) {
+                        if ((n.childNodes[i].nodeType === 8) && (pattern.test(n.childNodes[i].nodeValue))) {
+                            var areaName = pattern.exec(n.childNodes[i].nodeValue)[1];
+                            nodes[areaName] = n;
+                        }
+                        else if (n.childNodes[i].nodeType === 1) {
+                            getNodesThatHaveComments(n.childNodes[i], pattern);
+                        }
+                    }
+                }
+            }(document.body, regexPattern));
+
+            for (var i in preferredNodesList) {
+                if (nodes[preferredNodesList[i]]) {
+                    if (nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode) {
+                        nodesA.push(nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode);
+                    }
+                }
+            }
+
+            return nodesA;
+        }
+
+        var properNode = null;
+        var areaNodes = getCommentNodes(new RegExp('^area Type="area_(\\w+)"'));
+        for (var i = 0; i < areaNodes.length; i++) {
+            var a = parseInt(getComputedStyle(areaNodes[i]).width);
+            if ((a >= 300) && (a <= 400)) {
+                properNode = areaNodes[i];
+                break;
+            }
+        }
+
+        if ((isTrellix) && (properNode)) {
+            e.src = '/adm/ad/injectAd.iframe.html';
+            properNode.insertBefore(e, properNode.firstChild);
+        }
+        else {
+            e.src = '/adm/ad/sliderAd.iframe.html';
+            var sliderBlock = document.getElementById('lyslider-adblock-wrapper');
+            var sliderHolder = document.getElementById('lyslider-adblock-holder');
+            var sliderClose = document.getElementById('lyslider-adblock-close');
+            sliderBlock.style.display = 'block';
+
+            sliderClose.onclick = function() {
+                sliderBlock.parentNode.removeChild(sliderBlock);
+                return false;
+            }
+
+            var iframeOnload = function() {
+                setTimeout((function sliiide() {
+                    var s = (window.getComputedStyle) ? parseInt(getComputedStyle(sliderHolder).right) : parseInt(sliderHolder.currentStyle.right);
+                    if (s <= 0) {
+                        sliderHolder.style.right = (s + 6) + 'px';
+                        setTimeout(sliiide, 10);
+                    }
+                    else {
+                        sliderHolder.style.right = '0px';
+                        sliderClose.style.display = 'block';
+                    }
+                }), 1000);
+            }
+
+            if (e.attachEvent) {
+                e.attachEvent('onload', iframeOnload);
+            }
+            else {
+                e.addEventListener('load', iframeOnload, false);
+            }
+
+            sliderHolder.insertBefore(e, sliderHolder.firstChild);
+        }
+    }(document.isTrellix));
+
+}
+
+
+
+</script>
+<style>
+	#body .adCenterClass{margin:0 auto}
+</style>
+
+<div id="tb_container" style="background:#DFDCCF; border-bottom:1px solid #393939; position:relative; z-index:999999999!important">
+    <div id="tb_ad" class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+    <a href="http://adtrack.ministerial5.com/clicknew/?a=637394" title="build your own website at Tripod.com" style="float:left; width:186px; border:0">
+    	<img src="http://ly.lygo.com/ly/tpSite/images/freeAd2.jpg" alt="Make your own free website on Tripod.com" style="border:0; display:block" />
+    </a> 
+        <div id="ad_container" style="display:block!important; float:left; width:728px ">
+        <script type="text/javascript">document.write(lycos_ad['leaderboard']);</script>
+        </div>
+    </div>
+</div>
+
+<!-- ///////////////////////////////////// -->
+<div id="lyslider-adblock-wrapper" style="display:none; height:300px; overflow:hidden; position:absolute; right:0; top:150px; width:320px; z-index:99999999; ">
+<div id="lyslider-adblock-holder" style="background-color:#888; height:250px; margin-bottom:25px; padding:4px; position:absolute; right:-320px; top:10px; width:300px; ">
+<a id="lyslider-adblock-close" href="#" style="background-color:#222; bottom:-19px; color:#fff; display:block; font:10px Arial, Helvetica, Sans-serif; padding:4px; position:absolute; right:0; text-decoration:none; z-index:9999999999">Close Ad</a>
+</div>
+</div>
+
+
+<div id="FooterAd" style="background:#DFDCCF; border-top:1px solid #393939; clear:both; display:none; width:100%!important; position:relative; z-index:999999!important; height:90px!important"> 
+	<div class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+	<a href="http://adtrack.ministerial5.com/clicknew/?a=637394" title="build your own website at Tripod.com" style="float:left; display:block; width:186px; border:0">
+    	<img src="http://ly.lygo.com/ly/tpSite/images/freeAd2.jpg" alt="Make your own free website on Tripod.com" style="border:0; display:block; " />
+    </a> 
+        <div id="footerAd_container" style="display:block!important; float:left; width:728px">
+        <iframe id="lycosFooterAdiFrame" style="border:0; display:block; float:left; height:96px; overflow:hidden; padding:0; width:750px"></iframe>
+        <!-- <script type="text/javascript">document.write(lycos_ad['leaderboard2']);</script> -->
+        </div>
+	</div>
+</div>
+<noscript>
+ <img src="http://members.tripod.com/adm/img/common/ot_noscript.gif?rand=229137" alt="" width="1" height="1" />
+ <!-- BEGIN STANDARD TAG - 728 x 90 - Lycos - Tripod Fallthrough - DO NOT MODIFY -->
+ <iframe frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="728" height="90" src="http://ad.yieldmanager.com/st?ad_type=iframe&amp;ad_size=728x90&amp;section=209094"></iframe>
+ <!-- END TAG -->
+</noscript>
+
+<!-- Start Ybrant -->
+<img src="http://ad.yieldmanager.com/pixel?id=1901600&t=2" width="1" height="1" />
+<!--   End Ybrant -->
+
+<!-- Start Datonics -->
+<script type="text/javascript" src="http://ads.pro-market.net/ads/scripts/site-132783.js"></script>
+<!--   End Datonics -->
+
+<!-- Start Chango -->
+<script type="text/javascript">
+    var __cho__ = {"pid":1694};
+    (function() {
+        var c = document.createElement('script');
+        c.type = 'text/javascript';
+        c.async = true;
+        c.src = document.location.protocol + '//cc.chango.com/static/o.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(c, s);
+    })();
+</script>
+<!--   End Chango -->
+
+<!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><table cellSpacing="0" cellPadding="0" width="100%" border="0">
+   <tr><td><p align="center">
+     <a href="./"><img src="_derived/home_cmp_bubbles110_gbtn.gif" width="95" height="20" border="0" alt="Home" align="middle"></a> <a href="index-old.htm"><img src="_derived/index-old.htm_cmp_bubbles110_gbtn.gif" width="95" height="20" border="0" alt="index.htm" align="middle"></a> <a href="feedback.html"><img src="_derived/feedback.html_cmp_bubbles110_gbtn.gif" width="95" height="20" border="0" alt="Visitor Feedback" align="middle"></a> <a href="egulphy_faq.html"><img src="_derived/egulphy_faq.html_cmp_bubbles110_gbtn.gif" width="95" height="20" border="0" alt="Egulphy FAQ" align="middle"></a> <a href="buyourstuff.html"><img src="_derived/buyourstuff.html_cmp_bubbles110_gbtn.gif" width="95" height="20" border="0" alt="Buy Stuff" align="middle"></a> <a href="buymagazines.html"><img src="_derived/buymagazines.html_cmp_bubbles110_gbtn.gif" width="95" height="20" border="0" alt="Buy Magazines" align="middle"></a> <a href="search.html"><img src="_derived/search.html_cmp_bubbles110_gbtn.gif" width="95" height="20" border="0" alt="Search" align="middle"></a> <a href="whatsnew.html"><img src="_derived/whatsnew.html_cmp_bubbles110_gbtn.gif" width="95" height="20" border="0" alt="What's New?" align="middle"></a><br><img height="55" src="_borders/eplate.gif" width="96" border="0"><img src="_derived/pap2k.html_cmp_bubbles110_bnr.gif" width="600" height="60" border="0" alt="Paperless 2000"><img height="57" src="_borders/egulphy.jpg" width="55" border="2"></td></tr>
+</table></td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"><p>
+<script language="JavaScript"><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></script><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload("_derived/home_cmp_bubbles110_vbtn.gif"); MSFPnav1h=MSFPpreload("_derived/home_cmp_bubbles110_vbtn_a.gif"); }
+// --></script><a href="./" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src"><img src="_derived/home_cmp_bubbles110_vbtn.gif" width="140" height="60" border="0" alt="Home" name="MSFPnav1"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav2n=MSFPpreload("_derived/up_cmp_bubbles110_vbtn.gif"); MSFPnav2h=MSFPpreload("_derived/up_cmp_bubbles110_vbtn_a.gif"); }
+// --></script><a href="index.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src" onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src"><img src="_derived/up_cmp_bubbles110_vbtn.gif" width="140" height="60" border="0" alt="Up" name="MSFPnav2"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav3n=MSFPpreload("_derived/paperless_2000.html_cmp_bubbles110_vbtn.gif"); MSFPnav3h=MSFPpreload("_derived/paperless_2000.html_cmp_bubbles110_vbtn_a.gif"); }
+// --></script><a href="paperless_2000.html" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src" onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src"><img src="_derived/paperless_2000.html_cmp_bubbles110_vbtn.gif" width="140" height="60" border="0" alt="Paperless 2000" name="MSFPnav3"></a></p>
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top"><p><a href="pap2k1.html"><font face="Arial" size="2">PAPERLESS 2K1</font></a>
+<font face="Arial" size="2"> - The Weekly Column...in the year 2001!</font></p>
+<p><font face="Arial" size="2"><a href="pap2k2.html">PAPERLESS 2K2</a> - This week's column (if that's what you're looking for).&nbsp;&nbsp;</font>
+</p>
+<p><font face="Arial" size="2">Below are the year 2000 archives.&nbsp; Thanks for
+reading.</font>
+</p>
+      <ul>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kdec31paperless.html">December 31, 2000</a> -&nbsp;Happy new year... </font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kdec24paperless.html">December 24, 2000</a> -&nbsp;Ouch!&nbsp; What those Leafs need for Xmas! </font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kdec17paperless.html">December 17, 2000</a> -&nbsp;The
+          estate of Jeff Buckley joins in on the Napster war&nbsp;</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kdec10paperless.html">December 10, 2000</a> -&nbsp;Guest
+          columnist JOHN THICK - the Napster saga...so far</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kdec03paperless.html">December 3, 2000</a> -&nbsp;Why do you buy your food from a tobacco company? </font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2knov26paperless.html">November 26, 2000</a> -&nbsp;Hot Xmas Gifts for 2000 </font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2knov19paperless.html">November 19, 2000</a> -&nbsp;This chad goes on and on... </font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2knov12paperless.html">November 12, 2000</a> -&nbsp;The
+          election that refuses to end...</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2knov05paperless.html">November 5, 2000</a> -&nbsp;Happy
+          Stockwell Day!</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2koct29paperless.html">October 29, 2000</a> -&nbsp;Would
+          you believe...Hallowe'en off?!?</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2koct22paperless.html">October 22, 2000</a> -&nbsp;Subliminal Smokes, Part 4</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2koct15paperless.html">October 15, 2000</a> -&nbsp;Subliminal
+          Smokes, Part 3</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2koct08paperless.html">October 8, 2000</a> -&nbsp;RATS!!!
+          Subliminal Republicans, Part 1</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2koct01paperless.html">October 1, 2000</a> -&nbsp;As
+          the Sydney Olympics are drawing to a close...</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2ksep24paperless.html">September 24, 2000</a> -&nbsp;Subliminal
+          Smokes, Part 2</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2ksep17paperless.html">September 17, 2000</a> -&nbsp;Subliminal
+          Smokes, Part 1</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2ksep10paperless.html">September 10, 2000</a> -&nbsp;The
+          Paperless One has a BAD DAY!!!</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2ksep03paperless.html">September 3, 2000</a> -&nbsp;What's
+          the deal with MOBY?</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kaug27paperless.html">August 27, 2000</a> -&nbsp;The
+          Paperless One gets in trouble with eBay&nbsp;</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kaug20paperless.html">August 20, 2000</a> -&nbsp;Blocks
+          to you!</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kaug13paperless.html">August 13, 2000</a> -&nbsp;I
+          shan't watch &quot;Survivor&quot; again</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kaug06paperless.html">August 6, 2000</a> -&nbsp;So
+          far, the world is honest...even online!</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kjul30paperless.html">July 30, 2000</a> -&nbsp;Ralf
+          Schumacher's new job</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kjul23paperless.html">July 23, 2000</a> -&nbsp;Clinton
+          has visitors...</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kjul16paperless.html">July 16, 2000</a> -&nbsp;Flashback:&nbsp;
+          Billy gets a credit card!</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kjul09paperless.html">July 9, 2000</a> - Toronto
+          Sun Involved in &quot;news&quot; itself?</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kjul02paperless.html">July 2, 2000</a> - Happy
+          Canada Day...and Independence Day too!</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kjun25paperless.html">June 25, 2000</a> - Survivor!
+          ...and what to do with those shipwrecked folks...</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kjun18paperless.html">June 18, 2000</a> - The Punk Rock Ethic, or
+          how I learned to hate arena rock</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kjun11paperless.html">June 11, 2000</a> - A Letter
+          From Elian about &quot;the Miami Relatives&quot;</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kjun04paperless.html">June 4, 2000</a> - Dr. Dre
+          Ate My Balls...and turned me in to the Napster cops!</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kmay28paperless.html">May 28, 2000</a> - The
+          Stanley Cup finals...</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kmay21paperless.html">May 21, 2000</a> - The
+          Internet on Gas...the latest in high-speed access</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kmay14paperless.html">May 14, 2000</a> - Being John
+          Malkovich</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kmay07paperless.html">May 7, 2000</a> - The
+          Paperless One LOVES YOU!</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kapr30paperless.html">April 30, 2000</a> - Tax day
+          = no column?&nbsp;</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kapr23paperless.html">April 23, 2000</a> - John
+          Rocker apologizes, battery companies laugh all the way to the bank!</font></li>
+        <li><font face="Arial" size="2"><a
+          href="http://www.angelfire.com/rock/cpar/p2k/2kapr16paperless.html">April 16, 2000</a> - I
+          AM...an asshole?</font></li>
+        <li><font face="Arial" size="2"><a href="http://www.angelfire.com/rock/cpar/p2k/2kapr09paperless.html">April
+    9, 2000</a> - Can't Sell That on eBay...also:&nbsp; Leaf fans allergic to
+    noise!</font></li>
+        <li><font face="Arial" size="2"><a href="http://www.angelfire.com/rock/cpar/p2k/2kapr02paperless.html">April
+    2, 2000</a> - High Speed Internet Access...or not?</font></li>
+        <li><font face="Arial" size="2"><a href="http://www.angelfire.com/rock/cpar/p2k/2kmar26paperless.html">March
+    26, 2000</a> - Whassup?!?</font></li>
+        <li><font face="Arial" size="2"><a href="http://www.angelfire.com/rock/cpar/p2k/2kmar19paperless.html">March
+    19, 2000</a> - High Speed Internet Access (Part One)</font></li>
+      </ul>
+&nbsp;</td></tr></table></td></tr></table></td></tr></table></td></tr></table><!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>&nbsp;<a href="http://www.fark.com"><img alt="[FARK]" src="http://img.fark.com/images/2000/farksml.jpg" border="0" width="88" height="31"></a><a href="http://www.theonion.com/info/onion_link.html" target="_top"><img alt="The Onion, America's Finest News Source" src="http://graphics.theonion.com/universal_pics/onionlink1098.gif" border="0" width="88" height="31"></a><a href="http://htmlgear.lycos.com/specs/guest.html"><img border="0" ismap src="http://htmlgear.lycos.com/img/guest/gb_orange.gif" width="87" height="31"></a><font face="Verdana, Ariel, Helvetica, Sans-Serif" color="#dd9944" size="1"><a href="http://www.blogger.com"><img alt="This page is powered by Blogger." src="http://buttons.blogger.com/bloggerbutton1.gif" border="0" width="88" height="31"></a></font><font size="1" face="Times New Roman"><img border="0" src="_borders/homestar.gif" width="77" height="27">©2003 <a href="http://www.egulphy.com">www.egulphy.com</a></font><font size="1">&nbsp; </font><font size="1" face="Times New Roman">Send hate mail to <a href="mailto:webmaster@egulphy.com">webmaster@egulphy.com</a>. </font></p>
+</td></tr><!--msnavigation--></table></body><!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>&nbsp;<a href="http://www.fark.com"><img alt="[FARK]" src="http://img.fark.com/images/2000/farksml.jpg" border="0" width="88" height="31"></a><a href="http://www.theonion.com/info/onion_link.html" target="_top"><img alt="The Onion, America's Finest News Source" src="http://graphics.theonion.com/universal_pics/onionlink1098.gif" border="0" width="88" height="31"></a><a href="http://htmlgear.lycos.com/specs/guest.html"><img border="0" ismap src="http://htmlgear.lycos.com/img/guest/gb_orange.gif" width="87" height="31"></a><font face="Verdana, Ariel, Helvetica, Sans-Serif" color="#dd9944" size="1"><a href="http://www.blogger.com"><img alt="This page is powered by Blogger." src="http://buttons.blogger.com/bloggerbutton1.gif" border="0" width="88" height="31"></a></font><font size="1" face="Times New Roman"><img border="0" src="_borders/homestar.gif" width="77" height="27">©2003 <a href="http://www.egulphy.com">www.egulphy.com</a></font><font size="1">&nbsp; </font><font size="1" face="Times New Roman">Send hate mail to <a href="mailto:webmaster@egulphy.com">webmaster@egulphy.com</a>. </font></p>
+</td></tr><!--msnavigation--></table></body></html>

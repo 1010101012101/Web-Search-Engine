@@ -1,0 +1,766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>NPR : Discussions</title>
+        <style type="text/css" media="screen">@import "/include/css/mainstyles.css";</style>
+        <style type="text/css" media="screen">@import "/include/css/loosecontent.css";</style>
+        <style type="text/css" media="screen">@import "/include/css/bucket_facelift.css";</style>
+        <link rel="stylesheet" type="text/css" media="print" href="/include/css/print.css" />
+        <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="robots" content="noarchive,index,follow" />
+        <meta name="Copyright" content="Copyright (c) 2006 NPR" />
+        <meta http-equiv="imagetoolbar" content="no" />
+        <meta name="MSSmartTagsPreventParsing" content="true" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="Rating" content="General" />
+        <meta name="revisit-after" content="1 Day" />
+        <meta name="doc-class" content="Living Document" />
+		<meta name="date" content="12-06-1999" />
+        <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+         
+        <script type="text/javascript" src="/include/javascript/jsfuncs.js"></script>
+        <script type="text/javascript" src="/include/localize/zip_code.js"></script>
+
+		
+    </head>
+    <body>
+        <div id="login">
+    <p id="loginPElm"> </p>
+</div>
+<div id="header">
+
+<script type="text/javascript">
+//<![CDATA[
+
+function month(intMonth)
+    {
+        var MonthArray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+        return MonthArray[intMonth];
+    }
+
+function getDateStr()
+    {
+        var today = new Date();
+        var year = today.getYear();
+        if(year<1000) year+=1900;
+        var todayStr = month(today.getMonth()) + " " + today.getDate() + ", " + year;
+        return todayStr;
+    }
+
+
+sfHover = function() {
+    var sfEls = document.getElementById("nav").getElementsByTagName("LI");
+
+    var stnNav = document.getElementById("stn_nav");
+    if (stnNav != null) { sfEls = concatCollections(sfEls, stnNav.getElementsByTagName("LI")); }
+
+    for (var i=0; i<sfEls.length; i++) {
+        sfEls[i].onmouseover=function() {
+            this.className+=" sfhover";
+        }
+        sfEls[i].onmouseout=function() {
+            this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+        }
+    }
+}
+//if (window.attachEvent) window.attachEvent("onload", sfHover);
+if (document.all && window.attachEvent) window.attachEvent("onload", sfHover);
+//]]>
+
+</script>
+
+    <div id="skipImages">
+        <a href="#skipnavigation"><img src="http://media.npr.org/chrome/transparent.gif" alt="Skip Navigation" width="1" height="1" /></a>
+        <a href="http://thin.npr.org/"><img src="http://media.npr.org/chrome/transparent.gif" alt="Go to text only site" width="1" height="1" /></a>
+    </div>
+
+    <!-- start header row one -->
+    <div id="headerRowOne">
+        <div id="logo"><a href="/"><img src="http://media.npr.org/images/logo_npr_125.gif" alt="NPR Home Page" height="42" width="125" /></a></div>
+        <ul class="audiostreams">
+            <li><a href="javascript:getNewsCast();" class="audioIcon">Hourly News Summary</a></li>
+            <li><a href="javascript:getProgramStream();" class="audioIcon">24-hour Program Stream</a> | <a href="/audiohelp/progstream.html">Schedule</a></li>
+        </ul>
+        <div id="searchBox">
+            <form method="get" action="/search.php" name="searchForm" id="searchForm">
+                <p>
+                    <input type="text" name="text" id="text" class="searchinput" value=" Search NPR.org" onclick="if(this.value==' Search NPR.org'){this.value=''}" onblur="if(this.value==''){this.value=' Search NPR.org'}" />
+                    <input type="button" value="go" class="button" onclick="submit();" />
+                </p>
+            </form>
+        </div>
+
+    </div>
+    <!-- end header row one -->
+
+
+    <!-- start header row two -->
+    <div id="headerRowTwo">
+
+        <div id="todaysDate">
+            <script type="text/javascript">
+            //<![CDATA[
+                document.write(getDateStr());
+            //]]>
+            </script>
+        </div>
+
+        <ul id="nav">
+            <li><a href="/programs/index.html" class="rollPrograms "><img src="http://media.npr.org/chrome/nav_programs_off.gif" width="94" height="25" alt="Programs" /></a>
+                <ul id="dropdown">
+                    <li class="hdr">News/Talk</li>
+                    <li class="highlight"><a href="/templates/rundowns/rundown.php?prgId=3">Morning Edition</a></li>
+                    <li class="highlight"><a href="/templates/rundowns/rundown.php?prgId=2">All Things Considered</a></li>
+                    <li><a href="/templates/rundowns/rundown.php?prgId=13">Fresh Air</a></li>
+                    <li><a href="/templates/rundowns/rundown.php?prgId=5">Talk of the Nation</a></li>
+                    <li><a href="/templates/rundowns/rundown.php?prgId=46">Tell Me More</a></li>
+                    <li><a href="/programs/waitwait/">Wait Wait...Don't Tell Me</a></li>
+                    <li><a href="/templates/rundowns/rundown.php?prgId=7">Weekend Edition Saturday</a></li>
+                    <li><a href="/templates/rundowns/rundown.php?prgId=10">Weekend Edition Sunday</a></li>
+                    <li class="hdr">Music</li>
+                    <li><a href="/templates/rundowns/rundown.php?prgId=37&amp;agg=1&amp;ps=jt">All Songs Considered</a></li>
+                    <li><a href="/templates/story/story.php?storyId=99022917">From the Top</a></li>
+                    <li><a href="/templates/rundowns/rundown.php?prgId=20&amp;agg=1">JazzSet</a></li>
+                    <li><a href="/templates/rundowns/rundown.php?prgId=24&amp;agg=1">Marian McPartland's Piano Jazz</a></li>
+                    <li><a href="/templates/story/story.php?storyId=92133820">Mountain Stage</a></li>
+                    <li><a href="/templates/rundowns/rundown.php?prgId=39&amp;agg=1">World Cafe</a></li>
+                    <li><a href="/templates/rundowns/rundown.php?prgId=36&amp;agg=1">World of Opera</a></li>
+                    <li class="lastmore"><a href="/programs/">MORE PROGRAMS A-Z</a></li>
+                </ul>
+            </li>
+            <li><a href="/templates/stations/stations/" class="rollStations"><img src="http://media.npr.org/chrome/nav_stations_off.gif" width="75" height="25" alt="Stations" /></a></li>
+            <li><a href="/transcripts/" class="rollTranscripts"><img src="http://media.npr.org/chrome/nav_transcripts_off.gif" width="96" height="25" alt="Transcripts" /></a></li>
+            <li><a href="/templates/archives/rundown_archive_hub.php" class="rollArchives"><img src="http://media.npr.org/chrome/nav_archives_off.gif" width="75" height="25" alt="Archives" /></a></li>
+            <li><a href="http://shop.npr.org" class="rollShop"><img src="http://media.npr.org/chrome/nav_shop_off.gif" width="77" height="25" alt="NPR Shop" /></a></li>
+            <li><a href="/about/" class="rollAbout"><img src="http://media.npr.org/chrome/nav_about_off.gif" width="86" height="25" alt="About NPR" /></a></li>
+            <li><a href="http://help.npr.org/ics/support/default.asp?deptID=5670&amp;task=ticket" class="rollContact"><img src="http://media.npr.org/chrome/nav_contact_off.gif" width="89" height="25" alt="Contact Us" /></a></li>
+            <li class="last"><a href="http://help.npr.org/ics/support/default.asp?deptID=5670" class="rollHelp"><img src="http://media.npr.org/chrome/nav_help_off.gif" width="48" height="25" alt="Help" /></a></li>
+        </ul>
+
+    </div>
+    <!-- end header row two -->
+
+    <div class="spacer">&nbsp;</div>
+
+</div>
+<a name="skipnavigation" id="skipnavigation"></a>
+
+        <div id="main">
+			<!-- START MIDDLE COLUMN -->
+            <div id="middlecol">
+				<div id="content">
+			
+				<!-- start paste page content -->
+				
+				
+<div style="padding:10px;border:1px solid #ccc;">
+
+NPR's bulletin boards are no longer available. We are
+in the process of planning a new bulletin board system that will be more
+user-friendly and better integrated into the website; we hope to have
+these tools available later this year.  In the meantime, we invite you to
+participate in the discussions taking place on our Talk of the Nation
+blog, <a href="http://www.npr.org/blogs/talk">Blog of the Nation</a>,
+and other blogs. Thank you for your interest, and we look forward to
+seeing you in the blogosphere!
+ <div class="spacer">&nbsp;</div>		
+	</div><br />			
+				
+				
+				
+				
+				<!-- end paste page content -->
+				
+				</div>
+				
+				<script type="text/javascript" src="/templates/javascript/lib/jquery-latest.min.js"></script>
+<script type="text/javascript" src="/templates/javascript/reg/jquery-reg-plugins.js"></script>
+<script type="text/javascript" src="/templates/javascript/addNamespace.js"></script>
+<script type="text/javascript" src="/templates/javascript/reg/reg.js"></script>
+<script type="text/javascript">
+    var NL_PROGRAMMING = 4014;
+    var NL_MOSTEMAILED = 4004;
+</script>
+<script type="text/javascript">
+    NPR.send_email_include = function() {
+        return  {
+            /**
+             * This function does the work of populating/altering
+             * the send email include depending on whether we have a js cookie or not.
+             * This used to be executed only at load time, but now is dynamically
+             * executed since we have cookie written during the js session.
+             */
+            init : function() {
+                /*
+                 * Remove parts of the page based on user already having
+                 */
+        
+                var st = $.stationscookie();
+                if (st !== null) {
+                    $('.user-stationsselected').hide();
+                }
+        
+                var nl = $.newsletterscookie();
+                if (nl !== null) {
+                    if ($.arrayContains(NL_PROGRAMMING, nl) &&
+                        $.arrayContains(NL_MOSTEMAILED, nl)) {
+                        $('.user-nlsubscribed').hide();
+                    }
+                }
+        
+                /*
+                 * Populate user info if found.
+                 */
+                var auth = $.authcookie();
+                $('input[name="from"]').attr('value', auth.email);
+                $('input[name="fullname"]').attr('value', auth.fullname);
+            }            
+        };
+    }();
+
+    /* - On page load, modify the form if the user is logged in.
+     * - If the user logs in, refresh the form to display user data.
+     */
+    $().ready(function() {
+        NPR.send_email_include.init();
+        $(document.body).login(function() {
+            NPR.send_email_include.init();
+        }); 
+    });
+
+/**
+ * echeck function modified from DHTML email validation script. Courtesy of SmartWebby.com (http://www.smartwebby.com/dhtml/)
+ */
+function echeck(str) {
+
+        var at="@"
+        var dot="."
+        var lat=str.indexOf(at)
+        var lstr=str.length
+        var ldot=str.indexOf(dot)
+        if (str.indexOf(at)==-1){
+           alert("Please check the the format of the email addresses you entered.")
+           return false
+        }
+
+        if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+           alert("Please check the the format of the email addresses you entered.")
+           return false
+        }
+
+        if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+            alert("Please check the the format of the email addresses you entered.")
+            return false
+        }
+
+         if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+            alert("Please check the the format of the email addresses you entered.")
+            return false
+         }
+
+         if ((str.indexOf(" ")!=-1) && (str.indexOf(" ")!=str.length-1)){  //altered by eme -- a space at the end should be ok
+            alert("Please check the the format of the email addresses you entered.")
+            return false
+         }
+
+         return true
+    }
+
+    function deleteSpaces(textStr)
+    {
+        // replace any spaces/linebreak characters w/ nothing
+        var textStrSave = textStr.value.replace(/[\s]+/g, "");
+        textStrSave = textStrSave.replace(/\;/g, ',');
+        textStr.value= textStrSave;
+    }
+
+    function formSubmit() {
+
+        // 0 is valid.
+        if (checkStation()==0) {
+            docUrl = document.URL;
+            document.frmSendToFriend.title.value=document.title;
+            poundFind = docUrl.indexOf("#");
+
+            if (poundFind>-1)
+                {
+                    docUrl = docUrl.substring(0, poundFind);
+                }
+
+            if (docUrl.substring(0, 14)=="http://npr.org")
+                {
+                    docUrl = "http://www.npr.org" + docUrl.substring(14, docUrl.length);
+                }
+
+            document.frmSendToFriend.pageUrl.value= docUrl;
+            if (NPR && NPR.metrics && NPR.metrics.vstag)
+            {
+                document.frmSendToFriend.vstopic.value = NPR.metrics.vstag.primaryTopic;
+                document.frmSendToFriend.vsprogram.value = NPR.metrics.vstag.programId;
+                document.frmSendToFriend.vsagg.value = NPR.metrics.vstag.aggIds;
+                document.frmSendToFriend.vsbyline.value = NPR.metrics.vstag.byline;
+            }
+            else if (window.vstag)
+            {
+                document.frmSendToFriend.vstopic.value = window.vstag.primaryTopic;
+                document.frmSendToFriend.vsprogram.value = window.vstag.programId;
+                document.frmSendToFriend.vsagg.value = window.vstag.aggIds;
+                document.frmSendToFriend.vsbyline.value = window.vstag.byline;
+            }
+            else
+            {
+                document.frmSendToFriend.vstopic.value = 0;
+                document.frmSendToFriend.vsprogram.value = 0;
+                document.frmSendToFriend.vsagg.value = 0;
+                document.frmSendToFriend.vsbyline.value = 0;
+            }
+            from=document.frmSendToFriend.from.value;
+            to=document.frmSendToFriend.recipient.value;
+
+            if (document.frmSendToFriend.MSG.value.length > 600)
+            {
+                alert("Your message contains " + document.frmSendToFriend.MSG.value.length + " characters. The maximum is 600 characters. Please shorten your message and try again.");
+                document.frmSendToFriend.MSG.focus();
+                return false;
+            }
+
+            if ((to==null)||(to=="") || (from==null)||(from=="")){
+                alert("Please enter information into the email address fields.");
+                document.frmSendToFriend.recipient.focus();
+                return false;
+            } else if ((echeck(from)==false) || (echeck(to)==false)){
+                return false
+            } else {
+                document.frmSendToFriend.submit();
+            }
+        }
+    }
+
+    function checkStation() {
+        /*
+         * If JQuery exists and we are a newer form, grab the station ids.
+         */
+        if ($ && $.grabStationIds)
+        {
+            document.frmSendToFriend.callletters.value = $.grabStationIds();
+        }
+        if ( ((document.frmSendToFriend.callletters.value== "Enter Call Letters") || (document.frmSendToFriend.callletters.value== "")) && (document.frmSendToFriend.localcontact[0].checked == true)) {
+            alert ("Please enter the call letters of your local NPR member station if you would like to receive information from them.");
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+</script>
+
+<style type="text/css">
+    ul#stationinputs
+    {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    }
+
+#stationinputs li
+    {
+    padding-bottom: 4px;
+    }
+
+#stationsac
+    {
+    width:270px;
+    text-align:left;
+    background-color: #ced9ee;
+    border:1px solid;
+    border-color:#000;
+    }
+
+#stations ul
+    {
+    margin:0;
+    padding:0;
+    }
+
+.stationselected
+    {
+    position: relative;
+    }
+
+#stationinputs .stationstext
+    {
+    font-size: 11px;
+    background-color: #EFEFEF;
+    }
+
+.stationsacHighlight
+    {
+    font-weight:bold;
+    text-transform:uppercase;
+    background-color:#ffd800;
+    }
+
+#stationsul
+    {
+    padding:0;
+    margin:0;
+    }
+
+#stationsul li
+    {
+    padding:4px;
+    list-style:none;
+    cursor:pointer;
+    }
+
+.stationsacSelected
+    {
+    background-color:#113e98;
+    color:#fff;
+    }
+
+form .btn_minus
+    {
+    border:1px solid #000000;
+    height:18px;
+    background-color: #9cc3f0;
+    position:absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    }
+
+</style>
+
+<a name="email"></a> <br />
+<form name="frmSendToFriend" method="post" action="/templates/sendEmail/email_sent.php" onsubmit="return formSubmit();">
+    <!-- return EmailValidator(this) -->
+    <input type="hidden" value="" name="pageUrl" />
+    <input type="hidden" value="" name="title" />
+    <input type="hidden" name="vstopic" value="" />
+    <input type="hidden" name="vsprogram" value="" />
+    <input type="hidden" name="vsagg" value="" />
+    <input type="hidden" name="vsbyline" value="" />
+
+
+    <div id="emailform">
+        <div id="emailheader">
+            <h3><a href="#email" onclick="$('#emailFormContent').removeClass().addClass('emailFormTable');" class="emailicon">E-mail this Page</a></h3>
+            <div class="spacer">&nbsp;</div>
+        </div>
+        <table cellpadding="1" cellspacing="0" class="shy" id="emailFormContent">
+            <tr valign="middle">
+                <td><p class="email_box_text">Recipient's e-mail address:</p></td>
+                <td><p>
+                        <input type="text" name="recipient" value="" onblur="deleteSpaces(this)" />
+                        <br />
+                        <span class="email_box_text">&#187; Up to twelve addresses, separated by commas.</span></p></td>
+            </tr>
+            <tr valign="middle">
+                <td><span class="email_box_text">Your e-mail address:</span></td>
+                <td><input type="text" name="from" value="" onblur="deleteSpaces(this)" /></td>
+            </tr>
+            <tr valign="middle">
+                <td><span class="email_box_text">Your name:</span></td>
+                <td><input type="text" name="fullname" value="" /></td>
+            </tr>
+            <tr valign="middle">
+                <td><span class="email_box_text">Personal message (optional, 600 characters max):</span></td>
+                <td><textarea name="MSG" cols="20" rows="3"></textarea></td>
+            </tr>
+            <tr valign="middle" class="user-stationsselected">
+                <td><span class="email_box_text">Your NPR member station:</span></td>
+                <td>
+                    <input type="hidden" name="callletters" value="" />
+                    <ul id="stationinputs">
+                        <li><input type="text" name="station_selector" id="station_selector" class="stationfinder" value="" onkeypress="return event.keyCode!=13" /></li>
+                    </ul>
+                    </td>
+            </tr>
+            <tr valign="middle" class="user-stationsselected">
+                <td><p class="email_box_text">Are you a member of your local NPR station?</p></td>
+                <td><input type="radio" name="ismember" value="1" />
+                    <span class="email_box_text">Yes</span>&#160;&#160;&#160;
+                    <input type="radio" name="ismember" value="0" checked="checked" />
+                    <span class="email_box_text">No</span></td>
+            </tr>
+            <!--added -->
+            <tr valign="middle" class="user-stationsselected">
+                <td><p class="email_box_text">Would you like to receive information from
+                        your local NPR member station? (see <a href="http://www.npr.org/about/privacypolicy.html" target="_blank">NPR's
+                        privacy policy</a>)</p></td>
+                <td><input type="radio" name="localcontact" value="1" onclick="checkStation()" />
+                    <span class="email_box_text">Yes</span>&#160;&#160;&#160;
+                    <input type="radio" name="localcontact" value="0" checked="checked" />
+                    <span class="email_box_text">No</span></td>
+            </tr>
+            <!--/added -->
+            <tr valign="middle" class="user-nlsubscribed">
+                <td><p class="email_box_text">Please send me updates from NPR.</p></td>
+                <td><input type="radio" name="contact" value="1" />
+                    <span class="email_box_text">Yes</span>&#160;&#160;&#160;
+                    <input type="radio" name="contact" value="0" checked="checked" />
+                    <span class="email_box_text">No</span></td>
+            </tr>
+            <tr valign="middle">
+                <td><img src="http://media.npr.org/images/spacer.gif" width="180" height="1" alt="null" /></td>
+                <td><div>
+                        <input type="button" name="submitEmailSender" value="Send This Page" onclick="formSubmit();" />
+                        <br />
+                        </div></td>
+            </tr>
+            <tr valign="middle" class="last">
+                <td colspan="2"><p class="email_box_text">(Information collected by NPR will
+                        be used solely for internal NPR or NPR member station purposes and only
+                        if you selected 'yes' above. See NPR's <a href="http://www.npr.org/about/privacypolicy.html" target="_blank" class="email_box_link">privacy
+                        policy</a> for more information.)</p></td>
+            </tr>
+        </table>
+                             <script type="text/javascript">
+                         //<![CDATA[
+                         theurl = window.location.href;
+                         if(theurl.indexOf('#email') > 0)
+                         {
+                             $('#emailFormContent').removeClass().addClass('emailFormTable');
+                         }
+                                                //]]>
+                        </script>
+
+    </div>
+</form>
+<br />
+
+				<div id="footer">
+    <div id="nav2">
+        <ul>
+            <li><a href="/templates/archives/rundown_archive_hub.php">Archives</a></li>
+            <li><a href="/transcripts/">Transcripts</a></li>
+            <li><a href="/templates/stations/stations/">Stations</a></li>
+			<li><a href="/topics/">Topics</a></li>
+            <li><a href="http://shop.npr.org">Shop</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+            <li><a href="/help/">Help</a></li>
+        </ul>
+    </div>
+    <div id="legal">
+        <ul>
+            <li>Copyright
+            <script type="text/javascript">
+                year = new Date();
+                document.write(year.getFullYear());
+            </script>  NPR</li>
+            <li><a href="/about/termsofuse.html">Terms of Use</a></li>
+            <li><a href="/about/permissioninfo.html">Permissions</a></li>
+            <li><a href="/about/privacypolicy.html">Privacy Policy</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- NPR.org pagetags -->
+<script type="text/javascript" src="/templates/javascript/lib/jquery-1.6.2.min.js"></script>
+<script src="/templates/javascript/generated/simplifiedmetrics.js" type="text/javascript"></script>
+<script type="text/javascript">
+document.domain="npr.org";
+
+$(document).ready(function() {
+    try {
+        NPR.metrics.pageImpression();
+    } catch (e) {
+        NPR.messaging.exception(e, ' in metrics.js ', 'document.ready');
+    }
+});
+
+</script>
+
+            </div>
+            <!-- END MIDDLE COLUMN -->
+            <!-- START RIGHT COLUMN -->
+            <div id="rightcol">
+				<!-- start paste right column content -->
+		
+		
+		
+				<div class="dynamicbucket epromo">
+     <div class="buckettop">&nbsp;</div>
+
+     <div class="bucketcontent">
+      <div class="story">
+     
+		<a href="/thisibelieve"><img src="http://media.npr.org/thisibelieve/tib_promo.jpg" alt="Edward R. Murrow" style="float: left; margin-right:5px;" width="40" height="40" border="0"></a>
+       <h4><a href="/thisibelieve">THIS I BELIEVE</a></h4><br><p>NPR re-creates Edward R. Murrow's 1950s invitation to all Americans to write about and discuss the core beliefs that guide their daily lives.</p>
+     
+	 
+	 
+       <div class="spacer">&nbsp;</div>
+      </div>
+     </div>
+     <div class="bucketbottom">&nbsp;</div>
+
+    </div>
+
+				<script type="text/javascript" src="/include/modules/tapestrans2.js"></script>				
+				
+				<!-- end paste right column content -->
+
+            </div>
+            <!-- END RIGHT COlUMN -->
+            <!-- START LEFT COLUMN -->
+            <div id="leftcol">
+                <script type="text/javascript" src="/include/localize/create_form.js"></script>
+                <script type="text/javascript" src="/include/localize/station_include2.js"></script>
+                <h3>Browse Topics</h3>
+<div id="topics">
+	<ul>
+		<li class="topic1001">
+			<a href="/templates/topics/topic.php?topicId=1001">News</a>
+			<ul>
+				<li><a href="/templates/topics/topic.php?topicId=1003">Nation</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1004">World</a></li>
+			</ul>
+		</li>
+		<li class="topic1014">
+			<a href="/templates/topics/topic.php?topicId=1014">Politics</a>
+			<ul>
+				<li><a href="/templates/topics/topic.php?topicId=1013">Education</a></li>
+			</ul>
+		</li>
+		<li class="topic1006">
+			<a href="/templates/topics/topic.php?topicId=1006">Business</a>
+			<ul>
+				<li><a href="/templates/topics/topic.php?topicId=1017">Economy</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1018">Your Money</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1019">Technology</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1020">Media</a></li>
+			</ul>
+		</li>
+		<li class="topic1007">
+			<a href="/templates/topics/topic.php?topicId=1007">Health &amp; Science</a>
+			<ul>
+				<li><a href="/templates/topics/topic.php?topicId=1066">Your Health</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1025">Environment</a></li>
+				<li><a href="/templates/story/story.php?storyId=9657621">Climate Connections</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1026">Space</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1027">Health Care</a></li>
+			</ul>
+		</li>
+		<li class="topic1021">
+			<a href="/templates/topics/topic.php?topicId=1021">People &amp; Places</a>
+			<ul>
+				<li><a href="/templates/topics/topic.php?topicId=1022">Interviews</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1062">Remembrances</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1023">Radio Expeditions</a></li>
+			</ul>
+		</li>
+		<li class="topic1032">
+			<a href="/templates/topics/topic.php?topicId=1032">Books</a>
+			<ul>
+				<li><a href="/templates/topics/topic.php?topicId=1033">Authors</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1035">Fiction</a></li>
+			</ul>
+		</li>
+		<li class="topic1039">
+			<a href="/music/">Music</a>
+		</li>
+		<li class="topic1008">
+			<a href="/templates/topics/topic.php?topicId=1008">Arts &amp; Entertainment</a>
+			<ul>
+				<li><a href="/templates/topics/topic.php?topicId=1045">Movies</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1046">Performing Arts</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1047">Visual Arts</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1048">Pop Culture</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1049">Digital Culture</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1050">Reviews</a></li>
+			</ul>
+		</li>
+		<li class="topic1051">
+			<a href="/templates/topics/topic.php?topicId=1051">Diversions</a>
+			<ul>
+				<li><a href="/templates/topics/topic.php?topicId=1052">Fun &amp; Games</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1053">Food</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1055">Sports</a></li>
+			</ul>
+		</li>
+		<li class="topic1057">
+			<a href="/templates/topics/topic.php?topicId=1057">Opinion</a>
+			<ul>
+				<li><a href="/templates/topics/topic.php?topicId=1059">Analysis</a></li>
+				<li><a href="/templates/topics/topic.php?topicId=1060">Commentary</a></li>
+			</ul>
+		</li>
+		<li><a href="/blogs/">Blogs</a></li>
+	</ul>
+</div>
+
+<h3>Services</h3>
+<div id="services">
+	<ul>
+		<li><a href="/services/radio.html" class="radio">Radio</a></li>
+		<li><a href="/podcasts/" class="pod">Podcasts</a></li>
+		<li><a href="/templates/community/" class="comm">Community</a></li>
+		<li><a href="/rss/" class="rss">News Feeds</a></li>
+		<li><a href="/api/" class="api">Tools / API</a></li>
+		<li><a href="/services/desktop.html" class="desktop">Desktop</a></li>
+		<li><a href="/services/mobile.html" class="mobile">Mobile</a></li>
+		<li><a href="/email/" class="newsletters">Newsletters</a></li>
+	</ul>
+</div>
+
+<h3>Programs</h3>
+<div id="programs">
+	<ul>
+		<li class="hdr">News/Talk Programs</li>
+		<li class="highlight"><a href="/templates/rundowns/rundown.php?prgId=3">Morning Edition</a></li>
+		<li class="highlight"><a href="/templates/rundowns/rundown.php?prgId=2">All Things Considered</a></li>
+		<li><a href="/templates/rundowns/rundown.php?prgId=13">Fresh Air</a></li>		
+		<li><a href="/templates/rundowns/rundown.php?prgId=5">Talk of the Nation</a></li>
+		<li><a href="/templates/rundowns/rundown.php?prgId=46">Tell Me More</a></li>
+		<li><a href="/programs/waitwait/">Wait Wait...Don't Tell Me</a></li>
+		<li><a href="/templates/rundowns/rundown.php?prgId=7">Weekend Edition Saturday</a></li>
+		<li><a href="/templates/rundowns/rundown.php?prgId=10">Weekend Edition Sunday</a></li>
+		<li class="hdr">Music Programs</li>
+		<li><a href="/templates/rundowns/rundown.php?prgId=37&amp;agg=1&amp;ps=glp">All Songs Considered</a></li>
+		<li><a href="/templates/story/story.php?storyId=99022917">From the Top</a></li>
+		<li><a href="/templates/rundowns/rundown.php?prgId=20&amp;agg=1">JazzSet</a></li>
+		<li><a href="/templates/rundowns/rundown.php?prgId=24&amp;agg=1">Marian McPartland's Piano Jazz</a></li>
+		<li><a href="/templates/story/story.php?storyId=92133820">Mountain Stage</a></li>
+		<li><a href="/templates/rundowns/rundown.php?prgId=39&amp;agg=1">World Cafe</a></li>
+		<li><a href="/templates/rundowns/rundown.php?prgId=36&amp;agg=1">World of Opera</a></li>
+		<li class="more"><a href="/programs/" class="moreArrow">more</a></li>
+	</ul>
+</div>
+
+<div id="housekeeping">
+	<ul>
+		<li><a href="http://thin.npr.org/">Text-Only Version</a></li>
+		<li><a href="http://help.npr.org/ics/support/default.asp?deptID=5670&amp;task=ticket">Contact Us</a></li>
+		<li><a href="/about/place/corpsupport/">Sponsor NPR</a></li>
+		<li><a href="/about/press/">Press Room</a></li>
+		<li><a href="/about/pitch/">Submit Ideas</a></li>
+		<li><a href="/corrections/">Corrections</a></li>
+		<li><a href="/templates/story/story.php?storyId=2781901">Ombudsman</a></li>
+		<li><a href="/sitemap/">Site Map</a></li>
+	</ul>
+</div>
+
+	<script type="text/JavaScript" src="/buckets/wwdtm/quiz_promo_data/wwdtm_quiz_promo.js"></script>
+
+
+                <div class="underwriting">
+                    <a href="http://www.pbs.org/" target="_new"><img src="http://media.npr.org/graphics/ads/pbs/pbshome_promo_117.gif" height="51" width="117" alt="PBS logo" border="0" /></a>
+                </div>
+                <div id="textonly">
+                    <p>
+                        <a href="/about/textonly.html">Text-only</a>
+                    </p>
+                </div>
+            </div>
+            <!-- END LEFT COLUMN -->
+        </div>
+    </body>
+</html>
+

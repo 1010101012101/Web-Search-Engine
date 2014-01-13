@@ -1,0 +1,471 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>News Center</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://ucsdnews.ucsd.edu/rss">
+	<link rel="stylesheet" href="http://ucsdnews.ucsd.edu/support/styles/style.css">
+	<link rel="stylesheet" href="http://ucsdnews.ucsd.edu/support/styles/home.css">
+	<link rel="stylesheet" href="http://ucsdnews.ucsd.edu/support/colorbox/colorbox.css">
+	
+	
+	
+	<script src="http://ucsdnews.ucsd.edu/support/scripts/libs/modernizr-2.0.6.min.js"></script>
+</head>
+<body id="home-body">
+
+<div id="header-wrapper">
+	<header id="site-header">
+		<a class="ir" id="ucsd-link" href="http://www.ucsd.edu">UC San Diego</a>
+		<a class="ir" id="news-center-link" href="http://ucsdnews.ucsd.edu">News Center</a>
+		<p id="ucpa-title">University Communications and Public Affairs</p>
+	</header>
+</div>
+
+<div id="nav-wrapper">
+	<div id="nav" class="expand content">
+		<ul id="nav-buttons" class="expand">
+			<li><a href="http://ucsdnews.ucsd.edu/archives/">All News</a></li>
+			<li class="clickOn" onClick="_gaq.push(['_trackEvent', 'News by Topic', 'Pulldown']);">
+        News by topic 
+        <span class="arrow news-by-topic"></span>
+        <!-- <img src="http://ucsdnews.ucsd.edu/support/images/double-arrow2x.png" width="11" height="16" /> -->
+				<ul class="popup-menu">
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/alumni">Alumni</a></li>
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/arts">Arts &amp; Humanities</a></li>
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/athletics">Athletics</a></li>
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/awards">Awards, Honors &amp; Appointments</a></li>
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/oncampus">On Campus</a></li>
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/giving">Giving to UCSD</a></li>
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/general">General UC San Diego News</a></li>
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/health">Health Sciences</a></li>
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/internationalaffairs">International Affairs</a></li>
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/rady">Rady School of Management</a></li>
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/sdsc">San Diego Supercomputer Center</a></li>
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/science">Science &amp; Engineering</a></li>
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/socialsciences">Social Sciences</a></li>
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/students">Students</a></li>
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/undergraduateresearch">Undergraduate Research</a></li>
+					<li class="divider"></li>			
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/q_and_a">Q and A</a></li>
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/faculty_awards">Faculty Awards</a></li>
+					<li><a href="http://ucsdnews.ucsd.edu/archives/category/faculty_research">Faculty Research</a></li>
+				</ul></li>
+			<li><a href="http://calendar.ucsd.edu" onClick="recordOutboundLink(this, 'Outbound Links', 'Calendar - Header');return false;">Calendar</a></li>
+			<li><a href="/this-week">This Week <!-- <span id="atucsd">@ UC San Diego</span> --></a></li>
+			<li class="no-rule"><a href="/subscribe">Subscribe</a></li>
+			<li id="search-slider-button"><a id="search-button" href="#search">Search</a></li>
+		</ul>
+		<div id="search" class="expand">
+			<h5>Search</h5>
+			<div id="search-selector" class="clickOn">
+        <!-- <span class="down-triangle blue"></span> -->
+        <span>News Center</span> 
+        <span class="arrow news-center"></span>
+        <!-- <img src="http://ucsdnews.ucsd.edu/support/images/arrow-blue2x.png" width="9" height="8" /> -->
+				<ul id="search-topics" class="popup-menu">
+					<li><a href="news">News Center</a></li>
+					<li><a href="ucsd">UCSD</a></li>
+					<li><a href="people">People</a></li>
+				</ul>
+			</div>
+			
+			<div id="news-search" class="search-box expand active">
+				<form action="/nssearch.php" method="get">
+					<input type="search" name="nssearch">
+					<button type="submit">Go</button>
+				</form>
+			</div>
+			<div id="ucsd-search" class="search-box expand">
+				<form action="http://act.ucsd.edu/cwp/tools/search?site=cascade-cwp" title="Search The UCSD Website">
+					<input type="search" name="q" />
+					<button type="submit">Go</button>
+				</form>
+			</div>
+			<div id="people-search" class="search-box expand">
+				<form action="http://www.ucsd.edu/directory/search" method="get" name="{6997CAAD-DD2E-4962-B327-2EF82056C17C}" title="Search For People At UCSD">
+					<input name="jlinkevent" type="hidden" value="Redirect" />
+					<input type="search" name="entry" />
+					<button type="submit">Go</button>
+					<input name="dir" type="hidden" value="faculty_staff" />
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="content-wrapper" class="homenews clearfix">
+	<div id="feature-wrapper" class="clearfix">
+		<div id="feature-content" class="content clearfix expand">
+
+<!-- Begin Static Feature -->
+<!--
+<section id="feature-static">
+	<a href="http://ucsdnews.ucsd.edu/features/first_look_at_uc_san_diegos_8th_chancellor_pradeep_khosla">
+	<img src="/support/images/thisweek/12-05-16/khosla-news-12-05-15.jpg" alt="photo of Pradeep Khosla" /></a>
+	<div id="link">
+		<h2><a href="http://ucsdnews.ucsd.edu/features/first_look_at_uc_san_diegos_8th_chancellor_pradeep_khosla">First Look at Pradeep K. Khosla, UC San Diego’s 8th Chancellor</a></h2>
+		<p>In his first interview as the Chancellor-Designate, Khosla articulated his passion for students and higher education, his commitment to shared governance at UC San Diego, and his excitement about being our next leader.</p>
+	</div>
+</section>
+-->
+<!-- End Static Feature -->
+
+<!-- Begin Rotator -->
+			<section id="feature-rotator" class="expand">
+				<div id="fr-mainsection">
+					<img src="http://ucsdnews.ucsd.edu/support/images/black-image.jpg" id="fr-image" width="540" />
+					<h2><p></p> <a href=""></a></h2>
+				</div>
+				
+				<div id="fr-upcoming">
+				</div>
+
+				<div id="fr-hiddendivs" style="display:none !important;">
+					
+										<article><p class="mshd-imagesrc">http://ucsdnews.ucsd.edu/news_uploads/rotator_value2.jpg</p><p class="mshd-pageurl">http://ucsdnews.ucsd.edu/pressrelease/kiplingers_ranks_uc_san_diego_among_nations_best_value_college</p><p class="mshd-title">Kiplinger’s Ranks UC San Diego Among Nation’s Best Value Colleges</p><div class="msdh-previewp"><p>Kiplinger’s Personal Finance magazine ranks the University of California, San Diego the 14th best value public university in the nation based on its high four-year graduation rate, low average student debt at graduation, the availability of financial aid, low sticker price and overall great value.</p></div></article>
+										
+										<article><p class="mshd-imagesrc">http://ucsdnews.ucsd.edu/news_uploads/131205spanoslead.jpg</p><p class="mshd-pageurl">http://ucsdnews.ucsd.edu/feature/chargers_president_dean_spanos_donates_500000_to_new_uc_san_diego_athletic</p><p class="mshd-title">San Diego Chargers President Donates $500,000 to New Athletic Performance Center</p><div class="msdh-previewp">Students at the University of California, San Diego have something new to cheer about this season. Dean Spanos, chairman of the board and president of the San Diego Chargers, has pledged $500,000 to UC San Diego to support a new Athletic Performance Center. The gift will support the expansion of the existing Alex G. Spanos Training Facility, located at the north end of campus. The revamped facility will be renamed the Alex G. Spanos Athletic Performance Center.</div></article>
+										
+										<article><p class="mshd-imagesrc">http://ucsdnews.ucsd.edu/news_uploads/131121founderslead.jpg</p><p class="mshd-pageurl">http://ucsdnews.ucsd.edu/slideshow/page/2013_founders_celebration</p><p class="mshd-title">2013 Founders’ Celebration</p><div class="msdh-previewp">Founders’ Day—held on Nov. 15 in Town Square—united the campus community in a celebration of UC San Diego’s 53rd anniversary.</div></article>
+										
+										<article><p class="mshd-imagesrc">http://ucsdnews.ucsd.edu/news_uploads/clarke-center-gift-rotator.jpg</p><p class="mshd-pageurl">http://ucsdnews.ucsd.edu/feature/an_imaginative_gift</p><p class="mshd-title">Imagination Gets a Boost with $1 Million Gift</p><div class="msdh-previewp">The University of California, San Diego is home to the first and only Arthur C. Clarke Center for Human Imagination, honoring the vision of “2001: A Space Odyssey” author Arthur C. Clarke. Today, the campus is announcing a $1 million gift from San Diego-based satellite and digital communications innovator ViaSat Inc. that will continue Clarke’s greatest legacy: imagination. In recognition of this charitable donation, ViaSat has been named Founding Partner of the Clarke Center. 
+</div></article>
+										
+				</div>
+			</section>
+<!-- End Rotator - comment out the above section to disable rotator and use a static large image or story-->
+			
+			<div id="menu-slider-button">
+				<h3>More Resources</h3>
+			</div>
+			<nav id="menu" class="expand">
+	<ul id="menu-social" class="expand">
+         <li>
+          <a href="//www.facebook.com/UCSanDiego" class="social-icon facebook" onClick="recordOutboundLink(this, 'Outbound Links', 'Facebook - Menu');return false;">
+          </a>
+        </li>
+        <li>
+          <a href="//twitter.com/UCSDnews" class="social-icon twitter" onClick="recordOutboundLink(this, 'Outbound Links', 'Twitter - Menu');return false;">
+          </a>
+        </li>
+        <li>
+          <a href="//www.youtube.com/user/ucsandiego" class="social-icon youtube" onClick="recordOutboundLink(this, 'Outbound Links', 'YouTube - Menu');return false;">
+          </a>
+        </li>
+        <li>
+          <a href="http://ucsdnews.ucsd.edu/rss" class="social-icon rss">
+          </a>
+        </li>
+        <li>
+          <a href="//pinterest.com/ucsandiego/" class="social-icon pinterest" onClick="recordOutboundLink(this, 'Outbound Links', 'Pinterest - Menu');return false;">
+          </a>
+        </li>
+        <li>
+          <a href="//plus.google.com/117506114004660150074" class="social-icon gplus" onClick="recordOutboundLink(this, 'Outbound Links', 'GPlus - Menu');return false;">
+          </a>
+        </li>
+	</ul>
+	<div id="ucpa-links">
+		<h4>University&nbsp;Communications and&nbsp;Public&nbsp;Affairs</h4>
+		<ul id="ul-pages">
+			<li><a href="http://ucpa.ucsd.edu" target="_blank" onClick="recordOutboundLink(this, 'Outbound Links', 'UCPA Home');return false;">UCPA home page</a></li>
+			<li><a href="http://ucpa.ucsd.edu/resources/campus-profile/" target="_blank" onClick="recordOutboundLink(this, 'Outbound Links', 'Campus Profile');return false;">Campus Profile</a></li>
+			<li><a href="http://ucpa.ucsd.edu/resources/tours/" target="_blank" onClick="recordOutboundLink(this, 'Outbound Links', 'Campus Tours');return false;">Campus Tours</a></li>
+			<li><a href="http://ucpa.ucsd.edu/resources/journalists/" target="_blank" onClick="recordOutboundLink(this, 'Outbound Links', 'Journalists');return false;">Resources for Journalists</a></li>
+			<li><a href="http://ucpa.ucsd.edu/resources/filming/" target="_blank" onClick="recordOutboundLink(this, 'Outbound Links', 'Filming');return false;">Filming on Campus</a></li>
+			<li><a href="http://ucpa.ucsd.edu/about/contact/" target="_blank" onClick="recordOutboundLink(this, 'Outbound Links', 'UCPA Contact');return false;">Contact UCPA</a></li>
+		</ul>
+	</div>
+	<div id="media-expert-links">
+	<h4>Multimedia</h4>
+		<ul id="ul-multimedia">
+			<li><a href="/slideshow">News Center Slideshows</a></li>
+			<li><a href="/videos">News Center Videos</a></li>
+		</ul>
+		<h4>Faculty Experts</h4>
+		<ul id="ul-experts">
+			<li><a href="http://www-act.ucsd.edu:82/GoogleResearchDirectory/research" onClick="recordOutboundLink(this, 'Outbound Links', 'Find an Expert');return false;">Find an Expert</a></li>
+		</ul>
+	</div>
+</nav>
+		</div><!-- end feature content -->
+	</div><!-- end feature wrapper -->
+
+	<div id="news-content" class="content clearfix">
+		<section id="top-stories" class="eh">
+		
+			
+			
+			<h2 class="orange-title">Top Stories</h2>
+				<nav id="ts-tab" class="clickOn">
+					<h1 onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'Pulldown']);">
+            <span>All Topics</span> 
+            <span class="arrow all-topics"></span>
+            <!-- <img src="http://ucsdnews.ucsd.edu/support/images/arrow-orange2x.png" width="9" height="8" /> -->
+          </h1>
+						<ul id="ts-topics" class="popup-menu">
+							<li><a href="top_story" onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'All Topics']);">All Topics</a></li>
+							<li><a href="alumni" onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'Alumni']);">Alumni</a></li>
+							<li><a href="athletics" onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'Athletics']);">Athletics</a></li>
+							<li><a href="arts" onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'Arts And Humanities']);">Arts &amp; Humanities</a></li>
+							<li><a href="awards" onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'Awards, Honors,...']);">Awards, Honors &amp; Appointments</a></li>
+							<li><a href="oncampus" onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'On Campus']);">On Campus</a></li>
+							<li><a href="giving" onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'Giving']);">Giving to UCSD</a></li>
+							<li><a href="general" onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'General']);">General UC San Diego News</a></li>
+							<li><a href="health" onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'Health Sciences']);">Health Sciences</a></li>
+							<li><a href="internationalaffairs" onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'International Affairs']);">International Affairs</a></li>
+							<li><a href="rady" onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'Rady']);">Rady School of Management</a></li>
+							<li><a href="sdsc" onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'SDSC']);">San Diego Supercomputer Center</a></li>
+							<li><a href="science" onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'Science And Engineering']);">Science &amp; Engineering</a></li>
+							<li><a href="socialsciences" onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'Social Sciences']);">Social Sciences</a></li>
+							<li><a href="students" onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'Students']);">Students</a></li>
+							<li><a href="undergraduateresearch" onClick="_gaq.push(['_trackEvent', 'Top Stories AJAX', 'Undergrad Research']);">Undergraduate Research</a></li>
+						</ul>
+				</nav>
+			<h4 id="ts-morebutton"><a href="http://ucsdnews.ucsd.edu/archives/category/top_story">More Top Stories »</a></h4>
+
+			<div id="ts-ajaxin">
+			</div>
+		</section>
+		
+		<div id="sidebars">
+			<div id="side-2">
+							
+				<aside class="side-adv" id="column-adv">
+					<a href="/q_and_a" class="ad-sprite q-and-a"></a>
+<!--           <a href="/faculty_awards" class="ad-sprite faculty-awards"></a> -->
+					<a href="/faculty_research" class="ad-sprite faculty-research"></a>
+				
+					<a href="http://aps-web.ucsd.edu/src/"><img src="http://ucsdnews.ucsd.edu/news_uploads/sustainability.png" width="220" alt="UC San Diego Sustainability Resource Center" /></a>
+				
+					<a href="http://volunteer50.ucsd.edu"><img src="http://ucsdnews.ucsd.edu/news_uploads/v50-spot.png" width="220" alt="Volunteer50: Get involved" /></a>
+				
+				</aside>
+
+				<section id="side-events" class="side-section expand">
+					<h2 class="orange-title">Events</h2>
+					
+					<article class="event-div">
+						<p class="event-date">October 10–January 16</p>
+						<h3><a href="http://subterraneaucsd.com/">Subterranea: Structural &amp; Materials Engineering Building (SME) Visual Arts Gallery</a></h3>
+					</article>
+					
+					<article class="event-div">
+						<p class="event-date">November 5–December 15</p>
+						<h3><a href="http://www.lajollaplayhouse.org/side-show">Side Show</a></h3>
+					</article>
+					
+					<footer class="side-footer">
+						<div><a href="http://calendar.ucsd.edu" onClick="recordOutboundLink(this, 'Outbound Links', 'Calendar - Sidebar');return false;">Calendar.ucsd.edu »</a></div>
+						<div><a href="http://blink.ucsd.edu/instructors/resources/academic/calendars/2011.html" onClick="recordOutboundLink(this, 'Outbound Links', 'Academic Calendar - Sidebar');return false;">Academic calendar »</a></div>
+					</footer>
+				</section>
+				
+				
+				<section class="spotlight-box">
+					<a href="http://musicweb.ucsd.edu/concerts/index.php?i=804"><img src="http://ucsdnews.ucsd.edu/news_uploads/weds-at-7-spot.png" alt="Wednesdays at 7 : Experimental Music Showcase"></a>
+				</section>
+				
+
+				<section id="side-pressclips" class="side-section expand">
+					<h2 class="orange-title">Press Clips</h2>
+					<h4 id="pc-morebutton"><a href="http://ucsdnews.ucsd.edu/pressclips">More Clips »</a></h4>
+					
+					<article class="pc-div">
+						<p><em>Scientific American</em>, December&nbsp;3</p>
+						<h3><a href="http://www.scientificamerican.com/article.cfm?id=the-cheerleader-effect">The Cheerleader Effect</a></h3>
+					</article>
+					
+					<article class="pc-div">
+						<p><em>CBS San Diego</em>, December&nbsp;2</p>
+						<h3><a href="http://www.cbs8.com/story/24117353/world-aids-day-observed-at-uc-san-diego">World AIDS Day Observed at UC San Diego</a></h3>
+					</article>
+					
+					<article class="pc-div">
+						<p><em>U-T San Diego</em>, November&nbsp;21</p>
+						<h3><a href="http://www.utsandiego.com/news/2013/nov/21/pathway-for-ucsd-transfer-students/">UCSD Offers Pathway for Transfer Students</a></h3>
+					</article>
+					
+					<article class="pc-div">
+						<p><em>Scientific American</em>, November&nbsp;21</p>
+						<h3><a href="http://www.scientificamerican.com/article.cfm?id=uncertain-future-for-iconic-keeling-curve-co2-measurements">Uncertain Future for Iconic &#8220;Keeling Curve&#8221; CO2 Measurements</a></h3>
+					</article>
+					
+					<article class="pc-div">
+						<p><em>U-T San Diego</em>, November&nbsp;20</p>
+						<h3><a href="http://www.utsandiego.com/news/2013/nov/20/medal-of-freedom-obama/">White House Honors Molina, Ride</a></h3>
+					</article>
+					
+				</section>
+			</div>
+
+			<div id="side-1">
+				<div id="side-sports" class="side-section expand">
+					<!-- <img src="http://ucsdnews.ucsd.edu/support/images/triton-logo.png" alt="" /> -->
+					<h2 class="orange-title">Triton Athletics</h2>
+					<nav id="sports-tabs" class="expand clearfix">
+						<ul>
+							<li class="active"><a href="sports-news" onClick="_gaq.push(['_trackEvent', 'Sports AJAX', 'News']);">News</a></li>
+							<li><a href="sports-results" onClick="_gaq.push(['_trackEvent', 'Sports AJAX', 'Results']);">Results</a></li>
+							<!-- <li><a href="sports-standings">Standings</a></li> -->
+							<li><a href="sports-schedule" onClick="_gaq.push(['_trackEvent', 'Sports AJAX', 'Schedule']);">Schedule</a></li>
+						</ul>
+					</nav>
+					<div id="sports-news" class="sports-div active">
+					</div>
+					<div id="sports-results" class="sports-div">
+					</div>
+					<div id="sports-standings" class="sports-div">
+						<h3><a href="http://www.ucsdtritons.com/">W Soccer : 0-0-0 : #2</a></h3>
+						<h3><a href="http://www.ucsdtritons.com/">W Volleyball : 0-0 : #24</a></h3>
+					</div>
+					<div id="sports-schedule" class="sports-div">
+					</div>
+					<div class="side-footer"><a href="http://www.ucsdtritons.com/" onClick="recordOutboundLink(this, 'Outbound Links', 'More Athletics');return false;">More athletics news and info »</a></div>
+				</div>
+				
+				
+				<section class="spotlight-box">
+					<a href="http://bookstore.ucsd.edu/clothing/triton.htm"><img src="http://ucsdnews.ucsd.edu/news_uploads/triton-gear-spot-rev.png" alt="Triton Gear: Apparel, gifts"></a>
+				</section>
+				
+
+				<div id="side-custom" class="side-section expand">
+					<h2 id="custom-title" class="orange-title"> &nbsp; </h2>
+					<div id="custom-button" class="clickOn" onClick="_gaq.push(['_trackEvent', 'Customize AJAX', 'Pulldown']);"><span>Customize</span>
+						<ul id="custom-topics" class="popup-menu">
+							<li><a href="alumni" onClick="_gaq.push(['_trackEvent', 'Customize AJAX', 'Alumni']);">Alumni</a></li>
+							<li><a href="arts" onClick="_gaq.push(['_trackEvent', 'Customize AJAX', 'Arts And Humanities']);">Arts &amp; Humanities</a></li>
+							<li><a href="athletics" onClick="_gaq.push(['_trackEvent', 'Customize AJAX', 'Athletics']);">Athletics</a></li>
+							<li><a href="awards" onClick="_gaq.push(['_trackEvent', 'Customize AJAX', 'Awards, Honors,...']);">Awards, Honors &amp; Appointments</a></li>
+							<li><a href="oncampus" onClick="_gaq.push(['_trackEvent', 'Customize AJAX', 'On Campus']);">On Campus</a></li>
+							<li><a href="giving" onClick="_gaq.push(['_trackEvent', 'Customize AJAX', 'Giving']);">Giving to UCSD</a></li>
+							<li><a href="general" onClick="_gaq.push(['_trackEvent', 'Customize AJAX', 'General']);">General UC San Diego News</a></li>
+							<li><a href="health" onClick="_gaq.push(['_trackEvent', 'Customize AJAX', 'Health Sciences']);">Health Sciences</a></li>
+							<li><a href="internationalaffairs" onClick="_gaq.push(['_trackEvent', 'Customize AJAX', 'International Affairs']);">International Affairs</a></li>
+							<li><a href="rady" onClick="_gaq.push(['_trackEvent', 'Customize AJAX', 'Rady']);">Rady School of Management</a></li>
+							<li><a href="sdsc" onClick="_gaq.push(['_trackEvent', 'Customize AJAX', 'SDSC']);">San Diego Supercomputer Center</a></li>
+							<li><a href="science" onClick="_gaq.push(['_trackEvent', 'Customize AJAX', 'Science And Engineering']);">Science &amp; Engineering</a></li>
+							<li><a href="socialsciences" onClick="_gaq.push(['_trackEvent', 'Customize AJAX', 'Social Sciences']);">Social Sciences</a></li>
+							<li><a href="students" onClick="_gaq.push(['_trackEvent', 'Customize AJAX', 'Students']);">Students</a></li>
+							<li><a href="undergraduateresearch" onClick="_gaq.push(['_trackEvent', 'Customize AJAX', 'Undergrad Research']);">Undergraduate Research</a></li>
+						</ul>
+					</div>
+					<div id="cs-ajaxin">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div id="footer-wrapper" class="expand">
+	<footer id="page-footer" class="expand">
+		<div id="footer-col1" class="footer-col-wide">
+			<ul>
+				<li><a href="http://www.ucsd.edu/emergency/">Emergency Status</a></li>
+				<li><a href="http://disabilities.ucsd.edu/">Disability Resources</a></li>
+				<li><a href="http://www.ucsd.edu/explore/about/principles.html">Principles of Community</a></li>
+				<li><a href="http://diversity.ucsd.edu/index.html">Diversity Matters</a></li>
+			</ul>
+			<div id="weather">
+				<p>Wed Dec 11, 2013 <br/>
+				Weather: <span id="weather-condition"></span> <span id="weather-temp"></span> <br/>
+				&nbsp; <!-- Surf: <span id="weather-surf">3–4’</span>--> </p>
+			</div>
+		</div>
+		<div id="footer-col2" class="footer-col-wide">
+			<h4>Stay connected</h4>
+			<div id="social-buttons" class="expand">
+				<a href="//www.facebook.com/UCSanDiego" class="social-icon facebook" onClick="recordOutboundLink(this, 'Outbound Links', 'Facebook - Menu');return false;"></a>
+                               <a href="//twitter.com/UCSDnews" class="social-icon twitter" onClick="recordOutboundLink(this, 'Outbound Links', 'Twitter - Menu');return false;"></a>
+                               <a href="//www.youtube.com/user/ucsandiego" class="social-icon youtube" onClick="recordOutboundLink(this, 'Outbound Links', 'YouTube - Menu');return false;"></a>
+                               <a href="//pinterest.com/ucsandiego/" class="social-icon pinterest" onClick="recordOutboundLink(this, 'Outbound Links', 'Pinterest - Footer');return false;"></a>
+                               <a href="//plus.google.com/117506114004660150074" class="social-icon gplus" onClick="recordOutboundLink(this, 'Outbound Links', 'GPlus - Footer');return false;"></a>
+
+			</div>
+			<p>UC San Diego <br/>
+			9500 Gilman Dr., La Jolla, CA 92093 <br/>
+			(858) 534-2230</p>
+			<p>Copyright ©2011 <br/>
+			Regents of the University of California. <br/>
+			All rights reserved.</p>
+			<ul>
+				<li><a href="http://www.ucsd.edu/_about/legal/uc-san-diego-website-terms-of-use.html">Terms</a></li>
+				<li><a href="mailto:univcomm@ucsd.edu">Feedback</a></li>
+			</ul>
+		</div>
+		<div id="footer-col3" class="footer-col">
+			<h4>Divisions and schools</h4>
+			<ul>
+				<li><a href="http://dah.ucsd.edu/">Arts & Humanities</a></li>
+				<li><a href="http://biology.ucsd.edu/">Biological Sciences</a></li>
+				<li><a href="http://www.jacobsschool.ucsd.edu/">Jacobs School of Engineering</a></li>
+				<li><a href="http://physicalsciences.ucsd.edu/">Physical Sciences</a></li>
+				<li><a href="http://rady.ucsd.edu/">Rady School of Management</a></li>
+				<li><a href="http://irps.ucsd.edu/">School of International Relations and Pacific Studies</a></li>
+				<li><a href="http://som.ucsd.edu/">School of Medicine</a></li>
+				<li><a href="http://www.sio.ucsd.edu/">Scripps Institution of Oceanography</a></li>
+				<li><a href="http://pharmacy.ucsd.edu/index.shtml">Skaggs School of Pharmacy & Pharmaceutical Sciences</a></li>
+				<li><a href="http://socialsciences.ucsd.edu/">Social Sciences</a></li>
+			</ul>
+		</div>
+		<div id="footer-col4" class="footer-col">
+			<h4>Other university sites</h4>
+			<ul>
+				<li><a href="http://www.ucsdtritons.com/">Athletics</a></li>
+				<li><a href="http://diversity.ucsd.edu/index.html">Diversity</a></li>
+				<li><a href="http://studenthealth.ucsd.edu/">Student Health Services</a></li>
+				<li><a href="http://www-act.ucsd.edu/maps/">Maps</a></li>
+				<li><a href="http://libraries.ucsd.edu/">Libraries</a></li>
+				<li><a href="http://health.ucsd.edu/index.aspx">Health System</a></li>
+				<li><a href="http://extension.ucsd.edu/">Extension</a></li>
+				<li><a href="http://preuss.ucsd.edu/">Preuss School</a></li>
+			</ul>
+		</div>
+	</footer>
+</div>
+
+<!-- Scripts -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://ucsdnews.ucsd.edu/support/scripts/libs/jquery-1.6.2.min.js"><\/script>')</script>
+<script src="http://ucsdnews.ucsd.edu/support/colorbox/jquery.colorbox-min.js"></script>
+<script src="http://ucsdnews.ucsd.edu/support/scripts/mylibs/respond.min.js"></script>
+<script src="http://ucsdnews.ucsd.edu/support/scripts/plugins.js" type="text/javascript"></script>
+<script src="http://ucsdnews.ucsd.edu/support/scripts/go.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-1441088-4']);
+		
+		
+
+		
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+<!-- custom javascript for features -->
+
+
+
+
+</body>
+</html>
